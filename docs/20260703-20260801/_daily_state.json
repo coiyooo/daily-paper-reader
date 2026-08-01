@@ -1,0 +1,297 @@
+{
+  "date": "20260703-20260801",
+  "date_label": "2026-07-03 ~ 2026-08-01",
+  "generated_at": "2026-08-01 08:42:54 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.07129v1",
+      "route": "20260703-20260801/2607.07129v1-compositional-motion-generation-from-demonstration-with-object-centric-neural-fields",
+      "title": "Compositional Motion Generation from Demonstration with Object-Centric Neural Fields",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "显式组合运动生成与物体条件运动原语；直接对应新物体配置下的组合泛化",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.09590v1",
+      "route": "20260703-20260801/2607.09590v1-pac-act-post-training-actor-critic-for-action-chunking-transformers",
+      "title": "PAC-ACT: Post-training Actor-Critic for Action Chunking Transformers",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对预训练动作分块Transformer策略进行强化学习后训练，面向接触丰富的操作任务",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.10625v1",
+      "route": "20260703-20260801/2607.10625v1-dual-process-atomic-skill-learning-decoupling-semantic-reasoning-and-real-time-control",
+      "title": "Dual-Process Atomic Skill Learning: Decoupling Semantic Reasoning and Real-Time Control",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "异步分层模仿学习框架，将语义技能推理与实时动作生成解耦，学习原子技能以完成多步组合任务",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.13882v1",
+      "route": "20260703-20260801/2607.13882v1-learning-forward--reverse-skills-from-a-single-unfinished-demonstration-for-constrained-manipulation-tasks",
+      "title": "Learning Forward & Reverse Skills from a Single Unfinished Demonstration for Constrained Manipulation Tasks",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将技能分解为非接触/接触阶段的运动原语并支持正反向执行；对应技能与局部相位条件模仿学习",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.14578v1",
+      "route": "20260703-20260801/2607.14578v1-beyond-implicit-force-evaluating-explicit-force-torque-proxies-in-action-chunking-with-transformers",
+      "title": "Beyond Implicit Force: Evaluating Explicit Force-Torque Proxies in Action Chunking with Transformers",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用Transformer动作分块预测连续动作序列，面向接触丰富操作",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.15714v1",
+      "route": "20260703-20260801/2607.15714v1-ac-vla-robust-out-of-distribution-action-execution-via-compositional-learning",
+      "title": "AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对子技能以未见配置重组的分布外泛化问题，直接对应组合泛化需求",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.25397v1",
+      "route": "20260703-20260801/2607.25397v1-decompose-and-reorganize-planning-with-primitives-and-visuomotor-policies-learned-from-demonstrations",
+      "title": "Decompose and Reorganize: Planning with Primitives and Visuomotor Policies Learned from Demonstrations",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将演示学习的视觉运动策略集成到TAMP门控系统，面向长时程接触丰富操作的可复用原语",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.05377v1",
+      "route": "20260703-20260801/2607.05377v1-cortex-a-bidirectionally-aligned-embodied-agent-framework-for-long-horizon-manipulation",
+      "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向长时程操作的分层框架，含32个规范化技能原语",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.06256v2",
+      "route": "20260703-20260801/2607.06256v2-diagnosing-semantic-handoff-failures-in-agent-orchestrated-vision-language-action-skill-composition",
+      "title": "Diagnosing Semantic Handoff Failures in Agent-Orchestrated Vision-Language-Action Skill Composition",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "智能体编排的技能组合框架，基于VLM验证执行推进/重试/重规划以处理语义交接失败",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.08354v1",
+      "route": "20260703-20260801/2607.08354v1-skillplug-unsupervised-skill-mining-for-few-shot-adaptation-in-robotic-manipulation",
+      "title": "SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "技能条件化视觉运动策略与从多任务演示中挖掘的可复用技能库",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.09648v1",
+      "route": "20260703-20260801/2607.09648v1-b-spline-policy-accelerating-manipulation-policies-via-b-spline-action-representations",
+      "title": "B-spline Policy: Accelerating Manipulation Policies via B-spline Action Representations",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用B样条参数预测连续动作序列；是低层控制中离散动作分块的直接替代方案",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.06978v2",
+      "route": "20260703-20260801/2607.06978v2-spectra-context-conditioned-spectral-movement-primitives-for-robot-skill-generalization",
+      "title": "SPECTRA: Context-Conditioned Spectral Movement Primitives for Robot Skill Generalization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "将示范表示为频域谱运动原语，以任务空间几何保持与关节空间执行约束支持技能泛化",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.07076v1",
+      "route": "20260703-20260801/2607.07076v1-prigo-test-time-primitive-guidance-to-diffusion-and-flow-policies-for-adaptive-robotic-manipulation",
+      "title": "PriGo: Test-Time Primitive Guidance to Diffusion and Flow Policies for Adaptive Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "测试时以原语分布条件化模仿策略，类似于技能标识条件控制",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.08448v3",
+      "route": "20260703-20260801/2607.08448v3-harness-vla-steering-frozen-vlas-into-reliable-manipulation-primitives-via-memory-guided-agents",
+      "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "用LLM智能体与记忆/重试编排冻结VLA操作原语，面向长时程接触丰富任务，支持失败恢复",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.21670v1",
+      "route": "20260703-20260801/2607.21670v1-ordered-action-tokens-for-visuomotor-policy-learning",
+      "title": "Ordered Action Tokens for Visuomotor Policy Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "用transformer对连续动作块做有序令牌化，服务视觉运动策略",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.04162v1",
+      "route": "20260703-20260801/2607.04162v1-ace-agentic-control-for-embodied-manipulation-via-zero-shot-workflow-reasoning",
+      "title": "ACE: Agentic Control for Embodied Manipulation via Zero-shot Workflow Reasoning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过可复用拾放原语与智能体工作流推理实现开放桌面任务的失败自适应执行",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.06442v1",
+      "route": "20260703-20260801/2607.06442v1-sieve-structure-aware-data-selection-for-imitation-learning-with-vla-models",
+      "title": "SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "将示范视为可复用原语和转换接口，与基于技能库的模仿学习目标相符",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    },
+    {
+      "paper_id": "2607.09515v1",
+      "route": "20260703-20260801/2607.09515v1-one-shot-multimodal-learning-from-demonstration-with-force-constrained-elastic-maps",
+      "title": "One-Shot Multimodal Learning from Demonstration with Force-Constrained Elastic Maps",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "从示教中提取力感知运动原语，与参数化操作技能相关",
+      "first_seen_at": "2026-08-01 08:42:54 UTC",
+      "updated_at": "2026-08-01 08:42:54 UTC"
+    }
+  ]
+}

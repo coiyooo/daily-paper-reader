@@ -1,6 +1,226 @@
 {
-  "generated_at": "2026-03-06T19:11:18.471356+00:00",
-  "updated_date": "20260306",
+  "generated_at": "2026-08-01T08:34:45.276511+00:00",
+  "updated_date": "20260703-20260801",
   "carryover_days": 9,
-  "items": []
+  "tag_states": {
+    "param-skills": {
+      "updated_date": "20260703-20260801",
+      "carryover_days": 9,
+      "items": [
+        {
+          "id": "2607.28382v1",
+          "source": "arxiv",
+          "title": "SemAnCorr: Semantic Anchored Correspondence for Zero-Shot Manipulation Skill Transfer",
+          "abstract": "Transferring manipulation skills across object instances that share functionality but differ in geometry remains a fundamental challenge in robot learning. While recent correspondence methods leverage dense visual descriptors and 3D feature fields, nearest-neighbor feature matching often produces spatially incoherent correspondences that fail to recover the local geometric frames required for reliable skill transfer. We introduce SemAnCorr, a training-free framework that establishes dense correspondence by selecting semantically consistent anchor regions through joint pose-correspondence optimization and propagating these constraints over the object surface using functional maps. The resulting correspondences preserve both semantic consistency and geometric coherence, enabling object-centric manipulation skills to transfer across geometrically diverse instances. We evaluate SemAnCorr on a dense correspondence benchmark built on PartNet-Mobility, achieving 90.8% semantic accuracy in our benchmark evaluation while improving geometric coherence over recent state-of-the-art baselines. Finally, we show that these improvements translate directly into real-world manipulation performance: using a single demonstration, SemAnCorr enables substantially more reliable zero-shot manipulation skill transfer to previously unseen objects than existing correspondence methods. Videos and additional visualizations are available at [https://semancorr.github.io](https://semancorr.github.io) .",
+          "authors": [
+            "Xiaoxiang Dong",
+            "William Baron",
+            "Hongyi Chen",
+            "Uksang Yoo",
+            "Jeffrey Ichnowski",
+            "Weiming Zhi"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-07-30T15:41:39+00:00",
+          "link": "https://arxiv.org/pdf/2607.28382v1",
+          "tags": [
+            "keyword:param-skills",
+            "query:param-skills"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "zero-shot manipulation skill transfer to novel object geometries, matching compositional generalization over object configurations",
+          "llm_evidence_cn": "面向新物体几何的零样本技能迁移，对应物体配置的组合泛化需求",
+          "llm_evidence": "面向新物体几何的零样本技能迁移，对应物体配置的组合泛化需求",
+          "canonical_evidence": "面向新物体几何的零样本技能迁移，对应物体配置的组合泛化需求",
+          "llm_tldr_en": "SemAnCorr establishes semantically anchored dense correspondences across objects with shared functionality but different geometry, enabling zero-shot local frame transfer for manipulation skills.",
+          "llm_tldr_cn": "该论文针对功能相同但几何不同的物体间操作技能迁移难题，提出训练免费的SemAnCorr框架。它通过联合位姿-对应优化选择语义一致的锚定区域，并借助函数映射将约束传播到整个物体表面，从而生成语义一致且几何可用的稠密对应关系。该方法在零样本技能迁移中恢复可靠的局部几何坐标系，显著提升跨物体操作成功率，为技能泛化到新物体配置提供了关键基础。",
+          "llm_tldr": "该论文针对功能相同但几何不同的物体间操作技能迁移难题，提出训练免费的SemAnCorr框架。它通过联合位姿-对应优化选择语义一致的锚定区域，并借助函数映射将约束传播到整个物体表面，从而生成语义一致且几何可用的稠密对应关系。该方法在零样本技能迁移中恢复可靠的局部几何坐标系，显著提升跨物体操作成功率，为技能泛化到新物体配置提供了关键基础。",
+          "llm_tags": [
+            "query:param-skills"
+          ],
+          "matched_query_tag": "query:param-skills",
+          "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+          "matched_requirement_id": "req-5",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.28382v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.11027v1",
+          "source": "arxiv",
+          "title": "SegDiff: Segmented Trajectory Diffusion for Consistent and Adaptive Robot Manipulation",
+          "abstract": "Imitation learning enables robots to acquire manipulation skills from demonstrations by mapping observations to actions. Existing approaches predict either short-horizon continuous action sequences or discrete keyposes. However, continuous prediction methods suffer from compounding errors due to short prediction horizons and struggle with multi-modal action distributions, whereas keypose-based methods necessitate an external planner, constraining real-time applicability. To address these challenges, we introduce SegDiff, a closed-loop visuomotor policy that integrates the strengths of both paradigms. SegDiff decomposes demonstrations into motion segments between keyposes and learns to predict the continuous trajectory from the current state to the next keypose, enabling long-horizon prediction with real-time refinement. Furthermore, we leverage the capability of diffusion models and DDIM inversion to propose a Dynamic Temporal Ensembling mechanism, which allows the policy to efficiently respond to dynamic environments and mitigate discontinuities caused by inconsistent multi-modal sampling. SegDiff demonstrates significant performance gains over existing approaches across various simulated and real-world scenarios, indicating its strong ability to reason over extended temporal dependencies while maintaining real-time adaptability and control stability.",
+          "authors": [
+            "Haidong Cao",
+            "Wenjun Cao",
+            "Quanhao Li",
+            "Sicheng Xie",
+            "Zhiying Du",
+            "Jiaqi Leng",
+            "Zuxuan Wu",
+            "Yu-Gang Jiang"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-07-13T02:48:03+00:00",
+          "link": "https://arxiv.org/pdf/2607.11027v1",
+          "tags": [
+            "keyword:param-skills",
+            "query:param-skills"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "continuous low-level action sequence prediction; segmented trajectory diffusion over keypose-bounded motion segments addresses action-chunk style horizons",
+          "llm_evidence_cn": "低层连续动作序列预测；在关键位姿界定的运动段上使用分段扩散策略，对应动作分块式预测",
+          "llm_evidence": "低层连续动作序列预测；在关键位姿界定的运动段上使用分段扩散策略，对应动作分块式预测",
+          "canonical_evidence": "低层连续动作序列预测；在关键位姿界定的运动段上使用分段扩散策略，对应动作分块式预测",
+          "llm_tldr_en": "SegDiff merges keypose and continuous prediction: decomposes demonstrations into motion segments between keyposes and learns to predict the continuous trajectory from the current state, reducing compounding errors and supporting real-time closed-loop control.",
+          "llm_tldr_cn": "模仿学习中连续预测方法因预测视野短产生复合误差且难以处理多模态分布，关键位姿方法又依赖外部规划器。SegDiff将演示分解为关键位姿间的运动段，学习从当前状态预测连续轨迹，兼顾两种范式的优点。实验表明其在操作任务上能生成一致且自适应的连续动作序列，减少误差累积并支持实时闭环控制。",
+          "llm_tldr": "模仿学习中连续预测方法因预测视野短产生复合误差且难以处理多模态分布，关键位姿方法又依赖外部规划器。SegDiff将演示分解为关键位姿间的运动段，学习从当前状态预测连续轨迹，兼顾两种范式的优点。实验表明其在操作任务上能生成一致且自适应的连续动作序列，减少误差累积并支持实时闭环控制。",
+          "llm_tags": [
+            "query:param-skills"
+          ],
+          "matched_query_tag": "query:param-skills",
+          "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+          "matched_requirement_id": "req-3",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.11027v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.21582v1",
+          "source": "arxiv",
+          "title": "Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation",
+          "abstract": "Compositional generalization is essential for robot to follow diverse instructions. However, pretrained policies are known to take shortcuts, deferring to salient cues rather than grounding language. We introduce a diagnostic framework that localizes this failure to individual \\textit{instruction factors}, \\textit{e.g.,} reusable semantic components such as color, verb, object, size, and spatial attribute. Our framework formalizes instruction factor bias, the tendency of fine-tuned policies to over-rely on dominant factors as shortcuts, and quantifies it through two metrics: Factor Dominance Rate (FDR), capturing pairwise bias between factors, and Factor Dominance Hierarchy (FDH), aggregating these into a global ranking. Evaluation on six foundation policies reveals broadly consistent ordering, \\textit{i.e.}, color $\\geq$ object $\\geq$ spatial $\\geq$ verb $\\geq$ size, with color dominant, and verb and size most under-grounded. We further show the diagnosis is actionable: a bias-aware data collection strategy that reallocates a fixed budget toward under-grounded factors outperforms baselines in simulation and on a real robot using half the demonstrations, thereby enabling more sample-efficient and generalizable policy learning.",
+          "authors": [
+            "Yu Qi",
+            "Zhang Ye",
+            "Xinyi Xu",
+            "Yuxuan Lu",
+            "Amitoj Sandhu",
+            "Boce Hu",
+            "Haojie Huang",
+            "Jonathan Tremblay",
+            "Lawson L. S. Wong"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "published": "2026-07-23T17:57:09+00:00",
+          "link": "https://arxiv.org/pdf/2607.21582v1",
+          "tags": [
+            "keyword:param-skills",
+            "query:param-skills"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "diagnostic and data-collection framework for compositional generalization of manipulation policies over reusable factors such as color, verb, object, size and spatial attribute",
+          "llm_evidence_cn": "针对可复用语义因子的组合泛化问题提出偏差评估与数据收集框架，关注颜色、动词、物体等组合成分",
+          "llm_evidence": "针对可复用语义因子的组合泛化问题提出偏差评估与数据收集框架，关注颜色、动词、物体等组合成分",
+          "canonical_evidence": "针对可复用语义因子的组合泛化问题提出偏差评估与数据收集框架，关注颜色、动词、物体等组合成分",
+          "llm_tldr_en": "This work introduces a diagnostic framework that localizes compositional generalization failures in robotic manipulation to individual instruction factors, formalizes factor dominance bias with new metrics, and guides bias-aware data collection to overcome shortcuts taken by pretrained policies.",
+          "llm_tldr_cn": "预训练策略在跟随多样化指令时往往依赖显著线索而忽略语言所指，导致组合泛化失败。本文提出一个诊断框架，将失败定位到颜色、动词、物体、大小、空间属性等可复用的指令因子，并形式化因子主导偏差，通过因子主导率和因子主导层级两个指标度量其程度。基于该偏差分析，框架进一步指导数据收集以缓解捷径学习。这为机器人操作中组合泛化的评测与数据扩展提供了系统化手段。",
+          "llm_tldr": "预训练策略在跟随多样化指令时往往依赖显著线索而忽略语言所指，导致组合泛化失败。本文提出一个诊断框架，将失败定位到颜色、动词、物体、大小、空间属性等可复用的指令因子，并形式化因子主导偏差，通过因子主导率和因子主导层级两个指标度量其程度。基于该偏差分析，框架进一步指导数据收集以缓解捷径学习。这为机器人操作中组合泛化的评测与数据扩展提供了系统化手段。",
+          "llm_tags": [
+            "query:param-skills"
+          ],
+          "matched_query_tag": "query:param-skills",
+          "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+          "matched_requirement_id": "req-5",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.21582v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.26315v1",
+          "source": "arxiv",
+          "title": "MoMo: Dial Motion Mode in Robot Manipulation with Spatiotemporal Action Tokenization",
+          "abstract": "To operate effectively across diverse contexts, robots must not only perform manipulation tasks accurately but also adapt how their actions unfold to the task, object, and interaction setting. We ask whether this execution-level variation can be learned as a reusable behavioral factor shared across tasks. We present \\textbf{MoMo}, a two-stage imitation-learning framework consisting of a spatiotemporal action tokenizer and a behavior-cloning transformer that takes task and a continuous motion-mode condition as inputs. Across six real-robot manipulation tasks, varying this condition produces steady, dynamic, and intermediate behaviors that human raters can distinguish and that differ in joint speed, acceleration, and end-effector approach pitch. On tasks demonstrated in only one mode, MoMo transfers the unseen requested mode while largely preserving task success. Together, these results provide evidence of compositional generalization to unseen task--mode combinations and show that motion mode can be reused across tasks to control how a manipulation skill is performed.",
+          "authors": [
+            "Yuhan Hu",
+            "Hugues Thomas",
+            "Peide Huang",
+            "Mouli Sivapurapu",
+            "Benoit Landry",
+            "Arto Kivila"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-07-28T22:25:10+00:00",
+          "link": "https://arxiv.org/pdf/2607.26315v1",
+          "tags": [
+            "keyword:param-skills",
+            "query:param-skills"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Imitation learning with spatiotemporal action tokenization and behavior-cloning transformer conditioned on a continuous motion-mode parameter for real-robot manipulation",
+          "llm_evidence_cn": "以连续运动模式为条件的模仿学习与时空动作标记化，面向真实机器人操作",
+          "llm_evidence": "以连续运动模式为条件的模仿学习与时空动作标记化，面向真实机器人操作",
+          "canonical_evidence": "以连续运动模式为条件的模仿学习与时空动作标记化，面向真实机器人操作",
+          "llm_tldr_en": "MoMo is a two-stage imitation learning framework combining spatiotemporal action tokenization with a behavior-cloning transformer conditioned on task and a continuous motion-mode parameter, yielding distinguishable behaviors across six real-robot manipulation tasks.",
+          "llm_tldr_cn": "现有机器人操作策略难以根据任务、对象和交互环境灵活调整动作执行方式，运动模式的可复用性未被充分利用。为此提出MoMo两阶段模仿学习框架，先通过时空动作标记器对动作序列进行标记化，再由行为克隆Transformer以任务和连续运动模式条件为输入生成低层动作。在六个真实机器人操作任务上，改变该条件能够产生可被人类区分且关节速度、加速度不同的平稳、动态与中间行为。结果表明执行层运动模式可作为跨任务共享的可复用行为因子，为机器人技能的风格复用提供新思路。",
+          "llm_tldr": "现有机器人操作策略难以根据任务、对象和交互环境灵活调整动作执行方式，运动模式的可复用性未被充分利用。为此提出MoMo两阶段模仿学习框架，先通过时空动作标记器对动作序列进行标记化，再由行为克隆Transformer以任务和连续运动模式条件为输入生成低层动作。在六个真实机器人操作任务上，改变该条件能够产生可被人类区分且关节速度、加速度不同的平稳、动态与中间行为。结果表明执行层运动模式可作为跨任务共享的可复用行为因子，为机器人技能的风格复用提供新思路。",
+          "llm_tags": [
+            "query:param-skills"
+          ],
+          "matched_query_tag": "query:param-skills",
+          "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+          "matched_requirement_id": "req-3",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.26315v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.20771v2",
+          "source": "arxiv",
+          "title": "Emergent Compositional Skills in Mixture-of-Experts VLAs",
+          "abstract": "We consider the problem of learning compositional robot policies end-to-end from expert demonstrations, without any pre-specified notion of task decomposition or hierarchy. We ask whether a VLA trained with a simplified Mixture-of-Experts (MoE) action head can emergently learn to decompose tasks into reusable, interpretable primitives. We find that learned experts are heavily reused across tasks and consistently correspond to qualitatively distinct low-level behaviors, suggesting that the router implicitly learns to perform high-level sequencing while experts serve as compositional primitives. Our MoE matches the task performance of a monolithic baseline while demonstrating meaningful expert specialization, a step toward modular, interpretable robot policies that emerge from data alone.",
+          "authors": [
+            "Shlok Shah",
+            "Rhiaan Jhaveri",
+            "Tharun Kumar Tiruppali Kalidoss",
+            "Chirayu Nimonkar",
+            "Ishaan Javali",
+            "Dhruv Shah"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2026-07-22T22:36:52+00:00",
+          "link": "https://arxiv.org/pdf/2607.20771v2",
+          "tags": [
+            "keyword:param-skills",
+            "query:param-skills"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Compositional emergence of reusable primitive experts in VLA policies",
+          "llm_evidence_cn": "VLA策略中以混合专家涌现可复用组合原语",
+          "llm_evidence": "VLA策略中以混合专家涌现可复用组合原语",
+          "canonical_evidence": "VLA策略中以混合专家涌现可复用组合原语",
+          "llm_tldr_en": "A simplified MoE action head in VLAs makes reusable experts emerge as compositional primitives, with the router learning high-level sequencing and matching monolithic baselines.",
+          "llm_tldr_cn": "该工作研究如何从专家演示端到端地学习组合式机器人策略，而无需预定义任务分解或层次。作者在VLA中引入简化混合专家动作头，使路由器隐式学习高层任务排序，各专家作为可复用的组合原语。实验发现专家在任务间被大量复用，并与不同低层行为稳定对应，性能与单体基线相当，同时展现出可解释的模块化结构。这一结果表明组合技能可以从数据中涌现，为可复用技能库的自动构建开辟了新途径。",
+          "llm_tldr": "该工作研究如何从专家演示端到端地学习组合式机器人策略，而无需预定义任务分解或层次。作者在VLA中引入简化混合专家动作头，使路由器隐式学习高层任务排序，各专家作为可复用的组合原语。实验发现专家在任务间被大量复用，并与不同低层行为稳定对应，性能与单体基线相当，同时展现出可解释的模块化结构。这一结果表明组合技能可以从数据中涌现，为可复用技能库的自动构建开辟了新途径。",
+          "llm_tags": [
+            "query:param-skills"
+          ],
+          "matched_query_tag": "query:param-skills",
+          "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+          "matched_requirement_id": "req-5",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.20771v2",
+          "carry_days": 1
+        }
+      ]
+    }
+  }
 }
