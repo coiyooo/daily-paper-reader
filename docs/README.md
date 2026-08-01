@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-03 ~ 2026-08-01</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-01</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 18 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 17 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>7</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-01 08:42:54 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-01 21:38:24 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>7月3日至8月1日共追踪18篇论文，精读7篇、速读11篇；其中两篇9分精读聚焦物体中心神经场的组合运动生成与动作分块Transformer的后训练优化，值得优先研读。其余高分速读还覆盖了长时程操作代理框架、语义交接失败诊断和少样本技能挖掘，可作为延伸拓展。建议先精读两篇9分工作，再按需浏览速读清单中的具身智能与技能适应方向。</p>
+<p>今日聚焦机器人操作与实时执行，共研读17篇，精读6篇、速读11篇。最值得关注的是两篇9.0分精读论文：FutureRTC的预期条件动作分块实现实时执行，及MoMo用时空动作标记化控制操作模式。建议进一步探索这两项方法在复杂操作任务中的互补应用，并结合速读中的组合泛化与流式移动操作框架。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">7 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Compositional Motion Generation from Demonstration with Object-Centric Neural Fields">Compositional Motion Generation from Demonstration with Object-Centric Neural Fields</span></li><li><span class="dpr-home-dashboard-paper-title" title="PAC-ACT: Post-training Actor-Critic for Action Chunking Transformers">PAC-ACT: Post-training Actor-Critic for Action Chunking Transformers</span></li><li><span class="dpr-home-dashboard-paper-title" title="Dual-Process Atomic Skill Learning: Decoupling Semantic Reasoning and Real-Time Control">Dual-Process Atomic Skill Learning: Decoupling Semantic Reasoning and Real-Time Control</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking">FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking</span></li><li><span class="dpr-home-dashboard-paper-title" title="MoMo: Dial Motion Mode in Robot Manipulation with Spatiotemporal Action Tokenization">MoMo: Dial Motion Mode in Robot Manipulation with Spatiotemporal Action Tokenization</span></li><li><span class="dpr-home-dashboard-paper-title" title="RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents">RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>7</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -87,7 +87,7 @@
     <strong class="dpr-home-dashboard-count">11 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation">Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Diagnosing Semantic Handoff Failures in Agent-Orchestrated Vision-Language-Action Skill Composition">Diagnosing Semantic Handoff Failures in Agent-Orchestrated Vision-Language-Action Skill Composition</span></li><li><span class="dpr-home-dashboard-paper-title" title="SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation">SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Emergent Compositional Skills in Mixture-of-Experts VLAs">Emergent Compositional Skills in Mixture-of-Experts VLAs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation">Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning">RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>11</strong></span></div>
 </section>

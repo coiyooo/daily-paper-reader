@@ -1,0 +1,281 @@
+{
+  "date": "20260801",
+  "date_label": "",
+  "generated_at": "2026-08-01 21:38:24 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.24008v1",
+      "route": "202608/01/2607.24008v1-futurertc-real-time-robot-execution-with-anticipatory-conditioned-action-chunking",
+      "title": "FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用于异步VLA控制的预期条件动作分块",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.26315v1",
+      "route": "202608/01/2607.26315v1-momo-dial-motion-mode-in-robot-manipulation-with-spatiotemporal-action-tokenization",
+      "title": "MoMo: Dial Motion Mode in Robot Manipulation with Spatiotemporal Action Tokenization",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于Transformer的行为克隆与连续运动模式条件，实现技能条件化模仿学习",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.27881v1",
+      "route": "202608/01/2607.27881v1-robobridge-a-modular-framework-for-bridging-policies-to-robust-real-world-robotic-agents",
+      "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过监测、感知、规划等模块编排，实现失败恢复与长时程鲁棒性",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.11027v1",
+      "route": "202608/01/2607.11027v1-segdiff-segmented-trajectory-diffusion-for-consistent-and-adaptive-robot-manipulation",
+      "title": "SegDiff: Segmented Trajectory Diffusion for Consistent and Adaptive Robot Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "低层连续动作序列预测；在关键位姿界定的运动段上使用分段扩散策略，对应动作分块式预测",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.20771v2",
+      "route": "202608/01/2607.20771v2-emergent-compositional-skills-in-mixture-of-experts-vlas",
+      "title": "Emergent Compositional Skills in Mixture-of-Experts VLAs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "VLA策略中以混合专家涌现可复用组合原语",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.21582v1",
+      "route": "202608/01/2607.21582v1-scale-up-strategically-learning-compositional-generalization-via-bias-aware-evaluation-and-data-collection-for-robotic-manipulation",
+      "title": "Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对可复用语义因子的组合泛化问题提出偏差评估与数据收集框架，关注颜色、动词、物体等组合成分",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.23909v1",
+      "route": "202608/01/2607.23909v1-worlddit-a-unified-diffusion-architecture-for-world-and-action-modeling",
+      "title": "WorldDiT: A Unified Diffusion Architecture for World and Action Modeling",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用扩散Transformer生成机器人操作的连续动作块，并在LIBERO基准上评测",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.26055v1",
+      "route": "202608/01/2607.26055v1-mathbfr2-reactive-real-time-flow-policies",
+      "title": "$π\\mathbf{R}^2$: Reactive Real-time Flow Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "直接针对机器人操作中动作块流策略的反应性与延迟问题。",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.26460v1",
+      "route": "202608/01/2607.26460v1-rlmm-flow-a-flow-based-mobile-manipulation-framework-with-latent-space-reinforcement-learning",
+      "title": "RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "生成全身动作块并利用流策略与潜在空间强化学习优化操作策略。",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.26807v1",
+      "route": "202608/01/2607.26807v1-route-by-kinematics-act-by-observation-kinematics-supervised-expert-routing-in-moe-augmented-vla",
+      "title": "Route by Kinematics, Act by Observation: Kinematics-Supervised Expert Routing in MoE-Augmented VLA",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "基于运动学原型ID进行专家路由，类比技能条件化策略",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.28198v1",
+      "route": "202608/01/2607.28198v1-unicross-unified-cross-skill-dexterous-manipulation-synthesis",
+      "title": "UniCross: Unified Cross-Skill Dexterous Manipulation Synthesis",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向长时程接触丰富操作的统一多技能建模",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.28382v1",
+      "route": "202608/01/2607.28382v1-semancorr-semantic-anchored-correspondence-for-zero-shot-manipulation-skill-transfer",
+      "title": "SemAnCorr: Semantic Anchored Correspondence for Zero-Shot Manipulation Skill Transfer",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过语义锚定对应实现跨物体实例的零样本操作技能迁移，面向物体配置的组合泛化",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.25853v1",
+      "route": "202608/01/2607.25853v1-hiskill-empowering-llm-agents-with-hierarchical-skill-graphs",
+      "title": "HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "层次化技能图连接可复用技能与可执行动作模板",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.26789v1",
+      "route": "202608/01/2607.26789v1-checkvla-execution-time-verification-with-action-conditioned-world-model-for-long-horizon-mobile-manipulation",
+      "title": "CheckVLA: Execution-Time Verification with Action-Conditioned World Model for Long-Horizon Mobile Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向长程移动操作的开环动作块执行时验证",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.23783v1",
+      "route": "202608/01/2607.23783v1-n0-twam-scaling-tactile-native-world-action-model-for-contact-rich-manipulation",
+      "title": "$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用触觉接触事件进行任务分阶段并支持长时接触操作，近似以局部阶段为条件",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.26770v1",
+      "route": "202608/01/2607.26770v1-vision-tl-action-neuro-symbolic-trajectory-generation-from-visual-observations-and-temporal-logic",
+      "title": "Vision-TL-Action: Neuro-Symbolic Trajectory Generation from Visual Observations and Temporal Logic",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "利用时序逻辑作为长时程任务的可组合表示，并生成动作轨迹",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    },
+    {
+      "paper_id": "2607.27511v1",
+      "route": "202608/01/2607.27511v1-failure-detection-for-surgical-robot-imitation-policies-via-flow-matching-world-modeling",
+      "title": "Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "为模仿策略提供故障检测，可用于技能框架中的失败恢复",
+      "first_seen_at": "2026-08-01 21:38:24 UTC",
+      "updated_at": "2026-08-01 21:38:24 UTC"
+    }
+  ]
+}
