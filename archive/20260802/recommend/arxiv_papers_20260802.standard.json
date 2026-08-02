@@ -1,0 +1,300 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-02T21:16:53.151467+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2607.25487v1",
+      "source": "arxiv",
+      "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model",
+      "abstract": "Vision-Language-Action (VLA) models translate natural-language commands into robot action sequences, but leading systems on the LIBERO-Plus robustness benchmark use three- to seven-billion-parameter backbones whose memory demands can exceed embedded robotic budgets. We present CoTinyVLA, a 0.9B-parameter action model on a Qwen3.5-0.8B backbone that obtains that robustness by structuring supervision instead of enlarging the model. Three components target different axes of the problem: dual-view temporal input of 16 history frames per step with textual camera and time markers; hierarchical chain-of-thought (CoT) distillation from a 35B teacher into an episode-level Plan and a chunk-level Think span over task phase, gripper state and next subaction; and paraphrase augmentation expanding 40 base commands into 800 variants. On LIBERO-Plus, spanning 10,030 perturbed tasks across seven perturbation dimensions, CoTinyVLA reaches 90.8% on Spatial, 87.3% on Object, 86.6% on Goal and 80.7% on Long, leading the strongest 7B baseline on all four suites by 4.7, 2.8, 15.9 and 3.0 points, with every margin interval excluding zero. The gains concentrate on the hardest axes of the benchmark: across the eleven published baselines none exceeds 53.2% on Robot Initial States in any suite, whereas CoTinyVLA reaches 73.6% on Goal against 39.9% for the strongest baseline. Ablations show the three components to be separable by perturbation axis, and at a matched image budget how frames are divided between the two cameras and across time accounts for 8.6 points on its own. Closed-loop inference peaks at 2.25 GiB of allocated GPU memory, and paired interventions show the episode Plan to be load-bearing: replacing it with an empty or contradictory span costs 40 to 45 points of success. Structured supervision thus lets a 0.9B backbone exceed all of them. Code: https://github.com/BrainJellyPie/CoTinyVLA",
+      "authors": [
+        "Minhyeok Lee",
+        "Chiyoung Kim",
+        "Chanhoe Gu",
+        "Seongrok Kim",
+        "Sanghyuk Roy Choi",
+        "Donghwan Hwang",
+        "Donghun Ryu",
+        "Seokhyun Kim"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-28T09:24:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.25487v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Chunk-level action prediction transformer for low-level continuous robot actions",
+      "llm_evidence_cn": "面向低层连续机器人动作的分块级预测transformer",
+      "llm_evidence": "面向低层连续机器人动作的分块级预测transformer",
+      "canonical_evidence": "面向低层连续机器人动作的分块级预测transformer",
+      "llm_tldr_en": "CoTinyVLA is a 0.9B vision-language-action model that predicts robot action sequences via episode-level plans and chunk-level think spans, using hierarchical chain-of-thought distillation to achieve robustness on LIBERO-Plus within embedded budgets.",
+      "llm_tldr_cn": "CoTinyVLA针对视觉-语言-动作模型参数量过大、难以在嵌入式设备部署的问题，提出0.9B参数的紧凑动作模型。它通过双视角时序输入、从35B教师模型分层蒸馏出episode级计划和chunk级思考，并融合任务阶段与夹爪状态，使模型能够预测低层连续动作序列。在LIBERO-Plus基准上，该模型以极小参数量获得了接近大模型的稳健性，为资源受限的机器人操作提供了高效的动作分块方案。",
+      "llm_tldr": "CoTinyVLA针对视觉-语言-动作模型参数量过大、难以在嵌入式设备部署的问题，提出0.9B参数的紧凑动作模型。它通过双视角时序输入、从35B教师模型分层蒸馏出episode级计划和chunk级思考，并融合任务阶段与夹爪状态，使模型能够预测低层连续动作序列。在LIBERO-Plus基准上，该模型以极小参数量获得了接近大模型的稳健性，为资源受限的机器人操作提供了高效的动作分块方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.27599v1",
+      "source": "arxiv",
+      "title": "World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models",
+      "abstract": "Building generalizable agents for diverse applications remains a fundamental challenge. While imitation learning-based policies succeed in specific training environments, they often fail to generalize to novel scenes and tasks. In this work, we propose World Action Planner, a robot planning system that leverages the reasoning capabilities of Vision-Language Models (VLMs) and the physical grounding of a multi-task pose-image conditioned world model. Our system enables an agent to propose initial action plans and iteratively refine them via optimization and search, reasoning over imagined world model rollouts. We demonstrate that our approach achieves superior performance across compositional tasks, new layouts, and zero-shot generalization scenarios, significantly outperforming state-of-the-art end-to-end policy models such as VLAs and WAMs. Project website at worldactionplanner.github.io",
+      "authors": [
+        "Xiangcheng Zhang",
+        "Yilun Du"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-07-30T02:41:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.27599v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "compositional generalization via VLM reasoning and action-conditioned world models",
+      "llm_evidence_cn": "利用VLM推理与动作条件世界模型实现组合泛化",
+      "llm_evidence": "利用VLM推理与动作条件世界模型实现组合泛化",
+      "canonical_evidence": "利用VLM推理与动作条件世界模型实现组合泛化",
+      "llm_tldr_en": "World Action Planner combines VLM reasoning with a multi-task pose-image conditioned world model to propose and iteratively refine plans, achieving compositional generalization and zero-shot transfer.",
+      "llm_tldr_cn": "模仿学习策略通常只能适应特定训练环境，难以泛化到新场景和任务组合。本文提出World Action Planner，将视觉语言模型推理与多任务姿态图像条件的世界模型结合，生成初始动作计划并通过优化与搜索进行迭代精炼。实验显示该方法在组合任务、布局变化和零样本泛化上表现优越。该工作为可泛化机器人决策提供了一种世界模型驱动的规划框架。",
+      "llm_tldr": "模仿学习策略通常只能适应特定训练环境，难以泛化到新场景和任务组合。本文提出World Action Planner，将视觉语言模型推理与多任务姿态图像条件的世界模型结合，生成初始动作计划并通过优化与搜索进行迭代精炼。实验显示该方法在组合任务、布局变化和零样本泛化上表现优越。该工作为可泛化机器人决策提供了一种世界模型驱动的规划框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.28596v1",
+      "source": "arxiv",
+      "title": "FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation",
+      "abstract": "In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse action modes. After contact, geometric constraints and force limits narrow the solution space, while successful execution demands rapid responses to force feedback. However, standard diffusion policies use a fixed inference frequency and sampling steps throughout the episode, forcing a fundamental compromise: low-frequency, multi-step sampling better preserves pre-contact multimodality but responds slowly to force feedback, whereas high-frequency sampling improves reactivity but tends to collapse distinct pre-contact modes. To resolve this tradeoff, we present FA-RDP, a frequency-adaptive reactive diffusion policy. A shared multi-frequency visual-force Transformer predicts action chunks at both low and high frequencies, while a learned multimodality indicator dynamically selects multi-step low-frequency sampling before contact and one-step high-frequency sampling as action ambiguity decreases. We further introduce Manifold Consistency Distillation (MCD), which reparameterizes the diffusion network to predict actions on the robot action manifold while retaining DDPM-based residual supervision. Experiments on three contact-rich manipulation tasks show that FA-RDP achieves the highest success rate while preserving diverse pre-contact trajectory modes. Code and videos are available at https://fa-rdp.github.io.",
+      "authors": [
+        "Lifeng Zhuo",
+        "Wendi Chen",
+        "Han Xue",
+        "Shirun Tang",
+        "Jun Lv",
+        "Cewu Lu",
+        "Chuan Wen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-30T17:47:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.28596v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Frequency-adaptive reactive diffusion policy for contact-rich manipulation; preserves multimodality and improves reactivity.",
+      "llm_evidence_cn": "面向接触丰富操纵的频率自适应反应式扩散策略，兼顾多模态与反应性。",
+      "llm_evidence": "面向接触丰富操纵的频率自适应反应式扩散策略，兼顾多模态与反应性。",
+      "canonical_evidence": "面向接触丰富操纵的频率自适应反应式扩散策略，兼顾多模态与反应性。",
+      "llm_tldr_en": "FA-RDP introduces frequency-adaptive inference for reactive diffusion policies in contact-rich manipulation, preserving pre-contact action multimodality while enabling fast force feedback response after contact.",
+      "llm_tldr_cn": "接触丰富操纵中，接触前多种轨迹同样有效，需保留动作多模态；接触后几何约束与力限制收窄解空间，需要快速响应力反馈。固定推理频率和采样步数难以兼顾两者。FA-RDP提出频率自适应推理机制，使扩散策略在不同阶段动态调整推理频率，既保持接触前多模态又提升接触后反应性，改善了接触丰富任务的成功率。",
+      "llm_tldr": "接触丰富操纵中，接触前多种轨迹同样有效，需保留动作多模态；接触后几何约束与力限制收窄解空间，需要快速响应力反馈。固定推理频率和采样步数难以兼顾两者。FA-RDP提出频率自适应推理机制，使扩散策略在不同阶段动态调整推理频率，既保持接触前多模态又提升接触后反应性，改善了接触丰富任务的成功率。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.23784v1",
+      "source": "arxiv",
+      "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
+      "abstract": "While vision-language-action models have demonstrated impressive zero-shot manipulation capabilities, they remain fundamentally black box policies that are difficult to interpret, adapt, or correct when they inevitably fail. In this work, we propose ARCHITECT, a framework that treats robot policy acquisition as an interactive program synthesis task. ARCHITECT leverages the reasoning capabilities of LLM coding agents to synthesize modular robot programs that utilize a suite of perception and control tools. Unlike end-to-end models where distribution shift leads to unpredictable, cascading failures, our modular architecture allows users to isolate failures and localize feedback at the level of abstraction required. We introduce an iterative process where a human supervisor provides natural language corrections to steer the policy. These corrections are grounded in the policy code by program execution traces and distilled into a persistent skill library, a form of long-term in-context learning which enables the agent to accumulate a repertoire of reusable, interpretable behaviors. In a benchmark evaluation on a Franka Panda robot, ARCHITECT outperforms state-of-the-art VLA models and program synthesis baselines on complex, long-horizon tasks, including articulated object manipulation and cloth folding. Our results demonstrate that the synthesized skill library enables the system to transfer to novel tasks with decreasing human intervention, providing a steerable and data-efficient alternative to black-box robot learning. Website: https://robo-architect.github.io/",
+      "authors": [
+        "Daphne Chen",
+        "Archit Ritesh Jain",
+        "Eric Goossen",
+        "Emma Romig",
+        "Michael Murray",
+        "Nick Walker",
+        "Maya Cakmak"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-26T18:00:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.23784v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM-guided modular program synthesis for robot policies enables failure isolation and human correction, relevant to integrating policies with control flow for safety",
+      "llm_evidence_cn": "LLM引导的模块化机器人策略合成支持故障隔离与人工修正，与策略控制流集成保障安全相关",
+      "llm_evidence": "LLM引导的模块化机器人策略合成支持故障隔离与人工修正，与策略控制流集成保障安全相关",
+      "canonical_evidence": "LLM引导的模块化机器人策略合成支持故障隔离与人工修正，与策略控制流集成保障安全相关",
+      "llm_tldr_en": "ARCHITECT treats robot policy acquisition as interactive program synthesis with LLM coding agents, generating modular programs over perception and control tools. Modularity lets users isolate failures and localize feedback, improving interpretability and safe correction compared to black-box policies.",
+      "llm_tldr_cn": "针对端到端视觉-语言-动作模型作为黑箱难以解释、适配和修正故障的问题，本文提出ARCHITECT框架，将机器人策略获取视为交互式程序合成，由LLM编码智能体生成调用感知与控制工具的模块化机器人程序。模块化结构使故障能够被隔离到具体抽象层次，用户可针对性反馈与修正，避免端到端模型分布偏移时的级联失败。实验表明该方法显著提升了策略的可解释性与安全校正能力，是语言引导模块化策略合成的有效探索。",
+      "llm_tldr": "针对端到端视觉-语言-动作模型作为黑箱难以解释、适配和修正故障的问题，本文提出ARCHITECT框架，将机器人策略获取视为交互式程序合成，由LLM编码智能体生成调用感知与控制工具的模块化机器人程序。模块化结构使故障能够被隔离到具体抽象层次，用户可针对性反馈与修正，避免端到端模型分布偏移时的级联失败。实验表明该方法显著提升了策略的可解释性与安全校正能力，是语言引导模块化策略合成的有效探索。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.24159v1",
+      "source": "arxiv",
+      "title": "DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning",
+      "abstract": "Generalizable robot manipulation requires policies that can anticipate how visual scenes evolve while executing language instructions. While recent Vision-Language-Action models benefit from large-scale pretraining, their predominantly static pretraining objectives provide limited supervision for physical dynamics and temporal causality, leaving control-relevant knowledge to be learned from downstream robot demonstrations. Video generative models offer a promising foundation by encoding rich spatiotemporal priors through future predictions. However, existing Video-Action Models either couple video and action prediction in a shared backbone, making policy adaptation harder to optimize, or under-utilize video information when guiding the action branch. In this work, we introduce DeVA, a Decoupled Video-Action model with specialized video and action experts, multi-level feature transfer, and physically salient guidance. DeVA transfers representations from multiple video layers to the action expert, enabling rich information exchange while making policy learning more tractable. It further supervises intermediate video features and the action stream with physically salient guidance (affordance/depth). Experiments on both simulation benchmarks and real-world deployment demonstrate strong performance with limited data, faster convergence than a unified architecture, and clear performance gains from physical guidance.",
+      "authors": [
+        "Mengqi Zhang",
+        "Sahil Khose",
+        "Simar Kareer",
+        "Yuchen Song",
+        "Unnat Jain",
+        "Judy Hoffman"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-27T08:37:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.24159v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "decoupled video-action prediction for continuous robot action sequences with physics guidance",
+      "llm_evidence_cn": "解耦视频预测与动作预测并加入物理引导以生成连续机器人动作",
+      "llm_evidence": "解耦视频预测与动作预测并加入物理引导以生成连续机器人动作",
+      "canonical_evidence": "解耦视频预测与动作预测并加入物理引导以生成连续机器人动作",
+      "llm_tldr_en": "DeVA decouples video prediction and action prediction in a video-action model, using physics-guided video generation to provide spatiotemporal priors and improve generalizable robot manipulation policy learning.",
+      "llm_tldr_cn": "现有视觉-语言-动作模型静态预训练缺少物理动态监督，且视频与动作耦合使优化困难。DeVA提出解耦的视频-动作模型，用物理引导的视频生成提供时空先验，再将其用于动作预测。实验表明该方法能更充分使用视频信息，提升机器人操作策略在动态视觉场景中的泛化能力。该方法为基于视频先验的连续动作学习提供了新范式。",
+      "llm_tldr": "现有视觉-语言-动作模型静态预训练缺少物理动态监督，且视频与动作耦合使优化困难。DeVA提出解耦的视频-动作模型，用物理引导的视频生成提供时空先验，再将其用于动作预测。实验表明该方法能更充分使用视频信息，提升机器人操作策略在动态视觉场景中的泛化能力。该方法为基于视频先验的连续动作学习提供了新范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.24296v1",
+      "source": "arxiv",
+      "title": "PAC-DP: PAC-Bayesian Diffusion Policy Learning",
+      "abstract": "Diffusion Policies (DPs) are able to perform complex manipulation tasks. However, DPs are typically trained by minimizing a denoising objective, which provides limited control over generalization in the finite-data regimes common in robotics. In this letter, we propose PAC-DP, an approach that increases the performance of DPs in robotic manipulation tasks. By modeling the DP as a Bayesian neural network, and defining a PAC-Bayes generalization bound, we derive a novel training objective that augments the standard denoising loss with a Kullback-Leibler divergence regularizer between the posterior and prior parameter distributions. From the theoretical perspective, our approach provides a principled approach to regularize the training of DPs without significantly increasing the training time. From the practical point of view, experimental results demonstrate improved denoising performance, lower variational negative log-likelihood, and higher success rates across multiple robotic manipulation benchmarks. Crucially, the largest improvements are observed in low-data training regimes and complex tasks, establishing PAC-DP as a theoretically grounded framework for robot policy learning.",
+      "authors": [
+        "Mohammad Hasan Yeganegi",
+        "Dian Yu",
+        "Andrea Del Prete",
+        "Majid Khadiv",
+        "Matteo Saveriano"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-27T11:43:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.24296v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "PAC-Bayesian regularization of diffusion policies to improve generalization in finite-data robot manipulation",
+      "llm_evidence_cn": "基于PAC-Bayes界正则化扩散策略，提升机器人操作在有限数据下的泛化能力",
+      "llm_evidence": "基于PAC-Bayes界正则化扩散策略，提升机器人操作在有限数据下的泛化能力",
+      "canonical_evidence": "基于PAC-Bayes界正则化扩散策略，提升机器人操作在有限数据下的泛化能力",
+      "llm_tldr_en": "Diffusion Policies are effective for complex manipulation tasks but offer limited control over generalization in finite-data regimes. PAC-DP models the policy as a Bayesian neural network and augments denoising with a KL regularizer from a PAC-Bayes bound, improving performance without increasing model capacity.",
+      "llm_tldr_cn": "扩散策略在复杂操作任务中表现出色，但在机器人常见的小样本数据下泛化控制有限。本文提出PAC-DP，将扩散策略建模为贝叶斯神经网络，依据PAC-Bayes泛化界在标准去噪损失上加入后验与先验的KL散度正则项，以原理性方式约束训练。实验表明该方法在有限数据下显著提升操作性能，为扩散策略的小样本泛化提供了理论驱动训练目标。",
+      "llm_tldr": "扩散策略在复杂操作任务中表现出色，但在机器人常见的小样本数据下泛化控制有限。本文提出PAC-DP，将扩散策略建模为贝叶斯神经网络，依据PAC-Bayes泛化界在标准去噪损失上加入后验与先验的KL散度正则项，以原理性方式约束训练。实验表明该方法在有限数据下显著提升操作性能，为扩散策略的小样本泛化提供了理论驱动训练目标。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.26579v1",
+      "source": "arxiv",
+      "title": "ContactFlow: A video action conditioning that transfers across embodiments",
+      "abstract": "World models offer a promising route toward robot planning by enabling agents to imagine and verify the consequences of actions before execution. However, current video-based world models often struggle to capture the physical constraints that govern manipulation, particularly contact. Further, their action conditioning is often constrained to specific embodiments such as parallel grippers. We propose \\emph{Contact Flow}, an embodiment-agnostic action representation that encodes manipulation through the trajectory of 3D contact points between an actor and a target object. By discarding actor-specific appearance and kinematics, Contact Flow provides a shared conditioning signal for both human demonstrations and robotic execution. Therefore, we can train a large-scale video generative model on both human and robotic object interaction videos conditioned on Contact Flow, yielding a world model that predicts physically plausible manipulation outcomes. We integrate this model into a propose-imagine-verify-act pipeline, where generated rollouts are assessed by a vision-language model before execution. Experiments on the DROID dataset and real-world tabletop manipulation tasks demonstrate that Contact Flow enables transfer between human demonstrations and different robotic embodiments.",
+      "authors": [
+        "Sami Azirar",
+        "Enrico Pallotta",
+        "Jan Nogga",
+        "Jürgen Gall",
+        "Sven Behnke",
+        "Hermann Blum"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-29T07:59:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.26579v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "embodiment-agnostic contact action representation for contact-rich manipulation",
+      "llm_evidence_cn": "跨具身的接触动作表示，面向接触丰富操控",
+      "llm_evidence": "跨具身的接触动作表示，面向接触丰富操控",
+      "canonical_evidence": "跨具身的接触动作表示，面向接触丰富操控",
+      "llm_tldr_en": "Proposes ContactFlow, an embodiment-agnostic action representation using 3D contact point trajectories to condition world models for contact-rich manipulation, enabling cross-embodiment transfer.",
+      "llm_tldr_cn": "现有视频世界模型在处理机器人操控时难以捕捉接触带来的物理约束，并且动作条件输入往往绑定特定执行器。本文提出ContactFlow这一与具身无关的动作表示方法，用3D接触点的移动轨迹来编码操控过程，使人类演示与不同机器人执行器共享同一种条件信号。实验结果显示该表示可以捕捉细粒度接触语义，并显著提升跨具身场景下世界模型的泛化能力，为接触丰富的操控任务提供了一种通用动作条件范式。",
+      "llm_tldr": "现有视频世界模型在处理机器人操控时难以捕捉接触带来的物理约束，并且动作条件输入往往绑定特定执行器。本文提出ContactFlow这一与具身无关的动作表示方法，用3D接触点的移动轨迹来编码操控过程，使人类演示与不同机器人执行器共享同一种条件信号。实验结果显示该表示可以捕捉细粒度接触语义，并显著提升跨具身场景下世界模型的泛化能力，为接触丰富的操控任务提供了一种通用动作条件范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

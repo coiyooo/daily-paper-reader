@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-01</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-02</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 17 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 7 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-01 21:38:24 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-02 21:22:58 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦机器人操作与实时执行，共研读17篇，精读6篇、速读11篇。最值得关注的是两篇9.0分精读论文：FutureRTC的预期条件动作分块实现实时执行，及MoMo用时空动作标记化控制操作模式。建议进一步探索这两项方法在复杂操作任务中的互补应用，并结合速读中的组合泛化与流式移动操作框架。</p>
+<p>今日聚焦7篇机器人学习论文，精读2篇高分工作，速读3篇，覆盖视觉-语言-动作模型与决策策略。</p>
+<p>最值得关注：亚十亿参数CoTinyVLA通过思维链蒸馏实现高效操控，World Action Planner以动作条件世界模型提升决策泛化性。</p>
+<p>建议优先精读这两篇8分论文，并留意FA-RDP在接触丰富操作中的频率自适应潜力。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking">FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking</span></li><li><span class="dpr-home-dashboard-paper-title" title="MoMo: Dial Motion Mode in Robot Manipulation with Spatiotemporal Action Tokenization">MoMo: Dial Motion Mode in Robot Manipulation with Spatiotemporal Action Tokenization</span></li><li><span class="dpr-home-dashboard-paper-title" title="RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents">RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model">CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model</span></li><li><span class="dpr-home-dashboard-paper-title" title="World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models">World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">11 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Emergent Compositional Skills in Mixture-of-Experts VLAs">Emergent Compositional Skills in Mixture-of-Experts VLAs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation">Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning">RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation">FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Few Words Go a Long Way: Language Guided Robot Policy Synthesis">A Few Words Go a Long Way: Language Guided Robot Policy Synthesis</span></li><li><span class="dpr-home-dashboard-paper-title" title="DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning">DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>11</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
 </section>
 </div>
 

@@ -1,0 +1,121 @@
+{
+  "date": "20260802",
+  "date_label": "",
+  "generated_at": "2026-08-02 21:22:58 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.25487v1",
+      "route": "202608/02/2607.25487v1-cotinyvla-chain-of-thought-distillation-for-a-sub-billion-parameter-vision-language-action-model",
+      "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向低层连续机器人动作的分块级预测transformer",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    },
+    {
+      "paper_id": "2607.27599v1",
+      "route": "202608/02/2607.27599v1-world-action-planner-generalizable-decision-making-with-action-conditioned-world-models",
+      "title": "World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用VLM推理与动作条件世界模型实现组合泛化",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    },
+    {
+      "paper_id": "2607.28596v1",
+      "route": "202608/02/2607.28596v1-fa-rdp-a-frequency-adaptive-reactive-diffusion-policy-for-contact-rich-manipulation",
+      "title": "FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向接触丰富操纵的频率自适应反应式扩散策略，兼顾多模态与反应性。",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    },
+    {
+      "paper_id": "2607.23784v1",
+      "route": "202608/02/2607.23784v1-a-few-words-go-a-long-way-language-guided-robot-policy-synthesis",
+      "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "LLM引导的模块化机器人策略合成支持故障隔离与人工修正，与策略控制流集成保障安全相关",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    },
+    {
+      "paper_id": "2607.24159v1",
+      "route": "202608/02/2607.24159v1-deva-decoupled-video-action-model-with-physical-guidance-for-robot-policy-learning",
+      "title": "DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "解耦视频预测与动作预测并加入物理引导以生成连续机器人动作",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    },
+    {
+      "paper_id": "2607.24296v1",
+      "route": "202608/02/2607.24296v1-pac-dp-pac-bayesian-diffusion-policy-learning",
+      "title": "PAC-DP: PAC-Bayesian Diffusion Policy Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于PAC-Bayes界正则化扩散策略，提升机器人操作在有限数据下的泛化能力",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    },
+    {
+      "paper_id": "2607.26579v1",
+      "route": "202608/02/2607.26579v1-contactflow-a-video-action-conditioning-that-transfers-across-embodiments",
+      "title": "ContactFlow: A video action conditioning that transfers across embodiments",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "跨具身的接触动作表示，面向接触丰富操控",
+      "first_seen_at": "2026-08-02 21:22:58 UTC",
+      "updated_at": "2026-08-02 21:22:58 UTC"
+    }
+  ]
+}
