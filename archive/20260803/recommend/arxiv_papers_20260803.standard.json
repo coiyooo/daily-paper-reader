@@ -1,0 +1,258 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-03T20:35:47.686495+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.29285v1",
+      "source": "arxiv",
+      "title": "TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation",
+      "abstract": "Action chunking shortens the effective decision horizon of robot imitation learning by predicting multiple future actions, while conventional phase conditioning describes the current control instant. When a predicted horizon crosses a procedural boundary, assigning the current phase to the entire chunk creates a structural temporal mismatch. We present TRACT, which factorizes phase-structured action chunking into an accepted current phase and a single CURRENT-to-NEXT boundary inside the future horizon. A task-local graph constrains chronological phase authority, and a cumulative boundary distribution monotonically routes future queries through phase-specific query and action paths. For contact execution, a causal response-deficit integrator compares policy intent with ACK-eligible subsequent motion, accumulates arm compensation when directional response is suppressed, and decays after confirmed recovery. Across six real-robot variants with ten trials each, full TRACT achieves 10/10 full-sequence success, 99.00 [88.75, 100.00]% median [min, max] wipe completion, zero observed phase ambiguity, and zero stalls. Under the current complete method package and evaluation setting, the routed representation obtains better observed task results than the flat package (6/10 vs. 3/10 success; 77.08% vs. 8.03% median wipe completion). Chronological authority reduces observed phase ambiguity from 8/10 to 0/10, and response integration reduces stalls from 4/10 to 0/10. The package comparison does not isolate routing from other generator-package differences.",
+      "authors": [
+        "Jiahao Liu",
+        "Kento Kawaharazuka",
+        "Tasuku Makabe",
+        "Kei Okada"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T10:59:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.29285v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Phase-structured action chunking with chronological phase authority for contact-rich manipulation, directly addressing skill/phase-conditioned action prediction.",
+      "llm_evidence_cn": "针对接触丰富操作提出按时间阶段路由动作分块，阶段权威约束未来查询，直接匹配技能/阶段条件化预测。",
+      "llm_evidence": "针对接触丰富操作提出按时间阶段路由动作分块，阶段权威约束未来查询，直接匹配技能/阶段条件化预测。",
+      "canonical_evidence": "针对接触丰富操作提出按时间阶段路由动作分块，阶段权威约束未来查询，直接匹配技能/阶段条件化预测。",
+      "llm_tldr_en": "TRACT factorizes phase-structured action chunks using a CURRENT-to-NEXT boundary and task-local graph, routing future queries through phase-specific paths. This resolves temporal mismatch when a chunk crosses procedural boundaries in contact-rich manipulation.",
+      "llm_tldr_cn": "当预测的动作分块跨越程序性边界时，传统相位条件化会产生结构性时间错配。TRACT将相位结构化动作分块分解为当前接受相位和未来边界，利用任务局部图约束相位时序权威，并采用累积边界分布进行单调路由，使查询进入相位专用路径。在接触执行中还引入了因果响应机制。该方法针对接触丰富操作中的技能/相位条件化持续控制，显著减少了动作分块中的跨相位错误。",
+      "llm_tldr": "当预测的动作分块跨越程序性边界时，传统相位条件化会产生结构性时间错配。TRACT将相位结构化动作分块分解为当前接受相位和未来边界，利用任务局部图约束相位时序权威，并采用累积边界分布进行单调路由，使查询进入相位专用路径。在接触执行中还引入了因果响应机制。该方法针对接触丰富操作中的技能/相位条件化持续控制，显著减少了动作分块中的跨相位错误。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.29687v1",
+      "source": "arxiv",
+      "title": "Diagnosing Compositional Generalization in Sequential Robot Tasks",
+      "abstract": "Sequential robot manipulation requires policies to execute novel combinations of familiar instruction components. However, collecting demonstrations for all possible instruction tuples is combinatorially expensive, while sparsely covered datasets often fail under out-of-distribution recombination. This paper studies compositional generalization through the lens of instruction-space coverage. We decompose the generalization gap into three sources: \\textit{marginal instruction shift}, \\textit{instruction-compositional shift}, and \\textit{context--action shift}. This decomposition allows us to diagnose when sparse training coverage is sufficient, and what structure the training set must preserve for reliable action prediction. Our results show that exhaustive tuple enumeration is unnecessary: a structured subset, as small as one quarter of the full task space, can recover strong out-of-distribution performance when it covers action-relevant dependencies. We further find that sparse training often fails due to instruction steering rather than missing low-level skills; finetuning only one demonstration per task improves OOD success from \\(0.4\\%\\) to \\(54.7\\%\\). For semantically dependent tasks, effective coverage must capture relational structure rather than only factor diversity. These findings suggest that efficient robot data collection should prioritize dependency coverage in instruction space over exhaustive task expansion. More results are available in the supplementary material. Project website: https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/.",
+      "authors": [
+        "Yixiao Wang",
+        "Cheng-En Wu",
+        "Lingfeng Sun",
+        "Pengcheng Wang",
+        "Xiang Ji",
+        "Boyuan Liang",
+        "Guojian Zhan",
+        "Masayoshi Tomizuka"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T17:59:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.29687v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Studies compositional generalization in sequential robot tasks via instruction-space coverage decomposition.",
+      "llm_evidence_cn": "从指令空间覆盖角度研究顺序机器人任务的组合泛化，与分析间隙分解。",
+      "llm_evidence": "从指令空间覆盖角度研究顺序机器人任务的组合泛化，与分析间隙分解。",
+      "canonical_evidence": "从指令空间覆盖角度研究顺序机器人任务的组合泛化，与分析间隙分解。",
+      "llm_tldr_en": "This paper diagnoses compositional generalization in sequential robot manipulation by decomposing the generalization gap into marginal instruction shift, instruction-compositional shift, and context-action shift, revealing when sparse demonstrations suffice.",
+      "llm_tldr_cn": "顺序机器人操作要求策略执行熟悉指令组件的新组合，但采集所有指令元组的示范代价高昂，稀疏训练集常在分布外重组中失效。本文将组合泛化差距分解为边缘指令偏移、指令组合偏移和上下文-动作偏移，以诊断训练覆盖何时足够。实验发现穷尽式覆盖并非总是必要，保持训练集内在结构能显著提高动作预测可靠性。该工作为评估和构建可泛化技能库提供了系统化的诊断工具与设计准则。",
+      "llm_tldr": "顺序机器人操作要求策略执行熟悉指令组件的新组合，但采集所有指令元组的示范代价高昂，稀疏训练集常在分布外重组中失效。本文将组合泛化差距分解为边缘指令偏移、指令组合偏移和上下文-动作偏移，以诊断训练覆盖何时足够。实验发现穷尽式覆盖并非总是必要，保持训练集内在结构能显著提高动作预测可靠性。该工作为评估和构建可泛化技能库提供了系统化的诊断工具与设计准则。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.26809v1",
+      "source": "arxiv",
+      "title": "Practice Makes Policies: Bootstrapping and Consolidating Robotic Capabilities from Zero Human Demonstrations",
+      "abstract": "General-purpose robotic manipulation requires robots to perform diverse tasks in open-world environments while improving their skills over time. Despite recent progress in robotic manipulation, existing systems still primarily acquire manipulation skills in a static manner, where capabilities are learned for specific tasks or settings rather than adaptively evolving through physical interaction. Resembling how repeated practice enables humans to develop muscle memory, advanced manipulation proficiency requires an autonomous capability evolution mechanism that allows robots to progressively transform interaction experiences into increasingly effective manipulation abilities. To this end, we propose HERO, a self-improving hierarchical embodied agent that enables autonomous capability evolution from zero human demonstrations. HERO organizes heuristic reasoning, exemplar reuse, and reflexive execution into a unified orchestration framework, allowing robots to autonomously bootstrap manipulation experience, rapidly accumulate reusable behaviors through experience transfer, and progressively consolidate recurring interactions into efficient closed-loop visuomotor policies. By tightly coupling autonomous data collection with task execution, HERO continuously expands and dynamically schedules manipulation capabilities according to different stages of experience accumulation and execution requirements. Extensive experiments demonstrate that HERO substantially reduces human intervention during robotic data collection while achieving robust manipulation across diverse tasks, providing a promising path toward self-improving robotic systems.",
+      "authors": [
+        "Jialiang Li",
+        "Yuhan Wang",
+        "Haojun Li",
+        "Gaojing Zhang",
+        "Yangtian Ye",
+        "Qipeng Liu",
+        "Haotian Liang",
+        "Wenzhao Lian"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-29T11:51:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.26809v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Autonomous skill acquisition and consolidation for general-purpose robotic manipulation from zero demonstrations; central to reusable skill library theme",
+      "llm_evidence_cn": "面向通用机器人操作的自主技能获取与巩固，属于可复用技能库与持续学习主题的核心范畴",
+      "llm_evidence": "面向通用机器人操作的自主技能获取与巩固，属于可复用技能库与持续学习主题的核心范畴",
+      "canonical_evidence": "面向通用机器人操作的自主技能获取与巩固，属于可复用技能库与持续学习主题的核心范畴",
+      "llm_tldr_en": "To overcome static skill acquisition in manipulation, this paper proposes HERO, a self-improving mechanism that progressively transforms interaction experiences into effective, reusable manipulation skills, enabling capability evolution in open-world settings without human demonstrations.",
+      "llm_tldr_cn": "针对现有机器人操作技能获取方式静态、缺乏持续演进的问题，论文提出HERO，一种自主能力演变机制，使机器人通过反复物理交互从零演示中逐步巩固和提升操作技能。该方法借鉴人类肌肉记忆的形成过程，将交互经验转化为更有效的任务策略，实验显示其能在开放世界环境中不断增强不同任务的能力，为通用操作机器人的终身学习和技能库构建提供了新思路。",
+      "llm_tldr": "针对现有机器人操作技能获取方式静态、缺乏持续演进的问题，论文提出HERO，一种自主能力演变机制，使机器人通过反复物理交互从零演示中逐步巩固和提升操作技能。该方法借鉴人类肌肉记忆的形成过程，将交互经验转化为更有效的任务策略，实验显示其能在开放世界环境中不断增强不同任务的能力，为通用操作机器人的终身学习和技能库构建提供了新思路。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.27890v1",
+      "source": "arxiv",
+      "title": "Static In, Dynamic Out: Counterfactual Action Augmentation for Moving Object Manipulation",
+      "abstract": "Visuomotor policies have advanced on manipulation tasks where the target object stays static during execution, but real deployments break this assumption: parts drift on conveyors and fruits sway in the wind. We introduce Static In, Dynamic Out (SIDO), a counterfactual action augmentation that enables a policy trained only on static object demonstrations to adapt to unseen object motion at test time. Our key idea is to factorize moving object manipulation into two sub-problems: predicting where the object will be, and reaching that predicted pose. SIDO displaces the object to a counterfactual future position and morphs the demonstrated action chunk to preserve the hand-object relative pose, yielding a goal-conditioned policy. At deployment an object pose predictor supplies the future position. Across three simulated tasks (Mug, Square, Stack) under five object motion patterns and two real-world tasks (Gantry, Peachtree), SIDO improves moving object success over the baselines while preserving static object performance. Project website: https://sido-staticindynamicout.github.io/.",
+      "authors": [
+        "Woo Chul Shin",
+        "Zhenyang Chen",
+        "Alfred Cueva",
+        "Nadun Ranawaka Arachchige",
+        "Yingyan Celine Lin",
+        "Benjamin Joffe",
+        "Shreyas Kousik",
+        "Danfei Xu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-30T09:05:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.27890v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Counterfactual action augmentation morphs demonstrated action chunks to transfer static-object policies to unseen object motion, addressing generalization to unseen object configurations.",
+      "llm_evidence_cn": "用反事实动作增强改写示范动作块，使静态目标训练策略适应未见过的物体运动，关联未见过物体构型的泛化。",
+      "llm_evidence": "用反事实动作增强改写示范动作块，使静态目标训练策略适应未见过的物体运动，关联未见过物体构型的泛化。",
+      "canonical_evidence": "用反事实动作增强改写示范动作块，使静态目标训练策略适应未见过的物体运动，关联未见过物体构型的泛化。",
+      "llm_tldr_en": "SIDO factorizes moving-object manipulation into predicting future object pose and reaching that pose, morphing action chunks to preserve hand-object relative pose for generalization to unseen object motion.",
+      "llm_tldr_cn": "针对现实部署中目标物体可能在执行期间运动、而策略仅在静态物体演示上训练的问题，提出SIDO反事实动作增强方法。它把移动物体操作分解为预测目标未来位置和到达该位置两个子问题，将物体移动到反事实未来位置并改写示范动作块以保持手-物相对位姿。测试时该策略能适应未见过的物体运动，为技能泛化到动态物体构型提供了一种数据增强思路。",
+      "llm_tldr": "针对现实部署中目标物体可能在执行期间运动、而策略仅在静态物体演示上训练的问题，提出SIDO反事实动作增强方法。它把移动物体操作分解为预测目标未来位置和到达该位置两个子问题，将物体移动到反事实未来位置并改写示范动作块以保持手-物相对位姿。测试时该策略能适应未见过的物体运动，为技能泛化到动态物体构型提供了一种数据增强思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.29169v1",
+      "source": "arxiv",
+      "title": "ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency",
+      "abstract": "Vision-language-action (VLA) policies achieve strong performance in robotic manipulation but remain vulnerable to runtime disturbances that break the temporal alignment among visual observations, robot states, and executed actions. We introduce ActFovea, a plug-and-play safeguarding framework that detects and mitigates such failures without retraining or modifying the underlying VLA policy. ActFovea uses robot kinematics, proprioceptive states, and recent actions to construct action-conditioned foveated regions that retain contact-relevant areas and predicted motion corridors while suppressing task-irrelevant visual content. It detects runtime risks by evaluating whether visual motion and observation freshness remain consistent with geometric, proprioceptive, and action transitions. For recoverable disturbances, ActFovea constructs disturbance-specific candidate observations and accepts a recovery only after verifying the resulting action chunk. When stale or replayed observations make reliable recovery impossible, it invokes a bounded safe-failure procedure. In closed-loop evaluations of $π_0$ across multiple LIBERO suites, ActFovea increases success under localized visual overlays from 49.3\\% to 90.3\\%, closing 93.7\\% of the gap to clean performance. It further improves success under action drift and visual delay by 7.0 and 9.8 percentage points, respectively, while preserving clean-task performance. Under frozen-observation replay, ActFovea triggers timely safe failure in all trials, with no unprotected failures. These results demonstrate that spatiotemporal visual-action consistency provides an effective basis for runtime safeguarding of VLA policies.",
+      "authors": [
+        "Wenda Yu",
+        "Tianshi Wang",
+        "Fengling Li",
+        "Xin Li",
+        "Jingjing Li",
+        "Lei Zhu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-31T08:47:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.29169v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "runtime safeguarding for VLA policies: detects and mitigates failures preserving contact-relevant areas",
+      "llm_evidence_cn": "VLA策略运行时保护：检测并缓解失败，保留接触相关区域",
+      "llm_evidence": "VLA策略运行时保护：检测并缓解失败，保留接触相关区域",
+      "canonical_evidence": "VLA策略运行时保护：检测并缓解失败，保留接触相关区域",
+      "llm_tldr_en": "ActFovea is a plug-and-play safeguarding framework that detects and mitigates runtime disturbances in VLA policies using action-conditioned foveation and visual-action consistency.",
+      "llm_tldr_cn": "VLA策略在机器人操作中面临运行时干扰，可能破坏视觉、状态与动作的时间对齐。ActFovea提出即插即用的守护框架，通过机器人运动学和近端状态构造动作条件注视区，保留接触相关区域并抑制无关视觉内容，同时用视觉-动作一致性检测风险。该方法无需重训练或修改策略即可提升策略安全性与鲁棒性，为VLA策略的运行时安全提供有效保障。",
+      "llm_tldr": "VLA策略在机器人操作中面临运行时干扰，可能破坏视觉、状态与动作的时间对齐。ActFovea提出即插即用的守护框架，通过机器人运动学和近端状态构造动作条件注视区，保留接触相关区域并抑制无关视觉内容，同时用视觉-动作一致性检测风险。该方法无需重训练或修改策略即可提升策略安全性与鲁棒性，为VLA策略的运行时安全提供有效保障。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.29569v1",
+      "source": "arxiv",
+      "title": "Safe Vision Language Action Models via Barrier Enhanced Flow Matching",
+      "abstract": "This article presents a modular inference framework that integrates Flow Matching generative models with formal Control Barrier Function (CBF) safety guarantees. Unlike existing methods that apply external safety filters to a model's final output, our approach modifies the Flow Matching denoising process within the model to inherently generate safe trajectories. By employing a smooth Log-Sum-Exponential aggregate barrier, we enforce safety over entire action chunks. This aggregate barrier ensures a minimal increase in computational overhead and does not alter the semantic intent of the model. We show that, within the proposed framework, the 2-Wasserstein distance between the generated distribution and the target distribution remains bounded. Our method eliminates the need for safety-specific datasets or costly model retraining, providing a versatile solution for safe inference. We validate the approach on two robotic manipulation platforms and a 2D navigation benchmark, verifying that our framework achieves reliable safety without degrading the success rate of the model.",
+      "authors": [
+        "Kasra Sinaei",
+        "Hung-Chieh Wu",
+        "Donald Ebeigbe"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "published": "2026-07-31T15:56:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.29569v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "CBF safety enforcement inside flow matching denoising over entire action chunks for safe VLA policies",
+      "llm_evidence_cn": "在流匹配去噪过程中用控制势垒函数对整段动作块施加安全约束",
+      "llm_evidence": "在流匹配去噪过程中用控制势垒函数对整段动作块施加安全约束",
+      "canonical_evidence": "在流匹配去噪过程中用控制势垒函数对整段动作块施加安全约束",
+      "llm_tldr_en": "Modular inference framework combines Flow Matching with Control Barrier Function safety, enforcing constraints over whole action chunks through Log-Sum-Exponential barrier; bounded 2-Wasserstein distance. Directly useful for safety constraints when integrating learned policies in manipulation.",
+      "llm_tldr_cn": "现有方法通常在模型最终输出上外挂安全过滤器，难以保证整个动作轨迹的安全性。该文提出模块化推理框架，将流匹配生成模型与控制势垒函数安全保证结合，直接在去噪过程中生成安全工作轨迹；用平滑对数-和-指数聚合势垒对整段动作块施加安全约束。作者证明生成分布与目标分布之间的2-Wasserstein距离有界，且额外计算开销很小。这为视觉-语言-动作模型提供带形式保障的安全推理接口。",
+      "llm_tldr": "现有方法通常在模型最终输出上外挂安全过滤器，难以保证整个动作轨迹的安全性。该文提出模块化推理框架，将流匹配生成模型与控制势垒函数安全保证结合，直接在去噪过程中生成安全工作轨迹；用平滑对数-和-指数聚合势垒对整段动作块施加安全约束。作者证明生成分布与目标分布之间的2-Wasserstein距离有界，且额外计算开销很小。这为视觉-语言-动作模型提供带形式保障的安全推理接口。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

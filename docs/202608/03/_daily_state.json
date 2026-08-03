@@ -1,0 +1,105 @@
+{
+  "date": "20260803",
+  "date_label": "",
+  "generated_at": "2026-08-03 20:39:57 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.29285v1",
+      "route": "202608/03/2607.29285v1-tract-temporally-routed-action-chunks-with-chronological-phase-authority-for-contact-rich-manipulation",
+      "title": "TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对接触丰富操作提出按时间阶段路由动作分块，阶段权威约束未来查询，直接匹配技能/阶段条件化预测。",
+      "first_seen_at": "2026-08-03 20:39:57 UTC",
+      "updated_at": "2026-08-03 20:39:57 UTC"
+    },
+    {
+      "paper_id": "2607.29687v1",
+      "route": "202608/03/2607.29687v1-diagnosing-compositional-generalization-in-sequential-robot-tasks",
+      "title": "Diagnosing Compositional Generalization in Sequential Robot Tasks",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "从指令空间覆盖角度研究顺序机器人任务的组合泛化，与分析间隙分解。",
+      "first_seen_at": "2026-08-03 20:39:57 UTC",
+      "updated_at": "2026-08-03 20:39:57 UTC"
+    },
+    {
+      "paper_id": "2607.26809v1",
+      "route": "202608/03/2607.26809v1-practice-makes-policies-bootstrapping-and-consolidating-robotic-capabilities-from-zero-human-demonstrations",
+      "title": "Practice Makes Policies: Bootstrapping and Consolidating Robotic Capabilities from Zero Human Demonstrations",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向通用机器人操作的自主技能获取与巩固，属于可复用技能库与持续学习主题的核心范畴",
+      "first_seen_at": "2026-08-03 20:39:57 UTC",
+      "updated_at": "2026-08-03 20:39:57 UTC"
+    },
+    {
+      "paper_id": "2607.27890v1",
+      "route": "202608/03/2607.27890v1-static-in-dynamic-out-counterfactual-action-augmentation-for-moving-object-manipulation",
+      "title": "Static In, Dynamic Out: Counterfactual Action Augmentation for Moving Object Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用反事实动作增强改写示范动作块，使静态目标训练策略适应未见过的物体运动，关联未见过物体构型的泛化。",
+      "first_seen_at": "2026-08-03 20:39:57 UTC",
+      "updated_at": "2026-08-03 20:39:57 UTC"
+    },
+    {
+      "paper_id": "2607.29169v1",
+      "route": "202608/03/2607.29169v1-actfovea-runtime-safeguarding-for-vla-policies-via-spatiotemporal-visual-action-consistency",
+      "title": "ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "VLA策略运行时保护：检测并缓解失败，保留接触相关区域",
+      "first_seen_at": "2026-08-03 20:39:57 UTC",
+      "updated_at": "2026-08-03 20:39:57 UTC"
+    },
+    {
+      "paper_id": "2607.29569v1",
+      "route": "202608/03/2607.29569v1-safe-vision-language-action-models-via-barrier-enhanced-flow-matching",
+      "title": "Safe Vision Language Action Models via Barrier Enhanced Flow Matching",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在流匹配去噪过程中用控制势垒函数对整段动作块施加安全约束",
+      "first_seen_at": "2026-08-03 20:39:57 UTC",
+      "updated_at": "2026-08-03 20:39:57 UTC"
+    }
+  ]
+}
