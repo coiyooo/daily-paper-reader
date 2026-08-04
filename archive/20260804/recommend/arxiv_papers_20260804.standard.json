@@ -1,0 +1,448 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-04T21:18:39.778988+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2607.26047v1",
+      "source": "arxiv",
+      "title": "S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information",
+      "abstract": "Acoustic information provides rich cues about object location, material properties, and changes caused by contact or motion. This paper introduces a new set of acoustic-aware manipulation tasks for imitation learning, in which robots must use auditory cues to determine manipulation targets. These tasks require sound source localization and identification for active exploration in robotic manipulation. Also, we propose a multimodal imitation learning framework, Spatial-Spectral Audio Action (S2A2), that integrates visual features with acoustic spatial and acoustic signal information for the acoustic-aware manipulation tasks. We implemented S2A2 models that integrates policies such as ACT, Diffusion Policy, VQ-BeT, and $π_0$, into our framework. Simulation experiments showed that the proposed method is the most effective for tasks requiring both position and timbre. Furthermore, real-robot experiments confirm the applicability of the proposed tasks and framework to real-world manipulation.",
+      "authors": [
+        "Kaneyoshi Hiratsuka",
+        "Benjamin Yen",
+        "Ryosuke Kojima"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-28T17:56:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.26047v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "multimodal imitation learning integrating ACT action-chunking Transformer for manipulation",
+      "llm_evidence_cn": "集成ACT动作分块Transformer的多模态模仿学习框架用于操作任务",
+      "llm_evidence": "集成ACT动作分块Transformer的多模态模仿学习框架用于操作任务",
+      "canonical_evidence": "集成ACT动作分块Transformer的多模态模仿学习框架用于操作任务",
+      "llm_tldr_en": "S2A2 is a multimodal imitation learning framework for acoustic-aware manipulation that integrates visual features with spatial-spectral audio information, implemented with policies including ACT, Diffusion Policy, VQ-BeT, and π0.",
+      "llm_tldr_cn": "在操作任务中，听觉信息能提供物体位置、材质以及接触/运动变化等丰富线索，但现有模仿学习框架较少利用。S2A2据此提出空间-谱音频动作框架，结合视觉与声学空间信息并集成ACT、Diffusion Policy、VQ-BeT和π0等多种策略，支持基于声音的目标识别与主动探索。实验在声学感知操作任务上验证了多模态策略的有效性。这为操作模仿学习增添了音频模态，并与动作分块Transformer策略兼容。",
+      "llm_tldr": "在操作任务中，听觉信息能提供物体位置、材质以及接触/运动变化等丰富线索，但现有模仿学习框架较少利用。S2A2据此提出空间-谱音频动作框架，结合视觉与声学空间信息并集成ACT、Diffusion Policy、VQ-BeT和π0等多种策略，支持基于声音的目标识别与主动探索。实验在声学感知操作任务上验证了多模态策略的有效性。这为操作模仿学习增添了音频模态，并与动作分块Transformer策略兼容。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01851v1",
+      "source": "arxiv",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "abstract": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "authors": [
+        "Gaytri Jena",
+        "Kapil Wanaskar",
+        "Vinija Jain",
+        "Aman Chadha",
+        "Vasu Sharma",
+        "Amitava Das"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-03T07:58:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.01851v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "survey of robot learning with reusable skill libraries and code-as-policy methods",
+      "llm_evidence_cn": "面向可复用技能库与代码即策略方法的机器人学习综述",
+      "llm_evidence": "面向可复用技能库与代码即策略方法的机器人学习综述",
+      "canonical_evidence": "面向可复用技能库与代码即策略方法的机器人学习综述",
+      "llm_tldr_en": "This survey organizes robot learning around the weights vs skills dichotomy, analyzing code-as-policy methods from zero-shot program synthesis through closed-loop self-repair and persistent skill memory to open-ended skill improvement, mapping the field for reusable skill libraries.",
+      "llm_tldr_cn": "该综述以权重vs技能为主线组织机器人学习研究，深入梳理了代码即策略（code-as-policy）方法，从零样本程序合成、闭环自修复、持久技能记忆，到执行反馈与技能记忆结合的开环进化搜索。文章指出只有少数近期系统（如ASPIRE、ENPIRE、RoboClaw）进入了技能自改进的稀疏区域，为技能库的构造与复用提供了系统化分类。这项工作对面向可复用技能库的机器人操作研究具有重要的框架性参考价值。",
+      "llm_tldr": "该综述以权重vs技能为主线组织机器人学习研究，深入梳理了代码即策略（code-as-policy）方法，从零样本程序合成、闭环自修复、持久技能记忆，到执行反馈与技能记忆结合的开环进化搜索。文章指出只有少数近期系统（如ASPIRE、ENPIRE、RoboClaw）进入了技能自改进的稀疏区域，为技能库的构造与复用提供了系统化分类。这项工作对面向可复用技能库的机器人操作研究具有重要的框架性参考价值。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01265v1",
+      "source": "arxiv",
+      "title": "Hermite Curves as Trajectory Priors for Vision-Language-Action Models",
+      "abstract": "Despite recent progress in Vision-Language-Action (VLA) models for robotic manipulation, the action chunk remains a weakly structured interface. Existing work typically flatten each chunk into per-timestep controls, relying on implicit data learning that manifests as jagged motion and boundary discontinuities during physical execution. To address these limitations, we introduce Hermite trajectory priors, parameterizing the chunk trajectory as a piecewise cubic Hermite curve defined by endpoint positions and velocities to explicitly enforce smoothness and continuity. We instantiate this fixed operator across discrete autoregressive and continuous generative paradigms via three variants: (1) Hermite Tokens, which predict quantized boundary variables autoregressively; (2) Hermite Scaffold, which decomposes clean actions into a base scaffold and residuals; and (3) Hermite Regularization, which applies the prior strictly as an auxiliary training objective. Across simulation benchmarks and real-robot platforms, Hermite Regularization achieves superior performance among these three variants, improving π0.5 baseline success rates from 95.9% to 98.7% on LIBERO, 85.7% to 90.9% on LIBERO-plus, and 63.4% to 90.0% across four real-robot tasks without additional inference overhead. Trajectory analyses reveal that explicitly structuring trajectory priors serves most effectively as a learning inductive bias rather than a runtime constraint.",
+      "authors": [
+        "Qi Lv",
+        "Jianming Xing",
+        "Zhao Yang",
+        "Mingyuan Yao",
+        "Yinan Shi",
+        "Yawei Jueluo",
+        "Mike Zheng Shou",
+        "Xiang Deng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-02T14:18:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.01265v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "action chunk trajectory priors; smoothness and continuity for continuous robot control",
+      "llm_evidence_cn": "动作块轨迹先验；实现机器人连续控制的平滑与连续性",
+      "llm_evidence": "动作块轨迹先验；实现机器人连续控制的平滑与连续性",
+      "canonical_evidence": "动作块轨迹先验；实现机器人连续控制的平滑与连续性",
+      "llm_tldr_en": "Hermite trajectory priors parameterize the action chunk as a piecewise cubic Hermite curve with endpoint positions and velocities, enforcing smoothness and continuity in Vision-Language-Action models and variants for discrete and generative paradigms.",
+      "llm_tldr_cn": "针对视觉-语言-动作模型中动作块结构薄弱、执行时出现抖动和边界不连续的问题，本文提出Hermite轨迹先验，将动作块轨迹参数化为分段三次Hermite曲线，通过端点位置与速度显式约束平滑与连续性，并在离散自回归和连续生成范式下实例化三种变体。实验表明该方法能显著减少物理执行中的抖动与边界不连续，提升操作质量。",
+      "llm_tldr": "针对视觉-语言-动作模型中动作块结构薄弱、执行时出现抖动和边界不连续的问题，本文提出Hermite轨迹先验，将动作块轨迹参数化为分段三次Hermite曲线，通过端点位置与速度显式约束平滑与连续性，并在离散自回归和连续生成范式下实例化三种变体。实验表明该方法能显著减少物理执行中的抖动与边界不连续，提升操作质量。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.02326v1",
+      "source": "arxiv",
+      "title": "ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation",
+      "abstract": "Humans perform long-horizon manipulation by retaining knowledge of what earlier actions have established while continuously adapting the motion underway. By contrast, action-chunked vision-language-action (VLA) policies repeatedly replan from the current input at each query. Existing methods preserve either long-term task evidence through memory or short-term motion through action reuse and ensembling, leaving the cross-query handoff incomplete. We introduce ChainVLA, a 1.2B-parameter VLA policy that chains successive queries through a joint and revisable execution state. Progress Context combines a recurrent Working State with sparse event memory to carry observation-derived task progress, while Motion Tail feeds the preceding prediction's unexecuted continuation into state construction and action generation. Together, the two components condition a decoder that regenerates each action horizon under the latest observation, allowing the carried state to guide the next prediction without fixing it. ChainVLA reaches 62.8% average success on RMBench and 98.8% across four LIBERO suites, while removing Motion Tail or Progress Context reduces RMBench success to 11.2% and 3.0%, respectively. These asymmetric ablations are consistent with motion continuity helping preserve the observation stream from which task progress is inferred.",
+      "authors": [
+        "Yuzhi Huang",
+        "Weijue Bu",
+        "Ziyi Xiong",
+        "Jie Wu",
+        "Fanding Huang",
+        "Jingyan Jiang",
+        "Zhi Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T14:48:20+00:00",
+      "link": "https://arxiv.org/pdf/2608.02326v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Improves action-chunked VLA policies for long-horizon manipulation via unified execution state",
+      "llm_evidence_cn": "通过统一执行状态改进动作分块VLA策略，支持长时程操作",
+      "llm_evidence": "通过统一执行状态改进动作分块VLA策略，支持长时程操作",
+      "canonical_evidence": "通过统一执行状态改进动作分块VLA策略，支持长时程操作",
+      "llm_tldr_en": "Introduces ChainVLA, a 1.2B-parameter VLA policy that chains successive queries through a joint revisable execution state, combining recurrent working state and sparse event memory to improve long-horizon action-chunked manipulation.",
+      "llm_tldr_cn": "该论文提出ChainVLA，一种1.2B参数的视觉-语言-动作(VLA)策略，通过联合可修订执行状态将连续查询串联起来。其进度上下文结合循环工作状态与稀疏事件记忆，保留跨查询的任务证据，并利用动作尾部维持运动连续性，解决动作分块策略在长时程操作中反复重规划导致的手递交接不完整问题。实验表明该方法能提升长期任务成功率，是动作分块变换器方向的重要改进。",
+      "llm_tldr": "该论文提出ChainVLA，一种1.2B参数的视觉-语言-动作(VLA)策略，通过联合可修订执行状态将连续查询串联起来。其进度上下文结合循环工作状态与稀疏事件记忆，保留跨查询的任务证据，并利用动作尾部维持运动连续性，解决动作分块策略在长时程操作中反复重规划导致的手递交接不完整问题。实验表明该方法能提升长期任务成功率，是动作分块变换器方向的重要改进。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.02547v1",
+      "source": "arxiv",
+      "title": "Why Does Action Chunking Improve Behavioral Cloning Performance in Robotic Control?",
+      "abstract": "Action chunking---predicting and executing multiple actions instead of a single action---has proven to be a critical component for learning effective robotic control policies. However, our precise understanding of why action chunking improves performance has remained limited. In this work we seek to close this gap. Through rigorous experimental evaluations in both simulated and real-world settings, we show that existing hypotheses for the success of action chunking---temporal consistency, horizon reduction, and representation learning---fail to explain the success of action chunking. Instead, we find that action chunking benefits from greater non-Markovian expressivity and reduced compounding error compared to Markovian policies, but, in many settings of interest, these effects can be fully captured by delayed policies, which at each step predict a single action based on the observation $k$ steps in the past. We then show that there exists an additional benefit of action chunking that we refer to as implicit ensembling. In particular, by learning a diversity of temporal relationships (that is, $a_t | o_t, a_t | o_{t-1}, \\ldots$), action-chunked policies exhibit behavior matching that of a model ensemble, increasing their robustness and generalization ability over policies that only learn a single temporal relationship. Building on these insights, we show that in simulated and real-world robotic control settings, we can match the performance of action chunking without action chunking---by deploying an action chunking policy as an ensemble of policies with randomized delays. Furthermore, we propose a policy class that amplifies the benefits of action chunking by explicitly instantiating an ensemble, and which we show significantly improves over the performance of action chunking in many domains.",
+      "authors": [
+        "Filippo Lazzati",
+        "Kyle Stachowicz",
+        "William Chen",
+        "Alberto Maria Metelli",
+        "Andrew Wagenmaker",
+        "Sergey Levine"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T17:32:45+00:00",
+      "link": "https://arxiv.org/pdf/2608.02547v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "systematic analysis of action chunking in behavioral cloning",
+      "llm_evidence_cn": "对行为克隆中动作分块机制的系统分析与归因",
+      "llm_evidence": "对行为克隆中动作分块机制的系统分析与归因",
+      "canonical_evidence": "对行为克隆中动作分块机制的系统分析与归因",
+      "llm_tldr_en": "This paper experimentally debunks existing hypotheses for why action chunking improves behavioral cloning, finding through simulation and real experiments that benefits come from non-Markovian expressivity and reduced compounding error rather than temporal consistency or representation learning.",
+      "llm_tldr_cn": "动作分块（action chunking）是机器人控制学习的关键组件，但其成功原因此前缺乏严格解释。本文通过仿真与真实实验排除了时间一致性、时间范围缩减和表示学习等假设，发现动作分块的主要收益来自更强的非马尔可夫表达能力以及更低的复合误差。研究同时指出了分块的局限与权衡，为设计有效的动作分块策略提供了理论依据。这项工作直接支撑了以动作分块为核心的条件模仿学习策略设计。",
+      "llm_tldr": "动作分块（action chunking）是机器人控制学习的关键组件，但其成功原因此前缺乏严格解释。本文通过仿真与真实实验排除了时间一致性、时间范围缩减和表示学习等假设，发现动作分块的主要收益来自更强的非马尔可夫表达能力以及更低的复合误差。研究同时指出了分块的局限与权衡，为设计有效的动作分块策略提供了理论依据。这项工作直接支撑了以动作分块为核心的条件模仿学习策略设计。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.29482v1",
+      "source": "arxiv",
+      "title": "Temporal Policy: History-Initialized Action Generation for Robotic Learning from Demonstration",
+      "abstract": "By relying on independent couplings from uninformative Gaussian priors, standard diffusion and flow matching models are forced to learn complex, high-cost vector fields to reach the physical action space. Generative models excel at capturing multimodal behaviors for robotic Learning from Demonstration (LfD), but often suffer from high inference cost. This paper introduces Temporal Policy, a generative framework based on stochastic interpolants that formulates action generation as a temporally coupled transport problem. By initializing the generative flow at the robot's recent history, we explicitly couple past states to future action sequences. This data-dependent coupling reduces transport cost and produces straight vector fields. We validate Temporal Policy across visuomotor simulation benchmarks and on a physical Barrett WAM 2x 7DoF teleoperation platform. Our approach reduces transport costs by nearly an order of magnitude compared to noise-initialized baselines, achieving a 19.1 ms inference latency on a single NVIDIA RTX 4080. Crucially, these geometric and computational efficiencies are achieved while matching the success rates of state-of-the-art baselines. This simplified transport geometry bypasses the computational bottleneck of independent Gaussian priors, helping enable high-frequency, closed-loop control. The code is publicly available at https://github.com/dmiller12/TemporalPolicy.",
+      "authors": [
+        "Dylan Miller",
+        "Martin Jagersand"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T14:47:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.29482v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "generates low-level continuous action sequences from recent history for robot LfD; same objective as action chunking but not transformer-based",
+      "llm_evidence_cn": "从近期历史生成低层连续动作序列，与动作分块目标一致，但非基于Transformer",
+      "llm_evidence": "从近期历史生成低层连续动作序列，与动作分块目标一致，但非基于Transformer",
+      "canonical_evidence": "从近期历史生成低层连续动作序列，与动作分块目标一致，但非基于Transformer",
+      "llm_tldr_en": "Temporal Policy frames action generation as a temporally coupled transport problem initialized from robot history, reducing inference cost for generative LfD.",
+      "llm_tldr_cn": "标准扩散与流匹配模型依赖无信息的高斯先验，需要学习复杂且高成本的向量场才能到达物理动作空间，且推理开销高。本文提出时间策略（Temporal Policy），一种基于随机插值的生成框架，将动作生成视为时间耦合的传输问题，用机器人近期历史初始化生成流，显式耦合过去状态与未来动作序列。这种数据依赖耦合降低了传输成本，产生更直的向量场。在机器人示教学习任务上，时间策略在保持多模态行为建模能力的同时，显著提升推理速度并改善动作质量。",
+      "llm_tldr": "标准扩散与流匹配模型依赖无信息的高斯先验，需要学习复杂且高成本的向量场才能到达物理动作空间，且推理开销高。本文提出时间策略（Temporal Policy），一种基于随机插值的生成框架，将动作生成视为时间耦合的传输问题，用机器人近期历史初始化生成流，显式耦合过去状态与未来动作序列。这种数据依赖耦合降低了传输成本，产生更直的向量场。在机器人示教学习任务上，时间策略在保持多模态行为建模能力的同时，显著提升推理速度并改善动作质量。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.00613v1",
+      "source": "arxiv",
+      "title": "From Failures to Supervision: DynamicEnvPlan for Robust Long-Horizon Embodied Planning",
+      "abstract": "Physical-world interaction is inherently dynamic, as environments can evolve during execution, requiring agents to adapt their plans under non-stationary conditions. We study this challenge through long-horizon embodied planning under environment deviations and execution uncertainty. Existing embodied-task benchmarks can expose such failures, but these failures are usually treated as evaluation outcomes instead of learnable signals for training agents to recover. In this work, we introduce DynamicEnvPlan, a closed-loop framework for high-level planning in dynamic environments. It extends embodied task execution with humanoid agents, high-level primitive skills, structured semantic memory, and controllable perturbations. Our data synthesis design consists of planning, perturbation, and guarded correction modules that turn dynamic execution states into recovery-oriented traces. The resulting traces are used for staged supervised fine-tuning, enabling the planner to learn from both nominal execution and perturbed recovery trajectories. Using 104 task-scene combinations spanning i.i.d., compositional generalization, and out-of-distribution settings for fine-tuning and evaluation, DynamicEnvPlan boosts success rate from 33.3% for the base planner to 76.2%, while improving across all seven evaluation metrics critical to physical-world interaction, including safety and affordance compliance.",
+      "authors": [
+        "Hao Yuan",
+        "Yuxin Wang",
+        "Lei Ji",
+        "Zhiwei Yu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-01T12:09:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.00613v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "high-level primitive skills and closed-loop failure recovery for long-horizon planning",
+      "llm_evidence_cn": "面向长时程规划的高层原语技能与闭环失败恢复",
+      "llm_evidence": "面向长时程规划的高层原语技能与闭环失败恢复",
+      "canonical_evidence": "面向长时程规划的高层原语技能与闭环失败恢复",
+      "llm_tldr_en": "DynamicEnvPlan is a closed-loop framework for long-horizon embodied planning in dynamic environments, extending execution with high-level primitive skills, structured semantic memory, and controllable perturbations, and using failures as learnable signals for recovery.",
+      "llm_tldr_cn": "长期具身规划在动态环境中常因环境变化和不确定执行而失败，但失败通常只被当作评估结果而非训练信号。本文提出DynamicEnvPlan，一个闭环规划框架，整合高层原语技能、结构化语义记忆和可控扰动，通过从失败中生成监督数据来训练智能体恢复。实验表明该方法能提升动态环境下长时程规划的鲁棒性。",
+      "llm_tldr": "长期具身规划在动态环境中常因环境变化和不确定执行而失败，但失败通常只被当作评估结果而非训练信号。本文提出DynamicEnvPlan，一个闭环规划框架，整合高层原语技能、结构化语义记忆和可控扰动，通过从失败中生成监督数据来训练智能体恢复。实验表明该方法能提升动态环境下长时程规划的鲁棒性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.00208v1",
+      "source": "arxiv",
+      "title": "Developing Combined Manipulation and Locomotion Skills with Interaction Representation and Skill Composition",
+      "abstract": "This paper addresses how to enable a humanoid robot to learn motion policies based on developmental principles and combine policies to create more sophisticated and useful behaviors. Specifically, we present an approach to (1) learning a whole-body reaching and grasping policy and (2) combining it and a standing-up and walking policy to compose a more complex policy of manipulation and locomotion: grasping, standing up, and walking.   In (1), our method draws inspiration from harmonic analysis and adopts cubic harmonics as weights to represent the hand-object spatial relationship via spatial convolution. Utilizing an intra-episode finger joint decoupling curriculum based on developmental principles, a robot can autonomously learn a generalizable grasping policy without relying on external datasets or pretrained models.   In (2), our method combines the grasping policy with a separately learned getting-up policy by providing both policies with their respective observation vectors and using hand-object interaction scores to determine when each policy should control which robot joints. Our results show a 93% zero-shot success rate for grasping unseen objects and a 96-100% success rate for standing up while holding the object. Our work also demonstrates that combining different policies is only effective if each policy learning happens on the same whole humanoid body even if a policy (such as for locomotion) does not seem to need all the body parts (such as fingers).",
+      "authors": [
+        "Fanxing Meng",
+        "Jing Xiao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T18:43:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.00208v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "composes learned manipulation and locomotion policies into complex skills",
+      "llm_evidence_cn": "组合学习到的操作与运动策略以形成复杂技能",
+      "llm_evidence": "组合学习到的操作与运动策略以形成复杂技能",
+      "canonical_evidence": "组合学习到的操作与运动策略以形成复杂技能",
+      "llm_tldr_en": "Combines a whole-body reaching/grasping policy with a stand-up/walk policy using cubic harmonics and developmental curricula, enabling complex manipulation-locomotion behaviors.",
+      "llm_tldr_cn": "该论文面向人形机器人，基于发展原则学习全身抓取与行走策略，并组合它们形成抓取、站立、行走的复合行为。方法利用三次谐波对操作空间进行卷积，以表示手与物体的空间关系，并采用手指关节解耦课程辅助学习。结果显示机器人能够自主学习并组合多个技能，完成操作与运动结合的任务。该工作为可重用技能组合和层级策略构建提供了新思路，与层级模仿学习目标相契合。",
+      "llm_tldr": "该论文面向人形机器人，基于发展原则学习全身抓取与行走策略，并组合它们形成抓取、站立、行走的复合行为。方法利用三次谐波对操作空间进行卷积，以表示手与物体的空间关系，并采用手指关节解耦课程辅助学习。结果显示机器人能够自主学习并组合多个技能，完成操作与运动结合的任务。该工作为可重用技能组合和层级策略构建提供了新思路，与层级模仿学习目标相契合。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.01102v1",
+      "source": "arxiv",
+      "title": "CAAT: Contact-Aware Attention Scaling and Tactile Masking for Data-Efficient Contact-Rich Manipulation",
+      "abstract": "In contact-rich manipulation, visual observations primarily guide motion in free space, whereas tactile observations become particularly informative during contact. However, standard Transformer-based visuo-tactile policies typically rely on either token concatenation or learnable gating. These approaches lack explicit contact-aware priors, making it difficult to efficiently learn effective cross-modal representations from demonstrations. To address this limitation, we propose CAAT, a lightweight contact-aware framework that explicitly incorporates contact priors through attention scaling and dynamic tactile masking. Specifically, CAAT emphasizes visual information before contact and tactile information during contact. It also suppresses static background tokens by comparing the current tactile observation with a non-contact reference. CAAT can be integrated into commonly used Transformer-based policies without modifying their action decoders. In simulation, integrating CAAT with ACT improves the average success rate by 18.0 percentage points over direct visuo-tactile fusion and by 10.0 percentage points over gated fusion. In real-world experiments using a visuo-tactile UMI platform, CAAT achieves an average success rate of 60.0% across ACT, Diffusion Policy, and $π_0$, outperforming the strongest baseline by an average of 21.1 percentage points. These results demonstrate that explicit contact priors and dynamic tactile masking are effective in improving visuo-tactile policy learning and task performance of diverse policy architectures. https://mrjiangjm.github.io/caat/",
+      "authors": [
+        "Jiaming Jiang",
+        "Yuzhe Huang",
+        "Hao Liang",
+        "Pei Lin",
+        "Shengcheng Luo",
+        "Fanrong Dong",
+        "Jiaping Wu",
+        "Chenxi Xiao",
+        "Wanlin Li",
+        "Ziyuan Jiao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-02T09:04:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.01102v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "contact-aware attention scaling and tactile masking for Transformer-based visuo-tactile policies in contact-rich manipulation",
+      "llm_evidence_cn": "针对接触丰富操作的基于Transformer的视觉-触觉策略，提出接触感知注意力缩放与动态触觉掩蔽",
+      "llm_evidence": "针对接触丰富操作的基于Transformer的视觉-触觉策略，提出接触感知注意力缩放与动态触觉掩蔽",
+      "canonical_evidence": "针对接触丰富操作的基于Transformer的视觉-触觉策略，提出接触感知注意力缩放与动态触觉掩蔽",
+      "llm_tldr_en": "CAAT is a lightweight contact-aware framework that explicitly incorporates contact priors via attention scaling and dynamic tactile masking, helping Transformer-based visuo-tactile policies learn effective cross-modal representations efficiently in contact-rich manipulation.",
+      "llm_tldr_cn": "在接触丰富操作中，视觉主要引导自由空间运动而触觉在接触时更有信息量，但标准Transformer策略缺乏接触先验，难以高效学习跨模态表示。CAAT通过接触感知的注意力缩放和动态触觉掩蔽，在接触前强调视觉信息、接触中强调触觉信息，从而显式注入接触先验。该方法轻量且能提升数据效率，在接触丰富操作任务上验证了有效性。这为触觉-视觉策略学习提供了简单有效的接触感知机制。",
+      "llm_tldr": "在接触丰富操作中，视觉主要引导自由空间运动而触觉在接触时更有信息量，但标准Transformer策略缺乏接触先验，难以高效学习跨模态表示。CAAT通过接触感知的注意力缩放和动态触觉掩蔽，在接触前强调视觉信息、接触中强调触觉信息，从而显式注入接触先验。该方法轻量且能提升数据效率，在接触丰富操作任务上验证了有效性。这为触觉-视觉策略学习提供了简单有效的接触感知机制。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.01880v1",
+      "source": "arxiv",
+      "title": "World Action Models in Real Time: An Empirical Study of Smooth Execution via Asynchronous Deployment",
+      "abstract": "World Action Models generate fixed-horizon action chunks through iterative denoising, creating substantial inference latency that can cause pauses, stale actions, and discontinuities during robotic execution. We present an empirical study of asynchronous deployment strategies that overlap model inference with action execution to enable responsive and smooth control. We compare six strategies, including synchronous execution, pure asynchronous switching, post-hoc action blending, denoising-time blending, inference-time velocity guidance, and prefix-conditioned generation, on a 10 Hz bimanual robot. Evaluation combines offline trajectory analysis with online experiments across dynamic manipulation, precision-critical placement, and long-horizon tasks. Our results identify accurate temporal alignment between observations, predictions, and executed commands as a fundamental requirement. Alignment errors produce persistent chunk-boundary discontinuities that cannot be corrected through blending alone. With proper alignment, direct action weighting provides a simple and smooth baseline but sacrifices accuracy in precision-critical tasks. Inference-time velocity guidance fails to reliably constrain committed actions on our platform. In contrast, prefix-conditioned generation achieves the best overall balance between task performance, execution speed, and trajectory smoothness by learning consistent action continuations during training. These findings clarify the practical trade-offs among asynchronous deployment strategies and provide guidance for deploying high-latency World Action Models in real-time robotic systems.",
+      "authors": [
+        "Motubrain Team"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T08:24:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.01880v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "empirical study of async deployment for action-chunk world action models on a bimanual robot",
+      "llm_evidence_cn": "针对动作块世界模型的异步部署策略实证研究，使用双臂机器人验证",
+      "llm_evidence": "针对动作块世界模型的异步部署策略实证研究，使用双臂机器人验证",
+      "canonical_evidence": "针对动作块世界模型的异步部署策略实证研究，使用双臂机器人验证",
+      "llm_tldr_en": "This empirical study compares synchronous and async deployment strategies to reduce inference latency and smooth execution of world action models that generate fixed-horizon action chunks, validated on a 10 Hz bimanual robot.",
+      "llm_tldr_cn": "世界动作模型通过迭代去噪生成固定时域动作块，推理延迟会造成机械臂停顿与动作不连续。本文系统比较同步执行、纯异步切换、动作混合、去噪混合、推理时速度引导和前缀条件生成等六种部署策略，并在10 Hz双臂机器人上进行离线和在线实验。结果表明异步部署能有效减少等待、提升控制的平滑性和响应性，对动作块类策略的实时执行具有直接指导意义。",
+      "llm_tldr": "世界动作模型通过迭代去噪生成固定时域动作块，推理延迟会造成机械臂停顿与动作不连续。本文系统比较同步执行、纯异步切换、动作混合、去噪混合、推理时速度引导和前缀条件生成等六种部署策略，并在10 Hz双臂机器人上进行离线和在线实验。结果表明异步部署能有效减少等待、提升控制的平滑性和响应性，对动作块类策略的实时执行具有直接指导意义。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.01381v1",
+      "source": "arxiv",
+      "title": "DreamTrajectory: Trajectory-Guided Action Generation with World Model Alignment for Mobile Manipulation",
+      "abstract": "Mobile manipulation requires a robot to coordinate base and arm motion under continuously changing viewpoints and contact conditions, within an action space far larger than that of fixed-base manipulation. Existing Vision-Language-Action (VLA) policies are limited in two respects. (i)They map observations directly to whole-body action chunks, searching this large action space without an explicit task-space motion plan, which makes coordinated base--arm prediction imprecise. (ii)They execute the predicted chunk open-loop, without checking whether the actions can realize the motion the policy intended, so control errors and unmodeled contacts accumulate into a gap between planned and realized motion. We present DreamTrajectory, a trajectory-guided framework for language-conditioned mobile manipulation that introduces one component for each limitation. Addressing(i), DreamTrajectory jointly predicts an intention-level end-effector trajectory and a whole-body action chunk in a single action expert, so that the trajectory explicitly guides base--arm action generation instead of remaining implicit. Addressing(ii), a lightweight trajectory world model predicts the trajectory that a candidate action chunk would induce, and a test-time search--predict--score procedure selects the candidate best aligned with the planned trajectory. On MS-HAB, trajectory guidance raises average success from 32.3% to 47.5% and test-time refinement further to 54.8%, with the largest gains on contact-rich articulated-object tasks. On three real-world mobile manipulation tasks, the corresponding average success rates are 63.3%, 81.7%, and 90.0%.",
+      "authors": [
+        "Zheng Yang",
+        "Wenjie Zhang",
+        "Xiangyu Chen",
+        "Wenxuan Song",
+        "Xianpeng Wang",
+        "Yihang Kang",
+        "Wen Chen",
+        "Lujia Wang",
+        "Renjing Xu",
+        "Xiaowen Chu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-02T17:02:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.01381v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "trajectory-guided whole-body action chunks for low-level control",
+      "llm_evidence_cn": "轨迹引导的全身动作块预测，面向低层连续动作序列",
+      "llm_evidence": "轨迹引导的全身动作块预测，面向低层连续动作序列",
+      "canonical_evidence": "轨迹引导的全身动作块预测，面向低层连续动作序列",
+      "llm_tldr_en": "DreamTrajectory generates trajectory-guided whole-body action chunks for mobile manipulation and aligns the predicted actions with a world model, reducing the gap between planned motion and actual contact-rich execution in a large action space.",
+      "llm_tldr_cn": "针对移动操作中现有VLA策略直接预测全身动作块而缺乏显式任务空间规划、且开环执行导致控制误差累积的问题，DreamTrajectory引入轨迹引导的动作生成，并通过世界模型对齐来校验动作块能否实现预期运动。该方法在连续变化的视角和接触条件下协调基座与机械臂动作，减少了计划与实际运动之间的差距。实验表明其能提升移动操作中长程动作块预测的精度与闭环执行质量。",
+      "llm_tldr": "针对移动操作中现有VLA策略直接预测全身动作块而缺乏显式任务空间规划、且开环执行导致控制误差累积的问题，DreamTrajectory引入轨迹引导的动作生成，并通过世界模型对齐来校验动作块能否实现预期运动。该方法在连续变化的视角和接触条件下协调基座与机械臂动作，减少了计划与实际运动之间的差距。实验表明其能提升移动操作中长程动作块预测的精度与闭环执行质量。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

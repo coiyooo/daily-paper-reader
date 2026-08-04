@@ -1,0 +1,185 @@
+{
+  "date": "20260804",
+  "date_label": "",
+  "generated_at": "2026-08-04 21:25:11 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.26047v1",
+      "route": "202608/04/2607.26047v1-s2a2-audio-visual-imitation-learning-for-manipulation-tasks-using-acoustic-spatial-information",
+      "title": "S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "集成ACT动作分块Transformer的多模态模仿学习框架用于操作任务",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.01265v1",
+      "route": "202608/04/2608.01265v1-hermite-curves-as-trajectory-priors-for-vision-language-action-models",
+      "title": "Hermite Curves as Trajectory Priors for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "动作块轨迹先验；实现机器人连续控制的平滑与连续性",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.01851v1",
+      "route": "202608/04/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向可复用技能库与代码即策略方法的机器人学习综述",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.02326v1",
+      "route": "202608/04/2608.02326v1-chainvla-chaining-vision-language-action-queries-through-a-unified-execution-state-for-long-horizon-manipulation",
+      "title": "ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过统一执行状态改进动作分块VLA策略，支持长时程操作",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.02547v1",
+      "route": "202608/04/2608.02547v1-why-does-action-chunking-improve-behavioral-cloning-performance-in-robotic-control",
+      "title": "Why Does Action Chunking Improve Behavioral Cloning Performance in Robotic Control?",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "对行为克隆中动作分块机制的系统分析与归因",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2607.29482v1",
+      "route": "202608/04/2607.29482v1-temporal-policy-history-initialized-action-generation-for-robotic-learning-from-demonstration",
+      "title": "Temporal Policy: History-Initialized Action Generation for Robotic Learning from Demonstration",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "从近期历史生成低层连续动作序列，与动作分块目标一致，但非基于Transformer",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.00208v1",
+      "route": "202608/04/2608.00208v1-developing-combined-manipulation-and-locomotion-skills-with-interaction-representation-and-skill-composition",
+      "title": "Developing Combined Manipulation and Locomotion Skills with Interaction Representation and Skill Composition",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "组合学习到的操作与运动策略以形成复杂技能",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.01880v1",
+      "route": "202608/04/2608.01880v1-world-action-models-in-real-time-an-empirical-study-of-smooth-execution-via-asynchronous-deployment",
+      "title": "World Action Models in Real Time: An Empirical Study of Smooth Execution via Asynchronous Deployment",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对动作块世界模型的异步部署策略实证研究，使用双臂机器人验证",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.00613v1",
+      "route": "202608/04/2608.00613v1-from-failures-to-supervision-dynamicenvplan-for-robust-long-horizon-embodied-planning",
+      "title": "From Failures to Supervision: DynamicEnvPlan for Robust Long-Horizon Embodied Planning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程规划的高层原语技能与闭环失败恢复",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.01102v1",
+      "route": "202608/04/2608.01102v1-caat-contact-aware-attention-scaling-and-tactile-masking-for-data-efficient-contact-rich-manipulation",
+      "title": "CAAT: Contact-Aware Attention Scaling and Tactile Masking for Data-Efficient Contact-Rich Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对接触丰富操作的基于Transformer的视觉-触觉策略，提出接触感知注意力缩放与动态触觉掩蔽",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.01381v1",
+      "route": "202608/04/2608.01381v1-dreamtrajectory-trajectory-guided-action-generation-with-world-model-alignment-for-mobile-manipulation",
+      "title": "DreamTrajectory: Trajectory-Guided Action Generation with World Model Alignment for Mobile Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "轨迹引导的全身动作块预测，面向低层连续动作序列",
+      "first_seen_at": "2026-08-04 21:25:11 UTC",
+      "updated_at": "2026-08-04 21:25:11 UTC"
+    }
+  ]
+}

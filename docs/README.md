@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-03</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-04</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 11 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-03 20:39:57 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-04 21:25:11 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共读6篇机器人操作论文，精读2篇高分工作，速读3篇；核心聚焦接触丰富操作中的时序动作分块与机器人任务的组合泛化诊断。最值得关注的是《TRACT》提出的时序路由动作分块方案，以及《Diagnosing Compositional Generalization》对任务组合泛化瓶颈的分析。建议后续优先深入这两篇9.0分工作的实验设计，并留意速读中关于VLA安全与动态物体操作的方法。</p>
+<p>今日11篇论文聚焦机器人操控与模仿学习，精读重点在音频空间信息辅助的视听模仿学习及Hermite曲线轨迹先验方法。最值得关注的方向是结合多模态感知（音频+视觉）提升操作泛化，以及用曲线轨迹先验增强视觉-语言-动作模型的执行稳定性。建议普通读者优先浏览这两篇精读论文，它们对提升机器人精细操作和轨迹生成效率有直接参考价值。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation">TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Diagnosing Compositional Generalization in Sequential Robot Tasks">Diagnosing Compositional Generalization in Sequential Robot Tasks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Practice Makes Policies: Bootstrapping and Consolidating Robotic Capabilities from Zero Human Demonstrations">Practice Makes Policies: Bootstrapping and Consolidating Robotic Capabilities from Zero Human Demonstrations</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information">S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information</span></li><li><span class="dpr-home-dashboard-paper-title" title="Hermite Curves as Trajectory Priors for Vision-Language-Action Models">Hermite Curves as Trajectory Priors for Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills">Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Static In, Dynamic Out: Counterfactual Action Augmentation for Moving Object Manipulation">Static In, Dynamic Out: Counterfactual Action Augmentation for Moving Object Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency">ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency</span></li><li><span class="dpr-home-dashboard-paper-title" title="Safe Vision Language Action Models via Barrier Enhanced Flow Matching">Safe Vision Language Action Models via Barrier Enhanced Flow Matching</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Temporal Policy: History-Initialized Action Generation for Robotic Learning from Demonstration">Temporal Policy: History-Initialized Action Generation for Robotic Learning from Demonstration</span></li><li><span class="dpr-home-dashboard-paper-title" title="Developing Combined Manipulation and Locomotion Skills with Interaction Representation and Skill Composition">Developing Combined Manipulation and Locomotion Skills with Interaction Representation and Skill Composition</span></li><li><span class="dpr-home-dashboard-paper-title" title="World Action Models in Real Time: An Empirical Study of Smooth Execution via Asynchronous Deployment">World Action Models in Real Time: An Empirical Study of Smooth Execution via Asynchronous Deployment</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
 </section>
 </div>
 
