@@ -1,0 +1,137 @@
+{
+  "date": "20260805",
+  "date_label": "",
+  "generated_at": "2026-08-05 21:39:06 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.03103v1",
+      "route": "202608/05/2608.03103v1-a-hierarchical-approach-to-imitation-learning-for-manipulation-tasks-requiring-time-varying-forces",
+      "title": "A Hierarchical Approach to Imitation Learning for Manipulation Tasks Requiring Time Varying Forces",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向接触丰富拆卸任务的分层模仿学习，结合扩散策略与动作分块",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.03483v1",
+      "route": "202608/05/2608.03483v1-continue-or-replan-bernoulli-continuation-policy-learning-for-adaptive-horizon-execution",
+      "title": "Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对基于分块的VLA模型固定执行时域问题，提出自适应继续或重规划决策",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.01851v1",
+      "route": "202608/05/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "综述围绕权重与技能代码路线，系统梳理持久技能记忆与可复用技能库",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.00315v1",
+      "route": "202608/05/2608.00315v1-towards-general-language-conditioned-latent-safety-filters",
+      "title": "Towards General Language-Conditioned Latent Safety Filters",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向机器人策略的语言条件安全滤波",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.00793v1",
+      "route": "202608/05/2608.00793v1-dynamicwam-dual-path-motion-conditioning-for-world-action-models-in-dynamic-manipulation",
+      "title": "DynamicWAM: Dual-Path Motion Conditioning for World-Action Models in Dynamic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过历史光流与运动学描述子双重路径为动作专家提供连续低层动作预测",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.01603v1",
+      "route": "202608/05/2608.01603v1-affordtrajdp-dynamic-affordance-guided-visuomotor-policy-learning-for-robotic-manipulation",
+      "title": "AffordTrajDP: Dynamic Affordance-Guided Visuomotor Policy Learning for Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "动态可供性轨迹为操作视觉运动模仿学习提供连续、类似阶段的引导",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.01824v1",
+      "route": "202608/05/2608.01824v1-retouch-empowering-contact-rich-dexterous-manipulation-with-online-refined-tactile-prediction",
+      "title": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于Transformer的VLA，面向接触丰富操作的闭环动作生成",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    },
+    {
+      "paper_id": "2608.03753v1",
+      "route": "202608/05/2608.03753v1-gordon-graph-based-object-centric-rewards-for-decomposition-of-long-horizon-manipulation",
+      "title": "GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于图的对象中心奖励学习分解长时操作任务并支持层次化训练",
+      "first_seen_at": "2026-08-05 21:39:06 UTC",
+      "updated_at": "2026-08-05 21:39:06 UTC"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-05T21:33:10.597586+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2608.03103v1",
+      "source": "arxiv",
+      "title": "A Hierarchical Approach to Imitation Learning for Manipulation Tasks Requiring Time Varying Forces",
+      "abstract": "Diffusion policies have shown strong performance in learning complex, multi-modal behaviors for robotic manipulation. However, their application to contact-rich disassembly tasks remains limited by a key trade-off: the iterative denoising process introduces inference latencies that makes high frequency control difficult, which is essential for realizing dynamic interactions such as chiseling and prying. Recent action-chunking techniques mitigate latency but use an open-loop execution window, rendering the system blind to rapid force transients caused by fracture events. To bridge this gap, we introduce the Diffusion Policy Augmented by Fast Trajectory Generation (DPA-FTG). Compared to recent visual-tactile approaches that focus on positional correction, DPA-FTG decouples low-frequency planning from high-frequency force regulation. At the high level ($5$ Hz), a conditional diffusion model predicts a sequence of latent parameters for selecting a strategy from a learned vocabulary of task primitives. At the low level ($60$ Hz), a lightweight, force-conditioned policy acts as a neural impedance controller, modulating execution in real-time to maintain contact stability. We validate our approach on a bimanual battery disassembly task involving the separation of a compliant sheet. Experimental evaluation demonstrates that DPA-FTG outperforms state-of-the-art baselines, including Reactive Diffusion Policy (RDP).",
+      "authors": [
+        "Rishabh Shukla",
+        "Adithya Santhosh",
+        "Shaili Gandhi",
+        "Samrudh Moode",
+        "Satyandra K. Gupta"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-04T04:21:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.03103v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Hierarchical imitation learning with diffusion policy and action chunking for contact-rich disassembly",
+      "llm_evidence_cn": "面向接触丰富拆卸任务的分层模仿学习，结合扩散策略与动作分块",
+      "llm_evidence": "面向接触丰富拆卸任务的分层模仿学习，结合扩散策略与动作分块",
+      "canonical_evidence": "面向接触丰富拆卸任务的分层模仿学习，结合扩散策略与动作分块",
+      "llm_tldr_en": "DPA-FTG integrates diffusion policy with fast trajectory generation and action chunking to enable high-frequency control in contact-rich disassembly, balancing latency and closed-loop responsiveness.",
+      "llm_tldr_cn": "针对接触丰富的拆卸任务，扩散策略因迭代去噪带来推理延迟，难以支持高频控制；动作分块虽降低延迟但开环执行无法感知瞬时力变化。DPA-FTG将扩散策略与快速轨迹生成相结合，在不牺牲闭环响应的情况下动作分块地生成轨迹。实验表明该方法在凿击、撬动等动态交互中保持高频控制，并提高拆卸成功率。",
+      "llm_tldr": "针对接触丰富的拆卸任务，扩散策略因迭代去噪带来推理延迟，难以支持高频控制；动作分块虽降低延迟但开环执行无法感知瞬时力变化。DPA-FTG将扩散策略与快速轨迹生成相结合，在不牺牲闭环响应的情况下动作分块地生成轨迹。实验表明该方法在凿击、撬动等动态交互中保持高频控制，并提高拆卸成功率。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.03483v1",
+      "source": "arxiv",
+      "title": "Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution",
+      "abstract": "Existing chunk-based Vision-Language-Action (VLA) models execute a fixed number of actions (i.e., execution horizon) before replanning, turning replanning into a task-agnostic periodic schedule that is independent of task progress. As a result, when no replanning boundary falls before a critical manipulation stage, it is executed from a stale chunk rather than a freshly replanned one. To address this limitation, we propose Bernoulli-Continuation Policy (BCP), a lightweight, plug-and-play framework for adaptive horizon execution that keeps the base VLA frozen. Given a fixed-length action chunk, its continuation head decomposes execution-horizon selection into a sequence of continue-or-replan decisions, which imposes an ordinal, prefix-sharing inductive bias over candidate horizons rather than treating them as independent classes. Since the optimal horizon for each chunk is not observable, we train this head with reinforcement learning from trajectory-level outcomes and introduce a Replanning-Efficiency Reward that jointly rewards task success and efficient VLA usage, discouraging the policy from collapsing to unnecessarily short horizons. On RoboTwin 2.0 with LingBot-VLA as the base policy, BCP improves the average success rate by +11.08% on 13 low-success tasks and from 89.88% to 93.94% (+4.06%) across all 50 tasks. Although trained only under the Clean setting, BCP generalizes to the Randomized setting, raising the average success rate by +4.06%. It also transfers to a different base policy $π_{0.5}$, achieving a better result on LIBERO (+1.7%) and, notably, on the harder LIBERO-PRO (+6.8%). On a real robot, BCP lifts success from 74% to 92% and from 44% to 84% on two manipulation tasks. Meanwhile, its negligible overhead, combined with higher success, makes BCP's overall runtime even lower than the fixed-horizon baselines.",
+      "authors": [
+        "Weichen Xu",
+        "Zhenhua Liu",
+        "Lin Luo",
+        "Yaobo Liang",
+        "Chengtang Yao",
+        "Qingyu Mei",
+        "Jian Cao",
+        "Xixin Cao",
+        "Xing Zhang",
+        "Jiaolong Yang",
+        "Baining Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-08-04T11:21:08+00:00",
+      "link": "https://arxiv.org/pdf/2608.03483v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adaptive horizon execution for chunk-based VLA models, addressing fixed-length action chunking and replanning",
+      "llm_evidence_cn": "针对基于分块的VLA模型固定执行时域问题，提出自适应继续或重规划决策",
+      "llm_evidence": "针对基于分块的VLA模型固定执行时域问题，提出自适应继续或重规划决策",
+      "canonical_evidence": "针对基于分块的VLA模型固定执行时域问题，提出自适应继续或重规划决策",
+      "llm_tldr_en": "BCP decomposes execution-horizon selection into continue-or-replan decisions, enabling adaptive replanning while keeping base VLA frozen, improving robustness in manipulation.",
+      "llm_tldr_cn": "现有基于分块的视觉-语言-动作模型按固定周期重规划，无法在关键操作阶段及时更新。BCP提出轻量即插即用框架，在冻结基础VLA模型的同时将执行时域选择分解为连续继续或重规划决策。该方法只在需要时才触发重规划，避免过时动作块导致的失败。实验表明自适应执行能提升操作任务的鲁棒性和成功率。",
+      "llm_tldr": "现有基于分块的视觉-语言-动作模型按固定周期重规划，无法在关键操作阶段及时更新。BCP提出轻量即插即用框架，在冻结基础VLA模型的同时将执行时域选择分解为连续继续或重规划决策。该方法只在需要时才触发重规划，避免过时动作块导致的失败。实验表明自适应执行能提升操作任务的鲁棒性和成功率。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.01851v1",
+      "source": "arxiv",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "abstract": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "authors": [
+        "Gaytri Jena",
+        "Kapil Wanaskar",
+        "Vinija Jain",
+        "Aman Chadha",
+        "Vasu Sharma",
+        "Amitava Das"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-03T07:58:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.01851v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "surveys robot learning around weights versus skills-as-code and persistent skill memory for reusable skill libraries",
+      "llm_evidence_cn": "综述围绕权重与技能代码路线，系统梳理持久技能记忆与可复用技能库",
+      "llm_evidence": "综述围绕权重与技能代码路线，系统梳理持久技能记忆与可复用技能库",
+      "canonical_evidence": "综述围绕权重与技能代码路线，系统梳理持久技能记忆与可复用技能库",
+      "llm_tldr_en": "This survey organizes robot learning around weights versus skills-as-code, mapping code-as-policy methods by self-improvement, from zero-shot synthesis to closed-loop self-repair and persistent skill memory, providing a roadmap for reusable skill libraries in manipulation.",
+      "llm_tldr_cn": "机器人学习正在分为将能力固化在权重中的VLA模型与由机器人自行编写或改进技能代码两条路线。该综述围绕权重与技能这一主轴，系统梳理代码即策略方法按自我改进程度的发展谱系，从零样本程序合成、闭环自我修复到持久技能记忆，指出现有系统如ASPIRE、ENPIRE、RoboClaw。这为构建可复用机器人技能库与技能学习方法提供了结构化地图。",
+      "llm_tldr": "机器人学习正在分为将能力固化在权重中的VLA模型与由机器人自行编写或改进技能代码两条路线。该综述围绕权重与技能这一主轴，系统梳理代码即策略方法按自我改进程度的发展谱系，从零样本程序合成、闭环自我修复到持久技能记忆，指出现有系统如ASPIRE、ENPIRE、RoboClaw。这为构建可复用机器人技能库与技能学习方法提供了结构化地图。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.00315v1",
+      "source": "arxiv",
+      "title": "Towards General Language-Conditioned Latent Safety Filters",
+      "abstract": "Robot policies are becoming increasingly general, with vision-language-action (VLA) models enabling a single policy to execute diverse tasks specified in natural language. Safe deployment, however, requires adapting not only to new tasks but also to varying safety requirements across users, environments, and applications. Existing safety filters remain largely constraint-specific and thus must be redesigned or relearned when safety requirements change. In this paper, we investigate language-conditioned safety filtering, in which a Hamilton-Jacobi safety actor and critic are conditioned on language-specified constraints. We evaluate this formulation across pick-and-place, table-wiping, and block-stacking tasks in the vision-based setting, examining its ability to enforce language-specified constraints and transfer to unseen constraint instances within the evaluated constraint families. Our experiments provide evidence that language-conditioned safety filters reduce constraint violations and exhibit partial transfer to unseen constraint instances.",
+      "authors": [
+        "Ihab Tabbara",
+        "Yuxuan Yang",
+        "Hussein Sibai"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "published": "2026-07-31T22:00:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.00315v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "language-conditioned safety filters for robot policies",
+      "llm_evidence_cn": "面向机器人策略的语言条件安全滤波",
+      "llm_evidence": "面向机器人策略的语言条件安全滤波",
+      "canonical_evidence": "面向机器人策略的语言条件安全滤波",
+      "llm_tldr_en": "This paper investigates language-conditioned safety filtering, using a Hamilton-Jacobi safety actor and critic conditioned on language-specified constraints, enabling flexible safety adaptation for vision-based pick-and-place, wiping, and stacking tasks.",
+      "llm_tldr_cn": "机器人策略越来越通用，单一策略可执行多种语言指定任务，但安全部署要求适配不同用户、环境和场景的安全需求。现有安全滤波器多为约束特定，需重新设计或学习。该文研究语言条件的安全滤波，将Hamilton-Jacobi安全演员和评论家以语言指定的约束为条件，并在拾放、擦桌、堆叠等视觉任务中验证。结果表明语言条件化能有效泛化安全约束，实现对不同安全要求的快速适配。",
+      "llm_tldr": "机器人策略越来越通用，单一策略可执行多种语言指定任务，但安全部署要求适配不同用户、环境和场景的安全需求。现有安全滤波器多为约束特定，需重新设计或学习。该文研究语言条件的安全滤波，将Hamilton-Jacobi安全演员和评论家以语言指定的约束为条件，并在拾放、擦桌、堆叠等视觉任务中验证。结果表明语言条件化能有效泛化安全约束，实现对不同安全要求的快速适配。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.00793v1",
+      "source": "arxiv",
+      "title": "DynamicWAM: Dual-Path Motion Conditioning for World-Action Models in Dynamic Manipulation",
+      "abstract": "Dynamic manipulation requires robots to infer target motion and respond promptly, yet existing World-Action Models (WAMs) typically condition only on the current frame and execute large backbones synchronously, limiting motion awareness and responsive control in dynamic scenes. We propose DynamicWAM, a compact WAM for dynamic object manipulation with dual-path motion conditioning. DynamicWAM introduces history-flow conditioning, encoding temporally aligned optical-flow frames alongside the current observation through a frozen pretrained video VAE to preserve spatial motion structure, while injecting kinematic descriptors of displacement, duration, velocity, and acceleration into the action expert to provide motion magnitude and timing. The two complementary paths are fused through joint world-action attention. A distilled compact backbone and real-time chunking (RTC)-based asynchronous execution further enable responsive control. On DOMINO, DynamicWAM achieves a 38.2% success rate and a 53.2 manipulation score, outperforming all evaluated baselines. Across 12 real-world tasks spanning linear, circular, and compound target motion, it achieves a 46.7% average success rate, exceeding the strongest baseline by 22.9 percentage points.",
+      "authors": [
+        "Yunfan Lou",
+        "Hewen Gao",
+        "Xiyu Zhu",
+        "Zhuoran Qiao",
+        "Xuan Han",
+        "Yifan Yang",
+        "Yifan Ye",
+        "Boxian Yao",
+        "Zhibo Pang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-01T17:49:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.00793v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "dual-path motion conditioning for action experts in dynamic manipulation with continuous low-level action prediction",
+      "llm_evidence_cn": "通过历史光流与运动学描述子双重路径为动作专家提供连续低层动作预测",
+      "llm_evidence": "通过历史光流与运动学描述子双重路径为动作专家提供连续低层动作预测",
+      "canonical_evidence": "通过历史光流与运动学描述子双重路径为动作专家提供连续低层动作预测",
+      "llm_tldr_en": "DynamicWAM is a compact world-action model for dynamic manipulation with dual-path motion conditioning, encoding temporally aligned optical-flow history via a frozen video VAE and injecting kinematic descriptors into the action expert to improve motion awareness and responsive control.",
+      "llm_tldr_cn": "针对动态操作中现有世界-动作模型仅依赖当前帧、运动感知不足的问题，本文提出DynamicWAM，通过双路运动条件编码：一路用冻结视频VAE编码时间对齐的光流历史，另一路向动作专家注入位移、时长、速度与加速度等运动学描述子。该紧凑模型在动态物体操作中提升了动作专家的运动幅度与时机感知，响应更及时。",
+      "llm_tldr": "针对动态操作中现有世界-动作模型仅依赖当前帧、运动感知不足的问题，本文提出DynamicWAM，通过双路运动条件编码：一路用冻结视频VAE编码时间对齐的光流历史，另一路向动作专家注入位移、时长、速度与加速度等运动学描述子。该紧凑模型在动态物体操作中提升了动作专家的运动幅度与时机感知，响应更及时。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.01603v1",
+      "source": "arxiv",
+      "title": "AffordTrajDP: Dynamic Affordance-Guided Visuomotor Policy Learning for Robotic Manipulation",
+      "abstract": "Affordance-guided imitation learning has shown impressive performance in robotic manipulation tasks by compressing visual perception into task-specific geometric constraints (e.g., fixed contact points). However, the commonly used static affordances can become inconsistent in precision-critical tasks or under object location perturbations, leading to post-contact trajectory drift. To address this issue, we propose AffordTrajDP, a dynamic framework that constructs affordance trajectories via object-centric temporal propagation to guide the progressive manipulation process. Specifically, given an RGB-D observation, our core insight is that a retrieved anchor affordance, which captures the desired contact point between the end-effector and the target object, can be propagated forward via affordance propagation, using the object's SE(3) pose as a natural propagation medium, to yield an affordance trajectory that provides temporally consistent, state-aware guidance throughout execution. AffordTrajDP achieves 70.0% average success rate on ManiSkill3, outperforming strong baselines by up to 17.8%. Real-world experiments on Galaxea A1 and UR7e robotic arms, covering StackCube, PickCup, AdapterInsertion, Ring-on-Peg, Put-in-Bowl, and USB Insertion, further validate robustness under object placement variations and appearance changes, with seen and unseen object instances evaluated on Galaxea A1, and ablations confirm the contribution of each proposed component.",
+      "authors": [
+        "Gaoyuan Wu",
+        "Ziyu Shan",
+        "Haoyang Du",
+        "Yuyao Jiang",
+        "Ziwei Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T02:19:37+00:00",
+      "link": "https://arxiv.org/pdf/2608.01603v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Dynamic affordance trajectories provide continuous phase-like guidance for visuomotor imitation learning in manipulation",
+      "llm_evidence_cn": "动态可供性轨迹为操作视觉运动模仿学习提供连续、类似阶段的引导",
+      "llm_evidence": "动态可供性轨迹为操作视觉运动模仿学习提供连续、类似阶段的引导",
+      "canonical_evidence": "动态可供性轨迹为操作视觉运动模仿学习提供连续、类似阶段的引导",
+      "llm_tldr_en": "AffordTrajDP constructs object-centric affordance trajectories via temporal propagation to guide visuomotor policies, reducing contact drift under perturbations.",
+      "llm_tldr_cn": "静态可供性在精密任务或物体位置扰动下会变得不一致，导致接触后轨迹漂移。为此提出AffordTrajDP，利用以物体为中心的时序传播构建动态可供性轨迹，逐步引导操作进程。给定RGB-D观测，检索锚定可供性并传播为轨迹，使视觉运动策略在接触丰富操作中具备更强鲁棒性。",
+      "llm_tldr": "静态可供性在精密任务或物体位置扰动下会变得不一致，导致接触后轨迹漂移。为此提出AffordTrajDP，利用以物体为中心的时序传播构建动态可供性轨迹，逐步引导操作进程。给定RGB-D观测，检索锚定可供性并传播为轨迹，使视觉运动策略在接触丰富操作中具备更强鲁棒性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.01824v1",
+      "source": "arxiv",
+      "title": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction",
+      "abstract": "Fusing tactile signals has proven effective for contact-rich manipulation, enabling robots to perceive contact states and adapt to rapidly changing physical interactions. Yet effectively integrating tactile feedback into dexterous manipulation remains underexplored. In this work, we introduce ReTouch, a vision-language-action model (VLA) that supports contact-rich dexterous manipulation through tactile predictions continually refined online using execution-time feedback. ReTouch builds on two main innovations for tactile representation and closed-loop action generation. First, its Tactile-Patch Encoder represents tactile observations as structured tactile patch features that preserve finger identity and local contact structure, providing contact cues for fine-grained dexterous control. Second, its high-frequency action module jointly predicts future tactile states and action chunks and refines both using incoming tactile feedback during execution. This closed-loop refinement keeps tactile predictions aligned with evolving physical interactions, enabling responsive action correction and improving robustness to contact changes and execution errors. We further introduce XHT-Dataset, comprising 900 real-world demonstrations across seven contact-rich tasks collected on an XHand--UR7e platform, and evaluate ReTouch through closed-loop real-robot experiments. ReTouch surpasses the strongest baseline by 18.4 and 23.8 percentage points in average success rate under standard and challenging conditions, respectively, demonstrating its effectiveness and robustness.",
+      "authors": [
+        "Shiqi Zhang",
+        "Xin Zhang",
+        "Yedong Shen",
+        "Jiajun Deng",
+        "Yuxuan Gao",
+        "Sha Zhang",
+        "Yuan Zhang",
+        "Kaixue Long",
+        "Jiajia Wu",
+        "Jia Pan",
+        "Yao Li",
+        "Yanyong Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T07:31:10+00:00",
+      "link": "https://arxiv.org/pdf/2608.01824v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Transformer-based VLA for contact-rich manipulation with closed-loop action generation",
+      "llm_evidence_cn": "基于Transformer的VLA，面向接触丰富操作的闭环动作生成",
+      "llm_evidence": "基于Transformer的VLA，面向接触丰富操作的闭环动作生成",
+      "canonical_evidence": "基于Transformer的VLA，面向接触丰富操作的闭环动作生成",
+      "llm_tldr_en": "ReTouch, a vision-language-action model, supports contact-rich dexterous manipulation via tactile predictions continually refined online using execution-time feedback.",
+      "llm_tldr_cn": "针对触觉反馈在灵巧操作中整合不足的问题，本文提出ReTouch，一种视觉-语言-动作模型，通过触觉补丁编码器保留手指身份和局部接触结构，并利用执行时反馈在线细化触觉预测用于闭环动作生成。实验表明ReTouch能有效支持接触丰富的灵巧操作，为VLA策略的触觉感知提供了新思路。",
+      "llm_tldr": "针对触觉反馈在灵巧操作中整合不足的问题，本文提出ReTouch，一种视觉-语言-动作模型，通过触觉补丁编码器保留手指身份和局部接触结构，并利用执行时反馈在线细化触觉预测用于闭环动作生成。实验表明ReTouch能有效支持接触丰富的灵巧操作，为VLA策略的触觉感知提供了新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.03753v1",
+      "source": "arxiv",
+      "title": "GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation",
+      "abstract": "Learning long-horizon manipulation skills with reinforcement learning remains challenging due to the complexity of reward design, the limited guidance of sparse rewards, and the high cost of manual subtask annotation. Visual demonstrations can provide supervision for reward learning, but rewards learned from raw pixels can be brittle and sensitive to visual variation, background appearance, and robot motion. In this work, we propose GORDON, a graph-based object-centric reward learning framework that learns dense rewards from action-free video demonstrations. Each visual scene is represented as a graph of detected objects and spatial relations, and a graph neural network is trained in a self-supervised manner to embed these graphs into a task-aligned latent space. To align the representation with semantic task progress, we introduce an activity-aware weighted pooling mechanism that emphasizes task-relevant objects while masking robot-dominated motion. The dense reward is then computed as distances in the learned latent space of the current state to demonstrated goal configurations, providing a measure of task progress. In long-horizon tasks, the temporal profile of this reward reveals stage-wise object-state transitions, enabling automatic subtask discovery without manual segmentation. The discovered segments are then used to train subtask-specific rewards and specialized policies that are composed sequentially. Experiments on seven manipulation tasks on MAGICAL and ManiSkill3 benchmarks show that our object-centric reward improves reinforcement learning in short-horizon settings and enables successful policy learning in complex long-horizon tasks through automatic decomposition, achieving an average success rate of 74.4% across the long-horizon tasks (on average approximately +35 p.p. vs. best learned baseline and approximately +25 p.p. vs. oracle).",
+      "authors": [
+        "Andrea Protopapa",
+        "Davide Buoso",
+        "Francesca Pistilli",
+        "Georgia Chalvatzaki",
+        "Giuseppe Averta"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-04T14:43:41+00:00",
+      "link": "https://arxiv.org/pdf/2608.03753v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Graph-based object-centric rewards decompose long-horizon manipulation and support hierarchical training",
+      "llm_evidence_cn": "基于图的对象中心奖励学习分解长时操作任务并支持层次化训练",
+      "llm_evidence": "基于图的对象中心奖励学习分解长时操作任务并支持层次化训练",
+      "canonical_evidence": "基于图的对象中心奖励学习分解长时操作任务并支持层次化训练",
+      "llm_tldr_en": "GORDON learns dense object-centric rewards from action-free videos using graph neural networks, facilitating decomposition and RL training of long-horizon manipulation.",
+      "llm_tldr_cn": "长时操作强化学习面临稀疏奖励和手动子任务标注昂贵的问题，视觉演示可用于奖励学习但像素奖励脆弱。GORDON以对象图为场景表示，用图神经网络自监督学习稠密奖励，从无动作视频中分解长时任务。该方法提高了奖励的鲁棒性，并简化了层次化策略训练。",
+      "llm_tldr": "长时操作强化学习面临稀疏奖励和手动子任务标注昂贵的问题，视觉演示可用于奖励学习但像素奖励脆弱。GORDON以对象图为场景表示，用图神经网络自监督学习稠密奖励，从无动作视频中分解长时任务。该方法提高了奖励的鲁棒性，并简化了层次化策略训练。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
