@@ -1,0 +1,89 @@
+{
+  "date": "20260807",
+  "date_label": "",
+  "generated_at": "2026-08-07 01:19:17 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.01851v1",
+      "route": "202608/07/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
+      "first_seen_at": "2026-08-07 01:19:17 UTC",
+      "updated_at": "2026-08-07 01:19:17 UTC"
+    },
+    {
+      "paper_id": "2608.04765v1",
+      "route": "202608/07/2608.04765v1-explicit-language-memory-for-long-horizon-planning-in-vision-language-action-models",
+      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
+      "first_seen_at": "2026-08-07 01:19:17 UTC",
+      "updated_at": "2026-08-07 01:19:17 UTC"
+    },
+    {
+      "paper_id": "2608.03387v2",
+      "route": "202608/07/2608.03387v2-roboreact-agentic-skill-distillation-from-generated-egocentric-videos-for-generalizable-whole-body-manipulation",
+      "title": "RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
+      "first_seen_at": "2026-08-07 01:19:17 UTC",
+      "updated_at": "2026-08-07 01:19:17 UTC"
+    },
+    {
+      "paper_id": "2608.04657v1",
+      "route": "202608/07/2608.04657v1-mobilewam-bridging-world-action-models-to-mobile-manipulation-with-chain-of-foresight",
+      "title": "MobileWAM: Bridging World Action Models to Mobile Manipulation with Chain-of-Foresight",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
+      "first_seen_at": "2026-08-07 01:19:17 UTC",
+      "updated_at": "2026-08-07 01:19:17 UTC"
+    },
+    {
+      "paper_id": "2608.04425v1",
+      "route": "202608/07/2608.04425v1-ssc-a-verifiable-structured-representation-for-bimanual-manipulation-labelling",
+      "title": "SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
+      "first_seen_at": "2026-08-07 01:19:17 UTC",
+      "updated_at": "2026-08-07 01:19:17 UTC"
+    }
+  ]
+}

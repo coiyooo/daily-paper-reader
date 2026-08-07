@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-05</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-07</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 8 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-05 21:39:06 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 01:19:17 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精选8篇机器人学习论文，聚焦模仿学习与动态操控中的力控与规划问题。</p>
-<p>最值得精读的是层级模仿学习（8.0分）与伯努利延续策略（8.0分），分别解决时变力操控和自适应执行时长的挑战。</p>
-<p>普通读者可先看综述《Weights or Skills?》快速建立技术地图，再针对精读文章深入理解。</p>
+<p>今日精读与速读共5篇机器人学习论文，聚焦技能获取、长时程规划与操作标注。</p>
+<p>最值得关注的是《Weights or Skills?》综述，系统梳理了从预测权重到自主写技能的方法；另一篇则提出用显式语言记忆提升VLA模型的长时程规划能力。</p>
+<p>建议普通读者先读综述建立框架，再结合“语言记忆”一文理解如何提升机器人任务执行与规划效率。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -76,7 +76,7 @@
     <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A Hierarchical Approach to Imitation Learning for Manipulation Tasks Requiring Time Varying Forces">A Hierarchical Approach to Imitation Learning for Manipulation Tasks Requiring Time Varying Forces</span></li><li><span class="dpr-home-dashboard-paper-title" title="Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution">Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills">Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models">Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
 </section>
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills">Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="Towards General Language-Conditioned Latent Safety Filters">Towards General Language-Conditioned Latent Safety Filters</span></li><li><span class="dpr-home-dashboard-paper-title" title="DynamicWAM: Dual-Path Motion Conditioning for World-Action Models in Dynamic Manipulation">DynamicWAM: Dual-Path Motion Conditioning for World-Action Models in Dynamic Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation">RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="MobileWAM: Bridging World Action Models to Mobile Manipulation with Chain-of-Foresight">MobileWAM: Bridging World Action Models to Mobile Manipulation with Chain-of-Foresight</span></li><li><span class="dpr-home-dashboard-paper-title" title="SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling">SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
 </section>
 </div>
 

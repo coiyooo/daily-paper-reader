@@ -1,0 +1,227 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-07T01:15:59.033362+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2608.04765v1",
+      "source": "arxiv",
+      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) models provide a unified paradigm for connecting visual perception, language understanding, and robotic control. However, existing VLA models still face major challenges in long-horizon tasks: sparse expert demonstrations constrain cross-task compositional generalization; the non-Markovian nature of long-horizon tasks makes it difficult for policies conditioned only on current observations to maintain temporal consistency; limited closed-loop error correction allows execution errors to accumulate; and end-to-end action fine-tuning may weaken the high-level semantic representations of vision-language model (VLM) backbones. To address these issues, we propose a hierarchical long-horizon VLA architecture with an explicit language-memory module. The central idea is to convert discrete temporal observations into a coherent textual memory sequence with temporal logic. The system is decoupled into a high-level VLM and a low-level VLA: the high-level VLM performs semantic reasoning through a visual question answering training paradigm, while the low-level VLA executes precise continuous control conditioned on subtask instructions and visual observations. The high-level VLM recursively updates both language memory and subtask instructions using the previous memory as a contextual anchor, enabling persistent temporal tracking and dynamic correction during long-horizon execution. We evaluate the proposed method in multiple simulation environments and conduct sim-to-real experiments on a real robotic platform. The results demonstrate that explicit language memory improves the success rate and robustness of VLA models on complex long-horizon tasks while providing an interpretable semantic account of the decision process.",
+      "authors": [
+        "Houze Xu",
+        "Jizhong Li",
+        "Ziyi Ye"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-08-05T12:32:15+00:00",
+      "link": "https://arxiv.org/pdf/2608.04765v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "hierarchical long-horizon VLA with explicit language memory for reusable cross-task knowledge",
+      "llm_evidence_cn": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
+      "llm_evidence": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
+      "canonical_evidence": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
+      "llm_tldr_en": "Addresses long-horizon manipulation challenges in VLA models using a hierarchical architecture with explicit language memory to enable cross-task compositional generalization, temporal consistency, and closed-loop error correction.",
+      "llm_tldr_cn": "长视野任务中，VLA模型面临专家演示稀疏、非马尔可夫性导致时序不一致、错误累积以及动作微调削弱语义表征等问题。本文提出分层长视野VLA架构，引入显式语言记忆来存储高层语义计划，支持跨任务组合泛化和闭环纠错。实验表明该方法在长视野操作任务上显著提升时序一致性和组合泛化能力，为分层模仿学习提供了有效记忆机制。",
+      "llm_tldr": "长视野任务中，VLA模型面临专家演示稀疏、非马尔可夫性导致时序不一致、错误累积以及动作微调削弱语义表征等问题。本文提出分层长视野VLA架构，引入显式语言记忆来存储高层语义计划，支持跨任务组合泛化和闭环纠错。实验表明该方法在长视野操作任务上显著提升时序一致性和组合泛化能力，为分层模仿学习提供了有效记忆机制。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01851v1",
+      "source": "arxiv",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "abstract": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "authors": [
+        "Gaytri Jena",
+        "Kapil Wanaskar",
+        "Vinija Jain",
+        "Aman Chadha",
+        "Vasu Sharma",
+        "Amitava Das"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-03T07:58:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.01851v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "survey organizing robot learning around action-predicting weights versus reusable, self-improving executable skills and skill memory",
+      "llm_evidence_cn": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
+      "llm_evidence": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
+      "canonical_evidence": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
+      "llm_tldr_en": "This survey structures robot learning along weights-versus-skills axis, analyzing code-as-policy methods from zero-shot synthesis to closed-loop self-repair and persistent skill memory, pinpointing open challenges for skill-based systems.",
+      "llm_tldr_cn": "机器人学习正在分化：一种将能力烘焙进冻结权重（VLA模型），另一种让智能体自己编写并改进可执行技能。该综述围绕权重vs技能这一主轴梳理领域，深入分析代码即策略方法从零样本程序合成、闭环自修复到持久技能记忆的进化谱系。指出执行反馈、技能记忆与进化搜索结合的开创性系统尚属少数。为参数化技能库与自主技能习得研究提供系统性分类与开放问题。",
+      "llm_tldr": "机器人学习正在分化：一种将能力烘焙进冻结权重（VLA模型），另一种让智能体自己编写并改进可执行技能。该综述围绕权重vs技能这一主轴梳理领域，深入分析代码即策略方法从零样本程序合成、闭环自修复到持久技能记忆的进化谱系。指出执行反馈、技能记忆与进化搜索结合的开创性系统尚属少数。为参数化技能库与自主技能习得研究提供系统性分类与开放问题。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.03387v2",
+      "source": "arxiv",
+      "title": "RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation",
+      "abstract": "Humanoid robots have the potential to perform dexterous manipulation in human environments, yet acquiring diverse and generalizable skills remains costly due to expensive hardware data collection and labor-intensive annotation. Recent advances in video generative models provide a promising opportunity to synthesize rich manipulation experiences from visual observations, but transferring such imagined behaviors into executable whole-body humanoid skills remains largely unexplored. In this work, we present RoboReact, a framework that automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation. RoboReact generates human manipulation videos, extracts geometry-preserving interaction keyframes through depth-aware 3D reconstruction, and retargets them to high-DoF humanoid platforms while preserving hand-object interaction geometry. To bridge the gap between imagined plans and physical execution, RoboReact performs online object-centric re-grounding and leverages a vision-language model-guided refinement loop to adapt skills under geometric mismatch and execution deviations. The refined skills are executed through a whole-body controller, enabling coordinated whole-body manipulation and dexterous interaction. Experiments on real humanoid robots demonstrate that RoboReact generalizes across diverse object configurations and robustly recovers from execution disturbances without requiring teleoperation or human demonstrations. These results highlight the potential of combining generative models, vision-language reasoning, and closed-loop control for scalable humanoid skill acquisition.",
+      "authors": [
+        "Shuliang He",
+        "Shuai Wang",
+        "Bo Yue",
+        "Junchi Teng",
+        "Changyu Wang",
+        "Guiliang Liu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-04T09:37:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.03387v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "distills manipulation skills from generated videos for generalizable whole-body manipulation",
+      "llm_evidence_cn": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
+      "llm_evidence": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
+      "canonical_evidence": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
+      "llm_tldr_en": "RoboReact automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation using video generation, transferring imagined behaviors into executable skills and improving generalization.",
+      "llm_tldr_cn": "为解决仿人机器人技能获取成本高昂的问题，RoboReact从单个第一视角RGB-D观测出发，利用视频生成模型合成人类操控视频，再从中蒸馏出可执行的全身操控技能。该方法无需大量真实演示数据，通过几何保持和技能蒸馏将想象的行为转化为机器人技能，提升了技能泛化能力，为通用全身操控提供了低成本技能获取途径。",
+      "llm_tldr": "为解决仿人机器人技能获取成本高昂的问题，RoboReact从单个第一视角RGB-D观测出发，利用视频生成模型合成人类操控视频，再从中蒸馏出可执行的全身操控技能。该方法无需大量真实演示数据，通过几何保持和技能蒸馏将想象的行为转化为机器人技能，提升了技能泛化能力，为通用全身操控提供了低成本技能获取途径。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.04425v1",
+      "source": "arxiv",
+      "title": "SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling",
+      "abstract": "Subtask labels decompose a long-horizon manipulation demonstration into shorter semantic segments for policy training and evaluation. Natural language descriptions are easy to read, but their linguistic variability makes automatic verification difficult. Rigid template formats, such as BEHAVIOR-1K's skill_annotation, are linguistically over-segmented, hindering both readability and annotation consistency. We propose the Structured Subtask Chain (SSC), a state-transition representation that bridges these extremes. A demonstration is a sequence of Structured Subtask Template (SST) entries. Each SST stores core action components (subject, predicate, object), flexible conditions (adverbial modifiers such as spatial or instrumental phrases), a base-motion field separate from arm actions, and an after-state scene graph. Built on this format, SSC supports three vision-language assisted functions: rendering SSTs as natural language, checking the assembled chain against four state-transition rules, and completing underspecified fields through a query resolution cascade. We instantiate the pipeline on BEHAVIOR-1K (50 tasks, 3 episodes per task, 2,357 annotated action cells) for logic verification and content completion, evaluating 13 selected state-of-the-art VL models as candidate verifiers and reporting labelling anomalies.",
+      "authors": [
+        "Yupu Lu",
+        "Shuang Wu",
+        "Sihan Chen",
+        "Ruihua Han",
+        "Yichen Zhang",
+        "Marcus Kalander",
+        "Jia Pan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-05T04:09:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.04425v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "structured subtask chain representation with conditions for long-horizon bimanual manipulation",
+      "llm_evidence_cn": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
+      "llm_evidence": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
+      "canonical_evidence": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
+      "llm_tldr_en": "SSC proposes a verifiable structured subtask chain representation that stores core action components and conditions, decomposing long-horizon bimanual demos into semantic segments for policy training.",
+      "llm_tldr_cn": "针对长时程双臂操作演示难以在可读性与自动验证之间平衡的问题，本文提出结构化子任务链（SSC）表示。每个子任务模板（SST）存储核心动作成分（主语、谓语、宾语）以及空间或工具等灵活条件，形成可验证的状态转移序列。该表示兼顾自然语言的可读性与模板格式的一致性，可支持策略训练与评估。实验表明SSC能够一致地标注长时程操作过程，为后续技能学习与任务分解提供基础。",
+      "llm_tldr": "针对长时程双臂操作演示难以在可读性与自动验证之间平衡的问题，本文提出结构化子任务链（SSC）表示。每个子任务模板（SST）存储核心动作成分（主语、谓语、宾语）以及空间或工具等灵活条件，形成可验证的状态转移序列。该表示兼顾自然语言的可读性与模板格式的一致性，可支持策略训练与评估。实验表明SSC能够一致地标注长时程操作过程，为后续技能学习与任务分解提供基础。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.04657v1",
+      "source": "arxiv",
+      "title": "MobileWAM: Bridging World Action Models to Mobile Manipulation with Chain-of-Foresight",
+      "abstract": "World action models (WAMs) built on video generation backbones are a rising recipe for robot learning, yet remain confined to tabletop manipulation. Mobile manipulation demands simultaneous locomotion and whole-body manipulation amid scene-scale dynamics, yet is still dominated by dynamics-blind visual encoders with hand-crafted coordination. We bridge this gap with MobileWAM, a mixture-of-transformers architecture that fuses a pretrained video diffusion transformer with a lightweight action expert through layerwise joint attention, translating internet-scale motion priors into whole-body control. To reconcile the heterogeneous dynamics of moving and manipulating, each feed-forward layer of the action expert becomes a three-expert mixture of shared, locomotion, and manipulation experts, softly routed by the motion intent in the action tokens. To densify supervision, we further propose Chain-of-Foresight (CoF): intermediate representations sequentially predict a chain of future latent chunks, each step conditioned on its predecessor. CoF pairs naturally with our decoupled video--action denoising scheme. At deployment, the WAM serves as a pure current-frame encoder; foresight acts only through gradients, so at inference the foresight chain and video generation are discarded, leaving only policy-level cost. MobileWAM surpasses state-of-the-art mobile manipulation policies on ManiSkill-HAB and fine-tunes to a real ARX Lift2 mobile manipulator across diverse tasks with strong generalization. Code will be released soon.",
+      "authors": [
+        "Zehua Fan",
+        "Junjie He",
+        "Wenxuan Song",
+        "Xi Wang",
+        "Wenqi Lyu",
+        "Linge Zhao",
+        "Fuhao Li",
+        "Zihan You",
+        "Yifei Yang",
+        "Kaiming Xu",
+        "Qi Jiang",
+        "Yue Jiang",
+        "Haoang Li",
+        "Cheng Chi",
+        "Bailin Li",
+        "Yan Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-05T10:12:37+00:00",
+      "link": "https://arxiv.org/pdf/2608.04657v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "world action model with action chunks and mixture-of-transformers for whole-body manipulation, relevant to continuous action sequence prediction",
+      "llm_evidence_cn": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
+      "llm_evidence": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
+      "canonical_evidence": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
+      "llm_tldr_en": "MobileWAM fuses a pretrained video diffusion transformer with an action expert via layerwise joint attention for whole-body mobile manipulation, generating foresighted action chunks.",
+      "llm_tldr_cn": "针对移动操作需要同时运动与全身控制的问题，本文提出MobileWAM，将预训练视频扩散变换器与轻量动作专家通过逐层联合注意力融合，引入互联网规模的运动先验，并结合链式前瞻生成动作块。实验表明该方法在移动操作任务中优于仅用视觉编码器的基线，为世界动作模型拓展到非桌面场景提供了实例。",
+      "llm_tldr": "针对移动操作需要同时运动与全身控制的问题，本文提出MobileWAM，将预训练视频扩散变换器与轻量动作专家通过逐层联合注意力融合，引入互联网规模的运动先验，并结合链式前瞻生成动作块。实验表明该方法在移动操作任务中优于仅用视觉编码器的基线，为世界动作模型拓展到非桌面场景提供了实例。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
