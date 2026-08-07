@@ -1,10 +1,26 @@
 {
   "date": "20260807",
   "date_label": "",
-  "generated_at": "2026-08-07 01:19:17 UTC",
+  "generated_at": "2026-08-07 21:29:00 UTC",
   "recommend_exists": true,
-  "run_count": 1,
+  "run_count": 2,
   "papers": [
+    {
+      "paper_id": "2608.05970v1",
+      "route": "202608/07/2608.05970v1-skillmemo-expert-guided-skill-memory-framework-for-compositional-embodied-manipulation",
+      "title": "SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将长程演示分解为潜在原子技能，提升组合泛化",
+      "first_seen_at": "2026-08-07 21:29:00 UTC",
+      "updated_at": "2026-08-07 21:29:00 UTC"
+    },
     {
       "paper_id": "2608.01851v1",
       "route": "202608/07/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
@@ -17,9 +33,25 @@
         }
       ],
       "score": 8.0,
-      "evidence": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
+      "evidence": "围绕权重与可执行技能组织机器人学习综述，涵盖持久技能记忆与技能进化",
       "first_seen_at": "2026-08-07 01:19:17 UTC",
-      "updated_at": "2026-08-07 01:19:17 UTC"
+      "updated_at": "2026-08-07 21:29:00 UTC"
+    },
+    {
+      "paper_id": "2608.02880v1",
+      "route": "202608/07/2608.02880v1-field-aware-agent-skill-retrieval",
+      "title": "Field Aware Agent Skill Retrieval",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "从不断增长的技能库中进行字段感知检索，直接支撑可复用技能库主题",
+      "first_seen_at": "2026-08-07 21:29:00 UTC",
+      "updated_at": "2026-08-07 21:29:00 UTC"
     },
     {
       "paper_id": "2608.04765v1",
@@ -33,9 +65,41 @@
         }
       ],
       "score": 8.0,
-      "evidence": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
+      "evidence": "分层VLA加显式记忆，面向长时程跨任务组合泛化",
       "first_seen_at": "2026-08-07 01:19:17 UTC",
-      "updated_at": "2026-08-07 01:19:17 UTC"
+      "updated_at": "2026-08-07 21:29:00 UTC"
+    },
+    {
+      "paper_id": "2608.04425v1",
+      "route": "202608/07/2608.04425v1-ssc-a-verifiable-structured-representation-for-bimanual-manipulation-labelling",
+      "title": "SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "结构化子任务表示包含操作动作组件与条件",
+      "first_seen_at": "2026-08-07 01:19:17 UTC",
+      "updated_at": "2026-08-07 21:29:00 UTC"
+    },
+    {
+      "paper_id": "2608.05999v1",
+      "route": "202608/07/2608.05999v1-beyond-flat-policies-hierarchical-post-training-for-embodied-agents-in-robotic-manipulation",
+      "title": "Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向长时程操作的分层后训练，解耦高层规划与底层执行",
+      "first_seen_at": "2026-08-07 21:29:00 UTC",
+      "updated_at": "2026-08-07 21:29:00 UTC"
     },
     {
       "paper_id": "2608.03387v2",
@@ -70,9 +134,9 @@
       "updated_at": "2026-08-07 01:19:17 UTC"
     },
     {
-      "paper_id": "2608.04425v1",
-      "route": "202608/07/2608.04425v1-ssc-a-verifiable-structured-representation-for-bimanual-manipulation-labelling",
-      "title": "SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling",
+      "paper_id": "2608.02356v2",
+      "route": "202608/07/2608.02356v2-skilltrace-traversing-a-query-skill-graph-for-composable-llm-agents",
+      "title": "SkillTrace: Traversing a Query-Skill Graph for Composable LLM Agents",
       "section": "quick",
       "tags": [
         {
@@ -81,9 +145,25 @@
         }
       ],
       "score": 6.0,
-      "evidence": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
-      "first_seen_at": "2026-08-07 01:19:17 UTC",
-      "updated_at": "2026-08-07 01:19:17 UTC"
+      "evidence": "具有依赖关系和检索的可组合技能库，在方法学上可迁移到机器人技能规划",
+      "first_seen_at": "2026-08-07 21:29:00 UTC",
+      "updated_at": "2026-08-07 21:29:00 UTC"
+    },
+    {
+      "paper_id": "2608.06210v1",
+      "route": "202608/07/2608.06210v1-vidp-variable-impedance-diffusion-policy-for-compliant-robot-manipulation-from-diverse-demonstrations",
+      "title": "VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向接触丰富柔顺操作的变阻抗技能模仿学习",
+      "first_seen_at": "2026-08-07 21:29:00 UTC",
+      "updated_at": "2026-08-07 21:29:00 UTC"
     }
   ]
 }

@@ -1,53 +1,60 @@
 {
   "mode": "standard",
-  "generated_at": "2026-08-07T01:15:59.033362+00:00",
+  "generated_at": "2026-08-07T21:25:58.346556+00:00",
   "stats": {
     "mode": "standard",
     "tag_count": 1,
-    "deep_divecandidates": 2,
+    "deep_divecandidates": 3,
     "deep_cap": 6,
-    "deep_selected": 2,
-    "quick_candidates": 3,
+    "deep_selected": 3,
+    "quick_candidates": 5,
     "quick_skim_target": 11,
-    "quick_selected": 3
+    "quick_selected": 5
   },
   "deep_dive": [
     {
-      "id": "2608.04765v1",
+      "id": "2608.05970v1",
       "source": "arxiv",
-      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
-      "abstract": "Vision-language-action (VLA) models provide a unified paradigm for connecting visual perception, language understanding, and robotic control. However, existing VLA models still face major challenges in long-horizon tasks: sparse expert demonstrations constrain cross-task compositional generalization; the non-Markovian nature of long-horizon tasks makes it difficult for policies conditioned only on current observations to maintain temporal consistency; limited closed-loop error correction allows execution errors to accumulate; and end-to-end action fine-tuning may weaken the high-level semantic representations of vision-language model (VLM) backbones. To address these issues, we propose a hierarchical long-horizon VLA architecture with an explicit language-memory module. The central idea is to convert discrete temporal observations into a coherent textual memory sequence with temporal logic. The system is decoupled into a high-level VLM and a low-level VLA: the high-level VLM performs semantic reasoning through a visual question answering training paradigm, while the low-level VLA executes precise continuous control conditioned on subtask instructions and visual observations. The high-level VLM recursively updates both language memory and subtask instructions using the previous memory as a contextual anchor, enabling persistent temporal tracking and dynamic correction during long-horizon execution. We evaluate the proposed method in multiple simulation environments and conduct sim-to-real experiments on a real robotic platform. The results demonstrate that explicit language memory improves the success rate and robustness of VLA models on complex long-horizon tasks while providing an interpretable semantic account of the decision process.",
+      "title": "SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation",
+      "abstract": "Embodied visuomotor models, including Diffusion Policy (DP) and Vision-Language-Action (VLA) models, have demonstrated promising performance on robotic manipulation benchmarks. However, their potential remains fundamentally constrained by the scarcity of large-scale embodied trajectory datasets, leading to insufficient compositional generalization in out-of-distribution (OOD) scenarios with limited capability to capture reusable skill structures. To address this limitation, we propose Skill-Based Memory (SkillMemo) framework that implicitly decomposes long-horizon demonstrations into latent atomic skills and integrates skill-level features into a dynamic episodic memory bank for solving compositional tasks. Specifically, we first introduce an expert-guided trajectory segmentation module built upon a Mixture-of-Experts (MoE) architecture, which implicitly partitions trajectories into distinct skill primitives represented by learned gating coefficients. We further design a skill-level episodic memory architecture that stores compact skill representations as retrievable key-value pairs. During inference, the memory bank retrieves the most relevant skill primitives which are subsequently fused with the model's current gating distribution, providing a robust contextual prior to refine action predictions. Extensive experiments on the simulation benchmark and real-world manipulation tasks demonstrate that SkillMemo consistently enhances both DP and VLA backbones, achieving state-of-the-art performance and outperforming $π_{0.5}$, while exhibiting strong compositional generalization to unseen task configurations.",
       "authors": [
-        "Houze Xu",
-        "Jizhong Li",
-        "Ziyi Ye"
+        "Changyuan Wang",
+        "Chubin Zhang",
+        "Zhenyu Wu",
+        "Runhao Li",
+        "Angyuan Ma",
+        "Ke Chao",
+        "Yinan Liang",
+        "Xiuwei Xu",
+        "Ziwei Wang",
+        "Yansong Tang",
+        "Jiwen Lu"
       ],
       "primary_category": "cs.RO",
       "categories": [
         "cs.RO",
-        "cs.AI",
-        "cs.CV"
+        "cs.AI"
       ],
-      "published": "2026-08-05T12:32:15+00:00",
-      "link": "https://arxiv.org/pdf/2608.04765v1",
+      "published": "2026-08-06T12:46:13+00:00",
+      "link": "https://arxiv.org/pdf/2608.05970v1",
       "tags": [
         "keyword:param-skills",
         "query:param-skills"
       ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "hierarchical long-horizon VLA with explicit language memory for reusable cross-task knowledge",
-      "llm_evidence_cn": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
-      "llm_evidence": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
-      "canonical_evidence": "显式语言记忆的分层长视野VLA，支持跨任务知识复用与组合泛化",
-      "llm_tldr_en": "Addresses long-horizon manipulation challenges in VLA models using a hierarchical architecture with explicit language memory to enable cross-task compositional generalization, temporal consistency, and closed-loop error correction.",
-      "llm_tldr_cn": "长视野任务中，VLA模型面临专家演示稀疏、非马尔可夫性导致时序不一致、错误累积以及动作微调削弱语义表征等问题。本文提出分层长视野VLA架构，引入显式语言记忆来存储高层语义计划，支持跨任务组合泛化和闭环纠错。实验表明该方法在长视野操作任务上显著提升时序一致性和组合泛化能力，为分层模仿学习提供了有效记忆机制。",
-      "llm_tldr": "长视野任务中，VLA模型面临专家演示稀疏、非马尔可夫性导致时序不一致、错误累积以及动作微调削弱语义表征等问题。本文提出分层长视野VLA架构，引入显式语言记忆来存储高层语义计划，支持跨任务组合泛化和闭环纠错。实验表明该方法在长视野操作任务上显著提升时序一致性和组合泛化能力，为分层模仿学习提供了有效记忆机制。",
+      "llm_score": 9.0,
+      "llm_evidence_en": "decomposes long-horizon demos into latent atomic skills and improves compositional generalization",
+      "llm_evidence_cn": "将长程演示分解为潜在原子技能，提升组合泛化",
+      "llm_evidence": "将长程演示分解为潜在原子技能，提升组合泛化",
+      "canonical_evidence": "将长程演示分解为潜在原子技能，提升组合泛化",
+      "llm_tldr_en": "Introduces SkillMemo, which implicitly decomposes long-horizon demonstrations into atomic skills and uses a dynamic episodic memory bank to improve compositional generalization in embodied manipulation.",
+      "llm_tldr_cn": "针对扩散策略和VLA模型因轨迹数据稀缺而组合泛化不足、难以捕捉可复用技能结构的问题，提出基于技能记忆的SkillMemo框架。该框架将长程演示隐式分解为潜在原子技能，并把技能级特征整合进动态情景记忆库以支持组合式任务。在OOD组合操作场景中显著改善组合泛化能力。该工作为从有限数据中学习可复用技能提供了新的记忆增强思路。",
+      "llm_tldr": "针对扩散策略和VLA模型因轨迹数据稀缺而组合泛化不足、难以捕捉可复用技能结构的问题，提出基于技能记忆的SkillMemo框架。该框架将长程演示隐式分解为潜在原子技能，并把技能级特征整合进动态情景记忆库以支持组合式任务。在OOD组合操作场景中显著改善组合泛化能力。该工作为从有限数据中学习可复用技能提供了新的记忆增强思路。",
       "llm_tags": [
         "query:param-skills"
       ],
       "matched_query_tag": "query:param-skills",
-      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
-      "matched_requirement_id": "req-4",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
       "selection_source": "fresh_fetch"
     },
     {
@@ -75,13 +82,52 @@
         "query:param-skills"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "survey organizing robot learning around action-predicting weights versus reusable, self-improving executable skills and skill memory",
-      "llm_evidence_cn": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
-      "llm_evidence": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
-      "canonical_evidence": "围绕动作预测权重与可复用、可自改进的可执行技能及技能记忆组织机器人学习综述",
-      "llm_tldr_en": "This survey structures robot learning along weights-versus-skills axis, analyzing code-as-policy methods from zero-shot synthesis to closed-loop self-repair and persistent skill memory, pinpointing open challenges for skill-based systems.",
-      "llm_tldr_cn": "机器人学习正在分化：一种将能力烘焙进冻结权重（VLA模型），另一种让智能体自己编写并改进可执行技能。该综述围绕权重vs技能这一主轴梳理领域，深入分析代码即策略方法从零样本程序合成、闭环自修复到持久技能记忆的进化谱系。指出执行反馈、技能记忆与进化搜索结合的开创性系统尚属少数。为参数化技能库与自主技能习得研究提供系统性分类与开放问题。",
-      "llm_tldr": "机器人学习正在分化：一种将能力烘焙进冻结权重（VLA模型），另一种让智能体自己编写并改进可执行技能。该综述围绕权重vs技能这一主轴梳理领域，深入分析代码即策略方法从零样本程序合成、闭环自修复到持久技能记忆的进化谱系。指出执行反馈、技能记忆与进化搜索结合的开创性系统尚属少数。为参数化技能库与自主技能习得研究提供系统性分类与开放问题。",
+      "llm_evidence_en": "Survey organizing robot learning around weights vs executable skills, covering persistent skill memory and skill evolution.",
+      "llm_evidence_cn": "围绕权重与可执行技能组织机器人学习综述，涵盖持久技能记忆与技能进化",
+      "llm_evidence": "围绕权重与可执行技能组织机器人学习综述，涵盖持久技能记忆与技能进化",
+      "canonical_evidence": "围绕权重与可执行技能组织机器人学习综述，涵盖持久技能记忆与技能进化",
+      "llm_tldr_en": "This survey maps robot-learning approaches on the weights-vs-skills axis, analyzing code-as-policy methods that write and refine their own executable skills, including persistent skill memory and evolutionary skill search, directly aligning with reusable skill library themes.",
+      "llm_tldr_cn": "机器人学习领域正分裂为两种路线：将能力固化在权重中的视觉-语言-动作模型，以及让智能体自行编写与改进可执行技能代码的路线。该综述以'权重还是技能'为主线，梳理了代码即策略方法的不同自改进程度，从零样本程序综合、闭环自修复到持久技能记忆，并指出执行反馈、技能记忆与进化搜索三者结合的研究仍较少。这一框架为理解可重用技能库提供重要参考。",
+      "llm_tldr": "机器人学习领域正分裂为两种路线：将能力固化在权重中的视觉-语言-动作模型，以及让智能体自行编写与改进可执行技能代码的路线。该综述以'权重还是技能'为主线，梳理了代码即策略方法的不同自改进程度，从零样本程序综合、闭环自修复到持久技能记忆，并指出执行反馈、技能记忆与进化搜索三者结合的研究仍较少。这一框架为理解可重用技能库提供重要参考。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.02880v1",
+      "source": "arxiv",
+      "title": "Field Aware Agent Skill Retrieval",
+      "abstract": "As lifelong learning agents accumulate lifelong growing skill banks, retrieving the correct skill becomes an increasingly important bottleneck. Most current skill retrieval methods treat each skill as one flat document by concatenating fields such as the name, description, and body. However, skills are naturally structured, multi-field objects, where each field provides different information about when and how the skill should be used. In this work, we study whether preserving this structure improves skill retrieval. We represent each skill as its separate components, and compute sparse and dense similarities for each field independently, exposing a naturally tensorized, field-aware representation of the skill bank. We then combine these field-level scores either with uniform weights or with a small learned MLP. Across two different skill retrieval benchmarks, SkillRet and SRA-Bench, we find that keeping fields separate improves hybrid retrieval, and learning over the field-level scores gives the strongest and most consistent results. Our field-aware MLP reaches $77.95$ Recall@10 on SkillRet and $83.78$ Recall@10 on SRA-Bench, outperforming the corresponding concatenated learned baselines. We also find that the advantage grows as the skill bank becomes larger, suggesting that field-aware skill retrieval becomes especially useful in the setting where retrieval is most difficult. Our results show that skill representation itself matters, and that simply preserving the structure already present in skill files can substantially improve retrieval.",
+      "authors": [
+        "Paimon Goulart",
+        "Liang Wu",
+        "Kelly Wan",
+        "Evangelos E. Papalexakis",
+        "Liangjie Hong"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-08-03T21:01:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.02880v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "field-aware skill retrieval from growing skill banks, directly supports reusable skill-library theme",
+      "llm_evidence_cn": "从不断增长的技能库中进行字段感知检索，直接支撑可复用技能库主题",
+      "llm_evidence": "从不断增长的技能库中进行字段感知检索，直接支撑可复用技能库主题",
+      "canonical_evidence": "从不断增长的技能库中进行字段感知检索，直接支撑可复用技能库主题",
+      "llm_tldr_en": "Proposes a field-aware skill retrieval method that treats skills as structured multi-field objects and computes per-field sparse and dense similarities, improving retrieval accuracy compared to flat-text matching for lifelong learning agents.",
+      "llm_tldr_cn": "终身学习智能体积累技能库后，如何准确检索技能成为瓶颈。现有方法将技能视为扁平文档，忽略其结构化字段信息。本文提出字段感知的技能检索方法，将技能拆分为名称、描述、主体等字段，分别计算稀疏与稠密相似度并融合，保留技能结构信息。在技能库检索任务上验证了该方法优于扁平文档匹配，为可复用技能库的构建提供了关键检索组件。",
+      "llm_tldr": "终身学习智能体积累技能库后，如何准确检索技能成为瓶颈。现有方法将技能视为扁平文档，忽略其结构化字段信息。本文提出字段感知的技能检索方法，将技能拆分为名称、描述、主体等字段，分别计算稀疏与稠密相似度并融合，保留技能结构信息。在技能库检索任务上验证了该方法优于扁平文档匹配，为可复用技能库的构建提供了关键检索组件。",
       "llm_tags": [
         "query:param-skills:composite"
       ],
@@ -92,46 +138,6 @@
     }
   ],
   "quick_skim": [
-    {
-      "id": "2608.03387v2",
-      "source": "arxiv",
-      "title": "RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation",
-      "abstract": "Humanoid robots have the potential to perform dexterous manipulation in human environments, yet acquiring diverse and generalizable skills remains costly due to expensive hardware data collection and labor-intensive annotation. Recent advances in video generative models provide a promising opportunity to synthesize rich manipulation experiences from visual observations, but transferring such imagined behaviors into executable whole-body humanoid skills remains largely unexplored. In this work, we present RoboReact, a framework that automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation. RoboReact generates human manipulation videos, extracts geometry-preserving interaction keyframes through depth-aware 3D reconstruction, and retargets them to high-DoF humanoid platforms while preserving hand-object interaction geometry. To bridge the gap between imagined plans and physical execution, RoboReact performs online object-centric re-grounding and leverages a vision-language model-guided refinement loop to adapt skills under geometric mismatch and execution deviations. The refined skills are executed through a whole-body controller, enabling coordinated whole-body manipulation and dexterous interaction. Experiments on real humanoid robots demonstrate that RoboReact generalizes across diverse object configurations and robustly recovers from execution disturbances without requiring teleoperation or human demonstrations. These results highlight the potential of combining generative models, vision-language reasoning, and closed-loop control for scalable humanoid skill acquisition.",
-      "authors": [
-        "Shuliang He",
-        "Shuai Wang",
-        "Bo Yue",
-        "Junchi Teng",
-        "Changyu Wang",
-        "Guiliang Liu"
-      ],
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "published": "2026-08-04T09:37:06+00:00",
-      "link": "https://arxiv.org/pdf/2608.03387v2",
-      "tags": [
-        "keyword:param-skills",
-        "query:param-skills"
-      ],
-      "llm_score": 7.0,
-      "llm_evidence_en": "distills manipulation skills from generated videos for generalizable whole-body manipulation",
-      "llm_evidence_cn": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
-      "llm_evidence": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
-      "canonical_evidence": "从生成视频蒸馏全身操控技能，提升技能泛化能力",
-      "llm_tldr_en": "RoboReact automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation using video generation, transferring imagined behaviors into executable skills and improving generalization.",
-      "llm_tldr_cn": "为解决仿人机器人技能获取成本高昂的问题，RoboReact从单个第一视角RGB-D观测出发，利用视频生成模型合成人类操控视频，再从中蒸馏出可执行的全身操控技能。该方法无需大量真实演示数据，通过几何保持和技能蒸馏将想象的行为转化为机器人技能，提升了技能泛化能力，为通用全身操控提供了低成本技能获取途径。",
-      "llm_tldr": "为解决仿人机器人技能获取成本高昂的问题，RoboReact从单个第一视角RGB-D观测出发，利用视频生成模型合成人类操控视频，再从中蒸馏出可执行的全身操控技能。该方法无需大量真实演示数据，通过几何保持和技能蒸馏将想象的行为转化为机器人技能，提升了技能泛化能力，为通用全身操控提供了低成本技能获取途径。",
-      "llm_tags": [
-        "query:param-skills:composite"
-      ],
-      "matched_query_tag": "query:param-skills:composite",
-      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
-      "matched_requirement_id": "req-composite-param-skills",
-      "selection_source": "fresh_fetch",
-      "quick_tier": "7"
-    },
     {
       "id": "2608.04425v1",
       "source": "arxiv",
@@ -156,70 +162,182 @@
         "keyword:param-skills",
         "query:param-skills"
       ],
-      "llm_score": 6.0,
-      "llm_evidence_en": "structured subtask chain representation with conditions for long-horizon bimanual manipulation",
-      "llm_evidence_cn": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
-      "llm_evidence": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
-      "canonical_evidence": "面向长时程双臂操作的结构化子任务链表示，包含条件信息",
-      "llm_tldr_en": "SSC proposes a verifiable structured subtask chain representation that stores core action components and conditions, decomposing long-horizon bimanual demos into semantic segments for policy training.",
-      "llm_tldr_cn": "针对长时程双臂操作演示难以在可读性与自动验证之间平衡的问题，本文提出结构化子任务链（SSC）表示。每个子任务模板（SST）存储核心动作成分（主语、谓语、宾语）以及空间或工具等灵活条件，形成可验证的状态转移序列。该表示兼顾自然语言的可读性与模板格式的一致性，可支持策略训练与评估。实验表明SSC能够一致地标注长时程操作过程，为后续技能学习与任务分解提供基础。",
-      "llm_tldr": "针对长时程双臂操作演示难以在可读性与自动验证之间平衡的问题，本文提出结构化子任务链（SSC）表示。每个子任务模板（SST）存储核心动作成分（主语、谓语、宾语）以及空间或工具等灵活条件，形成可验证的状态转移序列。该表示兼顾自然语言的可读性与模板格式的一致性，可支持策略训练与评估。实验表明SSC能够一致地标注长时程操作过程，为后续技能学习与任务分解提供基础。",
+      "llm_score": 7.0,
+      "llm_evidence_en": "structured subtask representation with action components and conditions for manipulation",
+      "llm_evidence_cn": "结构化子任务表示包含操作动作组件与条件",
+      "llm_evidence": "结构化子任务表示包含操作动作组件与条件",
+      "canonical_evidence": "结构化子任务表示包含操作动作组件与条件",
+      "llm_tldr_en": "Proposes SSC, a structured subtask chain representation for bimanual manipulation labeling that balances readability and verifiability by storing action core components and flexible conditions.",
+      "llm_tldr_cn": "针对长程操作演示中子任务标签难以自动验证且刚性模板过度切分的问题，提出结构化子任务链SSC。SSC将演示建模为一系列结构化子任务模板条目，每个条目存储主体、谓词、客体等核心动作组件以及空间、工具等灵活条件。该表示兼顾自然语言的可读性与机器验证的严格性，适用于双机械手操作标注。它为策略训练与评估提供了更一致且可验证的语义分段方式。",
+      "llm_tldr": "针对长程操作演示中子任务标签难以自动验证且刚性模板过度切分的问题，提出结构化子任务链SSC。SSC将演示建模为一系列结构化子任务模板条目，每个条目存储主体、谓词、客体等核心动作组件以及空间、工具等灵活条件。该表示兼顾自然语言的可读性与机器验证的严格性，适用于双机械手操作标注。它为策略训练与评估提供了更一致且可验证的语义分段方式。",
       "llm_tags": [
         "query:param-skills"
       ],
       "matched_query_tag": "query:param-skills",
-      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
-      "matched_requirement_id": "req-7",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.02356v2",
+      "source": "arxiv",
+      "title": "SkillTrace: Traversing a Query-Skill Graph for Composable LLM Agents",
+      "abstract": "Large language model agents increasingly solve complex tasks by composing reusable skills from a library. To address this, the key challenge is not merely to retrieve individually relevant skills, but to identify a complete and executable skill composition. In this paper, we argue that this problem can be solved in a graph with three levels: compositional relations among skill queries, similarity between queries and candidates in the skill library, and the dependencies among the selected candidates. We introduce SkillTrace, which organizes the user query into a semantic hierarchy, matches skill queries and candidates, and propagates over the skill dependencies. Experiments on SkillsBench and ALFWorld demonstrate that SkillTrace achieves state-of-the-art performance, reaching a success rate of 53.17% on SkillsBench and 91.43% on ALFWorld. SkillTrace also delivers consistent improvements across different backbone language models, demonstrating the generality and robustness of graph-based skill retrieval.",
+      "authors": [
+        "Yue Yao",
+        "Shengyuan Wang",
+        "Xin Chen",
+        "Minke Zhang",
+        "Jia He",
+        "Bingjun Luo",
+        "Tom Gedeon"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-03T15:07:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.02356v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "composable skill library with dependencies and retrieval, methodologically transferable to robot skill planning",
+      "llm_evidence_cn": "具有依赖关系和检索的可组合技能库，在方法学上可迁移到机器人技能规划",
+      "llm_evidence": "具有依赖关系和检索的可组合技能库，在方法学上可迁移到机器人技能规划",
+      "canonical_evidence": "具有依赖关系和检索的可组合技能库，在方法学上可迁移到机器人技能规划",
+      "llm_tldr_en": "SkillTrace organizes user queries into a semantic hierarchy, matches them against a skill library, and propagates over skill dependencies to compose executable skill sequences, achieving state-of-the-art on SkillsBench and ALFWorld for LLM agents.",
+      "llm_tldr_cn": "该论文研究面向LLM智能体的可组合技能复用问题，提出SkillTrace框架。它在一个三层图中组织用户查询：先将查询结构化为语义层次，再在技能库中匹配查询与候选技能，最后沿候选技能间的依赖关系进行传播，从而得到完整可执行的技能组合。在SkillsBench和ALFWorld基准上取得最优结果。该工作虽面向语言智能体，但其技能组合与依赖建模思想可迁移到机器人参数化技能库的检索与组合中。",
+      "llm_tldr": "该论文研究面向LLM智能体的可组合技能复用问题，提出SkillTrace框架。它在一个三层图中组织用户查询：先将查询结构化为语义层次，再在技能库中匹配查询与候选技能，最后沿候选技能间的依赖关系进行传播，从而得到完整可执行的技能组合。在SkillsBench和ALFWorld基准上取得最优结果。该工作虽面向语言智能体，但其技能组合与依赖建模思想可迁移到机器人参数化技能库的检索与组合中。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
       "selection_source": "fresh_fetch",
       "quick_tier": "6"
     },
     {
-      "id": "2608.04657v1",
+      "id": "2608.04765v1",
       "source": "arxiv",
-      "title": "MobileWAM: Bridging World Action Models to Mobile Manipulation with Chain-of-Foresight",
-      "abstract": "World action models (WAMs) built on video generation backbones are a rising recipe for robot learning, yet remain confined to tabletop manipulation. Mobile manipulation demands simultaneous locomotion and whole-body manipulation amid scene-scale dynamics, yet is still dominated by dynamics-blind visual encoders with hand-crafted coordination. We bridge this gap with MobileWAM, a mixture-of-transformers architecture that fuses a pretrained video diffusion transformer with a lightweight action expert through layerwise joint attention, translating internet-scale motion priors into whole-body control. To reconcile the heterogeneous dynamics of moving and manipulating, each feed-forward layer of the action expert becomes a three-expert mixture of shared, locomotion, and manipulation experts, softly routed by the motion intent in the action tokens. To densify supervision, we further propose Chain-of-Foresight (CoF): intermediate representations sequentially predict a chain of future latent chunks, each step conditioned on its predecessor. CoF pairs naturally with our decoupled video--action denoising scheme. At deployment, the WAM serves as a pure current-frame encoder; foresight acts only through gradients, so at inference the foresight chain and video generation are discarded, leaving only policy-level cost. MobileWAM surpasses state-of-the-art mobile manipulation policies on ManiSkill-HAB and fine-tunes to a real ARX Lift2 mobile manipulator across diverse tasks with strong generalization. Code will be released soon.",
+      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) models provide a unified paradigm for connecting visual perception, language understanding, and robotic control. However, existing VLA models still face major challenges in long-horizon tasks: sparse expert demonstrations constrain cross-task compositional generalization; the non-Markovian nature of long-horizon tasks makes it difficult for policies conditioned only on current observations to maintain temporal consistency; limited closed-loop error correction allows execution errors to accumulate; and end-to-end action fine-tuning may weaken the high-level semantic representations of vision-language model (VLM) backbones. To address these issues, we propose a hierarchical long-horizon VLA architecture with an explicit language-memory module. The central idea is to convert discrete temporal observations into a coherent textual memory sequence with temporal logic. The system is decoupled into a high-level VLM and a low-level VLA: the high-level VLM performs semantic reasoning through a visual question answering training paradigm, while the low-level VLA executes precise continuous control conditioned on subtask instructions and visual observations. The high-level VLM recursively updates both language memory and subtask instructions using the previous memory as a contextual anchor, enabling persistent temporal tracking and dynamic correction during long-horizon execution. We evaluate the proposed method in multiple simulation environments and conduct sim-to-real experiments on a real robotic platform. The results demonstrate that explicit language memory improves the success rate and robustness of VLA models on complex long-horizon tasks while providing an interpretable semantic account of the decision process.",
       "authors": [
-        "Zehua Fan",
-        "Junjie He",
-        "Wenxuan Song",
-        "Xi Wang",
-        "Wenqi Lyu",
-        "Linge Zhao",
-        "Fuhao Li",
-        "Zihan You",
-        "Yifei Yang",
-        "Kaiming Xu",
-        "Qi Jiang",
-        "Yue Jiang",
-        "Haoang Li",
-        "Cheng Chi",
-        "Bailin Li",
-        "Yan Wang"
+        "Houze Xu",
+        "Jizhong Li",
+        "Ziyi Ye"
       ],
-      "primary_category": "cs.CV",
+      "primary_category": "cs.RO",
       "categories": [
+        "cs.RO",
+        "cs.AI",
         "cs.CV"
       ],
-      "published": "2026-08-05T10:12:37+00:00",
-      "link": "https://arxiv.org/pdf/2608.04657v1",
+      "published": "2026-08-05T12:32:15+00:00",
+      "link": "https://arxiv.org/pdf/2608.04765v1",
       "tags": [
         "keyword:param-skills",
         "query:param-skills"
       ],
       "llm_score": 7.0,
-      "llm_evidence_en": "world action model with action chunks and mixture-of-transformers for whole-body manipulation, relevant to continuous action sequence prediction",
-      "llm_evidence_cn": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
-      "llm_evidence": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
-      "canonical_evidence": "世界动作模型结合动作块与混合变换器实现全身操作，关联连续动作序列预测",
-      "llm_tldr_en": "MobileWAM fuses a pretrained video diffusion transformer with an action expert via layerwise joint attention for whole-body mobile manipulation, generating foresighted action chunks.",
-      "llm_tldr_cn": "针对移动操作需要同时运动与全身控制的问题，本文提出MobileWAM，将预训练视频扩散变换器与轻量动作专家通过逐层联合注意力融合，引入互联网规模的运动先验，并结合链式前瞻生成动作块。实验表明该方法在移动操作任务中优于仅用视觉编码器的基线，为世界动作模型拓展到非桌面场景提供了实例。",
-      "llm_tldr": "针对移动操作需要同时运动与全身控制的问题，本文提出MobileWAM，将预训练视频扩散变换器与轻量动作专家通过逐层联合注意力融合，引入互联网规模的运动先验，并结合链式前瞻生成动作块。实验表明该方法在移动操作任务中优于仅用视觉编码器的基线，为世界动作模型拓展到非桌面场景提供了实例。",
+      "llm_evidence_en": "hierarchical VLA with explicit memory for long-horizon cross-task compositional generalization",
+      "llm_evidence_cn": "分层VLA加显式记忆，面向长时程跨任务组合泛化",
+      "llm_evidence": "分层VLA加显式记忆，面向长时程跨任务组合泛化",
+      "canonical_evidence": "分层VLA加显式记忆，面向长时程跨任务组合泛化",
+      "llm_tldr_en": "Explicit Language Memory introduces a hierarchical VLA architecture with explicit language memory to address sparse demonstrations, non-Markovianity, error accumulation, and semantic weakening in long-horizon manipulation.",
+      "llm_tldr_cn": "针对VLA模型在长时程任务中演示稀疏、非马尔可夫依赖、误差累积及语义退化的问题，本文提出带显式语言记忆的分层长时程VLA架构。该方法通过记忆模块保持高层语义与任务进度，并结合闭环纠错，提升跨任务组合泛化和时序一致性，为长时程操作规划提供了更稳健的架构设计。",
+      "llm_tldr": "针对VLA模型在长时程任务中演示稀疏、非马尔可夫依赖、误差累积及语义退化的问题，本文提出带显式语言记忆的分层长时程VLA架构。该方法通过记忆模块保持高层语义与任务进度，并结合闭环纠错，提升跨任务组合泛化和时序一致性，为长时程操作规划提供了更稳健的架构设计。",
       "llm_tags": [
         "query:param-skills"
       ],
       "matched_query_tag": "query:param-skills",
-      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
-      "matched_requirement_id": "req-3",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.06210v1",
+      "source": "arxiv",
+      "title": "VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations",
+      "abstract": "Contact-rich manipulation requires precise tracking and mechanical compliance, where variable impedance control can improve robustness in task success, whereas static compliance cannot adapt to varying contact constraints. Variable impedance skills can be learned from demonstrations, avoiding complex modeling, but compliance is a hidden variable in force-agnostic kinematic data. While existing methods infer compliance from trajectory variations, these variations may reflect geometric adaptation and not intentional compliance when subject to changing spatial layouts. Therefore, this letter introduces Variable Impedance Diffusion Policy (VIDP), an imitation learning-based variable impedance control framework leveraging a Task-Parameterized Directionality-Aware Mixture Model (TP-DAMM) to extract physically consistent trajectory distributions from diverse demonstrations. By mapping distributions to stiffness profiles, VIDP jointly predicts pose actions and task compliance without force sensors. Real-world experiments show that VIDP significantly outperforms fixed-impedance baselines in task success rate while reducing interaction forces with respect to high stiffness controllers and tracking errors with respect to low stiffness baselines.",
+      "authors": [
+        "Hisham Khalil",
+        "Neil Fernandes",
+        "Thomas M. Kwok",
+        "Hsiu-Chin Lin",
+        "Yue Hu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-06T16:03:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.06210v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "imitation learning for contact-rich compliant manipulation with variable impedance skills",
+      "llm_evidence_cn": "面向接触丰富柔顺操作的变阻抗技能模仿学习",
+      "llm_evidence": "面向接触丰富柔顺操作的变阻抗技能模仿学习",
+      "canonical_evidence": "面向接触丰富柔顺操作的变阻抗技能模仿学习",
+      "llm_tldr_en": "VIDP is an imitation-learning framework based on diffusion policy that infers variable impedance skills from diverse force-agnostic kinematic demonstrations, improving robustness and task success for contact-rich compliant manipulation where static compliance cannot adapt.",
+      "llm_tldr_cn": "接触丰富的操作任务需要兼顾精确跟踪与机械柔顺，而静态柔顺难以适应多变的接触约束。本文提出变阻抗扩散策略VIDP，在缺乏力信息的运动学示范上通过模仿学习推断变阻抗技能。实验表明它能在不同空间布局中提升任务成功率，为接触丰富柔顺操作提供数据驱动的控制方案。",
+      "llm_tldr": "接触丰富的操作任务需要兼顾精确跟踪与机械柔顺，而静态柔顺难以适应多变的接触约束。本文提出变阻抗扩散策略VIDP，在缺乏力信息的运动学示范上通过模仿学习推断变阻抗技能。实验表明它能在不同空间布局中提升任务成功率，为接触丰富柔顺操作提供数据驱动的控制方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.05999v1",
+      "source": "arxiv",
+      "title": "Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation",
+      "abstract": "Vision-language-action (VLA) models have demonstrated remarkable capabilities in robotic manipulation by leveraging pretrained vision-language models. However, existing post-training methods predominantly optimize VLA models as flat policies, making it difficult to explicitly model task progression and perform robust long-horizon manipulation. Although hierarchical approaches introduce task decomposition, they mainly rely on supervised learning from offline demonstrations and cannot effectively improve execution through online interaction. To address this limitation, we propose Hierarchical Robotic Control (HiRoC), a hierarchical post-training framework that decouples high-level task planning from low-level action execution. The planner decomposes complex tasks into executable subgoals to provide explicit semantic guidance, while the executor continuously improves subgoal-conditioned action generation through reinforcement learning. To enable effective collaboration between the two modules, we further align the executor with planner-generated subgoals before reinforcement learning, mitigating the distribution misalignment between planning and execution. Extensive experiments across diverse robotic manipulation benchmarks demonstrate that HiRoC consistently outperforms strong baselines. Comprehensive analyses further validate the effectiveness of hierarchical post-training and the contribution of each key component.",
+      "authors": [
+        "He Kong",
+        "Zengjue Chen",
+        "Qi Wang",
+        "Qianli Xing",
+        "Runliang Niu",
+        "Peidong Liu",
+        "Jiawei Li",
+        "Shiqi Wang",
+        "Yi Chang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-06T13:07:56+00:00",
+      "link": "https://arxiv.org/pdf/2608.05999v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical post-training for long-horizon manipulation with high-level planning and low-level execution",
+      "llm_evidence_cn": "面向长时程操作的分层后训练，解耦高层规划与底层执行",
+      "llm_evidence": "面向长时程操作的分层后训练，解耦高层规划与底层执行",
+      "canonical_evidence": "面向长时程操作的分层后训练，解耦高层规划与底层执行",
+      "llm_tldr_en": "HiRoC proposes hierarchical post-training for VLA robots, decoupling high-level planning from low-level execution and improving long-horizon manipulation via online interaction.",
+      "llm_tldr_cn": "现有VLA模型的后训练方法通常优化为扁平策略，难以显式建模任务进展，导致长时程操作鲁棒性不足。虽然已有分层方法引入任务分解，但多依赖离线示范的监督学习，无法通过在线交互有效提升执行。本文提出HiRoC，一个分层后训练框架，将高层任务规划与低层动作执行解耦，并利用在线交互进行改进。实验验证了该方法在长时程机器人操作任务上的有效性，为可扩展的分层策略训练提供了新途径。",
+      "llm_tldr": "现有VLA模型的后训练方法通常优化为扁平策略，难以显式建模任务进展，导致长时程操作鲁棒性不足。虽然已有分层方法引入任务分解，但多依赖离线示范的监督学习，无法通过在线交互有效提升执行。本文提出HiRoC，一个分层后训练框架，将高层任务规划与低层动作执行解耦，并利用在线交互进行改进。实验验证了该方法在长时程机器人操作任务上的有效性，为可扩展的分层策略训练提供了新途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
       "selection_source": "fresh_fetch",
       "quick_tier": "7"
     }
