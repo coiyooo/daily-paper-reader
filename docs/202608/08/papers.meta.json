@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-08",
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T20:21:52",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/08/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "section": "deep",
+      "title_en": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "authors": "Gaytri Jena, Kapil Wanaskar, Vinija Jain, Aman Chadha, Vasu Sharma, Amitava Das",
+      "date": "2026-08-03",
+      "pdf": "https://arxiv.org/pdf/2608.01851v1",
+      "score": "8.0",
+      "evidence": "围绕技能与技能记忆的机器人学习综述，与复合主题高度契合。",
+      "tldr": "机器人学习正分化为两种赌注：把技能冻结进权重（VLA模型），或让智能体自己编写与改进可执行技能代码。本综述聚焦这一'权重vs技能'轴，将77个系统按六个家族分类，并按自我改进梯度排列代码式策略：从零样本合成、闭环自修复、持久技能记忆，到执行反馈+技能记忆+进化搜索的开放循环。结果发现，仅ASPIRE、ENPIRE、RoboClaw等极少数系统触及完整闭环；'技能'一词有至少五种含义，仅代码式技能不靠梯度更新即可自我改进。最后联系技能经济，指出商用技能市场只做静态播放，进而提出适应、跨本体移植、溯源、安全验证、组合与标准化等开放问题。",
+      "tags": "query:param-skills",
+      "abstract_en": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

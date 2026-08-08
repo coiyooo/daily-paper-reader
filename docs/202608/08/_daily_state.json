@@ -1,0 +1,25 @@
+{
+  "date": "20260808",
+  "date_label": "",
+  "generated_at": "2026-08-08 20:21:49 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.01851v1",
+      "route": "202608/08/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "围绕技能与技能记忆的机器人学习综述，与复合主题高度契合。",
+      "first_seen_at": "2026-08-08 20:21:49 UTC",
+      "updated_at": "2026-08-08 20:21:49 UTC"
+    }
+  ]
+}
