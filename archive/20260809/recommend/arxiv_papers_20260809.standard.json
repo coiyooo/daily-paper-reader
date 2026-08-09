@@ -1,0 +1,255 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-09T20:40:24.214398+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2608.01851v1",
+      "source": "arxiv",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "abstract": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "authors": [
+        "Gaytri Jena",
+        "Kapil Wanaskar",
+        "Vinija Jain",
+        "Aman Chadha",
+        "Vasu Sharma",
+        "Amitava Das"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-03T07:58:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.01851v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Survey organizing robot learning around weights vs skills, covering skill memory and code-as-policy",
+      "llm_evidence_cn": "围绕权重与技能组织机器人学习综述，涵盖技能记忆与代码即策略",
+      "llm_evidence": "围绕权重与技能组织机器人学习综述，涵盖技能记忆与代码即策略",
+      "canonical_evidence": "围绕权重与技能组织机器人学习综述，涵盖技能记忆与代码即策略",
+      "llm_tldr_en": "This survey organizes robot learning around weights vs skills, covering code-as-policy, persistent skill memory, and self-improvement, and provides a systematic map for reusable skill-based robot learning.",
+      "llm_tldr_cn": "该综述以权重与技能为主线，剖析了机器人学习中两类范式：将能力固化在权重中的VLA模型，以及自主编写并改进可执行技能代码的智能体。其核心贡献按自我改进程度对代码即策略方法进行梳理，涵盖了零样本程序合成、闭环自修复、持久技能记忆以及结合进化搜索的开端式循环。作者指出只有极少数近期的系统如ASPIRE、ENPIRE和RoboClaw触及该领域的空白。该综述为理解可复用技能库和技能条件化策略提供了系统化视角。",
+      "llm_tldr": "该综述以权重与技能为主线，剖析了机器人学习中两类范式：将能力固化在权重中的VLA模型，以及自主编写并改进可执行技能代码的智能体。其核心贡献按自我改进程度对代码即策略方法进行梳理，涵盖了零样本程序合成、闭环自修复、持久技能记忆以及结合进化搜索的开端式循环。作者指出只有极少数近期的系统如ASPIRE、ENPIRE和RoboClaw触及该领域的空白。该综述为理解可复用技能库和技能条件化策略提供了系统化视角。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.02880v1",
+      "source": "arxiv",
+      "title": "Field Aware Agent Skill Retrieval",
+      "abstract": "As lifelong learning agents accumulate lifelong growing skill banks, retrieving the correct skill becomes an increasingly important bottleneck. Most current skill retrieval methods treat each skill as one flat document by concatenating fields such as the name, description, and body. However, skills are naturally structured, multi-field objects, where each field provides different information about when and how the skill should be used. In this work, we study whether preserving this structure improves skill retrieval. We represent each skill as its separate components, and compute sparse and dense similarities for each field independently, exposing a naturally tensorized, field-aware representation of the skill bank. We then combine these field-level scores either with uniform weights or with a small learned MLP. Across two different skill retrieval benchmarks, SkillRet and SRA-Bench, we find that keeping fields separate improves hybrid retrieval, and learning over the field-level scores gives the strongest and most consistent results. Our field-aware MLP reaches $77.95$ Recall@10 on SkillRet and $83.78$ Recall@10 on SRA-Bench, outperforming the corresponding concatenated learned baselines. We also find that the advantage grows as the skill bank becomes larger, suggesting that field-aware skill retrieval becomes especially useful in the setting where retrieval is most difficult. Our results show that skill representation itself matters, and that simply preserving the structure already present in skill files can substantially improve retrieval.",
+      "authors": [
+        "Paimon Goulart",
+        "Liang Wu",
+        "Kelly Wan",
+        "Evangelos E. Papalexakis",
+        "Liangjie Hong"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-08-03T21:01:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.02880v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Field-aware retrieval for structured skill banks, directly supporting reusable skill libraries",
+      "llm_evidence_cn": "保留技能字段结构的检索方法，直接支持可复用技能库",
+      "llm_evidence": "保留技能字段结构的检索方法，直接支持可复用技能库",
+      "canonical_evidence": "保留技能字段结构的检索方法，直接支持可复用技能库",
+      "llm_tldr_en": "Proposes field-aware skill retrieval that treats skills as structured multi-field objects, computing sparse and dense similarities per field, improving retrieval for lifelong learning agents with growing skill banks.",
+      "llm_tldr_cn": "随着终身学习智能体技能库的不断增长，如何从海量技能中检索出正确技能成为关键瓶颈。现有方法将技能视为扁平文档，忽略了技能的字段结构信息。本文提出字段感知的技能检索方法，将每个技能拆分为独立字段（如名称、描述、正文），分别计算各字段上的稀疏与稠密相似度，再通过统一或加权方式组合，形成张量化表示。实验表明，保留技能字段结构能显著提升检索准确率，为大规模可复用技能库的高效索引与选择提供了新思路。",
+      "llm_tldr": "随着终身学习智能体技能库的不断增长，如何从海量技能中检索出正确技能成为关键瓶颈。现有方法将技能视为扁平文档，忽略了技能的字段结构信息。本文提出字段感知的技能检索方法，将每个技能拆分为独立字段（如名称、描述、正文），分别计算各字段上的稀疏与稠密相似度，再通过统一或加权方式组合，形成张量化表示。实验表明，保留技能字段结构能显著提升检索准确率，为大规模可复用技能库的高效索引与选择提供了新思路。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.01678v1",
+      "source": "arxiv",
+      "title": "Progressive Agent Skill Generation via Reinforcement Learning",
+      "abstract": "Existing skill generation methods largely rely on heuristics or pipeline-style consolidation, which must be specially designed for different evidence sources. In contrast, learning-based approaches offer a more unified way to model skill generation across heterogeneous sources. However, learning-based skill generation remains challenging because skills lack a natural supervision signal based on relevance or correctness; their value can largely be determined only by whether they improve the behavior of the agent on downstream tasks. To address this challenge, we propose Skill-$α$, a reinforcement learning method for progressively generating high-quality agent skills. Specifically, we formulate skill generation as a sequential editing process that decomposes skill construction into individually evaluable edits, and introduce a novel rollback reward that evaluates each edit by comparing downstream execution under the original and edited skills on an anchored query. Extensive experiments show that Skill-$α$ generates more effective skills than methods based on heuristics or pipelines in both document-to-skill and experience-to-skill settings. Under the main GPT-4o worker, Skill-$α$ improves average downstream success rates over the strongest skill-generation baseline by 3.3 points on CL-Bench and 6.7 points on tau2-bench. Further ablations validate the importance of rollback reward and progressive generation.",
+      "authors": [
+        "Junhao Shen",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Hong Cheng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-08-03T04:14:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.01678v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL-based progressive skill generation via sequential editing for building reusable skills",
+      "llm_evidence_cn": "通过强化学习顺序编辑逐步生成高质量技能的智能体技能方法",
+      "llm_evidence": "通过强化学习顺序编辑逐步生成高质量技能的智能体技能方法",
+      "canonical_evidence": "通过强化学习顺序编辑逐步生成高质量技能的智能体技能方法",
+      "llm_tldr_en": "Proposes Skill-α, a reinforcement learning method that generates high-quality agent skills via sequential editing, using downstream task performance as the learning signal to progressively build reusable skill libraries.",
+      "llm_tldr_cn": "现有技能生成方法多依赖启发式规则或流水线整合，而学习式方法又缺乏明确的相关性与正确性监督信号。本文提出Skill-α，将技能生成建模为顺序编辑过程，通过强化学习迭代地优化技能内容，并直接以下游任务性能作为技能价值的判断依据。实验表明Skill-α能够生成更高质量的技能，在多个基准上优于启发式方法，为跨异构证据源的统一技能生成提供了新范式。",
+      "llm_tldr": "现有技能生成方法多依赖启发式规则或流水线整合，而学习式方法又缺乏明确的相关性与正确性监督信号。本文提出Skill-α，将技能生成建模为顺序编辑过程，通过强化学习迭代地优化技能内容，并直接以下游任务性能作为技能价值的判断依据。实验表明Skill-α能够生成更高质量的技能，在多个基准上优于启发式方法，为跨异构证据源的统一技能生成提供了新范式。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.02958v1",
+      "source": "arxiv",
+      "title": "ValueFormer: A Causal Transformer Value Function with Stage-Aware Labels for Semi-Autonomous Vision-Language-Action Policies",
+      "abstract": "Vision-Language-Action (VLA) policies trained by behavior cloning fail silently: from the action stream alone, a collapsing rollout looks much like one making clean progress, because imitation supplies no notion of progress. Reinforcement learning would supply one, but it is impractical here, where real-robot experience is costly and deformable food resists simulation. The cheap alternative, a terminal success / failure bit, is learnable in principle yet far too sparse to say when a rollout went wrong. We argue that the per-frame label, not the architecture, is the hard part: to be useful it must be dense, continuous, and correctly shaped. We present ValueFormer, a compact policy-agnostic causal transformer over a frozen DINOv3 backbone that emits two per-frame signals in one forward pass: a smooth Monte Carlo value, V_mc, for advantage estimation and a sharp binary value for online mistake detection, targets that pull in opposite directions by design. Failed episodes are labeled with a stage-aware, success-then-decay return that preserves the success curve before the failure stage, and detection is supervised from mistake intervals rather than a single failure time, so mistakes the policy recovers from also carry signal. On a real-robot bimanual sandwich-assembly task 1,427 episodes), a critic-derived per-frame training weight lifts task completion from 70% to 85% (within noise at n=20), and a batched bf16 encoder cuts the live serving cost 3~5 times so the critic runs at 2 Hz alongside the policy on a single GPU.",
+      "authors": [
+        "Inkyu Sa",
+        "Konstantin Stulov",
+        "Rajat Bhageria"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-03T23:46:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.02958v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "imitation learning with stage-aware per-frame labels to provide dense progress signals for VLA policies",
+      "llm_evidence_cn": "模仿学习中使用阶段感知的逐帧标签为VLA策略提供稠密进度信号，近似局部阶段标识",
+      "llm_evidence": "模仿学习中使用阶段感知的逐帧标签为VLA策略提供稠密进度信号，近似局部阶段标识",
+      "canonical_evidence": "模仿学习中使用阶段感知的逐帧标签为VLA策略提供稠密进度信号，近似局部阶段标识",
+      "llm_tldr_en": "Addresses silent failure of behavior-cloned VLA policies by proposing ValueFormer, a policy-agnostic causal transformer value function trained with dense continuous stage-aware labels to provide progress information for semi-autonomous control.",
+      "llm_tldr_cn": "针对行为克隆VLA策略在动作流上无法区分成功与崩溃的问题，提出ValueFormer，利用密集连续且形状正确的阶段感知逐帧标签训练一个与策略无关的因果Transformer价值函数，为半自主控制提供进度信号，避免仅靠稀疏成败标签。实验表明该方法能有效判断策略状态，提升VLA策略的安全性与可控性。",
+      "llm_tldr": "针对行为克隆VLA策略在动作流上无法区分成功与崩溃的问题，提出ValueFormer，利用密集连续且形状正确的阶段感知逐帧标签训练一个与策略无关的因果Transformer价值函数，为半自主控制提供进度信号，避免仅靠稀疏成败标签。实验表明该方法能有效判断策略状态，提升VLA策略的安全性与可控性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.04692v1",
+      "source": "arxiv",
+      "title": "Suppression Sticks, Locality Is Fragile: A Closed-Loop Target-and-Control Audit of Task-Vector Negation in VLA Policies",
+      "abstract": "Task-vector arithmetic offers a closed-form way to modify a model, yet its behavioral locality remains unclear in closed-loop robot control. We present a target-and-control audit of per-skill task-vector subtraction from multitask vision-language-action (VLA) policies. Across all ten LIBERO-Goal skills, subtraction produces three qualitatively different regimes: target-control separation for five skills, resistance for three, and global collapse for two. On held-out initial states, the five suppressible targets remain at 0% success; however, mean baseline-normalized control retention is only 52%, and each target-suppressing edit materially harms at least one nominally unrelated control. Additional Goal panels show separation across tested policies with continuous-regression, discrete-token, and flow-matching action heads, whereas we observe no clean separation on Spatial and control collapse on the tested Object and Long-horizon panels. Mean task-vector cosine does not account for this variation. A matched-norm control identifies a local sign asymmetry around one Goal anchor, while multi-vector outcomes vary with anchor and scale. Retain-aware gradient baselines provide data-dependent comparators but require removal-time data and optimization; subtraction is data- and gradient-free only at edit time, assuming precomputed expert deltas. Finally, a single-skill relearning probe is consistent with behavioral masking, not certified unlearning. These results characterize task-vector subtraction as a fast but brittle intervention and underscore the need for closed-loop target-and-control evaluation when assessing locality in embodied model editing.",
+      "authors": [
+        "Shaoguang Wang",
+        "Weiyu Guo",
+        "Rushi Dai",
+        "Yiren Zhao",
+        "Yandong Guo",
+        "Hui Xiong"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-08-05T10:59:53+00:00",
+      "link": "https://arxiv.org/pdf/2608.04692v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "per-skill task-vector editing in closed-loop VLA robot control",
+      "llm_evidence_cn": "在闭环VLA机器人控制中按技能进行任务向量编辑",
+      "llm_evidence": "在闭环VLA机器人控制中按技能进行任务向量编辑",
+      "canonical_evidence": "在闭环VLA机器人控制中按技能进行任务向量编辑",
+      "llm_tldr_en": "Audits per-skill task-vector subtraction in multitask VLA policies, showing suppression is possible but harms unrelated controls.",
+      "llm_tldr_cn": "该论文针对多任务视觉-语言-动作（VLA）策略中的按技能任务向量消除进行闭环审计。实验发现十项LIBERO-Goal技能中存在目标-控制分离、抵抗和全局崩溃三种模式，且抑制目标技能往往损伤无关控制表现。工作揭示了技能级干预在闭环机器人控制中的局限性与风险，为技能条件化策略的调试与分析提供参考。",
+      "llm_tldr": "该论文针对多任务视觉-语言-动作（VLA）策略中的按技能任务向量消除进行闭环审计。实验发现十项LIBERO-Goal技能中存在目标-控制分离、抵抗和全局崩溃三种模式，且抑制目标技能往往损伤无关控制表现。工作揭示了技能级干预在闭环机器人控制中的局限性与风险，为技能条件化策略的调试与分析提供参考。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.05738v1",
+      "source": "arxiv",
+      "title": "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use",
+      "abstract": "Vision-Language-Action (VLA) models have become the dominant recipe for generalist manipulation, yet they are almost universally trained by behavior cloning: a policy imitates expert action chunks conditioned on a static image and a fixed instruction. A natural remedy is to inject explicit reasoning through textual chain-of-thought (CoT). We show, both empirically and analytically, that free-form textual CoT degrades low-level control: the reasoning it produces is ungrounded, its latency breaks closed-loop timing, and, crucially, the reasoning and action tokens are optimized against conflicting objectives so that the policy learns to narrate rather than to act. We argue that what a VLA needs is not the ability to generate language, but the ability to consume grounded language. To this end we introduce \\textbf{\\ourmethod{}}, a framework that endows a VLA with language competence through (i) in-context post-training, in which perceptual evidence is injected as structured context and the model is supervised only on actions, and (ii) an agentic tool-use interface, in which the policy queries open-vocabulary detectors, monocular depth, and a vision--language model to actively acquire task-relevant information. Rather than emitting a single templated caption, our data engine produces diverse, paraphrased, and evidence-conditioned spatial descriptions, so that the policy learns to interpret language it has never seen verbatim. Across the RoboCasa-GR1, SimplerEnv, and LIBERO simulation benchmarks, together with 8 real-world robot manipulation tasks, our method consistently achieves SOTA results in both performance and efficiency when compared with CoT-based approaches under matched configurations.",
+      "authors": [
+        "Jiarui Yang",
+        "Wen Huang",
+        "Jiale Zhang",
+        "Maowei Hu",
+        "Hang Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-06T08:21:02+00:00",
+      "link": "https://arxiv.org/pdf/2608.05738v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "VLA model on action chunk imitation for robot control; fits composite manipulation theme",
+      "llm_evidence_cn": "面向机器人控制的VLA模型与动作块模仿学习，契合组合主题",
+      "llm_evidence": "面向机器人控制的VLA模型与动作块模仿学习，契合组合主题",
+      "canonical_evidence": "面向机器人控制的VLA模型与动作块模仿学习，契合组合主题",
+      "llm_tldr_en": "Shows free-form textual chain-of-thought degrades low-level VLA control; proposes in-context post-training and tool use to improve language use without hurting action chunk imitation.",
+      "llm_tldr_cn": "本文指出在VLA模型中加入自由文本思维链会因目标冲突而损害底层动作控制，为此提出一种基于上下文后训练与智能体工具使用的方法，在保留动作块模仿能力的同时教会模型正确使用语言。实验和分析表明该方法能有效缓解思维链带来的性能下降，为语言与底层控制深度融合提供了新思路。",
+      "llm_tldr": "本文指出在VLA模型中加入自由文本思维链会因目标冲突而损害底层动作控制，为此提出一种基于上下文后训练与智能体工具使用的方法，在保留动作块模仿能力的同时教会模型正确使用语言。实验和分析表明该方法能有效缓解思维链带来的性能下降，为语言与底层控制深度融合提供了新思路。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
