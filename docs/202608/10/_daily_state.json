@@ -1,0 +1,73 @@
+{
+  "date": "20260810",
+  "date_label": "",
+  "generated_at": "2026-08-10 21:10:40 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.01851v1",
+      "route": "202608/10/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "围绕技能、技能记忆和代码策略自改进的机器人学习综述",
+      "first_seen_at": "2026-08-10 21:10:40 UTC",
+      "updated_at": "2026-08-10 21:10:40 UTC"
+    },
+    {
+      "paper_id": "2608.07065v1",
+      "route": "202608/10/2608.07065v1-autointervene-calibrated-intervention-for-action-chunking-imitation-learning-policies",
+      "title": "AutoIntervene: Calibrated Intervention for Action-Chunking Imitation Learning Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向动作分块模仿学习，利用阶段局部支持记忆进行校准干预",
+      "first_seen_at": "2026-08-10 21:10:40 UTC",
+      "updated_at": "2026-08-10 21:10:40 UTC"
+    },
+    {
+      "paper_id": "2608.06880v1",
+      "route": "202608/10/2608.06880v1-skillaligner-treating-retrieved-skills-as-adaptable-drafts-at-execution-time",
+      "title": "SkillAligner: Treating Retrieved Skills as Adaptable Drafts at Execution Time",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "执行时对检索技能进行适配与组合，以避免技能与执行不匹配问题",
+      "first_seen_at": "2026-08-10 21:10:40 UTC",
+      "updated_at": "2026-08-10 21:10:40 UTC"
+    },
+    {
+      "paper_id": "2608.06994v1",
+      "route": "202608/10/2608.06994v1-decoupling-intention-from-trajectory-a-representational-deduction-framework-for-world-action-models",
+      "title": "Decoupling Intention from Trajectory: A Representational Deduction Framework for World Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "将高层意图与底层轨迹生成解耦，类似用技能标识和阶段条件化底层策略",
+      "first_seen_at": "2026-08-10 21:10:40 UTC",
+      "updated_at": "2026-08-10 21:10:40 UTC"
+    }
+  ]
+}

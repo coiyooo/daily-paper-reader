@@ -1,0 +1,69 @@
+{
+  "label": "2026-08-10",
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T21:10:43",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202608/10/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "section": "deep",
+      "title_en": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "authors": "Gaytri Jena, Kapil Wanaskar, Vinija Jain, Aman Chadha, Vasu Sharma, Amitava Das",
+      "date": "2026-08-03",
+      "pdf": "https://arxiv.org/pdf/2608.01851v1",
+      "score": "8.0",
+      "evidence": "围绕技能、技能记忆和代码策略自改进的机器人学习综述",
+      "tldr": "机器人学习分裂为固化权重的VLA模型与编写代码技能的智能体。本调查按自我改进程度剖析代码即策略方法，从零样本合成到闭环修复与持久记忆。仅ASPIRE、ENPIRE、RoboClaw等系统实现了反馈、记忆与进化搜索结合，且'技能'一词有五种含义。本工作连接技能经济，揭示适配、移植、安全等开放问题，并对比77个系统。",
+      "tags": "query:param-skills",
+      "abstract_en": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/10/2608.07065v1-autointervene-calibrated-intervention-for-action-chunking-imitation-learning-policies",
+      "section": "deep",
+      "title_en": "AutoIntervene: Calibrated Intervention for Action-Chunking Imitation Learning Policies",
+      "authors": "Jinhe Tang, Weiming Zhi",
+      "date": "2026-08-07",
+      "pdf": "https://arxiv.org/pdf/2608.07065v1",
+      "score": "8.0",
+      "evidence": "面向动作分块模仿学习，利用阶段局部支持记忆进行校准干预",
+      "tldr": "动作分块模仿学习策略虽能提升时间一致性，但部署时感知误差和漂移会使机器人偏离演示分布，同时仍输出流畅的动作块。为此提出AutoIntervene在线框架，通过视觉-动作支持记忆评估候选块，结合视觉相似性与参考动作一致性，利用阶段局部和全局支持分别控制策略到操作者及返回的切换，并由经验分位数校准阈值。保留的干预片段提供纠正监督，用于策略更新。在真实双臂操作任务上，相比手动干预，该方法获得更高的任务成功率和更低的操作者控制时间。",
+      "tags": "query:param-skills",
+      "abstract_en": "Action-chunking visuomotor policies learn from demonstrations and improve temporal consistency by predicting short action sequences rather than single-step commands. Yet perception errors and execution drift can move the robot outside the demonstration distribution, while the policy continues to produce smooth action chunks that are inconsistent with the observed state. We present AutoIntervene, an online framework that selectively transfers control between an action-chunking policy and an operator during deployment. AutoIntervene evaluates proposed chunks against a visual-action support memory built from successful task executions, combining visual similarity with consistency between proposed and reference actions. Phase-local support governs policy-to-operator transfer within the current task phase, whereas global support governs the return to policy control after operator recovery. We calibrate separate switching thresholds for the two directions from empirical quantiles of evaluation-level scores on held-out expert demonstrations, avoiding direct manual tuning of score cutoffs. Intervention segments retained from successful rollouts target learner-induced states and provide corrective supervision for subsequent policy updates. Experiments on real-world bimanual manipulation tasks show higher post-adaptation task success and lower operator-control time than manual intervention. Videos and additional results are available at https://aus.bot/research/autointervene/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/10/2608.06880v1-skillaligner-treating-retrieved-skills-as-adaptable-drafts-at-execution-time",
+      "section": "quick",
+      "title_en": "SkillAligner: Treating Retrieved Skills as Adaptable Drafts at Execution Time",
+      "authors": "Qinfeng Li, Dalin He, Yuntai Bao, Ying Yang, Ruoxi Chen, Xinyan Yu, Lizhou Liang, Ge Su, Wenqi Zhang, Xuhong Zhang",
+      "date": "2026-08-07",
+      "pdf": "https://arxiv.org/pdf/2608.06880v1",
+      "score": "6.0",
+      "evidence": "执行时对检索技能进行适配与组合，以避免技能与执行不匹配问题",
+      "tldr": "检索得到的通用技能虽语义相关，但其隐含假设常与当前任务、环境或其它技能冲突，导致执行效用不足。SkillAligner提出无需训练的运行时适配方法，将技能视为可修改草稿，通过一次联合适配专门化任务片段、对齐执行接口假设并组合消除依赖冲突与冗余，生成紧凑执行指南供整个轨迹复用。在多个智能体基准和模型骨干上显著提升任务性能，降低技能引发的性能回退及推理总成本。",
+      "tags": "query:param-skills",
+      "abstract_en": "General-purpose skills promise reusable procedural knowledge for language agents, yet semantic relevance does not guarantee execution utility: a retrieved skill may encode assumptions that conflict with the current task, execution environment, or other retrieved skills. We formalize this problem as the skill--execution misfit. To address it, we propose SkillAligner, a training-free execution-time skill adaptation framework that treats retrieved skills as adaptable drafts rather than fixed instructions. Before execution, SkillAligner performs a one-time joint adaptation that specializes useful skill fragments to task requirements, aligns their procedural assumptions with the available execution interface, and composes the resulting guidance by resolving dependencies, conflicts, and redundancy across skills. The adapted content is consolidated into a compact execution guide and reused throughout the subsequent trajectory. Extensive experiments across diverse agent benchmarks and model backbones show that SkillAligner substantially improves task performance over existing skill-use baselines, reduces skill-induced regressions at the instance level, and lowers total inference cost.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/10/2608.06994v1-decoupling-intention-from-trajectory-a-representational-deduction-framework-for-world-action-models",
+      "section": "quick",
+      "title_en": "Decoupling Intention from Trajectory: A Representational Deduction Framework for World Action Models",
+      "authors": "Xiangkai Ma, Yue Ma, Junjie Wang, Sheng Xu, Mingyang Li, Han Zhang, Yuzheng Zhuang, Wenzhong Li, Zhihao Yuan",
+      "date": "2026-08-07",
+      "pdf": "https://arxiv.org/pdf/2608.06994v1",
+      "score": "6.0",
+      "evidence": "将高层意图与底层轨迹生成解耦，类似用技能标识和阶段条件化底层策略",
+      "tldr": "现有世界动作模型(WAM)仅预测静态视觉观测，未捕捉运动交互下的状态演化，导致高层物理条件与低层轨迹生成表征纠缠，形成结构瓶颈。PILOT提出表征演绎(RD)，将运动思维链(CoT)集成到动作分支，显式建模状态转移token作为推理引导轨迹，提升成功率、泛化性与物理可解释性，同时缓解稀疏监督，可作为少样本实机微调策略。",
+      "tags": "query:param-skills",
+      "abstract_en": "World Action Models (WAMs) aim to construct a unified architecture capable of understanding world state evolution and guiding to generative motion planning. However, existing visual branches focus on predicting static visual observation, rather than reflecting potential transition information that captures the evolution of world states under motion interactions. This leads to representational entanglement between high-level physical condition evolution and low-level action trajectory generation within the Action Model, creating a structural bottleneck while weakening the predictive capability of world evolution modeling for action generation. We propose PILOT (Physical Inference for Latent Optimized Trajectories), whose core Representational Deduction (RD) bridges this gap by integrating motion thought-of-chain (CoT) guidance as a native model capability. Specifically, RD aims to encourage the action branch to explicitly model potential state transition tokens, which are retained as CoT in the reasoning space to guide fine-grained motion trajectory. Experiments demonstrate that RD not only significantly improves the success rate and generalization ability of WAMs in complex robotic manipulation tasks but also enhances the model's physical interpretability by decoupling high-level motion semantics from low-level trajectory details. Furthermore, the abundant state transition supervision signals introduced by RD effectively alleviate the sparse supervision in action generation, enabling it to serve as an efficient few-shot real-robot fine-tuning strategy and demonstrating superior scalability for migration to mainstream WAM architectures.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
