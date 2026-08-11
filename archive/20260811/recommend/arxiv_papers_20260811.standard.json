@@ -1,0 +1,423 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-11T21:30:44.749008+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2608.07746v1",
+      "source": "arxiv",
+      "title": "LUCID: Latent-Skill Unified Control via Imagined Dynamics for Long-Horizon Humanoid Loco-Manipulation",
+      "abstract": "Long-horizon humanoid loco-manipulation requires composing versatile whole-body skills and reliable high-level decision making. Existing methods often coordinate pretrained skills with scripted planners, finite-state machines or task-specific model-free policies, restricting their ability to handle complex task sequences. To address this limitation, we propose \\textbf{LUCID}, a hierarchical model-based reinforcement learning framework that plans over reusable skills through imagined rollouts of a learned dynamics model. LUCID first trains a structured latent-conditioned low-level policy via adversarial imitation and then freezes it while jointly learning a high-level policy and macro-dynamics world model. The world model predicts the temporally extended state transitions induced by latent decisions, enabling high-level policy optimization through imagined rollouts. We evaluate our framework across various simulated multi-object rearrangement scenarios. Experimental results show that LUCID improves the full-task success and partial-completion rates compared to prior baseline methods, demonstrating its effectiveness in complex sequential loco-manipulation tasks.",
+      "authors": [
+        "Cheng Guo",
+        "Mingzhe Ni",
+        "Angelo Cangelosi",
+        "Arash Ajoudani"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-08-07T20:26:34+00:00",
+      "link": "https://arxiv.org/pdf/2608.07746v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "hierarchical model-based RL plans over reusable latent skills with adversarial imitation low-level policy",
+      "llm_evidence_cn": "分层模型强化学习在可复用潜在技能上规划，低层策略使用对抗模仿学习",
+      "llm_evidence": "分层模型强化学习在可复用潜在技能上规划，低层策略使用对抗模仿学习",
+      "canonical_evidence": "分层模型强化学习在可复用潜在技能上规划，低层策略使用对抗模仿学习",
+      "llm_tldr_en": "LUCID is a hierarchical model-based RL framework that plans over reusable latent skills through imagined rollouts. It trains a latent-conditioned low-level policy via adversarial imitation, then freezes it while learning a high-level policy and macro-dynamics world model.",
+      "llm_tldr_cn": "长时程人形移动操作需要组合多种全身技能并依靠可靠的高层决策，而现有脚本化规划或有限状态机方法难以应对复杂任务序列。为此提出LUCID，先通过对抗模仿训练潜在条件化的低层技能，再冻结低层并在学习高层策略的同时学习宏动力学世界模型，利用想象展开在可复用技能上规划。该方法使长时程任务中的技能复用成为可能，并为分层操作策略提供模型化方案。",
+      "llm_tldr": "长时程人形移动操作需要组合多种全身技能并依靠可靠的高层决策，而现有脚本化规划或有限状态机方法难以应对复杂任务序列。为此提出LUCID，先通过对抗模仿训练潜在条件化的低层技能，再冻结低层并在学习高层策略的同时学习宏动力学世界模型，利用想象展开在可复用技能上规划。该方法使长时程任务中的技能复用成为可能，并为分层操作策略提供模型化方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01851v1",
+      "source": "arxiv",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "abstract": "Robot learning is splitting into two bets: policies that bake competence into frozen weights (vision-language-action, or VLA, models), and agents that write and refine their own executable skills as code. This survey organises the field around that axis of weights versus skills. Its central analytical contribution is a deep-dive that arranges code-as-policy methods by their degree of self-improvement, from zero-shot program synthesis, through closed-loop self-repair and persistent skill memory, to the sparsely populated cell in which execution feedback, skill memory, and evolutionary search combine into one open-ended loop; only a few very recent systems (for example ASPIRE, ENPIRE, and RoboClaw) occupy that cell. We map the complementary \"skills\" pole, from unsupervised reinforcement-learning skill discovery to large-language-model skill libraries, and show that the word \"skill\" is used in at least five distinct senses, of which only the code sense self-improves without gradient updates. We then connect the taxonomy to the emerging skill economy: commercial robot-skill marketplaces now distribute one-tap skills across robots but ship only static playback, which surfaces open problems of adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation. This is a deliberately focused survey. Rather than cataloguing the field exhaustively, it examines 77 representative systems across six technique families through one taxonomy and a set of contrast tables, and it supplies operational definitions of the self-improvement mechanisms together with a statement of what each family cannot do.",
+      "authors": [
+        "Gaytri Jena",
+        "Kapil Wanaskar",
+        "Vinija Jain",
+        "Aman Chadha",
+        "Vasu Sharma",
+        "Amitava Das"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-03T07:58:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.01851v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Survey organizing robot learning around weights vs skills, covering skill memory and code-as-policy self-improvement",
+      "llm_evidence_cn": "以权重与技能为轴梳理机器人学习，涵盖技能记忆与代码即策略",
+      "llm_evidence": "以权重与技能为轴梳理机器人学习，涵盖技能记忆与代码即策略",
+      "canonical_evidence": "以权重与技能为轴梳理机器人学习，涵盖技能记忆与代码即策略",
+      "llm_tldr_en": "Surveys robot learning along the weights-vs-skills axis, organizing code-as-policy methods by self-improvement degree and highlighting the open loop combining execution feedback, skill memory, and evolution.",
+      "llm_tldr_cn": "机器人学习正在分化：一类把能力写进冻结权重（VLA模型），另一类让智能体自主编写并改进可执行技能代码。这篇综述以“权重vs技能”为主线，按自我改进程度梳理了从零样本程序合成、闭环自修复到持久技能记忆的方法谱系，并指出执行反馈、技能记忆与进化搜索相结合的自提升闭环仍鲜有系统实现。它为理解技能型机器人学习提供了清晰的分析坐标系，也为构建可复用技能库的研究者指出关键空白。",
+      "llm_tldr": "机器人学习正在分化：一类把能力写进冻结权重（VLA模型），另一类让智能体自主编写并改进可执行技能代码。这篇综述以“权重vs技能”为主线，按自我改进程度梳理了从零样本程序合成、闭环自修复到持久技能记忆的方法谱系，并指出执行反馈、技能记忆与进化搜索相结合的自提升闭环仍鲜有系统实现。它为理解技能型机器人学习提供了清晰的分析坐标系，也为构建可复用技能库的研究者指出关键空白。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.09410v1",
+      "source": "arxiv",
+      "title": "Skills in Weights, Memory in Code: Hybrid Learning for Memory-Dependent Robot Manipulation",
+      "abstract": "Modern vision-language-action (VLA) policies have acquired broad manipulation skills, but typically generate each action chunk from the current observation or a short fixed-length history. However, real-world manipulation is often non-Markovian, requiring robots to retain and reason over task-relevant information from long-horizon interaction histories to determine the next action. To address this challenge, we propose HyMeS, a hybrid learning framework that leverages the reasoning and memory-management capabilities of coding agents to steer a Markovian VLA for memory-dependent manipulation. Specifically, HyMeS learns low-level motor skills through gradient-based imitation learning, while a coding agent acquires high-level memory-management strategies through heuristic learning by iteratively updating an executable heuristic system from rollout feedback. Furthermore, we close the loop between steering and execution through multimodal stage-completion verification, which updates memory using proprioceptive signals and multi-frame VLM judgments. Compared with end-to-end memory-augmented VLAs, HyMeS requires demonstrations only for reusable motor skills rather than for every history-dependent task configuration, enabling data-efficient compositional generalization. On RoboMemArena, HyMeS improves mean cumulative success from 52.5% to 66.2% and mean task success from 41.3% to 60.1% over pi0.5, while outperforming PrediMem by 4.5 points in cumulative success and 14.5 points in task success.",
+      "authors": [
+        "Yunhao Zhao",
+        "Zhenyang Ni",
+        "Haoyang Chen",
+        "Ruohan Zhang",
+        "Qi Zhu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-10T10:35:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.09410v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "hybrid learning with low-level motor skills via imitation for long-horizon manipulation",
+      "llm_evidence_cn": "混合学习结合低级运动技能的模仿学习用于长时程操作",
+      "llm_evidence": "混合学习结合低级运动技能的模仿学习用于长时程操作",
+      "canonical_evidence": "混合学习结合低级运动技能的模仿学习用于长时程操作",
+      "llm_tldr_en": "HyMeS uses gradient-based imitation learning for low-level motor skills and coding agents for high-level memory, solving non-Markovian manipulation tasks.",
+      "llm_tldr_cn": "现实操作常是非马尔可夫的，需要从长时程交互历史中保留与推理信息，而现有VLA通常仅依赖当前或短时观测。本文提出HyMeS混合学习框架：低级运动技能通过梯度模仿学习获得，高级记忆管理由编码代理负责，以指导马尔可夫VLA。实验证明该框架在记忆依赖操作上显著优于纯端到端基线。它展现了技能权重与代码记忆分离的价值。",
+      "llm_tldr": "现实操作常是非马尔可夫的，需要从长时程交互历史中保留与推理信息，而现有VLA通常仅依赖当前或短时观测。本文提出HyMeS混合学习框架：低级运动技能通过梯度模仿学习获得，高级记忆管理由编码代理负责，以指导马尔可夫VLA。实验证明该框架在记忆依赖操作上显著优于纯端到端基线。它展现了技能权重与代码记忆分离的价值。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.03387v2",
+      "source": "arxiv",
+      "title": "RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation",
+      "abstract": "Humanoid robots have the potential to perform dexterous manipulation in human environments, yet acquiring diverse and generalizable skills remains costly due to expensive hardware data collection and labor-intensive annotation. Recent advances in video generative models provide a promising opportunity to synthesize rich manipulation experiences from visual observations, but transferring such imagined behaviors into executable whole-body humanoid skills remains largely unexplored. In this work, we present RoboReact, a framework that automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation. RoboReact generates human manipulation videos, extracts geometry-preserving interaction keyframes through depth-aware 3D reconstruction, and retargets them to high-DoF humanoid platforms while preserving hand-object interaction geometry. To bridge the gap between imagined plans and physical execution, RoboReact performs online object-centric re-grounding and leverages a vision-language model-guided refinement loop to adapt skills under geometric mismatch and execution deviations. The refined skills are executed through a whole-body controller, enabling coordinated whole-body manipulation and dexterous interaction. Experiments on real humanoid robots demonstrate that RoboReact generalizes across diverse object configurations and robustly recovers from execution disturbances without requiring teleoperation or human demonstrations. These results highlight the potential of combining generative models, vision-language reasoning, and closed-loop control for scalable humanoid skill acquisition.",
+      "authors": [
+        "Shuliang He",
+        "Shuai Wang",
+        "Bo Yue",
+        "Junchi Teng",
+        "Changyu Wang",
+        "Guiliang Liu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-04T09:37:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.03387v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "synthesizes whole-body manipulation skills from single egocentric video, offering reusable skill distillation",
+      "llm_evidence_cn": "从单个第一视角视频合成全身操作技能，提供可复用技能蒸馏",
+      "llm_evidence": "从单个第一视角视频合成全身操作技能，提供可复用技能蒸馏",
+      "canonical_evidence": "从单个第一视角视频合成全身操作技能，提供可复用技能蒸馏",
+      "llm_tldr_en": "RoboReact automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation by generating human videos and distilling geometry-preserving executable skills.",
+      "llm_tldr_cn": "该论文针对人形机器人技能获取成本高的问题，提出RoboReact框架。它从单个第一视角RGB-D观测出发，利用视频生成模型合成人类操作视频，并提取几何保持的可执行全身技能，从而自动化地构建可泛化的操作技能库。该方法减少了对昂贵真机数据采集和人工标注的依赖，为可复用机器人技能学习提供了新途径。",
+      "llm_tldr": "该论文针对人形机器人技能获取成本高的问题，提出RoboReact框架。它从单个第一视角RGB-D观测出发，利用视频生成模型合成人类操作视频，并提取几何保持的可执行全身技能，从而自动化地构建可泛化的操作技能库。该方法减少了对昂贵真机数据采集和人工标注的依赖，为可复用机器人技能学习提供了新途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.01678v1",
+      "source": "arxiv",
+      "title": "Progressive Agent Skill Generation via Reinforcement Learning",
+      "abstract": "Existing skill generation methods largely rely on heuristics or pipeline-style consolidation, which must be specially designed for different evidence sources. In contrast, learning-based approaches offer a more unified way to model skill generation across heterogeneous sources. However, learning-based skill generation remains challenging because skills lack a natural supervision signal based on relevance or correctness; their value can largely be determined only by whether they improve the behavior of the agent on downstream tasks. To address this challenge, we propose Skill-$α$, a reinforcement learning method for progressively generating high-quality agent skills. Specifically, we formulate skill generation as a sequential editing process that decomposes skill construction into individually evaluable edits, and introduce a novel rollback reward that evaluates each edit by comparing downstream execution under the original and edited skills on an anchored query. Extensive experiments show that Skill-$α$ generates more effective skills than methods based on heuristics or pipelines in both document-to-skill and experience-to-skill settings. Under the main GPT-4o worker, Skill-$α$ improves average downstream success rates over the strongest skill-generation baseline by 3.3 points on CL-Bench and 6.7 points on tau2-bench. Further ablations validate the importance of rollback reward and progressive generation.",
+      "authors": [
+        "Junhao Shen",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Hong Cheng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-08-03T04:14:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.01678v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL-based progressive generation of reusable skills",
+      "llm_evidence_cn": "基于强化学习的渐进式可复用技能生成",
+      "llm_evidence": "基于强化学习的渐进式可复用技能生成",
+      "canonical_evidence": "基于强化学习的渐进式可复用技能生成",
+      "llm_tldr_en": "Skill-α generates skills via reinforcement learning as sequential editing, showing that downstream task signals can guide high-quality skill generation.",
+      "llm_tldr_cn": "现有的技能生成方法依赖启发式或流水线整合，难以统一建模异构证据。本文提出Skill-α，将技能生成建模为顺序编辑过程，并利用强化学习渐进式提升技能质量，因为技能的价值只有在下游任务上才能被最终验证。该方法在多个下游任务上生成了更有效的技能库。这说明用下游信号反向塑造技能生成是可行的。",
+      "llm_tldr": "现有的技能生成方法依赖启发式或流水线整合，难以统一建模异构证据。本文提出Skill-α，将技能生成建模为顺序编辑过程，并利用强化学习渐进式提升技能质量，因为技能的价值只有在下游任务上才能被最终验证。该方法在多个下游任务上生成了更有效的技能库。这说明用下游信号反向塑造技能生成是可行的。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.05738v1",
+      "source": "arxiv",
+      "title": "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use",
+      "abstract": "Vision-Language-Action (VLA) models have become the dominant recipe for generalist manipulation, yet they are almost universally trained by behavior cloning: a policy imitates expert action chunks conditioned on a static image and a fixed instruction. A natural remedy is to inject explicit reasoning through textual chain-of-thought (CoT). We show, both empirically and analytically, that free-form textual CoT degrades low-level control: the reasoning it produces is ungrounded, its latency breaks closed-loop timing, and, crucially, the reasoning and action tokens are optimized against conflicting objectives so that the policy learns to narrate rather than to act. We argue that what a VLA needs is not the ability to generate language, but the ability to consume grounded language. To this end we introduce \\textbf{\\ourmethod{}}, a framework that endows a VLA with language competence through (i) in-context post-training, in which perceptual evidence is injected as structured context and the model is supervised only on actions, and (ii) an agentic tool-use interface, in which the policy queries open-vocabulary detectors, monocular depth, and a vision--language model to actively acquire task-relevant information. Rather than emitting a single templated caption, our data engine produces diverse, paraphrased, and evidence-conditioned spatial descriptions, so that the policy learns to interpret language it has never seen verbatim. Across the RoboCasa-GR1, SimplerEnv, and LIBERO simulation benchmarks, together with 8 real-world robot manipulation tasks, our method consistently achieves SOTA results in both performance and efficiency when compared with CoT-based approaches under matched configurations.",
+      "authors": [
+        "Jiarui Yang",
+        "Wen Huang",
+        "Jiale Zhang",
+        "Maowei Hu",
+        "Hang Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-06T08:21:02+00:00",
+      "link": "https://arxiv.org/pdf/2608.05738v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "action chunk behavior cloning with in-context post-training for VLA",
+      "llm_evidence_cn": "动作块行为克隆与上下文后训练用于VLA",
+      "llm_evidence": "动作块行为克隆与上下文后训练用于VLA",
+      "canonical_evidence": "动作块行为克隆与上下文后训练用于VLA",
+      "llm_tldr_en": "Shows free-form CoT degrades VLA low-level control and proposes in-context post-training with agentic tool use to preserve action chunking performance.",
+      "llm_tldr_cn": "VLA模型通常用行为克隆训练，但自由文本思维链会削弱低级控制，导致策略仅叙述而非行动。本文通过实证与分析指出问题，并提出In-Context VLA：采用上下文后训练与智能体工具使用，在不牺牲闭环控制的前提下注入语言能力。实验表明该方法既保留动作块控制的时序性能，又获得语言交互能力。这为动作块智能体提供了新的训练范式。",
+      "llm_tldr": "VLA模型通常用行为克隆训练，但自由文本思维链会削弱低级控制，导致策略仅叙述而非行动。本文通过实证与分析指出问题，并提出In-Context VLA：采用上下文后训练与智能体工具使用，在不牺牲闭环控制的前提下注入语言能力。实验表明该方法既保留动作块控制的时序性能，又获得语言交互能力。这为动作块智能体提供了新的训练范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.02880v2",
+      "source": "arxiv",
+      "title": "Field Aware Agent Skill Retrieval",
+      "abstract": "As lifelong learning agents accumulate lifelong growing skill banks, retrieving the correct skill becomes an increasingly important bottleneck. Most current skill retrieval methods treat each skill as one flat document by concatenating fields such as the name, description, and body. However, skills are naturally structured, multi-field objects, where each field provides different information about when and how the skill should be used. In this work, we study whether preserving this structure improves skill retrieval. We represent each skill as its separate components, and compute sparse and dense similarities for each field independently, exposing a naturally tensorized, field-aware representation of the skill bank. We then combine these field-level scores either with uniform weights or with a small learned MLP. Across two different skill retrieval benchmarks, SkillRet and SRA-Bench, we find that keeping fields separate improves hybrid retrieval, and learning over the field-level scores gives the strongest and most consistent results. Our field-aware MLP reaches $77.95$ Recall@10 on SkillRet and $83.78$ Recall@10 on SRA-Bench, outperforming the corresponding concatenated learned baselines. We also find that the advantage grows as the skill bank becomes larger, suggesting that field-aware skill retrieval becomes especially useful in the setting where retrieval is most difficult. Our results show that skill representation itself matters, and that simply preserving the structure already present in skill files can substantially improve retrieval.",
+      "authors": [
+        "Paimon Goulart",
+        "Liang Wu",
+        "Kelly Wan",
+        "Evangelos E. Papalexakis",
+        "Liangjie Hong"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-08-03T21:01:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.02880v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "structured field-aware retrieval for reusable skill banks",
+      "llm_evidence_cn": "面向可复用技能库的结构化字段感知检索",
+      "llm_evidence": "面向可复用技能库的结构化字段感知检索",
+      "canonical_evidence": "面向可复用技能库的结构化字段感知检索",
+      "llm_tldr_en": "Treats skills as structured multi-field objects and combines sparse and dense field-level similarities, improving retrieval from lifelong growing skill banks.",
+      "llm_tldr_cn": "技能库不断增长，但现有检索将技能视为扁平文档，忽略了技能内部字段结构。本文提出字段感知的技能检索方法，将技能拆分为名称、描述等独立字段，分别计算稀疏和稠密相似度，再组合为张量化的库表示。实验证明保留技能结构能显著提升检索正确率。该方法可迁移到机器人技能库的检索与复用。",
+      "llm_tldr": "技能库不断增长，但现有检索将技能视为扁平文档，忽略了技能内部字段结构。本文提出字段感知的技能检索方法，将技能拆分为名称、描述等独立字段，分别计算稀疏和稠密相似度，再组合为张量化的库表示。实验证明保留技能结构能显著提升检索正确率。该方法可迁移到机器人技能库的检索与复用。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.09492v1",
+      "source": "arxiv",
+      "title": "Rethink Before You Execute: Adaptive Execution for World Action Models",
+      "abstract": "World Action Models (WAMs) jointly predict future actions and the evolution of the environment. At each inference, a WAM generates a chunk of actions and the robot executes a fixed prefix before replanning. We argue that this fixed execution horizon is poorly matched to execution dynamics: the chunk reliability varies across task stages, so when to replan depends on the result of accumulated execution, not on the step counts. We propose TempoWAM (Timing Execution by Monitoring Progress Online), a lightweight plug-and-play execution scheme for WAMs. A Recurrent Progress Monitor first estimates task progress from the current observation, task instruction, remaining actions, and execution history; and an Adaptive Execution Protocol then evaluates whether the chunk is advancing the task to decide if replanning is needed. To bridge the training-deployment gap, the protocol is calibrated by a task-dependent calibration factor with online adaptation. Experiments on LIBERO, RoboTwin, and real-world tasks show that TempoWAM consistently improves the efficiency-success trade-off of WAM execution. On real robots, it reduces WAM inferences by 26.9% on easy tasks while maintaining success, and improves success by 13.3 points on difficult tasks.",
+      "authors": [
+        "Feng Ye",
+        "Yiming Zhao",
+        "Yong Yu",
+        "Hongxu Zhou",
+        "Yong Pan",
+        "Yuan Xue",
+        "Peng Jia",
+        "Chuanmin Jia"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-10T11:59:42+00:00",
+      "link": "https://arxiv.org/pdf/2608.09492v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Adaptive execution for action chunks in world action models",
+      "llm_evidence_cn": "世界动作模型中的动作块自适应执行",
+      "llm_evidence": "世界动作模型中的动作块自适应执行",
+      "canonical_evidence": "世界动作模型中的动作块自适应执行",
+      "llm_tldr_en": "Proposes TempoWAM, a plug-and-play execution scheme that adaptively decides when to replan based on monitored task progress, instead of fixed execution horizons for action chunks.",
+      "llm_tldr_cn": "针对世界动作模型固定执行前缀与任务阶段可靠性不匹配的问题，提出TempoWAM轻量执行方案。它利用循环进度监视器从观测、指令、剩余动作与执行历史估计任务进度，并通过自适应执行协议决定重规划时机，从而提升了预测动作块的实际执行效率与稳定性。",
+      "llm_tldr": "针对世界动作模型固定执行前缀与任务阶段可靠性不匹配的问题，提出TempoWAM轻量执行方案。它利用循环进度监视器从观测、指令、剩余动作与执行历史估计任务进度，并通过自适应执行协议决定重规划时机，从而提升了预测动作块的实际执行效率与稳定性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.07154v1",
+      "source": "arxiv",
+      "title": "Representation Handoffs for OpenArm-Based Laboratory Mobile Manipulation",
+      "abstract": "Open-source robotics and foundation models have lowered the barrier to embodied AI, yet language-guided laboratory automation still requires reliable alignment from instructions and observations to safe actions. This field report presents an OpenArm-based mobile manipulation prototype for laboratory-style tasks, built by integrating dual OpenArm manipulators with a mobile base, vertical slide, RGB-D sensing, lidar-based mapping, ROS2/MoveIt execution, and profile-defined skill interfaces. The system is organized around representation handoffs: natural language requests are constrained into registered skill calls, sensor observations are grounded into maps and object poses, object priors provide role and skill constraints, and runtime bindings compile validated skills into executable motion goals. We use dry-run traces and startup checks to evaluate this integration path, showing how the prototype exposes missing calibration, incomplete object assets, and unfinished real-scene visual grounding as explicit deployment blockers. These intermediate representations serve as practical debugging interfaces for integrating language, perception, planning, and robot safety in embodied systems.",
+      "authors": [
+        "Yang Shen",
+        "Chonghao Cheng",
+        "Ziyi Zhao",
+        "Jialuo Zhu",
+        "Zhenyi Yi",
+        "Qi Zhao",
+        "Jian Yang",
+        "Yuhui Shi",
+        "Chin-Teng Lin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-07T12:19:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.07154v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Presents a mobile manipulation prototype with profile-defined skill interfaces and registered skill calls for lab automation",
+      "llm_evidence_cn": "提出带技能接口定义和注册技能调用的实验室移动操作原型系统",
+      "llm_evidence": "提出带技能接口定义和注册技能调用的实验室移动操作原型系统",
+      "canonical_evidence": "提出带技能接口定义和注册技能调用的实验室移动操作原型系统",
+      "llm_tldr_en": "Reports a field prototype for OpenArm-based laboratory mobile manipulation that organizes control via representation handoffs, constraining natural language into registered skill calls and grounding observations into maps and object poses for reliable instruction-to-action alignment.",
+      "llm_tldr_cn": "面向语言引导的实验室自动化，该文报道了一套基于OpenArm的移动操作原型系统。系统将自然语言请求约束为注册技能调用，把传感器观测落地为地图和目标位姿，并通过配置式技能接口约束运行时绑定，实现从指令到安全动作的可靠对齐。该工作展示了技能接口与表征交接在复杂移动操作中的工程可行性，为技能库驱动的高层控制提供了参考。",
+      "llm_tldr": "面向语言引导的实验室自动化，该文报道了一套基于OpenArm的移动操作原型系统。系统将自然语言请求约束为注册技能调用，把传感器观测落地为地图和目标位姿，并通过配置式技能接口约束运行时绑定，实现从指令到安全动作的可靠对齐。该工作展示了技能接口与表征交接在复杂移动操作中的工程可行性，为技能库驱动的高层控制提供了参考。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.09516v1",
+      "source": "arxiv",
+      "title": "HarnessWAM: Bridging Prediction and Deliberation in World Action Models",
+      "abstract": "World Action Models (WAMs) jointly learn environmental dynamics and robot actions, introducing priors over physical evolution into embodied control. However, finite-horizon prediction and action generation are insufficient for complex embodied tasks that require global planning, cross-stage state maintenance, execution verification, and failure recovery. We refer to this mismatch as the prediction-deliberation gap of WAMs. To address this gap, we propose HarnessWAM, an agentic framework for WAMs. HarnessWAM employs a vision-language-model-based Task Manager to maintain an evidence-grounded scene belief and a structured task graph. A capability-conditioned executable-space projection further constrains open-ended semantic plans into sequences of atomic skills that satisfy task dependencies, embodiment-state constraints, and the capability boundary of the underlying WAM. During execution, HarnessWAM operates through an event-driven, dual-timescale feedback loop: a lightweight progress estimator continuously provides high-frequency execution evidence, while the Task Manager deliberates at salient milestones by jointly considering the current observation, task state, and interaction history to determine whether to advance the task, acquire additional observations, revise the plan, or initiate local recovery. This mechanism enables the robot to recover its state after a subtask failure and resume execution without discarding previously acquired scene knowledge. HarnessWAM achieves state-of-the-art full-task and subtask success rates of 59.6% and 69.9% on RoboMemArena, and an SR of 23.7% on RoboCerebra Ideal. These results demonstrate that model-external structured state maintenance and closed-loop agentic decision making can effectively extend the local control capabilities of WAMs into embodied task execution that is plannable, verifiable, and recoverable.",
+      "authors": [
+        "Zhaopeng Gu",
+        "Bingke Zhu",
+        "Tianxi Lin",
+        "Guibo Zhu",
+        "Yingying Chen",
+        "Kai Wang",
+        "Tingyu Yuan",
+        "Chaoyang Zhao",
+        "Zhaowen Li",
+        "Peng Su",
+        "Jinqiao Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-10T12:15:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.09516v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Adds task graph, execution verification, and failure recovery to world action models via a VLM-based task manager",
+      "llm_evidence_cn": "通过基于VLM的任务管理器和任务图实现执行验证与失败恢复",
+      "llm_evidence": "通过基于VLM的任务管理器和任务图实现执行验证与失败恢复",
+      "canonical_evidence": "通过基于VLM的任务管理器和任务图实现执行验证与失败恢复",
+      "llm_tldr_en": "Proposes HarnessWAM, an agentic framework that combines a VLM-based task manager with world action models to maintain scene belief and task graphs, project capabilities into executable action sequences, and support execution verification and failure recovery.",
+      "llm_tldr_cn": "世界动作模型擅长预测但与全局规划、失败恢复存在推演鸿沟。HarnessWAM使用基于视觉语言模型的任务管理器维护证据支撑的场景信念和结构化任务图，并将语义计划投影到可执行的原子动作序列。这使系统能进行跨阶段状态维护、执行验证与失败恢复，弥补了预测与推演的差距，为复杂长时间具身任务提供统一框架。",
+      "llm_tldr": "世界动作模型擅长预测但与全局规划、失败恢复存在推演鸿沟。HarnessWAM使用基于视觉语言模型的任务管理器维护证据支撑的场景信念和结构化任务图，并将语义计划投影到可执行的原子动作序列。这使系统能进行跨阶段状态维护、执行验证与失败恢复，弥补了预测与推演的差距，为复杂长时间具身任务提供统一框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

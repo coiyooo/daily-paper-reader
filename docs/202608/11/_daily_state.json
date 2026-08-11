@@ -1,0 +1,169 @@
+{
+  "date": "20260811",
+  "date_label": "",
+  "generated_at": "2026-08-11 21:33:49 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.01851v1",
+      "route": "202608/11/2608.01851v1-weights-or-skills-a-survey-of-robot-learning-techniques-from-action-predicting-weights-to-robots-that-write-their-own-skills",
+      "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "以权重与技能为轴梳理机器人学习，涵盖技能记忆与代码即策略",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.07746v1",
+      "route": "202608/11/2608.07746v1-lucid-latent-skill-unified-control-via-imagined-dynamics-for-long-horizon-humanoid-loco-manipulation",
+      "title": "LUCID: Latent-Skill Unified Control via Imagined Dynamics for Long-Horizon Humanoid Loco-Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "分层模型强化学习在可复用潜在技能上规划，低层策略使用对抗模仿学习",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.09410v1",
+      "route": "202608/11/2608.09410v1-skills-in-weights-memory-in-code-hybrid-learning-for-memory-dependent-robot-manipulation",
+      "title": "Skills in Weights, Memory in Code: Hybrid Learning for Memory-Dependent Robot Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "混合学习结合低级运动技能的模仿学习用于长时程操作",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.03387v2",
+      "route": "202608/11/2608.03387v2-roboreact-agentic-skill-distillation-from-generated-egocentric-videos-for-generalizable-whole-body-manipulation",
+      "title": "RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "从单个第一视角视频合成全身操作技能，提供可复用技能蒸馏",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.05738v1",
+      "route": "202608/11/2608.05738v1-in-context-vla-endowing-vision-language-action-models-with-language-via-in-context-post-training-and-agentic-tool-use",
+      "title": "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "动作块行为克隆与上下文后训练用于VLA",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.09492v1",
+      "route": "202608/11/2608.09492v1-rethink-before-you-execute-adaptive-execution-for-world-action-models",
+      "title": "Rethink Before You Execute: Adaptive Execution for World Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "世界动作模型中的动作块自适应执行",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.01678v1",
+      "route": "202608/11/2608.01678v1-progressive-agent-skill-generation-via-reinforcement-learning",
+      "title": "Progressive Agent Skill Generation via Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于强化学习的渐进式可复用技能生成",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.02880v2",
+      "route": "202608/11/2608.02880v2-field-aware-agent-skill-retrieval",
+      "title": "Field Aware Agent Skill Retrieval",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向可复用技能库的结构化字段感知检索",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.07154v1",
+      "route": "202608/11/2608.07154v1-representation-handoffs-for-openarm-based-laboratory-mobile-manipulation",
+      "title": "Representation Handoffs for OpenArm-Based Laboratory Mobile Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "提出带技能接口定义和注册技能调用的实验室移动操作原型系统",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    },
+    {
+      "paper_id": "2608.09516v1",
+      "route": "202608/11/2608.09516v1-harnesswam-bridging-prediction-and-deliberation-in-world-action-models",
+      "title": "HarnessWAM: Bridging Prediction and Deliberation in World Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过基于VLM的任务管理器和任务图实现执行验证与失败恢复",
+      "first_seen_at": "2026-08-11 21:33:49 UTC",
+      "updated_at": "2026-08-11 21:33:49 UTC"
+    }
+  ]
+}
