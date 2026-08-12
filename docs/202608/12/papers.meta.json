@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-12",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T21:35:54",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/12/2608.10600v1-boost-bridging-semantics-and-motions-for-efficient-skill-transfer",
+      "section": "deep",
+      "title_en": "BooST: Bridging Semantics and Motions for Efficient Skill Transfer",
+      "authors": "Jusuk Lee, Daesol Cho, Jonghun Shin, Seungyeon Yoo, Jonghae Park, Taekbeom Lee, H. Jin Kim",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10600v1",
+      "score": "8.0",
+      "evidence": "技能抽象学习可复用、时间扩展行为，融合语义与运动动力学",
+      "tldr": "机器人技能迁移需同时满足跨任务泛化、动态扰动鲁棒与部署高效，但现有方法仅捕捉语义或运动单一层面，导致下游适应需大量数据。BooST提出两阶段框架，先用跨模态VQ-VAE统一编码语义与运动，再蒸馏为轻量策略。实验证明其在少样本适应、跨域迁移和抗视觉干扰上均优，且模型轻量可部署。",
+      "tags": "query:param-skills",
+      "abstract_en": "Skill abstraction---the process of learning reusable and temporally extended behaviors---has emerged as a key paradigm for improving sample efficiency and generalization in robot learning. For efficient skill transfer to real robots, learned skills must generalize across tasks and domains, remain robust to visual and dynamic perturbations, and be efficient enough for practical deployment. However, existing methods typically satisfy only a subset of these properties, as they capture either high-level semantic intent (what) or low-level motion dynamics (how). This incomplete skill transfer yields weak priors for policy learning, thereby demanding substantial in-domain data for downstream adaptation. To address these challenges, we introduce BooST, a two-stage framework that explicitly bridges semantics and motions to satisfy all three desiderata. BooST first leverages a cross-modal VQ-VAE to capture both semantic intent and motion dynamics, yielding a unified skill representation. It then distills this representation into a lightweight policy for efficient downstream adaptation to new tasks. Extensive experiments across simulation and real-robot settings demonstrate that BooST achieves superior few-shot adaptation, cross-domain skill transfer, and robustness to dynamic visual distractors, while maintaining a lightweight yet expressive design suitable for real-world deployment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/12/2608.11204v1-surgical-wam-a-world-action-model-for-data-efficient-surgical-robot-learning",
+      "section": "quick",
+      "title_en": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+      "authors": "Wenrui Bao, Tianyun Jiang, Zhiben Chen, Ser-Nam Lim, Peter D. Peng, Yuzhang Shang",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.11204v1",
+      "score": "7.0",
+      "evidence": "用于数据高效手术操作学习的世界动作模型，预测动作块",
+      "tldr": "手术机器人策略学习常受限于动作标记演示的稀缺，因为遥操作同步运动学数据采集成本高昂，而内窥镜视频相对廉价充裕。针对这一瓶颈，提出Surgical WAM，一个基于Cosmos Policy的生成式世界-动作模型，先利用无动作视频预训练手术视觉动态，再在固定动作标记预算上微调，部署时以滚动时域方式预测并执行动作块。在四个模拟手术操作任务中，视频预训练将平均成功率从63.5%提升至77.8%，其中PegTransfer绝对提升20个百分点，接触密集与双臂任务获益最明显。这证明无动作视频能提供可迁移的视觉动态先验，以数据高效方式扩展手术机器人学习。",
+      "tags": "query:param-skills",
+      "abstract_en": "Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics are costly to collect, while surgical tasks demand precise contact handling, long-horizon reasoning, and bimanual coordination. Endoscopic video is comparatively inexpensive and abundant relative to synchronized video--kinematics trajectories, and a natural way to exploit it is to learn world models of surgical scenes. However, existing surgical world models use video primarily for simulation or policy evaluation, and rarely translate the learned dynamics into closed-loop control. This gap raises our central question: under a fixed budget of action-labeled demonstrations, does action-free video pretraining improve closed-loop surgical manipulation? To answer it, we introduce the Surgical World-Action Model (Surgical WAM), a unified generative model built on Cosmos Policy that jointly predicts future endoscopic observations and executable surgical robot action chunks. Surgical WAM first learns surgical visual dynamics from action-free video and is then fine-tuned on the fixed action-labeled budget; at deployment, it acts as a closed-loop, receding-horizon controller that executes a short prefix of each predicted action chunk and replans from the resulting observation. On a suite of four simulated surgical manipulation tasks, video pretraining improves the average success rate from 63.5% to 77.8%, including an absolute gain of 20 percentage points on PegTransfer, with the largest improvements on contact-rich and bimanual tasks. These results demonstrate that action-free video provides transferable visual dynamics priors for learning surgical robot control with limited action supervision, positioning data-efficient video pretraining as a practical path toward scaling up surgical robot learning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/12/2608.10780v1-jepa-wam-stage-level-joint-embedding-prediction-for-world-action-models-in-robot-manipulation",
+      "section": "quick",
+      "title_en": "JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation",
+      "authors": "Xiao Liu, Yuguang Yang, Xi Wang, Kai Jiang, Cheng Chi, Yong Xu, Wenchao Ding, Yilun Chen, Yan Wang",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10780v1",
+      "score": "6.0",
+      "evidence": "阶段级语义未来与任务进度建模，可关联到技能与阶段条件控制",
+      "tldr": "通用机器人策略通常只预测短时视频-动作块，忽略了任务阶段级的语义未来。为此提出JEPA-WAM，在基于Motus的世界动作模型上加入Stage-JEPA，利用冻结的V-JEPA2编码器预测下一阶段的隐式目标。在50个RoboTwin 2.0任务中达到90.25%的成功率，并将成功轨迹的平均执行步数降低5.97%，兼顾了场景演化与任务进度。",
+      "tags": "query:param-skills",
+      "abstract_en": "Generalist robot policies aim to map multimodal observations and linguistic task instructions to actions across diverse tasks. However, existing methods typically represent the future as a fixed, short video-action chunk. This short-term future captures local scene evolution for action execution, but it does not explicitly describe the stage-level future that specifies how a task should progress from its current stage to the next. We therefore distinguish two complementary futures for robot manipulation: a short-term physical future to capture local scene evolution and a stage-level semantic future to represent task progress. We introduce JEPA-WAM, which augments a Motus-based World Action Model (WAM) with Stage-JEPA, a goal-conditioned Joint-Embedding Predictive Architecture (JEPA) predictor. Given the current observation and task instruction, Stage-JEPA uses a frozen V-JEPA2 encoder to extract the current-state representation and predicts the latent target of the next inferred stage. Across 50 RoboTwin 2.0 tasks in clean and randomized environments, JEPA-WAM achieves 90.25% overall success and reduces the mean number of execution steps in successful rollouts by 5.97% relative to the strongest baseline.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

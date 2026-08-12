@@ -1,0 +1,57 @@
+{
+  "date": "20260812",
+  "date_label": "",
+  "generated_at": "2026-08-12 21:35:51 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.10600v1",
+      "route": "202608/12/2608.10600v1-boost-bridging-semantics-and-motions-for-efficient-skill-transfer",
+      "title": "BooST: Bridging Semantics and Motions for Efficient Skill Transfer",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "技能抽象学习可复用、时间扩展行为，融合语义与运动动力学",
+      "first_seen_at": "2026-08-12 21:35:51 UTC",
+      "updated_at": "2026-08-12 21:35:51 UTC"
+    },
+    {
+      "paper_id": "2608.11204v1",
+      "route": "202608/12/2608.11204v1-surgical-wam-a-world-action-model-for-data-efficient-surgical-robot-learning",
+      "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "用于数据高效手术操作学习的世界动作模型，预测动作块",
+      "first_seen_at": "2026-08-12 21:35:51 UTC",
+      "updated_at": "2026-08-12 21:35:51 UTC"
+    },
+    {
+      "paper_id": "2608.10780v1",
+      "route": "202608/12/2608.10780v1-jepa-wam-stage-level-joint-embedding-prediction-for-world-action-models-in-robot-manipulation",
+      "title": "JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "阶段级语义未来与任务进度建模，可关联到技能与阶段条件控制",
+      "first_seen_at": "2026-08-12 21:35:51 UTC",
+      "updated_at": "2026-08-12 21:35:51 UTC"
+    }
+  ]
+}
