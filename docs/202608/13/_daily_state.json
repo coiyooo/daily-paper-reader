@@ -1,0 +1,57 @@
+{
+  "date": "20260813",
+  "date_label": "",
+  "generated_at": "2026-08-13 21:21:27 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.11350v1",
+      "route": "202608/13/2608.11350v1-self-evolving-embodied-agents-via-skill-harness-evolution",
+      "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "演化可复用技能与上下文-代码工具，适用于具身智能体",
+      "first_seen_at": "2026-08-13 21:21:27 UTC",
+      "updated_at": "2026-08-13 21:21:27 UTC"
+    },
+    {
+      "paper_id": "2608.08749v1",
+      "route": "202608/13/2608.08749v1-onevomemory-evolving-memory-through-online-robot-rollouts-for-pretrained-robot-policies",
+      "title": "OnEvoMemory: Evolving Memory through Online Robot Rollouts for Pretrained Robot Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向长时程机器人操作策略的记忆进化，跟踪任务阶段转换并避免重复已完成子任务。",
+      "first_seen_at": "2026-08-13 21:21:27 UTC",
+      "updated_at": "2026-08-13 21:21:27 UTC"
+    },
+    {
+      "paper_id": "2608.11739v1",
+      "route": "202608/13/2608.11739v1-g05-one-autoregressive-stream-for-robot-reasoning-and-action",
+      "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "单一自回归流同时进行推理与动作生成，内含任务分解和动作提示，支持技能条件化控制",
+      "first_seen_at": "2026-08-13 21:21:27 UTC",
+      "updated_at": "2026-08-13 21:21:27 UTC"
+    }
+  ]
+}

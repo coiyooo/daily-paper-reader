@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-13",
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T21:21:30",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/13/2608.11350v1-self-evolving-embodied-agents-via-skill-harness-evolution",
+      "section": "deep",
+      "title_en": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+      "authors": "Peidong Wang, Zhiming Ma, Ying Chang, Xufang Luo, Xiaocui Yang, Shi Feng, Yuqing Yang, Dongsheng Li",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.11350v1",
+      "score": "8.0",
+      "evidence": "演化可复用技能与上下文-代码工具，适用于具身智能体",
+      "tldr": "具身智能体性能不仅依赖模型权重，还受技能、上下文和代码外设影响。监督微调需额外数据和算力，而现有无训练方法常受限于可编程接口。SHAPER 在冻结模型参数下，通过环境 rollout 同时演化复用技能与上下文代码 harness，使同一模型兼任规划器和优化器。在 VLABench 和 ESI-Bench 上超越纯执行、SFT 等基线，为训练昂贵场景提供了自演化新路径。",
+      "tags": "query:param-skills",
+      "abstract_en": "Embodied agents are increasingly built as systems around foundation models, where performance depends not only on model weights but also on the skills, context, action interfaces, and execution harness surrounding the model. While supervised fine-tuning and reinforcement learning can adapt agents to new environments, they require additional data, rewards, and training runs; meanwhile, many train-free code-centric approaches rely on programmable robot APIs that may be unavailable in fixed-interface settings. We propose SHAPER, a self-evolving framework for train-free embodied adaptation that keeps model parameters frozen and improves the non-parametric agent system by evolving reusable skills and a context-code harness through target-environment rollouts. In SHAPER, the same frozen model can serve as both planner and optimizer, refining its external skills and context-code harness without parameter updates. We evaluate SHAPER on VLABench and ESI-Bench, covering embodied agents with different low-level action interfaces, and compare against pure execution, supervised fine-tuning, and test-time-scaling baselines such as verifier-free selection and voting. Our results suggest that skill-and-harness optimization is a practical route to self-evolving embodied agents when model training is expensive, unavailable, or undesirable.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/13/2608.08749v1-onevomemory-evolving-memory-through-online-robot-rollouts-for-pretrained-robot-policies",
+      "section": "quick",
+      "title_en": "OnEvoMemory: Evolving Memory through Online Robot Rollouts for Pretrained Robot Policies",
+      "authors": "Zhongxi Chen, Shenqi Zong",
+      "date": "2026-08-09",
+      "pdf": "https://arxiv.org/pdf/2608.08749v1",
+      "score": "7.0",
+      "evidence": "面向长时程机器人操作策略的记忆进化，跟踪任务阶段转换并避免重复已完成子任务。",
+      "tldr": "长时程操作要求策略跟踪已完成子任务和关键交互，但现有记忆机制依赖外部模型或预定义规则。为此提出OnEvoMemory，一种值引导的在线进化记忆模块，利用离线演示初始化记忆先验，并通过在线rollout的成功与失败样本学习保留何种经验，帮助策略识别阶段转换、避免重复子任务。在长时程操作基准上，OnEvoMemory显著提升了基础VLA策略的性能，验证了离线初始化与在线进化的有效性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Long-horizon robot manipulation requires policies to track completed subtasks and critical interaction events. However, existing memory mechanisms heavily rely on external models or predefined update rules. To address this, we propose OnEvoMemory, a value-guided memory module for pretrained robot policies. It maintains recent context, high-value experiences, and salient transitions, while learning which experiences should be retained from trajectory outcomes. Offline demonstrations initialize the memory prior, whereas successful and unsuccessful online rollouts refine memory selection, helping the policy recognize task-stage transitions and avoid repeating completed subtasks. Experiments on long-horizon manipulation benchmarks show that OnEvoMemory improves the performance of the base VLA policy through both offline initialization and online memory evolution.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/13/2608.11739v1-g05-one-autoregressive-stream-for-robot-reasoning-and-action",
+      "section": "quick",
+      "title_en": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "authors": "Yicheng Liu, Zibin Dong, Baijun Ye, Tianyuan Yuan, Tao Jiang, Anqi Yang, Shicheng Cao, Haonan Liu, Yue Sun, Zihan Guo, Xiao Liu, Dong Ke, Changxun Pan, Chenru Wu, Tailai Cheng, Xiaoshu Ren, Xinlei Zhang, Jianning Cui, Zijie Zhao, Haoyu Zhang, Kaiming Xu, Haodong Yang, Bowen Zhang, Jiahui Niu, Shaoting Zhu, Shiduo Zhang, Hang Zhao",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.11739v1",
+      "score": "6.0",
+      "evidence": "单一自回归流同时进行推理与动作生成，内含任务分解和动作提示，支持技能条件化控制",
+      "tldr": "现有VLA模型将预训练VLM与单独训练的流匹配动作专家耦合，使VLM仅成上下文编码器。作者提出G0.5，单一Transformer解码器在统一目标下同时生成推理和动作token。通过可学习跨具身动作分词器、交错思维链流和视觉记忆模块实现。在7个独立评估域超越SOTA：真实世界微调76.7% vs. 53.3%，LIBERO 98.9%，DROID零样本迁移82.5%。共享权重让VLM能力直接迁移到行为，指令可引导动作粒度与任务视野。",
+      "tags": "query:param-skills",
+      "abstract_en": "The prevailing recipe for Vision-Language-Action (VLA) models couples a pretrained VLM with a separately trained flow-matching action expert. This makes the VLM a context encoder rather than a decision-maker. We introduce G0.5, a pretrained autoregressive VLA in which a single transformer decoder emits reasoning and action tokens under a single objective. Three components make this tractable at foundation-model scale: a learnable cross-embodiment action tokenizer that maps heterogeneous robot actions into a shared vocabulary; a native chain-of-thought stream interleaving task decomposition, object grounding, and action hints with action tokens; and a visual memory module that injects multi-second history through the vision encoder. Because reasoning and action share a single set of weights, the pretrained VLM's capabilities carry over to physical behavior: the model follows instructions closely, and prompts directly steer action granularity, task horizon, and out-of-distribution scene handling without further training. Pretrained on a large collection of robot datasets together with VQA samples, G0.5 surpasses state-of-the-art models across 7 independent regimes: real-world fine-tuning on R1lite and R1pro robots (76.7\\% vs.\\ 53.3\\% for $π_{0.5}$ and 24.4\\% for GR00T-N1.7), the 2025 BEHAVIOR Challenge on 50 long-horizon household mobile manipulation tasks using a generalist policy (31.4\\% vs.\\ 26.3\\% for $π_{0.5}$ and 26.1\\% for the challenge winner), DROID post-training followed by zero-shot transfer to an unseen environment and objects (82.5\\%), a language-following Pick-and-Place benchmark, LIBERO (98.9\\%), RoboTwin 2.0 (93.3\\%), and SimplerEnv-Bridge (87.3\\%).",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -41,7 +41,7 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-12</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-13</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 3 篇</strong>
@@ -51,7 +51,7 @@
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-12 21:35:51 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-13 21:21:27 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读1篇、速读2篇，共3篇机器人学习相关论文，重点围绕技能迁移与机器人操作建模。最值得关注的是《BooST》中语义与动作的高效技能迁移框架，以及《Surgical WAM》面向手术机器人的数据高效学习方向。建议普通读者优先浏览精读论文的核心思路，再结合速读论文对比不同场景下的应用差异。</p>
+<p>今日聚焦具身智能，精读1篇、速读2篇，核心落在技能自进化与在线记忆回放。</p>
+<p>最值得看的是《Self-Evolving Embodied Agents via Skill-Harness Evolution》（8.0/10），它展示了智能体通过技能利用的进化持续自我提升，方向极具潜力。</p>
+<p>建议关注自进化与记忆增强的交汇点，后续可留意“G0.5”这类多模态推理统一流模型如何与既有记忆机制整合。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -74,7 +76,7 @@
     <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="BooST: Bridging Semantics and Motions for Efficient Skill Transfer">BooST: Bridging Semantics and Motions for Efficient Skill Transfer</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Self-Evolving Embodied Agents via Skill-Harness Evolution">Self-Evolving Embodied Agents via Skill-Harness Evolution</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
@@ -87,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning">Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation">JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="OnEvoMemory: Evolving Memory through Online Robot Rollouts for Pretrained Robot Policies">OnEvoMemory: Evolving Memory through Online Robot Rollouts for Pretrained Robot Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="G0.5: One Autoregressive Stream for Robot Reasoning and Action">G0.5: One Autoregressive Stream for Robot Reasoning and Action</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
 </section>
