@@ -1,0 +1,105 @@
+{
+  "date": "20260814",
+  "date_label": "",
+  "generated_at": "2026-08-14 21:17:48 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.13362v1",
+      "route": "202608/14/2608.13362v1-nestdex-nested-policy-learning-with-copilot-assisted-teleoperation-for-dexterous-manipulation",
+      "title": "NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向接触丰富灵巧操作的可复用手部技能嵌套策略学习",
+      "first_seen_at": "2026-08-14 21:17:48 UTC",
+      "updated_at": "2026-08-14 21:17:48 UTC"
+    },
+    {
+      "paper_id": "2608.13438v1",
+      "route": "202608/14/2608.13438v1-contactguard-pre-contact-execution-monitoring-with-action-conditioned-latent-world-models",
+      "title": "ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向分块视觉运动策略的接触前执行监控，利用动作条件潜在世界模型，服务于接触丰富操作中的失败预防与安全约束。",
+      "first_seen_at": "2026-08-14 21:17:48 UTC",
+      "updated_at": "2026-08-14 21:17:48 UTC"
+    },
+    {
+      "paper_id": "2608.12416v1",
+      "route": "202608/14/2608.12416v1-robosynchallenge-mastering-real-world-dexterity-via-generalizing-synthesized-manipulation-skills",
+      "title": "RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "统一基准测试，评估合成操作技能跨任务和环境的泛化，并含真实机器人评测",
+      "first_seen_at": "2026-08-14 21:17:48 UTC",
+      "updated_at": "2026-08-14 21:17:48 UTC"
+    },
+    {
+      "paper_id": "2608.13103v1",
+      "route": "202608/14/2608.13103v1-s2-hwm-sparse-event-structured-hierarchical-world-model-for-long-horizon-surgical-robot-manipulation",
+      "title": "S2-HWM: Sparse Event-Structured Hierarchical World Model for Long-Horizon Surgical Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程操作的事件级管理器与原始步工作者分层世界模型",
+      "first_seen_at": "2026-08-14 21:17:48 UTC",
+      "updated_at": "2026-08-14 21:17:48 UTC"
+    },
+    {
+      "paper_id": "2608.13415v1",
+      "route": "202608/14/2608.13415v1-deliberate-practice-learning-robot-skills-under-a-budget",
+      "title": "Deliberate Practice: Learning Robot Skills under a Budget",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程序列任务的预算最优机器人技能学习与可复用技能规划，支持技能库构建。",
+      "first_seen_at": "2026-08-14 21:17:48 UTC",
+      "updated_at": "2026-08-14 21:17:48 UTC"
+    },
+    {
+      "paper_id": "2608.13474v1",
+      "route": "202608/14/2608.13474v1-decoding-task-progress-from-vla-representations",
+      "title": "Decoding Task Progress from VLA Representations",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "从VLA表示中线性探测任务进度，与局部阶段估计相关",
+      "first_seen_at": "2026-08-14 21:17:48 UTC",
+      "updated_at": "2026-08-14 21:17:48 UTC"
+    }
+  ]
+}

@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-13</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-14</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-13 21:21:27 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-14 21:17:48 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦具身智能，精读1篇、速读2篇，核心落在技能自进化与在线记忆回放。</p>
-<p>最值得看的是《Self-Evolving Embodied Agents via Skill-Harness Evolution》（8.0/10），它展示了智能体通过技能利用的进化持续自我提升，方向极具潜力。</p>
-<p>建议关注自进化与记忆增强的交汇点，后续可留意“G0.5”这类多模态推理统一流模型如何与既有记忆机制整合。</p>
+<p>今日共速读6篇论文，聚焦机器人灵巧操作与安全控制，暂无精读深度分析。</p>
+<p>最值得关注的是《NestDex》与《ContactGuard》，前者结合嵌套策略学习与遥操作提升灵巧性，后者利用潜在世界模型实现接触前执行监控，均获7分评价。</p>
+<p>建议普通读者优先浏览这两篇方法的实验效果，后续可留意是否有精读或复现解读。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Self-Evolving Embodied Agents via Skill-Harness Evolution">Self-Evolving Embodied Agents via Skill-Harness Evolution</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
+
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="OnEvoMemory: Evolving Memory through Online Robot Rollouts for Pretrained Robot Policies">OnEvoMemory: Evolving Memory through Online Robot Rollouts for Pretrained Robot Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="G0.5: One Autoregressive Stream for Robot Reasoning and Action">G0.5: One Autoregressive Stream for Robot Reasoning and Action</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation">NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models">ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills">RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
 </section>
 </div>
 
