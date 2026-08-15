@@ -1,0 +1,69 @@
+{
+  "label": "2026-08-15",
+  "date": "2026-08-15",
+  "generated_at": "2026-08-15T20:37:45",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202608/15/2608.11739v1-g05-one-autoregressive-stream-for-robot-reasoning-and-action",
+      "section": "deep",
+      "title_en": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "authors": "Yicheng Liu, Zibin Dong, Baijun Ye, Tianyuan Yuan, Tao Jiang, Anqi Yang, Shicheng Cao, Haonan Liu, Yue Sun, Zihan Guo, Xiao Liu, Dong Ke, Changxun Pan, Chenru Wu, Tailai Cheng, Xiaoshu Ren, Xinlei Zhang, Jianning Cui, Zijie Zhao, Haoyu Zhang, Kaiming Xu, Haodong Yang, Bowen Zhang, Jiahui Niu, Shaoting Zhu, Shiduo Zhang, Hang Zhao",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.11739v1",
+      "score": "8.0",
+      "evidence": "自回归Transformer预测机器人控制动作序列",
+      "tldr": "现有视觉-语言-动作模型多将预训练VLM与单独训练的动作专家耦合，使VLM仅作上下文编码器而非决策者。G0.5提出单一自回归transformer解码器，以统一目标生成推理与动作token，通过可学习跨具身动作分词器、原生思维链流和视觉记忆模块实现。该模型在真实机器人微调、BEHAVIOR挑战、DROID零样本迁移等七个独立基准上全面超越现有最优，使预训练VLM能力直接承载物理行为。",
+      "tags": "query:param-skills",
+      "abstract_en": "The prevailing recipe for Vision-Language-Action (VLA) models couples a pretrained VLM with a separately trained flow-matching action expert. This makes the VLM a context encoder rather than a decision-maker. We introduce G0.5, a pretrained autoregressive VLA in which a single transformer decoder emits reasoning and action tokens under a single objective. Three components make this tractable at foundation-model scale: a learnable cross-embodiment action tokenizer that maps heterogeneous robot actions into a shared vocabulary; a native chain-of-thought stream interleaving task decomposition, object grounding, and action hints with action tokens; and a visual memory module that injects multi-second history through the vision encoder. Because reasoning and action share a single set of weights, the pretrained VLM's capabilities carry over to physical behavior: the model follows instructions closely, and prompts directly steer action granularity, task horizon, and out-of-distribution scene handling without further training. Pretrained on a large collection of robot datasets together with VQA samples, G0.5 surpasses state-of-the-art models across 7 independent regimes: real-world fine-tuning on R1lite and R1pro robots (76.7\\% vs.\\ 53.3\\% for $π_{0.5}$ and 24.4\\% for GR00T-N1.7), the 2025 BEHAVIOR Challenge on 50 long-horizon household mobile manipulation tasks using a generalist policy (31.4\\% vs.\\ 26.3\\% for $π_{0.5}$ and 26.1\\% for the challenge winner), DROID post-training followed by zero-shot transfer to an unseen environment and objects (82.5\\%), a language-following Pick-and-Place benchmark, LIBERO (98.9\\%), RoboTwin 2.0 (93.3\\%), and SimplerEnv-Bridge (87.3\\%).",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/15/2608.09125v1-trajectory-divergence-horizon-decision-for-reliable-dual-arm-surgical-subtask-manipulation",
+      "section": "quick",
+      "title_en": "Trajectory Divergence Horizon Decision for Reliable Dual-Arm Surgical Subtask Manipulation",
+      "authors": "Mingwu Su, Guankun Wang, Jinsong Lin, Rulin Zhou, Ziyi Hao, Zhiwei Fang, Huxin Gao, Jiewen Lai, Jiazheng Wang, Fan Zhang, Hongliang Ren",
+      "date": "2026-08-10",
+      "pdf": "https://arxiv.org/pdf/2608.09125v1",
+      "score": "6.0",
+      "evidence": "针对固定长度开环动作序列的误差累积问题，提出轨迹发散视界决策，与动作分块预测直接相关",
+      "tldr": "外科手术机器人视觉语言动作模型常采用固定长度开环控制，场景变化时误差累积。本文提出轨迹发散视界决策机制，在测试时通过测量小噪声扰动下两条流匹配生成轨迹的发散度评估动作可靠性，并利用双阈值规则截断执行以触发及时重规划。在真实达芬奇样机双机械臂基准上，针操作成功率从百分之五十五提升到百分之六十，组织操作从百分之五十五提升到百分之八十，最终阶段提升最大。结果表明自适应执行控制对于VLA模型在手术机器人中的可靠部署具有重要意义。",
+      "tags": "query:param-skills",
+      "abstract_en": "Surgical robotic systems are increasingly being adopted as clinical workload rises, motivating autonomous solutions for repetitive manipulation subtasks. Learning-based controllers improve generalization compared with rule-based and analytic approaches, but most are trained for individual tasks and remain difficult to reuse across procedures. Vision-Language-Action (VLA) models provide a unified framework that integrates visual perception, language grounding, and action generation, offering a promising path toward more composable surgical autonomy. However, existing VLA policies rely on fixed-length open-loop action sequences, where changing scene conditions can lead to accumulated errors and potential risks in surgical manipulation. To mitigate this issue, we formulate surgical VLA deployment as an adaptive execution-horizon decision problem and propose Trajectory Divergence Horizon Decision (TDHD), a test-time mechanism that estimates step-wise action reliability by measuring the divergence between two flow-matching-generated trajectories under small noise perturbations and truncates execution using a dual-threshold rule to trigger timely replanning. We further establish a real-world da Vinci-like dual-arm benchmark with synchronized multi-view perception and language instructions, and collect 600 teleoperated demonstrations across needle (reach, pick, regrasp) and tissue (reach, lift, resection) manipulation suites. On real hardware with 20 trials per task setting, TDHD consistently improves performance over the latest VLA baselines: success increases from 55\\% to 60\\% for needle manipulation and from 55\\% to 80\\% for tissue manipulation, with the largest gains observed in the final manipulation stages. These results highlight the importance of adaptive execution control for reliable deployment of VLA models in surgical robotic manipulation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/15/2608.12063v1-learning-loco-manipulation-from-smpc-demonstrations-with-sparse-offline-to-online-rl",
+      "section": "quick",
+      "title_en": "Learning Loco-Manipulation From SMPC Demonstrations With Sparse Offline-to-Online RL",
+      "authors": "Martin Schuck, Maks Sorokin, Simone Manni, Duy Ta, Angela P. Schoellig, Marco Hutter, Simon Le Cleac'H, Jan Brüdigam",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.12063v1",
+      "score": "6.0",
+      "evidence": "利用演示数据分层学习移动操作技能，高层智能体与低层稳定性控制器结合",
+      "tldr": "标准强化学习训练腿臂操作任务依赖密集奖励工程，效率低。本文利用SMPC在仿真中自动生成大规模离线数据，解决探索难题，使off-policy RL仅用稀疏任务奖励即可高效训练。将高层策略与低层稳定控制器结合，所学策略能超越最优控制教师，并在不同形态机器人上实现sim-to-real部署，展示了通用性和实用性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Integrating locomotion and manipulation is essential for robot autonomy, but scaling standard Reinforcement Learning (RL) to complex tasks is severely bottlenecked by the slow, manual process of dense reward shaping. To bypass this limitation, we leverage Sample-based Model Predictive Control (SMPC) entirely in simulation as an automated, rapidly tunable expert to generate massive offline datasets. Because this data solves the fundamental exploration problem, we can train an off-policy RL agent using purely sparse task rewards, drastically reducing the time required to learn new skills and eliminating the need for manual tuning. Integrating this high-level agent with a low-level dynamic stability controller yields more optimal behaviors that strictly align with true task objectives, ultimately allowing the learned policies to surpass the original optimal control teacher. We validate the robustness of this sim-to-real framework by successfully deploying complex loco-manipulation skills across different morphologies, including an arm-equipped Spot quadruped and a G1 humanoid.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/15/2608.13415v1-deliberate-practice-learning-robot-skills-under-a-budget",
+      "section": "quick",
+      "title_en": "Deliberate Practice: Learning Robot Skills under a Budget",
+      "authors": "Shivam Vats, Sudarshan Harithas, Mete Tuluhan Akbulut, Arvind Raghunathan, George Konidaris",
+      "date": "2026-08-13",
+      "pdf": "https://arxiv.org/pdf/2608.13415v1",
+      "score": "6.0",
+      "evidence": "在有限练习预算下练习可解锁任务计划的可复用技能",
+      "tldr": "针对有限练习预算下机器人技能的自主习得问题，提出主动技能学习算法Deliberate Practice (DP)。该方法利用双线性规划，同时估计技能掌握时间与技能解锁任务计划的累积奖励，从而精确计算预算最优的练习分配。在模拟及真实长期操作任务中，DP使机器人充分运用有限练习时间获得实用策略，并显著提升长时域规划性能。该工作为预算受限的技能学习提供了可证明最优的精确求解方案。",
+      "tags": "query:param-skills",
+      "abstract_en": "We consider the problem of autonomously learning robot skills under a limited practice budget for sequential tasks. We propose an active skill learning algorithm, \\emph{Deliberate Practice (DP)}, that computes a provably \\emph{budget-optimal} allocation---practicing skills that maximize expected cumulative reward while being learnable within the budget. DP estimates both the time needed to master skills and the cumulative reward of the task plans that the skills unlock. Computing a budget-optimal allocation is challenging as it requires reasoning about combinatorially many skill plans over a large practice budget. Our key contribution is a bilinear program that can compute this exactly using off-the-shelf solvers. Through simulated and real-world experiments on long-horizon manipulation tasks, we show that our approach allows robots to optimally use limited practice time to acquire useful policies and improve long-horizon planning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

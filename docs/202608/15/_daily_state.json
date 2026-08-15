@@ -1,0 +1,73 @@
+{
+  "date": "20260815",
+  "date_label": "",
+  "generated_at": "2026-08-15 20:37:42 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.11739v1",
+      "route": "202608/15/2608.11739v1-g05-one-autoregressive-stream-for-robot-reasoning-and-action",
+      "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "自回归Transformer预测机器人控制动作序列",
+      "first_seen_at": "2026-08-15 20:37:42 UTC",
+      "updated_at": "2026-08-15 20:37:42 UTC"
+    },
+    {
+      "paper_id": "2608.09125v1",
+      "route": "202608/15/2608.09125v1-trajectory-divergence-horizon-decision-for-reliable-dual-arm-surgical-subtask-manipulation",
+      "title": "Trajectory Divergence Horizon Decision for Reliable Dual-Arm Surgical Subtask Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对固定长度开环动作序列的误差累积问题，提出轨迹发散视界决策，与动作分块预测直接相关",
+      "first_seen_at": "2026-08-15 20:37:42 UTC",
+      "updated_at": "2026-08-15 20:37:42 UTC"
+    },
+    {
+      "paper_id": "2608.12063v1",
+      "route": "202608/15/2608.12063v1-learning-loco-manipulation-from-smpc-demonstrations-with-sparse-offline-to-online-rl",
+      "title": "Learning Loco-Manipulation From SMPC Demonstrations With Sparse Offline-to-Online RL",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "利用演示数据分层学习移动操作技能，高层智能体与低层稳定性控制器结合",
+      "first_seen_at": "2026-08-15 20:37:42 UTC",
+      "updated_at": "2026-08-15 20:37:42 UTC"
+    },
+    {
+      "paper_id": "2608.13415v1",
+      "route": "202608/15/2608.13415v1-deliberate-practice-learning-robot-skills-under-a-budget",
+      "title": "Deliberate Practice: Learning Robot Skills under a Budget",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在有限练习预算下练习可解锁任务计划的可复用技能",
+      "first_seen_at": "2026-08-15 20:37:42 UTC",
+      "updated_at": "2026-08-15 20:37:42 UTC"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-15T20:32:28.517419+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2608.11739v1",
+      "source": "arxiv",
+      "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "abstract": "The prevailing recipe for Vision-Language-Action (VLA) models couples a pretrained VLM with a separately trained flow-matching action expert. This makes the VLM a context encoder rather than a decision-maker. We introduce G0.5, a pretrained autoregressive VLA in which a single transformer decoder emits reasoning and action tokens under a single objective. Three components make this tractable at foundation-model scale: a learnable cross-embodiment action tokenizer that maps heterogeneous robot actions into a shared vocabulary; a native chain-of-thought stream interleaving task decomposition, object grounding, and action hints with action tokens; and a visual memory module that injects multi-second history through the vision encoder. Because reasoning and action share a single set of weights, the pretrained VLM's capabilities carry over to physical behavior: the model follows instructions closely, and prompts directly steer action granularity, task horizon, and out-of-distribution scene handling without further training. Pretrained on a large collection of robot datasets together with VQA samples, G0.5 surpasses state-of-the-art models across 7 independent regimes: real-world fine-tuning on R1lite and R1pro robots (76.7\\% vs.\\ 53.3\\% for $π_{0.5}$ and 24.4\\% for GR00T-N1.7), the 2025 BEHAVIOR Challenge on 50 long-horizon household mobile manipulation tasks using a generalist policy (31.4\\% vs.\\ 26.3\\% for $π_{0.5}$ and 26.1\\% for the challenge winner), DROID post-training followed by zero-shot transfer to an unseen environment and objects (82.5\\%), a language-following Pick-and-Place benchmark, LIBERO (98.9\\%), RoboTwin 2.0 (93.3\\%), and SimplerEnv-Bridge (87.3\\%).",
+      "authors": [
+        "Yicheng Liu",
+        "Zibin Dong",
+        "Baijun Ye",
+        "Tianyuan Yuan",
+        "Tao Jiang",
+        "Anqi Yang",
+        "Shicheng Cao",
+        "Haonan Liu",
+        "Yue Sun",
+        "Zihan Guo",
+        "Xiao Liu",
+        "Dong Ke",
+        "Changxun Pan",
+        "Chenru Wu",
+        "Tailai Cheng",
+        "Xiaoshu Ren",
+        "Xinlei Zhang",
+        "Jianning Cui",
+        "Zijie Zhao",
+        "Haoyu Zhang",
+        "Kaiming Xu",
+        "Haodong Yang",
+        "Bowen Zhang",
+        "Jiahui Niu",
+        "Shaoting Zhu",
+        "Shiduo Zhang",
+        "Hang Zhao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-12T07:26:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.11739v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Autoregressive Transformer predicting continuous action tokens for robot control",
+      "llm_evidence_cn": "自回归Transformer预测机器人控制动作序列",
+      "llm_evidence": "自回归Transformer预测机器人控制动作序列",
+      "canonical_evidence": "自回归Transformer预测机器人控制动作序列",
+      "llm_tldr_en": "G0.5 unifies reasoning and action in a single autoregressive transformer with a cross-embodiment action tokenizer, visual memory, and native chain-of-thought, enabling foundation-model-scale robot policy learning.",
+      "llm_tldr_cn": "现有视觉-语言-动作模型通常将预训练的VLM与单独训练的动作专家耦合，使VLM仅充当上下文编码器而非决策者。作者提出G0.5，采用单一Transformer解码器在同一目标下生成推理与动作标记，并设计可学习的跨具身动作分词器、原生思维链流和视觉记忆模块。实验表明该方法能在大规模基础模型尺度上统一决策与动作生成，改善机器人操作性能，为VLA模型提供更简洁高效的架构。",
+      "llm_tldr": "现有视觉-语言-动作模型通常将预训练的VLM与单独训练的动作专家耦合，使VLM仅充当上下文编码器而非决策者。作者提出G0.5，采用单一Transformer解码器在同一目标下生成推理与动作标记，并设计可学习的跨具身动作分词器、原生思维链流和视觉记忆模块。实验表明该方法能在大规模基础模型尺度上统一决策与动作生成，改善机器人操作性能，为VLA模型提供更简洁高效的架构。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.09125v1",
+      "source": "arxiv",
+      "title": "Trajectory Divergence Horizon Decision for Reliable Dual-Arm Surgical Subtask Manipulation",
+      "abstract": "Surgical robotic systems are increasingly being adopted as clinical workload rises, motivating autonomous solutions for repetitive manipulation subtasks. Learning-based controllers improve generalization compared with rule-based and analytic approaches, but most are trained for individual tasks and remain difficult to reuse across procedures. Vision-Language-Action (VLA) models provide a unified framework that integrates visual perception, language grounding, and action generation, offering a promising path toward more composable surgical autonomy. However, existing VLA policies rely on fixed-length open-loop action sequences, where changing scene conditions can lead to accumulated errors and potential risks in surgical manipulation. To mitigate this issue, we formulate surgical VLA deployment as an adaptive execution-horizon decision problem and propose Trajectory Divergence Horizon Decision (TDHD), a test-time mechanism that estimates step-wise action reliability by measuring the divergence between two flow-matching-generated trajectories under small noise perturbations and truncates execution using a dual-threshold rule to trigger timely replanning. We further establish a real-world da Vinci-like dual-arm benchmark with synchronized multi-view perception and language instructions, and collect 600 teleoperated demonstrations across needle (reach, pick, regrasp) and tissue (reach, lift, resection) manipulation suites. On real hardware with 20 trials per task setting, TDHD consistently improves performance over the latest VLA baselines: success increases from 55\\% to 60\\% for needle manipulation and from 55\\% to 80\\% for tissue manipulation, with the largest gains observed in the final manipulation stages. These results highlight the importance of adaptive execution control for reliable deployment of VLA models in surgical robotic manipulation.",
+      "authors": [
+        "Mingwu Su",
+        "Guankun Wang",
+        "Jinsong Lin",
+        "Rulin Zhou",
+        "Ziyi Hao",
+        "Zhiwei Fang",
+        "Huxin Gao",
+        "Jiewen Lai",
+        "Jiazheng Wang",
+        "Fan Zhang",
+        "Hongliang Ren"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-10T05:04:02+00:00",
+      "link": "https://arxiv.org/pdf/2608.09125v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "addresses accumulated errors in fixed-length open-loop action sequences for manipulation, directly relevant to action-chunking prediction",
+      "llm_evidence_cn": "针对固定长度开环动作序列的误差累积问题，提出轨迹发散视界决策，与动作分块预测直接相关",
+      "llm_evidence": "针对固定长度开环动作序列的误差累积问题，提出轨迹发散视界决策，与动作分块预测直接相关",
+      "canonical_evidence": "针对固定长度开环动作序列的误差累积问题，提出轨迹发散视界决策，与动作分块预测直接相关",
+      "llm_tldr_en": "Surgical subtask manipulation with VLA policies. Proposes Trajectory Divergence Horizon Decision to handle errors in fixed-length open-loop action sequences, improving reliability. Useful for action-chunking methods.",
+      "llm_tldr_cn": "手术子任务操作中，现有视觉-语言-动作（VLA）模型依赖固定长度开环动作序列，场景变化会导致误差累积和潜在风险。为此提出轨迹发散视界决策方法，通过动态决定动作序列的发散视界，在保持闭环可靠性的同时减少累积误差。该方法针对动作分块式连续控制中的关键缺陷，为手术或通用操作中的长序列预测提供了新的优化思路，有助于提升机器人操作策略的鲁棒性和可复用性。",
+      "llm_tldr": "手术子任务操作中，现有视觉-语言-动作（VLA）模型依赖固定长度开环动作序列，场景变化会导致误差累积和潜在风险。为此提出轨迹发散视界决策方法，通过动态决定动作序列的发散视界，在保持闭环可靠性的同时减少累积误差。该方法针对动作分块式连续控制中的关键缺陷，为手术或通用操作中的长序列预测提供了新的优化思路，有助于提升机器人操作策略的鲁棒性和可复用性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.12063v1",
+      "source": "arxiv",
+      "title": "Learning Loco-Manipulation From SMPC Demonstrations With Sparse Offline-to-Online RL",
+      "abstract": "Integrating locomotion and manipulation is essential for robot autonomy, but scaling standard Reinforcement Learning (RL) to complex tasks is severely bottlenecked by the slow, manual process of dense reward shaping. To bypass this limitation, we leverage Sample-based Model Predictive Control (SMPC) entirely in simulation as an automated, rapidly tunable expert to generate massive offline datasets. Because this data solves the fundamental exploration problem, we can train an off-policy RL agent using purely sparse task rewards, drastically reducing the time required to learn new skills and eliminating the need for manual tuning. Integrating this high-level agent with a low-level dynamic stability controller yields more optimal behaviors that strictly align with true task objectives, ultimately allowing the learned policies to surpass the original optimal control teacher. We validate the robustness of this sim-to-real framework by successfully deploying complex loco-manipulation skills across different morphologies, including an arm-equipped Spot quadruped and a G1 humanoid.",
+      "authors": [
+        "Martin Schuck",
+        "Maks Sorokin",
+        "Simone Manni",
+        "Duy Ta",
+        "Angela P. Schoellig",
+        "Marco Hutter",
+        "Simon Le Cleac'H",
+        "Jan Brüdigam"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-12T13:48:56+00:00",
+      "link": "https://arxiv.org/pdf/2608.12063v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical high-level agent with low-level stability controller learning loco-manipulation skills from demonstrations",
+      "llm_evidence_cn": "利用演示数据分层学习移动操作技能，高层智能体与低层稳定性控制器结合",
+      "llm_evidence": "利用演示数据分层学习移动操作技能，高层智能体与低层稳定性控制器结合",
+      "canonical_evidence": "利用演示数据分层学习移动操作技能，高层智能体与低层稳定性控制器结合",
+      "llm_tldr_en": "This paper learns loco-manipulation skills from SMPC demonstrations via sparse offline-to-online RL, combining a high-level agent with a low-level stability controller. Experiments show faster skill acquisition and better behaviors.",
+      "llm_tldr_cn": "针对复杂移动操作任务中稠密奖励整定困难的问题，该文利用样本模型预测控制(SMPC)在仿真中自动生成大规模演示数据。训练采用纯稀疏奖励的离策略强化学习，并与低层动态稳定控制器结合形成层次化策略。实验验证该方法大幅缩短技能学习时间，并产生更优的行为表现。",
+      "llm_tldr": "针对复杂移动操作任务中稠密奖励整定困难的问题，该文利用样本模型预测控制(SMPC)在仿真中自动生成大规模演示数据。训练采用纯稀疏奖励的离策略强化学习，并与低层动态稳定控制器结合形成层次化策略。实验验证该方法大幅缩短技能学习时间，并产生更优的行为表现。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.13415v1",
+      "source": "arxiv",
+      "title": "Deliberate Practice: Learning Robot Skills under a Budget",
+      "abstract": "We consider the problem of autonomously learning robot skills under a limited practice budget for sequential tasks. We propose an active skill learning algorithm, \\emph{Deliberate Practice (DP)}, that computes a provably \\emph{budget-optimal} allocation---practicing skills that maximize expected cumulative reward while being learnable within the budget. DP estimates both the time needed to master skills and the cumulative reward of the task plans that the skills unlock. Computing a budget-optimal allocation is challenging as it requires reasoning about combinatorially many skill plans over a large practice budget. Our key contribution is a bilinear program that can compute this exactly using off-the-shelf solvers. Through simulated and real-world experiments on long-horizon manipulation tasks, we show that our approach allows robots to optimally use limited practice time to acquire useful policies and improve long-horizon planning.",
+      "authors": [
+        "Shivam Vats",
+        "Sudarshan Harithas",
+        "Mete Tuluhan Akbulut",
+        "Arvind Raghunathan",
+        "George Konidaris"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-13T16:09:25+00:00",
+      "link": "https://arxiv.org/pdf/2608.13415v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reusable skills that unlock task plans under a limited practice budget",
+      "llm_evidence_cn": "在有限练习预算下练习可解锁任务计划的可复用技能",
+      "llm_evidence": "在有限练习预算下练习可解锁任务计划的可复用技能",
+      "canonical_evidence": "在有限练习预算下练习可解锁任务计划的可复用技能",
+      "llm_tldr_en": "Addresses robot skill learning under a limited practice budget for sequential tasks. Proposes Deliberate Practice (DP), a bilinear program for budget-optimal skill allocation. Experiments show DP prioritizes skills unlocking high-reward task plans.",
+      "llm_tldr_cn": "该文针对顺序机器人任务中练习预算有限的问题，提出主动技能学习算法刻意练习。算法通过双线性规划精确求解预算最优的练习分配，优先练习能解锁高累积奖励任务的技能。仿真与真实实验表明，该方法能在有限预算内有效掌握技能并提升长期任务表现，为长时程机器人技能学习提供了决策依据。",
+      "llm_tldr": "该文针对顺序机器人任务中练习预算有限的问题，提出主动技能学习算法刻意练习。算法通过双线性规划精确求解预算最优的练习分配，优先练习能解锁高累积奖励任务的技能。仿真与真实实验表明，该方法能在有限预算内有效掌握技能并提升长期任务表现，为长时程机器人技能学习提供了决策依据。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
