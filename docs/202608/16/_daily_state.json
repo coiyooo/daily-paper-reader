@@ -1,0 +1,41 @@
+{
+  "date": "20260816",
+  "date_label": "",
+  "generated_at": "2026-08-16 19:38:08 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.11671v1",
+      "route": "202608/16/2608.11671v1-stellavla-in-context-structured-demonstration-for-generalizable-vision-language-action-models",
+      "title": "StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用结构化演示（任务计划与子目标）实现分布外组合泛化",
+      "first_seen_at": "2026-08-16 19:38:08 UTC",
+      "updated_at": "2026-08-16 19:38:08 UTC"
+    },
+    {
+      "paper_id": "2608.08884v1",
+      "route": "202608/16/2608.08884v1-shrimp-iterative-refinement-of-robot-task-plans",
+      "title": "SHRIMP: Iterative Refinement of Robot Task Plans",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "层次化机器人原语规划，自然语言生成与迭代修正",
+      "first_seen_at": "2026-08-16 19:38:08 UTC",
+      "updated_at": "2026-08-16 19:38:08 UTC"
+    }
+  ]
+}

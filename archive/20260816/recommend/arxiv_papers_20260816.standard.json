@@ -1,0 +1,103 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-16T19:33:30.162737+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2608.11671v1",
+      "source": "arxiv",
+      "title": "StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models can follow instructions and manipulate objects, but their performance often collapses out of distribution (OOD), when the scene, viewpoint, or object differs from training. Adapting to each new situation typically requires collecting more data and fine-tuning. We present StellaVLA, a framework that instead adapts at test time by conditioning on a single retrieved demonstration. The key idea is to move beyond imitating what an expert did and instead convey why: an automated offline pipeline converts each raw trajectory into a structured demonstration, e.g., a task plan, sub-goal descriptions, and verbalized 3D motion, at zero human-annotation cost. Provided as in-context guidance, this structured demonstration lets the policy reason about the task rather than mimic a pixel trajectory, which also makes it transferable across embodiments (real-robot, human-hand, or XR demonstrations). A parallel dual-training design internalizes this reasoning during training through a joint action-and-language objective, while inference uses the action expert alone, preserving real-time, high-frequency control with no added latency. On the VLA-Arena leaderboard(Aug 1, 2026), StellaVLA ranks first with an overall score of 0.63, versus 0.44 and 0.22 for the strong prior models ($π_{0.5}$ and LingBot-VLA), and it further leads on LIBERO with 98.8% average success rate and LIBERO-Plus with 85.1% success rate. Our real-robot benchmark demonstrates that StellaVLA can use both human/robot demos and human-to-robot (XR) demos as in-context structured demonstration to help VLA model adapt to OOD tasks.",
+      "authors": [
+        "Siyu Xu",
+        "Yunke Wang",
+        "Zijian Wang",
+        "Dihao Zhu",
+        "Chenghao Xia",
+        "Chengbin Du",
+        "Daochang Liu",
+        "Tao Huang",
+        "Chang Xu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-12T05:30:53+00:00",
+      "link": "https://arxiv.org/pdf/2608.11671v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "structured demonstration with task plan and sub-goals for OOD compositional generalization",
+      "llm_evidence_cn": "利用结构化演示（任务计划与子目标）实现分布外组合泛化",
+      "llm_evidence": "利用结构化演示（任务计划与子目标）实现分布外组合泛化",
+      "canonical_evidence": "利用结构化演示（任务计划与子目标）实现分布外组合泛化",
+      "llm_tldr_en": "StellaVLA conditions a VLA policy at test time on a retrieved structured demonstration (task plan, sub-goals, verbalized 3D motion), improving OOD compositional generalization in manipulation without fine-tuning.",
+      "llm_tldr_cn": "视觉-语言-动作模型在场景、视角或物体变化时性能急剧下降。本文提出StellaVLA，通过自动离线管道将原始轨迹转换为结构化演示（任务计划、子目标描述与三维运动表述），并在测试时作为上下文条件，使模型理解专家意图而不仅是模仿动作。实验表明该方法能显著提升分布外泛化能力，无需额外微调。这为技能的组合泛化提供了一种轻量级测试时适应方案。",
+      "llm_tldr": "视觉-语言-动作模型在场景、视角或物体变化时性能急剧下降。本文提出StellaVLA，通过自动离线管道将原始轨迹转换为结构化演示（任务计划、子目标描述与三维运动表述），并在测试时作为上下文条件，使模型理解专家意图而不仅是模仿动作。实验表明该方法能显著提升分布外泛化能力，无需额外微调。这为技能的组合泛化提供了一种轻量级测试时适应方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.08884v1",
+      "source": "arxiv",
+      "title": "SHRIMP: Iterative Refinement of Robot Task Plans",
+      "abstract": "As collaborative robots have entered domains such as manufacturing, agriculture, and healthcare, programming or adapting robot behavior typically requires robotic expertise that most end users lack. Natural language lowers this barrier. Recent advancements in large language models (LLMs) have made it feasible to translate natural language into robot task plans. However, language-based task specification suffers from semantic ambiguity, and generative models lack transparency for how language instructions become robot actions, making it difficult for users to validate the plan before execution. To address these issues, we introduce SHRIMP, a system that allows users to automatically generate a hierarchical robot primitive plan using natural language and iteratively revise their plan through re-prompting and explicit correction. At each revision, SHRIMP allows users to validate their plan in simulation, and once satisfied, execute it on the physical robot. Through a user study involving participants planning tabletop kitchen tasks (n=35), we validate that SHRIMP improves perceived control and enhances robot transparency. System videos and source code are available at https://wisc-hci.github.io/SHRIMP.",
+      "authors": [
+        "Mya Schroder",
+        "Yuna Hwang",
+        "Callie Y. Kim",
+        "Leqian Cheng",
+        "Jeffrey Li-cheng Liu",
+        "Chenchen Zheng",
+        "Xinning He",
+        "Bilge Mutlu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "published": "2026-08-09T19:47:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.08884v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical robot primitive plan, natural language, iterative refinement",
+      "llm_evidence_cn": "层次化机器人原语规划，自然语言生成与迭代修正",
+      "llm_evidence": "层次化机器人原语规划，自然语言生成与迭代修正",
+      "canonical_evidence": "层次化机器人原语规划，自然语言生成与迭代修正",
+      "llm_tldr_en": "SHRIMP lets users generate and iteratively refine hierarchical robot primitive plans from natural language, addressing ambiguity and transparency in task specification.",
+      "llm_tldr_cn": "非专家用户难以直接用自然语言指定机器人任务，且生成模型不透明。SHRIMP允许用户用自然语言自动生成层次化机器人原语规划，并通过迭代修订逐步消除语义歧义。系统在生成规划时提供可验证的中间表示，帮助用户在执行前验证计划。这降低了机器人编程门槛，提升了语言任务规划的可用性和透明度。",
+      "llm_tldr": "非专家用户难以直接用自然语言指定机器人任务，且生成模型不透明。SHRIMP允许用户用自然语言自动生成层次化机器人原语规划，并通过迭代修订逐步消除语义歧义。系统在生成规划时提供可验证的中间表示，帮助用户在执行前验证计划。这降低了机器人编程门槛，提升了语言任务规划的可用性和透明度。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
