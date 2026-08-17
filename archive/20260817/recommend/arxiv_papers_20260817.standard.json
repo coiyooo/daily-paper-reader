@@ -1,0 +1,302 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-17T20:44:33.790282+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2608.13924v1",
+      "source": "arxiv",
+      "title": "BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control",
+      "abstract": "The request-to-handoff gap has three coupled sources: ambiguity about the behavior intended at request time, physical-state drift accumulated during action generation, and residual incompatibility when the new action finally assumes control. BICPO-VLA addresses them in sequence. First, an instruction-aware causal history encoder identifies the behavior supported by the command and current task progress. Second, sequential Haar subspace generation decomposes each action chunk into complementary pairwise scaffold and residual coefficients, enabling two specialized generation stages followed by exact reconstruction. By reducing iterative refinement in the original action space, it shortens the interval over which the robot continues moving before the new chunk becomes available. Finally, BICPO rolls the known outgoing actions to the actual handoff state and applies reference-relative Flow-DPO among behaviorally matched candidates, adapting the generated chunk to the remaining request-to-handoff mismatch without changing its intended behavior.",
+      "authors": [
+        "Ming Shang",
+        "Yuchen Huang",
+        "Jiaoyang Chen",
+        "Haoyuan Hu",
+        "Han Yu",
+        "Liping Song",
+        "Luyun Feng",
+        "Shuo Bao",
+        "Wei Dong",
+        "Xinzhou Wang",
+        "Fuchun Sun"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-14T03:51:27+00:00",
+      "link": "https://arxiv.org/pdf/2608.13924v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "action chunking with transformer and behavior identification for smooth VLA control, matching skill-conditioned action chunking requirement",
+      "llm_evidence_cn": "使用Transformer和动作块分解，通过行为识别实现平滑VLA控制，契合技能条件化的动作块预测需求",
+      "llm_evidence": "使用Transformer和动作块分解，通过行为识别实现平滑VLA控制，契合技能条件化的动作块预测需求",
+      "canonical_evidence": "使用Transformer和动作块分解，通过行为识别实现平滑VLA控制，契合技能条件化的动作块预测需求",
+      "llm_tldr_en": "BICPO-VLA addresses the request-to-handoff gap in asynchronous VLA control by identifying intended behavior from instruction-aware history and decomposing action chunks with Haar subspaces for smoother handoff.",
+      "llm_tldr_cn": "针对异步视觉-语言-动作控制中请求到交接的间隙问题，提出BICPO-VLA方法，先通过指令感知的因果历史编码器识别当前行为，再利用顺序Haar子空间将动作块分解为互补的支架与残差系数，分两阶段生成并精确重建。该方法缩短了动作生成间隔，提升了交接平滑性，为VLA连续控制提供更稳定的方案。",
+      "llm_tldr": "针对异步视觉-语言-动作控制中请求到交接的间隙问题，提出BICPO-VLA方法，先通过指令感知的因果历史编码器识别当前行为，再利用顺序Haar子空间将动作块分解为互补的支架与残差系数，分两阶段生成并精确重建。该方法缩短了动作生成间隔，提升了交接平滑性，为VLA连续控制提供更稳定的方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.14049v1",
+      "source": "arxiv",
+      "title": "FlatLab: A Unified Methodology Framework and Simulation-Based Benchmark for Robotic Manipulation of Flat Objects",
+      "abstract": "Robotic manipulation of flat objects is challenging due to the ungraspable configurations and strong variations in object geometry and material. Existing methods rely on heuristic pre-manipulation and are often evaluated in closed settings with limited generalization. We propose a unified framework that decouples the manipulation into a strategy generator and an action execution module. The strategy generator predicts appropriate manipulation strategies from object point clouds by learning strategy-centric, object-invariant representations via simulated data transformation and contrastive learning. Conditioned on the predicted strategy, the execution module decomposes long-horizon manipulation into reusable action primitives and dynamically composes them to generate stable trajectories. To enable systematic evaluation, we introduce FlatLab, a comprehensive simulation benchmark for robotic flat object manipulation. FlatLab provides high-fidelity physical simulation of diverse rigid and deformable flat objects, automated multi-modal data collection, and standardized task definitions and evaluation protocols. Experiments conducted in FlatLab demonstrate that our approach generalizes effectively to unseen objects and categories, outperforming existing baselines. The project page and the code are provided at https://flatlab-web.github.io/.",
+      "authors": [
+        "Xingyu Zhu",
+        "Wenshuo Han",
+        "Zhouyu Wang",
+        "Yuran Wang",
+        "Ruihai Wu",
+        "Hao Dong",
+        "Fan Tang",
+        "Hechang Chen",
+        "Hyung Jin Chang",
+        "Yixing Gao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-14T07:55:55+00:00",
+      "link": "https://arxiv.org/pdf/2608.14049v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "strategy-conditioned decomposition of long-horizon manipulation into reusable action primitives, conceptually matching reusable parameterized skill libraries",
+      "llm_evidence_cn": "将长时程操作按预测策略分解为可重用动作原语，概念上与可复用参数化技能库对应",
+      "llm_evidence": "将长时程操作按预测策略分解为可重用动作原语，概念上与可复用参数化技能库对应",
+      "canonical_evidence": "将长时程操作按预测策略分解为可重用动作原语，概念上与可复用参数化技能库对应",
+      "llm_tldr_en": "FlatLab decouples flat-object manipulation into a strategy generator and an execution module; the execution module decomposes long-horizon tasks into reusable action primitives conditioned on predicted strategies, with a simulation benchmark.",
+      "llm_tldr_cn": "扁平物体的机器人操作常依赖启发式预操作且泛化不足。FlatLab提出统一框架，将操作解耦为策略生成器与动作执行模块：前者从点云学习策略中心、对象不变的表征并预测操作策略，后者在该策略条件下把长时程操作分解为可重用的动作原语，同时提供基于仿真的评测基准。这为对象不变的操作策略学习与长时程操作的组合化复用提供了一种系统化方法框架。",
+      "llm_tldr": "扁平物体的机器人操作常依赖启发式预操作且泛化不足。FlatLab提出统一框架，将操作解耦为策略生成器与动作执行模块：前者从点云学习策略中心、对象不变的表征并预测操作策略，后者在该策略条件下把长时程操作分解为可重用的动作原语，同时提供基于仿真的评测基准。这为对象不变的操作策略学习与长时程操作的组合化复用提供了一种系统化方法框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.13026v1",
+      "source": "arxiv",
+      "title": "Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning",
+      "abstract": "Outcome-driven reinforcement learning offers a scalable way to post-train vision-language-action (VLA) policies from sparse task-success feedback. In common GRPO-based VLA post-training, one rollout-level advantage is applied to every action in the trajectory. A rollout that completes several valid stages but fails later can therefore penalize the actions that produced its earlier progress. We call this trajectory-level credit aliasing. Temporal GRPO addresses this problem by constructing detectable task stages, aligning each rollout with stage-specific action intervals, and comparing only rollouts that have entered the same stage. The resulting stage advantages are applied to their corresponding intervals in a single policy update. On RoboTwin 2.0, Temporal GRPO improves task success and sample efficiency, with consistent gains across task horizons. Controlled updates on LIBERO-Long preserve shared prerequisite stages and concentrate improvement at the first stage where rollout outcomes diverge.",
+      "authors": [
+        "Yao Zhou",
+        "Hang Gao",
+        "Fengge Wu",
+        "Changwen Zheng",
+        "Wenwen Qiang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-13T09:54:14+00:00",
+      "link": "https://arxiv.org/pdf/2608.13026v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "constructs detectable task stages, aligns rollouts with stage-specific action intervals, stage advantages",
+      "llm_evidence_cn": "构造可检测任务阶段，将回滚与阶段特定动作区间对齐，计算阶段优势",
+      "llm_evidence": "构造可检测任务阶段，将回滚与阶段特定动作区间对齐，计算阶段优势",
+      "canonical_evidence": "构造可检测任务阶段，将回滚与阶段特定动作区间对齐，计算阶段优势",
+      "llm_tldr_en": "Temporal GRPO addresses trajectory-level credit aliasing in VLA RL by constructing detectable task stages, aligning rollouts with stage-specific action intervals, and assigning stage advantages to corresponding intervals. This allows outcome-driven post-training to credit valid earlier stages despite later failure. Experiments show improved policy learning on long-horizon tasks.",
+      "llm_tldr_cn": "针对视语言行动模型强化学习后训练中轨迹级信用分配导致前期有效阶段被惩罚的问题，提出Temporal GRPO。它构造可检测的任务阶段，将回滚与阶段动作区间对齐，并仅在同一阶段内比较以计算阶段优势。该优势被应用到对应动作区间，从而避免轨迹级信用混叠。实验证明该方法提升了长时程任务的策略性能。这种阶段条件化训练与技能ID/局部相位条件化控制思想高度一致，可应用于机器人技能学习。",
+      "llm_tldr": "针对视语言行动模型强化学习后训练中轨迹级信用分配导致前期有效阶段被惩罚的问题，提出Temporal GRPO。它构造可检测的任务阶段，将回滚与阶段动作区间对齐，并仅在同一阶段内比较以计算阶段优势。该优势被应用到对应动作区间，从而避免轨迹级信用混叠。实验证明该方法提升了长时程任务的策略性能。这种阶段条件化训练与技能ID/局部相位条件化控制思想高度一致，可应用于机器人技能学习。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.09303v1",
+      "source": "arxiv",
+      "title": "SAFE-CHEM: Uncertainty-Aware Policy Switching for Robust Robotic Chemistry",
+      "abstract": "The deployment of autonomous robotic systems in chemistry laboratories is accelerating experimental workflows and providing the foundational data for AI-driven scientific discovery. However, despite the success of data-driven methods in acquiring dexterous skills, safety remains a primary barrier to their deployment in high-risk domains, such as early-stage materials chemistry experiments. Specifically, learning-based policies frequently struggle to distinguish between safe and unsafe actions, leading to overconfident extrapolation and potentially catastrophic failures. To mitigate these safety risks, we propose SAFE-CHEM, an uncertainty-aware framework designed for robust, learning-based robotic chemists. Our approach leverages an ensemble of recurrent neural network-based imitation learning policies to quantify epistemic uncertainty online through the variance of action predictions. By characterising the success-conditioned density of this variance using kernel density estimation, we introduce a hybrid control architecture that autonomously switches from the learned policy to a deterministic, rule-based backup controller when uncertainty exceeds a calibrated safety threshold. We evaluate SAFE-CHEM across three fundamental laboratory manipulation tasks, where our empirical results demonstrate that this hybrid strategy improves overall task success rates and reduces critical safety violations compared to traditional single-policy baselines. Finally, we demonstrate the practical viability of the framework through zero-shot sim-to-real transfer onto a physical Franka Production 3 robot manipulator.",
+      "authors": [
+        "Laura Jones",
+        "Shazil Shahzad",
+        "Ayesha Sana",
+        "Gabriella Pizzuto"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-08-10T08:51:43+00:00",
+      "link": "https://arxiv.org/pdf/2608.09303v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "uncertainty-aware policy switching to enforce safety and avoid catastrophic failures in robotic manipulation",
+      "llm_evidence_cn": "利用不确定性感知的策略切换保障机器人操作安全，避免灾难性失败",
+      "llm_evidence": "利用不确定性感知的策略切换保障机器人操作安全，避免灾难性失败",
+      "canonical_evidence": "利用不确定性感知的策略切换保障机器人操作安全，避免灾难性失败",
+      "llm_tldr_en": "SAFE-CHEM is an uncertainty-aware framework for learning-based robotic chemists; it uses an ensemble of recursive models to detect unsafe actions and switches policies to prevent catastrophic failures in high-risk experiments.",
+      "llm_tldr_cn": "学习型策略往往难以区分安全与不安全动作，在高风险化学实验中可能过度自信外推并导致灾难性失败。SAFE-CHEM提出不确定性感知框架，使用递归网络集成估计动作不确定性，并依据不确定性进行策略切换，从而抑制不安全动作。该方法为学习型机器人在高风险操作中的安全部署提供了一种可迁移的保障机制。",
+      "llm_tldr": "学习型策略往往难以区分安全与不安全动作，在高风险化学实验中可能过度自信外推并导致灾难性失败。SAFE-CHEM提出不确定性感知框架，使用递归网络集成估计动作不确定性，并依据不确定性进行策略切换，从而抑制不安全动作。该方法为学习型机器人在高风险操作中的安全部署提供了一种可迁移的保障机制。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.13678v1",
+      "source": "arxiv",
+      "title": "hint$^2$: Hierarchical World Models for Inference-Time Temporal Logic Guidance",
+      "abstract": "A central goal of robot learning is to enable robots to execute rich instructions specified at runtime. Large-scale language-conditioned policies have made substantial progress toward this goal, yet still struggle with temporal structure and safety constraints. Linear Temporal Logic (LTL) provides a powerful language to express complex, non-Markovian instructions. However, guiding learned manipulation policies toward LTL satisfaction remains challenging because modern policies generate short-horizon action chunks and replan in closed loop, while almost all LTL specifications are evaluated over long-horizon trajectories. In this paper, we introduce hint$^2$, a method for guiding short-horizon policies toward satisfying complex LTL specifications at inference time using hierarchical world models. Our key idea is to derive two separate guidance objectives using each world model's abstraction level. A high-level model predicts future action-induced transitions in task-relevant atomic propositions to guide progress through the LTL automaton, while a low-level dynamics model predicts immediate state evolution for accurate local safety guidance. Our results show that hint$^2$ overcomes the limitations of current LTL-guided diffusion methods, outperforms existing inference-time steering methods in CALVIN, and successfully completes instructions with complex liveness and safety constraints more elegantly than language-conditioned alternatives. Finally, we demonstrate that hint$^2$ can handle complex instructions on a real UR5e manipulator.",
+      "authors": [
+        "Moritz Zoellner",
+        "Anastasios Manganaris",
+        "Ahmed H. Qureshi",
+        "Rohan Paleja"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-08-13T18:22:08+00:00",
+      "link": "https://arxiv.org/pdf/2608.13678v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Guides short-horizon action-chunking manipulation policies to satisfy LTL safety constraints via hierarchical world models.",
+      "llm_evidence_cn": "通过分层世界模型在推理时引导短时域动作分块策略满足LTL安全约束。",
+      "llm_evidence": "通过分层世界模型在推理时引导短时域动作分块策略满足LTL安全约束。",
+      "canonical_evidence": "通过分层世界模型在推理时引导短时域动作分块策略满足LTL安全约束。",
+      "llm_tldr_en": "Introduces hint^2, a hierarchical world-model framework that provides inference-time guidance for short-horizon action-chunk policies to satisfy complex LTL specifications with temporal structure and safety constraints.",
+      "llm_tldr_cn": "现代学习策略多生成短时域动作块并闭环重规划，难以满足具备时间结构与安全约束的长程LTL规格。hint^2通过分层世界模型，在推理时对短时域策略进行引导，使其在长时域轨迹上满足复杂LTL指令。实验表明该方法能在保持策略原有结构的同时有效提升时序满足率与安全性，为将符号化约束融入操作策略提供重要途径。",
+      "llm_tldr": "现代学习策略多生成短时域动作块并闭环重规划，难以满足具备时间结构与安全约束的长程LTL规格。hint^2通过分层世界模型，在推理时对短时域策略进行引导，使其在长时域轨迹上满足复杂LTL指令。实验表明该方法能在保持策略原有结构的同时有效提升时序满足率与安全性，为将符号化约束融入操作策略提供重要途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.14028v1",
+      "source": "arxiv",
+      "title": "AdvDex: Learning Dexterous Manipulation from Human Demonstrations via Joint-Aligned Actions and Adversarial Learning",
+      "abstract": "Dexterous manipulation is a fundamental capability for embodied intelligence, but scaling it remains difficult because robot demonstrations are expensive to collect and action spaces vary across embodiments. Policies trained on heterogeneous data can also entangle task-relevant visual cues with embodiment-specific appearance, limiting cross-embodiment generalization. We present AdvDex, a unified Vision-Language-Action framework for learning dexterous manipulation from human and robot demonstrations. First, we introduce OmniShare, a large-scale multimodal dataset of human manipulation demonstrations that provides high-quality kinematic supervision and tactile measurements while reducing reliance on robot teleoperation. Second, we propose the Joint-Aligned Action Space (JAAS), a canonical action representation comprising an $\\mathrm{SE}(3)$ wrist pose and 15 finger joints, thereby functionally aligning human hands, dexterous robot hands, and parallel grippers. Finally, we use domain-adversarial learning to reduce embodiment-specific information in the learned visual representation. Experiments on hand-action prediction and real-world dexterous manipulation show consistent improvements over baselines, effective zero-shot human-to-robot skill transfer, generalization to unseen objects and environments, and data-efficient few-shot adaptation.",
+      "authors": [
+        "Zhiyue Zhao",
+        "Jingyi Wu",
+        "Hairuo Liu",
+        "Mingyu Liu",
+        "Liyang Li",
+        "Hengdi Zhang",
+        "Tong He",
+        "Zhengxue Cheng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-14T07:19:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.14028v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "unified VLA imitation learning for dexterous manipulation from human/robot demos enabling skill library construction",
+      "llm_evidence_cn": "面向灵巧操作的人类与机器人示教模仿学习，可作为技能库构建的基础方法",
+      "llm_evidence": "面向灵巧操作的人类与机器人示教模仿学习，可作为技能库构建的基础方法",
+      "canonical_evidence": "面向灵巧操作的人类与机器人示教模仿学习，可作为技能库构建的基础方法",
+      "llm_tldr_en": "AdvDex unifies vision-language-action learning with joint-aligned actions and adversarial training to learn dexterous manipulation from heterogeneous human and robot demonstrations, improving cross-embodiment generalization.",
+      "llm_tldr_cn": "灵巧操作策略通常受限于昂贵的机器人示教数据和跨本体的动作空间差异，且任务视觉线索与本体外观耦合会影响泛化。AdvDex提出统一的视觉-语言-动作框架，引入OmniShare大规模多模态人类操作数据集，结合关节对齐动作与对抗学习来消除外观耦合。实验表明，该方法能从异构的人类与机器人示教中学习，显著提升跨本体泛化能力，在多个基准上取得领先效果。该工作为构建可复用的灵巧操作技能库提供了数据与算法基础。",
+      "llm_tldr": "灵巧操作策略通常受限于昂贵的机器人示教数据和跨本体的动作空间差异，且任务视觉线索与本体外观耦合会影响泛化。AdvDex提出统一的视觉-语言-动作框架，引入OmniShare大规模多模态人类操作数据集，结合关节对齐动作与对抗学习来消除外观耦合。实验表明，该方法能从异构的人类与机器人示教中学习，显著提升跨本体泛化能力，在多个基准上取得领先效果。该工作为构建可复用的灵巧操作技能库提供了数据与算法基础。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.13684v1",
+      "source": "arxiv",
+      "title": "Learning to Assemble Novel Structures with Unfamiliar Parts under Semantic Constraints",
+      "abstract": "This paper describes a neurosymbolic architecture for learning to assemble novel structures using evidence from embodied conversations and task demonstrations. We focus on scenarios where an agent encounters, after deployment, semantic constraints on structures--in other words, constraints as to which part types and features make valid structures--that were not available during training, and where it is initially unaware of the relevant structure and component part concepts. The agent must acquire and exploit such knowledge through user interactions while attempting assembly. We study this setting in a simulated toy truck assembly domain, learning from symbolic evidence encoded in natural language and from dense visual observations. Our experiments show that communicating semantic constraints through natural language (e.g., \"dump trucks have a dumper\") yields more data-efficient online adaptation than relying only on task demonstrations and/or only naming the parts through natural language.",
+      "authors": [
+        "Jonghyuk Park",
+        "Alex Lascarides",
+        "Subramanian Ramamoorthy"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-13T18:27:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.13684v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "compositional generalization to novel structures and unfamiliar parts in assembly",
+      "llm_evidence_cn": "面向装配任务中新型结构与不熟悉零件的组合泛化",
+      "llm_evidence": "面向装配任务中新型结构与不熟悉零件的组合泛化",
+      "canonical_evidence": "面向装配任务中新型结构与不熟悉零件的组合泛化",
+      "llm_tldr_en": "A neurosymbolic architecture learns to assemble novel structures with unfamiliar parts by acquiring semantic constraints from embodied conversations and demonstrations, enabling compositional generalization in a simulated toy truck assembly domain.",
+      "llm_tldr_cn": "现有装配方法难以应对部署后出现的新型结构与不熟悉零件，以及未见过的语义约束。本文提出神经符号架构，通过具身对话与任务演示，在线学习语义约束并积累装配知识。在模拟玩具卡车装配实验中，智能体能够在交互中获取并利用新约束，完成对新型结构的组装。该工作展示了机器人操作中组合泛化到未见过配置的潜力，为构建自适应技能库提供了新思路。",
+      "llm_tldr": "现有装配方法难以应对部署后出现的新型结构与不熟悉零件，以及未见过的语义约束。本文提出神经符号架构，通过具身对话与任务演示，在线学习语义约束并积累装配知识。在模拟玩具卡车装配实验中，智能体能够在交互中获取并利用新约束，完成对新型结构的组装。该工作展示了机器人操作中组合泛化到未见过配置的潜力，为构建自适应技能库提供了新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

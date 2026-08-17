@@ -1,0 +1,121 @@
+{
+  "date": "20260817",
+  "date_label": "",
+  "generated_at": "2026-08-17 20:49:20 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.13924v1",
+      "route": "202608/17/2608.13924v1-bicpo-vla-behavior-identified-continuation-preference-optimization-for-smooth-asynchronous-vision-language-action-control",
+      "title": "BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "使用Transformer和动作块分解，通过行为识别实现平滑VLA控制，契合技能条件化的动作块预测需求",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    },
+    {
+      "paper_id": "2608.14049v1",
+      "route": "202608/17/2608.14049v1-flatlab-a-unified-methodology-framework-and-simulation-based-benchmark-for-robotic-manipulation-of-flat-objects",
+      "title": "FlatLab: A Unified Methodology Framework and Simulation-Based Benchmark for Robotic Manipulation of Flat Objects",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "将长时程操作按预测策略分解为可重用动作原语，概念上与可复用参数化技能库对应",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    },
+    {
+      "paper_id": "2608.13026v1",
+      "route": "202608/17/2608.13026v1-temporal-grpo-beyond-trajectory-level-credit-in-vision-language-action-reinforcement-learning",
+      "title": "Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "构造可检测任务阶段，将回滚与阶段特定动作区间对齐，计算阶段优势",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    },
+    {
+      "paper_id": "2608.13678v1",
+      "route": "202608/17/2608.13678v1-hint2-hierarchical-world-models-for-inference-time-temporal-logic-guidance",
+      "title": "hint$^2$: Hierarchical World Models for Inference-Time Temporal Logic Guidance",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "通过分层世界模型在推理时引导短时域动作分块策略满足LTL安全约束。",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    },
+    {
+      "paper_id": "2608.13684v1",
+      "route": "202608/17/2608.13684v1-learning-to-assemble-novel-structures-with-unfamiliar-parts-under-semantic-constraints",
+      "title": "Learning to Assemble Novel Structures with Unfamiliar Parts under Semantic Constraints",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向装配任务中新型结构与不熟悉零件的组合泛化",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    },
+    {
+      "paper_id": "2608.09303v1",
+      "route": "202608/17/2608.09303v1-safe-chem-uncertainty-aware-policy-switching-for-robust-robotic-chemistry",
+      "title": "SAFE-CHEM: Uncertainty-Aware Policy Switching for Robust Robotic Chemistry",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "利用不确定性感知的策略切换保障机器人操作安全，避免灾难性失败",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    },
+    {
+      "paper_id": "2608.14028v1",
+      "route": "202608/17/2608.14028v1-advdex-learning-dexterous-manipulation-from-human-demonstrations-via-joint-aligned-actions-and-adversarial-learning",
+      "title": "AdvDex: Learning Dexterous Manipulation from Human Demonstrations via Joint-Aligned Actions and Adversarial Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向灵巧操作的人类与机器人示教模仿学习，可作为技能库构建的基础方法",
+      "first_seen_at": "2026-08-17 20:49:20 UTC",
+      "updated_at": "2026-08-17 20:49:20 UTC"
+    }
+  ]
+}
