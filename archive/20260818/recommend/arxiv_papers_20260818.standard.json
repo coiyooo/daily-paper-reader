@@ -1,0 +1,575 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-18T20:48:58.520886+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2608.15285v1",
+      "source": "arxiv",
+      "title": "PhaseLoRA: Control-Regime-Conditioned Low-Rank Adaptation for Continuous-Action Vision-Language-Action Policies",
+      "abstract": "Parameter-efficient fine-tuning (PEFT) is a natural way to adapt pretrained vision-language-action (VLA) policies, but most adapter designs apply temporally static updates throughout a control rollout, overlooking the phase-dependent nature of continuous-action manipulation. Such policies traverse distinct regimes, including approach, contact transition, grasping, transport, and placement, each requiring different adaptation behaviors. We propose \\textbf{PhaseLoRA}, a lightweight LoRA parameterization that conditions adaptation at each action-chunk prediction step using two weakly supervised descriptors: fine-control tendency and event/boundary intensity. PhaseLoRA modulates the LoRA left factor in the action expert, allowing the effective low-rank update direction to vary over time while keeping the backbone largely frozen. On LIBERO, PhaseLoRA improves average success rate by 12.2 points over a matched-parameter high-rank LoRA baseline and outperforms stronger LoRA variants. Ablations show that random temporal modulation and scalar gating do not reproduce the performance of the full model, while update-direction analyses reveal structured temporal variation associated with the predicted control descriptors. These results establish within-trajectory conditioning as an effective lightweight PEFT axis for continuous-action VLA policies.",
+      "authors": [
+        "Yufei Guo",
+        "Yinan Wu",
+        "Haoran Duan",
+        "Guiguang Ding",
+        "Jungong Han"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-15T15:32:08+00:00",
+      "link": "https://arxiv.org/pdf/2608.15285v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "phase-conditioned low-rank adaptation for action-chunk prediction in continuous VLA policies for contact-rich tasks",
+      "llm_evidence_cn": "面向接触丰富的连续VLA策略，基于控制相位调节LoRA动作块预测",
+      "llm_evidence": "面向接触丰富的连续VLA策略，基于控制相位调节LoRA动作块预测",
+      "canonical_evidence": "面向接触丰富的连续VLA策略，基于控制相位调节LoRA动作块预测",
+      "llm_tldr_en": "PhaseLoRA conditions low-rank adaptation on control regimes and event boundary intensity at each action-chunk step, improving phase-dependent continuous-action VLA policies.",
+      "llm_tldr_cn": "本文指出现有参数高效微调方法在连续操作策略中忽视了接触任务的相位特性（如接近、接触过渡、抓取、搬运、放置）。为此提出PhaseLoRA，在动作块预测的每一步，利用弱监督的精细控制倾向与事件边界强度描述符调节LoRA左因子，实现相位条件化适配。实验显示该方法能更好地适应不同控制相位，提升连续动作操作的性能。该工作为技能ID与局部相位条件化连续控制提供了直接的参数化方案。",
+      "llm_tldr": "本文指出现有参数高效微调方法在连续操作策略中忽视了接触任务的相位特性（如接近、接触过渡、抓取、搬运、放置）。为此提出PhaseLoRA，在动作块预测的每一步，利用弱监督的精细控制倾向与事件边界强度描述符调节LoRA左因子，实现相位条件化适配。实验显示该方法能更好地适应不同控制相位，提升连续动作操作的性能。该工作为技能ID与局部相位条件化连续控制提供了直接的参数化方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16885v1",
+      "source": "arxiv",
+      "title": "$τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
+      "abstract": "Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices. We introduce $τ_0$-VLA, a hierarchical robot foundation model that formulates high-level subtask generation as a compute-scalable inference problem through world-model-guided test-time computation. At each inference step, the high-level policy uses execution memory to generate a subtask and, when needed, searches over alternatives before committing to its output. A low-level policy then executes the generated subtask across multiple robot embodiments. The policy is trained on 40,115 hours of heterogeneous real-world data with multimodal co-training. Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.",
+      "authors": [
+        "Xiaowei Cai",
+        "Yunuo Cai",
+        "Bingao Chen",
+        "Jingxiao Chen",
+        "Zhi Chen",
+        "Siyuan Feng",
+        "Tengyu Hou",
+        "Jingshun Huang",
+        "Han Jiang",
+        "Runkun Ju",
+        "Dong Li",
+        "Mingxiang Li",
+        "Shaowei Li",
+        "Xinchen Li",
+        "Yifan Li",
+        "Yi Liu",
+        "Zhongyuan Liu",
+        "Jianlan Luo",
+        "Junwen Miao",
+        "Ruiqi Ni",
+        "Buqing Nie",
+        "Mingjie Pan",
+        "Xinlin Ren",
+        "Jianheng Song",
+        "Jiaxu Wang",
+        "Peiqi Wang",
+        "Sen Wang",
+        "Xiaoyan Wang",
+        "Dafeng Wei",
+        "Dongming Wu",
+        "Pengwei Xie",
+        "Pu Yang",
+        "Hangjian Ye",
+        "Xiangyu Yue",
+        "Jinyu Zhang",
+        "Qinglin Zhang",
+        "Xueyong Zhao",
+        "Pengfei Zhou",
+        "Yue Zhou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T17:59:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.16885v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "hierarchical VLA for long-horizon subtask generation and low-level skill execution",
+      "llm_evidence_cn": "分层VLA用于长时程子任务生成与低层技能执行",
+      "llm_evidence": "分层VLA用于长时程子任务生成与低层技能执行",
+      "canonical_evidence": "分层VLA用于长时程子任务生成与低层技能执行",
+      "llm_tldr_en": "τ0-VLA is a hierarchical robot foundation model that formulates high-level subtask generation as compute-scalable inference with world-model-guided test-time computation, executed by a low-level policy.",
+      "llm_tldr_cn": "长期机器人操作既需要可靠地执行单个技能，也需要连贯地排序多个技能。τ0-VLA提出分层机器人基础模型，将高层子任务生成视为可扩展推理的问题，通过世界模型引导的测试时计算来搜索更优的子任务。低层策略接收高层子任务并执行动作，从而形成技能序列的组合。该方法能根据执行记忆分配额外计算资源以应对困难决策，为长时程分层技能策略提供了新架构。",
+      "llm_tldr": "长期机器人操作既需要可靠地执行单个技能，也需要连贯地排序多个技能。τ0-VLA提出分层机器人基础模型，将高层子任务生成视为可扩展推理的问题，通过世界模型引导的测试时计算来搜索更优的子任务。低层策略接收高层子任务并执行动作，从而形成技能序列的组合。该方法能根据执行记忆分配额外计算资源以应对困难决策，为长时程分层技能策略提供了新架构。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.15938v1",
+      "source": "arxiv",
+      "title": "Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies",
+      "abstract": "Action chunking --- the practice of predicting a sequence of actions and executing a prefix open-loop --- has emerged as a key enabler of recent progress in imitation learning for robotic manipulation. However, executing long open-loop prefixes reduces reactivity, limiting policies' ability to correct for errors. Further, the mechanisms underlying these performance benefits remain poorly understood: prior works cite mitigating compounding errors, absorbing inference latency, or smoothing motions, but provide limited controlled evidence or guidance for preserving reactivity. In this work, we argue that long open-loop execution primarily helps short-context policies imitate \"non-Markovian demonstrations\". Across four simulation and two real-world tasks, we show that expert non-Markovianity strongly shapes the relationship between task success and open-loop execution horizon. Further, we investigate the impact of compounding errors --- the prevailing explanation for long open-loop execution in prior work --- and find that while they matter, expert non-Markovianity has a much stronger impact in our experimental setting. Finally, we show that when policies are provided with a sufficiently long context, open-loop execution is no longer beneficial and the most reactive, closed-loop policies perform best. While imitation learning has seen great success using long open-loop execution, our findings motivate long-context, reactive policies as a more principled and performant paradigm.",
+      "authors": [
+        "Michael Zeng",
+        "Abhinav Agarwal",
+        "Ajay Bati",
+        "Brian Lee",
+        "Siddharth Ancha",
+        "Russ Tedrake"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-16T21:49:07+00:00",
+      "link": "https://arxiv.org/pdf/2608.15938v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Action chunking and open-loop execution in imitation learning for manipulation",
+      "llm_evidence_cn": "模仿学习中的动作分块与开环执行分析",
+      "llm_evidence": "模仿学习中的动作分块与开环执行分析",
+      "canonical_evidence": "模仿学习中的动作分块与开环执行分析",
+      "llm_tldr_en": "Revisits action chunking in imitation learning for robotic manipulation; controlled experiments show long open-loop execution helps short-context policies imitate non-Markovian demonstrations, with guidance for choosing chunk lengths while preserving reactivity.",
+      "llm_tldr_cn": "动作分块已被证明能提升机器人操作中的模仿学习性能，但其作用机制尚不清晰。本文通过四个仿真和两个真实环境实验，指出长开环执行的核心原因是帮助短上下文策略模仿非马尔可夫演示，而非单纯减小累积误差。研究还提供了在保留反应能力的同时选择分块长度的指导原则，对动作分块Transformer的设计具有直接参考价值。",
+      "llm_tldr": "动作分块已被证明能提升机器人操作中的模仿学习性能，但其作用机制尚不清晰。本文通过四个仿真和两个真实环境实验，指出长开环执行的核心原因是帮助短上下文策略模仿非马尔可夫演示，而非单纯减小累积误差。研究还提供了在保留反应能力的同时选择分块长度的指导原则，对动作分块Transformer的设计具有直接参考价值。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16889v1",
+      "source": "arxiv",
+      "title": "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory",
+      "abstract": "Long-horizon robot manipulation chains many contact-rich skills into one multi-stage task. Vision-language-action (VLA) models increasingly master the individual skills, yet the chain still fails: errors compound beyond the policy's ability to correct, and one subtask silently constrains the next. A promising recipe freezes the VLA and puts an LLM agent in charge: it plans in language, moves in free space with analytic primitives, invokes the VLA only for contact-rich segments, and writes adaptation into language memory. Applied to long horizons, it breaks twice. (1) Competence comes from whole-task exploration at test time, whose cost is multiplicative in stages: if one stage needs T episodes, a K-stage task needs about T^K, and a failure does not reveal which stage caused it. (2) It has no representation of transitions: the VLA primitive carries an exit but no entry condition, so a subtask can succeed in a form its successor cannot use. We present BATON. Against (1), BATON makes the subtask the unit of exploration: each is explored in the cheap short-horizon regime and its solution stored in memory; a long-horizon trajectory is then composed from these solutions rather than discovered whole. Cost becomes additive (T*K) and every failure is attributed to a single stage. Against (2), BATON equips exploration with a transition-aware memory. Within a subtask, a verifier agent governs the invocation transition: the VLA is called only after the wrist view confirms the scene is ready. Across subtasks, a handoff transition restores an entry state disturbed by the predecessor's residue, and a lookahead transition selects the strategy whose outcome the successor can inherit. No parameters are updated. On the long-horizon benchmark RoboMemArena, BATON improves task success by 11.6% and cumulative success by 14.9% over the SoTA.",
+      "authors": [
+        "Bingxin Xu",
+        "Yuzhang Shang",
+        "Emilio Ferrara"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-08-17T17:59:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.16889v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Long-horizon manipulation chaining contact-rich skills with LLM agent and memory",
+      "llm_evidence_cn": "基于智能体子任务探索和过渡感知记忆的长时程接触丰富操作",
+      "llm_evidence": "基于智能体子任务探索和过渡感知记忆的长时程接触丰富操作",
+      "canonical_evidence": "基于智能体子任务探索和过渡感知记忆的长时程接触丰富操作",
+      "llm_tldr_en": "Addresses long-horizon manipulation by freezing a VLA policy and letting an LLM agent plan in language, call the VLA only for contact-rich segments, and write adaptation into transition-aware memory, greatly reducing whole-task exploration cost and improving success rates.",
+      "llm_tldr_cn": "长时程机器人操作需要串联多个接触丰富技能，但误差累积和子任务间相互约束常导致任务失败。本文提出BATON框架，冻结VLA策略，由LLM智能体以语言规划，调用分析式原语处理自由空间运动，仅对接触丰富片段调用VLA，并通过过渡感知记忆记录适配信息。实验表明该方法能显著降低阶段级探索成本，提升多阶段任务成功率，为技能库与高层规划的集成提供了可行范式。",
+      "llm_tldr": "长时程机器人操作需要串联多个接触丰富技能，但误差累积和子任务间相互约束常导致任务失败。本文提出BATON框架，冻结VLA策略，由LLM智能体以语言规划，调用分析式原语处理自由空间运动，仅对接触丰富片段调用VLA，并通过过渡感知记忆记录适配信息。实验表明该方法能显著降低阶段级探索成本，提升多阶段任务成功率，为技能库与高层规划的集成提供了可行范式。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16172v1",
+      "source": "arxiv",
+      "title": "SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation",
+      "abstract": "At every re-observation point in a hierarchical Vision-Language-Action (VLA) system, two interface decisions must be made: when to terminate the current subtask and how far to execute the proposed action chunk. These decisions are mutually dependent---the optimal stopping point depends on what the executor plans to do, while the optimal execution length depends on where the subtask boundary lies---yet existing architectures evaluate them in isolation, an asymmetry neither module can overcome alone. We present SparkVLA, a stop-aware hierarchical VLA that resolves this mutual dependency by formulating both decisions as a single ranking: Stop competes against every action-prefix length in a unified candidate set, and the system selects the highest-scoring option, eliminating threshold tuning and requiring only offline ordinal preferences. An Anchor-Conditioned Context Encoding module caches a history-aware subtask anchor encoding onset-state memory and goal semantics, guiding visual-token pruning toward task-relevant regions; a Stop-Aware Action-Prefix Selection head scores all candidates via full self bnattention at chunk boundaries for efficiency. On RoboCerebra, SparkVLA achieves 47.12% success rate, surpassing the official hierarchical baseline by 30.57% and the strongest reproducible method by 26.83% Real-robot experiments on multi-step tasks further validate these gains on physical hardware.",
+      "authors": [
+        "Xunyao Lei",
+        "Renjun Wu",
+        "Tianlin Huo",
+        "Xuesong Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T06:43:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.16172v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adaptive action chunking for long-horizon manipulation",
+      "llm_evidence_cn": "面向长时程操作的自适应动作分块",
+      "llm_evidence": "面向长时程操作的自适应动作分块",
+      "canonical_evidence": "面向长时程操作的自适应动作分块",
+      "llm_tldr_en": "Proposes SparkVLA, a stop-aware hierarchical vision-language-action model that jointly ranks stopping and action-prefix lengths in a unified candidate set to resolve the mutual dependency, improving long-horizon manipulation.",
+      "llm_tldr_cn": "长时程操作中，何时结束当前子任务与执行多长的动作分块是相互依赖的决策。现有分层视觉-语言-动作模型将二者割裂评估，导致长程任务失败。SparkVLA通过将停止与动作前缀长度统一建模为排序问题，在一个候选集中同时决策，从而在长时程操作基准上取得更优性能。该工作为分层机器人策略的接口设计提供了新思路。",
+      "llm_tldr": "长时程操作中，何时结束当前子任务与执行多长的动作分块是相互依赖的决策。现有分层视觉-语言-动作模型将二者割裂评估，导致长程任务失败。SparkVLA通过将停止与动作前缀长度统一建模为排序问题，在一个候选集中同时决策，从而在长时程操作基准上取得更优性能。该工作为分层机器人策略的接口设计提供了新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16590v1",
+      "source": "arxiv",
+      "title": "Zetta $ζ$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
+      "abstract": "Embodied agents are increasingly used to close the gap left by end-to-end policy models. Yet the agentic path has not realized closed-loop learning in physical execution: existing harnesses remain largely open-loop, following fixed skills during rollout and reflecting only after an episode completes. Such post-hoc reflection cannot govern execution as it unfolds, because physical interaction requires decisions to track rapidly changing robot-environment states at a frequency beyond today's large agentic models. We present Zetta, a closed-loop embodied harness that evolves code-based runtime critics and recovery skills online while keeping the base policy frozen. Through three timescale-separated loops, Zetta provides action-frequency governance, rollout-level critic-recovery proposal, and validation-gated skill updates. Together with Z-Infra, a rollout infrastructure decoupling agent logic from heterogeneous execution resources, Zetta achieves state-of-the-art success on LIBERO-Pro and RoboCasa under our current rollout budget, reaching 90.8% and 93.6%, with an 11.1x inference speedup; success continues to scale with self-exploration experience; learned skills transfer zero-shot, and clear robotic \"Aha Moments\" emerge. These results show that closed-loop harness self-evolution opens a scaling path for reliable physical intelligence.",
+      "authors": [
+        "Xin Ding",
+        "Liang Mi",
+        "Mingzhe Huang",
+        "Zixuan Wang",
+        "Chao Zhang",
+        "Zixu Hao",
+        "Fu Chen",
+        "Xiangyu Li",
+        "Yikai Zheng",
+        "Yaoyu Guo",
+        "Weijun Wang",
+        "Kun Li",
+        "Hao Wu",
+        "Yunxin Liu",
+        "Ting Cao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T13:49:43+00:00",
+      "link": "https://arxiv.org/pdf/2608.16590v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "closed-loop harness that evolves recovery skills and runtime critics online for embodied control",
+      "llm_evidence_cn": "闭环具身框架在运行时进化恢复技能和批评器，用于失败恢复与安全约束",
+      "llm_evidence": "闭环具身框架在运行时进化恢复技能和批评器，用于失败恢复与安全约束",
+      "canonical_evidence": "闭环具身框架在运行时进化恢复技能和批评器，用于失败恢复与安全约束",
+      "llm_tldr_en": "Zetta is a closed-loop embodied harness that online evolves code-based runtime critics and recovery skills while keeping the base policy frozen, enabling failure recovery during execution.",
+      "llm_tldr_cn": "现有具身智能体在执行时大多开环，只能在回合结束后反思，无法在物理交互过程中动态调整。Zetta提出一种闭环具身框架，通过三个时间尺度的循环在保持基座策略不变的情况下，在线演化基于代码的运行期批评器和恢复技能。这使得智能体能够以动作频率实时监控并修正执行过程，提升失败恢复能力。该框架可看作将恢复逻辑与低层策略结合的一种解决方案。",
+      "llm_tldr": "现有具身智能体在执行时大多开环，只能在回合结束后反思，无法在物理交互过程中动态调整。Zetta提出一种闭环具身框架，通过三个时间尺度的循环在保持基座策略不变的情况下，在线演化基于代码的运行期批评器和恢复技能。这使得智能体能够以动作频率实时监控并修正执行过程，提升失败恢复能力。该框架可看作将恢复逻辑与低层策略结合的一种解决方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.16715v1",
+      "source": "arxiv",
+      "title": "MatchingPolicy: Correspondence-Aware Policy Enables Cross-Object In-Context Learning",
+      "abstract": "In-context imitation learning enables few-shot policy generalization but struggles to maintain performance on unseen objects and novel scenarios. To address this, we introduce MatchingPolicy, a correspondence-driven framework that explicitly decouples demonstration-to-scene matching from policy learning. Central to our method is a correspondence-aware diffusion policy that conditions robotic actions directly on dense semantic correspondences. This architectural separation resolves the inherent conflict between correspondence identification and action adaptation, enabling robust out-of-distribution transfer. Our framework integrates vision foundation models with a novel two-stage matching algorithm to dynamically establish reliable correspondences. Extensive evaluations on RLBench and real-world manipulation tasks confirm that MatchingPolicy achieves superior few-shot performance, generalizing reliably across unseen object instances and semantic categories.",
+      "authors": [
+        "Qijin She",
+        "Hanyang Yu",
+        "Zeming Li",
+        "Ping Tan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T15:29:58+00:00",
+      "link": "https://arxiv.org/pdf/2608.16715v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "correspondence-aware diffusion policy for cross-object in-context imitation learning and out-of-distribution generalization",
+      "llm_evidence_cn": "对应感知扩散策略实现跨物体上下文内模仿学习与分布外泛化",
+      "llm_evidence": "对应感知扩散策略实现跨物体上下文内模仿学习与分布外泛化",
+      "canonical_evidence": "对应感知扩散策略实现跨物体上下文内模仿学习与分布外泛化",
+      "llm_tldr_en": "MatchingPolicy decouples matching from action adaptation, using dense semantic correspondences to enable robust cross-object in-context imitation learning.",
+      "llm_tldr_cn": "面向多物体操控的泛化难题，论文提出对应关系驱动的框架，将示范与场景匹配同动作适应解耦。核心是对应感知的扩散策略，直接把动作条件建立在稠密语义对应上，并结合视觉基础模型与两阶段匹配算法。在真实机器人实验中，该方法显著提升了对未见物体的少样本模仿性能，为技能组合泛化提供了重要借鉴。",
+      "llm_tldr": "面向多物体操控的泛化难题，论文提出对应关系驱动的框架，将示范与场景匹配同动作适应解耦。核心是对应感知的扩散策略，直接把动作条件建立在稠密语义对应上，并结合视觉基础模型与两阶段匹配算法。在真实机器人实验中，该方法显著提升了对未见物体的少样本模仿性能，为技能组合泛化提供了重要借鉴。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.14822v1",
+      "source": "arxiv",
+      "title": "Imagining Recovery: Inference-Time Counterfactual Realignment for Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) models have improved the flexibility and generality of robotic manipulation, yet they remain fragile to online disruptions, such as changes in task goal, scene configuration, or robot state. Existing recovery methods often require failure data, policy retraining, or external corrective agents, introducing additional data requirements and execution risks. We propose Counterfactual Realignment (CoRe), a training-free framework that recovers a frozen VLA at inference time without failure data. Upon detecting a deviation, CoRe imagines how the policy would continue toward the current goal from a recent viable state, using synthesized observations in place of physical execution, and then minimally realigns the robot and scene to rejoin this imagined continuation before returning control to the policy. Recovery is therefore planned without physical trial-and-error, preserves completed task progress, and handles both mid-episode instruction changes and physical perturbations in a unified manner. Extensive experiments across multiple simulators, VLA backbones, and real-world settings show that CoRe improves success rates by up to 85.0 percentage points to near-nominal levels while reducing physical restorations by 42.2%, without policy fine-tuning or failure-specific recovery training.",
+      "authors": [
+        "Yanyan Zhang",
+        "Disheng Liu",
+        "Kai Ye",
+        "Chaoda Song",
+        "Xinpeng Li",
+        "Mohsen Hariri",
+        "Vikash Singh",
+        "Yu Yin",
+        "Vipin Chaudhary"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-14T18:49:46+00:00",
+      "link": "https://arxiv.org/pdf/2608.14822v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "inference-time counterfactual recovery for frozen VLA policies",
+      "llm_evidence_cn": "对冻结VLA策略的推理时反事实恢复",
+      "llm_evidence": "对冻结VLA策略的推理时反事实恢复",
+      "canonical_evidence": "对冻结VLA策略的推理时反事实恢复",
+      "llm_tldr_en": "CoRe recovers frozen VLA policies at inference time without failure data by imagining counterfactual continuations from recent viable states and minimally realigning, avoiding policy retraining and external agents.",
+      "llm_tldr_cn": "视觉-语言-动作模型容易受到目标变化、场景配置或机器人状态扰动的影响，而现有恢复方法依赖失败数据或重新训练。CoRe在推理时检测到偏差后，从最近的可行状态想象策略如何继续走向当前目标，再对冻结VLA进行最小化重对齐。该框架无需失败数据且不改变模型权重，能更安全地完成在线恢复，减少额外数据需求和执行风险。",
+      "llm_tldr": "视觉-语言-动作模型容易受到目标变化、场景配置或机器人状态扰动的影响，而现有恢复方法依赖失败数据或重新训练。CoRe在推理时检测到偏差后，从最近的可行状态想象策略如何继续走向当前目标，再对冻结VLA进行最小化重对齐。该框架无需失败数据且不改变模型权重，能更安全地完成在线恢复，减少额外数据需求和执行风险。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.10775v1",
+      "source": "arxiv",
+      "title": "SkillLens: Visual Skill Cards for Retrieval-Augmented GUI Action Prediction and On-Policy Distillation",
+      "abstract": "Computer-using agents can perceive rich software interfaces, yet their decisions often lack visual procedural memory: they may recognize individual controls without identifying which familiar workflow is active, which control matters next, or what evidence would confirm progress. Raw interaction traces preserve such information but are long and noisy to condition on, whereas text-only skills often omit the visual state that makes a procedure applicable. We introduce Visual Skill Cards (VSCs), a state-conditioned memory representation that binds reusable procedures with applicability cues, visual evidence, and verification signals. SkillLens constructs VSCs from heterogeneous interaction experience through Trace-to-Visual-Skill-Card and, at inference time, retrieves relevant cards and selectively expands only the evidence needed by a fixed visual-language model executor for grounded GUI action prediction. The same representation also supports CardDistill, which uses VSC evidence as privileged teacher context to train a student that acts without runtime card retrieval. Across Multimodal-Mind2Web and WebLINX-BrowserGym, SkillLens improves the frozen GPT-5.4-mini executor by +11.6 points in Step SR and +2.9 points in Overall, respectively; CardDistill further improves the corresponding student-only Qwen3-VL-2B metrics by +12.0 and +3.2 points.",
+      "authors": [
+        "Zhou Liu",
+        "Ligang Huang",
+        "Zeli Su",
+        "Zewei Pan",
+        "Zhaoyang Han",
+        "Xing Chen",
+        "Yuanfeng Song",
+        "Wentao Zhang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-11T10:28:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.10775v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Visual Skill Cards bind reusable procedures with applicability cues and verification signals for action prediction, a transferable skill-library approach",
+      "llm_evidence_cn": "通过视觉技能卡将可复用流程与适用线索、验证信号绑定，用于动作预测，是技能库方法在GUI领域的迁移参考",
+      "llm_evidence": "通过视觉技能卡将可复用流程与适用线索、验证信号绑定，用于动作预测，是技能库方法在GUI领域的迁移参考",
+      "canonical_evidence": "通过视觉技能卡将可复用流程与适用线索、验证信号绑定，用于动作预测，是技能库方法在GUI领域的迁移参考",
+      "llm_tldr_en": "Proposes Visual Skill Cards, a state-conditioned skill representation with applicability cues and verification, and SkillLens builds them from interaction traces for retrieval-augmented GUI action prediction and on-policy distillation.",
+      "llm_tldr_cn": "该文指出计算机操作智能体缺乏视觉程序性记忆，难以判断当前工作流与下一步操作，因此提出视觉技能卡这一状态条件化记忆表示，将可复用流程与适用线索、视觉证据和验证信号绑定，并基于异构交互轨迹构建技能库，用于检索增强的GUI动作预测与在线蒸馏。该方法为可复用技能库的构建与条件化动作生成提供了通用范式，可迁移到机器人操作技能库设计中。",
+      "llm_tldr": "该文指出计算机操作智能体缺乏视觉程序性记忆，难以判断当前工作流与下一步操作，因此提出视觉技能卡这一状态条件化记忆表示，将可复用流程与适用线索、视觉证据和验证信号绑定，并基于异构交互轨迹构建技能库，用于检索增强的GUI动作预测与在线蒸馏。该方法为可复用技能库的构建与条件化动作生成提供了通用范式，可迁移到机器人操作技能库设计中。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.15026v1",
+      "source": "arxiv",
+      "title": "PACE: Phase-Progress-Aware Credit for Long-Horizon Embodied Manipulation",
+      "abstract": "Post-training of vision-language-action (VLA) models typically relies on expert demonstrations and policy interaction trajectories. However, in long-horizon manipulation, a single episode often spans hundreds of control steps and multiple phases, while success or failure is only revealed at episode termination. Policy improvement therefore requires step-level credit signals to distinguish behaviors that advance the task from those that stall or regress. We present PACE, a credit-assignment framework for post-training on long-horizon manipulation, centered on a phase-progress-aware critic. PACE consists of two key modules: (1) the Global-Local Cooperative Value-Correction Critic (GLC-Critic) aggregates visual and motion-difference features within local temporal windows to infer the phase and intra-phase progress of each step, and applies residual correction to a discretized remaining-cost distribution accordingly, enabling step-level credit assignment; (2) Progressive Policy Distillation (PPD) converts credit into positive and negative conditions via task-wise thresholds and trains a credit-conditioned action generation policy: it first protects the pretrained policy with high-credit positive samples, then incorporates all positive and negative credits to learn the quality boundary, and at inference amplifies high-credit behaviors through the difference between conditional outputs. Extensive simulation experiments and diverse real-world robotic-arm experiments demonstrate that PACE consistently achieves significant improvements over the strongest baseline.",
+      "authors": [
+        "Chengye Song",
+        "Jiawei Zhang",
+        "Rui Song",
+        "Shengqi Wang",
+        "Xiangrong Zhang",
+        "Ziyi Wang",
+        "Huanbin Zhou",
+        "Hongzhou Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-15T04:25:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.15026v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "phase-progress-aware credit for long-horizon manipulation, aligns with local phase conditioning",
+      "llm_evidence_cn": "面向长时程操作的分阶段进度感知信用分配，与局部相位条件化一致",
+      "llm_evidence": "面向长时程操作的分阶段进度感知信用分配，与局部相位条件化一致",
+      "canonical_evidence": "面向长时程操作的分阶段进度感知信用分配，与局部相位条件化一致",
+      "llm_tldr_en": "PACE provides step-level phase-progress-aware credit signals for post-training VLA policies in long-horizon manipulation, distinguishing phase-advancing behaviors from stagnation.",
+      "llm_tldr_cn": "长时程操作中一个回合常跨数百步并包含多个相位，而成功或失败仅在回合结束才显现，导致策略改进缺乏步级信用信号。为此提出PACE，以相位进度感知评论家为核心的信用分配框架，聚合局部视觉与运动差分特征，提供全局-局部协作的价值校正；同时结合阶段置信度加权与相位进度差分目标，为VLA策略后训练提供细粒度指导。实验表明PACE能有效区分推进任务与停滞回退行为，提升长时程操作策略的微调效果。该方法为相位感知的模仿学习与强化学习提供了重要组件。",
+      "llm_tldr": "长时程操作中一个回合常跨数百步并包含多个相位，而成功或失败仅在回合结束才显现，导致策略改进缺乏步级信用信号。为此提出PACE，以相位进度感知评论家为核心的信用分配框架，聚合局部视觉与运动差分特征，提供全局-局部协作的价值校正；同时结合阶段置信度加权与相位进度差分目标，为VLA策略后训练提供细粒度指导。实验表明PACE能有效区分推进任务与停滞回退行为，提升长时程操作策略的微调效果。该方法为相位感知的模仿学习与强化学习提供了重要组件。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.11363v1",
+      "source": "arxiv",
+      "title": "Adaptation of Generalist Robot Policies with Minimal Data",
+      "abstract": "A central goal in robot learning is to move beyond task-specific human data collection toward robots that improve through autonomous interaction. Yet fully autonomous learning remains difficult with current policies: sparse rewards and weak zero-shot exploration make it unlikely that a robot will discover successful behavior from scratch. We study minimal-data adaptation, a regime in which a pre-trained robot policy must learn a new task from as little as one demonstration followed by autonomous online interaction. This setting serves as the closest tractable proxy for fully autonomous improvement, allowing us to study whether minimal human guidance can bootstrap autonomous learning and what algorithmic ingredients make it feasible. We build MiDAS, a simple offline-to-online RL recipe that first anchors a pre-trained VLA to the target task with behavior cloning on single/few demonstrations, then improves it through value-based online RL on a residual policy parameterization. Across LIBERO and RoboCasa, MiDAS recovers strong task performance from as little as one demonstration, substantially outperforming baselines and generalizing beyond demonstrated conditions. We further evaluate MiDAS on a bimanual YAM platform. Starting from a fragile low-success policy obtained from a single demonstration, MiDAS improves its robustness and learns new successful behaviors over ~6 hours of online interaction. To the best of our knowledge, this is the first demonstration of reliable robot policy adaptation from a single task demonstration.",
+      "authors": [
+        "Shreyas Kowshik",
+        "Sreyas Venkataraman",
+        "Leo Wang",
+        "Niharika Pant",
+        "Max Simchowitz",
+        "Aviral Kumar"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-08-11T19:15:26+00:00",
+      "link": "https://arxiv.org/pdf/2608.11363v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Minimal-data adaptation of generalist robot policies from one demo and online interaction, supporting generalization to new manipulation tasks",
+      "llm_evidence_cn": "用最少一条演示加自主在线交互适配通用机器人策略，支持新操作任务泛化",
+      "llm_evidence": "用最少一条演示加自主在线交互适配通用机器人策略，支持新操作任务泛化",
+      "canonical_evidence": "用最少一条演示加自主在线交互适配通用机器人策略，支持新操作任务泛化",
+      "llm_tldr_en": "Studies minimal-data adaptation: a pre-trained robot policy learns a new task from one demonstration plus autonomous online interaction; builds MiDAS, a simple offline RL method, to bootstrap learning in this hard regime.",
+      "llm_tldr_cn": "该文面向通用机器人策略在完全自主学习中稀疏奖励与探索困难的问题，提出最小数据适配设定：预训练策略仅需一条演示即可启动新任务学习，随后进行自主在线交互。作者构建MiDAS方法，将离线演示与在线采样稳定结合，在少量人工指导下引导策略持续改进，为机器人从极少人类示范中泛化到新操作任务提供了实用算法框架。",
+      "llm_tldr": "该文面向通用机器人策略在完全自主学习中稀疏奖励与探索困难的问题，提出最小数据适配设定：预训练策略仅需一条演示即可启动新任务学习，随后进行自主在线交互。作者构建MiDAS方法，将离线演示与在线采样稳定结合，在少量人工指导下引导策略持续改进，为机器人从极少人类示范中泛化到新操作任务提供了实用算法框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.15088v1",
+      "source": "arxiv",
+      "title": "Max-Q Selective Imitation for Human-in-the-Loop Online Robot Learning",
+      "abstract": "Human-in-the-loop (HIL) online reinforcement learning for real robots must absorb human interventions quickly while continuing to improve beyond the human prior. We present a training method for this setting based on two components. First, an \\emph{MC Q-chunk} critic regresses chunk-level action values onto Monte Carlo returns from the replay buffer, performing sample-average (behavior) policy evaluation so that intervention trajectories are credited directly rather than diluted by current-policy TD backups. Second, \\emph{max-Q selective imitation} updates the actor by imitating, at each state, the higher-$Q$ action between the current policy action and a buffer sample under a hard winner-take-all rule. This rule automatically switches between learning from interventions and on-policy self-improvement: when the autonomous policy is stronger, targets align with the policy distribution, reducing the policy--target-sample gap that otherwise induces execution-time distribution shift. In practice we score candidates with a standard critic ensemble mean to reduce comparison noise, without softening targets or introducing score-gap thresholds. On a real USB pick-and-insertion task with 20 demonstrations, ACT QChunk-MCBC attains 99\\% success within 30 minutes of HIL training, whereas HIL-SERL requires about 5 hours to converge. In simulation on Peg Insertion and Square, ACT/Flow Q-chunk variants similarly reach $\\ge$96\\% success within roughly half an hour of effective training, outperforming HIL-SERL, EXPO, and E2HiL on the success--time frontier.",
+      "authors": [
+        "Zihang Wang",
+        "Yishan Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-15T07:13:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.15088v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Chunk-level Q-critic and selective imitation use chunked actions for continuous robot control, bridging action-chunking imitation in online learning",
+      "llm_evidence_cn": "基于动作块级Q值批评器和选择性模仿，在在线机器人学习中利用分块动作，与方法体系相连",
+      "llm_evidence": "基于动作块级Q值批评器和选择性模仿，在在线机器人学习中利用分块动作，与方法体系相连",
+      "canonical_evidence": "基于动作块级Q值批评器和选择性模仿，在在线机器人学习中利用分块动作，与方法体系相连",
+      "llm_tldr_en": "Proposes an HIL RL method with an MC Q-chunk critic (chunk-level action values) and max-Q selective imitation, which imitates the higher-Q action between policy and buffer to absorb human interventions and keep improving.",
+      "llm_tldr_cn": "该文针对人在回路的在线机器人强化学习中人类干预难以被充分利用且容易干扰策略提升的问题，提出MC Q-chunk批评器，将块级动作价值回归到蒙特卡洛回报，并配合max-Q选择性模仿更新，每次在该策略与缓冲样本中选择Q值更高的动作进行模仿。该方法可自动在学习新技能与保留人类先验之间切换，在真实机器人在线学习中显示出更高效的干预吸收与持续改进能力。",
+      "llm_tldr": "该文针对人在回路的在线机器人强化学习中人类干预难以被充分利用且容易干扰策略提升的问题，提出MC Q-chunk批评器，将块级动作价值回归到蒙特卡洛回报，并配合max-Q选择性模仿更新，每次在该策略与缓冲样本中选择Q值更高的动作进行模仿。该方法可自动在学习新技能与保留人类先验之间切换，在真实机器人在线学习中显示出更高效的干预吸收与持续改进能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.15440v1",
+      "source": "arxiv",
+      "title": "Accelerating Mixed Discrete-Continuous Motion Planning via Neural Graphs of Convex Sets",
+      "abstract": "Motion planning problems such as collision-free navigation and contact-rich manipulation can be naturally formulated as optimization problems that couple discrete decisions with continuous trajectories. The Graphs of Convex Sets (GCS) framework offers a practical solution to these problems. It represents discrete decisions as nodes of a graph and encodes continuous trajectories in the edges connecting them. However, the resulting optimization subproblems can become computationally prohibitive for online replanning.   In this work, we propose a learning-based strategy to mitigate this limitation. Specifically, we replace the costly convex relaxation step required by nominal GCS with a single forward pass through a Graph Attention Network that predicts a set of highly probable candidate paths through the graph. A lightweight ranking network then orders these candidates by their estimated trajectory cost. Evaluating them in this order, we terminate our search early while still recovering a near-optimal motion plan. We validate the resulting pipeline across diverse robotic tasks, including collision-free motion planning for a 3D quadrotor and a 7-DoF manipulator, and planning through contact for planar pushing. Across both convex and non-convex cost and constraint settings, our approach yields up to two orders of magnitude speedup over nominal GCS while maintaining a 100% success rate, at the cost of some suboptimality in the recovered solutions. Code implementations and video demonstrations can be found at https://neural-gcs.github.io/.",
+      "authors": [
+        "Ananya Trivedi",
+        "Sarvesh Prajapati",
+        "Mohamed Khalid M Jaffar",
+        "Zhexin Xu",
+        "David Rosen",
+        "Taskin Padir"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-15T22:51:56+00:00",
+      "link": "https://arxiv.org/pdf/2608.15440v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learning-based acceleration of mixed discrete-continuous motion planning",
+      "llm_evidence_cn": "学习加速混合离散-连续运动规划",
+      "llm_evidence": "学习加速混合离散-连续运动规划",
+      "canonical_evidence": "学习加速混合离散-连续运动规划",
+      "llm_tldr_en": "Proposes a learning-based strategy that replaces costly convex relaxation in Graphs of Convex Sets with a graph attention network forward pass, accelerating mixed discrete-continuous motion planning and online replanning.",
+      "llm_tldr_cn": "接触丰富的操控等运动规划可建模为离散决策与连续轨迹耦合的优化问题，GCS能求解但凸松弛在线代价过高。本文用图注意力网络一次前向传播替代GCS中的昂贵凸松弛步骤，从而加速混合离散-连续规划。该方法支持在线重规划，在机器人与接触丰富任务中减少计算开销，同时保持规划质量。",
+      "llm_tldr": "接触丰富的操控等运动规划可建模为离散决策与连续轨迹耦合的优化问题，GCS能求解但凸松弛在线代价过高。本文用图注意力网络一次前向传播替代GCS中的昂贵凸松弛步骤，从而加速混合离散-连续规划。该方法支持在线重规划，在机器人与接触丰富任务中减少计算开销，同时保持规划质量。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

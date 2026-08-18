@@ -1,0 +1,731 @@
+Title: SkillLens: Visual Skill Cards for Retrieval-Augmented GUI Action Prediction and On-Policy Distillation
+
+URL Source: https://arxiv.org/pdf/2608.10775v1
+
+Published Time: Wed, 12 Aug 2026 00:56:28 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+## SkillLens: Visual Skill Cards for Retrieval-Augmented GUI Action Prediction and On-Policy Distillation 
+
+Zhou Liu 1,2 , Ligang Huang 1, Zeli Su 1, Zewei Pan 3,Zhaoyang Han 1, Xing Chen 2, Yuanfeng Song 2, Wentao Zhang 1∗
+
+1 Peking University 2 ByteDance 3 Shanghai Jiao Tong University 
+
+Abstract 
+
+Computer-using agents can perceive rich software interfaces, yet their decisions often lack visual procedural memory: they may recognize individual controls without identifying which familiar workflow is active, which control matters next, or what evidence would confirm progress. Raw interaction traces preserve such information but are long and noisy to condi-tion on, whereas text-only skills often omit the visual state that makes a procedure applicable. We introduce Visual Skill Cards (VSCs), a state-conditioned memory representation that binds reusable procedures with applicability cues, visual ev-idence, and verification signals. SkillLens constructs VSCs from heterogeneous interaction experience through Trace-to-Visual-Skill-Card and, at inference time, retrieves relevant cards and selectively expands only the evidence needed by a fixed visual-language model executor for grounded GUI action prediction. The same representation also supports CardDis-till , which uses VSC evidence as privileged teacher context to train a student that acts without runtime card retrieval. Across Multimodal-Mind2Web and WebLINX-BrowserGym, Skill-Lens improves the frozen GPT-5.4-mini executor by +11.6 points in Step SR and +2.9 points in Overall, respectively; CardDistill further improves the corresponding student-only Qwen3-VL-2B metrics by +12.0 and +3.2 points. 
+
+Introduction 
+
+Computer-using agents (CUAs) aim to turn natural-language intent into actions on real graphical user interfaces (GUIs). Recent visual-language models (VLMs) make this setting increasingly feasible by parsing screenshots, recognizing in-terface text, and reasoning about visible user interface (UI) elements (OpenAI 2024; Gemini Team, Google 2025; Wang et al. 2024; Bai et al. 2025b,a). Yet perception alone does not provide procedural memory: a model may recognize the objects on a screen but still miss which familiar workflow it is seeing, which similar-looking control matters next, or what visual state should confirm progress. As shown in Figure 1, lacking this procedural visual memory often leads agents to misidentify controls and make incorrect UI predictions. 
+
+∗Corresponding author. Without SkillLens X 
+
+> With SkillLens / VSC Evidence
+
+✓            
+
+> Task Live Screen Executor Outcome / State Cue
+> Add the blue wireless mouse to my cart.
+> User Instruction
+> <- -> =
+> ★★★★☆
+> $29.99
+> Buy Now Add to Cart Add to Wishlist
+> Add to Cart Add to Cart Add to Cart
+> Similar visible controls, no reusable visual evidence
+> Buy Now Add to Cart Add to Wishlist
+> Add to Cart Add to Cart Add to Cart
+
+? Unstructured choice among similar buttons 
+
+> Wrong similar button Buy Now
+> 0
+> Cart unchanged No item added.
+
+X                  
+
+> Task Live Screen Retrieve / Select VSC Selective Expansion Grounded Action Outcome / State Cue
+> Add the blue wireless mouse to my cart.
+> User Instruction
+> <- -> =
+> ★★★★☆
+> $29.99
+> Buy Now Add to Cart Add to Wishlist
+> Add to Cart Add to Cart Add to Cart
+> VSC Library
+> Add item to cart
+> E-commerce Button
+> ✓
+> Buy item now
+> E-commerce Payment ...
+> Add item to wishlist
+> E-commerce Wishlist ...
+> ...
+> Select the VSC that matches the current user intention.
+> Selected VSC Evidence
+> Before Target (Add to Cart) After
+> ★
+> Buy Now
+> ☆☆
+> Add to Cart
+> ✓
+> Added to cart!
+> ✓Use VSC evidence (Before-Target-After) to disambiguate the correct control.
+> Agent clicks the correct button
+> Add to Cart
+> ✓
+> Correct button
+> 1
+> Cart updated
+> Item successfully added to cart.
+
+✓
+
+Figure 1: Representative SkillLens case. Visual Skill Card (VSC) evidence helps disambiguate similar controls and ground the correct action. External skills offer a way to provide such memory (Chen et al. 2026; Xie et al. 2025b; Zhang et al. 2026a; Jiang et al. 2026). Text-centric skills, however, omit the screen state and grounding evidence that make a procedure applica-ble, while raw demonstrations preserve that evidence but are long, noisy, and difficult to reuse. Recent multimodal skill packages retain visual evidence, but do not jointly address bounded runtime access and parameterized internalization. The design problem is therefore not simply to append im-ages to skills. A practical visual-procedural interface must normalize heterogeneous experience into a common unit, separate low-cost retrieval from expensive visual expansion, and use reference evidence without allowing it to override the live screen. We propose SkillLens , a runtime layer that equips a frozen VLM executor with external Visual Skill Cards (VSCs). A VSC binds procedure text, applicability cues, visual evi-dence, and verification signals into a state-conditioned mem-ory object. SkillLens constructs these cards through Trace-to-VSC , which converts heterogeneous interaction sources into a common schema (Deng et al. 2023; Lù, Kasner, and Reddy 2024; Xie et al. 2024; Lin et al. 2024; Wang et al. 2025b). Its key design separates retrieval from evidence expansion: a lightweight index retrieves a small candidate set, after which SkillLens loads only the selected high-resolution views and grounds the final action on the live screen. This separation bounds runtime evidence while preserving fine-grained vi-sual detail, and its modular stages allow library coverage, retrieval, and execution to be audited independently. arXiv:2608.10775v1 [cs.AI] 11 Aug 2026 Offline 
+
+> Build Visual Skill Cards (VSCs) from Public Data
+> Source Records
+> * OSWorld Traces * Mind2Web Traces * WebLINX Traces * ScreenSpot-Pro * Instruction Benchmarks * Videos & Tutorials * ...
+
+-> 
+
+> Record Parsers
+> * Trace parsing * State abstraction * Step segmentation * Skill extraction * Skill annotation
+
+->  
+
+> VSC Authoring Tools
+> * UI elements & widgets * Keywords & intent tags * Pre/Post conditions * ...
+
+-> 
+
+Visual Skill Card Library (VSCs) 
+
+> hierarchical when source supports it; execution-level cards in main experiments
+> System
+> File Mgmt
+> Settings
+> Install / Uninstall
+> ...
+> Web
+> Search
+> Shopping
+> Social Media
+> ...
+> Office
+> Word
+> Excel
+> PowerPoint
+> ...
+> Dev Tools
+
+... 
+
+> VSC #1: Open File
+> Goal: Open a file from File Explorer Action: Click > Navigate > Open Keywords: open, file, explorer, navigate ...
+> VSC #2: Web Search
+> Goal: Search information on web Action: Type > Click > View Keywords: search, web, google, query ...
+> VSC #K: Install App
+> Goal: Install an application Action: Next > Agree > Install Keywords: install, setup, next, agree
+
+... 
+
+> Candidate-board selector diagnostic
+> Board 1Board 2
+
+⋮
+
+> Board N
+
+Online 
+
+SkillLens Inference Pipeline    
+
+> 1. Source Records
+> User task / instruction
+> Current screenshot
+> Other context (optional)
+> 2. Retrieve / Select VSCs
+> Retrieve relevant VSCs from the library and select top-K candidates.
+> Top-K VSCs
+> 1...
+> 2...
+> K...
+
+⋮
+
+> 3. Selective Evidence Expansion
+> Expand only the selected VSCs with additional context.
+> Expanded Evidence
+> 4. Frozen VLM Executor
+> e.g., Qwen / GPT / Gemini
+> Consume expanded evidence and produce a grounded action.
+> Predicted Action
+> {"type": "click", "x": 623, "y": 418, "element_uid": "btn_total", "confidence": 0.86 }
+> 5. Grounded Action
+> Execute the predicted action in the environment.
+> Action Example
+> Optional state check when cues exist
+> CardDistill (Training-Time)
+> Separate from SkillLens Runtime
+> VSC Evidence
+> Curated VSCs and expanded context from the library.
+> Teacher Context
+> High-quality signals from expert / stronger teacher policies.
+> Student Policy
+> Distilled policy learned to imitate teacher decisions.
+
+Figure 2: Overview of SkillLens. Source-specific adapters convert public traces and annotations into Visual Skill Cards (VSCs); multi-step sources yield hierarchical cards, while static sources yield execution-level cards. At inference, SkillLens retrieves candidate VSCs, expands the needed evidence views, conditions a frozen VLM executor on the live screen and selected evidence, and exposes verification cues for observable progress or completion. VSCs further provide a common interface between ex-ternal memory and parameterized knowledge. SkillLens uses VSCs at inference time without updating the execu-tor, whereas CardDistill uses the same cards as privileged teacher context for on-policy distillation. The teacher acts with VSC evidence; the student observes only the benchmark-native context and learns on its own action prefixes. CardDis-till thereby transfers card-conditioned behavior into a student policy that no longer requires runtime card retrieval. We evaluate SkillLens and CardDistill on Multimodal-Mind2Web (Deng et al. 2023), WebLINX-BrowserGym (WebLINX-BG) (Lù, Kasner, and Reddy 2024; de Chezelles et al. 2025), and OSWorld-G (Xie et al. 2025a). Runtime VSC access improves several frozen VLM executors without parameter updates, including +11.6 Step SR for GPT-5.4-mini on Mind2Web. CardDistill further improves student-only main metrics by +12.0 Step SR on Mind2Web and +3.2 Overall on WebLINX-BG. Selector, modality, negative-control, and behavior diagnostics characterize how VSC ev-idence contributes to grounded GUI action prediction. 
+
+Our contributions are threefold: 
+
+• We formulate VSCs as a state-conditioned interface for visual procedural memory and introduce Trace-to-VSC to convert heterogeneous interaction sources into this com-mon representation. 
+
+• We develop SkillLens , which decouples low-cost retrieval from selective high-resolution evidence expansion while preserving the live screen as the final grounding source. 
+
+• We introduce CardDistill , a VSC-guided on-policy dis-tillation algorithm that transfers card-conditioned teacher behavior into a student policy without runtime card re-trieval. 
+
+Related Work 
+
+Reusable Skills and GUI-Agent Experience 
+
+Reusable skills and trajectory-derived experience are estab-lished resources for computer-use agents. Prior systems en-code desktop or web knowledge as parameterized proce-dures, composition graphs, routing policies, or hierarchical visual skill packages (Chen et al. 2026; Xie et al. 2025b; Hu et al. 2026; Zhang et al. 2026a; Jiang et al. 2026). In paral-lel, video, web, desktop, and operating-system benchmarks supply interaction traces (Lin et al. 2024; Deng et al. 2023; Lù, Kasner, and Reddy 2024; Xie et al. 2024; Bonatti et al. 2025; Xie et al. 2025a), while large-scale GUI-agent train-ing uses such data to strengthen action models (Cheng et al. 2024; Wang et al. 2025b; Qin et al. 2025; Wu et al. 2025b,a; Wang et al. 2025a). These lines demonstrate the value of procedural experience, but mainly optimize a trained execu-tor or the skill package itself. They do not define a shared, auditable interface through which heterogeneous experience can be retrieved under a bounded context budget and reused by an unchanged executor. SkillLens addresses this inter-face by normalizing traces into VSCs for bounded runtime access, while CardDistill reuses the same evidence as privi-leged training context. 
+
+Visual Memory, Grounding, and Distillation 
+
+Visual memory, optical compression, and GUI grounding provide the closest technical ingredients to SkillLens. Re-cent memory systems reduce dialogue, document, or inter-action histories through optical locate-and-transcribe opera-tions, compact visual segments, layout-aware rendering, or selective expansion (Li et al. 2026; Feng et al. 2026; Shi et al. 2026; Liang et al. 2026; Xie et al. 2026; Wei, Sun, and Li 2025). These methods show that visual context can be searched in compact form, yet their retrieval units are typi-cally pages or histories rather than state-conditioned proce-dure cards. SkillLens instead indexes reusable GUI proce-dures, decouples low-cost retrieval from high-resolution evi-dence loading, and retains the live screen for final grounding. GUI grounding models study control localization and action prediction from screenshots (Cheng et al. 2024; Wu et al. 2025b; Gou et al. 2025; Wu et al. 2025a; Xie et al. 2025a); those models optimize localization, whereas SkillLens fixes the executor and studies how selected evidence reaches it. Multimodal on-policy distillation gives teachers privileged masks or evidence crops (Zhang et al. 2026b; Yuan et al. 2026; Cai et al. 2026). CardDistill instead supplies source-aligned VSC bundles that jointly encode procedure, applica-bility, and visual evidence. 
+
+Problem Setting 
+
+Task interface. We model computer use as a partially ob-servable trajectory conditioned on a natural-language in-struction x:
+
+τ = ( x, o 1, a 1, o 2, a 2, . . . , o T , a T , o T +1 ), (1) where ot is a screenshot or structured observation and at
+
+is a grounded action such as clicking, typing, scrolling, waiting, or issuing a keyboard shortcut. Let ht =(o1, a 1, . . . , o t−1, a t−1) denote the interaction history avail-able before observing ot and predicting at. Because the same instruction may appear under different layouts, websites, win-dows, and application states, the agent must ground each step in the current observation rather than follow a fixed textual plan. 
+
+VSC library. In addition to the live observation, the agent has access to a reusable skill library 
+
+L = Lmeta ∪ L core ∪ L exec , (2) where the three subsets correspond to meta, core, and execu-tion skills. A skill si ∈ L is represented as 
+
+si = ( pi, z i, v i, κ i), (3) where pi is a reusable procedure, zi stores applicability and verification cues, vi contains visual evidence views, and κi
+
+optionally stores recovery cues, compact memory views, or other auxiliary fields. Meta cards describe long-horizon task patterns, core cards describe reusable subgoals, and exe-cution cards describe short grounded operations. Not every source instantiates all three levels; the main web experiments primarily retrieve execution-level cards and expand only the evidence needed for the next decision. 
+
+Runtime formulation. The main SkillLens setting keeps the executor fixed at test time. Let ξt = ( x, o t, h t) denote the benchmark-native context at step t, including the task instruction, live observation, and preceding interaction his-tory. The implemented selector ρsel returns a bounded set of VSCs, 
+
+St = ρsel (ξt; L), |St| ≤ Ke. (4) A deterministic expansion function e resolves the selected card identifiers and loads their bounded evidence: 
+
+Et = e(St), Et ⊆ [
+
+> si∈St
+
+vi, |Eimg  
+
+> t
+
+| ≤ Kv . (5) The fixed executor then predicts 
+
+at = πθ0 (ξt, S t, E t), (6) where θ0 is unchanged during evaluation. The selector ρsel 
+
+comprises the implemented retrieval, reranking, and com-patibility rules; Ke and Kv are fixed per-run card and image budgets. Benchmark performance and runtime cost are eval-uated separately. 
+
+Distillation objective. CardDistill uses the same VSC in-terface for training rather than runtime augmentation. Let 
+
+(Spriv  
+
+> t
+
+, E priv  
+
+> t
+
+) denote the source-aligned VSC bundle used only during training, and let ˜ξt = ( ξt, S priv  
+
+> t
+
+, E priv  
+
+> t
+
+) be the re-sulting privileged context. During training, a teacher policy observes ˜ξt, while the student policy observes only ξt. The objective is to transfer the teacher’s card-conditioned behav-ior to the student over student-generated action prefixes; at evaluation time, the student predicts from ξt alone, without VSC retrieval or evidence expansion. 
+
+Method 
+
+Overview 
+
+SkillLens augments a fixed computer-using agent with reusable visual procedural memory. Trace-to-VSC first con-verts prior interaction experience into Visual Skill Cards that couple procedures with state cues and visual evidence. At each decision step, SkillLens ranks cards against the cur-rent instruction and interface state, expands only the selected high-resolution evidence, and conditions the frozen executor on this evidence and the live observation to predict the next GUI action. The same card interface supports CardDistill, which places source-aligned VSCs in the privileged teacher context and transfers card-conditioned behavior to a student that runs without retrieval. Figure 2 summarizes these run-time and training paths. 
+
+VSC Representation 
+
+A VSC is a state-conditioned procedure with attached grounding evidence. We write a card as 
+
+si = ( pi, z i, v i, κ i), (7) where pi is the reusable procedure, zi stores applicability and completion cues, vi contains visual evidence, and κi stores optional recovery or auxiliary fields. The visual evidence may include a full interface view or a focused target crop, but the card is not simply a screenshot bundle. It is a compact memory object that tells the executor when a procedure is relevant, what evidence to compare with the live screen, and how progress can be verified. The representation separates three roles that are often mixed in text-only skills. Procedure text describes the in-tended operation. State cues describe when the operation applies. Visual evidence anchors the procedure to interface appearance. This separation matters for GUI tasks because two screens can share similar text while requiring different controls, and two controls can look similar while serving different workflow states. VSCs can also be organized hierarchically when the source trace supports it. A meta card captures a long-horizon task pattern, a core card captures a reusable subgoal, and an execu-tion card captures a short grounded operation. The reported experiments rank execution-level cards directly; the same schema can expose higher-level cards for longer-horizon sources without changing the runtime interface. 
+
+Trace-to-VSC Construction 
+
+Trace-to-VSC converts prior interaction records into reusable visual procedures. Its goal is not to store a trajectory verba-tim, but to distill a segment that can be recognized and reused in a new interface state. The construction follows a common flow: a source record is first normalized into a trace, the trace is segmented into reusable units, each unit is summarized into a procedure, visual evidence is bound to the procedure, and the final card is audited. This audit checks that the card is self-contained and that held-out evaluations do not expose answer coordinates as templates. Although different sources instantiate the flow with different adapters, they all export the same VSC schema; for example, a structured bench-mark can bind targets deterministically, while an unstruc-tured demonstration may use a large language model (LLM) or VLM to summarize the segment and choose evidence. This source-independent output is what allows SkillLens to use one retrieval and expansion interface across web-action and GUI-grounding settings. 
+
+SkillLens Retrieval and Selective Expansion 
+
+SkillLens retrieves cards before it expands evidence. This separation is important because irrelevant VSCs can distract the executor, and loading all card evidence is unnecessary for a single step. The default path uses a lightweight context-aware selector that matches the current task and interface state against the card library, then expands only the selected evidence. Let 
+
+qt = Q(x, h t, c t) (8) be the retrieval query at step t, where Q deterministically se-rializes the task instruction x, recent interaction history ht,and selector-visible interface metadata ct. For each card si,let di concatenate its identifier, name, goal, keywords, and available metadata. Tok( ·) returns the resulting token mul-tiset, supp( ·) returns its unique-token support, and n(u; r)
+
+counts token u in record r. Define the shared support and coarse score as 
+
+Ut,i = supp(Tok( qt)) ∩ supp(Tok( di)) ,r(0)  
+
+> i
+
+(qt) = X
+
+> u∈U t,i
+
+min( n(u; qt), n (u; di)) + bi(ct), (9) where bi(ct) is a deterministic prior derived only from visible metadata, such as site or operation compatibility, and is zero when such metadata is unavailable. Coarse retrieval produces 
+
+Ct = TopK Kc (L; r(0)  
+
+> i
+
+). (10) The default web path reranks only these candidates. Let dcand 
+
+> i
+
+denote the compact candidate record containing the card identifier, name, goal, keywords, and visual tags. Then 
+
+Mt,i = supp(Tok( qt)) 
+
+∩ supp(Tok( dcand  
+
+> i
+
+)) ,r(1)  
+
+> i
+
+(qt) = |M t,i | + 0 .1r(0)  
+
+> i
+
+,
+
+eSt = TopK Ks (Ct; r(1)  
+
+> i
+
+),
+
+bSt = TopK Ke ( eSt; r(1)  
+
+> i
+
+),St = {si ∈ bSt : χi(ct) = 1 }, Et = [
+
+> si∈St
+
+e(si),
+
+(11) where Ks is the selection budget, Ke is the smaller expan-sion budget, χi(ct) is an optional compatibility gate based only on visible metadata and defaults to one, and e(si) deter-ministically loads the bounded textual and visual evidence of card si. This closes the runtime path from the candidate set to the evidence actually consumed by the executor. A full-load strategy would pay 
+
+Cfull = X
+
+> si∈L
+
+C(vi), (12) whereas SkillLens pays only the expansion cost for the se-lected evidence: 
+
+Clens (t) = C(B(Ct)) + C(Et). (13) The board term is incurred only by board-based selector di-agnostics; it is zero for the default text-indexed selector. This cost expression captures the central design choice: retrieval decides where to look, and expansion controls how much visual evidence the executor sees. We define board-based selection as a diagnostic protocol for measuring retrieval performance on a rendered candidate surface. VLM-board asks a VLM to select a candidate row directly, whereas OCR+Text board transcribes candidate-row text with OCR and textually reranks the parsed rows. Both variants map the selected row to a stable card identifier; the same deterministic map e(·) then loads the original VSC assets before action prediction. 
+
+Grounded Action Prediction and Verification 
+
+Expanded evidence is reference material, not a coordinate template. SkillLens constructs the executor context from the live screenshot, the task and recent history, the selected VSC evidence, and the action schema of the benchmark. The frozen executor then predicts 
+
+at = πθ0 (ξt, S t, E t), (14) where θ0 is fixed. The live observation remains the source of grounding: retrieved evidence can identify a familiar state, highlight a relevant control pattern, or provide a completion cue, but the final action must still be taken on the current screen. Verification cues define observable postconditions for a successful step. They provide a lightweight contract in the VSC schema that can be compared against subsequent inter-face states to verify progress. Model Method Multimodal-Mind2Web WebLINX-BG OSWorld-G Step SR ↑ Action F1 ↑ Elem. Acc. ↑ Overall ↑ IM ↑ Ele IoU ↑ Ground. Acc. ↑ BBox Hit ↑ Valid ↑
+
+No-skill 3.3 18.2 21.8 13.2 48.1 13.2 – – 68.0 Qwen2.5-VL 3B VSCs 
+
+7.6 
+
+(+4.3) 
+
+21.6 
+
+(+3.4) 
+
+32.2 
+
+(+10.4) 
+
+14.3 
+
+(+1.1) 
+
+67.0 
+
+(+18.9) 
+
+19.1 
+
+(+5.9) – –
+
+99.5 
+
+(+31.5) No-skill 4.6 49.6 34.4 14.1 56.8 17.9 28.5 26.5 99.5 Qwen3-VL 2B VSCs 
+
+10.3 
+
+(+5.7) 
+
+56.3 
+
+(+6.7) 
+
+62.2 
+
+(+27.8) 
+
+16.5 
+
+(+2.4) 
+
+64.1 
+
+(+7.3) 
+
+19.7 
+
+(+1.8) 
+
+41.0 
+
+(+12.5) 
+
+38.0 
+
+(+11.5) 
+
+100.0 
+
+(+0.5) No-skill 57.8 75.9 70.6 7.8 49.5 11.3 15.5 13.0 100.0 Gemini 3.1 Flash-Lite VSCs 
+
+65.8 
+
+(+8.0) 
+
+79.4 
+
+(+3.5) 
+
+77.2 
+
+(+6.6) 
+
+12.1 
+
+(+4.3) 
+
+60.7 
+
+(+11.2) 
+
+16.7 
+
+(+5.4) 
+
+27.5 
+
+(+12.0) 
+
+26.0 
+
+(+13.0) 100.0 (+0.0) No-skill 57.9 75.7 69.8 7.6 49.0 11.0 17.5 16.0 100.0 Gemini 2.5 Flash VSCs 
+
+66.2 
+
+(+8.3) 
+
+79.9 
+
+(+4.2) 
+
+77.7 
+
+(+7.9) 
+
+10.3 
+
+(+2.7) 
+
+55.8 
+
+(+6.8) 
+
+15.1 
+
+(+4.1) 
+
+27.5 
+
+(+10.0) 
+
+26.0 
+
+(+10.0) 100.0 (+0.0) No-skill 65.7 92.3 77.5 13.5 59.7 19.9 1.5 1.5 86.5 GPT-4o VSCs 
+
+82.4 
+
+(+16.7) 
+
+94.4 
+
+(+2.1) 
+
+87.1 
+
+(+9.6) 
+
+15.3 
+
+(+1.8) 
+
+66.0 
+
+(+6.3) 
+
+22.1 
+
+(+2.2) 
+
+3.5 
+
+(+2.0) 
+
+3.5 
+
+(+2.0) 
+
+89.5 
+
+(+3.0) No-skill 77.2 90.1 88.1 12.8 55.3 17.3 45.0 43.0 100.0 GPT-5.4 mini VSCs 
+
+88.8 
+
+(+11.6) 
+
+96.4 
+
+(+6.3) 
+
+92.0 
+
+(+3.9) 
+
+15.7 
+
+(+2.9) 
+
+67.0 
+
+(+11.7) 
+
+19.0 
+
+(+1.7) 
+
+66.5 
+
+(+21.5) 
+
+65.0 
+
+(+22.0) 100.0 (+0.0) 
+
+Table 1: Main results by model and skill condition. All values are percentages; deltas are relative to the No-skill row with the same model. OSWorld-G is reported as a diagnostic grounding setting. 
+
+Metric Text-indexed ❏ VLM-board ▲
+
+Overall ↑ 17.45 13.58 
+
+IM ↑ 67.44 63.95 
+
+Ele IoU ↑ 16.96 18.98 
+
+Dialog Acc. ↑ 54.50 50.00 
+
+Latency ↓ 1.5s 4.0s 
+
+Table 2: End-to-end selector ablation on 200 WebLINX-BG turns with a frozen Qwen3-VL-2B executor. ❏ denotes expanded VSCs and ▲ denotes board-to-VSC mapping. 
+
+CardDistill: Distilling VSCs into a Student 
+
+CardDistill turns VSCs from runtime memory into training-time supervision. Each training state ξt = (x, o t, h t) is paired with source-aligned VSC evidence, represented as a bounded privileged bundle (Spriv  
+
+> t
+
+, E priv  
+
+> t
+
+). The student pol-icy πθ sees only the benchmark-native context ξt, while the teacher policy πϕ receives the card-conditioned con-text ˜ξt = ( ξt, S priv  
+
+> t
+
+, E priv  
+
+> t
+
+). The student then generates an on-policy action sequence ˆyt ∼ πθ (· | ξt), and the teacher evaluates the same student-generated prefixes. Let P (T ) 
+
+> θ,t,j
+
+and 
+
+P (T ) 
+
+> ϕ,t,j
+
+denote the corresponding student and teacher token distributions after temperature scaling by T . The reported runs optimize the teacher-confidence-weighted reverse KL 
+
+LCD = X
+
+> t
+
+X
+
+> j
+
+wt,j KL 
+
+
+
+P (T ) 
+
+> θ,t,j
+
+P (T )
+
+> ϕ,t,j
+
+
+
+. (15) Here the token weight discounts uncertain teacher targets, 
+
+wt,j = 1 − H(P (1)  
+
+> ϕ,t,j
+
+)log |V| , (16) where V is the output vocabulary. This is on-policy because the optimized prefixes come from the current student rather than from a fixed reference trajectory. The reported experi-ments use temperature T = 1 .0 and optimize LCD without an additional supervised action loss. At evaluation time, the teacher and VSC evidence are removed, and the student pre-dicts from ξt alone. CardDistill therefore tests whether the procedural and visual cues exposed by VSCs can be internal-ized into model parameters, while SkillLens tests whether the same cues can be used directly as external runtime mem-ory. The supplementary material provides the training pseu-docode and diagnostics. 
+
+Experiments 
+
+Figure 3: CardDistill training dynamics and student-only gains. VSC evidence is used during training, while the eval-uated student runs without runtime retrieval. Benchmark Selector Backbone Oracle Cov. ↑ Hit@1 / ∆ ↑ Hit@3 / ∆ ↑ Hit@5 / ∆ ↑ Exp. Hit / ∆ ↑                                                               
+
+> ✍Text-indexed –1.00 0.86 (base) 0.90 (base) 0.91 (base) 0.90 (base)
+> ★VLM-board GPT-4o 1.00 0.93 (+0.07) 0.93 (+0.03) 0.93 (+0.02) 0.93 (+0.03) Mind2Web
+> ☞OCR+Text board DeepSeek-OCR 1.00 0.87 (+0.01) 0.88 (-0.02) 0.88 (-0.03) 0.88 (-0.02)
+> ✍Text-indexed –1.00 0.40 (base) 0.56 (base) 0.64 (base) 0.50 (base)
+> ★VLM-board GPT-4o 1.00 0.55 (+0.15) 0.61 (+0.05) 0.65 (+0.01) 0.58 (+0.08) WebLINX-BG
+> ☞OCR+Text board DeepSeek-OCR 1.00 0.32 (-0.08) 0.48 (-0.08) 0.52 (-0.12) 0.52 (+0.02)
+> ✍Text-indexed –1.00 1.00 (base) 1.00 (base) 1.00 (base) 1.00 (base)
+> ★VLM-board GPT-4o 1.00 1.00 (+0.00) 1.00 (+0.00) 1.00 (+0.00) 1.00 (+0.00) OSWorld-G
+> ☞OCR+Text board DeepSeek-OCR 1.00 0.92 (-0.08) 0.97 (-0.03) 0.97 (-0.03) 0.97 (-0.03)
+
+Table 3: Retrieval-only coverage analysis before action prediction. Within each benchmark block, Text-indexed is the baseline and parentheses report absolute changes relative to that baseline. OCR+Text board uses DeepSeek-OCR to transcribe candidate rows and reranks up to five transcriptions, separating transcription from direct OCR-box localization.                            
+
+> Model Skill condition Mind2Web WebLINX-BG OSWorld-G Step SR ↑Elem. Acc. ↑Overall ↑Elem. IoU ↑Ground. Acc. ↑BBox Hit ↑
+> Full SkillLens
+> 10.3 (+5.7) 62.2 (+27.8)
+> 16.5
+> (+2.4)
+> 19.7
+> (+1.8) 41.0 (+12.5) 38.0 (+11.5) w/o visual
+> 14.0
+> (+9.4)
+> 67.5
+> (+33.1) 11.0 (-3.1) 14.6 (-3.3) 25.5 (-3.0) 24.0 (-2.5) w/o procedure 4.5 (-0.1) 54.0 (+19.6) 16.4 (+2.3) 18.3 (+0.4)
+> 43.0
+> (+14.5)
+> 39.0
+> (+12.5) Qwen3-VL-2B No-skill 4.6 34.4 14.1 17.9 28.5 26.5
+> Full SkillLens
+> 66.2 (+8.3) 77.7 (+7.9) 10.3 (+2.7) 15.1 (+4.1)
+> 27.5
+> (+10.0)
+> 26.0
+> (+10.0) w/o visual
+> 75.0
+> (+17.1)
+> 86.0
+> (+16.2) 12.8 (+5.2) 15.6 (+4.6) 10.5 (-7.0) 10.5 (-5.5) w/o procedure 71.0 (+13.1) 82.0 (+12.2)
+> 13.8
+> (+6.2)
+> 16.3
+> (+5.3) 11.5 (-6.0) 11.0 (-5.0) Gemini 2.5 Flash No-skill 57.9 69.8 7.6 11.0 17.5 16.0
+
+Table 4: Skill modality ablation. Full SkillLens uses both textual procedure fields and visual evidence from VSCs. The ablations remove one component at a time: w/o visual corresponds to text-only cards, w/o procedure corresponds to image-only cards, and No-skill removes external VSC memory. Underlined bold italic values mark the best score for each model and metric.                                              
+
+> Condition Mind2Web: Exact Step Acc. ↑OSWorld-G: Grounding Acc. ↑
+> Main Aux. Valid ∆vs Retrieved Main Aux. Valid ∆vs Retrieved
+> No-skill 76.5 85.5 100.0 -15.5 45.0 43.0 100.0 -21.5
+> Retrieved VSC 92.0 93.0 100.0 Ref. 66.5 65.0 100.0 Ref.
+> Random VSC 72.0 76.5 100.0 -20.0 10.5 10.0 99.0 -56.0
+> Irrelevant VSC 71.0 74.5 100.0 -21.0 12.5 12.0 99.0 -54.0
+
+Table 5: Random and irrelevant VSC negative controls with GPT-5.4-mini on 200 cases per condition. Random cards are sampled uniformly, whereas irrelevant cards have low query overlap; ∆ is measured against Retrieved VSC. Mind2Web reports exact Step Acc. with Target Acc. as Aux., while OSWorld-G reports Grounding Acc. with BBox Hit as Aux. 
+
+Experimental Setup 
+
+Benchmarks. We evaluate SkillLens on three settings that stress different parts of GUI action prediction: Multimodal-Mind2Web for offline web actions from instructions, screen-shots, and candidate elements (Deng et al. 2023; Zheng et al. 2024); WebLINX-BG for conversational browser turns (Lù, Kasner, and Reddy 2024; de Chezelles et al. 2025); and OSWorld-G for desktop UI grounding, where the model lo-calizes the target element rather than completing a full inter-active desktop task (Xie et al. 2025a). 
+
+Baselines. The controlled comparison keeps the executor frozen and changes only the runtime context: No-skill versus retrieved VSCs. The main SkillLens path uses a site-aware text-indexed selector followed by visual evidence expansion. Selector diagnostics additionally compare two board-based variants, VLM-board and OCR+Text board, before the same evidence-expansion stage. For the training readout, we also include diagnostic grounding references to GUI-Actor (Wu et al. 2025a), UGround (Gou et al. 2025), and UI-TARS (Qin et al. 2025) to contextualize CardDistill alongside dedicated Mind2Web WebLINX-BG 30 40 50 60 70 80 90    
+
+> Grounding Acc. (%)
+> 37.0 77.5
+> 50.5 78.0
+> 63.5 80.5
+> 78.0 84.0
+> Method profiles under the same grounding-style scorer
+> UGround GUI-Actor CardDistill UI-TARS
+
+Figure 4: Diagnostic grounding reference with external GUI grounding models. Native target predictions are converted to a center-in-target-box score to contextualize CardDistill alongside GUI-Actor, UGround, and UI-TARS. 0 200 400 600              
+
+> Mind2Web WebLINX-BG OSWorld-G
+> 600 576 510
+> Corpus scale (# cards)
+> Full Target Crop After Verify
+> FF---FM---FFF-F
+> Evidence coverage
+> web-action 70% grounding 30%
+> Evaluation role split
+
+Figure 5: VSC corpus statistics. The profile summarizes cor-pus scale, evidence coverage, and evaluation-role composi-tion for the core card library. GUI grounding models. 
+
+Metrics. We report each benchmark’s standard metrics, with formulas in the mathematical-details appendix. Mind2Web uses Step SR , Action F1 , and Element Acc. ; WebLINX-BG uses Overall , Intent Match , and Element IoU ; OSWorld-G uses Grounding Acc. , bounding-box (BBox) Hit , and Valid Output . Values are percentages unless stated otherwise, and deltas compare against the No-skill row for the same executor. 
+
+Main Results and Diagnostics 
+
+Table 1 shows that VSCs improve frozen VLM executors on both web-action and GUI-grounding tasks. On GPT-5.4-mini, SkillLens improves Mind2Web Step SR from 77.2 to 88.8 (+11.6), WebLINX-BG Overall from 12.8 to 15.7 (+2.9), and OSWorld-G Grounding Acc. from 45.0 to 66.5 (+21.5). GPT-4o and the Gemini models show the same positive trend across the three benchmark groups. The open Qwen3-VL-2B executor likewise improves across all three groups: Mind2Web Step SR rises from 4.6 to 10.3, WebLINX-BG Overall rises from 14.1 to 16.5 (+2.4), and OSWorld-G Grounding Acc. rises from 28.5 to 41.0. To-gether, these results demonstrate that VSCs provide reusable target, state, and procedural evidence across model families and GUI settings. 
+
+Selector and Modality Ablations 
+
+Tables 2 and 3 separate end-to-end selector utility from retrieval-only coverage. In WebLINX-BG execution, the text-indexed selector gives the best tested trade-off (17.45 Over-all, 54.50 Dialog Acc., 1.5s), while VLM-board improves Element IoU from 16.96 to 18.98 but lowers Overall to 13.58. Without the executor, VLM-board improves Hit@1 on Mind2Web (0.86 to 0.93) and WebLINX-BG (0.40 to 0.55), while OCR+Text board is strong on OSWorld-G but weak on WebLINX-BG. Thus, board-based selectors can surface rel-evant cards, but text-indexed selection remains the strongest downstream configuration in this setting. Table 4 shows that modality contributions are task- and executor-dependent: procedural text and visual evidence sup-port different action-prediction and grounding demands, while the unified VSC representation provides a common interface across these settings. 
+
+Negative Controls 
+
+Table 5 tests whether the gains come from relevant VSC ev-idence rather than from longer prompts or extra images. The executor, prompt template, and expansion budget stay fixed, but the retrieved card is replaced with either a uniformly sam-pled card or a low-overlap irrelevant card. Retrieved VSCs remain much stronger: on the fixed Mind2Web subset, exact Step Acc. is 92.0 with retrieved VSCs versus 72.0 with ran-dom cards and 71.0 with irrelevant cards; on OSWorld-G, Grounding Acc. is 66.5 versus 10.5 and 12.5. This negative control shows that relevance is essential: unrelated visual ev-idence does not reproduce the SkillLens gain and can actively harm grounding. 
+
+CardDistill Results 
+
+Figure 3 summarizes CardDistill’s training dynamics and student-only evaluation. CardDistill improves Mind2Web Step SR by 12.0 points (95% CI [7.5, 17.5]) and WebLINX-BG Overall by 3.2 points (95% CI [0.88, 5.85]). Plain OPD uses the same training setup without VSC evidence in the teacher context, while the shuffled-VSC control retains the pipeline but misaligns the cards. Neither control differs sig-nificantly from the base student in the 200-step evaluation. On Mind2Web, CardDistill outperforms shuffled VSC by 10.5 points (95% CI [5.5, 15.5], p < . 001 ), providing evi-dence that source-aligned VSC evidence contributes under the matched training budget. Figure 4 provides a diagnostic grounding reference using a center-in-target-box score converted from native predictions. CardDistill falls between GUI-Actor and UI-TARS on both evaluated benchmarks under this readout. 
+
+Conclusion 
+
+SkillLens converts heterogeneous GUI experience into VSCs that provide visual procedural memory to frozen VLM ex-ecutors. Relevant VSCs improve grounded action predic-tion, while CardDistill transfers card-conditioned behavior into a student without runtime retrieval. VSCs thus connect retrieval-augmented prediction with on-policy distillation. References 
+
+Bai, S.; Cai, Y.; Chen, R.; Chen, K.; Chen, X.; Cheng, Z.; Deng, L.; Ding, W.; Gao, C.; Ge, C.; Ge, W.; Guo, Z.; Huang, Q.; Huang, J.; Huang, F.; Hui, B.; Jiang, S.; Li, Z.; Li, M.; Li, M.; Li, K.; Lin, Z.; Lin, J.; Liu, X.; Liu, J.; Liu, C.; Liu, Y.; Liu, D.; Liu, S.; Lu, D.; Luo, R.; Lv, C.; Men, R.; Meng, L.; Ren, X.; Ren, X.; Song, S.; Sun, Y.; Tang, J.; Tu, J.; Wan, J.; Wang, P.; Wang, P.; Wang, Q.; Wang, Y.; Xie, T.; Xu, Y.; Xu, H.; Xu, J.; Yang, Z.; Yang, M.; Yang, J.; Yang, A.; Yu, B.; Zhang, F.; Zhang, H.; Zhang, X.; Zheng, B.; Zhong, H.; Zhou, J.; Zhou, F.; Zhou, J.; Zhu, Y.; and Zhu, K. 2025a. Qwen3-VL Technical Report. arXiv preprint arXiv:2511.21631 .Bai, S.; Chen, K.; Liu, X.; Wang, J.; Ge, W.; Song, S.; Dang, K.; Wang, P.; Wang, S.; Tang, J.; Zhong, H.; Zhu, Y.; Yang, M.; Li, Z.; Wan, J.; Wang, P.; Ding, W.; Fu, Z.; Xu, Y.; Ye, J.; Zhang, X.; Xie, T.; Cheng, Z.; Zhang, H.; Yang, Z.; Xu, H.; and Lin, J. 2025b. Qwen2.5-VL Technical Report. arXiv preprint arXiv:2502.13923 .Bonatti, R.; Zhao, D.; Bonacci, F.; Dupont, D.; Abdali, S.; Li, Y.; Lu, Y.; Wagle, J.; Koishida, K.; Bucker, A.; Jang, L. K.; and Hui, Z. 2025. Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale. In Proceedings of the 42nd International Conference on Machine Learning , volume 267 of Proceedings of Machine Learning Research , 4874–4910. PMLR. Cai, Y.; Liu, J.; Liu, Y.; Deng, H.; Yao, L.; Zheng, Y.; Ouyang, K.; Li, Z.; Wang, Z.; Sun, X.; Bai, H.; and Li, X. 2026. Thinking Without Images: Internalizing Visual Ma-nipulation with On-Policy Self-Distillation. arXiv preprint arXiv:2606.08719 .Chen, T.; Li, Y.; Solodko, M.; Wang, S.; Jiang, N.; Cui, T.; Hao, J.; Ko, J.; Abdali, S.; Xu, L.; Zheng, S.; Fan, H.; Cameron, P.; Wagle, J.; and Koishida, K. 2026. CUA-Skill: Develop Skills for Computer Using Agent. arXiv:2601.21123. Cheng, K.; Sun, Q.; Chu, Y.; Xu, F.; Li, Y.; Zhang, J.; and Wu, Z. 2024. SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , 9313–9332. Bangkok, Thailand: Association for Computational Linguistics. de Chezelles, T. L. S.; Gasse, M.; Lacoste, A.; Caccia, M.; Drouin, A.; Boisvert, L.; Thakkar, M.; Marty, T.; Assouel, R.; Shayegan, S. O.; Jang, L. K.; Lù, X. H.; Yoran, O.; Kong, D.; Xu, F. F.; Reddy, S.; Neubig, G.; Cappart, Q.; Salakhutdinov, R.; and Chapados, N. 2025. The BrowserGym Ecosystem for Web Agent Research. Transactions on Machine Learning Research . Expert Certification. Deng, X.; Gu, Y.; Zheng, B.; Chen, S.; Stevens, S.; Wang, B.; Sun, H.; and Su, Y. 2023. Mind2Web: Towards a Gener-alist Agent for the Web. In Advances in Neural Information Processing Systems , volume 36, 28091–28114. Feng, L.; Yang, F.; Chen, F.; Cheng, X.; Xu, H.; Wan, Z.; Yan, M.; and An, B. 2026. AgentOCR: Reimagining Agent History via Optical Self-Compression. In Proceedings of the 64th Annual Meeting of the Association for Computa-tional Linguistics (Volume 1: Long Papers) , 5067–5086. San Diego, California, United States: Association for Computa-tional Linguistics. Gemini Team, Google. 2025. Gemini 2.5: Pushing the Fron-tier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities. Technical report, Google. Gou, B.; Wang, R.; Zheng, B.; Xie, Y.; Chang, C.; Shu, Y.; Sun, H.; and Su, Y. 2025. Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents. In 
+
+The Thirteenth International Conference on Learning Rep-resentations .Hu, X.; Zhang, X.; Xu, H.; Qiao, K.; Yang, J.; Huang, X.; Shao, J.; Yan, M.; and Ye, J. 2026. ToolCUA: Towards Opti-mal GUI-Tool Path Orchestration for Computer Use Agents. 
+
+arXiv preprint arXiv:2605.12481 .Jiang, Z.; An, L.; Liu, Y.; Ji, J.; Wu, Q.; Andreas, J.; Zhang, Y.; and Chang, S. 2026. VISUALSKILL: Multimodal Skills for Computer-Use Agents. arXiv preprint arXiv:2606.18448 .Li, J.; Zhang, Y.; Yang, X.; QU, J.; Xu, J.; Yang, S.; Ding, J.; and Ngai, E. C.-H. 2026. OCR-Memory: Optical Context Retrieval for Long-Horizon Agent Memory. In Proceedings of the 64th Annual Meeting of the Association for Computa-tional Linguistics (Volume 1: Long Papers) , 10409–10420. San Diego, California, United States: Association for Com-putational Linguistics. Liang, W.; Song, Y.; Chen, X.; Cao, C. C.; Han, S.; and Guo, Y. 2026. VizoMem: A Visual-Textual Memory Frame-work for Efficient Long-Horizon Reasoning. In Findings of the Association for Computational Linguistics: ACL 2026 ,7399–7422. San Diego, California, United States: Associa-tion for Computational Linguistics. Lin, K. Q.; Li, L.; Gao, D.; Wu, Q.; Yan, M.; Yang, Z.; Wang, L.; and Shou, M. Z. 2024. VideoGUI: A Benchmark for GUI Automation from Instructional Videos. In Advances in Neural Information Processing Systems , volume 37, 69329– 69360. Lù, X. H.; Kasner, Z.; and Reddy, S. 2024. WebLINX: Real-World Website Navigation with Multi-Turn Dialogue. In Pro-ceedings of the 41st International Conference on Machine Learning , volume 235 of Proceedings of Machine Learning Research , 33007–33056. PMLR. OpenAI. 2024. GPT-4o System Card. Qin, Y.; Ye, Y.; Fang, J.; Wang, H.; Liang, S.; Tian, S.; Zhang, J.; Li, J.; Li, Y.; Huang, S.; Zhong, W.; Li, K.; Yang, J.; Miao, Y.; Lin, W.; Liu, L.; Jiang, X.; Ma, Q.; Li, J.; Xiao, X.; Cai, K.; Li, C.; Zheng, Y.; Jin, C.; Li, C.; Zhou, X.; Wang, M.; Chen, H.; Li, Z.; Yang, H.; Liu, H.; Lin, F.; Peng, T.; Liu, X.; and Shi, G. 2025. UI-TARS: Pioneering Auto-mated GUI Interaction with Native Agents. arXiv preprint arXiv:2501.12326 .Shi, Y.; Liu, S.; Yang, Y.; Mao, W.; Chen, Y.; GU, Q.; Su, H.; Cai, X.; Wang, X.; and Zhang, A. 2026. MemOCR: Layout-Aware Visual Memory for Efficient Long-Horizon Reasoning. In Proceedings of the 43rd International Con-ference on Machine Learning .Wang, H.; Zou, H.; Song, H.; Feng, J.; Fang, J.; Lu, J.; Liu, L.; Luo, Q.; Liang, S.; Huang, S.; Zhong, W.; Ye, Y.; Qin, Y.; Xiong, Y.; Song, Y.; Wu, Z.; Li, A.; Li, B.; Dun, C.; Liu, C.; Zan, D.; Leng, F.; Wang, H.; Yu, H.; Chen, H.; Guo, H.; Su, J.; Huang, J.; Shen, K.; Shi, K.; Yan, L.; Zhao, P.; Liu, P.; Ye, Q.; Zheng, R.; Xin, S.; Zhao, W. X.; Heng, W.; Huang, W.; Wang, W.; Qin, X.; Lin, Y.; Wu, Y.; Chen, Z.; Wang, Z.; Zhong, B.; Zhang, X.; Li, X.; Li, Y.; Zhao, Z.; Jiang, C.; Wu, F.; Zhou, H.; Pang, J.; Han, L.; Liu, Q.; Ma, Q.; Liu, S.; Cai, S.; Fu, W.; Liu, X.; Wang, Y.; Zhang, Z.; Zhou, B.; Li, G.; Shi, J.; Yang, J.; Tang, J.; Li, L.; Han, Q.; Lu, T.; Lin, W.; Tong, X.; Li, X.; Zhang, Y.; Miao, Y.; Jiang, Z.; Li, Z.; Zhao, Z.; Li, C.; Ma, D.; Lin, F.; Zhang, G.; Yang, H.; Guo, H.; Zhu, H.; Liu, J.; Du, J.; Cai, K.; Li, K.; Yuan, L.; Han, M.; Wang, M.; Guo, S.; Cheng, T.; Ma, X.; Xiao, X.; Huang, X.; Chen, X.; Du, Y.; Chen, Y.; Wang, Y.; Li, Z.; Yang, Z.; Zeng, Z.; Jin, C.; Li, C.; Chen, H.; Chen, H.; Chen, J.; Zhao, Q.; and Shi, G. 2025a. UI-TARS-2 Technical Report: Advancing GUI Agent with Multi-Turn Reinforcement Learning. arXiv preprint arXiv:2509.02544 .Wang, P.; Bai, S.; Tan, S.; Wang, S.; Fan, Z.; Bai, J.; Chen, K.; Liu, X.; Wang, J.; Ge, W.; Fan, Y.; Dang, K.; Du, M.; Ren, X.; Men, R.; Liu, D.; Zhou, C.; Zhou, J.; and Lin, J. 2024. Qwen2-VL: Enhancing Vision-Language Model’s Perception of the World at Any Resolution. arXiv preprint arXiv:2409.12191 .Wang, X.; Wang, B.; Lu, D.; Yang, J.; Xie, T.; Wang, J.; Deng, J.; Guo, X.; Xu, Y.; Wu, C.; Shen, Z.; Li, Z.; Li, R.; Li, X.; Chen, J.; Zheng, B.; Li, P.; Lei, F.; Cao, R.; Fu, Y.; Shin, D.; Shin, M.; Hu, J.; Wang, Y.; Chen, J.; Ye, Y.; Zhang, D.; Wang, Y.; Wang, H.; Yang, D.; Zhong, V.; Charles, Y.; Yang, Z.; and Yu, T. 2025b. OpenCUA: Open Foundations for Computer-Use Agents. In Advances in Neural Informa-tion Processing Systems , volume 38, 139756–139806. Cur-ran Associates, Inc. Wei, H.; Sun, Y.; and Li, Y. 2025. DeepSeek-OCR: Contexts Optical Compression. arXiv preprint arXiv:2510.18234 .Wu, Q.; Cheng, K.; Yang, R.; Zhang, C.; Yang, J.; Jiang, H.; Mu, J.; Peng, B.; Qiao, B.; Tan, R.; Qin, S.; Liden, L.; Lin, Q.; Zhang, H.; Zhang, T.; Zhang, J.; Zhang, D.; and Gao, J. 2025a. GUI-Actor: Coordinate-Free Visual Grounding for GUI Agents. In Advances in Neural Information Processing Systems , volume 38, 15101–15128. Wu, Z.; Wu, Z.; Xu, F.; Wang, Y.; Sun, Q.; Jia, C.; Cheng, K.; Ding, Z.; Chen, L.; Liang, P. P.; and Qiao, Y. 2025b. OS-ATLAS: Foundation Action Model for Generalist GUI Agents. In The Thirteenth International Conference on Learning Representations .Xie, R.; Friedman, D.; Yu, D.; Pan, B.; Fifty, C.; Kim, J.-H.; Du, X.; Gan, Z.; Rathod, V.; and Dhingra, B. 2026. LensVLM: Selective Context Expansion for Com-pressed Visual Representation of Text. arXiv preprint arXiv:2605.07019 .Xie, T.; Deng, J.; Li, X.; Yang, J.; Wu, H.; Chen, J.; Hu, W.; Wang, X.; Xu, Y.; Wang, Z.; Xu, Y.; Wang, J.; Sahoo, D.; Yu, T.; and Xiong, C. 2025a. Scaling Computer-Use Grounding via User Interface Decomposition and Synthe-sis. In Advances in Neural Information Processing Systems ,volume 38. Xie, T.; Zhang, D.; Chen, J.; Li, X.; Zhao, S.; Cao, R.; Toh, J. H.; Cheng, Z.; Shin, D.; Lei, F.; Liu, Y.; Xu, Y.; Zhou, S.; Savarese, S.; Xiong, C.; Zhong, V.; and Yu, T. 2024. OS-World: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments. In Advances in Neural Information Processing Systems , volume 37, 52040– 52094. Xie, Y.; Li, Z.; Shao, R.; Chen, G.; Zhou, K.; Li, Y.; Jiang, D.; and Nie, L. 2025b. Mirage-1: Augmenting and Updating GUI Agent with Hierarchical Multimodal Skills. arXiv preprint arXiv:2506.10387 .Yuan, Q.; Lou, J.; Yu, X.; Lin, H.; Sun, L.; Han, X.; and Lu, Y. 2026. Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation. arXiv preprint arXiv:2605.18740 .Zhang, K.; Shao, S.; Li, Q.; Lin, J.; Fu, L.; Wang, S.; Jiao, W.; Lu, Y.; Liu, W.; Zhang, W.; and Yu, Y. 2026a. MMSkills: Towards Multimodal Skills for General Visual Agents. arXiv preprint arXiv:2605.13527 .Zhang, Y.; Wu, D.; Shen, H.; Ma, C.; and Zhou, Y. 2026b. Learn where to Click from Yourself: On-Policy Self-Distillation for GUI Grounding. arXiv:2605.00642. Zheng, B.; Gou, B.; Kil, J.; Sun, H.; and Su, Y. 2024. GPT-4V(ision) is a Generalist Web Agent, if Grounded. In Pro-ceedings of the 41st International Conference on Machine Learning , volume 235 of Proceedings of Machine Learning Research , 61349–61385. PMLR.

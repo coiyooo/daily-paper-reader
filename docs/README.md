@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-17</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-18</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 7 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 13 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>7</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-17 20:49:20 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-18 20:58:22 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦VLA控制与机器人操作，精读2篇、速读3篇，覆盖偏好优化、平面物体操作及装配学习。</p>
-<p>最值得关注BICPO-VLA的平滑异步控制优化，以及FlatLab提供的统一方法框架与仿真基准，两者均获8.0分。</p>
-<p>下一步可结合Temporal GRPO的时间信用分配思路，在FlatLab基准上验证改进效果。</p>
+<p>今日精读6篇速读7篇，聚焦VLA模型高效微调与层次化泛化。</p>
+<p>最值得看：PhaseLoRa以控制状态条件低秩适配连续动作策略，τ0-VLA用世界模型引导测试时计算，均获9.0高分。</p>
+<p>顺带可关注MatchingPolicy的跨对象上下文学习（8.0），下一步建议重点关注VLA推理效率与泛化能力的平衡。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control">BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control</span></li><li><span class="dpr-home-dashboard-paper-title" title="FlatLab: A Unified Methodology Framework and Simulation-Based Benchmark for Robotic Manipulation of Flat Objects">FlatLab: A Unified Methodology Framework and Simulation-Based Benchmark for Robotic Manipulation of Flat Objects</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="PhaseLoRA: Control-Regime-Conditioned Low-Rank Adaptation for Continuous-Action Vision-Language-Action Policies">PhaseLoRA: Control-Regime-Conditioned Low-Rank Adaptation for Continuous-Action Vision-Language-Action Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="$τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation">$τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies">Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">7 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning">Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="hint$^2$: Hierarchical World Models for Inference-Time Temporal Logic Guidance">hint$^2$: Hierarchical World Models for Inference-Time Temporal Logic Guidance</span></li><li><span class="dpr-home-dashboard-paper-title" title="Learning to Assemble Novel Structures with Unfamiliar Parts under Semantic Constraints">Learning to Assemble Novel Structures with Unfamiliar Parts under Semantic Constraints</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="MatchingPolicy: Correspondence-Aware Policy Enables Cross-Object In-Context Learning">MatchingPolicy: Correspondence-Aware Policy Enables Cross-Object In-Context Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Imagining Recovery: Inference-Time Counterfactual Realignment for Vision-Language-Action Models">Imagining Recovery: Inference-Time Counterfactual Realignment for Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="PACE: Phase-Progress-Aware Credit for Long-Horizon Embodied Manipulation">PACE: Phase-Progress-Aware Credit for Long-Horizon Embodied Manipulation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>7</strong></span></div>
 </section>
 </div>
 
