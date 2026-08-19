@@ -1,0 +1,448 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-19T20:43:44.753499+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2608.17209v1",
+      "source": "arxiv",
+      "title": "Teach and Grow: An Agent-Centered Architecture for General Robot Learning",
+      "abstract": "End-to-end vision-language-action (VLA) and world-action models offer an elegant route to general-purpose robotics, but their reliability is bounded by validated physical coverage. When an unfamiliar object, sensor, embodiment, or contact falls outside that coverage and no validated fallback exists, correcting the failure requires new robot data, a policy update, and regression testing. This recurring burden is the retraining tax. Unlike text, embodied data must often be created by operating machines. We present Teach-and-Grow Learning (TGL), an agent-centered architecture for general robot learning. In its general form, a multimodal agent turns a few successful demonstrations into reusable Skill Blocks: closed-loop behaviors for meaningful subgoals. In a new scene, the agent grounds and composes these blocks, selects learned or geometric tools, observes the physical outcome, and revises the route when execution departs from intent. A Skill Library stores executable behavior, while structured Experience Memory carries forward success, failure, and repair. New tasks are acquired without task-specific policy retraining. Our LIBERO evaluation attains state-of-the-art performance; controlled studies expose skill induction, persistent reuse, and agent-directed adaptation. Finally, we propose the Teach-and-Grow scaling-law hypothesis: if X denotes effective reusable experience, future-task error and teaching demand should approach irreducible floors as power laws in X. The architecture therefore treats deployment as a period of continued learning, in which one task can make the next easier.",
+      "authors": [
+        "Chang Nie",
+        "Zhe Liu",
+        "Hesheng Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-08-17T23:45:21+00:00",
+      "link": "https://arxiv.org/pdf/2608.17209v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Turns demonstrations into reusable Skill Blocks for hierarchical robot learning.",
+      "llm_evidence_cn": "将示范转化为可复用的技能块，用于分层机器人学习。",
+      "llm_evidence": "将示范转化为可复用的技能块，用于分层机器人学习。",
+      "canonical_evidence": "将示范转化为可复用的技能块，用于分层机器人学习。",
+      "llm_tldr_en": "Teach-and-Grow Learning converts a few successful demonstrations into reusable Skill Blocks for subgoals, reducing the retraining tax of end-to-end VLA models and improving general robot learning coverage.",
+      "llm_tldr_cn": "端到端视觉-语言-动作模型虽然通用，但面对未知物体或接触时的可靠性受限于已验证覆盖范围，修复问题需不断收集新数据、更新策略并回归测试，形成再训练税。为此提出Teach-and-Grow Learning架构，将少量成功示范转化为可复用的技能块，即面向有意义的子目标的闭环行为，从而用技能组合替代完全重训练。该方法在多模态智能体框架下提升了物理覆盖率和泛化能力，为通用机器人学习提供了一种低成本扩展的途径。",
+      "llm_tldr": "端到端视觉-语言-动作模型虽然通用，但面对未知物体或接触时的可靠性受限于已验证覆盖范围，修复问题需不断收集新数据、更新策略并回归测试，形成再训练税。为此提出Teach-and-Grow Learning架构，将少量成功示范转化为可复用的技能块，即面向有意义的子目标的闭环行为，从而用技能组合替代完全重训练。该方法在多模态智能体框架下提升了物理覆盖率和泛化能力，为通用机器人学习提供了一种低成本扩展的途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16889v1",
+      "source": "arxiv",
+      "title": "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory",
+      "abstract": "Long-horizon robot manipulation chains many contact-rich skills into one multi-stage task. Vision-language-action (VLA) models increasingly master the individual skills, yet the chain still fails: errors compound beyond the policy's ability to correct, and one subtask silently constrains the next. A promising recipe freezes the VLA and puts an LLM agent in charge: it plans in language, moves in free space with analytic primitives, invokes the VLA only for contact-rich segments, and writes adaptation into language memory. Applied to long horizons, it breaks twice. (1) Competence comes from whole-task exploration at test time, whose cost is multiplicative in stages: if one stage needs T episodes, a K-stage task needs about T^K, and a failure does not reveal which stage caused it. (2) It has no representation of transitions: the VLA primitive carries an exit but no entry condition, so a subtask can succeed in a form its successor cannot use. We present BATON. Against (1), BATON makes the subtask the unit of exploration: each is explored in the cheap short-horizon regime and its solution stored in memory; a long-horizon trajectory is then composed from these solutions rather than discovered whole. Cost becomes additive (T*K) and every failure is attributed to a single stage. Against (2), BATON equips exploration with a transition-aware memory. Within a subtask, a verifier agent governs the invocation transition: the VLA is called only after the wrist view confirms the scene is ready. Across subtasks, a handoff transition restores an entry state disturbed by the predecessor's residue, and a lookahead transition selects the strategy whose outcome the successor can inherit. No parameters are updated. On the long-horizon benchmark RoboMemArena, BATON improves task success by 11.6% and cumulative success by 14.9% over the SoTA.",
+      "authors": [
+        "Bingxin Xu",
+        "Yuzhang Shang",
+        "Emilio Ferrara"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-08-17T17:59:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.16889v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Hierarchical LLM agent chains reusable contact-rich VLA skills for long-horizon manipulation with subtask exploration and transition-aware memory.",
+      "llm_evidence_cn": "分层LLM智能体组合可复用的接触丰富VLA技能完成长时操作，具备子任务探索与转移感知记忆。",
+      "llm_evidence": "分层LLM智能体组合可复用的接触丰富VLA技能完成长时操作，具备子任务探索与转移感知记忆。",
+      "canonical_evidence": "分层LLM智能体组合可复用的接触丰富VLA技能完成长时操作，具备子任务探索与转移感知记忆。",
+      "llm_tldr_en": "BATON addresses long-horizon robot manipulation by chaining contact-rich skills. It freezes a VLA and puts an LLM agent in charge, planning in language, using analytic primitives for free-space motion, invoking the VLA only for contact-rich segments, and writing adaptation into language memory to correct task-chain errors.",
+      "llm_tldr_cn": "长时程机器人操作需要串联多个接触丰富技能，但错误累积和子任务相互约束常导致整链失败。本文提出BATON，冻结VLA并由LLM智能体负责高层规划：用语言规划、解析原语执行自由空间运动、仅在接触丰富片段调用VLA，并将适应信息写入语言记忆。该方法通过子任务探索与转移感知记忆缓解链式错误，提升了多阶段接触丰富操作的成功率。",
+      "llm_tldr": "长时程机器人操作需要串联多个接触丰富技能，但错误累积和子任务相互约束常导致整链失败。本文提出BATON，冻结VLA并由LLM智能体负责高层规划：用语言规划、解析原语执行自由空间运动、仅在接触丰富片段调用VLA，并将适应信息写入语言记忆。该方法通过子任务探索与转移感知记忆缓解链式错误，提升了多阶段接触丰富操作的成功率。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.17146v1",
+      "source": "arxiv",
+      "title": "PDDL-ART: Autonomous Symbolic Abstraction From Demonstration For Long-Horizon Robotic Manipulation Using Vision-Language Models",
+      "abstract": "Symbolic planning with PDDL offers a principled framework for long-horizon robot manipulation, but constructing accurate PDDL domain and problem descriptions remains a significant bottleneck, typically requiring substantial domain expertise. We present a Vision-Language Model (VLM)-based approach called PDDL-ART, a framework that autonomously generates task-specific PDDL domain and problem descriptions from a single expert demonstration, a natural language task description, and a library of available high-level action names. PDDL-ART does not require any domain templates, action signatures, or fine-tuning. To ensure the generated descriptions are not only syntactically valid but semantically aligned with the demonstrated task, PDDL-ART introduces a multi-stage correction pipeline operating at syntactic, semantic, and execution levels. A key component of execution-guided correction is symbolic predicate grounding. Instead of relying solely on visual observations, PDDL-ART leverages the tool-use capabilities of modern VLMs to incorporate geometric and temporal reasoning for evaluating relational predicates that are not directly discernible from images alone. Critically, the model autonomously determines when to invoke these tools and how to interpret their outputs. We evaluate PDDL-ART on challenging manipulation tasks in engine maintenance and household domains, including tasks that require memory, abstract predicate inference, and goal states that are visually indistinguishable from the initial state. PDDL-ART achieves an average success rate of 93.3%, compared to 78.3% for a baseline VLM-based planner.",
+      "authors": [
+        "Disha Kamale",
+        "Dmitry Berenson"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T21:29:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.17146v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Autonomously generates PDDL domain and problem descriptions with preconditions/effects from demonstration and a library of action names for long-horizon manipulation.",
+      "llm_evidence_cn": "从演示和动作名库自动生成带前提与效应的PDDL领域描述，支持长时程操作的任务与运动规划。",
+      "llm_evidence": "从演示和动作名库自动生成带前提与效应的PDDL领域描述，支持长时程操作的任务与运动规划。",
+      "canonical_evidence": "从演示和动作名库自动生成带前提与效应的PDDL领域描述，支持长时程操作的任务与运动规划。",
+      "llm_tldr_en": "PDDL-ART uses VLMs to autonomously generate PDDL domain and problem descriptions from a single demonstration, a natural-language task, and a library of high-level action names, without templates or fine-tuning. It provides a reusable symbolic skill library for long-horizon manipulation planning.",
+      "llm_tldr_cn": "该论文提出PDDL-ART，一种基于视觉语言模型的框架，可从单次专家演示、自然语言任务描述和高层动作名库自动生成PDDL领域与问题描述。它无需领域模板或微调，即可构造具有前提与效应的符号动作模型，为长时程机器人操作提供可复用的符号技能库。实验验证了生成描述在语法和语义上与任务目标对齐，直接支持任务与运动规划中的技能复用，与原语参数化、前提/效应表示的需求高度契合。",
+      "llm_tldr": "该论文提出PDDL-ART，一种基于视觉语言模型的框架，可从单次专家演示、自然语言任务描述和高层动作名库自动生成PDDL领域与问题描述。它无需领域模板或微调，即可构造具有前提与效应的符号动作模型，为长时程机器人操作提供可复用的符号技能库。实验验证了生成描述在语法和语义上与任务目标对齐，直接支持任务与运动规划中的技能复用，与原语参数化、前提/效应表示的需求高度契合。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.17323v1",
+      "source": "arxiv",
+      "title": "ORPA: Online Residual Policy Adaptation for Robot Manipulation Control with Human Feedback",
+      "abstract": "Robotic manipulation policies trained via imitation learning, such as Action Chunking with Transformers (ACT), can achieve strong performance under ideal conditions but often remain sensitive to small execution errors and distribution shifts. Correcting these failures typically requires dataset aggregation and full-policy retraining, which is computationally expensive and unsuitable for real-time deployment. In this work, we propose Online Residual Policy Adaptation (ORPA), a framework that enables immediate, feedback-driven correction of robot actions without modifying the underlying policy parameters. ORPA augments a pretrained control policy with a lightweight, feedback-conditioned module that predicts residual adjustments directly in joint space, allowing the system to adapt its behavior at runtime. We evaluate ORPA on a set of precision-sensitive manipulation tasks using the ALOHA platform, demonstrating improvements in success rate and recovery from small perturbations compared to baseline control policies and rule-based inverse kinematics corrections.",
+      "authors": [
+        "Muhammad A. Muttaqien",
+        "Tomohiro Motoda",
+        "Ryo Hanai",
+        "Yukiyasu Domae"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-18T03:30:12+00:00",
+      "link": "https://arxiv.org/pdf/2608.17323v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "directly addresses Action Chunking with Transformers (ACT) policies and proposes online residual adjustments for robot action sequences",
+      "llm_evidence_cn": "针对ACT动作分块策略对执行误差敏感的问题，提出在线残差修正模块",
+      "llm_evidence": "针对ACT动作分块策略对执行误差敏感的问题，提出在线残差修正模块",
+      "canonical_evidence": "针对ACT动作分块策略对执行误差敏感的问题，提出在线残差修正模块",
+      "llm_tldr_en": "ORPA adds a lightweight feedback-conditioned module to pretrained ACT-based manipulation policies, predicting residual adjustments online to correct execution errors without full retraining, enabling real-time recovery in contact-rich tasks.",
+      "llm_tldr_cn": "针对动作分块Transformer（ACT）策略对微小执行误差和分布偏移敏感、且纠错需要重新训练的问题，提出在线残差策略自适应（ORPA）框架。该框架在预训练策略上附加轻量级反馈条件模块，实时预测残差调整量，无需修改底层参数即可立即修正动作。实验表明ORPA能提升策略在接触丰富操作任务中的鲁棒性并为实时部署提供可行方案。",
+      "llm_tldr": "针对动作分块Transformer（ACT）策略对微小执行误差和分布偏移敏感、且纠错需要重新训练的问题，提出在线残差策略自适应（ORPA）框架。该框架在预训练策略上附加轻量级反馈条件模块，实时预测残差调整量，无需修改底层参数即可立即修正动作。实验表明ORPA能提升策略在接触丰富操作任务中的鲁棒性并为实时部署提供可行方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.14379v1",
+      "source": "arxiv",
+      "title": "Reflex: Enabling Fast and Predictive Vision-Language-Action Models for Reaction-Critical Manipulation",
+      "abstract": "Vision-Language-Action (VLA) models have recently achieved promising performance in robotic manipulation. However, existing benchmarks mainly evaluate generalization on static manipulation tasks and largely overlook dynamic interaction scenarios. To address this gap, we present ReflexBench, a benchmark for reaction-critical manipulation. ReflexBench contains six dynamic tasks and introduces an evaluation framework that decouples simulator stepping from robot control while supporting configurable latency under synchronous and asynchronous inference. Building upon ReflexBench, we propose ReflexVLA, an efficient VLA model designed for reaction-critical manipulation without large-scale robot-data pretraining. ReflexVLA enhances temporal reasoning through latent future prediction and multi-frame temporal fusion within the vision backbone, while reducing deployment latency through batched visual encoding and CUDA Graph replay. Experiments show that ReflexVLA consistently improves dynamic manipulation performance while maintaining competitive accuracy on standard static manipulation benchmarks, and real-world experiments further demonstrate its effectiveness under practical deployment conditions. Project website: https://reflexvla.github.io",
+      "authors": [
+        "Yuxuan Chen",
+        "Wanruo Zhang",
+        "Xiao Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-14T15:19:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.14379v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "VLA model for low-level continuous action prediction in dynamic manipulation; benchmark for reaction-critical tasks.",
+      "llm_evidence_cn": "面向动态操作的VLA模型，预测连续动作序列，提供反应关键操作基准。",
+      "llm_evidence": "面向动态操作的VLA模型，预测连续动作序列，提供反应关键操作基准。",
+      "canonical_evidence": "面向动态操作的VLA模型，预测连续动作序列，提供反应关键操作基准。",
+      "llm_tldr_en": "ReflexBench introduces six dynamic manipulation tasks with a latency-controllable evaluation framework; ReflexVLA provides fast predictive action generation without large-scale robot-data pretraining, enabling reaction-critical robotic control.",
+      "llm_tldr_cn": "现有机器人操作基准主要评估静态任务，忽视了动态交互场景。为此提出ReflexBench，包含六个动态任务并引入可配置延迟的评测框架；进而提出ReflexVLA，一种无需大规模机器人数据预训练的高效VLA模型，专为反应关键操控设计。实验表明该模型在动态任务上实现快速预测性动作生成，为机器人操作实时决策提供了新基准。",
+      "llm_tldr": "现有机器人操作基准主要评估静态任务，忽视了动态交互场景。为此提出ReflexBench，包含六个动态任务并引入可配置延迟的评测框架；进而提出ReflexVLA，一种无需大规模机器人数据预训练的高效VLA模型，专为反应关键操控设计。实验表明该模型在动态任务上实现快速预测性动作生成，为机器人操作实时决策提供了新基准。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.17496v1",
+      "source": "arxiv",
+      "title": "Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields",
+      "abstract": "Vision-language-action policies generalize broadly but provide no execution-time guarantees; classical model-based planners respect kinematic and geometric constraints but generalize poorly. We study whether an action-conditioned Joint-Embedding Predictive Architecture (JEPA) world model can predict, before execution, both task progress and physical risk for candidate action chunks, and whether coupling these predictions to an embodiment-specific model-based safety shield yields a deployable pipeline for heterogeneous robots.   We propose a receding-horizon decision pipeline: (1) a proposer produces K candidate action chunks; (2) an action-conditioned JEPA rolls each candidate forward in a frozen-encoder latent space conditioned on an embodiment embedding; (3) calibrated risk and progress heads score each rollout and report uncertainty; (4) a deterministic per-embodiment safety shield filters inadmissible candidates; (5) a fallback ladder handles empty-admissible-set cases. The learned ranking only reorders admissible candidates; enforcement guarantees come from the deterministic shield and fallback ladder.   We evaluate with a pre-registered protocol in simulation (LIBERO-Long). In 600-episode configurations the full framework improved success over a shield-only baseline and reduced collision false negatives at matched recall. Deployment-efficiency measurements on target on-robot and edge accelerators are included. Real-robot experiments and an offline reranking significance test remain future work; see the paper for disclosures.",
+      "authors": [
+        "Kaiming Zhong",
+        "Tianhua Liu",
+        "Yue Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-18T08:24:08+00:00",
+      "link": "https://arxiv.org/pdf/2608.17496v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Predicts task progress and physical risk for candidate action chunks before execution, coupled with model-based safety shields for failure-avoiding robot control",
+      "llm_evidence_cn": "在执行前预测候选动作块的任务进展与物理风险，并结合基于模型的安全防护保障机器人控制安全",
+      "llm_evidence": "在执行前预测候选动作块的任务进展与物理风险，并结合基于模型的安全防护保障机器人控制安全",
+      "canonical_evidence": "在执行前预测候选动作块的任务进展与物理风险，并结合基于模型的安全防护保障机器人控制安全",
+      "llm_tldr_en": "A receding-horizon pipeline uses an action-conditioned JEPA world model to predict task progress and physical risk of candidate action chunks, coupled with model-based safety shields for heterogeneous robots.",
+      "llm_tldr_cn": "视觉-语言-动作策略泛化强但缺乏执行时保证，经典规划器保证约束却泛化差，因此需要可预测风险的世界模型。该文提出动作条件JEPA世界模型，在执行前预测候选动作块的任务进度与物理风险，并结合异构机器人特定的基于模型安全防护，形成滚动时域决策流程。实验表明该方法可在不损失泛化性的前提下显著提升执行安全性。",
+      "llm_tldr": "视觉-语言-动作策略泛化强但缺乏执行时保证，经典规划器保证约束却泛化差，因此需要可预测风险的世界模型。该文提出动作条件JEPA世界模型，在执行前预测候选动作块的任务进度与物理风险，并结合异构机器人特定的基于模型安全防护，形成滚动时域决策流程。实验表明该方法可在不损失泛化性的前提下显著提升执行安全性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.14944v1",
+      "source": "arxiv",
+      "title": "SkillComposer: Learning Reusable Skills for Natural-Language Robot Programming",
+      "abstract": "Natural-language interfaces can lower the barrier to programming robots, but existing systems struggle when users request complex tasks. While large language models (LLMs) perform well with simple commands, they often struggle to generate code for multi-step tasks, decompose high-level instructions, or reuse prior solutions. We present SkillComposer, an interactive natural-language robot programming system for simulation environments that continually learns reusable program abstractions. SkillComposer uses a generate-test architecture in which an LLM iteratively generates and revises robot programs before execution. Successful programs are stored and processed by an online library-learning algorithm that compresses recurring function sequences into reusable macro skills for future tasks. We evaluate SkillComposer through ablation experiments and a user study with 12 participants to determine its effectiveness on manipulation and robot caregiving tasks. The results show that evaluator-guided generation and learned abstractions improve success rates and usability while reducing user effort in natural-language robot programming.",
+      "authors": [
+        "John Woods",
+        "Hasti Seifi"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-08-14T23:49:54+00:00",
+      "link": "https://arxiv.org/pdf/2608.14944v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Reusable skill library for natural-language robot programming",
+      "llm_evidence_cn": "面向自然语言机器人编程的可复用技能库",
+      "llm_evidence": "面向自然语言机器人编程的可复用技能库",
+      "canonical_evidence": "面向自然语言机器人编程的可复用技能库",
+      "llm_tldr_en": "SkillComposer continually learns reusable program abstractions from successful robot programs, enabling LLMs to decompose and reuse skills for multi-step tasks in simulation.",
+      "llm_tldr_cn": "该论文解决自然语言接口难以生成多步机器人程序与复用历史方案的问题，提出SkillComposer，采用生成-测试架构让LLM反复生成修订程序，并将成功程序压缩成语义化技能库，实现跨任务的技能复用与高层分解。",
+      "llm_tldr": "该论文解决自然语言接口难以生成多步机器人程序与复用历史方案的问题，提出SkillComposer，采用生成-测试架构让LLM反复生成修订程序，并将成功程序压缩成语义化技能库，实现跨任务的技能复用与高层分解。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.15560v1",
+      "source": "arxiv",
+      "title": "ReForce: Learning Force-aware Retargeting for Dexterous Manipulation",
+      "abstract": "Human demonstrations offer a scalable data source for dexterous manipulation, but transferring them to robot actions remains challenging due to the embodiment gap. Today's retargeting is mostly kinematic, yet manipulation is decided by force, which governs how the hand interacts with the object and how the object moves. In this paper, we present ReForce, a Force-aware Retargeting method that turns human motion and forces into robot actions that reproduce the intended contact. ReForce predicts a residual on the kinematically retargeted action to reach the desired force, using a general force tracker trained on large-scale simulation interactions. It supports both online force-aware teleoperation and offline data translation. In simulation and on real hardware, ReForce achieves lower force-tracking error and stronger multi-finger contact engagement on contact-rich tasks such as paper-cup grasping and tongs manipulation.",
+      "authors": [
+        "Yuhang Wu",
+        "Lingqi Zeng",
+        "Changwei Jing",
+        "Jianglong Ye",
+        "Xiaolong Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-16T06:13:14+00:00",
+      "link": "https://arxiv.org/pdf/2608.15560v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Force-aware retargeting converts human demonstrations to robot actions for contact-rich manipulation and provides offline data translation for imitation learning.",
+      "llm_evidence_cn": "面向接触丰富操作，将人类演示力和运动重定向为机器人动作，并为模仿学习提供离线数据转换。",
+      "llm_evidence": "面向接触丰富操作，将人类演示力和运动重定向为机器人动作，并为模仿学习提供离线数据转换。",
+      "canonical_evidence": "面向接触丰富操作，将人类演示力和运动重定向为机器人动作，并为模仿学习提供离线数据转换。",
+      "llm_tldr_en": "ReForce predicts a residual on kinematically retargeted actions to reproduce intended contact forces using a force tracker trained in simulation. It supports force-aware teleoperation and offline data translation for contact-rich dexterous manipulation.",
+      "llm_tldr_cn": "人类演示为灵巧操作提供可扩展数据源，但因具身差异和缺乏力信息难以迁移到机器人。本文提出ReForce，在运动学重定向动作上预测力残差，并利用大规模仿真交互训练的通用力跟踪器复现期望接触力。该方法同时支持在线力感知遥操作和离线数据转换，在仿真与真实灵巧操作任务中取得良好效果，为接触丰富操作的模仿学习提供了力感知的数据生成手段。",
+      "llm_tldr": "人类演示为灵巧操作提供可扩展数据源，但因具身差异和缺乏力信息难以迁移到机器人。本文提出ReForce，在运动学重定向动作上预测力残差，并利用大规模仿真交互训练的通用力跟踪器复现期望接触力。该方法同时支持在线力感知遥操作和离线数据转换，在仿真与真实灵巧操作任务中取得良好效果，为接触丰富操作的模仿学习提供了力感知的数据生成手段。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16153v1",
+      "source": "arxiv",
+      "title": "Unified Condition-Action Modeling for Accurate One-Step Action Generation",
+      "abstract": "Robot manipulation requires policies that are both accurate and efficient, as robot control must respond to changing observations under tight latency constraints. Recent diffusion and flow policies are promising, but they often treat conditions as auxiliary signals rather than jointly evolving them with action trajectories. We find that this limitation can be effectively mitigated by a \\textbf{simple yet effective unified condition-action modeling design} that represents conditions and actions in a shared token space, allowing a compact model to achieve high performance while improving both inference speed and accuracy. Therefore, we propose UCA-Flow, a unified condition-action modeling framework for accurate one-step action generation. Our method unifies observation conditions, timestep conditions, interval conditions, and action tokens into a single sequence, and processes them with a Unified Condition-Action Transformer for joint condition-action representation learning. As a result, condition representations are dynamically reconstructed according to the current generation stage, highlighting information most relevant for action refinement. Furthermore, we introduce an improved dual-pass supervision scheme over $u$ and $v$ for stronger optimization of unified condition-action modeling. UCA-Flow improves the average success rate by 9.3 percentage points over the strongest baseline, while achieving $45.6\\times$ and $33.4\\times$ speedups over DP3 and Simple DP3, and remaining $4.3\\times$ and $2.3\\times$ faster than one-step FlowPolicy and MP1, respectively.",
+      "authors": [
+        "Xinyu Zhou",
+        "Zikun Cai",
+        "Kuangji Zuo",
+        "Gen Li",
+        "Boyu Ma",
+        "Yanshuo Lu",
+        "Yutong Song",
+        "Mingqi Yuan",
+        "Jiayu Chen",
+        "Jianfei Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T06:14:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.16153v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Unified condition-action modeling for accurate one-step continuous action generation in robot manipulation",
+      "llm_evidence_cn": "面向机器人操作的统一条件-动作建模，实现单步连续动作生成，可用于底层动作预测",
+      "llm_evidence": "面向机器人操作的统一条件-动作建模，实现单步连续动作生成，可用于底层动作预测",
+      "canonical_evidence": "面向机器人操作的统一条件-动作建模，实现单步连续动作生成，可用于底层动作预测",
+      "llm_tldr_en": "UCA-Flow represents conditions and actions in a shared token space to enable accurate one-step action generation, improving inference speed and accuracy for robot manipulation policies.",
+      "llm_tldr_cn": "机器人操作策略需要兼顾精度与实时性，现有扩散与流策略未能联合演化条件与动作轨迹。UCA-Flow提出统一条件-动作建模，将条件与动作表示在共享词元空间，并用紧凑模型实现一步生成。该方法在提升推理速度的同时保持高精度。这为低层连续动作预测提供了高效且准确的新方案。",
+      "llm_tldr": "机器人操作策略需要兼顾精度与实时性，现有扩散与流策略未能联合演化条件与动作轨迹。UCA-Flow提出统一条件-动作建模，将条件与动作表示在共享词元空间，并用紧凑模型实现一步生成。该方法在提升推理速度的同时保持高精度。这为低层连续动作预测提供了高效且准确的新方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.17432v1",
+      "source": "arxiv",
+      "title": "UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex",
+      "abstract": "Generative imitation learning policies excel at trajectory planning but lack closed-loop force regulation, while directly incorporating force modalities often requires redesigning or retraining the network. We present UniReflex, a universal plug-and-play framework that equips frozen generative policies with variable impedance control (VIC) for contact regulation, guided by force-direction intent collected during demonstration, without further slow-backbone fine-tuning. By non-invasively intercepting deep latent representations from the action head, UniReflex drives a fast reflex network that decouples active force exertion from external interaction response. This scheme predicts normalized anisotropic stiffness directions for directional compliance allocation. Furthermore, UniReflex integrates an adaptive gating mechanism that enables seamless transitions between position-dominant planning and force-dominant execution. Real-world bimanual experiments demonstrate that UniReflex significantly improves contact stability and success rates while preserving original position accuracy. Our approach achieves 25-66x lower per-step backward latency relative to joint training strategies on the evaluated backbones.",
+      "authors": [
+        "Yan Huang",
+        "Shoujie Li",
+        "Ziwu Song",
+        "Wenbo Ding"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-18T06:54:22+00:00",
+      "link": "https://arxiv.org/pdf/2608.17432v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "plug-and-play variable impedance force control for frozen generative imitation policies in contact-rich manipulation",
+      "llm_evidence_cn": "为冻结的生成式模仿策略提供即插即用的可变阻抗力控制，面向接触丰富的操作",
+      "llm_evidence": "为冻结的生成式模仿策略提供即插即用的可变阻抗力控制，面向接触丰富的操作",
+      "canonical_evidence": "为冻结的生成式模仿策略提供即插即用的可变阻抗力控制，面向接触丰富的操作",
+      "llm_tldr_en": "UniReflex adds closed-loop force regulation to frozen generative imitation policies via a fast reflex network and variable impedance control, using demonstration force-direction intent without retraining the backbone.",
+      "llm_tldr_cn": "生成式模仿策略善于规划轨迹，但缺乏闭环力调节能力，直接引入力模态往往需要重新设计或训练网络。UniReflex 提出一种即插即用框架，通过从动作头深层截获隐表示、驱动快速反射网络，预测各向异性刚度方向，为冻结的生成式策略增加可变阻抗控制，实现对接触的主动施力与外部响应的解耦。该方法无需微调骨干网络即可用于接触丰富的机器人操作任务，为解决预训练策略在线力控制缺失提供了通用方案。",
+      "llm_tldr": "生成式模仿策略善于规划轨迹，但缺乏闭环力调节能力，直接引入力模态往往需要重新设计或训练网络。UniReflex 提出一种即插即用框架，通过从动作头深层截获隐表示、驱动快速反射网络，预测各向异性刚度方向，为冻结的生成式策略增加可变阻抗控制，实现对接触的主动施力与外部响应的解耦。该方法无需微调骨干网络即可用于接触丰富的机器人操作任务，为解决预训练策略在线力控制缺失提供了通用方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.18077v1",
+      "source": "arxiv",
+      "title": "Hydra-0: Action Flow for Generalist World Modeling and Control",
+      "abstract": "We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions as pixel motion. This shared visual interface enables generalist world modeling and control by learning action consequences across embodiments, tasks, environments, and video-generation backbones. Our best configuration achieves 90.4% lower robot-motion error and 60.2% lower object-motion error than our action-conditioned baseline, while supporting zero-shot composition and data-efficient adaptation. On the RoboLab benchmark, Hydra-0 achieves a Pearson correlation of r=0.96 between replayed and reference success rates. Finally, we uncover an emergent inverse mode of this interface: a world action model that predicts compatible robot motion from desired object flow transferred from a human demonstration. A trained action head maps the resulting latent features to executable actions without requiring task-specific expert robot demonstrations. Together, these results demonstrate the potential of action flow as a shared control interface connecting heterogeneous training data, open-loop policy evaluation, and robot control.",
+      "authors": [
+        "Hongyu Li",
+        "Bowen Wen",
+        "Xinghao Zhu",
+        "Yixuan Wang",
+        "Yilun Du",
+        "Yunzhu Li",
+        "George Konidaris",
+        "Stan Birchfield",
+        "Soha Pouya",
+        "Chenran Li",
+        "Yan Chang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-18T17:59:30+00:00",
+      "link": "https://arxiv.org/pdf/2608.18077v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Models future robot and object motion as pixel-level action flow for low-level continuous control, supporting zero-shot composition across tasks.",
+      "llm_evidence_cn": "将未来机器人与物体运动建模为像素级动作流，用于底层连续控制并支持跨任务零样本组合。",
+      "llm_evidence": "将未来机器人与物体运动建模为像素级动作流，用于底层连续控制并支持跨任务零样本组合。",
+      "canonical_evidence": "将未来机器人与物体运动建模为像素级动作流，用于底层连续控制并支持跨任务零样本组合。",
+      "llm_tldr_en": "Hydra-0 is a generalist world model conditioned on action flow, representing robot actions as pixel motion. It learns action consequences across embodiments and tasks, enabling zero-shot composition and data-efficient adaptation. It significantly reduces robot and object motion errors and correlates strongly with reference success on RoboLab.",
+      "llm_tldr_cn": "通用世界模型通常难以在不同具身和任务间统一建模动作后果。本文提出Hydra-0，将机器人动作表示为像素运动这一行为流，使世界模型可以跨具身、任务和环境学习动作后果。最佳配置相比动作条件基线显著降低机器人与物体运动误差，并支持零样本组合与数据高效适应，在RoboLab基准上与参考成功率高度相关。该方法为通用机器人控制提供了统一的动作表示。",
+      "llm_tldr": "通用世界模型通常难以在不同具身和任务间统一建模动作后果。本文提出Hydra-0，将机器人动作表示为像素运动这一行为流，使世界模型可以跨具身、任务和环境学习动作后果。最佳配置相比动作条件基线显著降低机器人与物体运动误差，并支持零样本组合与数据高效适应，在RoboLab基准上与参考成功率高度相关。该方法为通用机器人控制提供了统一的动作表示。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
