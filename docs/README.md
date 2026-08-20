@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-19</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-20</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 11 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-19 20:49:44 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-20 20:15:09 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦机器人学习与操作，共筛选11篇论文，重点精读智能体中心架构与长程操作研究。最值得看的是《Teach and Grow》提出的通用学习框架（9.0分）和《Don&#x27;t Drop the BATON》的子任务探索与记忆机制（8.0分）。建议普通读者关注在线残差策略与预测性安全框架，了解机器人如何通过人类反馈和安全防护提升操控可靠性。</p>
+<p>今日共读6篇论文，精读1篇、速读5篇，聚焦机器人采摘、灵巧操作、记忆与语言智能体。</p>
+<p>最值得关注的是《HarvestPoint-ACT》（9.0/10），针对遮挡条件下机器人水果采摘的显式目标选择与收获点约束，效果突出。</p>
+<p>建议优先精读该论文，并顺带浏览灵巧操作预训练（ADEPT）和机器人记忆（Remember Smarter）的速读内容。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Teach and Grow: An Agent-Centered Architecture for General Robot Learning">Teach and Grow: An Agent-Centered Architecture for General Robot Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Don&#x27;t Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory">Don&#x27;t Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory</span></li><li><span class="dpr-home-dashboard-paper-title" title="PDDL-ART: Autonomous Symbolic Abstraction From Demonstration For Long-Horizon Robotic Manipulation Using Vision-Language Models">PDDL-ART: Autonomous Symbolic Abstraction From Demonstration For Long-Horizon Robotic Manipulation Using Vision-Language Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion">HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">8 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ORPA: Online Residual Policy Adaptation for Robot Manipulation Control with Human Feedback">ORPA: Online Residual Policy Adaptation for Robot Manipulation Control with Human Feedback</span></li><li><span class="dpr-home-dashboard-paper-title" title="Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields">Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reflex: Enabling Fast and Predictive Vision-Language-Action Models for Reaction-Critical Manipulation">Reflex: Enabling Fast and Predictive Vision-Language-Action Models for Reaction-Critical Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning">ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Remember Smarter: Visual History Compressor and Hyperbolic Experience Space for Robotic Memory">Remember Smarter: Visual History Compressor and Hyperbolic Experience Space for Robotic Memory</span></li><li><span class="dpr-home-dashboard-paper-title" title="HaReCAP: Habitual-action Grounding for Recursive Large Language Model Agents">HaReCAP: Habitual-action Grounding for Recursive Large Language Model Agents</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>8</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
 </section>
 </div>
 

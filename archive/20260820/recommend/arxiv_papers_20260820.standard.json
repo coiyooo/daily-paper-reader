@@ -1,0 +1,283 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-20T20:10:20.477237+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2608.18446v1",
+      "source": "arxiv",
+      "title": "HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion",
+      "abstract": "End-to-end imitation learning avoids hand-made robot motion for approaching and grasping, but the policy must still decide which fruit to pick and where to close the gripper. Occlusion can make the policy lose the selected fruit during harvesting, and the correct closing point is difficult to infer from pixels alone. This paper presents HarvestPoint-ACT, which makes both decisions explicit in perception and provides them to the policy. An instance segmentation front end with a keypoint branch predicts a mask and a harvest point for each visible fruit, where the harvest point specifies the location to close the gripper. A scheduler ranks detected candidates by occlusion and travel distance and selects one target. After each attempt, it redetects and reranks the candidates because the canopy may have changed. The selected fruit is encoded for an action chunking transformer as an eight-dimensional state, containing the absolute harvest point, the vector from the gripper to that point, a validity flag, and a confidence score. When the selected fruit is temporarily undetected, the system retains the last harvest point estimate in the robot base frame and marks it as stale, and aborts the attempt if the loss persists. On a canopy mock-up, HarvestPoint-ACT achieves a success rate of 88%, and of 75% under heavy occlusion.",
+      "authors": [
+        "Hanying Hu",
+        "Weipeng Li",
+        "Yikun Huang",
+        "Hao Chen",
+        "Zhengtao Hu",
+        "Changcai Yang",
+        "Weiwei Wan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-19T02:21:27+00:00",
+      "link": "https://arxiv.org/pdf/2608.18446v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Action Chunking with Transformers with explicit target/harvest-point conditioning",
+      "llm_evidence_cn": "基于动作分块Transformer的显式目标与采摘点条件设定",
+      "llm_evidence": "基于动作分块Transformer的显式目标与采摘点条件设定",
+      "canonical_evidence": "基于动作分块Transformer的显式目标与采摘点条件设定",
+      "llm_tldr_en": "HarvestPoint-ACT makes fruit selection and grasp-point decisions explicit through instance segmentation and keypoint predictions, conditioning the ACT policy on the chosen harvest point to handle occlusion in robotic fruit harvesting.",
+      "llm_tldr_cn": "端到端模仿学习在采摘机器人中需要自行决定采摘目标和夹取点，遮挡环境下容易丢失目标。HarvestPoint-ACT将目标选择与采摘点预测显式化：实例分割与关键点分支输出候选果实的掩码和采摘点，调度器按遮挡和距离排序后进行条件设定，再交由ACT策略生成动作。在遮挡采摘场景下，该方法有效提升了采摘成功率和策略鲁棒性，为目标条件化的动作分块学习提供了实例。",
+      "llm_tldr": "端到端模仿学习在采摘机器人中需要自行决定采摘目标和夹取点，遮挡环境下容易丢失目标。HarvestPoint-ACT将目标选择与采摘点预测显式化：实例分割与关键点分支输出候选果实的掩码和采摘点，调度器按遮挡和距离排序后进行条件设定，再交由ACT策略生成动作。在遮挡采摘场景下，该方法有效提升了采摘成功率和策略鲁棒性，为目标条件化的动作分块学习提供了实例。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.19182v1",
+      "source": "arxiv",
+      "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
+      "abstract": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments that can solve long-horizon tasks directly from raw visuo-tactile perception. ADEPT pretrains a dexterous policy on a generic object reposing task, then post-trains downstream policies with this pretrained behavior as a prior. ADEPT enables learning new behaviors that are otherwise difficult to discover from scratch on multi-fingered robots and avoids learning the same set of skills over again for every new downstream task. The pretrained policy zero-shots the reposing phase of downstream tasks, but naïve RL fine-tuning rapidly degrades this capability during transfer. We address this with a stable post-training recipe combining behavior-cloning distillation, critic warm-up, and conservative on-policy updates. To safely exploit the full kinematic dexterity, we introduce a joint-space Geometric Fabric that mediates between the RL policy and the robot. We distill post-trained teachers into perceptive students that zero-shot sim-to-real transfer on two embodiments: a 23 DoF Kuka-Allegro with two RGB cameras, and a 29 DoF Flexiv-Sharpa with two RGB cameras and five vision-based tactile sensors, and can solve long-horizon tasks from challenging initial states with dexterity at human-level speed.",
+      "authors": [
+        "Jayjun Lee",
+        "Jessica Yin",
+        "Asif Rana",
+        "Nicholas Blauch",
+        "Sam Mady",
+        "Mohak Bhardwaj",
+        "Nima Fazeli",
+        "Nathan Ratliff",
+        "Karl Van Wyk",
+        "Ankur Handa"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-19T17:55:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.19182v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "pretrained dexterous skill prior transferred to downstream tasks",
+      "llm_evidence_cn": "将预训练的灵巧技能先验迁移到下游任务",
+      "llm_evidence": "将预训练的灵巧技能先验迁移到下游任务",
+      "canonical_evidence": "将预训练的灵巧技能先验迁移到下游任务",
+      "llm_tldr_en": "ADEPT pre-trains a dexterous policy on generic object reposing and post-trains downstream policies, enabling long-horizon visuo-tactile manipulation on multi-fingered robots without relearning common skills.",
+      "llm_tldr_cn": "多指机器人的灵巧技能往往需要针对每个下游任务重新学习。ADEPT通过大规模RL在大规模对象重摆任务上预训练策略，再以后训练方式将先验迁移到新任务，直接从原始视觉-触觉感知解决长时程操作。预训练策略可零样本完成下游任务中的重摆阶段，显著降低新技能学习难度，提升了模拟到现实的迁移效率。",
+      "llm_tldr": "多指机器人的灵巧技能往往需要针对每个下游任务重新学习。ADEPT通过大规模RL在大规模对象重摆任务上预训练策略，再以后训练方式将先验迁移到新任务，直接从原始视觉-触觉感知解决长时程操作。预训练策略可零样本完成下游任务中的重摆阶段，显著降低新技能学习难度，提升了模拟到现实的迁移效率。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.15269v1",
+      "source": "arxiv",
+      "title": "Remember Smarter: Visual History Compressor and Hyperbolic Experience Space for Robotic Memory",
+      "abstract": "Long-horizon robot policies require compact access to recent observations and   reusable experience without expanding the vision-language-action (VLA)   context. We introduce Remember Smarter (RS), a plug-and-play module with   complementary visual-history and hyperbolic experience-memory branches. Its   visual branch compresses multi-view patch histories using bidirectional   spatial Mamba and causal temporal Mamba, then exposes the resulting memory to   action-facing hidden states through residual cross-attention while leaving the   VLM visual-token stream unchanged. Its experience branch stores successful   final-layer VLM states in a Poincare VAE space, organizes them hierarchically,   and asynchronously converts retrieved experience into geodesic prompt tokens   without blocking action inference. When adapted to pi0, RS increases total   success on LIBERO-Plus from 53.6% to 70.6% and   achieves substantial   performance gains in real-robot experiments designed to evaluate memory   retention and experience utilization.",
+      "authors": [
+        "Dai Zhou",
+        "Jiexi Yan",
+        "Tong Li",
+        "Yuxuan Wang",
+        "Cheng Deng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-15T15:13:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.15269v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical experience memory for reusable long-horizon robot policies, related to reusable skill libraries",
+      "llm_evidence_cn": "分层经验记忆支持长程机器人策略复用成功经验，与可复用技能库需求相关",
+      "llm_evidence": "分层经验记忆支持长程机器人策略复用成功经验，与可复用技能库需求相关",
+      "canonical_evidence": "分层经验记忆支持长程机器人策略复用成功经验，与可复用技能库需求相关",
+      "llm_tldr_en": "A plug-and-play robotic memory module that compresses visual history with Mamba-based encoders and organizes successful VLM states hierarchically in a Poincare VAE, giving long-horizon policies reusable experience without expanding context.",
+      "llm_tldr_cn": "长程机器人策略需要及时访问近期观测并复用成功经验，但直接扩展VLA上下文代价高昂。Remember Smarter提出即插即用模块，用双向空间Mamba与因果时间Mamba压缩多视角视觉历史，并通过残差交叉注意力注入动作相关隐状态；同时设计双曲经验分支，将成功时VLM末层状态存入庞加莱VAE并分层组织，异步检索复用。该方法能提供紧凑历史与可复用经验，支持长程操作。该模块可作为VLA策略的长程记忆增强组件。",
+      "llm_tldr": "长程机器人策略需要及时访问近期观测并复用成功经验，但直接扩展VLA上下文代价高昂。Remember Smarter提出即插即用模块，用双向空间Mamba与因果时间Mamba压缩多视角视觉历史，并通过残差交叉注意力注入动作相关隐状态；同时设计双曲经验分支，将成功时VLM末层状态存入庞加莱VAE并分层组织，异步检索复用。该方法能提供紧凑历史与可复用经验，支持长程操作。该模块可作为VLA策略的长程记忆增强组件。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16447v1",
+      "source": "arxiv",
+      "title": "HaReCAP: Habitual-action Grounding for Recursive Large Language Model Agents",
+      "abstract": "Long-horizon embodied tasks require LLM agents to iteratively decompose high-level goals, revise plans in response to environmental feedback, and ground leaf-level subgoals into valid executable actions. Recursive context-management methods such as ReCAP improve planning stability through multi-level task decomposition and parent-node refinement, but still repeatedly invoke the LLM at leaf nodes to ground atomic subtasks into exact valid actions. We refer to this final grounding step as last-mile grounding redundancy, which accumulates into substantial LLM-call and token overhead during long-horizon execution. To mitigate this issue, we propose HaReCAP (Habitual-action Grounded ReCAP), a low-intrusion leaf grounding extension for ReCAP. HaReCAP extracts frequent leaf decisions from successful trajectories and compiles them offline into auditable and abstainable one-step leaf-reflex rules. At runtime, it skips the leaf LLM call only when a rule can uniquely determine a legal action in the current valid-action set; otherwise, it falls back to the original ReCAP. This design avoids repeatedly carrying the full recursive context into the LLM for routine leaf action grounding, while preserving the original recursive control flow. We evaluate HaReCAP on Robotouille and ALFWorld with Qwen3.5-27B as the main model. On tasks solved by both ReCAP and HaReCAP, HaReCAP reduces token consumption by 14.67%, 17.93%, and 20.08% on Robotouille synchronous, Robotouille asynchronous, and ALFWorld, respectively. The results show that HaReCAP can serve as a low-intrusion extension to ReCAP-style recursive context-management frameworks, reducing last-mile grounding redundancy across environments and models on commonly successful trajectories.",
+      "authors": [
+        "Shen Liu",
+        "Zhenguo Xu",
+        "Shaopu Wang",
+        "Yike Gao",
+        "Chunlei Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-08-17T11:47:03+00:00",
+      "link": "https://arxiv.org/pdf/2608.16447v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical decomposition with habitual action library for long-horizon embodied tasks",
+      "llm_evidence_cn": "面向长时程具身任务的分层分解与习惯性动作库",
+      "llm_evidence": "面向长时程具身任务的分层分解与习惯性动作库",
+      "canonical_evidence": "面向长时程具身任务的分层分解与习惯性动作库",
+      "llm_tldr_en": "HaReCAP reduces redundant LLM calls in long-horizon embodied planning by grounding leaf-level subgoals with a habitual-action library, extending recursive decomposition. It offers a reusable-action grounding approach supporting hierarchical task decomposition and skill libraries.",
+      "llm_tldr_cn": "在长时程具身任务中，递归LLM规划器会在叶节点反复调用大模型将原子子目标落地为具体动作，产生大量冗余调用和token开销。HaReCAP提出低侵入式的叶级落地扩展，通过习惯性动作库对子目标进行落地，显著降低LLM调用次数并保持规划稳定性。这项工作为在分层任务分解中使用可复用动作库提供了有价值的思路。",
+      "llm_tldr": "在长时程具身任务中，递归LLM规划器会在叶节点反复调用大模型将原子子目标落地为具体动作，产生大量冗余调用和token开销。HaReCAP提出低侵入式的叶级落地扩展，通过习惯性动作库对子目标进行落地，显著降低LLM调用次数并保持规划稳定性。这项工作为在分层任务分解中使用可复用动作库提供了有价值的思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16503v1",
+      "source": "arxiv",
+      "title": "NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation",
+      "abstract": "Real-world deployment of Vision-Language-Action (VLA) models is often bottlenecked by efficiency-performance trade-offs, cross-embodiment generalization, and execution smoothness. We present NebulaVLA, an asynchronous dual-frequency architecture that decouples high-level semantic reasoning from low-level action control, optimizing computational resources and modularity. To bridge semantic gaps across heterogeneous robots, we introduce GESTURE-7, a unified language-grounded action representation. Furthermore, our Guide Action algorithm enforces kinematic continuity via mask-based smoothness constraints. Comprehensive evaluations demonstrate that NebulaVLA significantly outperforms synchronous baselines, achieving an 85.5\\% average success rate on LIBERO-Plus and accelerating action generation by \\textasciitilde 2.7$\\times$. This asynchronous design enables highly efficient and responsive control for practical robotics.",
+      "authors": [
+        "Cong Zhao",
+        "Shuai Tian",
+        "Xu Zhang",
+        "Baocheng Ni",
+        "Xinguo Song",
+        "Xueying Sun",
+        "Shu Jiang",
+        "Shouchang Yang",
+        "Bo Tang",
+        "Jin Deng",
+        "Ge Zhu",
+        "YongCheng Wang",
+        "Jin Xu",
+        "Ri Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-17T12:40:23+00:00",
+      "link": "https://arxiv.org/pdf/2608.16503v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "dual-frequency architecture decoupling high-level semantic reasoning from low-level action control for hierarchical manipulation",
+      "llm_evidence_cn": "双频架构解耦高层语义推理与低层动作控制，面向分层操作",
+      "llm_evidence": "双频架构解耦高层语义推理与低层动作控制，面向分层操作",
+      "canonical_evidence": "双频架构解耦高层语义推理与低层动作控制，面向分层操作",
+      "llm_tldr_en": "NebulaVLA decouples high-level semantic reasoning from low-level action control with an asynchronous dual-frequency architecture, introduces a unified language-grounded action representation, and enforces kinematic continuity for smooth robotic manipulation.",
+      "llm_tldr_cn": "真实部署视觉-语言-动作（VLA）模型常受效率-性能权衡、跨本体泛化与执行平滑性制约。论文提出NebulaVLA，采用异步双频架构解耦高层语义推理与低层动作控制，优化计算资源与模块化；引入统一语言接地动作表示GESTURE-7以桥接异构机器人语义鸿沟，并用Guide Action算法通过掩码平滑约束保证运动学连续性。实验表明其显著优于同步基线，为跨本体分层操作控制提供有效方案。",
+      "llm_tldr": "真实部署视觉-语言-动作（VLA）模型常受效率-性能权衡、跨本体泛化与执行平滑性制约。论文提出NebulaVLA，采用异步双频架构解耦高层语义推理与低层动作控制，优化计算资源与模块化；引入统一语言接地动作表示GESTURE-7以桥接异构机器人语义鸿沟，并用Guide Action算法通过掩码平滑约束保证运动学连续性。实验表明其显著优于同步基线，为跨本体分层操作控制提供有效方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16837v1",
+      "source": "arxiv",
+      "title": "HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL",
+      "abstract": "Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation. The high dimensionality and interdependence of humanoid motions make it challenging for conventional single-stage VLA architectures to coordinate locomotion, waist posture, and dual-arm manipulation effectively. Moreover, policies trained through offline behavior cloning can remain suboptimal during real-world deployment. Although online reinforcement learning can refine policies through real-world interaction, directly tuning large VLA backbones demands excessive computation and may introduce safety risks during real-robot exploration. To address these bottlenecks, we introduce HAF (Humanoid Adaptation Framework), a two-part framework consisting of HAF-VLA and HAF-Steer that transfers off-the-shelf generalist VLA foundation models to humanoid whole-body loco-manipulation. HAF-VLA is a hierarchical action-flow generator built on a pretrained flow-matching VLA. It splits full-body action denoising into three sequential stages with stage embeddings and cross-stage KV caches that retain kinematic dependencies, avoiding incoherent whole-body actions from one-shot generation. On top of the frozen HAF-VLA, HAF-Steer is a latent offline-to-online RL pipeline that leverages flow-matching invertibility and DCT-based dimensionality reduction to restrict RL optimization to a compact noise subspace and train a regularized SAC policy. This avoids updating the large VLA backbone and enables efficient real-world policy refinement. Evaluated on seven real-world humanoid loco-manipulation tasks, HAF surpasses vanilla single-stage VLA baselines and improves whole-body coordination and task performance. Project website: https://grange007.github.io/HAF .",
+      "authors": [
+        "Langzhe Gu",
+        "Chengkai Hou",
+        "Meng Li",
+        "Xinhua Wang",
+        "Jiaming Liu",
+        "Xinyuan Lv",
+        "Bowei Zhang",
+        "Shuanghao Bai",
+        "Guangrun Li",
+        "Jingyang He",
+        "Gaole Dai",
+        "Ziluo Ding",
+        "Zhiyuan Xu",
+        "Kuan Cheng",
+        "Jian Tang",
+        "Zhengping Che",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-17T17:22:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.16837v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Hierarchical action flow for whole-body loco-manipulation, combining offline behavior cloning and spectral latent RL; methodologically relevant to hierarchical skill decomposition.",
+      "llm_evidence_cn": "通过层级动作流协调全身移动操作，并采用谱潜在强化学习精化策略，与层级策略分解相关。",
+      "llm_evidence": "通过层级动作流协调全身移动操作，并采用谱潜在强化学习精化策略，与层级策略分解相关。",
+      "canonical_evidence": "通过层级动作流协调全身移动操作，并采用谱潜在强化学习精化策略，与层级策略分解相关。",
+      "llm_tldr_en": "HAF adapts generalist VLAs to humanoid whole-body loco-manipulation using hierarchical action flow and spectral latent RL, improving coordination and real-world policy refinement.",
+      "llm_tldr_cn": "人形机器人全身移动操作要求协调行走、腰姿和双臂，传统单阶段VLA难以处理高维且相互依赖的动作。HAF提出层级动作流来分解任务，并使用谱潜在强化学习在离线行为克隆基础上进行有效微调，避免直接调整大型VLA骨干的过高开销。实验表明该方法能提升全身协调与真实部署性能，但并未建立参数化技能库或技能条件化模仿学习。",
+      "llm_tldr": "人形机器人全身移动操作要求协调行走、腰姿和双臂，传统单阶段VLA难以处理高维且相互依赖的动作。HAF提出层级动作流来分解任务，并使用谱潜在强化学习在离线行为克隆基础上进行有效微调，避免直接调整大型VLA骨干的过高开销。实验表明该方法能提升全身协调与真实部署性能，但并未建立参数化技能库或技能条件化模仿学习。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
