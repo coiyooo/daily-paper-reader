@@ -1,0 +1,105 @@
+{
+  "date": "20260821",
+  "date_label": "",
+  "generated_at": "2026-08-21 20:11:43 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.13489v1",
+      "route": "202608/21/2608.13489v1-dreamx-phi-10-action-conditioned-video-world-model-for-robotic-manipulation",
+      "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "动作条件视频世界模型，预测动作序列的未来观测",
+      "first_seen_at": "2026-08-21 20:11:43 UTC",
+      "updated_at": "2026-08-21 20:11:43 UTC"
+    },
+    {
+      "paper_id": "2608.15816v1",
+      "route": "202608/21/2608.15816v1-vitar-visuo-tactile-residual-adaptation-for-foundation-vla-manipulation",
+      "title": "ViTaR: Visuo-Tactile Residual Adaptation for Foundation VLA Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "视觉-触觉残差自适应，改善接触丰富操作中的连续动作控制",
+      "first_seen_at": "2026-08-21 20:11:43 UTC",
+      "updated_at": "2026-08-21 20:11:43 UTC"
+    },
+    {
+      "paper_id": "2608.17717v1",
+      "route": "202608/21/2608.17717v1-compcpz-preserving-multi-modal-intent-in-language-guided-robot-manipulation",
+      "title": "CompCPZ: Preserving Multi-Modal Intent in Language-Guided Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于逐原语约束多项式带集保留多模态指令的组合表示",
+      "first_seen_at": "2026-08-21 20:11:43 UTC",
+      "updated_at": "2026-08-21 20:11:43 UTC"
+    },
+    {
+      "paper_id": "2608.19453v1",
+      "route": "202608/21/2608.19453v1-when-automata-meet-streams-temporal-logic-compilation-for-stream-based-robotics-task-and-motion-planning",
+      "title": "When Automata Meet Streams: Temporal Logic Compilation for Stream-Based Robotics Task and Motion Planning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于流的任务与运动规划，包含连续几何参数和时序约束",
+      "first_seen_at": "2026-08-21 20:11:43 UTC",
+      "updated_at": "2026-08-21 20:11:43 UTC"
+    },
+    {
+      "paper_id": "2608.19574v1",
+      "route": "202608/21/2608.19574v1-hitac-wam-a-hierarchical-tactile-world-action-model-for-contact-rich-robot-manipulation",
+      "title": "HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在接触丰富操作中为候选动作块预测触觉状态序列",
+      "first_seen_at": "2026-08-21 20:11:43 UTC",
+      "updated_at": "2026-08-21 20:11:43 UTC"
+    },
+    {
+      "paper_id": "2608.19589v1",
+      "route": "202608/21/2608.19589v1-orthoskillvla-continual-skill-learning-via-gradient-informed-skill-subspace-adaptation",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于梯度信息技能子空间的VLA持续技能学习，有助于保留可复用技能",
+      "first_seen_at": "2026-08-21 20:11:43 UTC",
+      "updated_at": "2026-08-21 20:11:43 UTC"
+    }
+  ]
+}

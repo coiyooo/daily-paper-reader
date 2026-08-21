@@ -1,0 +1,256 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-21T20:07:40.599510+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.13489v1",
+      "source": "arxiv",
+      "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+      "abstract": "We present \\textbf{DreamX-Phi 1.0}, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations. Yet realism alone does not guarantee faithfulness: a convincing rollout can still move the wrong arm or lose the manipulated object. To ensure the prediction respects each arm's commanded path, we inject per-arm $\\mathrm{SE}(3)$ transformations into attention via \\textbf{PRoPE-style geometric encoding}, preserving arm identity and rigid-motion structure. Action control alone does not fully constrain scene geometry or the evolution of small manipulated objects. We therefore add a lightweight \\textbf{depth branch} for scene-level geometry and use \\textbf{SAM3 masks} with a frozen \\textbf{V-JEPA teacher} to maintain object consistency throughout grasping. We further distill the multi-step generator into a few-step student via distribution-matching distillation for efficient deployment. At the time of writing, \\model{} achieves first place on Track~1 and second place on Track~2 of the WorldArena~2.0 Challenge. Our model and code will be publicly available.",
+      "authors": [
+        "DreamX Team",
+        "Rui Chen",
+        "Xiangxiang Chu",
+        "Geng Li",
+        "Jifan Li",
+        "Qingfeng Shi",
+        "Datao Tang",
+        "Jing Tang",
+        "Jun Wang",
+        "Pengfei Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-08-13T17:18:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.13489v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "action-conditioned video world model predicting future observations for action sequences",
+      "llm_evidence_cn": "动作条件视频世界模型，预测动作序列的未来观测",
+      "llm_evidence": "动作条件视频世界模型，预测动作序列的未来观测",
+      "canonical_evidence": "动作条件视频世界模型，预测动作序列的未来观测",
+      "llm_tldr_en": "DreamX-Phi 1.0 is an action-conditioned video world model that predicts future observations given a frame, language instruction, and action sequence, using SE(3)-preserving attention encoding to maintain arm identity and geometric structure.",
+      "llm_tldr_cn": "机器人的动作条件视频世界模型通常只管生成逼真视频，却可能丢失手臂身份或物体位置。DreamX-Phi 1.0在给定语言指令和动作序列后预测未来观测，并通过PRoPE式几何编码将每只手臂的SE(3)变换注入注意力，保持刚体运动结构。该方法提高了动作序列预测的忠实度和场景几何的可靠性。",
+      "llm_tldr": "机器人的动作条件视频世界模型通常只管生成逼真视频，却可能丢失手臂身份或物体位置。DreamX-Phi 1.0在给定语言指令和动作序列后预测未来观测，并通过PRoPE式几何编码将每只手臂的SE(3)变换注入注意力，保持刚体运动结构。该方法提高了动作序列预测的忠实度和场景几何的可靠性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.15816v1",
+      "source": "arxiv",
+      "title": "ViTaR: Visuo-Tactile Residual Adaptation for Foundation VLA Manipulation",
+      "abstract": "As Vision-Language-Action (VLA) models scale toward real-world deployment, contact-rich manipulation exposes a critical blind spot: these policies encode broad visual-semantic priors yet remain unaware of local contact events, producing identical actions whether contact is established, lost, or destabilized. Existing remedies either modify VLA internals, risking catastrophic forgetting, or demand online reinforcement under near-failure contact conditions. Both grant tactile unbounded influence over action generation, conflicting with the priors that make VLAs generalizable. We introduce ViTaR, which reframes tactile feedback from an action-generating perceptual input to an execution modulator that selects and scales bounded residual corrections atop a frozen VLA, preserving pretrained capabilities by construction. ViTaR decomposes adaptation into two stages: Effect-Guided Modeling determines whether and which correction is locally justified via outcome-grounded preference evidence, and Residual Action Modulation converts this evidence into a residual choice with continuously scaled gain from real-time visuotactile observations. On the UniVTAC benchmark spanning seven contact-rich tasks, ViTaR achieves 61.3% average success, a 30.6 percentage-point improvement over its frozen VLA base that also surpasses purpose-built tactile baselines. Physical-robot experiments confirm that bounded tactile modulation transfers to real sensor noise and dynamics.",
+      "authors": [
+        "Yi Wang",
+        "Renjun Wu",
+        "Jinyan Liu",
+        "Xuesong Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-16T15:46:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.15816v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "visuo-tactile residual adaptation for continuous control in contact-rich VLA manipulation",
+      "llm_evidence_cn": "视觉-触觉残差自适应，改善接触丰富操作中的连续动作控制",
+      "llm_evidence": "视觉-触觉残差自适应，改善接触丰富操作中的连续动作控制",
+      "canonical_evidence": "视觉-触觉残差自适应，改善接触丰富操作中的连续动作控制",
+      "llm_tldr_en": "ViTaR reframes tactile feedback as an execution modulator that selects and scales bounded residual corrections for VLA policies, improving contact-rich manipulation without modifying VLA internals.",
+      "llm_tldr_cn": "VLA模型在接触丰富操作中缺乏对局部接触事件的感知，可能产生相同动作而忽略接触的建立或丢失。ViTaR 将触觉反馈从生成动作的感知输入变为执行调制器，在基础VLA动作之上选择并缩放有界残差修正，从而避免对VLA内部结构的破坏性修改。该方法保持VLA泛化先验的同时增强接触敏感度，为接触丰富操作提供轻量残差适应机制。",
+      "llm_tldr": "VLA模型在接触丰富操作中缺乏对局部接触事件的感知，可能产生相同动作而忽略接触的建立或丢失。ViTaR 将触觉反馈从生成动作的感知输入变为执行调制器，在基础VLA动作之上选择并缩放有界残差修正，从而避免对VLA内部结构的破坏性修改。该方法保持VLA泛化先验的同时增强接触敏感度，为接触丰富操作提供轻量残差适应机制。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.17717v1",
+      "source": "arxiv",
+      "title": "CompCPZ: Preserving Multi-Modal Intent in Language-Guided Robot Manipulation",
+      "abstract": "A robot asked to \"place the cup near the red plate or the blue plate\" may reach the centroid between them and appear geometrically successful, while satisfying neither disjunct of the instruction. This silent semantic failure exposes a structural limitation of language-conditioned robot policies: representations that collapse a disjunctive instruction into a single connected set cannot preserve all feasible modes, and planners that commit to one action degrade under run-time mode uncertainty. We address this limitation with CompCPZ, a sound algebraic layer that language-conditioned learning systems wrap to recover multi-modal disjunctive representation, recursively composing per-primitive constrained polynomial zonotope enclosures along the language parse tree with distribution-free conformal coverage and sub-millisecond runtime. On a closed-loop ManiSkill3 tabletop-manipulation benchmark, CompCPZ outperforms convex set baselines, multi-peak decoders, and a zero-shot vision-language-action model (1,900/1,918 paired wins, p << 10^(-30)); the same compiler also transfers without retuning to planar real-robot trials on a Unitree Go2 quadruped under motion capture. These results suggest that compositional language grounding should be evaluated not only by reaching a decoded target, but by whether the represented feasibility set preserves the connected-component structure of the user's intent.",
+      "authors": [
+        "Zhen Zhang",
+        "Ahmad Hafez",
+        "Peng Xie",
+        "Yanliang Huang",
+        "Wenyuan Wu",
+        "Amr Alanwar"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-18T12:42:26+00:00",
+      "link": "https://arxiv.org/pdf/2608.17717v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "compositional per-primitive polynomial zonotopes for multi-modal instruction generalization",
+      "llm_evidence_cn": "基于逐原语约束多项式带集保留多模态指令的组合表示",
+      "llm_evidence": "基于逐原语约束多项式带集保留多模态指令的组合表示",
+      "canonical_evidence": "基于逐原语约束多项式带集保留多模态指令的组合表示",
+      "llm_tldr_en": "Proposes CompCPZ, an algebraic layer preserving multi-modal instructions as constrained polynomial zonotopes, recursively composing per-primitive enclosures to avoid collapsing disjunctive semantics in language-guided manipulation.",
+      "llm_tldr_cn": "语言引导的操作策略在处理析取指令（如“靠近红盘或蓝盘”）时容易退化为单一连通集，导致语义失败。CompCPZ将语言条件化系统封装为代数层，用受限多项式带集递归组合逐原语的包络，保留所有可行模式，并在运行时模式不确定下保持语义正确。实验表明该方法能有效避免多模态指令的语义塌缩，提高组合泛化能力。",
+      "llm_tldr": "语言引导的操作策略在处理析取指令（如“靠近红盘或蓝盘”）时容易退化为单一连通集，导致语义失败。CompCPZ将语言条件化系统封装为代数层，用受限多项式带集递归组合逐原语的包络，保留所有可行模式，并在运行时模式不确定下保持语义正确。实验表明该方法能有效避免多模态指令的语义塌缩，提高组合泛化能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.19453v1",
+      "source": "arxiv",
+      "title": "When Automata Meet Streams: Temporal Logic Compilation for Stream-Based Robotics Task and Motion Planning",
+      "abstract": "Stream-based robotics Task and Motion Planning (TAMP) integrates discrete symbolic planning with dynamically generated continuous geometric parameters, such as poses, grasps, and trajectories. However, stream-based planners typically reason only about goal reachability, whereas long-horizon tasks also demand adherence to temporal specifications, such as safety-critical ordering, invariance, and liveness constraints. No methods currently exist to enforce such temporal constraints for stream-based solvers because streams generate an expanding geometric object set via iterative stream refinement loops during planning, rendering existing temporal-logic compilation techniques incompatible. We therefore present Synchronous Action Monitoring with Token Destruction (SAM-TD), a compilation method that enforces arbitrary Linear Temporal Logic over finite traces ($\\textrm{LTL}_f$) specifications in stream-based TAMP. SAM-TD translates arbitrary $\\textrm{LTL}_f$ constraints into automata and embeds regressed automaton guards into action schemas, which are pre-specified before planning begins. By doing so, SAM-TD can handle objects generated by streams during planning, thus circumventing the need to enumerate a fixed object set or modify the underlying planner. During search, SAM-TD synchronously updates automaton states and uses a validity token shared across all automata to prune constraint-violating branches. We show that SAM-TD supports dynamically generated stream objects from iterative stream refinements during plan search. Experimental results provide the first ever demonstration of stream-based TAMP under $\\textrm{LTL}_f$ constraints in three robotics PDDLStream environments. Furthermore, on standard discrete PDDL benchmarks, SAM-TD is competitive with state-of-the-art temporal-constraint compilation methods.",
+      "authors": [
+        "Sayem Nazmuz Zaman",
+        "Cyrus Neary"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.FL"
+      ],
+      "published": "2026-08-19T21:12:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.19453v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "stream-based TAMP with continuous geometric parameters and temporal logic constraints",
+      "llm_evidence_cn": "基于流的任务与运动规划，包含连续几何参数和时序约束",
+      "llm_evidence": "基于流的任务与运动规划，包含连续几何参数和时序约束",
+      "canonical_evidence": "基于流的任务与运动规划，包含连续几何参数和时序约束",
+      "llm_tldr_en": "Addresses temporal logic enforcement in stream-based TAMP. Proposes Synchronous compilation for continuous parameters and safety constraints. Enables long-horizon planning with temporal specifications.",
+      "llm_tldr_cn": "现有基于流的任务与运动规划通常只考虑目标可达性，难以满足长时程任务中的时序安全约束。本文提出了一种同步时序逻辑编译方法，将时序规范集成到流式求解器中，以支持连续几何参数下具有排序、不变性和活性约束的规划。实验表明该方法能够在保持流式规划灵活性的同时满足复杂时序要求，为技能库与任务规划的结合提供了基础。",
+      "llm_tldr": "现有基于流的任务与运动规划通常只考虑目标可达性，难以满足长时程任务中的时序安全约束。本文提出了一种同步时序逻辑编译方法，将时序规范集成到流式求解器中，以支持连续几何参数下具有排序、不变性和活性约束的规划。实验表明该方法能够在保持流式规划灵活性的同时满足复杂时序要求，为技能库与任务规划的结合提供了基础。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.19574v1",
+      "source": "arxiv",
+      "title": "HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation",
+      "abstract": "World action models jointly predict future visual observations and actions, whereas existing tactile-aware variants typically represent future touch as an image or latent stream without modeling the physical dependencies that organize tactile states hierarchically. We present HiTac-WAM, a hierarchical tactile world action model that forecasts a sequence of future tactile states for each candidate action chunk before execution. The forecast factorizes into contact state, a 3D deformation field, and slip risk, organized as a directed hierarchy in which each downstream stage is conditioned on stop-gradient signals from preceding stages. A directed attention mask allows tactile queries to attend to the video-action context of each candidate while preventing video and action queries from attending to tactile tokens. For planning, HiTac-WAM ranks candidate action chunks using tactile forecasts and task-progress estimates. For execution, the selected tactile forecast is retained as a reference; persistent discrepancies between predicted and observed tactile states trigger corrective replanning. HiTac-WAM achieves a mean contact F1 of 0.921; under matched training budgets, the directed hierarchy reduces 3D displacement L2 error by 17.6% relative to the deformation-only predictor and improves slip AUPRC by 60.4% relative to the slip-only predictor. Across chip grasping, blackboard erasing, and USB insertion, selection guided by the hierarchical forecasts increases the average real-robot success rate from 31.1% to 61.1%, while the full system attains 72.2%.",
+      "authors": [
+        "Chao Xue",
+        "Chaofan Zhang",
+        "Wenxuan Ma",
+        "Guocai Yao",
+        "Shaowei Cui",
+        "Shuo Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-20T02:28:25+00:00",
+      "link": "https://arxiv.org/pdf/2608.19574v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "forecasts tactile states for candidate action chunks in contact-rich manipulation",
+      "llm_evidence_cn": "在接触丰富操作中为候选动作块预测触觉状态序列",
+      "llm_evidence": "在接触丰富操作中为候选动作块预测触觉状态序列",
+      "canonical_evidence": "在接触丰富操作中为候选动作块预测触觉状态序列",
+      "llm_tldr_en": "Presents HiTac-WAM, a hierarchical tactile world model that forecasts future tactile states for action chunks, factorized into contact state, deformation field, and slip risk. Enables safer contact-rich manipulation planning.",
+      "llm_tldr_cn": "接触丰富的机器人操作中，触觉状态对动作选择至关重要，但现有触觉世界模型缺乏层级物理依赖建模。本文提出HiTac-WAM，在动作块执行前预测分层触觉状态，包括接触状态、三维形变场和滑移风险。通过有向注意力掩码，模型可关注视频动作上下文。该方法提升了接触丰富操作中预测的物理一致性和安全性。",
+      "llm_tldr": "接触丰富的机器人操作中，触觉状态对动作选择至关重要，但现有触觉世界模型缺乏层级物理依赖建模。本文提出HiTac-WAM，在动作块执行前预测分层触觉状态，包括接触状态、三维形变场和滑移风险。通过有向注意力掩码，模型可关注视频动作上下文。该方法提升了接触丰富操作中预测的物理一致性和安全性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.19589v1",
+      "source": "arxiv",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "abstract": "Pretrained Vision-Language-Action models provide a strong foundation for robot learning, but sequentially adapting them to diverse skills can perturb the representations and velocity mappings used by previous skills, leading to catastrophic forgetting. Architecture-based approaches improve retention by isolating skills but lead to increased inference footprint. Recent subspace-constrained methods restrict parameter updates in an orthogonal subspace to minimize interference but impose a unified constraint on the entire model. We analyze the distinct roles of internal VLA components and identify two VLA-specific challenges. First, the VLM maintains broad semantic representations, making it vulnerable to capacity exhaustion, whereas the ActionHead refines semantics into localized velocity patterns that are highly sensitive to perturbations. Second, the final velocity decoder serves as a readout layer. Freezing it forms an output-stage expressivity bottleneck, while updating it risks overwriting previous velocity mappings. To this end, we propose OrthoSkillVLA, a parameter-efficient framework for continual skill learning in pretrained VLA models without demonstration replay. Given the representation heterogeneity, we impose separate subspace constraints on the VLM and ActionHead, preserving reusable semantic capacity while protecting localized velocity patterns. For the output layer, we introduce a lightweight feature-aware MoE decoder, where each skill is allocated a compact expert and a training-free router selects the expert according to feature-space affinity. Extensive simulated and real-world evaluations, together with ablations, demonstrate that OrthoSkillVLA better preserves prior skills while acquiring new ones.",
+      "authors": [
+        "Jiaqi Wang",
+        "Zhou Fang",
+        "Qiongfeng Shi",
+        "Yi Zhou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-20T03:10:31+00:00",
+      "link": "https://arxiv.org/pdf/2608.19589v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "continual skill learning in VLA models via gradient-informed skill subspaces to preserve reusable skills",
+      "llm_evidence_cn": "基于梯度信息技能子空间的VLA持续技能学习，有助于保留可复用技能",
+      "llm_evidence": "基于梯度信息技能子空间的VLA持续技能学习，有助于保留可复用技能",
+      "canonical_evidence": "基于梯度信息技能子空间的VLA持续技能学习，有助于保留可复用技能",
+      "llm_tldr_en": "OrthoSkillVLA addresses catastrophic forgetting when sequentially adapting pretrained vision-language-action models to diverse robot skills, identifying VLA-specific challenges and adapting parameters in a gradient-informed skill subspace to retain old skills while learning new ones.",
+      "llm_tldr_cn": "预训练视觉-语言-动作模型在顺序学习多样技能时会扰动已有技能的表示和速度映射，导致灾难性遗忘。该文分析VLA组件角色后发现语义主干易容量耗尽、动作头受干扰，并提出基于梯度信息的技能子空间适配方法OrthoSkillVLA，在保留旧技能的同时高效学习新技能，有助于构建可复用的机器人技能库。",
+      "llm_tldr": "预训练视觉-语言-动作模型在顺序学习多样技能时会扰动已有技能的表示和速度映射，导致灾难性遗忘。该文分析VLA组件角色后发现语义主干易容量耗尽、动作头受干扰，并提出基于梯度信息的技能子空间适配方法OrthoSkillVLA，在保留旧技能的同时高效学习新技能，有助于构建可复用的机器人技能库。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

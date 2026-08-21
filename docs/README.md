@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-20</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-21</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-20 20:15:09 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-21 20:11:43 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共读6篇论文，精读1篇、速读5篇，聚焦机器人采摘、灵巧操作、记忆与语言智能体。</p>
-<p>最值得关注的是《HarvestPoint-ACT》（9.0/10），针对遮挡条件下机器人水果采摘的显式目标选择与收获点约束，效果突出。</p>
-<p>建议优先精读该论文，并顺带浏览灵巧操作预训练（ADEPT）和机器人记忆（Remember Smarter）的速读内容。</p>
+<p>今日速读6篇论文，聚焦机器人操作与视觉语言模型，无精读。</p>
+<p>最值得关注的是动作条件视频世界模型（DreamX-Phi）与触觉残差适配（ViTaR）两个方向，均为6.0分。</p>
+<p>建议优先浏览这三篇，理解多模态意图保留在语言引导操作中的基础作用。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion">HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
+
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning">ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Remember Smarter: Visual History Compressor and Hyperbolic Experience Space for Robotic Memory">Remember Smarter: Visual History Compressor and Hyperbolic Experience Space for Robotic Memory</span></li><li><span class="dpr-home-dashboard-paper-title" title="HaReCAP: Habitual-action Grounding for Recursive Large Language Model Agents">HaReCAP: Habitual-action Grounding for Recursive Large Language Model Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation">DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="ViTaR: Visuo-Tactile Residual Adaptation for Foundation VLA Manipulation">ViTaR: Visuo-Tactile Residual Adaptation for Foundation VLA Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="CompCPZ: Preserving Multi-Modal Intent in Language-Guided Robot Manipulation">CompCPZ: Preserving Multi-Modal Intent in Language-Guided Robot Manipulation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>6</strong></span></div>
 </section>
 </div>
 
