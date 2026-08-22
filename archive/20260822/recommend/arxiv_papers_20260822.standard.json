@@ -1,0 +1,97 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-22T20:14:33.814901+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.19977v1",
+      "source": "arxiv",
+      "title": "Learning Highly Dynamic Skills Transition for Quadruped Jumping Through Constrained Space",
+      "abstract": "Although legged animals are capable of performing explosive motions while traversing confined spaces, replicating this behavior in quadrupedal robots has been a longstanding challenge. Here, we propose a hierarchical reinforcement learning pipeline that empowers the robots to perform aggressive locomotion through constrained obstacles--a narrow gate. The imitation learning technique is used to train the low-level policy, which mimics the behaviors of real animals and forms a set of diverse skills. The high-level controller, having an awareness of the capability of low-level skills and acquiring the gate information via vision-based detection, determines the suitable maneuvers with collision-free trajectories to traverse it dynamically. Notably, we also verify that this framework can be extended to other highly dynamic tasks. This is one of the first works that perform autonomous and agile aerial gate traversal tasks on ground-walking robots, extending the lifelike agility of legged robots to match that of their biological counterparts.",
+      "authors": [
+        "Zeren Luo",
+        "Jiahui Zhang",
+        "Yimin Han",
+        "Ji Ma",
+        "Minghao Lu",
+        "Ioannis Havoutis",
+        "Peng Lu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-20T12:50:18+00:00",
+      "link": "https://arxiv.org/pdf/2608.19977v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical RL with imitation-learned low-level skill set and high-level skill selection for constrained traversal",
+      "llm_evidence_cn": "分层强化学习结合模仿学习的低层技能库与高层技能选择，面向受限空间穿越",
+      "llm_evidence": "分层强化学习结合模仿学习的低层技能库与高层技能选择，面向受限空间穿越",
+      "canonical_evidence": "分层强化学习结合模仿学习的低层技能库与高层技能选择，面向受限空间穿越",
+      "llm_tldr_en": "Proposes a hierarchical RL pipeline for quadruped jumping through a narrow gate: imitation-learned low-level policy forms diverse skills and a high-level controller selects maneuvers with gate awareness, enabling aggressive and collision-free traversal.",
+      "llm_tldr_cn": "四足机器人穿越狭窄闸门需要爆发性动作与受限空间中的机动能力。本文提出分层强化学习流水线：用模仿学习训练底层策略以模仿真实动物行为并形成多样化技能库，高层控制器感知低层技能能力并基于视觉闸门信息选择无碰撞轨迹。实验证明机器人能够动态穿越窄门。该框架展示了可复用技能库与高层技能选择机制，虽面向运动而非操作，但对分层技能策略设计具有方法借鉴意义。",
+      "llm_tldr": "四足机器人穿越狭窄闸门需要爆发性动作与受限空间中的机动能力。本文提出分层强化学习流水线：用模仿学习训练底层策略以模仿真实动物行为并形成多样化技能库，高层控制器感知低层技能能力并基于视觉闸门信息选择无碰撞轨迹。实验证明机器人能够动态穿越窄门。该框架展示了可复用技能库与高层技能选择机制，虽面向运动而非操作，但对分层技能策略设计具有方法借鉴意义。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.19589v1",
+      "source": "arxiv",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "abstract": "Pretrained Vision-Language-Action models provide a strong foundation for robot learning, but sequentially adapting them to diverse skills can perturb the representations and velocity mappings used by previous skills, leading to catastrophic forgetting. Architecture-based approaches improve retention by isolating skills but lead to increased inference footprint. Recent subspace-constrained methods restrict parameter updates in an orthogonal subspace to minimize interference but impose a unified constraint on the entire model. We analyze the distinct roles of internal VLA components and identify two VLA-specific challenges. First, the VLM maintains broad semantic representations, making it vulnerable to capacity exhaustion, whereas the ActionHead refines semantics into localized velocity patterns that are highly sensitive to perturbations. Second, the final velocity decoder serves as a readout layer. Freezing it forms an output-stage expressivity bottleneck, while updating it risks overwriting previous velocity mappings. To this end, we propose OrthoSkillVLA, a parameter-efficient framework for continual skill learning in pretrained VLA models without demonstration replay. Given the representation heterogeneity, we impose separate subspace constraints on the VLM and ActionHead, preserving reusable semantic capacity while protecting localized velocity patterns. For the output layer, we introduce a lightweight feature-aware MoE decoder, where each skill is allocated a compact expert and a training-free router selects the expert according to feature-space affinity. Extensive simulated and real-world evaluations, together with ablations, demonstrate that OrthoSkillVLA better preserves prior skills while acquiring new ones.",
+      "authors": [
+        "Jiaqi Wang",
+        "Zhou Fang",
+        "Qiongfeng Shi",
+        "Yi Zhou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-20T03:10:31+00:00",
+      "link": "https://arxiv.org/pdf/2608.19589v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "continual skill learning for VLA via gradient-informed skill subspace adaptation to retain reusable skills",
+      "llm_evidence_cn": "通过梯度信息技能子空间自适应持续学习VLA技能，保留可重用技能",
+      "llm_evidence": "通过梯度信息技能子空间自适应持续学习VLA技能，保留可重用技能",
+      "canonical_evidence": "通过梯度信息技能子空间自适应持续学习VLA技能，保留可重用技能",
+      "llm_tldr_en": "This paper proposes OrthoSkillVLA, a gradient-informed skill subspace adaptation method that mitigates catastrophic forgetting when sequentially adapting VLA models to diverse skills, isolating skill-specific updates and improving retention across internal VLA components.",
+      "llm_tldr_cn": "预训练VLA模型在顺序学习多个技能时容易遗忘旧技能，通用子空间约束忽视了内部组件差异。OrthoSkillVLA分析VLM与动作头等组件的不同作用，提出基于梯度信息的技能子空间自适应，将更新限制在正交子空间以减少干扰，同时避免模型整体统一约束带来的容量问题。实验表明该方法在保留多种技能的同时降低了推理开销，为构建可复用技能库提供了持续学习方案。",
+      "llm_tldr": "预训练VLA模型在顺序学习多个技能时容易遗忘旧技能，通用子空间约束忽视了内部组件差异。OrthoSkillVLA分析VLM与动作头等组件的不同作用，提出基于梯度信息的技能子空间自适应，将更新限制在正交子空间以减少干扰，同时避免模型整体统一约束带来的容量问题。实验表明该方法在保留多种技能的同时降低了推理开销，为构建可复用技能库提供了持续学习方案。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

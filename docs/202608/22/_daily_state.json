@@ -1,0 +1,41 @@
+{
+  "date": "20260822",
+  "date_label": "",
+  "generated_at": "2026-08-22 20:15:27 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.19977v1",
+      "route": "202608/22/2608.19977v1-learning-highly-dynamic-skills-transition-for-quadruped-jumping-through-constrained-space",
+      "title": "Learning Highly Dynamic Skills Transition for Quadruped Jumping Through Constrained Space",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "分层强化学习结合模仿学习的低层技能库与高层技能选择，面向受限空间穿越",
+      "first_seen_at": "2026-08-22 20:15:27 UTC",
+      "updated_at": "2026-08-22 20:15:27 UTC"
+    },
+    {
+      "paper_id": "2608.19589v1",
+      "route": "202608/22/2608.19589v1-orthoskillvla-continual-skill-learning-via-gradient-informed-skill-subspace-adaptation",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过梯度信息技能子空间自适应持续学习VLA技能，保留可重用技能",
+      "first_seen_at": "2026-08-22 20:15:27 UTC",
+      "updated_at": "2026-08-22 20:15:27 UTC"
+    }
+  ]
+}

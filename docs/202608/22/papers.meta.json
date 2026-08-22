@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-22",
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T20:15:34",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/22/2608.19977v1-learning-highly-dynamic-skills-transition-for-quadruped-jumping-through-constrained-space",
+      "section": "quick",
+      "title_en": "Learning Highly Dynamic Skills Transition for Quadruped Jumping Through Constrained Space",
+      "authors": "Zeren Luo, Jiahui Zhang, Yimin Han, Ji Ma, Minghao Lu, Ioannis Havoutis, Peng Lu",
+      "date": "2026-08-20",
+      "pdf": "https://arxiv.org/pdf/2608.19977v1",
+      "score": "7.0",
+      "evidence": "分层强化学习结合模仿学习的低层技能库与高层技能选择，面向受限空间穿越",
+      "tldr": "四足动物能敏捷穿越狭窄空间，但机器人实现类此高动态动作仍是长期挑战。本文提出分层强化学习流水线：低层策略用模仿学习复现真实动物行为，形成多样化运动技能；高层控制器感知底层技能能力并融合视觉门检测，决策出无碰撞轨迹以动态穿越狭小门洞。实验结果证明该框架能拓展至其他高动态任务，并首次使地面行走机器人自主完成类似空中越障的敏捷穿越，大幅提升四足机器人的生物级灵巧性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Although legged animals are capable of performing explosive motions while traversing confined spaces, replicating this behavior in quadrupedal robots has been a longstanding challenge. Here, we propose a hierarchical reinforcement learning pipeline that empowers the robots to perform aggressive locomotion through constrained obstacles--a narrow gate. The imitation learning technique is used to train the low-level policy, which mimics the behaviors of real animals and forms a set of diverse skills. The high-level controller, having an awareness of the capability of low-level skills and acquiring the gate information via vision-based detection, determines the suitable maneuvers with collision-free trajectories to traverse it dynamically. Notably, we also verify that this framework can be extended to other highly dynamic tasks. This is one of the first works that perform autonomous and agile aerial gate traversal tasks on ground-walking robots, extending the lifelike agility of legged robots to match that of their biological counterparts.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/22/2608.19589v1-orthoskillvla-continual-skill-learning-via-gradient-informed-skill-subspace-adaptation",
+      "section": "quick",
+      "title_en": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "authors": "Jiaqi Wang, Zhou Fang, Qiongfeng Shi, Yi Zhou",
+      "date": "2026-08-20",
+      "pdf": "https://arxiv.org/pdf/2608.19589v1",
+      "score": "6.0",
+      "evidence": "通过梯度信息技能子空间自适应持续学习VLA技能，保留可重用技能",
+      "tldr": "预训练视觉-语言-动作模型在顺序学习多技能时易发生灾难性遗忘，现有子空间方法用统一正交约束限制全模型，忽视视觉语言模型与动作头的表示差异。本文提出OrthoSkillVLA：针对视觉语言模型的语义表示和动作头的局部速度模式，分别施加不同子空间约束，并引入特征感知MoE解码器，以轻量专家保护输出层。在仿真与真实机器人实验中，该方法在获取新技能的同时显著保留旧技能，且无需任何演示重放，实现了参数高效的持续学习。",
+      "tags": "query:param-skills",
+      "abstract_en": "Pretrained Vision-Language-Action models provide a strong foundation for robot learning, but sequentially adapting them to diverse skills can perturb the representations and velocity mappings used by previous skills, leading to catastrophic forgetting. Architecture-based approaches improve retention by isolating skills but lead to increased inference footprint. Recent subspace-constrained methods restrict parameter updates in an orthogonal subspace to minimize interference but impose a unified constraint on the entire model. We analyze the distinct roles of internal VLA components and identify two VLA-specific challenges. First, the VLM maintains broad semantic representations, making it vulnerable to capacity exhaustion, whereas the ActionHead refines semantics into localized velocity patterns that are highly sensitive to perturbations. Second, the final velocity decoder serves as a readout layer. Freezing it forms an output-stage expressivity bottleneck, while updating it risks overwriting previous velocity mappings. To this end, we propose OrthoSkillVLA, a parameter-efficient framework for continual skill learning in pretrained VLA models without demonstration replay. Given the representation heterogeneity, we impose separate subspace constraints on the VLM and ActionHead, preserving reusable semantic capacity while protecting localized velocity patterns. For the output layer, we introduce a lightweight feature-aware MoE decoder, where each skill is allocated a compact expert and a training-free router selects the expert according to feature-space affinity. Extensive simulated and real-world evaluations, together with ablations, demonstrate that OrthoSkillVLA better preserves prior skills while acquiring new ones.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
