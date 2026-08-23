@@ -1,0 +1,57 @@
+{
+  "date": "20260823",
+  "date_label": "",
+  "generated_at": "2026-08-23 19:16:32 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.19589v1",
+      "route": "202608/23/2608.19589v1-orthoskillvla-continual-skill-learning-via-gradient-informed-skill-subspace-adaptation",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "通过梯度引导的技能子空间自适应进行持续技能学习，保持技能可复用",
+      "first_seen_at": "2026-08-23 19:16:32 UTC",
+      "updated_at": "2026-08-23 19:16:32 UTC"
+    },
+    {
+      "paper_id": "2608.16114v1",
+      "route": "202608/23/2608.16114v1-hyperskill-self-evolving-llm-agents-via-hypergraph-structured-skill-memory",
+      "title": "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "超图结构的技能记忆，建模子任务与可复用技能间的组合关系",
+      "first_seen_at": "2026-08-23 19:16:32 UTC",
+      "updated_at": "2026-08-23 19:16:32 UTC"
+    },
+    {
+      "paper_id": "2608.19759v1",
+      "route": "202608/23/2608.19759v1-goag-generative-and-object-agnostic-grasp-planner-for-dexterous-robotic-manipulation",
+      "title": "GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "生成式且与物体无关的抓取规划器，无需物体特定训练即可泛化到新物体",
+      "first_seen_at": "2026-08-23 19:16:32 UTC",
+      "updated_at": "2026-08-23 19:16:32 UTC"
+    }
+  ]
+}

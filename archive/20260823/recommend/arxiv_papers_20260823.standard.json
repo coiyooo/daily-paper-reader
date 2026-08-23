@@ -1,0 +1,132 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-23T19:15:24.183914+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.19589v1",
+      "source": "arxiv",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "abstract": "Pretrained Vision-Language-Action models provide a strong foundation for robot learning, but sequentially adapting them to diverse skills can perturb the representations and velocity mappings used by previous skills, leading to catastrophic forgetting. Architecture-based approaches improve retention by isolating skills but lead to increased inference footprint. Recent subspace-constrained methods restrict parameter updates in an orthogonal subspace to minimize interference but impose a unified constraint on the entire model. We analyze the distinct roles of internal VLA components and identify two VLA-specific challenges. First, the VLM maintains broad semantic representations, making it vulnerable to capacity exhaustion, whereas the ActionHead refines semantics into localized velocity patterns that are highly sensitive to perturbations. Second, the final velocity decoder serves as a readout layer. Freezing it forms an output-stage expressivity bottleneck, while updating it risks overwriting previous velocity mappings. To this end, we propose OrthoSkillVLA, a parameter-efficient framework for continual skill learning in pretrained VLA models without demonstration replay. Given the representation heterogeneity, we impose separate subspace constraints on the VLM and ActionHead, preserving reusable semantic capacity while protecting localized velocity patterns. For the output layer, we introduce a lightweight feature-aware MoE decoder, where each skill is allocated a compact expert and a training-free router selects the expert according to feature-space affinity. Extensive simulated and real-world evaluations, together with ablations, demonstrate that OrthoSkillVLA better preserves prior skills while acquiring new ones.",
+      "authors": [
+        "Jiaqi Wang",
+        "Zhou Fang",
+        "Qiongfeng Shi",
+        "Yi Zhou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-20T03:10:31+00:00",
+      "link": "https://arxiv.org/pdf/2608.19589v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "continual skill learning via gradient-informed skill subspace adaptation, preserving and reusing skills",
+      "llm_evidence_cn": "通过梯度引导的技能子空间自适应进行持续技能学习，保持技能可复用",
+      "llm_evidence": "通过梯度引导的技能子空间自适应进行持续技能学习，保持技能可复用",
+      "canonical_evidence": "通过梯度引导的技能子空间自适应进行持续技能学习，保持技能可复用",
+      "llm_tldr_en": "OrthoSkillVLA addresses catastrophic forgetting when adapting VLAs to diverse skills via gradient-informed skill subspace adaptation, preserving previous skill representations and velocity mappings.",
+      "llm_tldr_cn": "针对预训练视觉-语言-动作模型在连续学习新技能时会灾难性遗忘旧技能的问题，本文分析VLA内部组件差异，提出基于梯度信息的技能子空间自适应方法，在不同技能的子空间中限制参数更新，从而在保持推理开销的同时防止技能间干扰。实验表明该方法能有效缓解容量耗尽与技能遗忘，为机器人技能库的持续扩充提供了可行方案。",
+      "llm_tldr": "针对预训练视觉-语言-动作模型在连续学习新技能时会灾难性遗忘旧技能的问题，本文分析VLA内部组件差异，提出基于梯度信息的技能子空间自适应方法，在不同技能的子空间中限制参数更新，从而在保持推理开销的同时防止技能间干扰。实验表明该方法能有效缓解容量耗尽与技能遗忘，为机器人技能库的持续扩充提供了可行方案。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.16114v1",
+      "source": "arxiv",
+      "title": "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory",
+      "abstract": "As agentic tasks grow in complexity, LLM agents increasingly rely on experiential memory to reuse procedural knowledge across tasks. Effective memory design must jointly address what to store, how memory is structured and retrieved, and how memory evolves. Existing systems tackle each only partially: they store trajectories, insights, or workflows as isolated entries, discarding compositional relationships among subtasks and reusable skills; retrieve by flat embedding similarity that ignores relational signals; and maintain memory without leveraging its relational structure. We propose HyperSkill, a hypergraph-based memory framework that jointly improves all three. HyperSkill represents memory as a hypergraph with two node types, subtask steps and reusable skills, where each hyperedge links the subtasks and skills from a single trajectory. Dual-path retrieval queries both subtask and trajectory levels, ranking skills by co-occurrence across retrieved trajectories. Periodic structure-informed maintenance prunes low-utility nodes and merges redundant skills via quality-weighted propagation. Across xBench, GAIA, and WebWalkerQA with GPT-4o and Qwen3-30B-A3B, HyperSkill outperforms ten memory baselines, yielding gains of up to +11.51 on GAIA and +11.18 on WebWalkerQA.",
+      "authors": [
+        "Ruiyao Xu",
+        "Tiankai Yang",
+        "Wei-Chieh Huang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-08-17T05:10:27+00:00",
+      "link": "https://arxiv.org/pdf/2608.16114v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hypergraph-structured skill memory for self-evolving LLM agents, capturing compositional relationships among subtasks and reusable skills",
+      "llm_evidence_cn": "超图结构的技能记忆，建模子任务与可复用技能间的组合关系",
+      "llm_evidence": "超图结构的技能记忆，建模子任务与可复用技能间的组合关系",
+      "canonical_evidence": "超图结构的技能记忆，建模子任务与可复用技能间的组合关系",
+      "llm_tldr_en": "HyperSkill introduces a hypergraph-based memory framework that jointly addresses what to store, how to retrieve, and how memory evolves for LLM agents, capturing compositional relationships among reusable skills.",
+      "llm_tldr_cn": "现有LLM代理技能记忆以孤立条目存储轨迹或经验，丢弃了子任务与可复用技能间的组合关系。本文提出HyperSkill超图记忆框架，用两类节点表示子任务步骤和技能，以超边编码组合关系，结合结构化检索和基于关系的记忆演化，使代理能随任务复杂度增长自动改进技能库。实验表明该方法显著提升任务求解效率和泛化能力，为机器人技能库的表示与组织提供了思路。",
+      "llm_tldr": "现有LLM代理技能记忆以孤立条目存储轨迹或经验，丢弃了子任务与可复用技能间的组合关系。本文提出HyperSkill超图记忆框架，用两类节点表示子任务步骤和技能，以超边编码组合关系，结合结构化检索和基于关系的记忆演化，使代理能随任务复杂度增长自动改进技能库。实验表明该方法显著提升任务求解效率和泛化能力，为机器人技能库的表示与组织提供了思路。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.19759v1",
+      "source": "arxiv",
+      "title": "GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation",
+      "abstract": "Multifingered grasping is a crucial robotic skill, but current deep-learning grasp planners often struggle to generalize to new objects because they are trained on limited, object-specific datasets. We introduce a fundamentally different approach, grounded in the observation that the gripper and the object share identical surface geometry at their mutual contact points. We propose GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation, a novel deep generative model that learns a compact latent representation of a specific gripper's contact surface distribution, enabling the efficient sampling of valid grasp configurations without relying on object-specific training data. We show that by introducing object features only at inference time, our model can effectively retrieve admissible contact areas that are compatible with the gripper's capabilities. We validate our approach through extensive experiments on established grasp protocols in both simulated and real-world scenarios, demonstrating its effectiveness with different grippers from the literature. Our method delivers state-of-the-art results on the objects from the MultiDex dataset, achieving an average success rate of 86.93%. It offers significantly faster processing when generating numerous grasps, while matching the performance of leading approaches specifically trained on this dataset. Unlike these methods, our approach does not rely on object-specific training data, highlighting the advantages of object-agnostic learning. It effectively addresses the generalization challenges faced by traditional data-driven grasp planners. Code and videos are available on our project website https://cea-list.github.io/goagweb/ .",
+      "authors": [
+        "Julien Merand",
+        "Boris Meden",
+        "Mathieu Grossard",
+        "Liming Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-20T08:03:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.19759v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "generative and object-agnostic grasp planner that generalizes to new objects without object-specific training",
+      "llm_evidence_cn": "生成式且与物体无关的抓取规划器，无需物体特定训练即可泛化到新物体",
+      "llm_evidence": "生成式且与物体无关的抓取规划器，无需物体特定训练即可泛化到新物体",
+      "canonical_evidence": "生成式且与物体无关的抓取规划器，无需物体特定训练即可泛化到新物体",
+      "llm_tldr_en": "GOAG is a generative object-agnostic grasp planner that learns the gripper's contact surface distribution, enabling valid grasp sampling for novel objects without object-specific training data.",
+      "llm_tldr_cn": "多指抓取规划常因缺乏物体特定数据而难以泛化到新物体。本文提出GOAG，利用抓手与物体在接触点几何一致的特点，学习抓手的接触表面分布作为隐空间，从而无需物体特定训练数据即可高效采样有效抓取构型。引入物体无关的表征后，该方法在多种新物体上展示出强大的泛化能力，解决了多指抓取这一关键机器人技能的通用性问题。",
+      "llm_tldr": "多指抓取规划常因缺乏物体特定数据而难以泛化到新物体。本文提出GOAG，利用抓手与物体在接触点几何一致的特点，学习抓手的接触表面分布作为隐空间，从而无需物体特定训练数据即可高效采样有效抓取构型。引入物体无关的表征后，该方法在多种新物体上展示出强大的泛化能力，解决了多指抓取这一关键机器人技能的通用性问题。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
