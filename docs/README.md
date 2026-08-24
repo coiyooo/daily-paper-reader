@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-23</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-24</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-23 19:16:32 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-24 20:35:56 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读3篇论文，覆盖持续技能学习、LLM技能记忆与灵巧抓取规划。最值得关注的是《OrthoSkillVLA》（7.0分），提出基于梯度信息技能子空间适配的持续学习方法；另两篇分别以超图技能记忆和对象无关生成式抓取为亮点。建议后续优先精读高分论文，并关注技能学习与机器人操作的交叉方向。</p>
+<p>今日精读1篇、速读3篇，聚焦机器人操作与技能学习的前沿方法。最值得关注的是《ForeTime-VLA》提出的因果未来令牌蒸馏用于传送带操作，以及《TaPeR》从少量演示中恢复稀疏任务前置图。建议优先阅读精读论文，理解其世界模型与蒸馏机制，再按兴趣浏览其余方法。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ForeTime-VLA: Causal Future-Token Distillation from a World Action Model for Conveyor-Belt Manipulation">ForeTime-VLA: Causal Future-Token Distillation from a World Action Model for Conveyor-Belt Manipulation</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -87,7 +87,7 @@
     <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation">OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation</span></li><li><span class="dpr-home-dashboard-paper-title" title="HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory">HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory</span></li><li><span class="dpr-home-dashboard-paper-title" title="GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation">GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TaPeR: Probabilistic Recovery of Sparse Task Precedence Graphs from a Handful of Demonstrations">TaPeR: Probabilistic Recovery of Sparse Task Precedence Graphs from a Handful of Demonstrations</span></li><li><span class="dpr-home-dashboard-paper-title" title="OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation">OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation</span></li><li><span class="dpr-home-dashboard-paper-title" title="What Matters for Latent Actions in Robot Learning">What Matters for Latent Actions in Robot Learning</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
 </section>
