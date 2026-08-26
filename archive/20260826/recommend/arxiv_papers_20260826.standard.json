@@ -1,0 +1,498 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-26T22:18:06.495364+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2608.21778v1",
+      "source": "arxiv",
+      "title": "Vision Guided Target Conditioned Control for Autonomous Excavation",
+      "abstract": "Autonomous excavation requires an intelligent control system that can convert spatial work intent into coordinated bucket motion under contact-rich soil interaction. This paper presents a target-conditioned intelligent control framework for autonomous excavation in a physics-based deformable-soil simulation workflow. An image-aligned target mask serves as a visual spatial command for the desired digging region, while a mask-conditioned Action Chunking Transformer maps multi-view RGB observations, proprioception, and the target mask to temporally extended joystick commands. To reduce target-ignoring behavior, demonstrations are organized with paired-condition supervision, where the same or closely matched scene is demonstrated with different target masks and corresponding action chunks. The framework is evaluated through both a diagnostic manipulation task and an excavation simulation benchmark with single-scoop and sequential pile-clearing protocols. In manipulation, target success is 4\\% for no-condition ACT, 63\\% for non-paired mask-conditioned ACT, and 96\\% for paired-condition mask-conditioned ACT. In sequential pile clearing, paired-condition mask-conditioned ACT removes 76.8\\% of the pile versus 27.4\\% and 15.7\\% for the two baselines, with 91.0\\% human-normalized efficiency. The results show that visual target conditioning, paired demonstration structure, and action-chunk control form a practical cyber-physical simulation pipeline for excavator automation.",
+      "authors": [
+        "Shuai Zhao",
+        "Ji-An Pan",
+        "Junwei Li",
+        "Xun Tang",
+        "Fansen Xi",
+        "Qing Xu",
+        "Keqiang Li",
+        "Jianqiang Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-22T05:01:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.21778v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Mask-conditioned Action Chunking Transformer maps observations to temporally extended joystick commands for contact-rich excavation; direct match to action chunking transformer requirement.",
+      "llm_evidence_cn": "使用掩码条件动作分块Transformer将多视角RGB与本体感觉映射为时间上扩展的操纵杆命令，直接契合动作分块Transformer需求。",
+      "llm_evidence": "使用掩码条件动作分块Transformer将多视角RGB与本体感觉映射为时间上扩展的操纵杆命令，直接契合动作分块Transformer需求。",
+      "canonical_evidence": "使用掩码条件动作分块Transformer将多视角RGB与本体感觉映射为时间上扩展的操纵杆命令，直接契合动作分块Transformer需求。",
+      "llm_tldr_en": "A mask-conditioned Action Chunking Transformer maps multi-view RGB, proprioception, and a target mask to temporally extended joystick commands for autonomous excavation, showing action chunking works in contact-rich tasks.",
+      "llm_tldr_cn": "自主挖掘需要将空间作业意图转换为接触丰富土壤交互下的铲斗协同运动。本文提出目标条件控制框架，以图像对齐的目标掩码作为视觉命令，并用掩码条件动作分块Transformer将多视角RGB、本体感知及目标掩码映射为时间上扩展的操纵杆指令。为减少忽略目标的行为，采用了配对条件监督组织演示数据。实验验证该方法能有效执行指定区域的挖掘任务，为动作分块Transformer在接触丰富操作中的应用提供了实例。",
+      "llm_tldr": "自主挖掘需要将空间作业意图转换为接触丰富土壤交互下的铲斗协同运动。本文提出目标条件控制框架，以图像对齐的目标掩码作为视觉命令，并用掩码条件动作分块Transformer将多视角RGB、本体感知及目标掩码映射为时间上扩展的操纵杆指令。为减少忽略目标的行为，采用了配对条件监督组织演示数据。实验验证该方法能有效执行指定区域的挖掘任务，为动作分块Transformer在接触丰富操作中的应用提供了实例。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.22591v1",
+      "source": "arxiv",
+      "title": "WorldToken: Time-First Sequence Modeling for Robotic Imitation Learning",
+      "abstract": "Robot policies receive heterogeneous observations at each decision step, yet sequence models differ in how they organize these inputs over time. We introduce WorldToken, a time-first policy instantiation that fuses multiview images, proprioception, and task conditioning within each policy timestep into one world token. A causal temporal Transformer models the resulting world-token sequence, and a diffusion action head generates action chunks. On 23 RoboCasa tasks, an 85.3M-parameter policy trained from scratch apart from a frozen pretrained CLIP text encoder achieves 59.45% mean closed-loop success using 2,900 generated demonstrations per task. A complete factorial sweep over five dataset sizes, five model sizes, and two training seeds shows consistent gains from additional target-domain data and diminishing returns beyond moderate model size. Under same-checkpoint history truncation, reducing visible history to one or two policy timesteps lowers closed-loop success for all 50 RoboCasa policies. On RMBench Blocks Ranking, reducing visible history from 146 to 8 seconds lowers evaluator success from 95% to 28%, while an exploratory extended rollout sustains the reference swap sequence for over 850 seconds. These results establish the empirical feasibility of the complete WorldToken instantiation and characterize its data-scaling and temporal-context behavior under the tested recipes. They do not establish superiority over alternative sequence organizations or isolate which components of the complete implementation drive the observed performance.",
+      "authors": [
+        "Chunkai Yang",
+        "Andong Yang",
+        "Chao Gao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-23T20:56:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.22591v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Causal temporal Transformer with diffusion action head generates action chunks for robotic IL, directly matching action chunking transformer requirement.",
+      "llm_evidence_cn": "因果时序Transformer与扩散动作头生成动作块，直接对应动作分块Transformer需求。",
+      "llm_evidence": "因果时序Transformer与扩散动作头生成动作块，直接对应动作分块Transformer需求。",
+      "canonical_evidence": "因果时序Transformer与扩散动作头生成动作块，直接对应动作分块Transformer需求。",
+      "llm_tldr_en": "WorldToken proposes a time-first policy fusing multiview images, proprioception, and task conditioning into world tokens, modeled by a causal Transformer, with a diffusion head generating action chunks; it achieves 59.45% mean success on 23 RoboCasa tasks.",
+      "llm_tldr_cn": "该工作针对机器人模仿学习中的异构观测与时序建模问题，提出WorldToken策略，将每个决策步的多视角图像、本体感受与任务条件融合为单一世界token，并用因果时序Transformer建模序列，扩散头生成动作块。在23个RoboCasa任务上，仅用每任务2900条生成演示便取得59.45%的平均闭环成功率，并通过数据集规模、模型规模与随机种子的全因子实验展示了方法的稳定性。该工作为动作分块Transformer在真实机器人操作中的应用提供了有力支撑。",
+      "llm_tldr": "该工作针对机器人模仿学习中的异构观测与时序建模问题，提出WorldToken策略，将每个决策步的多视角图像、本体感受与任务条件融合为单一世界token，并用因果时序Transformer建模序列，扩散头生成动作块。在23个RoboCasa任务上，仅用每任务2900条生成演示便取得59.45%的平均闭环成功率，并通过数据集规模、模型规模与随机种子的全因子实验展示了方法的稳定性。该工作为动作分块Transformer在真实机器人操作中的应用提供了有力支撑。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.24042v1",
+      "source": "arxiv",
+      "title": "Hierarchical Skill Retrieval for Data-Efficient Adaptation of Vision-Language-Action Models",
+      "abstract": "While Vision-Language-Action (VLA) models pretrained on large-scale robot datasets provide a strong foundation for robot manipulation, their performance can degrade when adapted to new tasks with limited task-specific demonstrations. Retrieval offers a practical way to reuse existing demonstrations for data-efficient adaptation, but existing methods often rely on visual similarity, state-action representations, or task-level language matching. These approaches may overlook the hierarchical structure of long-horizon manipulation tasks, where complete task matches are rare but reusable skills are often abundant. To address this challenge, we propose Hierarchical Skill Retrieval (HSR), a retrieval framework for data-efficient VLA adaptation. Specifically, HSR first decomposes a target task into candidate skill sequences. It evaluates each plan based on both semantic plausibility and skill reliability estimated from the prior dataset. The selected decomposition is then used for hybrid retrieval. This combines subtask-level language retrieval with behavior-feature reranking to identify demonstrations that are both semantically relevant and compatible with the target task. Finally, we adapt the policy through a two-stage pretraining and finetuning pipeline, which separates general skill acquisition from task-specific adaptation. Experiments on the LIBERO benchmark and several real-world robot manipulation tasks show that HSR improves the average success rate by 10.3% and 21.3% over the strongest baseline, respectively. These results demonstrate the effectiveness of structured skill-level retrieval for data-efficient VLA adaptation. Videos and code are available at https://hoar012.github.io/HSR-Project.",
+      "authors": [
+        "Haoran Hao",
+        "Shahram Najam Syed",
+        "Jeff Schneider",
+        "Jeffrey Ichnowski"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-08-25T04:04:49+00:00",
+      "link": "https://arxiv.org/pdf/2608.24042v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "hierarchical skill retrieval for long-horizon VLA adaptation",
+      "llm_evidence_cn": "面向长时程VLA自适应任务的层次化技能检索",
+      "llm_evidence": "面向长时程VLA自适应任务的层次化技能检索",
+      "canonical_evidence": "面向长时程VLA自适应任务的层次化技能检索",
+      "llm_tldr_en": "HSR retrieves reusable skills from demonstration libraries in a hierarchical manner, improving data-efficient adaptation of Vision-Language-Action models to long-horizon manipulation tasks.",
+      "llm_tldr_cn": "针对视觉-语言-动作模型在新任务上需要大量任务特定示范的问题，本文提出层次化技能检索(HSR)。该方法利用长时程操作任务中可复用技能丰富的特点，按层次结构检索示范，而非仅依赖视觉或语言匹配。实验表明HSR能显著提升有限示范下的新任务适应能力，并降低对完整任务匹配的依赖。该工作为长时程操作中的技能复用与数据高效学习提供了有效思路。",
+      "llm_tldr": "针对视觉-语言-动作模型在新任务上需要大量任务特定示范的问题，本文提出层次化技能检索(HSR)。该方法利用长时程操作任务中可复用技能丰富的特点，按层次结构检索示范，而非仅依赖视觉或语言匹配。实验表明HSR能显著提升有限示范下的新任务适应能力，并降低对完整任务匹配的依赖。该工作为长时程操作中的技能复用与数据高效学习提供了有效思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.22800v1",
+      "source": "arxiv",
+      "title": "Triplet2Track: A Hierarchical System with Object-Centric Representations for Reliable Long-Horizon Manipulation",
+      "abstract": "Ensuring reliability in uncertain environments remains difficult for long-horizon robotic manipulation. End-to-end VLA models are data-heavy and opaque, making diagnosis and verification difficult. Hierarchical pipelines are more interpretable, but their plans are often weakly grounded in observations, weakly aligned with low-level actions, and computed without online feedback, leading to open-loop behavior and hallucinations. To address these issues, we introduce the Triplet-to-Track System (TTS), a closed-loop long-horizon imitation learning system that uses human videos to reduce reliance on robot-collected data. TTS represents high-level subgoals as instance-grounded triplets, translates them into continuous track priors for execution, and monitors task progress from observations for online replanning. Across diverse real-world long-horizon tasks, TTS achieves a 74.8\\% average success rate and supports object-level and compositional generalization.",
+      "authors": [
+        "Jianxiang Liu",
+        "Gaojing Zhang",
+        "Chuan Wen",
+        "Qipeng Liu",
+        "Yuxuan Zhao",
+        "Ning Guo",
+        "Wenzhao Lian"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-24T04:46:25+00:00",
+      "link": "https://arxiv.org/pdf/2608.22800v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Hierarchical closed-loop imitation learning system for long-horizon manipulation using subgoal triplets to drive continuous actions.",
+      "llm_evidence_cn": "面向长时程操作的分层闭环模仿学习系统，以三元组子目标驱动连续动作。",
+      "llm_evidence": "面向长时程操作的分层闭环模仿学习系统，以三元组子目标驱动连续动作。",
+      "canonical_evidence": "面向长时程操作的分层闭环模仿学习系统，以三元组子目标驱动连续动作。",
+      "llm_tldr_en": "TTS is a closed-loop hierarchical IL system that represents subgoals as instance-grounded triplets, translates them into continuous actions, and uses human videos to reduce robot data dependence, improving reliability in long-horizon tasks.",
+      "llm_tldr_cn": "该工作针对长时程机器人操作中端到端模型数据需求大且不可解释、层级管线缺乏闭环反馈的问题，提出Triplet2Track系统（TTS）。TTS将高层子目标表示为基于实例的三元组，并将其与观测和低层动作对齐，通过在线反馈实现闭环控制，同时利用人类视频降低对机器人数据的依赖。该系统以可解释的方式提高了长时程任务的可靠性，与分层模仿学习驱动技能库的思路高度契合。",
+      "llm_tldr": "该工作针对长时程机器人操作中端到端模型数据需求大且不可解释、层级管线缺乏闭环反馈的问题，提出Triplet2Track系统（TTS）。TTS将高层子目标表示为基于实例的三元组，并将其与观测和低层动作对齐，通过在线反馈实现闭环控制，同时利用人类视频降低对机器人数据的依赖。该系统以可解释的方式提高了长时程任务的可靠性，与分层模仿学习驱动技能库的思路高度契合。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.23629v1",
+      "source": "arxiv",
+      "title": "Macro-Operator Generation and Predicate Selection for TAMP Operator Learning",
+      "abstract": "Creating symbolic operators by hand is one of the main bottlenecks in deploying Task and Motion Planning systems (TAMP). Recent works show that these operators can instead be learned directly from demonstration data. Existing methods, however, typically learn each action in isolation and cannot capture the recurring multi-step structure of manipulation tasks, so the search becomes intractable on long sequential tasks. A further inefficiency arises in the symbolic state: every provided predicate is evaluated at every search node, even when it never appears in any learned operator. We present a system that addresses both problems together. Its central component is the automatic generation of macro-operators, composite actions that compress a recurring sequence of individual actions into a single planning step. Our system discovers causally linked action pairs directly from the training data, where one action produces exactly the condition that the next one requires, and turns each pair into a new operator. Alongside this, our system prunes every predicate that no learned operator references, which shrinks the symbolic state evaluated at each search node. Together, these changes shorten the effective planning horizon, and the benefit they bring grows with the length of the task. Across four TAMP domains, our method reaches up to a 4.6x planning speedup compared to the baseline method, namely Learning Operators for TAMP. More importantly, it solves a long sequential task that the baseline cannot solve. Macro-operator discovery thus not only accelerates planning but, in certain domains, determines solvability in practice.",
+      "authors": [
+        "Can Emir Bora",
+        "Emre Ugur"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-23T09:38:27+00:00",
+      "link": "https://arxiv.org/pdf/2608.23629v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "automatic macro-operator generation and predicate selection for TAMP operator learning, capturing recurring multi-step manipulation structure",
+      "llm_evidence_cn": "自动生成宏算子与谓词选择以学习TAMP算子，捕获操作中重复多步结构",
+      "llm_evidence": "自动生成宏算子与谓词选择以学习TAMP算子，捕获操作中重复多步结构",
+      "canonical_evidence": "自动生成宏算子与谓词选择以学习TAMP算子，捕获操作中重复多步结构",
+      "llm_tldr_en": "This work automatically generates macro-operators and selects relevant predicates for learning TAMP operators from demonstrations, capturing recurring multi-step structure to make long-horizon manipulation planning tractable.",
+      "llm_tldr_cn": "手工编写任务与运动规划(TAMP)的符号算子是部署的主要瓶颈，现有从演示学习算子的方法通常孤立地学习每个动作，难以捕捉操作任务中反复出现的多步结构，导致长序列任务搜索困难。该工作提出同时解决宏算子生成与谓词选择的系统，自动生成压缩递归结构的复合宏算子，并仅选择与所学算子相关的谓词进行评估，从而提高长序列任务的可解性。实验显示该方法能有效提升TAMP算子学习在长时间操作任务中的搜索效率。该研究为可复用操作技能库的自动构建提供了新的途径。",
+      "llm_tldr": "手工编写任务与运动规划(TAMP)的符号算子是部署的主要瓶颈，现有从演示学习算子的方法通常孤立地学习每个动作，难以捕捉操作任务中反复出现的多步结构，导致长序列任务搜索困难。该工作提出同时解决宏算子生成与谓词选择的系统，自动生成压缩递归结构的复合宏算子，并仅选择与所学算子相关的谓词进行评估，从而提高长序列任务的可解性。实验显示该方法能有效提升TAMP算子学习在长时间操作任务中的搜索效率。该研究为可复用操作技能库的自动构建提供了新的途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.22296v1",
+      "source": "arxiv",
+      "title": "TONAV: Task-Oriented Navigation and Action-Velocity Chunk Learning for Articulated Object Quadrupedal Mobile Manipulation",
+      "abstract": "Quadruped mobile manipulation requires two tightly coupled capabilities: reaching manipulation-ready configurations and maintaining stable contact throughout articulated-object interaction. However, existing methods often terminate navigation near the target, leaving a gap between reachability and manipulation readiness, while tracking lag, motion jitter, and contact instability limit continuous interaction. To address these challenges, we present TONAV, a unified framework integrating task-oriented navigation with action-velocity chunk learning. First, we introduce a position-velocity-coupled teleoperation framework that explicitly captures motion dynamics to improve master-follower consistency and collect smooth, temporally consistent demonstrations. Next, task-oriented navigation leverages vision-language reasoning to decompose high-level instructions into executable subgoals and adaptively refine the robot base toward a manipulation-ready configuration. Finally, action-velocity chunk learning jointly models joint positions and their temporal transitions under velocity supervision, enabling smooth and stable sustained-contact manipulation. Real-world experiments across diverse articulated-object tasks demonstrate that TONAV achieves higher success rates in both task-oriented navigation and complete mobile manipulation, mitigating the navigation-manipulation gap and improving continuous-contact interaction. The project page is at https://haochen611.github.io/TONAV.",
+      "authors": [
+        "Haoran Lin",
+        "Mingyu Yang",
+        "Pengfei Qi",
+        "Kehan Chen",
+        "Qiang Diao",
+        "Liangji Zeng",
+        "Wenrui Chen",
+        "Yaonan Wang",
+        "Kailun Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-23T08:41:23+00:00",
+      "link": "https://arxiv.org/pdf/2608.22296v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "action-velocity chunk learning for continuous manipulation control, analogous to action chunking",
+      "llm_evidence_cn": "动作-速度块学习用于连续操作控制，与动作分块思想类似",
+      "llm_evidence": "动作-速度块学习用于连续操作控制，与动作分块思想类似",
+      "canonical_evidence": "动作-速度块学习用于连续操作控制，与动作分块思想类似",
+      "llm_tldr_en": "TONAV unifies task-oriented navigation with action-velocity chunk learning for quadruped mobile manipulation, addressing reachability and contact instability via position-velocity-coupled teleoperation and continuous action chunk prediction.",
+      "llm_tldr_cn": "针对四足移动操作中导航与操作衔接不畅、连续交互不稳定的问题，本文提出TONAV统一框架，将任务导向导航与动作-速度块学习结合。利用位姿-速度耦合遥操作采集数据并学习连续动作速度块，提升主从一致性并降低轨迹抖动，实现铰接物体操作中的稳定接触。",
+      "llm_tldr": "针对四足移动操作中导航与操作衔接不畅、连续交互不稳定的问题，本文提出TONAV统一框架，将任务导向导航与动作-速度块学习结合。利用位姿-速度耦合遥操作采集数据并学习连续动作速度块，提升主从一致性并降低轨迹抖动，实现铰接物体操作中的稳定接触。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.20084v1",
+      "source": "arxiv",
+      "title": "Evidence-Gated Task and Motion Planning with Vision-Language Models",
+      "abstract": "Robots executing long-horizon manipulation tasks from natural-language instructions must reason about both semantic task structure and geometric feasibility. However, under partial observability, the availability of goal-relevant objects may be uncertain. In such cases, approaches that combine Vision-Language Models (VLMs) with Task and Motion Planning (TAMP) may generate subgoals that rely on the VLM's prior knowledge without observational support, leading to execution failures or unintended outcomes. We propose Evidence Acquisition and Feasibility Gating (EAFG), a framework that acquires visual evidence through VLM-generated exploratory subgoals and TAMP-based execution. EAFG then applies a feasibility gate to decide whether to proceed with task planning, acquire further evidence, or halt. Our experiments show that, in cooking tasks with ambiguous object use, EAFG improves recipe completion by discovering task-relevant objects before planning. For instructions requiring an absent object, EAFG promotes appropriate halt decisions and reduces repeated attempts to manipulate that object.",
+      "authors": [
+        "Tsunehiko Tanaka",
+        "Matthew Stephenson",
+        "Alistair Macvicar",
+        "Edgar Simo-Serra"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-20T14:17:52+00:00",
+      "link": "https://arxiv.org/pdf/2608.20084v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Evidence-gated TAMP with feasibility gate to prevent failures under partial observability; methodologically relevant to failure recovery and safety constraints in manipulation.",
+      "llm_evidence_cn": "基于证据获取与可行性门控的任务和运动规划框架，在部分可观测条件下避免失败，与操作中的故障恢复和安全约束方法学相关。",
+      "llm_evidence": "基于证据获取与可行性门控的任务和运动规划框架，在部分可观测条件下避免失败，与操作中的故障恢复和安全约束方法学相关。",
+      "canonical_evidence": "基于证据获取与可行性门控的任务和运动规划框架，在部分可观测条件下避免失败，与操作中的故障恢复和安全约束方法学相关。",
+      "llm_tldr_en": "EAFG acquires visual evidence via VLM-generated subgoals and applies a feasibility gate before proceeding with TAMP, preventing execution failures caused by unsupported VLM priors under partial observability.",
+      "llm_tldr_cn": "部分可观测条件下，结合视觉语言模型（VLM）和任务与运动规划（TAMP）的方法可能生成缺乏观测依据的子目标，导致执行失败。EAFG框架通过VLM生成的探索性子目标获取视觉证据，并利用TAMP执行，然后通过可行性门控决定是否继续规划，从而过滤掉不可行的意图。实验表明，该框架在长期操作任务中减少了因VLM先验错误造成的失败，为长时程操作的可靠性保障提供了新思路。",
+      "llm_tldr": "部分可观测条件下，结合视觉语言模型（VLM）和任务与运动规划（TAMP）的方法可能生成缺乏观测依据的子目标，导致执行失败。EAFG框架通过VLM生成的探索性子目标获取视觉证据，并利用TAMP执行，然后通过可行性门控决定是否继续规划，从而过滤掉不可行的意图。实验表明，该框架在长期操作任务中减少了因VLM先验错误造成的失败，为长时程操作的可靠性保障提供了新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.23258v1",
+      "source": "arxiv",
+      "title": "Progressively Learning Heterogeneous Skills in a Unified Latent Space",
+      "abstract": "We propose HetSkills, a novel framework designed to progressively learn heterogeneous skills within a unified latent space for physics-based character control. The core idea is to treat this latent space as a shared executable interface, enabling seamless integration of skills learned from diverse data sources, supervision forms, and tasks. HetSkills begins by learning a tracking skill that establishes a strong foundation in motion control and creates a shared motion decoder, which can be reused across tasks without the need for retraining or separate controllers. To prevent the text-to-motion skill from exploiting shortcut pathways instead of learning language semantics, we introduce motion intuition distillation to ground text-to-motion generation in language semantics and a task-guidance module that dynamically adjusts actions based on high-level language instructions. This enables HetSkills to preserve natural motion while continuously expanding its skill repertoire, making it highly adaptable for long-horizon tasks. Experimental results demonstrate the effectiveness in motion tracking, text-to-motion generation, motion completion, and downstream task adaptation, achieving impressive success rates even under challenging conditions.",
+      "authors": [
+        "Yue-Yi Zhang",
+        "Ming Gong",
+        "Linpu He",
+        "Wei-Shi Zheng",
+        "Zhilin Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-08-24T13:48:45+00:00",
+      "link": "https://arxiv.org/pdf/2608.23258v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "unified latent space for heterogeneous skills",
+      "llm_evidence_cn": "统一潜在空间中的异构技能渐进学习",
+      "llm_evidence": "统一潜在空间中的异构技能渐进学习",
+      "canonical_evidence": "统一潜在空间中的异构技能渐进学习",
+      "llm_tldr_en": "HetSkills progressively learns heterogeneous skills in a unified latent space shared across tasks, using motion intuition distillation to avoid shortcut learning for text-to-motion.",
+      "llm_tldr_cn": "针对物理角色控制中异构技能难以整合的问题，本文提出HetSkills框架，在统一潜在空间中渐进学习来自不同数据源、监督形式和任务的技能。该空间作为共享可执行接口，先学习跟踪技能以奠定运动控制基础并复用运动解码器，避免重训或独立控制器。为防止文本到运动技能走捷径，引入运动直觉蒸馏使生成更贴合语言语义。实验表明该方法能有效整合异构技能并提升跨任务复用能力，对技能库构建具有借鉴价值。",
+      "llm_tldr": "针对物理角色控制中异构技能难以整合的问题，本文提出HetSkills框架，在统一潜在空间中渐进学习来自不同数据源、监督形式和任务的技能。该空间作为共享可执行接口，先学习跟踪技能以奠定运动控制基础并复用运动解码器，避免重训或独立控制器。为防止文本到运动技能走捷径，引入运动直觉蒸馏使生成更贴合语言语义。实验表明该方法能有效整合异构技能并提升跨任务复用能力，对技能库构建具有借鉴价值。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.22301v1",
+      "source": "arxiv",
+      "title": "The Imitator Game: Benchmarking Robot Imitative Ability Beyond Action Prediction",
+      "abstract": "Humans imitate at the level of intent: given a demonstration, we infer its goal and carry it out with whatever tools, objects, and layouts are at hand. Current robot policies instead learn observation-to-action mappings from visual inputs and language instructions, without explicitly inferring the demonstrated task. Learning from human video thus remains largely trajectory-level: models can replay motions in near-identical scenes, but still struggle to imitate what the demonstrator intends rather than merely what they do. We introduce The Imitator Game, a four-level benchmark (L0-L3) that progressively widens the gap between the human demonstration and the robot's own scene, isolating where trajectory replay ceases to suffice and task understanding becomes necessary. We pair it with IG-10K, the largest environment-aligned paired human-robot dataset to date and the only one instantiated across all four levels in both real and simulated settings (20,000+ paired episodes, 50+ tasks, 6 domains), and Imitator Arena, an open platform for blind A/B human evaluation. Across nine state-of-the-art models, performance is stable from L0 to L2 but collapses at L3, identifying functional substitution - achieving the same intent through a different object affordance - as the decisive barrier to intent-level imitation. Human-video-conditioned models outperform caption-conditioned ones, yet every model falls below 13% zero-shot success on unseen tasks; fine-tuning IG-10K-pretrained models with only $10$ paired human-robot demonstrations yields large gains that grow with pretraining scale. The project website and access to Imitator Arena are available at https://imitator-game.github.io.",
+      "authors": [
+        "Xunzhe Zhou",
+        "Yiyang Cai",
+        "Fengyi Wang",
+        "Ran Ju",
+        "Hanxiang Ren",
+        "Ruizhe Liu",
+        "Yu Zhang",
+        "Qian Luo",
+        "Feng Chen",
+        "Pei Zhou",
+        "Yi Ma",
+        "Yanchao Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-23T08:51:01+00:00",
+      "link": "https://arxiv.org/pdf/2608.22301v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmark for intent-level imitation with progressively widened scene gaps, evaluating compositional generalization",
+      "llm_evidence_cn": "意图级模仿基准，逐步拉大场景差异，评估组合泛化",
+      "llm_evidence": "意图级模仿基准，逐步拉大场景差异，评估组合泛化",
+      "canonical_evidence": "意图级模仿基准，逐步拉大场景差异，评估组合泛化",
+      "llm_tldr_en": "The Imitator Game benchmarks robot imitation beyond action prediction via four levels L0-L3 that widen the gap between human demonstration and robot scene, isolating where trajectory replay fails and advancing intent-level imitation.",
+      "llm_tldr_cn": "针对机器人模仿停留在轨迹复现、缺乏意图理解的问题，本文提出Imitator Game基准，通过L0-L3四级逐渐扩大人类演示与机器人场景的差异。该基准隔离轨迹复现失效的边界，鼓励模型推断演示意图并泛化到新场景、新物体布局，为评估机器人模仿能力提供新标尺。",
+      "llm_tldr": "针对机器人模仿停留在轨迹复现、缺乏意图理解的问题，本文提出Imitator Game基准，通过L0-L3四级逐渐扩大人类演示与机器人场景的差异。该基准隔离轨迹复现失效的边界，鼓励模型推断演示意图并泛化到新场景、新物体布局，为评估机器人模仿能力提供新标尺。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.24111v1",
+      "source": "arxiv",
+      "title": "Trajectory-Level Continuous Action Representation for Robotic Manipulation",
+      "abstract": "We propose CAT, a trajectory-level continuous action representation framework for robotic manipulation. Existing visuomotor systems often entangle action representation with control frequency or rely on fixed temporal parameterizations. This leads to representational redundancy at high sampling rates and limits the modeling of critical motion. CAT instead encodes action trajectories within a fixed real-time interval into a set of continuous latent tokens. To ensure temporal consistency across varying control frequencies, we further incorporate a frequency-aware positional encoding that establishs a shared temporal coordinate system. Trajectory-level regularization further stabilizes the latent representation. This approach prevents representation growth with timestep density and avoids reliance on predefined temporal parameterizations. Extensive system-level evaluations on LIBERO, MimicGen, and real-world long-horizon manipulation tasks demonstrate that CAT-based policies consistently outperform both competitive VQ-based and continuous visuomotor baselines under matched training settings. Across various model backbones and control frequencies, CAT consistently improves success rates. These results highlight the advantages of trajectory-level continuous action modeling for scalable robotic manipulation across varying control rates.",
+      "authors": [
+        "Tong Yang",
+        "Jingkai Jia",
+        "Yuecheng Xu",
+        "Xueyao Chen",
+        "Chi Zhang",
+        "Wenqiang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-25T06:19:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.24111v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Encodes action trajectories as latent tokens for manipulation, providing a new representation for action chunking.",
+      "llm_evidence_cn": "以潜在token编码动作轨迹，为动作分块提供新的表示视角。",
+      "llm_evidence": "以潜在token编码动作轨迹，为动作分块提供新的表示视角。",
+      "canonical_evidence": "以潜在token编码动作轨迹，为动作分块提供新的表示视角。",
+      "llm_tldr_en": "CAT encodes action trajectories within a fixed real-time interval into continuous latent tokens, uses frequency-aware positional encoding to handle varying control frequencies, and stabilizes representation with trajectory-level regularization, improving visuomotor policy learning.",
+      "llm_tldr_cn": "该工作针对现有视觉运动系统将动作表示与控制频率强耦合、在高速采样下产生表示冗余的问题，提出CAT框架，将固定时间间隔内的动作轨迹编码为一组连续潜在token，并引入频率感知位置编码建立共享时间坐标。轨迹级正则化进一步稳定表示，使策略学习摆脱对控制频率的过度依赖。该工作为机器人操作中的低层连续动作建模提供了新的表示方法，虽然未涉及技能条件化，但对动作分块类方法具有借鉴意义。",
+      "llm_tldr": "该工作针对现有视觉运动系统将动作表示与控制频率强耦合、在高速采样下产生表示冗余的问题，提出CAT框架，将固定时间间隔内的动作轨迹编码为一组连续潜在token，并引入频率感知位置编码建立共享时间坐标。轨迹级正则化进一步稳定表示，使策略学习摆脱对控制频率的过度依赖。该工作为机器人操作中的低层连续动作建模提供了新的表示方法，虽然未涉及技能条件化，但对动作分块类方法具有借鉴意义。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.23478v1",
+      "source": "arxiv",
+      "title": "Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models can turn multimodal context into robot actions, but their action decoders are still trained largely by behavior cloning. This supervises which motor command was demonstrated while leaving implicit the local objective served by the behavior under the instruction. Future-based supervision enriches action learning with frames, latent observations, trajectories, or motion representations, but these signals capture particular realizations of what may happen rather than the shared semantic objective of the forthcoming behavior. We propose Intention Distillation (INDI), which distills behavior-level intent into the action decoder. During training, a frozen teacher VLM interprets a demonstrated segment from the current observation, instruction, coarse action summary, and corresponding execution video. From its standard inputs, the deployed VLA recovers the resulting multimodal intent representation at an intermediate decoder layer and uses it to organize action prediction together with representations of how the behavior unfolds and what it achieves. On SimplerEnv-Bridge, INDI improves GR00T-N1.7 from 64.3% to 84.7%, and on RoboCasa Kitchen it improves the controlled GR00T-N1.7 baseline from 64.1% to 70.3%, with consistent gains on $π_{0.5}$ across both benchmarks. In real-world tasks, INDI improves average success from 62.0% to 68.7%, with gains of up to 12.0 pp on longer-horizon tasks. Further analyses show that the recovered latent is used by the decoder, captures behavior objective and execution progress, and organizes downstream predictions in an objective-dependent manner. These results show that action decoders benefit from explicitly modeling the semantic objective of the behavior they generate.",
+      "authors": [
+        "Sangoh Lee",
+        "Sangwoo Mo",
+        "Wook-Shin Han"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-08-24T16:42:49+00:00",
+      "link": "https://arxiv.org/pdf/2608.23478v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "distills behavior-level intent into action decoder, akin to skill/phase conditioning in IL",
+      "llm_evidence_cn": "将行为级意图蒸馏到动作解码器，类似于技能/阶段条件下的模仿学习",
+      "llm_evidence": "将行为级意图蒸馏到动作解码器，类似于技能/阶段条件下的模仿学习",
+      "canonical_evidence": "将行为级意图蒸馏到动作解码器，类似于技能/阶段条件下的模仿学习",
+      "llm_tldr_en": "Intention Distillation (INDI) improves VLA action decoders by distilling behavior-level intent from a teacher VLM, going beyond behavior cloning and future-based supervision; it is conceptually relevant to skill-conditioned imitation learning though not using skill IDs or phases.",
+      "llm_tldr_cn": "视觉语言动作模型（VLA）的动作解码器主要依靠行为克隆训练，忽略了行为背后的局部目标，而基于未来的监督信号又只对应特定实现。本文提出意图蒸馏INDI，用冻结的教师VLM解释当前示范片段并将行为级意图蒸馏到动作解码器，使策略理解共享语义目标而非某一具体轨迹。实验显示该方式优于普通行为克隆与未来信号监督；从概念上看，这与技能标识/局部阶段条件化模仿学习相通，然而并未建立参数化技能库。",
+      "llm_tldr": "视觉语言动作模型（VLA）的动作解码器主要依靠行为克隆训练，忽略了行为背后的局部目标，而基于未来的监督信号又只对应特定实现。本文提出意图蒸馏INDI，用冻结的教师VLM解释当前示范片段并将行为级意图蒸馏到动作解码器，使策略理解共享语义目标而非某一具体轨迹。实验显示该方式优于普通行为克隆与未来信号监督；从概念上看，这与技能标识/局部阶段条件化模仿学习相通，然而并未建立参数化技能库。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.24741v1",
+      "source": "arxiv",
+      "title": "One-Shot Learning from Demonstration of Contact-Rich Robotic Manipulation by Identifying Physical Interactions",
+      "abstract": "Learning from Demonstration (LfD) allows robots to learn manipulation tasks directly from humans, thereby supporting the versatile application of robots. Most LfD methods do not explicitly model the physical interactions between a robot and its environment, such as the making and breaking of contact, while these are crucial during manipulation tasks. Because the same basic physical interactions recur often, they can be a basis for robust, generalizable, and adaptive task reproduction. We propose an LfD method that explicitly uses what physical interactions take place where and when. Using that information, a hybrid position-force controller tracks demonstrated trajectories until contact-based transition conditions from the demonstrations are met. We evaluate our method in real robot experiments consisting of opening doors and locks, bolt picking and screwing, dislodging, and surface contouring. We show that explicitly modeling physical interactions benefits LfD in four ways. First, by allowing reproduction of complex, sequential, and contact-rich manipulation tasks using only a single demonstration and no prior knowledge of the task. Second, by facilitating robustness to unknown geometric variations in the environment. Third, by facilitating generalization when geometric variations are known. Fourth, by facilitating online adaptation using geometric information explored during task reproduction. We discuss how robustness, generalization, and adaptivity can be explicitly implemented, which is generally lacking in the LfD literature. Thereby, our work aims to close a gap in interpretable few-shot LfD of robotic manipulation.",
+      "authors": [
+        "A. H. G. Overbeek",
+        "H. van der Kooij",
+        "M. Vlutters"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-25T15:48:03+00:00",
+      "link": "https://arxiv.org/pdf/2608.24741v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Explicitly identifies physical contact interactions and uses them as transition conditions in LfD; analogous to preconditions/effects for parameterized manipulation primitives.",
+      "llm_evidence_cn": "显式识别物理接触交互并将其作为转换条件用于示教学习，类似参数化操作原语的前提条件与效果。",
+      "llm_evidence": "显式识别物理接触交互并将其作为转换条件用于示教学习，类似参数化操作原语的前提条件与效果。",
+      "canonical_evidence": "显式识别物理接触交互并将其作为转换条件用于示教学习，类似参数化操作原语的前提条件与效果。",
+      "llm_tldr_en": "An LfD method explicitly tracks physical contact interactions and uses them as transition conditions for a hybrid position-force controller, enabling robust one-shot reproduction of contact-rich manipulation tasks.",
+      "llm_tldr_cn": "大多数示教学习方法不显式建模机器人与环境之间的物理交互，如接触的建立与断开，而这些过程对操作至关重要。本文提出一种示教学习方法，显式标注物理交互发生的位置和时机，并利用这些信息通过混合位置-力控制器跟踪示教轨迹直到接触转换条件出现。由于相同的基本物理交互经常重复出现，该方法能推广到类似接触丰富操作任务，实现单次示教后的稳健复制，为可重用操作技能提供了交互层面的基元。",
+      "llm_tldr": "大多数示教学习方法不显式建模机器人与环境之间的物理交互，如接触的建立与断开，而这些过程对操作至关重要。本文提出一种示教学习方法，显式标注物理交互发生的位置和时机，并利用这些信息通过混合位置-力控制器跟踪示教轨迹直到接触转换条件出现。由于相同的基本物理交互经常重复出现，该方法能推广到类似接触丰富操作任务，实现单次示教后的稳健复制，为可重用操作技能提供了交互层面的基元。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

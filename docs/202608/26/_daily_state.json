@@ -1,0 +1,201 @@
+{
+  "date": "20260826",
+  "date_label": "",
+  "generated_at": "2026-08-26 22:25:11 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.21778v1",
+      "route": "202608/26/2608.21778v1-vision-guided-target-conditioned-control-for-autonomous-excavation",
+      "title": "Vision Guided Target Conditioned Control for Autonomous Excavation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "使用掩码条件动作分块Transformer将多视角RGB与本体感觉映射为时间上扩展的操纵杆命令，直接契合动作分块Transformer需求。",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.22591v1",
+      "route": "202608/26/2608.22591v1-worldtoken-time-first-sequence-modeling-for-robotic-imitation-learning",
+      "title": "WorldToken: Time-First Sequence Modeling for Robotic Imitation Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "因果时序Transformer与扩散动作头生成动作块，直接对应动作分块Transformer需求。",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.24042v1",
+      "route": "202608/26/2608.24042v1-hierarchical-skill-retrieval-for-data-efficient-adaptation-of-vision-language-action-models",
+      "title": "Hierarchical Skill Retrieval for Data-Efficient Adaptation of Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向长时程VLA自适应任务的层次化技能检索",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.22800v1",
+      "route": "202608/26/2608.22800v1-triplet2track-a-hierarchical-system-with-object-centric-representations-for-reliable-long-horizon-manipulation",
+      "title": "Triplet2Track: A Hierarchical System with Object-Centric Representations for Reliable Long-Horizon Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向长时程操作的分层闭环模仿学习系统，以三元组子目标驱动连续动作。",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.23629v1",
+      "route": "202608/26/2608.23629v1-macro-operator-generation-and-predicate-selection-for-tamp-operator-learning",
+      "title": "Macro-Operator Generation and Predicate Selection for TAMP Operator Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "自动生成宏算子与谓词选择以学习TAMP算子，捕获操作中重复多步结构",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.22296v1",
+      "route": "202608/26/2608.22296v1-tonav-task-oriented-navigation-and-action-velocity-chunk-learning-for-articulated-object-quadrupedal-mobile-manipulation",
+      "title": "TONAV: Task-Oriented Navigation and Action-Velocity Chunk Learning for Articulated Object Quadrupedal Mobile Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "动作-速度块学习用于连续操作控制，与动作分块思想类似",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.23258v1",
+      "route": "202608/26/2608.23258v1-progressively-learning-heterogeneous-skills-in-a-unified-latent-space",
+      "title": "Progressively Learning Heterogeneous Skills in a Unified Latent Space",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "统一潜在空间中的异构技能渐进学习",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.24111v1",
+      "route": "202608/26/2608.24111v1-trajectory-level-continuous-action-representation-for-robotic-manipulation",
+      "title": "Trajectory-Level Continuous Action Representation for Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "以潜在token编码动作轨迹，为动作分块提供新的表示视角。",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.24741v1",
+      "route": "202608/26/2608.24741v1-one-shot-learning-from-demonstration-of-contact-rich-robotic-manipulation-by-identifying-physical-interactions",
+      "title": "One-Shot Learning from Demonstration of Contact-Rich Robotic Manipulation by Identifying Physical Interactions",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "显式识别物理接触交互并将其作为转换条件用于示教学习，类似参数化操作原语的前提条件与效果。",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.20084v1",
+      "route": "202608/26/2608.20084v1-evidence-gated-task-and-motion-planning-with-vision-language-models",
+      "title": "Evidence-Gated Task and Motion Planning with Vision-Language Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于证据获取与可行性门控的任务和运动规划框架，在部分可观测条件下避免失败，与操作中的故障恢复和安全约束方法学相关。",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.22301v1",
+      "route": "202608/26/2608.22301v1-the-imitator-game-benchmarking-robot-imitative-ability-beyond-action-prediction",
+      "title": "The Imitator Game: Benchmarking Robot Imitative Ability Beyond Action Prediction",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "意图级模仿基准，逐步拉大场景差异，评估组合泛化",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    },
+    {
+      "paper_id": "2608.23478v1",
+      "route": "202608/26/2608.23478v1-act-with-intent-distilling-behavior-intent-for-vision-language-action-models",
+      "title": "Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "将行为级意图蒸馏到动作解码器，类似于技能/阶段条件下的模仿学习",
+      "first_seen_at": "2026-08-26 22:25:11 UTC",
+      "updated_at": "2026-08-26 22:25:11 UTC"
+    }
+  ]
+}
