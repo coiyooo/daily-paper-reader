@@ -1,0 +1,153 @@
+{
+  "date": "20260828",
+  "date_label": "",
+  "generated_at": "2026-08-28 04:05:47 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.25864v1",
+      "route": "202608/28/2608.25864v1-ma-vla-multi-arm-vision-language-action-model-for-collaboration-and-compositional-generalization",
+      "title": "MA-VLA: Multi-Arm Vision-Language-Action Model for Collaboration and Compositional Generalization",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "原子动作分配与跨任务组合复用，实现组合泛化",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.25284v1",
+      "route": "202608/28/2608.25284v1-generative-action-chunk-sampling-for-adaptive-stiffness-control-in-physical-human-robot-collaboration",
+      "title": "Generative Action-Chunk Sampling for Adaptive Stiffness Control in Physical Human-Robot Collaboration",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "动作块采样用于自适应机器人控制",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.25641v1",
+      "route": "202608/28/2608.25641v1-leveraging-inter-object-affordances-for-efficient-planning-in-contact-rich-tasks",
+      "title": "Leveraging Inter-object Affordances for Efficient Planning in Contact-rich Tasks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向接触丰富操作的任务与运动规划，使用对象中心执行约束抽象",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.25757v2",
+      "route": "202608/28/2608.25757v2-lm-x-explainable-action-modeling-with-progress-event-and-uncertainty-prediction-for-generalist-robot-manipulation",
+      "title": "LM-X: Explainable Action Modeling with Progress, Event, and Uncertainty Prediction for Generalist Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "显式进度与事件预测条件化动作生成，类似局部相位条件",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.25798v1",
+      "route": "202608/28/2608.25798v1-tacforcing-streaming-action-generation-with-execution-time-tactile-feedback",
+      "title": "TacForcing: Streaming Action Generation with Execution-Time Tactile Feedback",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "基于分块的VLA动作块在执行时过时；流式动作专家利用执行时触觉反馈",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.19589v1",
+      "route": "202608/28/2608.19589v1-orthoskillvla-continual-skill-learning-via-gradient-informed-skill-subspace-adaptation",
+      "title": "OrthoSkillVLA: Continual Skill Learning via Gradient-Informed Skill Subspace Adaptation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在视觉-语言-动作模型中持续学习技能以构建可复用技能库",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.19729v1",
+      "route": "202608/28/2608.19729v1-safebranch-branch-pair-safety-alignment-for-embodied-agents",
+      "title": "SafeBranch: Branch-Pair Safety Alignment for Embodied Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过环境回卷构造分支对，对齐具身智能体安全性",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.26103v2",
+      "route": "202608/28/2608.26103v2-zero-wam-in-context-world-action-modeling-from-human-videos-for-open-ended-task-generalization",
+      "title": "Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "利用上下文人类视频实现未知操作任务的零样本跨任务泛化，与组合泛化目标相关",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    },
+    {
+      "paper_id": "2608.26645v1",
+      "route": "202608/28/2608.26645v1-flare-a-failure-aware-framework-for-autonomous-correction-and-recovery-in-visual-language-robotic-manipulation",
+      "title": "FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向VLA操作的失败感知自主纠错与恢复框架，契合技能策略中的恢复与安全约束",
+      "first_seen_at": "2026-08-28 04:05:47 UTC",
+      "updated_at": "2026-08-28 04:05:47 UTC"
+    }
+  ]
+}
