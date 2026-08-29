@@ -1,8 +1,8 @@
 {
   "label": "2026-08-29",
   "date": "2026-08-29",
-  "generated_at": "2026-08-29T03:43:33",
-  "count": 6,
+  "generated_at": "2026-08-29T22:24:53",
+  "count": 8,
   "papers": [
     {
       "paper_id": "202608/29/2608.22657v1-physical-agentic-ai-an-architecture-for-orchestrating-a-robot-crew-with-llms",
@@ -15,7 +15,37 @@
       "evidence": "带物理前置条件和执行前验证的类型化技能库",
       "tldr": "Agentic AI规划常产生不可行的物理动作。本文提出Physical Agentic AI框架，将机器人技能库与确定性编排门控结合，在动作执行前逐项验证。实验显示单靠检索将技术接地从51%提升到96%，但仍派发23-29%故障步骤；加入门控后虚假派发降为0%。实时执行中所有注入故障均被拒绝，证明语义规划与物理执行间需明确架构接口。",
       "tags": "query:param-skills",
-      "abstract_en": "Agentic AI frameworks interpret open-ended task goals and decompose them into multi-step plans. Richer information about embodiment-specific capabilities, physical preconditions, and cross-robot coordination improves grounding, but does not eliminate infeasible, mistimed, or unsafe physical actions. Physical robot crews therefore require an explicit architectural interface between semantic planning and execution, where every planned action is verified against robot capabilities, system state, and workflow constraints before actuation. This paper introduces Physical Agentic AI, a framework for skill-grounded robot agent orchestration, in which each robot exposes a typed library of executable skills while a foundation model planner decomposes a task into phases and assigns each phase to a robot-skill pair. A Robot Orchestration layer exposes the skill library, robot state, named locations, and workflow contracts to a non-actuating Mission Planner, while a deterministic Robot Orchestrator validates and authorizes one skill at a time. We evaluate on a drone-UGV search-and-dispatch mission, where every mission in every condition is executed live in Gazebo, and on a humanoid-quadruped transportation task using hardware-equivalent skill interfaces plus two physical trials on a Unitree G1 and Go2. Varying planner knowledge and runtime enforcement independently, we find that retrieval raises skill grounding from 51% to 96% yet leaves informed planners dispatching 23-29% of faulted steps. Per-dispatch enforcement reduces false dispatch to 0% with no false blocks, and a held-plan ablation confirms that the gate, not plan variation, is responsible. Live execution makes the difference physical: without enforcement all eight injected faults crossed the orchestration boundary and six produced robot motion; with enforcement all eight were refused before motion.",
+      "abstract_en": "Agentic AI frameworks interpret open-ended task goals and decompose them into multi-step plans. Richer information about embodiment-specific capabilities, physical preconditions, and cross-robot coordination improves grounding, but does not eliminate infeasible, mistimed, or unsafe physical actions. Physical robot crews therefore require an explicit architectural interface between semantic planning and execution, where every planned action is verified against robot capabilities, system state, and workflow constraints before actuation. This paper introduces Physical Agentic AI, a framework for skill-grounded robot agent orchestration, in which each robot exposes a typed library of executable skills while a foundation model planner decomposes a task into phases and assigns each phase to a robot-skill pair. A Robot Orchestration layer exposes the skill library, robot state, named locations, and workflow contracts to a non-actuating Mission Planner, while a deterministic Robot Orchestrator validates and authorizes one skill at a time. We evaluate on a drone-UGV search-and-dispatch mission, where every mission in every condition is executed live in Gazebo, and on a humanoid-quadruped transportation task using hardware-equivalent skill interfaces plus two physical trials on a Unitree G1 and Go2. Varying planner knowledge and runtime enforcement independently, we find that retrieval raises skill grounding from 51% to 96% yet leaves informed planners dispatching 23-29% of faulted steps. Per-dispatch enforcement reduces false dispatch to 0% with no false blocks, and a held-plan ablation confirms that the gate, not plan variation, is responsible. Live execution makes the difference physical: without enforcement all eight injected faults crossed the orchestration boundary and six produced robot motion; with enforcement all eight were refused before motion.\n\n---",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/29/2608.22149v1-meta-ctrl-guaranteed-plan-generation-by-decoupling-syntactic-and-semantic-constraints",
+      "section": "quick",
+      "title_en": "Meta-Ctrl: Guaranteed Plan Generation by Decoupling Syntactic and Semantic Constraints",
+      "authors": "Gwen Yidou-Weng, Edward Sun, Tianyi Ma, Metin Alp Dogan, Benjie Wang, Allen Peng, Guy Van den Broeck, Yuchen Cui",
+      "date": "2026-08-23",
+      "pdf": "https://arxiv.org/pdf/2608.22149v1",
+      "score": "7.0",
+      "evidence": "元令牌在动作层面强制执行前提条件和效果，支持组合式技能约束",
+      "tldr": "LLM生成的计划常违反语法与语义约束，现有软方法无保证、符号规划器丢失常识。Meta-Ctrl提出受约束解码框架，通过元令牌解耦语法与语义，在词元层强制语法、动作层保证语义，将解码内存从107TB以上降至2GB以下。在WAH-NL上，小模型取得最高子目标成功率，超过GPT-4，并在真实机器人上验证。该框架兼顾约束保证与计划质量，具有实用价值。",
+      "tags": "query:param-skills",
+      "abstract_en": "LLMs generate fluent plans for robots but routinely violate the syntactic and se8mantic constraints they must satisfy to execute, and existing remedies trade formal guarantees against plan quality: soft methods (affordance scoring, grounded decoding) give no guarantee, while symbolic planners (LLM+P) discard the LM's commonsense. We propose \\textbf{Meta-Ctrl}, a constrained-decoding framework that guarantees the encoded constraints while preserving the base LM's plan quality. Meta-Ctrl introduces \\emph{meta-tokens}---a compact vocabulary of grounded actions---enforcing syntax at the token level and semantics (preconditions, goals, ordering) at the action level, an exact factorization that cuts the memory of constrained decoding from over 107TB to under 2GB. With it, a small open-weight LM becomes competitive where it otherwise sits at the bottom of the leaderboard: on WAH-NL under the LoTa-Bench protocol it reaches the highest reported subgoal success rate, exceeding GPT-4's, with consistent gains across the Embodied Agent Interface. We further demonstrate it on a real tabletop robot, where every generated plan satisfies its preconditions and goals by construction. Project website: https://meta-ctrlg.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/29/2608.26821v1-temporalflow-vla-learning-physically-grounded-execution-history-for-long-horizon-robot-manipulation",
+      "section": "quick",
+      "title_en": "TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation",
+      "authors": "Jiarui Yang, Yehao Lu, Yuning Su, Yu Zhong, Yufeng Xie, Yazhou Zhang, Haiyu Lan, Kaixiang Lu, Peiwen Lin, Chuang Wang, Junwei Liang, Enyu Li",
+      "date": "2026-08-27",
+      "pdf": "https://arxiv.org/pdf/2608.26821v1",
+      "score": "6.0",
+      "evidence": "通过时间查询提供执行历史以区分多阶段操纵中的相似状态",
+      "tldr": "视觉语言动作模型仅叠加历史帧难以捕捉物理变化，多阶段操作中相似视觉状态可能需不同动作。TemporalFlow-VLA以机器人表面时间流为训练目标，通过执行对齐的时序查询向动作专家注入结构化历史，几何监督仅在训练时使用。在LIBERO上平均成功率97.63%，长时任务96.60%，RoboTwin上Clean/Randomized为85.5%/84.2%，在长程多阶段任务中优势明显。干预实验显示预测依赖历史内容与顺序，结合异步缓存实现单帧级延迟，部署无需显式运动估计。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-language-action (VLA) models leverage pretrained vision-language representations for robot control, yet simply adding historical frames does not reliably capture recent physical change. This is especially problematic in multi-stage manipulation, where visually similar states may require different actions depending on prior execution. To address this challenge, we present TemporalFlow-VLA, which learns compact execution history through physically grounded temporal supervision. Using recorded robot states, robot geometry, and calibrated cameras, we construct robot-surface temporal flow as a training-only target and supervise two execution-aligned temporal queries that provide structured history to the action expert. The geometric supervision path is not evaluated at deployment. TemporalFlow-VLA achieves 97.63 +/- 0.26% average success on LIBERO, including 96.60 +/- 0.87% on LIBERO Long, and 85.5%/84.2% Clean/Randomized success across 12 RoboTwin tasks. It shows its clearest advantage over prior methods on longer-horizon, multi-stage manipulation. Controlled history interventions show that action prediction depends on both historical content and temporal order. With asynchronous feature caching, temporal conditioning maintains single-frame-level server-side sampling latency without additional historical-encoding overhead. Overall, TemporalFlow-VLA provides a compact, physically grounded interface for exploiting ordered execution history without explicit motion estimation or geometric processing at deployment.",
       "source": "arxiv",
       "selection_source": "fresh_fetch"
     },
@@ -35,17 +65,17 @@
       "selection_source": "fresh_fetch"
     },
     {
-      "paper_id": "202608/29/2608.19613v1-what-matters-for-latent-actions-in-robot-learning",
+      "paper_id": "202608/29/2608.21899v1-cider-continual-interactive-distillation-for-embodied-reinforcement-learning",
       "section": "quick",
-      "title_en": "What Matters for Latent Actions in Robot Learning",
-      "authors": "Xizhou Bu, Qingda Hu, Lei Zhou, Lingfeng Zhang, Yingbo Tang, Zihao Liu, Xinyi Tao, Zhiqiang Ma, Qingqiu Huang, Chufeng Tang, Hongbo Wang, Jing Zhang, Jiayi Ma, Hangjun Ye, Wei Li, Xiaoshuai Hao",
-      "date": "2026-08-20",
-      "pdf": "https://arxiv.org/pdf/2608.19613v1",
+      "title_en": "CIDER: Continual Interactive Distillation for Embodied Reinforcement Learning",
+      "authors": "Houlin Li, Minghui Xu, Guo Xu, Xuan Du, Xiaohan Yan, Chun Wang, Yuxiang Yan, Shukai Yang, Yongcheng Liu, Wei Shan, Maoqing Yao",
+      "date": "2026-08-22",
+      "pdf": "https://arxiv.org/pdf/2608.21899v1",
       "score": "6.0",
-      "evidence": "对机器人操作中潜在行动设计选择的系统研究，对技能条件化策略有参考价值",
-      "tldr": "潜在动作模型（LAM）通过无标签视频学习紧凑动作表示，但现有研究碎片化且设置不一，难以判断关键设计。本文首次将LAM统一到自编码框架，系统评估建模范式、学习目标、集成策略等41种设计选择以及4种代理指标。实验发现，微调视觉语言模型（VLM）骨干并联合潜在动作学习，可为下游策略提供更强初始化。在三个基准和真实世界任务上验证，为领域提供了系统性实证指南。",
+      "evidence": "通过蒸馏持续学习新技能而避免遗忘，支持可复用技能库",
+      "tldr": "真实世界强化学习从单任务扩展到持续学习时，灾难性遗忘成为主要挑战。所提方法在每次学习新任务前，将累积的历史策略冻结为教师，利用交互式蒸馏保留旧技能，并使用梯度路由分离新任务学习与旧知识保留的梯度。在六个真实机器人操作任务的序列上，该方法仅需十至二十分钟习得新任务，且旧任务的成功率保持较高，而所有基线均至少遗忘一项旧任务。此工作为具身持续强化学习提供了兼顾稳定性与可塑性的有效框架，具有重要价值。",
       "tags": "query:param-skills",
-      "abstract_en": "Latent Action Models (LAMs) have emerged as a promising paradigm for enabling robot learning to leverage large-scale unlabeled videos through latent actions that serve as compact surrogates for physical actions. Despite rapid progress, research on LAM remains highly fragmented, with existing methods evaluating different design choices in isolation under inconsistent experimental settings, making it difficult to identify the factors that truly determine downstream robotic manipulation performance. In this work, we present the first comprehensive empirical study of latent action learning for robotic manipulation. We unify representative LAM methods within a common autoencoding framework and systematically investigate 41 LAM design choices across three dimensions, including latent action modeling paradigms, learning objectives and regularization methods, and latent action integration strategies. We further examine four proxy metrics for evaluating latent action quality and assess their ability to reliably predict downstream robotic manipulation performance. Extensive experiments on three widely used benchmarks provide strong empirical evidence that fine-tuning vision-language model (VLM) backbones with latent actions provides a stronger initialization for downstream policy learning, with further validation on real-world robot manipulation tasks.",
+      "abstract_en": "Human-in-the-loop real-world reinforcement learning enables rapid acquisition of effective robotic manipulation policies for individual tasks, often within tens of minutes. Yet it remains unclear how to extend this paradigm to continual learning, where a single policy must acquire new skills without losing previously learned behaviors. Existing real-world continual learning methods do not explicitly constrain prior behaviors, leading to severe catastrophic forgetting. We introduce Continual Interactive Distillation for Embodied Reinforcement Learning (CIDER), a continual reinforcement learning framework that freezes the accumulated historical policy as a teacher before learning each new task and interleaves task learning with distillation-based retention. We further introduce gradient routing to separate the gradients used for acquiring new tasks from those used for preserving prior behaviors. We evaluate our method with a single shared actor on six real-world household and industrial manipulation tasks. Interactive Distillation maintains high measured success on previously learned tasks across our six-task real-robot sequence while acquiring each new task in 10 to 20 minutes, whereas every baseline forgets at least one previous task. Additional ablations reveal the key design choices that govern the tradeoff between stability and plasticity in real-world continual reinforcement learning.",
       "source": "arxiv",
       "selection_source": "fresh_fetch"
     },
@@ -65,6 +95,21 @@
       "selection_source": "fresh_fetch"
     },
     {
+      "paper_id": "202608/29/2608.19613v1-what-matters-for-latent-actions-in-robot-learning",
+      "section": "quick",
+      "title_en": "What Matters for Latent Actions in Robot Learning",
+      "authors": "Xizhou Bu, Qingda Hu, Lei Zhou, Lingfeng Zhang, Yingbo Tang, Zihao Liu, Xinyi Tao, Zhiqiang Ma, Qingqiu Huang, Chufeng Tang, Hongbo Wang, Jing Zhang, Jiayi Ma, Hangjun Ye, Wei Li, Xiaoshuai Hao",
+      "date": "2026-08-20",
+      "pdf": "https://arxiv.org/pdf/2608.19613v1",
+      "score": "6.0",
+      "evidence": "对机器人操作中潜在行动设计选择的系统研究，对技能条件化策略有参考价值",
+      "tldr": "潜在动作模型（LAM）通过无标签视频学习紧凑动作表示，但现有研究碎片化且设置不一，难以判断关键设计。本文首次将LAM统一到自编码框架，系统评估建模范式、学习目标、集成策略等41种设计选择以及4种代理指标。实验发现，微调视觉语言模型（VLM）骨干并联合潜在动作学习，可为下游策略提供更强初始化。在三个基准和真实世界任务上验证，为领域提供了系统性实证指南。",
+      "tags": "query:param-skills",
+      "abstract_en": "Latent Action Models (LAMs) have emerged as a promising paradigm for enabling robot learning to leverage large-scale unlabeled videos through latent actions that serve as compact surrogates for physical actions. Despite rapid progress, research on LAM remains highly fragmented, with existing methods evaluating different design choices in isolation under inconsistent experimental settings, making it difficult to identify the factors that truly determine downstream robotic manipulation performance. In this work, we present the first comprehensive empirical study of latent action learning for robotic manipulation. We unify representative LAM methods within a common autoencoding framework and systematically investigate 41 LAM design choices across three dimensions, including latent action modeling paradigms, learning objectives and regularization methods, and latent action integration strategies. We further examine four proxy metrics for evaluating latent action quality and assess their ability to reliably predict downstream robotic manipulation performance. Extensive experiments on three widely used benchmarks provide strong empirical evidence that fine-tuning vision-language model (VLM) backbones with latent actions provides a stronger initialization for downstream policy learning, with further validation on real-world robot manipulation tasks.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
       "paper_id": "202608/29/2608.26053v1-r3-training-robots-to-reason-in-natural-language-via-reinforcement-learning",
       "section": "quick",
       "title_en": "$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning",
@@ -76,21 +121,6 @@
       "tldr": "机器人长视野操控需要分解任务、跟踪进度和预测后果，但现有VLM缺乏语言推理指导。R^3提出两阶段后训练：先中期训练专家推理轨迹初始化风格，再用单步rubric强化学习优化自由形式推理。在Language Table和模拟双手打包上，R^3显著优于指令模仿学习，改进探索和泛化。这表明语言推理可作为测试时计算机制，引导低层策略。",
       "tags": "query:param-skills",
       "abstract_en": "Reasoning in language allows foundation models to spend more test-time compute on hard problems, such as those requiring decomposition, constraint tracking, and prediction of future consequences. Whether this mechanism can improve robotic manipulation remains unclear, where long-horizon tasks require tracking partial progress, reasoning about object relations, recovering from mistakes, and steering noisy low-level policies. In this paper, we study whether VLMs can be trained to reason directly in natural language to guide low-level manipulation policies. We introduce $R^3$, a simple post-training recipe that turns off-the-shelf VLMs into robotic reasoners: it first mid-trains a VLM on expert-generated reasoning traces to initialize the desired reasoning style, then improves the reasoner with single-step rubric-based RL from offline action data. Unlike prior robotic reasoning methods that mostly use structured traces as auxiliary supervision, $R^3$ trains free-form language reasoning to produce test-time guidance for action. We instantiate $R^3$ on Language Table and simulated bimanual grocery packing, two controlled testbeds for studying robotic reasoning and long-horizon manipulation. $R^3$ improves exploration and generalization across unseen tasks and significantly outperforms instruction-only imitation learning baselines on both benchmarks. Our analyses suggest that free-form language reasoning can function as a test-time compute mechanism for steering low-level policies. Our project page is available at https://robotic-reasoner.github.io/.",
-      "source": "arxiv",
-      "selection_source": "fresh_fetch"
-    },
-    {
-      "paper_id": "202608/29/2608.26821v1-temporalflow-vla-learning-physically-grounded-execution-history-for-long-horizon-robot-manipulation",
-      "section": "quick",
-      "title_en": "TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation",
-      "authors": "Jiarui Yang, Yehao Lu, Yuning Su, Yu Zhong, Yufeng Xie, Yazhou Zhang, Haiyu Lan, Kaixiang Lu, Peiwen Lin, Chuang Wang, Junwei Liang, Enyu Li",
-      "date": "2026-08-27",
-      "pdf": "https://arxiv.org/pdf/2608.26821v1",
-      "score": "6.0",
-      "evidence": "通过时间查询提供执行历史以区分多阶段操纵中的相似状态",
-      "tldr": "视觉语言动作模型仅叠加历史帧难以捕捉物理变化，多阶段操作中相似视觉状态可能需不同动作。TemporalFlow-VLA以机器人表面时间流为训练目标，通过执行对齐的时序查询向动作专家注入结构化历史，几何监督仅在训练时使用。在LIBERO上平均成功率97.63%，长时任务96.60%，RoboTwin上Clean/Randomized为85.5%/84.2%，在长程多阶段任务中优势明显。干预实验显示预测依赖历史内容与顺序，结合异步缓存实现单帧级延迟，部署无需显式运动估计。",
-      "tags": "query:param-skills",
-      "abstract_en": "Vision-language-action (VLA) models leverage pretrained vision-language representations for robot control, yet simply adding historical frames does not reliably capture recent physical change. This is especially problematic in multi-stage manipulation, where visually similar states may require different actions depending on prior execution. To address this challenge, we present TemporalFlow-VLA, which learns compact execution history through physically grounded temporal supervision. Using recorded robot states, robot geometry, and calibrated cameras, we construct robot-surface temporal flow as a training-only target and supervise two execution-aligned temporal queries that provide structured history to the action expert. The geometric supervision path is not evaluated at deployment. TemporalFlow-VLA achieves 97.63 +/- 0.26% average success on LIBERO, including 96.60 +/- 0.87% on LIBERO Long, and 85.5%/84.2% Clean/Randomized success across 12 RoboTwin tasks. It shows its clearest advantage over prior methods on longer-horizon, multi-stage manipulation. Controlled history interventions show that action prediction depends on both historical content and temporal order. With asynchronous feature caching, temporal conditioning maintains single-frame-level server-side sampling latency without additional historical-encoding overhead. Overall, TemporalFlow-VLA provides a compact, physically grounded interface for exploiting ordered execution history without explicit motion estimation or geometric processing at deployment.",
       "source": "arxiv",
       "selection_source": "fresh_fetch"
     }

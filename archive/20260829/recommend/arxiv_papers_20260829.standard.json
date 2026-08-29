@@ -1,226 +1,97 @@
 {
   "mode": "standard",
-  "generated_at": "2026-08-29T03:37:16.920897+00:00",
+  "generated_at": "2026-08-29T22:22:57.568114+00:00",
   "stats": {
     "mode": "standard",
     "tag_count": 1,
-    "deep_divecandidates": 1,
+    "deep_divecandidates": 0,
     "deep_cap": 6,
-    "deep_selected": 1,
-    "quick_candidates": 5,
+    "deep_selected": 0,
+    "quick_candidates": 4,
     "quick_skim_target": 11,
-    "quick_selected": 5
+    "quick_selected": 4
   },
-  "deep_dive": [
+  "deep_dive": [],
+  "quick_skim": [
     {
-      "id": "2608.22657v1",
+      "id": "2608.22149v1",
       "source": "arxiv",
-      "title": "Physical Agentic AI: An Architecture for Orchestrating a Robot Crew with LLMs",
-      "abstract": "Agentic AI frameworks interpret open-ended task goals and decompose them into multi-step plans. Richer information about embodiment-specific capabilities, physical preconditions, and cross-robot coordination improves grounding, but does not eliminate infeasible, mistimed, or unsafe physical actions. Physical robot crews therefore require an explicit architectural interface between semantic planning and execution, where every planned action is verified against robot capabilities, system state, and workflow constraints before actuation. This paper introduces Physical Agentic AI, a framework for skill-grounded robot agent orchestration, in which each robot exposes a typed library of executable skills while a foundation model planner decomposes a task into phases and assigns each phase to a robot-skill pair. A Robot Orchestration layer exposes the skill library, robot state, named locations, and workflow contracts to a non-actuating Mission Planner, while a deterministic Robot Orchestrator validates and authorizes one skill at a time. We evaluate on a drone-UGV search-and-dispatch mission, where every mission in every condition is executed live in Gazebo, and on a humanoid-quadruped transportation task using hardware-equivalent skill interfaces plus two physical trials on a Unitree G1 and Go2. Varying planner knowledge and runtime enforcement independently, we find that retrieval raises skill grounding from 51% to 96% yet leaves informed planners dispatching 23-29% of faulted steps. Per-dispatch enforcement reduces false dispatch to 0% with no false blocks, and a held-plan ablation confirms that the gate, not plan variation, is responsible. Live execution makes the difference physical: without enforcement all eight injected faults crossed the orchestration boundary and six produced robot motion; with enforcement all eight were refused before motion.",
+      "title": "Meta-Ctrl: Guaranteed Plan Generation by Decoupling Syntactic and Semantic Constraints",
+      "abstract": "LLMs generate fluent plans for robots but routinely violate the syntactic and se8mantic constraints they must satisfy to execute, and existing remedies trade formal guarantees against plan quality: soft methods (affordance scoring, grounded decoding) give no guarantee, while symbolic planners (LLM+P) discard the LM's commonsense. We propose \\textbf{Meta-Ctrl}, a constrained-decoding framework that guarantees the encoded constraints while preserving the base LM's plan quality. Meta-Ctrl introduces \\emph{meta-tokens}---a compact vocabulary of grounded actions---enforcing syntax at the token level and semantics (preconditions, goals, ordering) at the action level, an exact factorization that cuts the memory of constrained decoding from over 107TB to under 2GB. With it, a small open-weight LM becomes competitive where it otherwise sits at the bottom of the leaderboard: on WAH-NL under the LoTa-Bench protocol it reaches the highest reported subgoal success rate, exceeding GPT-4's, with consistent gains across the Embodied Agent Interface. We further demonstrate it on a real tabletop robot, where every generated plan satisfies its preconditions and goals by construction. Project website: https://meta-ctrlg.github.io/.",
       "authors": [
-        "Xinyuan Liu",
-        "Eren Sadikoglu",
-        "Riana Chatterjee",
-        "Ransalu Senanayake"
+        "Gwen Yidou-Weng",
+        "Edward Sun",
+        "Tianyi Ma",
+        "Metin Alp Dogan",
+        "Benjie Wang",
+        "Allen Peng",
+        "Guy Van den Broeck",
+        "Yuchen Cui"
       ],
       "primary_category": "cs.RO",
       "categories": [
         "cs.RO",
-        "cs.AI",
-        "cs.MA"
+        "cs.AI"
       ],
-      "published": "2026-08-23T23:35:31+00:00",
-      "link": "https://arxiv.org/pdf/2608.22657v1",
+      "published": "2026-08-23T00:40:19+00:00",
+      "link": "https://arxiv.org/pdf/2608.22149v1",
       "tags": [
         "keyword:param-skills",
         "query:param-skills"
       ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Typed skill library with physical preconditions and verification before actuation",
-      "llm_evidence_cn": "带物理前置条件和执行前验证的类型化技能库",
-      "llm_evidence": "带物理前置条件和执行前验证的类型化技能库",
-      "canonical_evidence": "带物理前置条件和执行前验证的类型化技能库",
-      "llm_tldr_en": "Physical Agentic AI introduces a skill-grounded orchestration architecture where each robot exposes a typed library of executable skills and every planned action is verified against capabilities, system state, and constraints before actuation.",
-      "llm_tldr_cn": "本文提出物理具身智能体AI架构，解决开放任务目标分解后计划动作不可行、不合时或不安全的问题。该架构中每个机器人暴露一个类型化的可执行技能库，基础模型规划器将任务分解后，每个计划动作在执行前均要对照机器人能力、系统状态和工作流约束进行验证。这种技能接地与验证机制提升了多机器人编排的物理可行性和安全性，为技能库在真实机器人系统中的应用提供了结构化接口。",
-      "llm_tldr": "本文提出物理具身智能体AI架构，解决开放任务目标分解后计划动作不可行、不合时或不安全的问题。该架构中每个机器人暴露一个类型化的可执行技能库，基础模型规划器将任务分解后，每个计划动作在执行前均要对照机器人能力、系统状态和工作流约束进行验证。这种技能接地与验证机制提升了多机器人编排的物理可行性和安全性，为技能库在真实机器人系统中的应用提供了结构化接口。",
+      "llm_score": 7.0,
+      "llm_evidence_en": "Meta-tokens enforce preconditions and effects for grounded robot actions, enabling compositional skill constraints",
+      "llm_evidence_cn": "元令牌在动作层面强制执行前提条件和效果，支持组合式技能约束",
+      "llm_evidence": "元令牌在动作层面强制执行前提条件和效果，支持组合式技能约束",
+      "canonical_evidence": "元令牌在动作层面强制执行前提条件和效果，支持组合式技能约束",
+      "llm_tldr_en": "Meta-Ctrl introduces meta-tokens representing grounded actions to enforce syntactic and semantic constraints including preconditions and ordering during LLM plan generation, guaranteeing plan validity while preserving plan quality.",
+      "llm_tldr_cn": "大型语言模型生成机器人计划时容易违反语法和语义约束，而现有软方法无保证、符号规划器又丢弃常识；Meta-Ctrl提出元令牌作为一组精简的可落地动作词汇表，在令牌层面强制语法、在动作层面强制前提条件、目标和顺序，从而在保证约束满足的同时保留基础语言模型的计划质量，为机器人操作中的参数化技能前提与效果表示提供了有效手段。",
+      "llm_tldr": "大型语言模型生成机器人计划时容易违反语法和语义约束，而现有软方法无保证、符号规划器又丢弃常识；Meta-Ctrl提出元令牌作为一组精简的可落地动作词汇表，在令牌层面强制语法、在动作层面强制前提条件、目标和顺序，从而在保证约束满足的同时保留基础语言模型的计划质量，为机器人操作中的参数化技能前提与效果表示提供了有效手段。",
       "llm_tags": [
         "query:param-skills"
       ],
       "matched_query_tag": "query:param-skills",
       "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
       "matched_requirement_id": "req-1",
-      "selection_source": "fresh_fetch"
-    }
-  ],
-  "quick_skim": [
-    {
-      "id": "2608.25585v1",
-      "source": "arxiv",
-      "title": "RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
-      "abstract": "Vision-Language-Action (VLA) models provide a versatile foundation for general robotic manipulation, yet they exhibit significant brittleness when confronted with novel task distributions. While In-Context Imitation Learning (ICIL) offers a training-free alternative, existing frameworks suffer from an adaptation bottleneck that hinders the effective translation of expert context to executable actions. This failure originates from superficial retrieval mechanisms and an inherent behavioral inertia that anchors the policy to its pre-trained priors. To address these limitations, we present RA-VLA, a retrieval-augmented VLA framework that integrates behavior-aligned context retrieval with a grounded execution pipeline. By enforcing faithful adherence to functional cues within a scalable architecture, RA-VLA facilitates seamless task adaptation while preserving inference efficiency. Our empirical evaluations across the LIBERO benchmark and a real-world UR5e environment demonstrate that RA-VLA achieves superior success rates and computational efficiency, establishing a robust framework for training-free robotic adaptation.",
-      "authors": [
-        "Sanghwan Jang",
-        "Minjin Jeon",
-        "Minsoo Kim",
-        "Seongjin Choi",
-        "Dongha Kim",
-        "Hwanjo Yu"
-      ],
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "published": "2026-08-26T09:52:30+00:00",
-      "link": "https://arxiv.org/pdf/2608.25585v1",
-      "tags": [
-        "keyword:param-skills",
-        "query:param-skills"
-      ],
-      "llm_score": 7.0,
-      "llm_evidence_en": "retrieval-augmented VLA for test-time adaptation to novel task distributions, relevant to compositional generalization",
-      "llm_evidence_cn": "检索增强VLA在测试时适应新任务分布，与组合泛化相关",
-      "llm_evidence": "检索增强VLA在测试时适应新任务分布，与组合泛化相关",
-      "canonical_evidence": "检索增强VLA在测试时适应新任务分布，与组合泛化相关",
-      "llm_tldr_en": "RA-VLA addresses VLA brittleness on novel task distributions by integrating behavior-aligned context retrieval with grounded execution, improving in-context imitation learning.",
-      "llm_tldr_cn": "针对视觉-语言-动作模型在新任务分布上表现脆弱的问题，本文提出RA-VLA框架，通过行为对齐的上下文检索与落地执行管线，使模型在测试阶段适应专家演示的新任务。实验表明该方法能有效缓解检索机制和惯性行为导致的适应瓶颈，提升模仿学习在新任务上的表现，为机器人操作的组合泛化提供了新思路。",
-      "llm_tldr": "针对视觉-语言-动作模型在新任务分布上表现脆弱的问题，本文提出RA-VLA框架，通过行为对齐的上下文检索与落地执行管线，使模型在测试阶段适应专家演示的新任务。实验表明该方法能有效缓解检索机制和惯性行为导致的适应瓶颈，提升模仿学习在新任务上的表现，为机器人操作的组合泛化提供了新思路。",
-      "llm_tags": [
-        "query:param-skills"
-      ],
-      "matched_query_tag": "query:param-skills",
-      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
-      "matched_requirement_id": "req-5",
       "selection_source": "fresh_fetch",
       "quick_tier": "7"
     },
     {
-      "id": "2608.19613v1",
+      "id": "2608.21899v1",
       "source": "arxiv",
-      "title": "What Matters for Latent Actions in Robot Learning",
-      "abstract": "Latent Action Models (LAMs) have emerged as a promising paradigm for enabling robot learning to leverage large-scale unlabeled videos through latent actions that serve as compact surrogates for physical actions. Despite rapid progress, research on LAM remains highly fragmented, with existing methods evaluating different design choices in isolation under inconsistent experimental settings, making it difficult to identify the factors that truly determine downstream robotic manipulation performance. In this work, we present the first comprehensive empirical study of latent action learning for robotic manipulation. We unify representative LAM methods within a common autoencoding framework and systematically investigate 41 LAM design choices across three dimensions, including latent action modeling paradigms, learning objectives and regularization methods, and latent action integration strategies. We further examine four proxy metrics for evaluating latent action quality and assess their ability to reliably predict downstream robotic manipulation performance. Extensive experiments on three widely used benchmarks provide strong empirical evidence that fine-tuning vision-language model (VLM) backbones with latent actions provides a stronger initialization for downstream policy learning, with further validation on real-world robot manipulation tasks.",
+      "title": "CIDER: Continual Interactive Distillation for Embodied Reinforcement Learning",
+      "abstract": "Human-in-the-loop real-world reinforcement learning enables rapid acquisition of effective robotic manipulation policies for individual tasks, often within tens of minutes. Yet it remains unclear how to extend this paradigm to continual learning, where a single policy must acquire new skills without losing previously learned behaviors. Existing real-world continual learning methods do not explicitly constrain prior behaviors, leading to severe catastrophic forgetting. We introduce Continual Interactive Distillation for Embodied Reinforcement Learning (CIDER), a continual reinforcement learning framework that freezes the accumulated historical policy as a teacher before learning each new task and interleaves task learning with distillation-based retention. We further introduce gradient routing to separate the gradients used for acquiring new tasks from those used for preserving prior behaviors. We evaluate our method with a single shared actor on six real-world household and industrial manipulation tasks. Interactive Distillation maintains high measured success on previously learned tasks across our six-task real-robot sequence while acquiring each new task in 10 to 20 minutes, whereas every baseline forgets at least one previous task. Additional ablations reveal the key design choices that govern the tradeoff between stability and plasticity in real-world continual reinforcement learning.",
       "authors": [
-        "Xizhou Bu",
-        "Qingda Hu",
-        "Lei Zhou",
-        "Lingfeng Zhang",
-        "Yingbo Tang",
-        "Zihao Liu",
-        "Xinyi Tao",
-        "Zhiqiang Ma",
-        "Qingqiu Huang",
-        "Chufeng Tang",
-        "Hongbo Wang",
-        "Jing Zhang",
-        "Jiayi Ma",
-        "Hangjun Ye",
-        "Wei Li",
-        "Xiaoshuai Hao"
-      ],
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "published": "2026-08-20T03:54:51+00:00",
-      "link": "https://arxiv.org/pdf/2608.19613v1",
-      "tags": [
-        "keyword:param-skills",
-        "query:param-skills"
-      ],
-      "llm_score": 6.0,
-      "llm_evidence_en": "comprehensive empirical study of latent action design choices for robotic manipulation, informative for skill-conditioned policies",
-      "llm_evidence_cn": "对机器人操作中潜在行动设计选择的系统研究，对技能条件化策略有参考价值",
-      "llm_evidence": "对机器人操作中潜在行动设计选择的系统研究，对技能条件化策略有参考价值",
-      "canonical_evidence": "对机器人操作中潜在行动设计选择的系统研究，对技能条件化策略有参考价值",
-      "llm_tldr_en": "This first comprehensive study of latent action models for robotic manipulation unifies 41 design choices and evaluates their impact on downstream policy performance.",
-      "llm_tldr_cn": "潜在行动模型在机器人学习领域发展迅速但研究碎片化，本文首次系统研究该方向，统一了代表性方法，并在统一自编码框架下对41种设计选择进行大数据集实验。结果表明不同设计选择显著影响下游操作表现，为潜在行动与技能表征的选择提供了实证指导，也有助于从视频中学习可复用技能。",
-      "llm_tldr": "潜在行动模型在机器人学习领域发展迅速但研究碎片化，本文首次系统研究该方向，统一了代表性方法，并在统一自编码框架下对41种设计选择进行大数据集实验。结果表明不同设计选择显著影响下游操作表现，为潜在行动与技能表征的选择提供了实证指导，也有助于从视频中学习可复用技能。",
-      "llm_tags": [
-        "query:param-skills:composite"
-      ],
-      "matched_query_tag": "query:param-skills:composite",
-      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
-      "matched_requirement_id": "req-composite-param-skills",
-      "selection_source": "fresh_fetch",
-      "quick_tier": "6"
-    },
-    {
-      "id": "2608.25872v1",
-      "source": "arxiv",
-      "title": "VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation",
-      "abstract": "Contact-rich manipulation requires precise interaction feedback. While vision-centric imitation learning is prevalent, external visual observations provide indirect and ambiguous cues about contact states, particularly under occlusion or subtle object--gripper interactions; dedicated tactile or force sensors can provide rich contact information but introduce additional hardware complexity, calibration requirements, and deployment costs. To bridge this gap, we propose VISTA-Policy, an imitation learning paradigm that utilizes the Visual Deformation Field (VDF), a 3D displacement representation of a compliant gripper, as high-dimensional visuo-physical feedback. The framework integrates: 1) a Physics-Aware Encoding Engine for real-time VDF decoding; 2) an Energy Aggregation Denoising Mechanism to isolate true interaction signals; and 3) a Deformation-Augmented Policy Network with incremental gripper actions for precise closed-loop correction. Extensive evaluations on Cross-Scale Object Grasping, Cap Unscrewing, and Calligraphy Writing demonstrate that VISTA-Policy outperforms the strong pure-vision baseline 3D Diffusion Policy and the tactile baseline. VISTA-Policy further demonstrates substantial out-of-distribution generalization to unseen object scales and robustness against dynamic disturbances, offering a durable and cost-effective route toward general-purpose fine-grained manipulation in unstructured environments. Project videos and supplementary materials are available at: https://sites.google.com/view/vista-policy.",
-      "authors": [
-        "Jiayi Chen",
-        "Wenlong Dong",
-        "Yan Huang",
-        "Xianglin Chen",
-        "Zijian Lin",
-        "Jiaqi Yin",
-        "Yushan Liu",
-        "Wenbo Ding"
+        "Houlin Li",
+        "Minghui Xu",
+        "Guo Xu",
+        "Xuan Du",
+        "Xiaohan Yan",
+        "Chun Wang",
+        "Yuxiang Yan",
+        "Shukai Yang",
+        "Yongcheng Liu",
+        "Wei Shan",
+        "Maoqing Yao"
       ],
       "primary_category": "cs.RO",
       "categories": [
         "cs.RO"
       ],
-      "published": "2026-08-26T14:44:29+00:00",
-      "link": "https://arxiv.org/pdf/2608.25872v1",
+      "published": "2026-08-22T10:21:26+00:00",
+      "link": "https://arxiv.org/pdf/2608.21899v1",
       "tags": [
         "keyword:param-skills",
         "query:param-skills"
       ],
       "llm_score": 6.0,
-      "llm_evidence_en": "Imitation learning with visual deformation field for contact-rich manipulation feedback",
-      "llm_evidence_cn": "利用视觉形变场作为接触丰富操作反馈的模仿学习",
-      "llm_evidence": "利用视觉形变场作为接触丰富操作反馈的模仿学习",
-      "canonical_evidence": "利用视觉形变场作为接触丰富操作反馈的模仿学习",
-      "llm_tldr_en": "VISTA-Policy is an imitation learning paradigm using Visual Deformation Field (VDF) as visuo-physical contact feedback for contact-rich manipulation, integrating physics-aware encoding for real-time feedback.",
-      "llm_tldr_cn": "本文针对接触丰富操作中视觉反馈间接、触觉传感器硬件复杂的问题，提出VISTA-Policy模仿学习范式。该方法利用柔性夹爪的三维位移表示——视觉形变场（VDF）作为高维视觉-物理反馈，并集成物理感知编码引擎实现实时解码。实验表明该方法能有效提升接触丰富操作的性能，为无需专用触觉传感器的接触反馈提供新途径。",
-      "llm_tldr": "本文针对接触丰富操作中视觉反馈间接、触觉传感器硬件复杂的问题，提出VISTA-Policy模仿学习范式。该方法利用柔性夹爪的三维位移表示——视觉形变场（VDF）作为高维视觉-物理反馈，并集成物理感知编码引擎实现实时解码。实验表明该方法能有效提升接触丰富操作的性能，为无需专用触觉传感器的接触反馈提供新途径。",
-      "llm_tags": [
-        "query:param-skills"
-      ],
-      "matched_query_tag": "query:param-skills",
-      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
-      "matched_requirement_id": "req-8",
-      "selection_source": "fresh_fetch",
-      "quick_tier": "6"
-    },
-    {
-      "id": "2608.26053v1",
-      "source": "arxiv",
-      "title": "$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning",
-      "abstract": "Reasoning in language allows foundation models to spend more test-time compute on hard problems, such as those requiring decomposition, constraint tracking, and prediction of future consequences. Whether this mechanism can improve robotic manipulation remains unclear, where long-horizon tasks require tracking partial progress, reasoning about object relations, recovering from mistakes, and steering noisy low-level policies. In this paper, we study whether VLMs can be trained to reason directly in natural language to guide low-level manipulation policies. We introduce $R^3$, a simple post-training recipe that turns off-the-shelf VLMs into robotic reasoners: it first mid-trains a VLM on expert-generated reasoning traces to initialize the desired reasoning style, then improves the reasoner with single-step rubric-based RL from offline action data. Unlike prior robotic reasoning methods that mostly use structured traces as auxiliary supervision, $R^3$ trains free-form language reasoning to produce test-time guidance for action. We instantiate $R^3$ on Language Table and simulated bimanual grocery packing, two controlled testbeds for studying robotic reasoning and long-horizon manipulation. $R^3$ improves exploration and generalization across unseen tasks and significantly outperforms instruction-only imitation learning baselines on both benchmarks. Our analyses suggest that free-form language reasoning can function as a test-time compute mechanism for steering low-level policies. Our project page is available at https://robotic-reasoner.github.io/.",
-      "authors": [
-        "Lehong Wu",
-        "Yuxiao Qu",
-        "Zheyuan Hu",
-        "Ivan Zhang",
-        "Limin Wei",
-        "Zackory Erickson",
-        "Aviral Kumar"
-      ],
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "published": "2026-08-26T17:25:10+00:00",
-      "link": "https://arxiv.org/pdf/2608.26053v1",
-      "tags": [
-        "keyword:param-skills",
-        "query:param-skills"
-      ],
-      "llm_score": 6.0,
-      "llm_evidence_en": "trains VLMs to reason in natural language to guide low-level policies for long-horizon manipulation",
-      "llm_evidence_cn": "训练视觉语言模型用自然语言推理来引导低层策略，解决长时操作任务",
-      "llm_evidence": "训练视觉语言模型用自然语言推理来引导低层策略，解决长时操作任务",
-      "canonical_evidence": "训练视觉语言模型用自然语言推理来引导低层策略，解决长时操作任务",
-      "llm_tldr_en": "R^3 post-trains VLMs into robotic reasoners that decompose long-horizon tasks, track progress, and recover from mistakes, using natural language reasoning to steer low-level manipulation policies.",
-      "llm_tldr_cn": "本文研究语言推理能否提升机器人操作策略在长时任务中的表现，提出R^3后训练方案，将通用视觉语言模型训练成机器人推理器。该方法先生成专家推理轨迹进行中期训练，再通过强化学习优化推理与决策。实验显示，R^3能有效拆解任务、跟踪进度并指导底层策略，提升长时操作的性能与纠错能力。",
-      "llm_tldr": "本文研究语言推理能否提升机器人操作策略在长时任务中的表现，提出R^3后训练方案，将通用视觉语言模型训练成机器人推理器。该方法先生成专家推理轨迹进行中期训练，再通过强化学习优化推理与决策。实验显示，R^3能有效拆解任务、跟踪进度并指导底层策略，提升长时操作的性能与纠错能力。",
+      "llm_evidence_en": "Continual RL with distillation to acquire new skills without forgetting, supporting reusable skill libraries",
+      "llm_evidence_cn": "通过蒸馏持续学习新技能而避免遗忘，支持可复用技能库",
+      "llm_evidence": "通过蒸馏持续学习新技能而避免遗忘，支持可复用技能库",
+      "canonical_evidence": "通过蒸馏持续学习新技能而避免遗忘，支持可复用技能库",
+      "llm_tldr_en": "Introduces CIDER, a continual reinforcement learning framework that freezes historical policy as teacher and interleaves task learning with distillation to prevent catastrophic forgetting when acquiring new manipulation skills.",
+      "llm_tldr_cn": "本文针对真实世界机器人强化学习中单策略持续学习新技能时容易灾难性遗忘的问题，提出持续交互蒸馏框架CIDER。该方法在每次学习新任务前冻结已累积的历史策略作为教师，并在任务学习过程中穿插基于蒸馏的约束，从而保持先前学到的行为。实验表明CIDER能够在不明显遗忘旧技能的情况下快速获取新操作技能，为真实世界中的技能库积累和持续学习提供了一种有效方案。",
+      "llm_tldr": "本文针对真实世界机器人强化学习中单策略持续学习新技能时容易灾难性遗忘的问题，提出持续交互蒸馏框架CIDER。该方法在每次学习新任务前冻结已累积的历史策略作为教师，并在任务学习过程中穿插基于蒸馏的约束，从而保持先前学到的行为。实验表明CIDER能够在不明显遗忘旧技能的情况下快速获取新操作技能，为真实世界中的技能库积累和持续学习提供了一种有效方案。",
       "llm_tags": [
         "query:param-skills"
       ],
@@ -259,20 +130,62 @@
         "keyword:param-skills",
         "query:param-skills"
       ],
-      "llm_score": 6.0,
-      "llm_evidence_en": "execution history via temporal queries for multi-stage manipulation",
-      "llm_evidence_cn": "通过时间查询提供执行历史以区分多阶段操纵中的相似状态",
-      "llm_evidence": "通过时间查询提供执行历史以区分多阶段操纵中的相似状态",
-      "canonical_evidence": "通过时间查询提供执行历史以区分多阶段操纵中的相似状态",
-      "llm_tldr_en": "TemporalFlow-VLA learns compact execution history through physically grounded temporal supervision, using execution-aligned temporal queries to condition actions for long-horizon multi-stage manipulation.",
-      "llm_tldr_cn": "多阶段操作中视觉相似的状态可能因先前执行不同而需要不同动作，仅叠加历史帧难以捕捉物理变化。本文提出TemporalFlow-VLA，利用机器人状态与几何信息构造机器人-表面时间流作为监督，训练与执行对齐的时间查询，为动作专家提供结构化历史。该方法提升了多阶段长时程操作的物理可解释性与动作准确性。",
-      "llm_tldr": "多阶段操作中视觉相似的状态可能因先前执行不同而需要不同动作，仅叠加历史帧难以捕捉物理变化。本文提出TemporalFlow-VLA，利用机器人状态与几何信息构造机器人-表面时间流作为监督，训练与执行对齐的时间查询，为动作专家提供结构化历史。该方法提升了多阶段长时程操作的物理可解释性与动作准确性。",
+      "llm_score": 7.0,
+      "llm_evidence_en": "learns physically grounded execution history as phase-like conditioning for action expert in long-horizon manipulation",
+      "llm_evidence_cn": "学习物理可依据的执行历史作为阶段性条件，改善长时程操作中动作专家的预测",
+      "llm_evidence": "学习物理可依据的执行历史作为阶段性条件，改善长时程操作中动作专家的预测",
+      "canonical_evidence": "学习物理可依据的执行历史作为阶段性条件，改善长时程操作中动作专家的预测",
+      "llm_tldr_en": "TemporalFlow-VLA learns physically grounded execution history via robot-surface temporal flow supervision, providing execution-aligned temporal queries to the action expert, improving long-horizon multi-stage manipulation by disambiguating visually similar states based on prior execution.",
+      "llm_tldr_cn": "长时程多阶段操作中，视觉相似状态可能因先前执行不同而需要不同动作。本文提出TemporalFlow-VLA，利用机器人状态、几何与标定相机构建物理可依据的机器人-表面时间流，作为训练目标监督两个执行对齐的时间查询，为动作专家提供结构化历史信息。该方法能更可靠地捕获近期物理变化，改善多阶段操作的动作预测。",
+      "llm_tldr": "长时程多阶段操作中，视觉相似状态可能因先前执行不同而需要不同动作。本文提出TemporalFlow-VLA，利用机器人状态、几何与标定相机构建物理可依据的机器人-表面时间流，作为训练目标监督两个执行对齐的时间查询，为动作专家提供结构化历史信息。该方法能更可靠地捕获近期物理变化，改善多阶段操作的动作预测。",
       "llm_tags": [
         "query:param-skills"
       ],
       "matched_query_tag": "query:param-skills",
       "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
       "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.25872v1",
+      "source": "arxiv",
+      "title": "VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation",
+      "abstract": "Contact-rich manipulation requires precise interaction feedback. While vision-centric imitation learning is prevalent, external visual observations provide indirect and ambiguous cues about contact states, particularly under occlusion or subtle object--gripper interactions; dedicated tactile or force sensors can provide rich contact information but introduce additional hardware complexity, calibration requirements, and deployment costs. To bridge this gap, we propose VISTA-Policy, an imitation learning paradigm that utilizes the Visual Deformation Field (VDF), a 3D displacement representation of a compliant gripper, as high-dimensional visuo-physical feedback. The framework integrates: 1) a Physics-Aware Encoding Engine for real-time VDF decoding; 2) an Energy Aggregation Denoising Mechanism to isolate true interaction signals; and 3) a Deformation-Augmented Policy Network with incremental gripper actions for precise closed-loop correction. Extensive evaluations on Cross-Scale Object Grasping, Cap Unscrewing, and Calligraphy Writing demonstrate that VISTA-Policy outperforms the strong pure-vision baseline 3D Diffusion Policy and the tactile baseline. VISTA-Policy further demonstrates substantial out-of-distribution generalization to unseen object scales and robustness against dynamic disturbances, offering a durable and cost-effective route toward general-purpose fine-grained manipulation in unstructured environments. Project videos and supplementary materials are available at: https://sites.google.com/view/vista-policy.",
+      "authors": [
+        "Jiayi Chen",
+        "Wenlong Dong",
+        "Yan Huang",
+        "Xianglin Chen",
+        "Zijian Lin",
+        "Jiaqi Yin",
+        "Yushan Liu",
+        "Wenbo Ding"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-26T14:44:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.25872v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Imitation learning using visual deformation field for contact-rich manipulation without tactile sensors",
+      "llm_evidence_cn": "利用视觉形变场进行接触丰富操作的模仿学习，无需触觉传感器",
+      "llm_evidence": "利用视觉形变场进行接触丰富操作的模仿学习，无需触觉传感器",
+      "canonical_evidence": "利用视觉形变场进行接触丰富操作的模仿学习，无需触觉传感器",
+      "llm_tldr_en": "VISTA-Policy infers contact states from a visual deformation field of a compliant gripper, providing visuo-physical feedback for imitation learning in contact-rich manipulation without dedicated tactile sensors.",
+      "llm_tldr_cn": "接触丰富的操作需要精确的交互反馈，但纯视觉观测对接触状态的提示间接且模糊，专用触觉传感器又增加硬件成本；VISTA提出用柔性夹爪的视觉形变场作为高维视觉-物理反馈，并通过物理感知编码引擎实时解码，结合空间接触注意力进行模仿学习；实验表明该方法在多种接触丰富任务中取得了接近触觉方案的性能，同时避免额外传感器，为接触操作的技能学习提供了低成本高效反馈方式。",
+      "llm_tldr": "接触丰富的操作需要精确的交互反馈，但纯视觉观测对接触状态的提示间接且模糊，专用触觉传感器又增加硬件成本；VISTA提出用柔性夹爪的视觉形变场作为高维视觉-物理反馈，并通过物理感知编码引擎实时解码，结合空间接触注意力进行模仿学习；实验表明该方法在多种接触丰富任务中取得了接近触觉方案的性能，同时避免额外传感器，为接触操作的技能学习提供了低成本高效反馈方式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
       "selection_source": "fresh_fetch",
       "quick_tier": "6"
     }

@@ -44,14 +44,14 @@
       <span class="dpr-home-dashboard-kicker">2026-08-29</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 8 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>7</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-29 03:43:30 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-29 22:24:50 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共读6篇，聚焦具身智能与机器人操控，精读1篇、速读5篇。最值得关注的是LLM驱动的多机器人协作架构（8.0分），以及检索增强的VLA模型用于测试时自适应（7.0分）。建议优先精读“Physical Agentic AI”一文，理解如何用大模型编排机器人团队。</p>
+<p>今日精读1篇、速读7篇，重点聚焦物理智能体与机器人操控方向。</p>
+<p>最值得看的是《Physical Agentic AI》提出的多机器人编排架构，以及《TemporalFlow-VLA》《RA-VLA》等长时序操控与测试时自适应方法。</p>
+<p>后续可顺着“具身智能+检索增强/时序建模”这条线，跟进VLA模型在真实机器人上的落地对比。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">7 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation">RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation</span></li><li><span class="dpr-home-dashboard-paper-title" title="What Matters for Latent Actions in Robot Learning">What Matters for Latent Actions in Robot Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation">VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Meta-Ctrl: Guaranteed Plan Generation by Decoupling Syntactic and Semantic Constraints">Meta-Ctrl: Guaranteed Plan Generation by Decoupling Syntactic and Semantic Constraints</span></li><li><span class="dpr-home-dashboard-paper-title" title="TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation">TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation">RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>7</strong></span></div>
 </section>
 </div>
 
