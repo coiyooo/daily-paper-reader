@@ -1,0 +1,105 @@
+{
+  "date": "20260829",
+  "date_label": "",
+  "generated_at": "2026-08-29 03:43:30 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.22657v1",
+      "route": "202608/29/2608.22657v1-physical-agentic-ai-an-architecture-for-orchestrating-a-robot-crew-with-llms",
+      "title": "Physical Agentic AI: An Architecture for Orchestrating a Robot Crew with LLMs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "带物理前置条件和执行前验证的类型化技能库",
+      "first_seen_at": "2026-08-29 03:43:30 UTC",
+      "updated_at": "2026-08-29 03:43:30 UTC"
+    },
+    {
+      "paper_id": "2608.25585v1",
+      "route": "202608/29/2608.25585v1-ra-vla-retrieval-augmented-vla-for-test-time-adaptation",
+      "title": "RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "检索增强VLA在测试时适应新任务分布，与组合泛化相关",
+      "first_seen_at": "2026-08-29 03:43:30 UTC",
+      "updated_at": "2026-08-29 03:43:30 UTC"
+    },
+    {
+      "paper_id": "2608.19613v1",
+      "route": "202608/29/2608.19613v1-what-matters-for-latent-actions-in-robot-learning",
+      "title": "What Matters for Latent Actions in Robot Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对机器人操作中潜在行动设计选择的系统研究，对技能条件化策略有参考价值",
+      "first_seen_at": "2026-08-29 03:43:30 UTC",
+      "updated_at": "2026-08-29 03:43:30 UTC"
+    },
+    {
+      "paper_id": "2608.25872v1",
+      "route": "202608/29/2608.25872v1-vista-visually-inferred-spatial-contact-attention-for-contact-rich-manipulation",
+      "title": "VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "利用视觉形变场作为接触丰富操作反馈的模仿学习",
+      "first_seen_at": "2026-08-29 03:43:30 UTC",
+      "updated_at": "2026-08-29 03:43:30 UTC"
+    },
+    {
+      "paper_id": "2608.26053v1",
+      "route": "202608/29/2608.26053v1-r3-training-robots-to-reason-in-natural-language-via-reinforcement-learning",
+      "title": "$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "训练视觉语言模型用自然语言推理来引导低层策略，解决长时操作任务",
+      "first_seen_at": "2026-08-29 03:43:30 UTC",
+      "updated_at": "2026-08-29 03:43:30 UTC"
+    },
+    {
+      "paper_id": "2608.26821v1",
+      "route": "202608/29/2608.26821v1-temporalflow-vla-learning-physically-grounded-execution-history-for-long-horizon-robot-manipulation",
+      "title": "TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过时间查询提供执行历史以区分多阶段操纵中的相似状态",
+      "first_seen_at": "2026-08-29 03:43:30 UTC",
+      "updated_at": "2026-08-29 03:43:30 UTC"
+    }
+  ]
+}
