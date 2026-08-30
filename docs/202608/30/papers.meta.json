@@ -1,0 +1,69 @@
+{
+  "label": "2026-08-30",
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T22:50:02",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202608/30/2608.22294v2-beyond-instance-slots-semantically-rich-world-models-for-physical-interaction-planning",
+      "section": "quick",
+      "title_en": "Beyond Instance Slots: Semantically Rich World Models for Physical Interaction Planning",
+      "authors": "Juntao Cheng, Jingkai Wang, Yijun Shen, Xiansheng Chen, Zhiwei Yu",
+      "date": "2026-08-23",
+      "pdf": "https://arxiv.org/pdf/2608.22294v2",
+      "score": "7.0",
+      "evidence": "任务条件世界模型，功能角色包含阶段，支持物理交互规划",
+      "tldr": "现有世界模型预测观测或潜在特征，难以为物理交互规划提供任务一致表达；实例级槽也缺乏角色语义。提出SR-WM，围绕抓取器、目标、目标对象、关系、阶段五个功能角色，提取软实体假设并绑定角色，以动作条件动力学预测角色与语义变化。统一角色状态支撑多候选动作生成、阶段重排序和违规重采样，在LIBERO四个套件及跨套件等评测中有效，将对象中心预测转化为规划语义接口。",
+      "tags": "query:param-skills",
+      "abstract_en": "World models for physical interaction are typically trained to predict future observations or latent features; however, a planning-oriented model must answer a fundamentally different question: whether a candidate action produces a task consistent future while preserving essential relations. Monolithic state representations obscure the underlying entities, while standard instance-level object slots merely identify what is present without specifying what role each entity plays in the task context. To bridge this gap, we present the Semantically Rich World Model (SR-WM), a task-conditioned world model structured around five functional roles: gripper, target, goal, relation, and phase. Within SR-WM, a visual entity encoder extracts soft entity hypotheses from pretrained patch features, allowing segmentation masks to serve as optional proposal priors without mandating them as required state representations or inference inputs. A role binder subsequently maps these hypotheses to task-specific roles, while an action conditioned dynamics model predicts role transitions alongside fine-grained semantics, including grasp/contact, predicate establishment, relation preservation, fixture state, and phase change. Crucially, this unified role state grounds downstream multi-candidate action generation, stage-aware reranking, and violation-aware suffix resampling. Our comprehensive evaluation protocol spans all four LIBERO simulation suites, cross-suite transfer, perception diagnostics, and action sensitivity analysis. Ultimately, this formulation transforms object-centric prediction into a semantic interface linking visual dynamics with planning-oriented decision making",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/30/2608.22278v1-dreammimic-learning-visuomotor-whole-body-loco-manipulation-via-world-model",
+      "section": "quick",
+      "title_en": "DreamMimic: Learning Visuomotor Whole-Body Loco-Manipulation via World Model",
+      "authors": "Jie Yin, Xingyu Lai",
+      "date": "2026-08-23",
+      "pdf": "https://arxiv.org/pdf/2608.22278v1",
+      "score": "6.0",
+      "evidence": "基于世界模型辅助蒸馏的视觉运动全身运动-操作，长时程行为",
+      "tldr": "视觉驱动的仿人全身操作面临部分可观测、接触丰富动态和长时序视觉学习挑战。DreamMimic使用世界模型学习预测性潜在动力学，为视觉学生策略提供表示空间和多步监督信号，并增设特权状态、接触、物体状态及奖励预测头。采用性能条件引导的自适应蒸馏调度平衡引导与探索，在OMOMO和BEHAVE上超越强视觉基线，验证了世界模型稳定接触丰富仿人行为策略蒸馏的有效性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-based whole-body loco-manipulation on humanoid robots is challenging due to partial observability, contact-rich dynamics, and the difficulty of learning long-horizon behaviors from high-dimensional visual inputs. We present \\href{https://github.com/DreamMimic/DreamMimic}{DreamMimic}, a framework that distills privileged teacher policies into vision-based humanoid controllers via world-model-assisted distillation. Instead of using a Dreamer-style RSSM for planning, we repurpose it to learn predictive latent dynamics that serve as both a representation space and an action-conditioned multi-step supervision signal, while exposing compact predictive features to the student policy to reduce long-term drift. Beyond standard reconstruction objectives for proprioceptive and visual observations, we add auxiliary prediction heads for privileged state, contact, object state, and reward estimation. These heads provide additional supervision related to agent--object interaction and task progress, encouraging the latent representation to retain signals that are useful for contact-rich loco-manipulation. We further introduce Performance-Conditioned Guidance (PCG), a reward-driven adaptive distillation schedule that computes performance scores for both teacher and student to dynamically balance guidance and exploration. PCG prevents both premature teacher annealing and excessive teacher interference in challenging visual settings. Experiments on OMOMO and BEHAVE show improved tracking-based loco-manipulation performance over strong vision-based baselines, without exposing online privileged interaction states to the student at deployment. Qualitative simulations further examine morphology and simulator changes. These results suggest that world models can provide a useful mechanism for stabilizing visual policy distillation in contact-rich humanoid behaviors.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/30/2608.25585v1-ra-vla-retrieval-augmented-vla-for-test-time-adaptation",
+      "section": "quick",
+      "title_en": "RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
+      "authors": "Sanghwan Jang, Minjin Jeon, Minsoo Kim, Seongjin Choi, Dongha Kim, Hwanjo Yu",
+      "date": "2026-08-26",
+      "pdf": "https://arxiv.org/pdf/2608.25585v1",
+      "score": "6.0",
+      "evidence": "针对视觉-语言-动作模型在新型任务分布下的脆弱性，通过行为对齐的上下文检索来增强适应能力，与技能组合泛化相关。",
+      "tldr": "视觉-语言-动作模型在通用机器人操控方面展现出强大能力，但面对新颖的任务分布时显得异常脆弱。虽然无训练的上下文模仿学习提供了免训练选项，但现有框架存在适应瓶颈，浅层的检索机制与固有的行为惯性，使得专家上下文难以被准确翻译成可执行的动作。为此，我们提出RA-VLA，一种检索增强的视觉-语言-动作框架，通过行为对齐的上下文检索与基于物理情境的执行流程相结合，在可扩展架构中强制模型严格遵循功能线索，从而实现测试时的无缝任务适应，同时保持推理效率。在LIBERO基准测试与真实UR5e机械臂上的实验结果表明，RA-VLA在成功率和计算效率上都取得了更优水平，为无需训练的机器人自适应确立了稳健框架。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-Language-Action (VLA) models provide a versatile foundation for general robotic manipulation, yet they exhibit significant brittleness when confronted with novel task distributions. While In-Context Imitation Learning (ICIL) offers a training-free alternative, existing frameworks suffer from an adaptation bottleneck that hinders the effective translation of expert context to executable actions. This failure originates from superficial retrieval mechanisms and an inherent behavioral inertia that anchors the policy to its pre-trained priors. To address these limitations, we present RA-VLA, a retrieval-augmented VLA framework that integrates behavior-aligned context retrieval with a grounded execution pipeline. By enforcing faithful adherence to functional cues within a scalable architecture, RA-VLA facilitates seamless task adaptation while preserving inference efficiency. Our empirical evaluations across the LIBERO benchmark and a real-world UR5e environment demonstrate that RA-VLA achieves superior success rates and computational efficiency, establishing a robust framework for training-free robotic adaptation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/30/2608.26800v1-rapid-on-robot-learning-for-dynamic-manipulation-skills-robot-juggling",
+      "section": "quick",
+      "title_en": "Rapid On-Robot Learning for Dynamic Manipulation Skills: Robot Juggling",
+      "authors": "Taeyoon Lee, Chunpeng Wang, Christopher G. Atkeson, Alfred A. Rizzi, Nicolas Rojas",
+      "date": "2026-08-27",
+      "pdf": "https://arxiv.org/pdf/2608.26800v1",
+      "score": "6.0",
+      "evidence": "机器人本体学习动态操作技能、本地模型与全局先验、技能多样性",
+      "tldr": "针对动态操作技能学习，提出一种在线学习框架，使双臂机器人能在真实硬件上快速掌握杂耍模式。即使仿真与现实差距显著，不完美模型仍能提供有效先验。该方法采用正则化记忆学习，从实时经验中构建局部模型，同时保留全局先验以安全外推，并通过构造互相可达集确保连续抛接的安全性。实验表明，机器人可在5分钟真实交互内学会五种三球杂耍模式，展示了基于不完美先验持续改进的潜力。",
+      "tags": "query:param-skills",
+      "abstract_en": "We present an online learning framework that enables a bimanual robot to acquire diverse juggling patterns directly on physical hardware within minutes, even with a significant sim2real gap. One of the most important lessons from this work is that a model, even when far from reality, can be extremely useful for learning. This motivates a central philosophy of our approach: learning should build upon the robot's current knowledge rather than replace it. Our regularized memory-based learning puts this principle into practice by learning a local model from accumulated experience while retaining the global prior model to extrapolate where experience is sparse. This enables efficient and stable online learning from each new experience without resorting to uninformed exploration over a vast space of possible behaviors. Equally important to continual on-robot learning is safety, allowing the robot to repeatedly practice and improve in the real world. We construct a mutually reachable set that allows safe transitions between successive throws and catches, without driving either arm into a state from which its next action would require violating the robot's joint or actuator limits. Together, these ideas enable a bimanual robot with multi-fingered hands and onboard vision to safely learn and compose five canonical three-ball juggling patterns, including cascade, tennis, half-shower, shower, and box, within less than 5 minutes of real-world interaction. More broadly, this work points toward robots that build upon imperfect prior knowledge and continually refine their behavior through their own real-world experience.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

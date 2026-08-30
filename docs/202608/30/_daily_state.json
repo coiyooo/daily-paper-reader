@@ -1,0 +1,73 @@
+{
+  "date": "20260830",
+  "date_label": "",
+  "generated_at": "2026-08-30 22:49:59 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.22294v2",
+      "route": "202608/30/2608.22294v2-beyond-instance-slots-semantically-rich-world-models-for-physical-interaction-planning",
+      "title": "Beyond Instance Slots: Semantically Rich World Models for Physical Interaction Planning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "任务条件世界模型，功能角色包含阶段，支持物理交互规划",
+      "first_seen_at": "2026-08-30 22:49:59 UTC",
+      "updated_at": "2026-08-30 22:49:59 UTC"
+    },
+    {
+      "paper_id": "2608.22278v1",
+      "route": "202608/30/2608.22278v1-dreammimic-learning-visuomotor-whole-body-loco-manipulation-via-world-model",
+      "title": "DreamMimic: Learning Visuomotor Whole-Body Loco-Manipulation via World Model",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于世界模型辅助蒸馏的视觉运动全身运动-操作，长时程行为",
+      "first_seen_at": "2026-08-30 22:49:59 UTC",
+      "updated_at": "2026-08-30 22:49:59 UTC"
+    },
+    {
+      "paper_id": "2608.25585v1",
+      "route": "202608/30/2608.25585v1-ra-vla-retrieval-augmented-vla-for-test-time-adaptation",
+      "title": "RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对视觉-语言-动作模型在新型任务分布下的脆弱性，通过行为对齐的上下文检索来增强适应能力，与技能组合泛化相关。",
+      "first_seen_at": "2026-08-30 22:49:59 UTC",
+      "updated_at": "2026-08-30 22:49:59 UTC"
+    },
+    {
+      "paper_id": "2608.26800v1",
+      "route": "202608/30/2608.26800v1-rapid-on-robot-learning-for-dynamic-manipulation-skills-robot-juggling",
+      "title": "Rapid On-Robot Learning for Dynamic Manipulation Skills: Robot Juggling",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "机器人本体学习动态操作技能、本地模型与全局先验、技能多样性",
+      "first_seen_at": "2026-08-30 22:49:59 UTC",
+      "updated_at": "2026-08-30 22:49:59 UTC"
+    }
+  ]
+}
