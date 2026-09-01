@@ -1,0 +1,223 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-01T00:28:21.374044+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2608.23927v1",
+      "source": "arxiv",
+      "title": "GlanceWAM: Sparse Test-Time Imagination for World-Action Models",
+      "abstract": "Video generative models provide rich physical priors for robot learning, yet existing world-action models (WAMs) face a fundamental trade-off: synchronous video generation at control rate is latency-prohibitive, while abandoning test-time visual imagination sacrifices task success. We show that visual imagination achieves both real-time inference and superior success rates when generated asynchronously off the critical path and consumed directly in latent space. We introduce GlanceWAM, which decouples imagination from control within a single video DiT: an asynchronous proposer glances ahead on a slow clock to imagine a single lookahead frame seconds into the future in the background, while an action head decodes action chunks at control rate (48 ms) purely in latent space without blocking. Enabled by a non-interfering attention mask that isolates video representations and staleness-robust horizon training that accommodates asynchronous lookahead aging, GlanceWAM breaks the speed-success dilemma. Trained purely on demonstrations, it attains 72.2% on the 24-task RoboCasa kitchen benchmark (surpassing synchronous Cosmos Policy at 67.1% and imagination-free co-training at 64.4%) and 99.0% on LIBERO, executing at 48 ms per chunk on an NVIDIA A100 GPU (24x faster than synchronous baselines). Code is available at https://github.com/linhanwang/GlanceWAM.",
+      "authors": [
+        "Linhan Wang",
+        "Zijian An",
+        "Mingyuan Zhang",
+        "Chen Dai",
+        "Yi Xu",
+        "Can Cui",
+        "Zichong Yang",
+        "Yinlin Chen",
+        "Lifeng Zhou",
+        "Chang-Tien Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-25T00:19:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.23927v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "action head decodes action chunks at control rate in a video DiT for robot manipulation",
+      "llm_evidence_cn": "动作头在视频DiT中以控制频率解码动作块，用于机器人操作",
+      "llm_evidence": "动作头在视频DiT中以控制频率解码动作块，用于机器人操作",
+      "canonical_evidence": "动作头在视频DiT中以控制频率解码动作块，用于机器人操作",
+      "llm_tldr_en": "Video world-action models often suffer latency or sacrifice imagination; GlanceWAM asynchronously imagines a single lookahead frame in latent space while decoding action chunks at 48ms, achieving real-time control and higher success.",
+      "llm_tldr_cn": "现有视频世界-动作模型在机器人学习中面临生成延迟与任务成功率的权衡。GlanceWAM提出将想象与控制在单个视频DiT中解耦，异步地在后台想象未来单帧，同时以48毫秒的控制频率解码动作块。实验显示该方法既能实时推理又获得更高任务成功率。这一思路为利用视频生成模型实现高效机器人操作提供了新路径。",
+      "llm_tldr": "现有视频世界-动作模型在机器人学习中面临生成延迟与任务成功率的权衡。GlanceWAM提出将想象与控制在单个视频DiT中解耦，异步地在后台想象未来单帧，同时以48毫秒的控制频率解码动作块。实验显示该方法既能实时推理又获得更高任务成功率。这一思路为利用视频生成模型实现高效机器人操作提供了新路径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.22657v1",
+      "source": "arxiv",
+      "title": "Physical Agentic AI: An Architecture for Orchestrating a Robot Crew with LLMs",
+      "abstract": "Agentic AI frameworks interpret open-ended task goals and decompose them into multi-step plans. Richer information about embodiment-specific capabilities, physical preconditions, and cross-robot coordination improves grounding, but does not eliminate infeasible, mistimed, or unsafe physical actions. Physical robot crews therefore require an explicit architectural interface between semantic planning and execution, where every planned action is verified against robot capabilities, system state, and workflow constraints before actuation. This paper introduces Physical Agentic AI, a framework for skill-grounded robot agent orchestration, in which each robot exposes a typed library of executable skills while a foundation model planner decomposes a task into phases and assigns each phase to a robot-skill pair. A Robot Orchestration layer exposes the skill library, robot state, named locations, and workflow contracts to a non-actuating Mission Planner, while a deterministic Robot Orchestrator validates and authorizes one skill at a time. We evaluate on a drone-UGV search-and-dispatch mission, where every mission in every condition is executed live in Gazebo, and on a humanoid-quadruped transportation task using hardware-equivalent skill interfaces plus two physical trials on a Unitree G1 and Go2. Varying planner knowledge and runtime enforcement independently, we find that retrieval raises skill grounding from 51% to 96% yet leaves informed planners dispatching 23-29% of faulted steps. Per-dispatch enforcement reduces false dispatch to 0% with no false blocks, and a held-plan ablation confirms that the gate, not plan variation, is responsible. Live execution makes the difference physical: without enforcement all eight injected faults crossed the orchestration boundary and six produced robot motion; with enforcement all eight were refused before motion.",
+      "authors": [
+        "Xinyuan Liu",
+        "Eren Sadikoglu",
+        "Riana Chatterjee",
+        "Ransalu Senanayake"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-08-23T23:35:31+00:00",
+      "link": "https://arxiv.org/pdf/2608.22657v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "skill-grounded robot orchestration with typed executable skill libraries and physical precondition verification",
+      "llm_evidence_cn": "以技能库为基础、验证物理前置条件的机器人编排框架",
+      "llm_evidence": "以技能库为基础、验证物理前置条件的机器人编排框架",
+      "canonical_evidence": "以技能库为基础、验证物理前置条件的机器人编排框架",
+      "llm_tldr_en": "Presents a physical agentic AI architecture where each robot exposes a typed executable skill library, and a foundation model planner verifies plans against capabilities and preconditions before actuation, improving safe multi-robot task execution.",
+      "llm_tldr_cn": "针对开放任务分解中动作不可行、不合时宜或不安全的问题，提出Physical Agentic AI框架，让每个机器人暴露带类型定义的可执行技能库，并要求基础模型规划器在执行前验证机器人能力和物理前置条件。该框架在语义规划与执行之间引入显式接口，从而实现基于技能的多机器人编排。其核心贡献在于将技能前置条件与工作流约束纳入规划-执行闭环，为安全机器人操作提供了系统化架构。",
+      "llm_tldr": "针对开放任务分解中动作不可行、不合时宜或不安全的问题，提出Physical Agentic AI框架，让每个机器人暴露带类型定义的可执行技能库，并要求基础模型规划器在执行前验证机器人能力和物理前置条件。该框架在语义规划与执行之间引入显式接口，从而实现基于技能的多机器人编排。其核心贡献在于将技能前置条件与工作流约束纳入规划-执行闭环，为安全机器人操作提供了系统化架构。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.25500v1",
+      "source": "arxiv",
+      "title": "CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval",
+      "abstract": "Reusable skill libraries allow large language model (LLM) agents to reuse procedural knowledge across tasks, but they also turn memory access into a challenging retrieval problem. Full-library prompting preserves coverage at high context cost, vector retrieval returns compact neighborhoods but treats skills as independent text, and graph-based retrieval can recover workflow context only when the edges that carry relevance are reliable. We propose CaSKG, a counterfactual-causal skill graph framework that calibrates procedural relations before retrieval. CaSKG first builds a high-recall directed candidate graph from semantic, lexical, input/output, and structural evidence, with repair evidence and an optional LLM judge further refining candidate scores. It then applies direction-conditioned textual counterfactual probes that remove, substitute, and reorder skill pairs, aggregates the evidence with Bayesian smoothing, and publishes a state-filtered weighted graph for task-conditioned expansion. The graph is constructed offline and used without changing the downstream agent policy or task interface. Across six LLM backbones on ALFWorld ID-140 and ScienceWorld U211, CaSKG achieves the highest task score in all twelve combinations of model and benchmark. Relative to Graph-of-Skills (GoS), it improves the six-model macro-average ScienceWorld score from 72.62 to 80.50 and ALFWorld success from 80.01\\% to 86.79\\%, while reducing mean environment steps on both benchmarks. Qualitative and ablation analyses further show that calibrated edges help retrieval preserve prerequisites, state-changing actions, verification routines, and final completion steps. These results position edge-confidence calibration as an effective route to compact and executable skill retrieval at scale\\footnote{Code is available at: https://github.com/ZhiyuanLi218/Caskg }.",
+      "authors": [
+        "Zhiyuan Li",
+        "Linyuan Gao",
+        "Xuechun Ding",
+        "Hongwei Chen",
+        "Yuan Wu",
+        "Yi Chang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-08-26T08:12:41+00:00",
+      "link": "https://arxiv.org/pdf/2608.25500v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "counterfactual-causal skill graphs for scalable skill retrieval from reusable skill libraries",
+      "llm_evidence_cn": "基于反事实因果的技能图用于可扩展技能库检索",
+      "llm_evidence": "基于反事实因果的技能图用于可扩展技能库检索",
+      "canonical_evidence": "基于反事实因果的技能图用于可扩展技能库检索",
+      "llm_tldr_en": "This paper addresses scalable retrieval from reusable skill libraries by building counterfactual-causal skill graphs that calibrate procedural relations before retrieval, improving search accuracy and context coverage.",
+      "llm_tldr_cn": "随着可复用技能库规模增大，如何高效检索相关技能成为关键问题。论文提出CaSKG框架，从语义、词汇、输入输出和结构证据构建高召回候选图，并通过反事实因果分析和可选LLM评判校准技能间关系。该方法在保持高覆盖的同时降低检索噪声，为大规模技能库的可靠复用提供支持，对机器人技能库的构建与检索有借鉴意义。",
+      "llm_tldr": "随着可复用技能库规模增大，如何高效检索相关技能成为关键问题。论文提出CaSKG框架，从语义、词汇、输入输出和结构证据构建高召回候选图，并通过反事实因果分析和可选LLM评判校准技能间关系。该方法在保持高覆盖的同时降低检索噪声，为大规模技能库的可靠复用提供支持，对机器人技能库的构建与检索有借鉴意义。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.26788v1",
+      "source": "arxiv",
+      "title": "Decoupling Planning and Control for Instructable Agents",
+      "abstract": "Recent work shows that pre-trained, instruction-tuned vision-language models (VLMs) perform well at mapping from instructions and observations to high-level plans, but struggle to realize such plans as reliable low-latency action sequences in unfamiliar environments. At the same time, world-model controllers excel at fast observation-to-action control, but lack open-ended task guidance. In this work, we combine these strengths into a single system, Instruct-to-Act, where we train a world-model controller to act autonomously at high frequency when conditioned on sparse, higher-latency, and high-level text instructions generated by a VLM planner. To train controllers to be language-instructable, we relabel segments of controller policy rollouts with synthetic instructions and jointly optimize a behavior-cloning objective along with existing reward-maximizing and world-modeling objectives. We evaluate our proposed approach across seven embodied environments, including three multi-agent environments where VLM planners coordinate through language while trained controllers serve as their actuators. Under matched observation and action spaces, our decoupled approach consistently outperforms controller-only and direct VLM action-generation variants, preserves fast control, and lets us swap in different pretrained VLM planners without fine-tuning, while remaining competitive with strong vision-language-action and multi-agent RL baselines on six of seven tasks.",
+      "authors": [
+        "Zineng Tang",
+        "Kelsey R. Allen",
+        "Sjoerd van Steenkiste",
+        "Ishita Dasgupta",
+        "Alane Suhr"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "published": "2026-08-27T08:17:58+00:00",
+      "link": "https://arxiv.org/pdf/2608.26788v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "high-level instructions condition low-level world-model controller, analogous to skill-conditioned control",
+      "llm_evidence_cn": "高层指令条件化低层控制，类似于技能条件化控制",
+      "llm_evidence": "高层指令条件化低层控制，类似于技能条件化控制",
+      "canonical_evidence": "高层指令条件化低层控制，类似于技能条件化控制",
+      "llm_tldr_en": "Instruct-to-Act decouples planning and control: a VLM planner emits sparse high-level instructions while a world-model controller acts at high frequency, trained via synthetic instruction relabeling, enabling reliable long-horizon behavior.",
+      "llm_tldr_cn": "预训练视觉语言模型擅长生成高层计划，但难以输出可靠的连续动作；世界模型控制器则相反。论文提出Instruct-to-Act，将VLM规划器与高速世界模型控制器结合，用高层指令条件化控制器，并通过合成指令重标注训练控制器遵循语言指令。该框架提升了智能体在陌生环境中的任务完成能力，与用技能标识条件化低层策略的思路类似。",
+      "llm_tldr": "预训练视觉语言模型擅长生成高层计划，但难以输出可靠的连续动作；世界模型控制器则相反。论文提出Instruct-to-Act，将VLM规划器与高速世界模型控制器结合，用高层指令条件化控制器，并通过合成指令重标注训练控制器遵循语言指令。该框架提升了智能体在陌生环境中的任务完成能力，与用技能标识条件化低层策略的思路类似。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.28075v1",
+      "source": "arxiv",
+      "title": "Plan Along the Way: Event-Triggered Foundation-Model Planning for TAMP Execution in Partially Observable Manipulation",
+      "abstract": "Manipulation in partially observable environments requires planning under incomplete scene information. In such settings, an initially valid plan may execute successfully yet remain insufficient for task completion. Existing foundation-model-guided task and motion planning (TAMP) systems can generate useful long-horizon task decompositions, subgoals, or constraints, but they often assume having access to a fully specified scene state or invoke model-level replanning after a subgoal, refinement, or execution attempt fails. We present ROBUST TAMP, a modular LLM/VLM-guided planning framework for reactive TAMP where unseen task-relevant and non-target objects may become visible during execution. The framework restricts the foundation-model planner to the currently visible relational scene state, validates generated task-level actions against a strict executable interface, and routes the accepted actions to scene-specific execution adapters. Object discovery is treated as a distinct replanning event and, after a stable execution horizon, the system reconstructs the visible scene state and replans using completed-action history and structured replanning event context. Evaluations are performed on six RLBench/CoppeliaSim kitchen and grill variants involving hidden objects, non-target object discovery, articulated-container interaction, and temporal manipulation procedures. We compare text-only LLM and VLM planners of different sizes under the same validation, execution, monitoring, and replanning pipeline, reporting task success, partial goal completion, discovery- and failure-triggered replanning behavior, implicit non-target-object handling, and planner inference cost.",
+      "authors": [
+        "Puru Ojha",
+        "Narendhiran Vijayakumar",
+        "Nav Singhal",
+        "Girish Varma",
+        "Antony Thomas"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-28T08:44:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.28075v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "modular LLM/VLM-guided TAMP with event-triggered replanning for long-horizon manipulation under partial observability",
+      "llm_evidence_cn": "面向长时程操作的模块化TAMP与事件触发重规划，与TAMP技能库主题相关",
+      "llm_evidence": "面向长时程操作的模块化TAMP与事件触发重规划，与TAMP技能库主题相关",
+      "canonical_evidence": "面向长时程操作的模块化TAMP与事件触发重规划，与TAMP技能库主题相关",
+      "llm_tldr_en": "ROBUST TAMP is a modular LLM/VLM-guided reactive TAMP framework that replans when unseen objects appear during execution, supporting long-horizon manipulation under partial observability.",
+      "llm_tldr_cn": "部分可观测环境中的操作任务常因执行中出现新物体而导致初始计划不充分，现有基础模型TAMP系统通常依赖完整场景信息或在失败后重新规划。本文提出ROBUST TAMP模块化框架，由LLM/VLM引导在事件触发下进行反应式TAMP，无需预先指定全部场景状态。框架能在执行中动态响应可见变化并重新组织子目标与约束，增强长时程操作的鲁棒性。这为在真实操作中集成计划与执行恢复提供了实用方案。",
+      "llm_tldr": "部分可观测环境中的操作任务常因执行中出现新物体而导致初始计划不充分，现有基础模型TAMP系统通常依赖完整场景信息或在失败后重新规划。本文提出ROBUST TAMP模块化框架，由LLM/VLM引导在事件触发下进行反应式TAMP，无需预先指定全部场景状态。框架能在执行中动态响应可见变化并重新组织子目标与约束，增强长时程操作的鲁棒性。这为在真实操作中集成计划与执行恢复提供了实用方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

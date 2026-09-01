@@ -1,0 +1,89 @@
+{
+  "date": "20260831",
+  "date_label": "",
+  "generated_at": "2026-09-01 00:31:44 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.23927v1",
+      "route": "202608/31/2608.23927v1-glancewam-sparse-test-time-imagination-for-world-action-models",
+      "title": "GlanceWAM: Sparse Test-Time Imagination for World-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "动作头在视频DiT中以控制频率解码动作块，用于机器人操作",
+      "first_seen_at": "2026-09-01 00:31:44 UTC",
+      "updated_at": "2026-09-01 00:31:44 UTC"
+    },
+    {
+      "paper_id": "2608.22657v1",
+      "route": "202608/31/2608.22657v1-physical-agentic-ai-an-architecture-for-orchestrating-a-robot-crew-with-llms",
+      "title": "Physical Agentic AI: An Architecture for Orchestrating a Robot Crew with LLMs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "以技能库为基础、验证物理前置条件的机器人编排框架",
+      "first_seen_at": "2026-09-01 00:31:44 UTC",
+      "updated_at": "2026-09-01 00:31:44 UTC"
+    },
+    {
+      "paper_id": "2608.25500v1",
+      "route": "202608/31/2608.25500v1-caskg-counterfactual-causal-skill-graphs-for-scalable-agent-skill-retrieval",
+      "title": "CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于反事实因果的技能图用于可扩展技能库检索",
+      "first_seen_at": "2026-09-01 00:31:44 UTC",
+      "updated_at": "2026-09-01 00:31:44 UTC"
+    },
+    {
+      "paper_id": "2608.26788v1",
+      "route": "202608/31/2608.26788v1-decoupling-planning-and-control-for-instructable-agents",
+      "title": "Decoupling Planning and Control for Instructable Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "高层指令条件化低层控制，类似于技能条件化控制",
+      "first_seen_at": "2026-09-01 00:31:44 UTC",
+      "updated_at": "2026-09-01 00:31:44 UTC"
+    },
+    {
+      "paper_id": "2608.28075v1",
+      "route": "202608/31/2608.28075v1-plan-along-the-way-event-triggered-foundation-model-planning-for-tamp-execution-in-partially-observable-manipulation",
+      "title": "Plan Along the Way: Event-Triggered Foundation-Model Planning for TAMP Execution in Partially Observable Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程操作的模块化TAMP与事件触发重规划，与TAMP技能库主题相关",
+      "first_seen_at": "2026-09-01 00:31:44 UTC",
+      "updated_at": "2026-09-01 00:31:44 UTC"
+    }
+  ]
+}
