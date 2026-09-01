@@ -1,0 +1,137 @@
+{
+  "date": "20260901",
+  "date_label": "",
+  "generated_at": "2026-09-01 21:50:58 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.31167v1",
+      "route": "202609/01/2608.31167v1-sun-persistent-programs-for-language-grounded-control-to-learning-to-real-policies",
+      "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "包含几何/接触关系、满足谓词与转移守卫的类型化可执行程序，契合带前置条件和效果的参数化技能原语",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.29537v1",
+      "route": "202609/01/2608.29537v1-agm-achievement-grounded-memory-for-closed-loop-agents-with-frozen-vla-policies",
+      "title": "AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "冻结技能策略的闭环进度跟踪与失败恢复",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.29749v1",
+      "route": "202609/01/2608.29749v1-driftingvla-native-one-step-vision-language-action-generation-via-per-dimension-temporal-drifting",
+      "title": "DriftingVLA: Native One-Step Vision-Language-Action Generation via Per-Dimension Temporal Drifting",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "单步生成完整动作块，面向低层连续机器人控制；直接针对操作任务中的动作块预测。",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.30536v1",
+      "route": "202609/01/2608.30536v1-behavior-skill-a-fine-grained-benchmark-for-evaluating-vision-language-action-policies-in-long-horizon-tasks",
+      "title": "Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "将长时程任务按可执行技能拆分的细粒度基准，含235,492个技能实例",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.30955v1",
+      "route": "202609/01/2608.30955v1-learning-action-models-with-conditional-and-quantified-effects-via-uncertainty-guided-exploration",
+      "title": "Learning Action Models with Conditional and Quantified Effects via Uncertainty-Guided Exploration",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过不确定性引导探索在线学习带条件与量化效果的动作模型",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.30983v1",
+      "route": "202609/01/2608.30983v1-autonomously-acquiring-robot-manipulation-skills-with-language-driven-quality-diversity",
+      "title": "Autonomously Acquiring Robot Manipulation Skills with Language-Driven Quality-Diversity",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "自主质量多样性算法生成多样化运动原语库，支撑操作技能复用",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.29828v1",
+      "route": "202609/01/2608.29828v1-symvd-symmetric-vision-language-action-distillation-for-robot-manipulation",
+      "title": "SymVD: Symmetric Vision Language Action Distillation for Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "利用几何对称性提升操作策略对未见物体配置的泛化能力",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    },
+    {
+      "paper_id": "2608.30237v1",
+      "route": "202609/01/2608.30237v1-motus2-a-self-evolving-general-world-model-for-dexterous-manipulation",
+      "title": "Motus2: A Self-Evolving General World Model for Dexterous Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向灵巧操作的动作块与策略-模拟器闭环",
+      "first_seen_at": "2026-09-01 21:50:58 UTC",
+      "updated_at": "2026-09-01 21:50:58 UTC"
+    }
+  ]
+}

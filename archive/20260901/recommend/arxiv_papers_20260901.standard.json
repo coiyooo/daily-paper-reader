@@ -1,0 +1,351 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-01T21:45:55.308505+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2608.31167v1",
+      "source": "arxiv",
+      "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
+      "abstract": "Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-crafted and behavior drifting from what control verified.We introduce Semantically UNified (SUN) Programs, typed executables where geometric and contact relations are defined once and compiled into aligned Model Predictive Control (MPC) costs, satisfaction predicates, RL rewards, transition guards, and diagnostics. Our system, Kuafu, driven by large vision language systems, automatically synthesizes SUN Programs from language and scene semantics, screens feasibility via MPC, and retains semantics while training stage-conditioned policies. Across nine tasks, Kuafu achieves 82.03% macro-success, outperforming sparse-reward (35.67%) and Stage-BC (24.75%) baselines. At 8192-way scale, it generates 10.57x the successful trajectory time per hour of human teleoperation. With 500 trajectories per task, Kuafu data trains DP3 policies to 46.0% simulation success (vs. 22.4% for alternatives) and 34.7% on physical Franka and Kinova robots. These results establish that simulation-screened task semantics can effectively amortize control into robust policies, without demonstrations or manual dense rewards, unifying symbolic planning and data-driven execution.",
+      "authors": [
+        "Weiqi Wang",
+        "Zhi Li",
+        "Yudong Lei",
+        "David Martinez",
+        "Xiaofeng Gao",
+        "Yuxin Jiang",
+        "Chenfanfu Jiang",
+        "Yingnian Wu",
+        "Demetri Terzopoulos",
+        "Ran Gong"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-31T17:59:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.31167v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "typed executables with geometric/contact relations, satisfaction predicates and transition guards, matching parameterized primitives with preconditions and effects",
+      "llm_evidence_cn": "包含几何/接触关系、满足谓词与转移守卫的类型化可执行程序，契合带前置条件和效果的参数化技能原语",
+      "llm_evidence": "包含几何/接触关系、满足谓词与转移守卫的类型化可执行程序，契合带前置条件和效果的参数化技能原语",
+      "canonical_evidence": "包含几何/接触关系、满足谓词与转移守卫的类型化可执行程序，契合带前置条件和效果的参数化技能原语",
+      "llm_tldr_en": "SUN Programs are typed executables unifying MPC costs, satisfaction predicates, RL rewards, transition guards and diagnostics from geometric/contact relations, enabling long-horizon manipulation policies with reusable semantics.",
+      "llm_tldr_cn": "针对长程操作中模型控制与学习策略之间缺乏统一语义、奖励需手工设计且行为易偏离已验证语义的问题，SUN 提出类型化可执行程序，将几何与接触关系定义为一次编写即可复用的语义单元，并自动编译为 MPC 代价、满足谓词、RL 奖励、转移守卫与诊断信息。Kuafu 系统从语言和场景语义自动合成 SUN 程序并筛选可行性，在长程操作中保持了从控制验证到学习执行的语义一致，为参数化技能原语和安全约束集成提供了坚实基础。",
+      "llm_tldr": "针对长程操作中模型控制与学习策略之间缺乏统一语义、奖励需手工设计且行为易偏离已验证语义的问题，SUN 提出类型化可执行程序，将几何与接触关系定义为一次编写即可复用的语义单元，并自动编译为 MPC 代价、满足谓词、RL 奖励、转移守卫与诊断信息。Kuafu 系统从语言和场景语义自动合成 SUN 程序并筛选可行性，在长程操作中保持了从控制验证到学习执行的语义一致，为参数化技能原语和安全约束集成提供了坚实基础。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.29537v1",
+      "source": "arxiv",
+      "title": "AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies",
+      "abstract": "Frozen vision-language-action (VLA) policies offer broad manipulation skills but execute open-loop action chunks without tracking task progress, so the agent cannot reliably decide whether to continue, retry, or terminate. External memory is a natural remedy, yet it can be harmful when attempted actions are treated as completed progress, turning local execution errors into persistent task-state errors. We propose Achievement-Grounded Memory (AGM), a lightweight closed-loop framework for frozen VLA policies that represents a task as a subgoal sequence with a progress pointer and advances this memory only after the current subgoal is verified by physical evidence. Proprioceptive interaction cues decide when to verify, while coherent point tracking and language-conditioned cross-view comparison, sourced from frozen foundation models through a single 2.43M-parameter verification head, decide what was achieved. AGM thereby converts open-loop execution into a closed loop of execution, verification, and progress, keeping the policy frozen without test-time large-model inference. On the RoboMME Counting benchmark, AGM reaches on PickXTimes and on BinFill, surpassing the strongest memory-augmented baseline by points on average, and the framework yields equally decisive gains on a physical robot. Reliable embodied memory thus depends more on disciplined state updates than on memory capacity.",
+      "authors": [
+        "Hongbo Gao",
+        "Zeyu Ni",
+        "Xin Wen",
+        "Siyu Xu",
+        "Ruifeng Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-30T03:50:49+00:00",
+      "link": "https://arxiv.org/pdf/2608.29537v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Closed-loop progress tracking and failure recovery for frozen skill policies",
+      "llm_evidence_cn": "冻结技能策略的闭环进度跟踪与失败恢复",
+      "llm_evidence": "冻结技能策略的闭环进度跟踪与失败恢复",
+      "canonical_evidence": "冻结技能策略的闭环进度跟踪与失败恢复",
+      "llm_tldr_en": "Achievement-Grounded Memory (AGM) turns frozen VLA policies into closed-loop agents by representing tasks as subgoal sequences with a progress pointer advanced only after physical verification, directly addressing failure recovery and progress tracking in manipulation.",
+      "llm_tldr_cn": "该论文针对冻结的视觉-语言-动作(VLA)策略以开环动作块执行且无法追踪任务进度的问题，提出成就接地记忆(AGM)，将任务表示为子目标序列和进度指针，并仅在物理证据验证当前子目标完成后才推进记忆。结合本体感交互线索判断验证时机和一致的点点跟踪，AGM为冻结VLA策略提供了轻量级闭环框架，避免局部执行错误变成持久任务状态错误。该方法可看作将技能策略与状态机式进度管理相集成，用于操作任务中的失败恢复。",
+      "llm_tldr": "该论文针对冻结的视觉-语言-动作(VLA)策略以开环动作块执行且无法追踪任务进度的问题，提出成就接地记忆(AGM)，将任务表示为子目标序列和进度指针，并仅在物理证据验证当前子目标完成后才推进记忆。结合本体感交互线索判断验证时机和一致的点点跟踪，AGM为冻结VLA策略提供了轻量级闭环框架，避免局部执行错误变成持久任务状态错误。该方法可看作将技能策略与状态机式进度管理相集成，用于操作任务中的失败恢复。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.29749v1",
+      "source": "arxiv",
+      "title": "DriftingVLA: Native One-Step Vision-Language-Action Generation via Per-Dimension Temporal Drifting",
+      "abstract": "Conventional flow-based vision-language-action (VLA) models support expressive continuous action generation but rely on multi-step refinement to produce each action chunk, increasing latency in online robot control. To address this issue, we introduce DriftingVLA, a native one-step VLA that generates a complete action chunk with a single action-expert forward pass. Rather than learning a flow field that requires iterative integration at inference, DriftingVLA uses a distribution-drifting objective to learn a direct noise-to-action-chunk mapping for one-step deployment. Since robot action dimensions carry distinct control semantics and distributional characteristics, we further introduce Per-Dimension Temporal Drifting (PDTD). PDTD treats the complete temporal trajectory of each action dimension as a separate drifting unit, enabling finer-grained modeling and shaping of dimension-specific action distributions. This per-dimension decomposition applies only to the training objective; the shared VLA model still generates the complete action chunk jointly, thereby preserving cross-dimensional dependencies. DriftingVLA achieves 98.32% success on LIBERO, 81.09% on RoboTwin 2.0, and 77.67% across six real-world single- and dual-arm tasks, outperforming the evaluated multi-step flow policy and one-step VLA baselines. Native one-step deployment also delivers a 3.36-fold speedup in action-chunk generation, eliminating iterative refinement without sacrificing control performance.",
+      "authors": [
+        "Yuxuan Gao",
+        "Shiqi Zhang",
+        "Yedong Shen",
+        "Yifan Duan",
+        "Wenhao Yu",
+        "Xin Zhang",
+        "Siyuan Cao",
+        "Jiajun Deng",
+        "Yanyong Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-30T12:21:44+00:00",
+      "link": "https://arxiv.org/pdf/2608.29749v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "One-step generation of complete action chunks for low-level continuous robot control; directly targets action chunking for manipulation.",
+      "llm_evidence_cn": "单步生成完整动作块，面向低层连续机器人控制；直接针对操作任务中的动作块预测。",
+      "llm_evidence": "单步生成完整动作块，面向低层连续机器人控制；直接针对操作任务中的动作块预测。",
+      "canonical_evidence": "单步生成完整动作块，面向低层连续机器人控制；直接针对操作任务中的动作块预测。",
+      "llm_tldr_en": "DriftingVLA generates a complete action chunk in a single forward pass using a distribution-drifting objective, replacing multi-step flow refinement and reducing latency for online continuous robot control.",
+      "llm_tldr_cn": "针对流式VLA模型需多步迭代来生成动作块、导致在线控制延迟高的问题，DriftingVLA提出分布漂移目标，让模型单步直接生成完整动作块。它进一步引入逐维度时间漂移，适应不同动作维度的控制语义。实验表明该方法在保持连续动作表达能力的同时显著降低推理延迟。该工作为低层连续动作块预测提供了高效的生成范式。",
+      "llm_tldr": "针对流式VLA模型需多步迭代来生成动作块、导致在线控制延迟高的问题，DriftingVLA提出分布漂移目标，让模型单步直接生成完整动作块。它进一步引入逐维度时间漂移，适应不同动作维度的控制语义。实验表明该方法在保持连续动作表达能力的同时显著降低推理延迟。该工作为低层连续动作块预测提供了高效的生成范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30536v1",
+      "source": "arxiv",
+      "title": "Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks",
+      "abstract": "Reliable execution of long-horizon mobile manipulation tasks remains challenging because overall task success depends on the successful completion of multiple constituent skills. Existing benchmarks, however, still rely primarily on full-task rollouts and aggregate task-level metrics, making intermediate failures difficult to observe and analyze. We present Behavior-Skill, a benchmark that reformulates the learning and evaluation of long-horizon tasks around executable constituent skills. It contains 235,492 skill instances from 10,000 demonstrations across 50 household tasks and 34 semantic skill categories. Each instance pairs a skill instruction with an aligned observation-action segment, and is further associated with a restorable intermediate state and a skill success condition to enable independent evaluation under valid preconditions. We further introduce trajectory-level and skill-level metrics to characterize policy capability beyond aggregate task success. Extensive experiments across representative VLA policies including pi0.5 and GR00T on the complete 50-task benchmark show that failures are highly non-uniform across skills, with contact-rich manipulation skills forming persistent bottlenecks. These results demonstrate that Behavior-Skill complements full-task evaluation by exposing intermediate capability profiles for analyzing and improving long-horizon VLA policies. Behavior-Skill is publicly available at https://github.com/nubot-nudt/Behavior-Skill.",
+      "authors": [
+        "Chunyun Ma",
+        "Lun Luo",
+        "Xingjian Luo",
+        "Xiexing Feng",
+        "Hang Zhang",
+        "Wei Liu",
+        "Feng Qiao",
+        "Yaonan Wang",
+        "Huimin Lu",
+        "Xieyuanli Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-31T10:03:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.30536v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Benchmark of 235k skill instances across 50 long-horizon tasks to evaluate VLA policies per constituent skill",
+      "llm_evidence_cn": "将长时程任务按可执行技能拆分的细粒度基准，含235,492个技能实例",
+      "llm_evidence": "将长时程任务按可执行技能拆分的细粒度基准，含235,492个技能实例",
+      "canonical_evidence": "将长时程任务按可执行技能拆分的细粒度基准，含235,492个技能实例",
+      "llm_tldr_en": "Behavior-Skill reformulates long-horizon VLA evaluation around constituent skills, providing 235k skill instances to expose intermediate failures and enable fine-grained analysis.",
+      "llm_tldr_cn": "长时程移动操作任务的评估通常只看整体成功率，难以定位中间失败。Behavior-Skill将基准重构为围绕可执行技能的学习与评估，包含50个家庭任务、34个技能类别和23.5万条技能实例。每个实例都配对了技能指令与观测-动作片段，从而支持对视觉-语言-动作模型进行细粒度的逐技能评估。该工作为层级模仿学习和可复用技能库的研究提供了标准化的评测基础。",
+      "llm_tldr": "长时程移动操作任务的评估通常只看整体成功率，难以定位中间失败。Behavior-Skill将基准重构为围绕可执行技能的学习与评估，包含50个家庭任务、34个技能类别和23.5万条技能实例。每个实例都配对了技能指令与观测-动作片段，从而支持对视觉-语言-动作模型进行细粒度的逐技能评估。该工作为层级模仿学习和可复用技能库的研究提供了标准化的评测基础。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30955v1",
+      "source": "arxiv",
+      "title": "Learning Action Models with Conditional and Quantified Effects via Uncertainty-Guided Exploration",
+      "abstract": "Accurate action models are critical for effective planning. Existing action-model learning methods largely assume simple action representations or become computationally intractable when learning conditional and quantified effects. We present Online Hypothesis-Driven Conditional Action Model Learning (OHCAM), an online approach for learning action models with conditional and quantified effects from limited interactions with the environment. OHCAM maintains a belief over hypothesized action models and actively selects informative actions to reduce uncertainty by maximizing disagreement among competing hypotheses, while being robust to noisy observations. To enable scalability, OHCAM begins with a small set of simple action model hypotheses and expands to more complex conditions only when the current hypotheses become inconsistent with the data. Experiments on six benchmark planning domains demonstrate that OHCAM is sample efficient in learning action models that solve substantially more tasks than baselines, even with observation noise. We validate OHCAM on two tasks using a Kinova Gen3 robot, demonstrating the real-world applicability of our approach.",
+      "authors": [
+        "Jeffrey Jewett",
+        "William Solow",
+        "Sandhya Saisubramanian"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-31T15:23:43+00:00",
+      "link": "https://arxiv.org/pdf/2608.30955v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Online learning of action models with conditional and quantified effects via uncertainty-guided exploration",
+      "llm_evidence_cn": "通过不确定性引导探索在线学习带条件与量化效果的动作模型",
+      "llm_evidence": "通过不确定性引导探索在线学习带条件与量化效果的动作模型",
+      "canonical_evidence": "通过不确定性引导探索在线学习带条件与量化效果的动作模型",
+      "llm_tldr_en": "OHCAM learns action models with conditional and quantified effects from limited interactions by maintaining a belief over hypotheses and actively selecting actions that reduce uncertainty, enabling scalable planning models.",
+      "llm_tldr_cn": "现有动作模型学习方法难以在有限交互中学习条件与量化效果，或计算代价过高。OHCAM在线维护一组假设动作模型，通过最大化假设间分歧来主动选择信息性动作，并抗噪推理。它从简单模型扩展规模，可高效学习带条件与量化效果的动作模型，为规划提供更准确的先决条件与效果表示。",
+      "llm_tldr": "现有动作模型学习方法难以在有限交互中学习条件与量化效果，或计算代价过高。OHCAM在线维护一组假设动作模型，通过最大化假设间分歧来主动选择信息性动作，并抗噪推理。它从简单模型扩展规模，可高效学习带条件与量化效果的动作模型，为规划提供更准确的先决条件与效果表示。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30983v1",
+      "source": "arxiv",
+      "title": "Autonomously Acquiring Robot Manipulation Skills with Language-Driven Quality-Diversity",
+      "abstract": "Quality-diversity (QD) algorithms have been gaining traction in robot learning, where diverse motion primitive libraries allow robots to adapt zero-shot to constraints at deployment time. However, such methods typically require expert designers to write the success condition, fitness and diversity metrics, and this strongly limits the robot's autonomy. On the other hand, existing LLM-based reward-shaping techniques allow robots to learn autonomously but only output single high-performing solutions, limiting the robot's adaptability. In this paper, we propose an approach designed to output diverse motion primitive archives by autonomously leveraging quality-diversity algorithms, only requiring a free-form description of the task in common language. To address the difficulty of designing relevant fitness and diversity metrics, we propose an autonomous exploration mechanism able to reliably output sets of functionals covering the fitness and behavior descriptor (BD) space. First, we pose policy exploration as a functional design problem, where the functional spaces are lower-dimensional than the full BD and fitness spaces, and propose an LLM-based exploration scheme to sample from these low-dimensional spaces without any task-specific prompts, fine-tuning or expert intervention. We adapt a multi-BD variant of the MAP-Elites success (MES) algorithm, designed to leverage the heterogeneous BD samples. Finally, through experiments based on the genesis simulator, we show that our method effectively generates archives of diverse motion primitives, outperforming classical QD algorithms with inferred and hand-written parametrizations on a set of $4$ robotic manipulation tasks.",
+      "authors": [
+        "Émiland Garrabé",
+        "Mahdi Khoramshahi",
+        "Stéphane Doncieux"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-31T15:42:20+00:00",
+      "link": "https://arxiv.org/pdf/2608.30983v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "autonomous quality-diversity for diverse motion primitive archives in robot manipulation",
+      "llm_evidence_cn": "自主质量多样性算法生成多样化运动原语库，支撑操作技能复用",
+      "llm_evidence": "自主质量多样性算法生成多样化运动原语库，支撑操作技能复用",
+      "canonical_evidence": "自主质量多样性算法生成多样化运动原语库，支撑操作技能复用",
+      "llm_tldr_en": "This work combines large language models with quality-diversity algorithms to autonomously build diverse motion primitive archives for robot manipulation, removing the need for hand-crafted success conditions and metrics, enabling zero-shot adaptation to deployment constraints.",
+      "llm_tldr_cn": "针对质量多样性算法需要专家定义适应度与多样性指标而限制机器人自主性的问题，本文提出仅需任务自由文本描述即可自主输出多样化运动原语档案的方法。它将大语言模型的奖励塑造能力与质量多样性算法结合，让机器人无需人工指标即可学习可复用的技能库。实验表明所得技能库支持部署时零样本适应多种约束，为参数化技能库的构建提供了一条自动化路径，与可复用操作技能库主题高度契合。",
+      "llm_tldr": "针对质量多样性算法需要专家定义适应度与多样性指标而限制机器人自主性的问题，本文提出仅需任务自由文本描述即可自主输出多样化运动原语档案的方法。它将大语言模型的奖励塑造能力与质量多样性算法结合，让机器人无需人工指标即可学习可复用的技能库。实验表明所得技能库支持部署时零样本适应多种约束，为参数化技能库的构建提供了一条自动化路径，与可复用操作技能库主题高度契合。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.29828v1",
+      "source": "arxiv",
+      "title": "SymVD: Symmetric Vision Language Action Distillation for Robot Manipulation",
+      "abstract": "While pretrained Vision-Language-Action (VLA) models offer broad generalization capabilities in robotic manipulation tasks, adapting them to real-world environments or handling task shifts often requires substantial additional data and retraining. To address this, we propose Symmetric VLA Distillation (SymVD), a distillation framework that transfers knowledge from a large VLA teacher to a compact student policy by explicitly exploiting geometric symmetries in manipulation tasks, such as rotational and reflectional invariance. SymVD employs an equivariant actor-critic architecture and trains the student using a symmetry-aware objective that aligns with teacher actions under group-invariant properties. We demonstrate that by enforcing the policy to respect equivariance, SymVD reduces redundant exploration across configurations related by group transformations and improves sample efficiency during distillation. To further stabilize and improve distillation, SymVD introduces an adaptive weighting scheme that dynamically balances the distillation objective and reinforcement learning updates based on training progress, enabling robust transfer even when the teacher signal is imperfect or misaligned. Experimental results on robotic manipulation tasks demonstrate that SymVD consistently improves over standard distillation and also outperforms SAC in terms of sample efficiency and generalization to previously unseen symmetric transformations of the environment.",
+      "authors": [
+        "Hyewon Choi",
+        "Donggyu Kim",
+        "Soojean Han"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-08-30T14:50:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.29828v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "exploits geometric symmetries to generalize manipulation policies to unseen object configurations",
+      "llm_evidence_cn": "利用几何对称性提升操作策略对未见物体配置的泛化能力",
+      "llm_evidence": "利用几何对称性提升操作策略对未见物体配置的泛化能力",
+      "canonical_evidence": "利用几何对称性提升操作策略对未见物体配置的泛化能力",
+      "llm_tldr_en": "SymVD distills a large VLA teacher into a compact student policy using an equivariant actor-critic and symmetry-aware objective, improving real-world generalization and adaptation to task shifts.",
+      "llm_tldr_cn": "面对预训练VLA模型在实际环境中适配成本高、任务变化泛化难的问题，SymVD提出一种对称蒸馏框架。它利用操作任务中的旋转和反射等几何对称性，采用等变演员-评论家结构并设计对齐教师动作的对称感知目标，将大模型知识迁移到紧凑学生策略。实验表明该方法在减少数据和重训练需求的同时，增强了策略对任务变化和真实环境的泛化能力。",
+      "llm_tldr": "面对预训练VLA模型在实际环境中适配成本高、任务变化泛化难的问题，SymVD提出一种对称蒸馏框架。它利用操作任务中的旋转和反射等几何对称性，采用等变演员-评论家结构并设计对齐教师动作的对称感知目标，将大模型知识迁移到紧凑学生策略。实验表明该方法在减少数据和重训练需求的同时，增强了策略对任务变化和真实环境的泛化能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.30237v1",
+      "source": "arxiv",
+      "title": "Motus2: A Self-Evolving General World Model for Dexterous Manipulation",
+      "abstract": "General embodied agents should perceive, predict, act, evaluate, and improve within a unified system. World models have shown great promise in building such agents, yet existing models typically append an action output head to a world simulator, without coupling them into a closed decision-and-learning loop for policy improvement. We present Motus2, a self-evolving general world model for dexterous manipulation. Motus2 advances world modeling through model scaling and data scaling. For model scaling, a single model with shared weights exposes three control interfaces: a policy (world-action model), a simulator (action-conditioned world model), and an evaluator (value model). The policy proposes candidate action chunks, the simulator predicts their visual consequences, and the evaluator assesses the predicted outcomes. Their coupling forms a closed decision-and-learning loop for policy improvement. This formulation uses curated expert demonstrations for action learning, while failed and suboptimal interactions provide valuable evidence for dynamics modeling and value learning. For data scaling, Motus2 progresses from large-scale monocular egocentric data to synchronized stereo egocentric data, followed by robot-domain adaptation with robot trajectories and supplementary human-robot alignment data. Motus2 further studies global-autoregressive and hybrid-memory extensions of its sliding-window context, adds tactile feedback for contact-aware control, and is instantiated on a fully biomimetic platform with stereo vision, dual arms, dual dexterous hands, and tactile sensing. Together, egocentric data scaling and closed-loop general world model scaling provide a general path toward self-evolving dexterous manipulation.",
+      "authors": [
+        "Hongzhe Bi",
+        "Zihao Zhou",
+        "Yihang Tang",
+        "Jingrui Pang",
+        "Shuhe Huang",
+        "Haitian Liu",
+        "Runqing Wang",
+        "Shuai Huang",
+        "Yichen Wang",
+        "Yiming Cheng",
+        "Ruowen Zhao",
+        "Zhenghua Li",
+        "Hengkai Tan",
+        "Xiaolong Liu",
+        "Jinhui Wan",
+        "Jiabao Liu",
+        "Min Zhao",
+        "Fan Bao",
+        "Jun Zhu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-08-31T04:44:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.30237v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Action chunks and policy-simulator loop for dexterous manipulation",
+      "llm_evidence_cn": "面向灵巧操作的动作块与策略-模拟器闭环",
+      "llm_evidence": "面向灵巧操作的动作块与策略-模拟器闭环",
+      "canonical_evidence": "面向灵巧操作的动作块与策略-模拟器闭环",
+      "llm_tldr_en": "Motus2 is a self-evolving world model for dexterous manipulation that couples policy, simulator, and evaluator into one shared-weight model; its policy proposes candidate action chunks while the simulator predicts their outcomes, enabling closed-loop decision and learning.",
+      "llm_tldr_cn": "该论文提出Motus2，一个自进化的通用世界模型，用于灵巧操作任务。单个共享权重模型暴露策略、模拟器和评估器三种控制接口：策略提出候选动作块，模拟器预测其视觉结果，评估器给出价值判断，从而将决策与学习闭环耦合。通过模型缩放和数据缩放，Motus2提升了操作技能的学习与评估能力，其动作块预测方式与动作分块思想相关。",
+      "llm_tldr": "该论文提出Motus2，一个自进化的通用世界模型，用于灵巧操作任务。单个共享权重模型暴露策略、模拟器和评估器三种控制接口：策略提出候选动作块，模拟器预测其视觉结果，评估器给出价值判断，从而将决策与学习闭环耦合。通过模型缩放和数据缩放，Motus2提升了操作技能的学习与评估能力，其动作块预测方式与动作分块思想相关。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
