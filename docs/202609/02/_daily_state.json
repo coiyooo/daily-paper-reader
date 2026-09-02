@@ -1,0 +1,137 @@
+{
+  "date": "20260902",
+  "date_label": "",
+  "generated_at": "2026-09-02 23:01:06 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.00908v1",
+      "route": "202609/02/2609.00908v1-knowing-when-to-stop-adaptive-action-chunking-via-internal-cross-attention-dynamics-in-vlas",
+      "title": "Knowing When to Stop: Adaptive Action Chunking via Internal Cross-Attention Dynamics in VLAs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于内部交叉注意力熵的VLA自适应动作分块，直接针对机器人操作中的分块长度问题",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2609.01281v1",
+      "route": "202609/02/2609.01281v1-embodiedskills-a-unified-framework-for-orchestrating-training-and-deploying-vla-agents",
+      "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "把技能决策作为执行提议，执行前检查前置条件、执行后验证结果，并具备恢复机制，适配失败恢复与安全执行需求",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2609.01215v1",
+      "route": "202609/02/2609.01215v1-refactor-vla-unsupervised-library-learning-of-typed-motor-programs",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用行为等价聚类在唤醒-睡眠框架中无监督学习类型化运动程序技能库，是可复用机器人技能库方向的核心工作",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2609.01453v1",
+      "route": "202609/02/2609.01453v1-does-imitation-learning-preserve-temporal-robustness-in-dexterous-manipulation-an-expert-learner-comparison-across-task-execution-speeds",
+      "title": "Does Imitation Learning Preserve Temporal Robustness in Dexterous Manipulation? An Expert-Learner Comparison Across Task Execution Speeds",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "在接触丰富的机器人操作中使用动作分块Transformer作为模仿学习器，研究其连续动作序列预测的时间鲁棒性",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2609.01518v1",
+      "route": "202609/02/2609.01518v1-a-system-for-fast-resilient-and-adaptable-loco-manipulation-behaviors-on-humanoid-robots",
+      "title": "A System for Fast, Resilient, and Adaptable Loco-Manipulation Behaviors on Humanoid Robots",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "将对象为中心的Affordance模板与树形逻辑结构结合，支持运行时编辑与行为组合，与技能策略以状态机/行为树集成适配的操作需求一致",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2609.01596v1",
+      "route": "202609/02/2609.01596v1-facet-0-a-robotic-foundation-model-for-contact-rich-precise-manipulation",
+      "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "流匹配同时生成动作块与未来腕力轮廓，面向真实接触丰富装配并具备阶段感知设计",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2608.29768v1",
+      "route": "202609/02/2608.29768v1-smoothrl-online-reinforcement-learning-during-asynchronous-execution",
+      "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "异步推理与动作分块执行重叠策略计算，面向机器人策略实时部署",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    },
+    {
+      "paper_id": "2608.30760v1",
+      "route": "202609/02/2608.30760v1-practice-from-experience-to-expertise-in-self-evolving-embodied-agents",
+      "title": "PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "训练技能学习器从过往交互轨迹中自动发现并维护持久技能库，契合长时程任务中可复用技能库学习的主题",
+      "first_seen_at": "2026-09-02 23:01:06 UTC",
+      "updated_at": "2026-09-02 23:01:06 UTC"
+    }
+  ]
+}

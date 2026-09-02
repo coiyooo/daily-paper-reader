@@ -1,0 +1,342 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-02T22:52:43.955108+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.00908v1",
+      "source": "arxiv",
+      "title": "Knowing When to Stop: Adaptive Action Chunking via Internal Cross-Attention Dynamics in VLAs",
+      "abstract": "Action chunking is a standard execution strategy in modern Vision-Language-Action (VLA) frameworks, but fixed execution horizons impose a trade-off between efficiency and accuracy. Short chunks require frequent inference and may cause oscillatory behavior, whereas long chunks can become misaligned with newly observed states. We address this limitation with an adaptive action chunking approach based on internal cross-attention dynamics in the action expert. We observe that, as the prediction horizon extends, action-to-observation cross-attention becomes increasingly dispersed and its entropy rises toward a plateau. This pattern is associated with higher action prediction error and provides an online signal that the current observation offers limited grounding for further open-loop execution. Based on this observation, we introduce a training-free truncation mechanism that detects sustained high-entropy plateaus and dynamically selects the execution horizon during inference. The method uses attention weights already computed by the policy and introduces negligible additional overhead. Evaluations on $π_{0.5}$ and X-VLA across RoboTwin 2.0, LIBERO, and three real-world manipulation tasks show improved average task success over fixed-horizon and adaptive chunking baselines, while preserving efficient closed-loop control. These results show that cross-attention dynamics can provide a practical internal signal for adaptive action execution in VLAs.",
+      "authors": [
+        "Runze Xu",
+        "Xiaolong Shan",
+        "Shuang Dai",
+        "Yu Wang",
+        "Jincheng Yu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-01T08:38:16+00:00",
+      "link": "https://arxiv.org/pdf/2609.00908v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Adaptive action chunking for VLA manipulation based on internal cross-attention entropy, directly targeting action-chunk length in robot control",
+      "llm_evidence_cn": "基于内部交叉注意力熵的VLA自适应动作分块，直接针对机器人操作中的分块长度问题",
+      "llm_evidence": "基于内部交叉注意力熵的VLA自适应动作分块，直接针对机器人操作中的分块长度问题",
+      "canonical_evidence": "基于内部交叉注意力熵的VLA自适应动作分块，直接针对机器人操作中的分块长度问题",
+      "llm_tldr_en": "Presents adaptive action chunking for VLA robot manipulation: cross-attention entropy between action expert and observations rises with horizon and signals prediction degradation, enabling the policy to stop a chunk early and re-plan, balancing efficiency and accuracy.",
+      "llm_tldr_cn": "视觉-语言-动作模型常以固定长度动作块执行，短块推理频繁且易振荡，长块在状态变化后容易失准。本文提出利用动作专家内部交叉注意力动力学做自适应动作分块：随着预测视界延长，动作到观测的交叉注意力逐渐发散、熵趋向平台，这对应动作预测误差上升。该熵可作为在线信号决定何时提前停止当前动作块并重新预测。实验显示自适应分块能在不牺牲精度的前提下减少不必要的推理，解决固定执行视界在效率与准确性间权衡的问题。",
+      "llm_tldr": "视觉-语言-动作模型常以固定长度动作块执行，短块推理频繁且易振荡，长块在状态变化后容易失准。本文提出利用动作专家内部交叉注意力动力学做自适应动作分块：随着预测视界延长，动作到观测的交叉注意力逐渐发散、熵趋向平台，这对应动作预测误差上升。该熵可作为在线信号决定何时提前停止当前动作块并重新预测。实验显示自适应分块能在不牺牲精度的前提下减少不必要的推理，解决固定执行视界在效率与准确性间权衡的问题。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01281v1",
+      "source": "arxiv",
+      "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+      "abstract": "Vision-language-action (VLA) models map visual observations and language instructions directly to robot actions, but long-horizon tasks require more than action prediction. An agent must coordinate perception, planning, execution, progress verification, and recovery as the physical state evolves. An action prediction or a model-generated skill decision does not, by itself, guarantee that the proposed operation is valid in the current state or that its outcome will be verified. We propose EmbodiedSkills, a unified framework that treats each skill decision as an execution proposal: the runtime checks its prerequisites before execution and verifies the outcome afterward. A shared executable-skill interface connects high-level skill selection, bounded low-level VLA execution, and post-action verification within a single agent loop. Because this interface remains fixed, low-level VLA policies can be replaced or adapted without changing the agent loop. The interface also records planning, execution, verification, and recovery events as structured trajectories, which provide supervision for individual components and can support optional online adaptation when interactive feedback is available. We instantiate EmbodiedSkills with Qwen3-VL and OpenPI/pi0.5 on RoboTwin 2.0 and LIBERO. Task-adapted low-level VLA policies achieve an average success rate of 86.20% across 50 RoboTwin 2.0 tasks and 97.40% across the four LIBERO suites. These results establish the execution performance of the task-adapted low-level VLA policies used in EmbodiedSkills. On four memory-dependent RMBench tasks, the same task-adapted execution approach achieves 12.5% average success. The framework provides a trainable and inspectable agent layer for turning these policies into closed-loop embodied systems.",
+      "authors": [
+        "Wei Wang",
+        "Wenqiao Zhang",
+        "Yutong Lin",
+        "Yuqian Yuan",
+        "Tianwei Lin",
+        "Jinhao Mao",
+        "Zhenxuan Fan",
+        "Mingjian Gao",
+        "Yang Dai",
+        "Wentong Li",
+        "Zheqi Lv",
+        "Zheng Dong",
+        "Yingjie Niu",
+        "Jiaqi Zhu",
+        "Jun Xiao",
+        "Chao Li",
+        "Yueting Zhuang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-01T14:14:47+00:00",
+      "link": "https://arxiv.org/pdf/2609.01281v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "unified VLA framework treats skill decisions as execution proposals with runtime prereq checks, outcome verification, and recovery for long-horizon tasks",
+      "llm_evidence_cn": "把技能决策作为执行提议，执行前检查前置条件、执行后验证结果，并具备恢复机制，适配失败恢复与安全执行需求",
+      "llm_evidence": "把技能决策作为执行提议，执行前检查前置条件、执行后验证结果，并具备恢复机制，适配失败恢复与安全执行需求",
+      "canonical_evidence": "把技能决策作为执行提议，执行前检查前置条件、执行后验证结果，并具备恢复机制，适配失败恢复与安全执行需求",
+      "llm_tldr_en": "EmbodiedSkills treats each VLA skill decision as an execution proposal, checking prerequisites before execution and verifying outcomes afterward through a shared skill interface, supporting reliable long-horizon manipulation.",
+      "llm_tldr_cn": "长时程操作仅靠VLA模型的动作预测是不够的，智能体需要把感知、规划、执行、进度校验与恢复编排起来，而单个技能决策本身无法保证当前时刻有效。EmbodiedSkills把每个技能决策视为执行提议：执行前检查其前置条件，执行后验证结果，并通过共享的可执行技能接口把高层技能选择与底层执行连接起来。该框架覆盖从技能编排、模型训练到部署的完整流程，使模型产生的动作或技能决策与物理状态不断校验。这样一来，长时程任务中的失效环节能被及时发现，为VLA智能体在执行层面的可靠运行提供了统一框架。",
+      "llm_tldr": "长时程操作仅靠VLA模型的动作预测是不够的，智能体需要把感知、规划、执行、进度校验与恢复编排起来，而单个技能决策本身无法保证当前时刻有效。EmbodiedSkills把每个技能决策视为执行提议：执行前检查其前置条件，执行后验证结果，并通过共享的可执行技能接口把高层技能选择与底层执行连接起来。该框架覆盖从技能编排、模型训练到部署的完整流程，使模型产生的动作或技能决策与物理状态不断校验。这样一来，长时程任务中的失效环节能被及时发现，为VLA智能体在执行层面的可靠运行提供了统一框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01453v1",
+      "source": "arxiv",
+      "title": "Does Imitation Learning Preserve Temporal Robustness in Dexterous Manipulation? An Expert-Learner Comparison Across Task Execution Speeds",
+      "abstract": "Dexterous manipulation policies learned by imitation are typically evaluated for robustness to variation in scenes, objects, or instructions, but their performance across task execution speeds is less often examined. This leaves open how much temporal robustness a learner retains relative to the expert it imitates. We compare an expert and learner under the same task conditions, initial-condition draws, and speedup factors. We instantiate the evaluation in ParcelStow, a contact-rich task in which the robot acquires, reorients, and inserts a parcel. The demonstrations span the speedup range for the manipulation phases after parcel acquisition. A scripted expert and an Action Chunking with Transformers (ACT) policy trained from the expert's demonstrations both achieve 100 percent task success at nominal speed. Their success rates diverge within the demonstrated range: at its maximum, expert success is 84 percent and ACT success is 53 percent. Two ACT policies with different parameter initializations show similar degradation, decreasing by 34 and 48 percentage points from nominal speed to the maximum demonstrated speed, compared with 16 points for the expert. Stage-level analysis shows that 35 of ACT's 47 failures at the maximum demonstrated speed are insertion misalignments. Under the relative-motion handoff, every ACT acquisition retains the parcel through reorientation and transfer in free space, but only 64 percent complete the overall task, compared with 95 percent after expert acquisition. Across all evaluated policies and speeds, none of the 414 acquisitions without force closure completes the task. Equal nominal task success therefore does not imply preservation of expert performance across execution speeds. Code, data, and evaluation scripts are available at https://github.com/coenwerem/parcelstow.",
+      "authors": [
+        "Clinton Enwerem",
+        "John S. Baras",
+        "Calin Belta"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-09-01T15:57:26+00:00",
+      "link": "https://arxiv.org/pdf/2609.01453v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Action Chunking with Transformer is used as the imitation learner for continuous action sequences in contact-rich robot manipulation",
+      "llm_evidence_cn": "在接触丰富的机器人操作中使用动作分块Transformer作为模仿学习器，研究其连续动作序列预测的时间鲁棒性",
+      "llm_evidence": "在接触丰富的机器人操作中使用动作分块Transformer作为模仿学习器，研究其连续动作序列预测的时间鲁棒性",
+      "canonical_evidence": "在接触丰富的机器人操作中使用动作分块Transformer作为模仿学习器，研究其连续动作序列预测的时间鲁棒性",
+      "llm_tldr_en": "Examines temporal robustness of imitation-learned policies by comparing a scripted expert and an Action Chunking with Transformer learner across execution speeds in a contact-rich parcel manipulation task.",
+      "llm_tldr_cn": "灵巧操作的模仿学习策略常被检验对场景或目标变化的鲁棒性，却很少考察任务执行速度变化带来的时间鲁棒性。本文在接触丰富的ParcelStow任务中，让脚本专家与动作分块Transformer学习者在相同条件下跨不同加速倍数执行并对比，以测量学习器相对专家保留了多少时间鲁棒性。该工作将速度扰动纳入模仿学习评估维度，为接触丰富操作中动作分块类连续控制策略提供了时序可靠性评测视角。",
+      "llm_tldr": "灵巧操作的模仿学习策略常被检验对场景或目标变化的鲁棒性，却很少考察任务执行速度变化带来的时间鲁棒性。本文在接触丰富的ParcelStow任务中，让脚本专家与动作分块Transformer学习者在相同条件下跨不同加速倍数执行并对比，以测量学习器相对专家保留了多少时间鲁棒性。该工作将速度扰动纳入模仿学习评估维度，为接触丰富操作中动作分块类连续控制策略提供了时序可靠性评测视角。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01215v1",
+      "source": "arxiv",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "abstract": "Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \\pm 0.021$ (object), $0.867 \\pm 0.025$ (spatial), $0.915 \\pm 0.013$ (goal) and $0.754 \\pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.",
+      "authors": [
+        "Riyaaz Shaik",
+        "Chandru Venkataraman"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-01T13:19:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.01215v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "wake/sleep system for unsupervised library learning of typed motor programs by behavioral-equivalence clustering, central to reusable robot skill libraries",
+      "llm_evidence_cn": "用行为等价聚类在唤醒-睡眠框架中无监督学习类型化运动程序技能库，是可复用机器人技能库方向的核心工作",
+      "llm_evidence": "用行为等价聚类在唤醒-睡眠框架中无监督学习类型化运动程序技能库，是可复用机器人技能库方向的核心工作",
+      "canonical_evidence": "用行为等价聚类在唤醒-睡眠框架中无监督学习类型化运动程序技能库，是可复用机器人技能库方向的核心工作",
+      "llm_tldr_en": "Most VLA models emit raw action chunks without reusable abstractions, hurting long-horizon tasks and interpretability. REFACTOR-VLA uses a wake/sleep system that clusters motor-program fragments by behavioral equivalence computed from a learned world model, then emits typed motor programs for unsupervised library learning.",
+      "llm_tldr_cn": "现有视觉-语言-动作模型大多直接输出原始动作或短动作块，未将行为组织为可复用技能抽象，在长时程任务中性能下降且难解释。已有技能发现方法未能回答动作序列何时行为等价，或依赖与动力学不校准的语言模型判断。REFACTOR-VLA采用唤醒-睡眠机制：睡眠阶段用潜在世界模型回放的行为等价核聚类运动程序片段，唤醒阶段输出带类型的运动程序，以无监督方式学习技能库。这为长时程操作中技能复用与库结构学习提供了新范式。",
+      "llm_tldr": "现有视觉-语言-动作模型大多直接输出原始动作或短动作块，未将行为组织为可复用技能抽象，在长时程任务中性能下降且难解释。已有技能发现方法未能回答动作序列何时行为等价，或依赖与动力学不校准的语言模型判断。REFACTOR-VLA采用唤醒-睡眠机制：睡眠阶段用潜在世界模型回放的行为等价核聚类运动程序片段，唤醒阶段输出带类型的运动程序，以无监督方式学习技能库。这为长时程操作中技能复用与库结构学习提供了新范式。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.01518v1",
+      "source": "arxiv",
+      "title": "A System for Fast, Resilient, and Adaptable Loco-Manipulation Behaviors on Humanoid Robots",
+      "abstract": "There is tremendous value in humanoid robots taking on physically demanding, hazardous, and repetitive work in spaces built for humans. However, a useful robot for these spaces must coordinate locomotion, whole-body motion, perception, contact, and operator supervision. We present a robot-local, runtime-editable behavior authoring and runtime system that addresses these challenges. We argue that behavior architecture can be a primary enabler of capability, speed, and reliability, and that runtime editability enables fast behavior creation, adaptation, extension, and combination.   Our behavior architecture combines object-centric Affordance Templates, a tree structure that provides organization and logic, and runtime-editable perception through a behavior scene and primitive scene actions. Our operator interface remains continuously synchronized to the robot for runtime authoring, monitoring, and repair. Action primitives execute through a whole-body controller that supports concurrent body motions and walking.   Demonstrations of our system cover six task variants on Unitree H1-2 and Alex. We execute a push door traversal in 34 seconds and sort six balls by color in 45 seconds under human disturbance. Timed authoring sessions show scratch creation of new loco-manipulation behaviors and adaptation of existing ones in hours. Comparison against the literature finds our approach to be competitive with recent learned systems.",
+      "authors": [
+        "Duncan Calvert",
+        "Luigi Penco",
+        "Dexton Anderson",
+        "Tomasz Bialek",
+        "Arghya Chatterjee",
+        "Beomyeong Park",
+        "Robert Griffin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-01T16:47:00+00:00",
+      "link": "https://arxiv.org/pdf/2609.01518v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "runtime-editable behavior architecture combining object-centric affordance templates and tree-structured logic for composing and adapting loco-manipulation behaviors; relevant to skill policies integrated as behavior trees",
+      "llm_evidence_cn": "将对象为中心的Affordance模板与树形逻辑结构结合，支持运行时编辑与行为组合，与技能策略以状态机/行为树集成适配的操作需求一致",
+      "llm_evidence": "将对象为中心的Affordance模板与树形逻辑结构结合，支持运行时编辑与行为组合，与技能策略以状态机/行为树集成适配的操作需求一致",
+      "canonical_evidence": "将对象为中心的Affordance模板与树形逻辑结构结合，支持运行时编辑与行为组合，与技能策略以状态机/行为树集成适配的操作需求一致",
+      "llm_tldr_en": "Presents a runtime-editable behavior architecture for humanoid loco-manipulation that organizes object-centric Affordance Templates in a tree structure, enabling fast creation, adaptation and combination of resilient manipulation behaviors.",
+      "llm_tldr_cn": "人形机器人要完成实际作业，必须在统一架构内协调运动、感知、接触与监督，并让行为快速创建和调整；本文把行为架构本身视为能力与可靠性的关键来源，提出结合对象为中心Affordance模板与树形逻辑结构的可运行时可编辑系统。用户可在机器人本地编辑行为，从而快速建立、适配和组合移动操作行为，为技能策略以行为树/状态机方式集成并处理异常恢复提供了工程范式。",
+      "llm_tldr": "人形机器人要完成实际作业，必须在统一架构内协调运动、感知、接触与监督，并让行为快速创建和调整；本文把行为架构本身视为能力与可靠性的关键来源，提出结合对象为中心Affordance模板与树形逻辑结构的可运行时可编辑系统。用户可在机器人本地编辑行为，从而快速建立、适配和组合移动操作行为，为技能策略以行为树/状态机方式集成并处理异常恢复提供了工程范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.29768v1",
+      "source": "arxiv",
+      "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+      "abstract": "Deploying robot policies in the physical world requires satisfying two fundamental desiderata: reliability and smooth real-time execution. However, deploying state-of-the-art generalist models presents challenges on both fronts. Achieving the precision and robustness required for real-world deployment necessitates sample-efficient online reinforcement learning (RL) to adapt pretrained models. Meanwhile, the increasing scale of robot foundation models has led to higher inference latency. To satisfy real-time constraints under high latency, modern systems adopt asynchronous inference with action chunking, overlapping policy computation with chunk execution to hide latency and enable smooth control. Despite their complementary roles, integrating asynchronous execution with gradient-based online RL remains underexplored. We present SmoothRL, an online RL framework that fine-tunes a pretrained policy within an asynchronous inference loop. SmoothRL follows a value-gradient paradigm, directly updating policy parameters using gradients of the action-value function with respect to policy actions. To enable correct optimization under asynchronous execution, SmoothRL explicitly models the asynchronous inference process during training. Specifically, each generated action chunk is partitioned by frame index into three regions: a committed region, consisting of actions committed by the previous inference cycle; an execution region, containing newly generated actions executed by the robot; and a discarded region, containing actions superseded by the next inference cycle. Gradients are propagated only through the execution region, ensuring policy optimization aligns with the trajectory distribution induced by asynchronous execution. We evaluate SmoothRL on real-world robotic tasks requiring high precision, as well as highly dynamic tasks that necessitate asynchronous execution.",
+      "authors": [
+        "Guang Gao",
+        "Yuxuan Nong",
+        "Baifu Huang",
+        "Jianan Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-30T12:56:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.29768v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "asynchronous action-chunked execution overlapped with online RL for real-time robot deployment",
+      "llm_evidence_cn": "异步推理与动作分块执行重叠策略计算，面向机器人策略实时部署",
+      "llm_evidence": "异步推理与动作分块执行重叠策略计算，面向机器人策略实时部署",
+      "canonical_evidence": "异步推理与动作分块执行重叠策略计算，面向机器人策略实时部署",
+      "llm_tldr_en": "Robot policy deployment requires both robustness and smooth real-time control, but model inference latency is high. SmoothRL integrates sample-efficient online RL with asynchronous action-chunked execution, overlapping policy computation with chunk execution to hide latency and keep policies adapting during operation.",
+      "llm_tldr_cn": "真实环境中部署机器人策略既要可靠性又要平滑实时执行，而通用大模型的推理延迟高，通常需要异步推理与动作分块来隐藏延迟。SmoothRL关注在线强化学习如何与这种异步分块执行协同，提出在执行过程中持续更新策略的训练与推理集成方案，使策略计算与当前动作块执行重叠。实验结果表明，该方法能在保持平滑实时控制的同时完成策略适应，为高时延视觉-语言-动作等动作分块策略的真机部署提供可行的系统化支撑。",
+      "llm_tldr": "真实环境中部署机器人策略既要可靠性又要平滑实时执行，而通用大模型的推理延迟高，通常需要异步推理与动作分块来隐藏延迟。SmoothRL关注在线强化学习如何与这种异步分块执行协同，提出在执行过程中持续更新策略的训练与推理集成方案，使策略计算与当前动作块执行重叠。实验结果表明，该方法能在保持平滑实时控制的同时完成策略适应，为高时延视觉-语言-动作等动作分块策略的真机部署提供可行的系统化支撑。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.01596v1",
+      "source": "arxiv",
+      "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+      "abstract": "Real-world robotic assembly at sub-millimeter tolerances demands spatial precision, compliant interaction, and robustness to contact failures. We present Facet-0, a robotic foundation model that predicts and values the contact consequences of its actions. Facet-0 unifies multimodal representation learning and reinforcement learning (RL) post-training around a joint action-wrench proposal: a causal wrench history is aligned with vision-language semantics and kinematic state, and flow matching generates each action chunk together with the future wrist-wrench profile it is expected to induce. Deployment rollouts train a distributional Action-Wrench Critic to distinguish motions with similar task progress but different contact outcomes, while phase-aware rewards and contact-selective credit concentrate policy improvement on decisive interactions. To accommodate part-specific dynamics, a lightweight bounded actor reuses the frozen representation for on-robot adaptation; RL remains defined over executable Cartesian actions, while an auxiliary wrench head preserves predictive, non-commanded action-contact coupling. Trained on ManuFacet-1K, a 1,000-hour force-synchronized corpus spanning three embodiments and multiple manufacturing cells, the bounded task-adapted system reaches 82% mean success on five sub-millimeter computer-assembly tasks, compared with 15% for the strongest baseline, with 0.5 mm placement accuracy and 50 ms command latency.",
+      "authors": [
+        "Haoyuan Deng",
+        "Haichao Liu",
+        "Wenkai Guo",
+        "Yuan Ling",
+        "Zaijia Yang",
+        "Yuanjiang Xue",
+        "Haosheng Sun",
+        "Liangzi Wang",
+        "Ziwei Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-09-01T17:58:07+00:00",
+      "link": "https://arxiv.org/pdf/2609.01596v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Flow matching generates action chunks with future wrench profiles for real-world contact-rich assembly; phase-aware design",
+      "llm_evidence_cn": "流匹配同时生成动作块与未来腕力轮廓，面向真实接触丰富装配并具备阶段感知设计",
+      "llm_evidence": "流匹配同时生成动作块与未来腕力轮廓，面向真实接触丰富装配并具备阶段感知设计",
+      "canonical_evidence": "流匹配同时生成动作块与未来腕力轮廓，面向真实接触丰富装配并具备阶段感知设计",
+      "llm_tldr_en": "Facet-0 is a robotic foundation model for sub-millimeter contact-rich assembly that predicts action chunks together with expected wrist-wrench profiles, then trains a distributional action-wrench critic and uses phase-aware conditioning for robust contact outcomes.",
+      "llm_tldr_cn": "亚毫米级真实装配要求空间精度、柔顺交互和对接触失败的鲁棒性，Facet-0提出联合动作-力预测的机器人大模型。它将因果力历史与视觉语言语义、运动学状态对齐，用流匹配生成动作块及其诱发的未来腕力轮廓。部署时训练分布式动作-力评论器区分相似任务进展但不同接触结果的运动，并采用阶段感知机制。结果表明该方法在精密接触装配中能提升接触结果可靠性。",
+      "llm_tldr": "亚毫米级真实装配要求空间精度、柔顺交互和对接触失败的鲁棒性，Facet-0提出联合动作-力预测的机器人大模型。它将因果力历史与视觉语言语义、运动学状态对齐，用流匹配生成动作块及其诱发的未来腕力轮廓。部署时训练分布式动作-力评论器区分相似任务进展但不同接触结果的运动，并采用阶段感知机制。结果表明该方法在精密接触装配中能提升接触结果可靠性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.30760v1",
+      "source": "arxiv",
+      "title": "PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents",
+      "abstract": "Recent studies have shown that multimodal large language models (MLLMs) can serve as embodied agents, translating language instructions and visual observations into executable plans. However, building agents that can continually improve through interaction and rapidly adapt to their environments remains challenging. Summing up experience from past interaction trajectories provides a promising solution, but existing experience-based methods often rely on manually designed prompting workflows to extract and update skills. Such fixed procedures may struggle to learn updated skills from new and diverse experiences. We introduce PRACTICE, which trains a skill learner to discover and maintain a persistent skill library from past interaction trajectories while keeping the task executor frozen. Given the historical accumulated skills and incoming trajectories, the skill learner produces structured batch-edits that add, refine, merge, or remove skills, and then hierarchical consolidate all collected edits into a consistent updated skill library. We train the learner with a two-stage curriculum. First, it learns basic skill generation and library maintenance from oracle trajectories. Then, by contrasting successful and failed trajectories from heterogeneous executors on the same tasks, it learn to identify invalid action patterns and recovery strategies. Finally, we apply online skill-edit distillation to align the skill learner with a stronger teacher on its current edit distribution to further improves the policy. Experiments demonstrate that a compact skill learner delivers consistent performance improvements across successive library-update rounds for multiple frozen executors. On EB-ALFRED and EB-Habitat, PRACTICE further outperforms the strongest experience-based baselines. Project resources are publicly available at: https://baai-agents.github.io/PRACTICE",
+      "authors": [
+        "Ziyi Bai",
+        "Siqi Li",
+        "Tinglei Huang",
+        "Börje F. Karlsson"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-31T13:26:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.30760v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "trains a skill learner to discover and maintain a persistent skill library from past interaction trajectories, relevant to reusable skill library learning for long-horizon robot tasks",
+      "llm_evidence_cn": "训练技能学习器从过往交互轨迹中自动发现并维护持久技能库，契合长时程任务中可复用技能库学习的主题",
+      "llm_evidence": "训练技能学习器从过往交互轨迹中自动发现并维护持久技能库，契合长时程任务中可复用技能库学习的主题",
+      "canonical_evidence": "训练技能学习器从过往交互轨迹中自动发现并维护持久技能库，契合长时程任务中可复用技能库学习的主题",
+      "llm_tldr_en": "PRACTICE trains a skill learner to automatically discover and maintain a persistent skill library from past trajectories, replacing manually designed prompt workflows so embodied agents can self-evolve and quickly adapt.",
+      "llm_tldr_cn": "多模态大模型可以充当具身智能体，但基于经验的方法通常依赖人工设计提示词来提取和更新技能，难以从多样经验中持续学习。PRACTICE训练一个专门的技能学习器，从历史交互轨迹中自动发现并维护持久技能库，使智能体摆脱对人工提示工作流的依赖。通过让技能库在交互中持续更新，智能体能够在开放环境中自我进化和快速适应，为具身代理中可复用技能库的自动构建提供了数据驱动思路。",
+      "llm_tldr": "多模态大模型可以充当具身智能体，但基于经验的方法通常依赖人工设计提示词来提取和更新技能，难以从多样经验中持续学习。PRACTICE训练一个专门的技能学习器，从历史交互轨迹中自动发现并维护持久技能库，使智能体摆脱对人工提示工作流的依赖。通过让技能库在交互中持续更新，智能体能够在开放环境中自我进化和快速适应，为具身代理中可复用技能库的自动构建提供了数据驱动思路。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
