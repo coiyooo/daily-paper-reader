@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-02</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-03</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 8 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>4</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-02 23:01:06 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-03 23:14:39 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦视觉语言动作模型（VLA）前沿，8篇论文中4篇精读、4篇速读。最值得关注两篇满分精读：一篇用内部交叉注意力动态实现自适应动作分块，另一篇提出VLA代理的编排、训练与部署统一框架。建议普通读者先理解VLA的“何时停止”决策机制，再看框架如何简化实际部署。</p>
+<p>今日精读1篇、速读3篇，聚焦机器人操控与表征学习，其中《REFACTOR-VLA》获9.0高分，值得优先关注。核心方向是“类型化运动程序的非监督库学习”与“基于局部接触几何的示范泛化”，后者仅需一次演示即可操作多对象。建议普通读者从高分精读论文切入，再速读对比另两篇6分工作，重点理解如何用程序库和几何约束提升机器人长程任务泛化。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Knowing When to Stop: Adaptive Action Chunking via Internal Cross-Attention Dynamics in VLAs">Knowing When to Stop: Adaptive Action Chunking via Internal Cross-Attention Dynamics in VLAs</span></li><li><span class="dpr-home-dashboard-paper-title" title="EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents">EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs">REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs">REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A System for Fast, Resilient, and Adaptable Loco-Manipulation Behaviors on Humanoid Robots">A System for Fast, Resilient, and Adaptable Loco-Manipulation Behaviors on Humanoid Robots</span></li><li><span class="dpr-home-dashboard-paper-title" title="Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation">Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="SmoothRL: Online Reinforcement Learning During Asynchronous Execution">SmoothRL: Online Reinforcement Learning During Asynchronous Execution</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Three Steps at a Time: Learning Representations from Action Sequences in Contrastive RL">Three Steps at a Time: Learning Representations from Action Sequences in Contrastive RL</span></li><li><span class="dpr-home-dashboard-paper-title" title="One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry">One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry</span></li><li><span class="dpr-home-dashboard-paper-title" title="HINT: Human-Intent Inception for Long-Horizon Robot Manipulation">HINT: Human-Intent Inception for Long-Horizon Robot Manipulation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
 </section>
 </div>
 

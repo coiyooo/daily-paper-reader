@@ -1,0 +1,73 @@
+{
+  "date": "20260903",
+  "date_label": "",
+  "generated_at": "2026-09-03 23:14:39 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.01215v1",
+      "route": "202609/03/2609.01215v1-refactor-vla-unsupervised-library-learning-of-typed-motor-programs",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向VLA学习可复用类型化动作程序库，以行为等价性组织技能片段，处于参数化技能库主题中心",
+      "first_seen_at": "2026-09-03 23:14:39 UTC",
+      "updated_at": "2026-09-03 23:14:39 UTC"
+    },
+    {
+      "paper_id": "2608.30640v1",
+      "route": "202609/03/2608.30640v1-three-steps-at-a-time-learning-representations-from-action-sequences-in-contrastive-rl",
+      "title": "Three Steps at a Time: Learning Representations from Action Sequences in Contrastive RL",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在对比强化学习中使用动作块，为低层连续动作序列建模提供方法桥接，但不涉及机器人操作或Transformer",
+      "first_seen_at": "2026-09-03 23:14:39 UTC",
+      "updated_at": "2026-09-03 23:14:39 UTC"
+    },
+    {
+      "paper_id": "2609.01938v1",
+      "route": "202609/03/2609.01938v1-one-demonstration-many-objects-generalizing-manipulation-via-local-contact-geometry",
+      "title": "One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于接触局部几何从单个人类演示泛化到多个未见物体实例，不涉及新任务序列的组合",
+      "first_seen_at": "2026-09-03 23:14:39 UTC",
+      "updated_at": "2026-09-03 23:14:39 UTC"
+    },
+    {
+      "paper_id": "2609.02653v1",
+      "route": "202609/03/2609.02653v1-hint-human-intent-inception-for-long-horizon-robot-manipulation",
+      "title": "HINT: Human-Intent Inception for Long-Horizon Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "长时程操作中语义意图在操作模式转换处稀疏更新、连续控制依据手物关系，接近按阶段条件化的思路",
+      "first_seen_at": "2026-09-03 23:14:39 UTC",
+      "updated_at": "2026-09-03 23:14:39 UTC"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "label": "2026-09-03",
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T23:14:42",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202609/03/2609.01215v1-refactor-vla-unsupervised-library-learning-of-typed-motor-programs",
+      "section": "deep",
+      "title_en": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "authors": "Riyaaz Shaik, Chandru Venkataraman",
+      "date": "2026-09-01",
+      "pdf": "https://arxiv.org/pdf/2609.01215v1",
+      "score": "9.0",
+      "evidence": "面向VLA学习可复用类型化动作程序库，以行为等价性组织技能片段，处于参数化技能库主题中心",
+      "tldr": "现有VLA模型输出原始动作，缺乏可重用抽象，长程任务易退化且难解释；技能发现又难以基于动力学判定行为等价。REFACTOR-VLA采用觉醒-睡眠框架：睡眠阶段用世界模型滚动的行为等价核聚类动作片段，清醒阶段生成类型化lambda程序，经最小描述长度与返回保留门入库。在LIBERO上发现容量扩大反而有害，而附加InfoNCE损失使聚类NMI大幅提升，四套件均领先强基线，并产出首个真实任务库，验证了学习目标与方法的价值。",
+      "tags": "query:param-skills",
+      "abstract_en": "Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \\pm 0.021$ (object), $0.867 \\pm 0.025$ (spatial), $0.915 \\pm 0.013$ (goal) and $0.754 \\pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/03/2608.30640v1-three-steps-at-a-time-learning-representations-from-action-sequences-in-contrastive-rl",
+      "section": "quick",
+      "title_en": "Three Steps at a Time: Learning Representations from Action Sequences in Contrastive RL",
+      "authors": "Michal Korniak, Kamil Dybek, Benjamin Eysenbach, Marco Bagatella, Michał Bortkiewicz",
+      "date": "2026-08-31",
+      "pdf": "https://arxiv.org/pdf/2608.30640v1",
+      "score": "6.0",
+      "evidence": "在对比强化学习中使用动作块，为低层连续动作序列建模提供方法桥接，但不涉及机器人操作或Transformer",
+      "tldr": "强化学习中的自监督方法通常建模单步动作，但动作时间尺度是开放问题。本文将对比强化学习(CRL)扩展为在动作块上操作，在18个离线环境和11个在线环境中分别获得+31.7%和+93.1%的巨大提升。实验表明，动作块比单步动作携带更多关于目标的信息，改善了评论家表征，使算法更有效。",
+      "tags": "query:param-skills",
+      "abstract_en": "While self-supervised approaches to reinforcement learning have achieved strong results by learning representations of states and actions, a key open question is the time scale over which actions should be modeled. Departing from the standard formulation relying on single-step actions, we extend contrastive reinforcement learning (CRL), a prototypical self-supervised method, to operate over action chunks, and find that this results in large, pervasive gains across established offline and online benchmarks: +31.7% and +93.1% across 18 and 11 environments respectively. While action-chunking-driven gains are generally explained through the ability to model non-Markovian, temporally extended policies, and to propagate unbiased multi-step returns, interestingly, we find that these arguments only partially apply to CRL. Our empirical studies suggest that, in the context of CRL, an action chunk carries more information about the goal than a single action, measurably improving the critic's representations, and rendering the algorithm significantly more effective.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/03/2609.01938v1-one-demonstration-many-objects-generalizing-manipulation-via-local-contact-geometry",
+      "section": "quick",
+      "title_en": "One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry",
+      "authors": "Satvik Sharma, Samrat Sahoo, Huang Huang, Fei-Fei Li Jiajun Wu, Dorsa Sadigh, Jeannette Bohg",
+      "date": "2026-09-01",
+      "pdf": "https://arxiv.org/pdf/2609.01938v1",
+      "score": "6.0",
+      "evidence": "基于接触局部几何从单个人类演示泛化到多个未见物体实例，不涉及新任务序列的组合",
+      "tldr": "多指机器人手的灵巧操作数据难以规模化采集，现有基于人类演示的sim-to-real强化学习方法未明确激励精确接触，导致真实性能弱且对未见物体泛化差。本文提出DemoMimic，通过聚焦接触点局部几何并设计接触中心奖励，提升仿真到现实一致性。实验在16个物体、4个任务和两种机器人手上达71%平均成功率，且sim-to-real性能下降最小，实现单策略跨形状、尺度、质量与摩擦的泛化。",
+      "tags": "query:param-skills",
+      "abstract_en": "Dexterous manipulation with multi-fingered robot hands promises human-level dexterity, but collecting large-scale dexterous robot hand data remains difficult. Learning from human demonstrations has emerged as a scalable alternative to robot teleoperation, providing strong priors on object interaction and contact strategies. Recent sim-to-real RL methods incorporate such priors, but often (i) omit rewards that explicitly incentivize precise contact, yielding weak real-world performance, and/or (ii) generalize poorly to unseen object instances. We propose DemoMimic (Dexterous Motion Mimic), a policy that manipulates objects by focusing on their geometry local to the contact points. Its contact-centric rewards encourage precise contact and improve sim-to-real consistency, yielding a single real-world policy that transfers across objects of varying shape, scale, mass, and friction wherever local contact structure is preserved. Real-world ablations show that DemoMimic achieves 71% success across 16 objects, four tasks, and two robot-hand embodiments, with the smallest sim-to-real drop compared to baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/03/2609.02653v1-hint-human-intent-inception-for-long-horizon-robot-manipulation",
+      "section": "quick",
+      "title_en": "HINT: Human-Intent Inception for Long-Horizon Robot Manipulation",
+      "authors": "Mingyu Mei, Haojie Xu, Shihao Jin, Zibo Dai, Qihao Cheng, Zhengrui Lv, Hongjie Fang, Shirun Tang, Guang Chen, Xinyue Zhao, Huiliang Shen, Zaixing He",
+      "date": "2026-09-02",
+      "pdf": "https://arxiv.org/pdf/2609.02653v1",
+      "score": "6.0",
+      "evidence": "长时程操作中语义意图在操作模式转换处稀疏更新、连续控制依据手物关系，接近按阶段条件化的思路",
+      "tldr": "长时程机器人操作中，稠密视觉输入与稀疏语言指令易导致动作跟随视觉捷径而非人类意图。受人类操控原理启发，HINT仅在模式转换处触发语义推理以解析子任务和目标，再通过多视角锚定与视觉追踪维持意图承诺。它用图像级语义高亮和注意力先验注入两种界面将意图传达给基础动作策略，无需额外参数。实验表明该方法在多个长时程任务和分布外变体上持续提升两种基础策略的意图理解、任务进展和端到端成功率。",
+      "tags": "query:param-skills",
+      "abstract_en": "Humans can perform complex manipulations given a simple intent through an overall instruction, while continuously adapting to evolving visual observations. However, current vision-language action (VLA) models and other action policies struggle to realize this high-level intelligent behavior under dense, evolving visual inputs and sparse language guidance. Visual correlations can then dominate semantic intent, leading actions to follow visual shortcuts rather than human goals. We present HINT (Human-INTent INcepTion), an agentic framework inspired by the human manipulation principles: semantic intent changes sparsely at manipulation-pattern transitions, whereas continuous control primarily depends on the evolving object-hand relationship. HINT invokes semantic reasoning only at pattern transitions to resolve the current subtask and target, then maintains this commitment through multi-view grounding and visual tracking. We explore two visual interfaces-image-space semantic highlighting and attention-prior injection-to communicate the tracked intent to the action policy without introducing additional trainable parameters into the foundation action model. Experiments across three long-horizon tasks and out-of-distribution variants show that HINT substantially improves intent understanding, task progress, and end-to-end success across two foundation policies while preserving low-latency control.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
