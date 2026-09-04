@@ -1,0 +1,73 @@
+{
+  "date": "20260904",
+  "date_label": "",
+  "generated_at": "2026-09-04 22:50:24 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.01215v1",
+      "route": "202609/04/2609.01215v1-refactor-vla-unsupervised-library-learning-of-typed-motor-programs",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "在潜在世界模型中用行为等价核聚类运动程序，为视觉语言动作策略学习无监督可复用技能库",
+      "first_seen_at": "2026-09-04 22:50:24 UTC",
+      "updated_at": "2026-09-04 22:50:24 UTC"
+    },
+    {
+      "paper_id": "2609.03715v1",
+      "route": "202609/04/2609.03715v1-minerva-how-small-can-a-manipulation-policy-be-and-still-solve-libero",
+      "title": "MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对LIBERO操控任务的最小策略容量研究表明动作分块长度是决定性因素之一",
+      "first_seen_at": "2026-09-04 22:50:24 UTC",
+      "updated_at": "2026-09-04 22:50:24 UTC"
+    },
+    {
+      "paper_id": "2608.29061v1",
+      "route": "202609/04/2608.29061v1-pathbridger-subgoal-bridges-for-offline-goal-conditioned-reinforcement-learning",
+      "title": "PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "为长时程分层目标策略补充子目标桥，改进高层子目标与低层策略接口",
+      "first_seen_at": "2026-09-04 22:50:24 UTC",
+      "updated_at": "2026-09-04 22:50:24 UTC"
+    },
+    {
+      "paper_id": "2608.30880v1",
+      "route": "202609/04/2608.30880v1-zeva-in-context-causal-learning-for-generalizable-embodied-manipulation",
+      "title": "Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过在线因果交互记忆提升具身操作泛化，可在真实部署中适应新物理条件",
+      "first_seen_at": "2026-09-04 22:50:24 UTC",
+      "updated_at": "2026-09-04 22:50:24 UTC"
+    }
+  ]
+}

@@ -41,7 +41,7 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-03</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-04</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 4 篇</strong>
@@ -51,7 +51,7 @@
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-03 23:14:39 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-04 22:50:24 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读1篇、速读3篇，聚焦机器人操控与表征学习，其中《REFACTOR-VLA》获9.0高分，值得优先关注。核心方向是“类型化运动程序的非监督库学习”与“基于局部接触几何的示范泛化”，后者仅需一次演示即可操作多对象。建议普通读者从高分精读论文切入，再速读对比另两篇6分工作，重点理解如何用程序库和几何约束提升机器人长程任务泛化。</p>
+<p>今日精读1篇、速读3篇，聚焦机器人操纵策略与离线强化学习。</p>
+<p>最值得关注《REFACTOR-VLA》，以9.0分提出机器人程序库无监督学习；其次《MINERVA》探索极小型化操纵策略。</p>
+<p>建议先精读高分综述与小型化对照实验，再拓展子目标桥接及具身因果学习两篇。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -87,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Three Steps at a Time: Learning Representations from Action Sequences in Contrastive RL">Three Steps at a Time: Learning Representations from Action Sequences in Contrastive RL</span></li><li><span class="dpr-home-dashboard-paper-title" title="One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry">One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry</span></li><li><span class="dpr-home-dashboard-paper-title" title="HINT: Human-Intent Inception for Long-Horizon Robot Manipulation">HINT: Human-Intent Inception for Long-Horizon Robot Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?">MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?</span></li><li><span class="dpr-home-dashboard-paper-title" title="PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning">PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation">Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
 </section>

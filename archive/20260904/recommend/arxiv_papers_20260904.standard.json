@@ -1,0 +1,175 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-04T22:47:50.544151+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2609.01215v1",
+      "source": "arxiv",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "abstract": "Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \\pm 0.021$ (object), $0.867 \\pm 0.025$ (spatial), $0.915 \\pm 0.013$ (goal) and $0.754 \\pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.",
+      "authors": [
+        "Riyaaz Shaik",
+        "Chandru Venkataraman"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-01T13:19:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.01215v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Unsupervised skill library learning for VLA policies by clustering motor programs under a behavioral-equivalence kernel in a latent world model",
+      "llm_evidence_cn": "在潜在世界模型中用行为等价核聚类运动程序，为视觉语言动作策略学习无监督可复用技能库",
+      "llm_evidence": "在潜在世界模型中用行为等价核聚类运动程序，为视觉语言动作策略学习无监督可复用技能库",
+      "canonical_evidence": "在潜在世界模型中用行为等价核聚类运动程序，为视觉语言动作策略学习无监督可复用技能库",
+      "llm_tldr_en": "REFACTOR-VLA is a wake/sleep system that learns reusable typed motor programs for vision-language-action policies: it clusters motor-program fragments with a behavioral-equivalence kernel evaluated by latent world model rollouts, then emits skill programs for long-horizon control.",
+      "llm_tldr_cn": "现有VLA模型多直接输出原始电机命令或短动作块，缺少可复用抽象，长程任务表现退化且难以解释；已有技能发现方法未真正解决两个动作序列何时行为等价的问题。REFACTOR-VLA提出醒/睡两阶段系统：睡阶段用学习到的潜在世界模型M_phi运行回放，在行为等价核下聚类运动程序片段；醒阶段让策略输出类型化运动程序。该方法把技能库学习建立在与机器人动力学校准的行为等价性基础上，面向长程任务形成可解释且可复用的技能抽象。",
+      "llm_tldr": "现有VLA模型多直接输出原始电机命令或短动作块，缺少可复用抽象，长程任务表现退化且难以解释；已有技能发现方法未真正解决两个动作序列何时行为等价的问题。REFACTOR-VLA提出醒/睡两阶段系统：睡阶段用学习到的潜在世界模型M_phi运行回放，在行为等价核下聚类运动程序片段；醒阶段让策略输出类型化运动程序。该方法把技能库学习建立在与机器人动力学校准的行为等价性基础上，面向长程任务形成可解释且可复用的技能抽象。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.03715v1",
+      "source": "arxiv",
+      "title": "MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?",
+      "abstract": "Vision-language-action (VLA) models with billions of parameters now dominate the LIBERO manipulation benchmark, but the model capacity actually required by the benchmark remains unclear. We introduce MINERVA (MINimal Efficient Robotic Vision-Action policy), a family of deliberately compact visuomotor policies designed to measure this task-specific capacity floor. A 0.54M-parameter policy achieves 95.1% average success over 2,000 rollouts on the four standard LIBERO suites, only 2.4 points below the reported LeRobot $π_{0.5}$ result despite using 7,700$\\times$ fewer parameters. Performance saturates near 1M parameters and collapses below 0.25M. Across broad architectural, training, and inference sweeps, only action-chunk length and vision capacity consistently exceed a $\\pm$1-point training-seed band. Flow matching provides no detectable advantage over direct L1 regression across three seeds, while regression is up to 3.8$\\times$ faster on GPU. A task-ID permutation probe shows that standard LIBERO instruction conditioning primarily selects among memorized tasks: changing only the task-ID mapping reduces success to near chance. The same recipe achieves 94.6% success across 89 LIBERO-90 tasks, while LIBERO-Plus perturbations reduce performance to 46--56%, with near-zero robustness to photometric shifts. The 0.54M policy replans every control step in 5--9 ms per chunk on a laptop CPU, 113$\\times$ faster than SmolVLA and 1,400$\\times$ faster than $π_{0.5}$, without a GPU. These results establish a first empirical estimate of LIBERO's task-specific capacity floor and motivate capacity-aware design and distillation for deployment-efficient robot policies.",
+      "authors": [
+        "Kohei Sendai",
+        "Tatsuya Matsushima",
+        "Yusuke Iwasawa"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-03T11:51:10+00:00",
+      "link": "https://arxiv.org/pdf/2609.03715v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Compact visuomotor policy for LIBERO manipulation; finds only action-chunk length and vision capacity dominate performance",
+      "llm_evidence_cn": "针对LIBERO操控任务的最小策略容量研究表明动作分块长度是决定性因素之一",
+      "llm_evidence": "针对LIBERO操控任务的最小策略容量研究表明动作分块长度是决定性因素之一",
+      "canonical_evidence": "针对LIBERO操控任务的最小策略容量研究表明动作分块长度是决定性因素之一",
+      "llm_tldr_en": "MINERVA shows a 0.54M-parameter visuomotor policy reaches 95.1% LIBERO success over 2,000 rollouts, within 2.4 points of a 7,700x larger LeRobot policy, and that action-chunk length most strongly determines compact policy performance.",
+      "llm_tldr_cn": "针对超大视觉语言动作模型在LIBERO操控基准上容量过剩且推理代价高的问题，提出系列极紧凑的视觉运动策略MINERVA以度量任务所需容量下限。0.54M参数策略在四个LIBERO套件上经2000次rollout平均成功率达95.1%，相比参数量大7700倍的LeRobot π0.5仅低2.4点；性能在约1M参数饱和、低于0.25M时崩溃。大规模扫描显示仅动作分块长度和视觉容量持续主导效果，为低延迟连续动作预测策略设计提供了实证依据。",
+      "llm_tldr": "针对超大视觉语言动作模型在LIBERO操控基准上容量过剩且推理代价高的问题，提出系列极紧凑的视觉运动策略MINERVA以度量任务所需容量下限。0.54M参数策略在四个LIBERO套件上经2000次rollout平均成功率达95.1%，相比参数量大7700倍的LeRobot π0.5仅低2.4点；性能在约1M参数饱和、低于0.25M时崩溃。大规模扫描显示仅动作分块长度和视觉容量持续主导效果，为低延迟连续动作预测策略设计提供了实证依据。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.29061v1",
+      "source": "arxiv",
+      "title": "PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning",
+      "abstract": "Offline goal-conditioned reinforcement learning (GCRL) aims to learn policies for reaching diverse goals entirely from fixed trajectory data. Long-horizon offline GCRL remains challenging because sparse goal-reaching signals must be propagated over many steps, while execution errors cannot be corrected through additional environment interaction. Existing methods address these challenges by improving long-range value estimation or reducing the effective decision horizon through subgoals, options, and action chunks. In several hierarchical methods, however, a selected subgoal specifies where to go, while the intervening state-space path remains implicit in an endpoint-conditioned low-level policy. To address this interface, we propose PathBridger, a hierarchical offline GCRL method that explicitly connects subgoal selection to short-horizon execution. PathBridger constructs a state-space bridge toward the selected intermediate endpoint and decodes it into a short executable action chunk using an inverse dynamics model. Experiments across the evaluated OGBench tasks demonstrate strong aggregate performance, with particularly large gains on the multi-object Cube manipulation tasks. Code: https://github.com/SChoish/PathBridger",
+      "authors": [
+        "Soohyun Choi",
+        "Seonvin Cho",
+        "Songnam Hong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-08-29T05:33:01+00:00",
+      "link": "https://arxiv.org/pdf/2608.29061v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "improves hierarchical long-horizon offline goal-conditioned RL by subgoal bridges, addressing subgoal-to-low-level-policy interfaces",
+      "llm_evidence_cn": "为长时程分层目标策略补充子目标桥，改进高层子目标与低层策略接口",
+      "llm_evidence": "为长时程分层目标策略补充子目标桥，改进高层子目标与低层策略接口",
+      "canonical_evidence": "为长时程分层目标策略补充子目标桥，改进高层子目标与低层策略接口",
+      "llm_tldr_en": "PathBridger tackles long-horizon offline goal-conditioned RL by explicitly learning bridges between subgoals, so endpoint-conditioned low-level policies no longer leave the intervening path implicit; the subgoal-bridge interface is directly transferable to reusable hierarchical skill policies.",
+      "llm_tldr_cn": "离线目标条件强化学习难以处理跨多步的长时程目标，稀疏奖励难以传播且无法通过在线交互纠错。已有方法利用子目标、选项和动作分块压缩决策视界，但高层选择子目标后，低层策略只以终点为条件，中间路径隐式不清。PathBridger学习连接相邻子目标的桥，使子目标之间的状态空间路径被显式建模，提升长时程离线GCRL目标达成率，对技能库的高层-底层接口设计有直接借鉴。",
+      "llm_tldr": "离线目标条件强化学习难以处理跨多步的长时程目标，稀疏奖励难以传播且无法通过在线交互纠错。已有方法利用子目标、选项和动作分块压缩决策视界，但高层选择子目标后，低层策略只以终点为条件，中间路径隐式不清。PathBridger学习连接相邻子目标的桥，使子目标之间的状态空间路径被显式建模，提升长时程离线GCRL目标达成率，对技能库的高层-底层接口设计有直接借鉴。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.30880v1",
+      "source": "arxiv",
+      "title": "Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation",
+      "abstract": "Generalizable embodied manipulation remains difficult to achieve through pretraining alone, due to unseen physical conditions in the real world. We argue that robots need to learn from their own physical interactions on the fly during real-world deployment and use this knowledge to inform subsequent actions. We present Zeva, the first framework that enables in-context learning from a robot's own physical interaction experience while keeping the policy model frozen. Zeva employs a Causal Interaction Extractor to encode an executed action and its induced state change into a causal interaction signal, which is stored in a dual-timescale causal memory. For subsequent actions, relevant causal interaction signals are retrieved from memory and injected into the frozen policy model as context. Experiments in simulation and real-world manipulation demonstrate that Zeva achieves the best performance among the compared frontier VLAs and WAMs and, more importantly, enables self-evolution during deployment without gradient updates. Its success rate continues to improve as the robot accumulates interaction experience. Furthermore, the acquired interaction experience can generalize across tasks.",
+      "authors": [
+        "Fu Chen",
+        "Xin Ding",
+        "Bingjia Huang",
+        "Xiangyu Li",
+        "Mingju Wang",
+        "Jiawei He",
+        "Kun Li",
+        "Wei Sun",
+        "Yunxin Liu",
+        "Hao Wu",
+        "Ting Cao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-31T14:39:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.30880v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "in-context causal learning and dual-timescale causal memory for generalizable embodied manipulation in unseen physical conditions",
+      "llm_evidence_cn": "通过在线因果交互记忆提升具身操作泛化，可在真实部署中适应新物理条件",
+      "llm_evidence": "通过在线因果交互记忆提升具身操作泛化，可在真实部署中适应新物理条件",
+      "canonical_evidence": "通过在线因果交互记忆提升具身操作泛化，可在真实部署中适应新物理条件",
+      "llm_tldr_en": "Zeva lets a frozen manipulation policy learn from its own physical interactions by storing causal action-effect signals in dual-timescale memory and injecting relevant retrieved signals into future actions, improving generalization to novel real-world physical conditions.",
+      "llm_tldr_cn": "具身操作很难仅靠预训练应对真实世界中未见的物理条件，需要机器人边部署边从自身交互中学习。Zeva提出在策略模型冻结情况下进行上下文因果学习的框架，用因果交互提取器编码已执行动作及其导致的状态变化，写入双时间尺度因果记忆，后续动作时检索相关经验并注入冻结策略。结果表明机器人可在部署中适应新的物理条件，为技能的在线经验复用与泛化提供了新机制。",
+      "llm_tldr": "具身操作很难仅靠预训练应对真实世界中未见的物理条件，需要机器人边部署边从自身交互中学习。Zeva提出在策略模型冻结情况下进行上下文因果学习的框架，用因果交互提取器编码已执行动作及其导致的状态变化，写入双时间尺度因果记忆，后续动作时检索相关经验并注入冻结策略。结果表明机器人可在部署中适应新的物理条件，为技能的在线经验复用与泛化提供了新机制。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
