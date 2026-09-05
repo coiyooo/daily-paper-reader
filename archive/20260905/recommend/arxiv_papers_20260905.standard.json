@@ -1,0 +1,204 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-05T22:20:09.777735+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2609.01215v1",
+      "source": "arxiv",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "abstract": "Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \\pm 0.021$ (object), $0.867 \\pm 0.025$ (spatial), $0.915 \\pm 0.013$ (goal) and $0.754 \\pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.",
+      "authors": [
+        "Riyaaz Shaik",
+        "Chandru Venkataraman"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-01T13:19:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.01215v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Unsupervised learning of reusable typed motor program libraries from motor fragments, enabling long-horizon VLA policies through reusable abstractions.",
+      "llm_evidence_cn": "以无监督方式从动作片段学习可复用的类型化动作程序技能库，用结构化复用支撑长时程VLA策略",
+      "llm_evidence": "以无监督方式从动作片段学习可复用的类型化动作程序技能库，用结构化复用支撑长时程VLA策略",
+      "canonical_evidence": "以无监督方式从动作片段学习可复用的类型化动作程序技能库，用结构化复用支撑长时程VLA策略",
+      "llm_tldr_en": "REFACTOR-VLA learns reusable skill libraries by clustering motor-program fragments under a behavioral-equivalence kernel from a learned world model and emitting typed motor programs, moving VLA policy control beyond monolithic action prediction.",
+      "llm_tldr_cn": "主流VLA模型往往把行为表示为原始动作或短动作块，缺少可复用抽象，在长时程任务上性能退化且难以解释。REFACTOR-VLA提出睡眠-清醒两阶段技能库学习方法，睡眠阶段利用行为等价核与潜在世界模型聚类动作程序片段，清醒阶段生成类型化动作程序。这种组织使VLA策略能够基于可复用技能而非直接原始动作进行决策，为长时程操作与技能组合泛化提供了新的表示框架。",
+      "llm_tldr": "主流VLA模型往往把行为表示为原始动作或短动作块，缺少可复用抽象，在长时程任务上性能退化且难以解释。REFACTOR-VLA提出睡眠-清醒两阶段技能库学习方法，睡眠阶段利用行为等价核与潜在世界模型聚类动作程序片段，清醒阶段生成类型化动作程序。这种组织使VLA策略能够基于可复用技能而非直接原始动作进行决策，为长时程操作与技能组合泛化提供了新的表示框架。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.27797v1",
+      "source": "arxiv",
+      "title": "CEDAR: Automata as Verifiable Interfaces for Language-Guided Embodied Action",
+      "abstract": "Natural-language tasking of embodied agents is rarely just goal specification: users also impose constraints that must persist while the world changes. Code-generating LLM agents can produce plausible behaviors for such instructions, but their free-form programs provide no stable object to verify, compose with new constraints, or repair from a failing trace. We present CEDAR, a counterexample-guided framework that grounds instructions as regular languages over environment event traces. CEDAR uses a language model for semantic judgments and execution traces for correction, then represents both skills and specifications as deterministic finite automata. This turns constraints into executable finite-state objects: a learned skill can be intersected with a learned sleep at night or stay in this biome specification, yielding a controller that enforces the learned constraint by construction rather than by repeated prompting. In Minecraft, with the same simulator/API observations available to a program-generating baseline, CEDAR maintains temporal and spatial constraints that the baseline fails to preserve and amortizes reuse of learned skills, reducing cumulative LLM queries. These results suggest that regular languages offer a practical verification layer between natural-language instructions and embodied-agent policies.",
+      "authors": [
+        "Lekai Chen",
+        "Alvaro Velasquez",
+        "Ashutosh Trivedi"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.FL"
+      ],
+      "published": "2026-08-28T00:25:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.27797v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Represents skills and specifications as deterministic finite automata, enabling learnable skill integration with state-machine constraints, verification, and repair.",
+      "llm_evidence_cn": "将技能与规范表示为确定性自动机，使技能可与状态机式约束求交、验证与修复。",
+      "llm_evidence": "将技能与规范表示为确定性自动机，使技能可与状态机式约束求交、验证与修复。",
+      "canonical_evidence": "将技能与规范表示为确定性自动机，使技能可与状态机式约束求交、验证与修复。",
+      "llm_tldr_en": "CEDAR translates language-instruction constraints and learned skills into deterministic finite automata, enabling counterexample-guided verification, intersection with new constraints, and repair from failure traces for embodied agents.",
+      "llm_tldr_cn": "语言引导的具身任务常需要持续满足的约束，而代码型智能体程序难以验证、组合与修复。CEDAR利用语言模型做语义判断并结合轨迹修正，将技能和约束都转成确定性有限自动机。这样约束可以被执行和追踪，技能可与新约束求交、补全，并可依据失败反例修复。该方法为技能与状态机式高层控制集成提供了形式化且可验证的接口。",
+      "llm_tldr": "语言引导的具身任务常需要持续满足的约束，而代码型智能体程序难以验证、组合与修复。CEDAR利用语言模型做语义判断并结合轨迹修正，将技能和约束都转成确定性有限自动机。这样约束可以被执行和追踪，技能可与新约束求交、补全，并可依据失败反例修复。该方法为技能与状态机式高层控制集成提供了形式化且可验证的接口。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.03392v1",
+      "source": "arxiv",
+      "title": "Programming and execution of skill-based human-robot-crane collaborative tasks",
+      "abstract": "Highly varying production sets increasing challenges for robotic manufacturing and indoor logistics. New capabilities for agility, flexibility, and robustness are needed. Robot skills, integrating motions, tool operations, and sensor perceptions consistently provide an execution mechanism for a versatile set of tasks with varying parameters. In this paper, easy-to-use CAD-model based programming and execution system for parametrized skills and skill monitors is showcased. The execution control structure is dynamic and parametrized, based on a modified Behavior Tree, where only event based communication is used. A human-robot-crane collaborative skill is shown as a test example, where a human instructs an overhead crane and a manipulator in inserting a heavy object supported by the crane, and guided by the manipulator, into the goal.",
+      "authors": [
+        "Taneli Lohi",
+        "Markku Suomalainen",
+        "Roope Mellanen",
+        "Tapio Heikkilä"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-03T05:48:28+00:00",
+      "link": "https://arxiv.org/pdf/2609.03392v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "CAD-based programming and execution of parametrized robot skills with skill monitors on a modified Behavior Tree for human-robot-crane cooperation",
+      "llm_evidence_cn": "基于CAD的编程执行系统将机器人动作、工具操作和感知封装为可参数化技能，并通过技能监视器支持协作",
+      "llm_evidence": "基于CAD的编程执行系统将机器人动作、工具操作和感知封装为可参数化技能，并通过技能监视器支持协作",
+      "canonical_evidence": "基于CAD的编程执行系统将机器人动作、工具操作和感知封装为可参数化技能，并通过技能监视器支持协作",
+      "llm_tldr_en": "A robot skill programming and execution system that uses parametrized skills and skill monitors over an event-driven modified Behavior Tree, enabling flexible human-robot-crane collaborative manipulation.",
+      "llm_tldr_cn": "高变化生产任务要求制造与物流机器人具备灵活、鲁棒的技能执行机制。该文将运动、工具操作与传感器感知统一为可参数化技能，并配合技能监视器实现动态执行。系统使用只基于事件通信的改进行为树作为执行控制结构，参数随任务动态调整。通过人-机器人-起重机协作任务验证了该参数化技能编程方法的可用性，与本检索主题中参数化操作技能的方向一致。",
+      "llm_tldr": "高变化生产任务要求制造与物流机器人具备灵活、鲁棒的技能执行机制。该文将运动、工具操作与传感器感知统一为可参数化技能，并配合技能监视器实现动态执行。系统使用只基于事件通信的改进行为树作为执行控制结构，参数随任务动态调整。通过人-机器人-起重机协作任务验证了该参数化技能编程方法的可用性，与本检索主题中参数化操作技能的方向一致。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.29937v1",
+      "source": "arxiv",
+      "title": "AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies",
+      "abstract": "Latent world-action models avoid rendering future pixels by predicting an action-relevant visual subgoal in feature space. LaWAM established this formulation, but its original presentation left the world model, multimodal backbone, and deployment checkpoint tightly coupled. We introduce AcrossWAM1.0, a modularization and scaling study of this latent world-action stack. Rather than presenting latent subgoals as a new algorithm, we make the module boundary explicit: a policy adapter produces latent-action and action-generation contexts; a retained latent world decoder grounds the predicted transition in the current scene;and a flow-matching expert generates continuous action chunks. We further separate training-only teachers from the inference graph and provide a verifiable deployment export. On 2,000 paired LIBERO episodes, replacing a Qwen3-VL-2B backbone with Qwen3.5-0.8B yields 97.45% success versus 98.00% for the 2B model (a-0.55percentage-point difference; exact McNemarp=0.266). This does not prove equivalence, but it meets a prespecified two-point retention criterion. The compact, inference-reachable checkpoint contains 1,472.6M unique parameters, 42.4% fewer than the original 2B policy, while all retained tensors are bitwise identical to the source checkpoint. Cross-family execution is additionally checked with a MiniCPM-V adapter smoke test; closed-loop cross-family transfer remains an open evaluation. AcrossWAM1.0 therefore contributes an auditable software and evaluation boundary for compact latent world-action policies, distinct from LaWAM's original latent-subgoal contribution.",
+      "authors": [
+        "Yafei Zhang",
+        "Nan Wu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-30T18:09:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.29937v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Continuous action chunk generation via a flow-matching expert in a modular latent world-action robot policy",
+      "llm_evidence_cn": "模块化潜世界-动作策略由流匹配专家生成连续动作块",
+      "llm_evidence": "模块化潜世界-动作策略由流匹配专家生成连续动作块",
+      "canonical_evidence": "模块化潜世界-动作策略由流匹配专家生成连续动作块",
+      "llm_tldr_en": "AcrossWAM1.0 modularizes the latent world-action stack so the policy adapter, latent world decoder, and flow-matching expert become explicit; the flow-matching expert generates continuous action chunks, separating training-only teachers from the inference graph and reducing coupling among world model, backbone, and deployment.",
+      "llm_tldr_cn": "潜在世界-动作模型通过预测特征空间中的动作相关视觉子目标避免渲染未来像素，但原LaWAM将世界模型、多模态骨干与部署检查点紧耦合。AcrossWAM1.0通过策略适配器、潜在世界解码器与流匹配专家显式划分模块边界，并由流匹配专家生成连续动作块。模块化与缩放研究降低了各部分耦合、提高了扩展性与部署灵活性，为基于连续动作块预测的紧凑机器人策略提供了可复用的设计结构。",
+      "llm_tldr": "潜在世界-动作模型通过预测特征空间中的动作相关视觉子目标避免渲染未来像素，但原LaWAM将世界模型、多模态骨干与部署检查点紧耦合。AcrossWAM1.0通过策略适配器、潜在世界解码器与流匹配专家显式划分模块边界，并由流匹配专家生成连续动作块。模块化与缩放研究降低了各部分耦合、提高了扩展性与部署灵活性，为基于连续动作块预测的紧凑机器人策略提供了可复用的设计结构。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.30760v1",
+      "source": "arxiv",
+      "title": "PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents",
+      "abstract": "Recent studies have shown that multimodal large language models (MLLMs) can serve as embodied agents, translating language instructions and visual observations into executable plans. However, building agents that can continually improve through interaction and rapidly adapt to their environments remains challenging. Summing up experience from past interaction trajectories provides a promising solution, but existing experience-based methods often rely on manually designed prompting workflows to extract and update skills. Such fixed procedures may struggle to learn updated skills from new and diverse experiences. We introduce PRACTICE, which trains a skill learner to discover and maintain a persistent skill library from past interaction trajectories while keeping the task executor frozen. Given the historical accumulated skills and incoming trajectories, the skill learner produces structured batch-edits that add, refine, merge, or remove skills, and then hierarchical consolidate all collected edits into a consistent updated skill library. We train the learner with a two-stage curriculum. First, it learns basic skill generation and library maintenance from oracle trajectories. Then, by contrasting successful and failed trajectories from heterogeneous executors on the same tasks, it learn to identify invalid action patterns and recovery strategies. Finally, we apply online skill-edit distillation to align the skill learner with a stronger teacher on its current edit distribution to further improves the policy. Experiments demonstrate that a compact skill learner delivers consistent performance improvements across successive library-update rounds for multiple frozen executors. On EB-ALFRED and EB-Habitat, PRACTICE further outperforms the strongest experience-based baselines. Project resources are publicly available at: https://baai-agents.github.io/PRACTICE",
+      "authors": [
+        "Ziyi Bai",
+        "Siqi Li",
+        "Tinglei Huang",
+        "Börje F. Karlsson"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-31T13:26:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.30760v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Discovers and maintains a persistent reusable skill library from interaction trajectories, relevant to long-horizon skill library learning",
+      "llm_evidence_cn": "从交互轨迹中发现并维护持久可复用技能库，与长期任务技能库学习相关，但缺少低层策略和真实操作",
+      "llm_evidence": "从交互轨迹中发现并维护持久可复用技能库，与长期任务技能库学习相关，但缺少低层策略和真实操作",
+      "canonical_evidence": "从交互轨迹中发现并维护持久可复用技能库，与长期任务技能库学习相关，但缺少低层策略和真实操作",
+      "llm_tldr_en": "PRACTICE trains a skill learner to discover and maintain a persistent skill library from past interaction trajectories, avoiding fixed manual prompting so embodied agents continually improve and adapt.",
+      "llm_tldr_cn": "针对多模态大模型具身智能体难以持续从经验中改进的问题，PRACTICE不再依赖手工设计的提示工作流来提取和更新技能，而是训练一个专门的技能学习器，从过去交互轨迹中发现并维护持久技能库。这使得智能体能够应对新的多样经验并持续进化，更快适应环境。该方法体现来自动积累可复用技能的思想，但与真实机器人操作相比停留在高层具身决策层面，没有涉及动作分块和连续参数化技能原语，因此只能作为可复用技能库方向的借鉴。",
+      "llm_tldr": "针对多模态大模型具身智能体难以持续从经验中改进的问题，PRACTICE不再依赖手工设计的提示工作流来提取和更新技能，而是训练一个专门的技能学习器，从过去交互轨迹中发现并维护持久技能库。这使得智能体能够应对新的多样经验并持续进化，更快适应环境。该方法体现来自动积累可复用技能的思想，但与真实机器人操作相比停留在高层具身决策层面，没有涉及动作分块和连续参数化技能原语，因此只能作为可复用技能库方向的借鉴。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
