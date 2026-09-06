@@ -1,0 +1,41 @@
+{
+  "date": "20260906",
+  "date_label": "",
+  "generated_at": "2026-09-06 22:05:12 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.01215v1",
+      "route": "202609/06/2609.01215v1-refactor-vla-unsupervised-library-learning-of-typed-motor-programs",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "从单体VLA策略中构建可复用类型化动作程序库，解决长时程任务分解问题",
+      "first_seen_at": "2026-09-06 22:05:12 UTC",
+      "updated_at": "2026-09-06 22:05:12 UTC"
+    },
+    {
+      "paper_id": "2608.29896v1",
+      "route": "202609/06/2608.29896v1-emerge-policy-a-robot-mind-emerges-beyond-a-single-policy",
+      "title": "EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "任务级编排、执行监控与功能化技能接口组合异构后端策略",
+      "first_seen_at": "2026-09-06 22:05:12 UTC",
+      "updated_at": "2026-09-06 22:05:12 UTC"
+    }
+  ]
+}

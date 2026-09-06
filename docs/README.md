@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-05</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-06</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>1</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-05 22:22:27 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-06 22:05:12 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日推荐聚焦具身智能，精读高分论文直指机器人策略的模块化与可验证控制新思路。</p>
-<p>最值得看：REFACTOR-VLA（9.0）让机器人从无监督中学习类型化动作程序，CEDAR（8.0）用自动机为语言引导动作提供接口验证。</p>
-<p>建议先读这两篇，把握“动作库预训练”和“行为接口验证”两大方向，再看速读文章补全应用视角。</p>
+<p>今日共精读1篇、速读1篇，聚焦机器人学习与策略泛化。</p>
+<p>最值得关注的是精读论文《REFACTOR-VLA》（9.0分），它提出无监督库学习“类型化电机程序”，或可提升技能复用性；速读论文《EMERGE-Policy》（6.0分）则探讨超越单一策略的机器人思维架构。</p>
+<p>建议优先通读《REFACTOR-VLA》的方法与实验，把握其无监督学习思路；有余力再浏览速读论文作对比。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs">REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs</span></li><li><span class="dpr-home-dashboard-paper-title" title="CEDAR: Automata as Verifiable Interfaces for Language-Guided Embodied Action">CEDAR: Automata as Verifiable Interfaces for Language-Guided Embodied Action</span></li><li><span class="dpr-home-dashboard-paper-title" title="Programming and execution of skill-based human-robot-crane collaborative tasks">Programming and execution of skill-based human-robot-crane collaborative tasks</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs">REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies">AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents">PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy">EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 </div>
 

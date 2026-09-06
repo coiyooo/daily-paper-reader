@@ -1,0 +1,110 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-06T22:02:23.725055+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2609.01215v1",
+      "source": "arxiv",
+      "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+      "abstract": "Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \\pm 0.021$ (object), $0.867 \\pm 0.025$ (spatial), $0.915 \\pm 0.013$ (goal) and $0.754 \\pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.",
+      "authors": [
+        "Riyaaz Shaik",
+        "Chandru Venkataraman"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-01T13:19:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.01215v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "constructs a reusable library of typed motor programs from monolithic VLA policies, addressing long-horizon skill decomposition without labels",
+      "llm_evidence_cn": "从单体VLA策略中构建可复用类型化动作程序库，解决长时程任务分解问题",
+      "llm_evidence": "从单体VLA策略中构建可复用类型化动作程序库，解决长时程任务分解问题",
+      "canonical_evidence": "从单体VLA策略中构建可复用类型化动作程序库，解决长时程任务分解问题",
+      "llm_tldr_en": "REFACTOR-VLA uses a wake/sleep procedure with a behavioral equivalence kernel to mine reusable typed motor-program libraries from monolithic VLA policies, improving long-horizon robot manipulation through composable skill abstractions.",
+      "llm_tldr_cn": "REFACTOR-VLA针对现有视觉-语言-动作模型以单体方式直接输出动作、在长时程任务中性能退化且难以解释的问题，提出醒/睡两阶段学习。睡眠阶段通过行为等价核在潜在世界模型推演下聚类动作片段，无监督生成可复用的类型化动作程序库；清醒阶段利用该库重新组合策略。这种方法让机器人长时程操作由技能库中的程序片段组合实现，提高了可复用性与可解释性，并支持更灵活的动作抽象。",
+      "llm_tldr": "REFACTOR-VLA针对现有视觉-语言-动作模型以单体方式直接输出动作、在长时程任务中性能退化且难以解释的问题，提出醒/睡两阶段学习。睡眠阶段通过行为等价核在潜在世界模型推演下聚类动作片段，无监督生成可复用的类型化动作程序库；清醒阶段利用该库重新组合策略。这种方法让机器人长时程操作由技能库中的程序片段组合实现，提高了可复用性与可解释性，并支持更灵活的动作抽象。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.29896v1",
+      "source": "arxiv",
+      "title": "EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy",
+      "abstract": "A robot's effective ``mind'' need not reside in a single policy. It can emerge when specialized components perceive, reason, predict, act, verify, and remember within a shared orchestration process. EMERGE-Policy turns this perspective into a graph-structured agentic framework that coordinates both capability invocation and information exchange. A Main Agent retains task-level state within an active context window, while role-specific Sub Agents process perception, execution monitoring, verification, and memory consolidation in isolated contexts and return structured, task-relevant evidence. Role-specific contexts control information load by exposing only decision-relevant evidence to the Main Agent, while the functional Skill interface composes heterogeneous backends as Operational, Imagination, and Evaluation Skills. Criterion-grounded verification, textual failure diagnosis, and Branch Stack recovery provide localized correction, with token-aware external memory preserving task-relevant state. Together, their closed-loop interaction realizes the system-level policy captured by the name EMERGE-Policy. Without additional fine-tuning, we achieved outstanding performance on several public benchmark that have had a wide-reaching impact, and conducted a series of real robot experiments. These system-level results suggest that through the division of different functional sub-tasks among multiple agents and their concurrent collaboration, as well as the technical paradigm where the model is regarded as a skill and called within the framework, EMERGE-Policy can extend the robust robot policies beyond isolated runs.",
+      "authors": [
+        "Zhirui Fang",
+        "Qingchi Yu",
+        "Ziyang Chen",
+        "Longfei Li",
+        "Haoran Ma",
+        "Keru Zhou",
+        "Xinrun Xu",
+        "Samith Va",
+        "Yuxuan Hu",
+        "Peixuan Song",
+        "Qiang Du",
+        "Bin Qian",
+        "Yongkang Deng",
+        "Xin Li",
+        "Yezhen Wang",
+        "Zhe Li",
+        "Hao Luo",
+        "Shuyan Li",
+        "Ziwei Wang",
+        "Weijian Deng",
+        "Xiu Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-30T16:46:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.29896v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "task-level orchestration with execution monitoring and a functional Skill interface for composing heterogeneous policies",
+      "llm_evidence_cn": "任务级编排、执行监控与功能化技能接口组合异构后端策略",
+      "llm_evidence": "任务级编排、执行监控与功能化技能接口组合异构后端策略",
+      "canonical_evidence": "任务级编排、执行监控与功能化技能接口组合异构后端策略",
+      "llm_tldr_en": "EMERGE-Policy presents graph-structured agent orchestration: a Main Agent keeps task state, Sub Agents handle perception, monitoring, verification, and memory, and a Skill interface composes heterogeneous backend policies. It demonstrates composition beyond a single monolithic policy, relevant to reusable skill integration and task-level control.",
+      "llm_tldr_cn": "针对机器人能力是否需要集中在单一策略中的问题，提出EMERGE-Policy图结构智能体框架：主智能体维护任务级状态，感知、执行监控、验证和记忆等子智能体在隔离上下文内返回结构化证据。功能性技能接口复合异构后端策略，实现能力调用与信息交换的协调。框架表明机器人智能可从多个专门组件的编排中涌现，为可复用技能执行与任务状态融合提供系统级思路。",
+      "llm_tldr": "针对机器人能力是否需要集中在单一策略中的问题，提出EMERGE-Policy图结构智能体框架：主智能体维护任务级状态，感知、执行监控、验证和记忆等子智能体在隔离上下文内返回结构化证据。功能性技能接口复合异构后端策略，实现能力调用与信息交换的协调。框架表明机器人智能可从多个专门组件的编排中涌现，为可复用技能执行与任务状态融合提供系统级思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
