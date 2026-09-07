@@ -1,0 +1,180 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-07T23:11:16.984782+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2609.05376v1",
+      "source": "arxiv",
+      "title": "What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies",
+      "abstract": "Visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. We study this behavior as a problem of conditional visual grounding: the visual target required for successful control changes with the manipulation phase and, in more complex tasks, with the observed task state. Using Action Chunking with Transformers (ACT), we systematically introduce distractor objects and receptacles with controlled color and shape similarity and localize failures to picking and placement. We find that distractor sensitivity is specific to both the type of visual similarity and the manipulation stage. Guided by this diagnosis, we evaluate distractor augmentation, phase-dependent attention regularization, and appearance-based visual prompting as complementary interventions for improving target selection while preserving spatial information required for control. These interventions substantially improve robustness in simulation and on a physical UR3e. We further examine the same failure pattern in a pretrained vision-language-action policy on a state-conditioned instrument-handling task, where the observed state of a medical instrument determines the correct destination. Together, the results show that visual distractors can cause incorrect object or destination selection even when the underlying manipulation skill remains intact, and that explicitly improving target selection can substantially recover performance across distinct visuomotor policy-learning regimes.",
+      "authors": [
+        "Vivek Chavan",
+        "Pengtao Xie",
+        "Yahuan Shi",
+        "Oliver Heimann",
+        "Kevin Haninger",
+        "Jörg Krüger"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-09-04T17:27:35+00:00",
+      "link": "https://arxiv.org/pdf/2609.05376v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Uses Action Chunking with Transformers in visuomotor manipulation and diagnoses phase-conditional visual grounding failures with distractors",
+      "llm_evidence_cn": "研究基于Transformer动作分块(ACT)的视觉运动操作策略，按操作阶段诊断条件性视觉定位失败",
+      "llm_evidence": "研究基于Transformer动作分块(ACT)的视觉运动操作策略，按操作阶段诊断条件性视觉定位失败",
+      "canonical_evidence": "研究基于Transformer动作分块(ACT)的视觉运动操作策略，按操作阶段诊断条件性视觉定位失败",
+      "llm_tldr_en": "Using Action Chunking with Transformers, this paper diagnoses how distractor similarity and manipulation stage degrade conditional visual grounding in visuomotor imitation policies, then improves robustness.",
+      "llm_tldr_cn": "视觉运动模仿策略在引入外观相似干扰物时会失败，且失败依赖于视觉相似类型和具体操作阶段。本文基于Action Chunking with Transformers(ACT)，通过受控颜色/形状干扰实验将失败定位到抓取和放置环节，揭示了条件性视觉定位的问题。基于诊断结果改进策略，可增强其在相似对象与容器场景下的泛化能力，为操作模仿学习的可靠视觉条件提供了依据。",
+      "llm_tldr": "视觉运动模仿策略在引入外观相似干扰物时会失败，且失败依赖于视觉相似类型和具体操作阶段。本文基于Action Chunking with Transformers(ACT)，通过受控颜色/形状干扰实验将失败定位到抓取和放置环节，揭示了条件性视觉定位的问题。基于诊断结果改进策略，可增强其在相似对象与容器场景下的泛化能力，为操作模仿学习的可靠视觉条件提供了依据。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.05369v1",
+      "source": "arxiv",
+      "title": "Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation",
+      "abstract": "Vision-language-action (VLA) models can execute short manipulation skills, but remain brittle in long-horizon procedures requiring persistent task state, dependency-aware reasoning, conditional decisions, and reliable grounding. We investigate a neuro-symbolic framework that combines learned VLA control with explicit task graphs and multimodal procedural memory. Task graphs encode action dependencies, valid transitions, and branch conditions, while memory maintains the active step, completed actions, textual context, and task-relevant visual evidence. Together, these structures guide object selection, destination grounding, subgoal dispatch, and verification of expected state transitions. Human demonstrations provide additional spatial and temporal guidance through gaze or saliency cues. To isolate their effect on policy learning, our initial study bypasses cross-view gaze transfer and directly annotates pseudo-gaze in robot-view teleoperation videos. The resulting guidance is used during VLA fine-tuning and inference. We study two long-horizon manipulation domains, workspace clearing and surgical-instrument handling, which require ordered execution, visually grounded decisions, and conditional branching. We evaluate correct-object and destination selection, subtask completion, task progress, step-order consistency, complete-task success, and procedural or execution mistakes. This work positions structured symbolic reasoning and demonstration-derived visual guidance as complementary mechanisms for reliable long-horizon VLA manipulation.",
+      "authors": [
+        "Vivek Chavan",
+        "Yahuan Shi",
+        "Oliver Heimann",
+        "Kevin Haninger",
+        "Jörg Krüger"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-09-04T17:14:50+00:00",
+      "link": "https://arxiv.org/pdf/2609.05369v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Neuro-symbolic long-horizon VLA manipulation with explicit task graphs and procedural memory for subgoal dispatch, branch conditions and state-transition verification, supporting learned policies under graph-based control.",
+      "llm_evidence_cn": "将VLA策略与显式任务图及程序记忆结合，处理子目标派发、分支与状态验证，可类比于把学习技能嵌入状态机式结构。",
+      "llm_evidence": "将VLA策略与显式任务图及程序记忆结合，处理子目标派发、分支与状态验证，可类比于把学习技能嵌入状态机式结构。",
+      "canonical_evidence": "将VLA策略与显式任务图及程序记忆结合，处理子目标派发、分支与状态验证，可类比于把学习技能嵌入状态机式结构。",
+      "llm_tldr_en": "VLA policies are brittle in long-horizon manipulation; this paper couples learned VLA control with explicit task graphs and multimodal procedural memory to handle branching, subgoal dispatch and verification of state transitions.",
+      "llm_tldr_cn": "长程操作中VLA模型虽能执行短技能，却难以维持任务状态并处理依赖推理与条件分支。该文提出神经常符号框架，把学习的VLA控制与显式任务图及多模态程序记忆结合，用任务图编码动作依赖、合法转移与分支条件，用记忆维护当前步骤、已完成动作、文本上下文和视觉证据。该结构引导目标选择、目的地锚定、子目标派发与状态转移验证，从而提升程序化长程操作的可靠性与条件决策能力。",
+      "llm_tldr": "长程操作中VLA模型虽能执行短技能，却难以维持任务状态并处理依赖推理与条件分支。该文提出神经常符号框架，把学习的VLA控制与显式任务图及多模态程序记忆结合，用任务图编码动作依赖、合法转移与分支条件，用记忆维护当前步骤、已完成动作、文本上下文和视觉证据。该结构引导目标选择、目的地锚定、子目标派发与状态转移验证，从而提升程序化长程操作的可靠性与条件决策能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.05178v1",
+      "source": "arxiv",
+      "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+      "abstract": "Vision-Language-Action (VLA) or World Action (WAM) models have recently demonstrated remarkable performance in robotic manipulation. On LIBERO, SOTA method have achieved nearly 100\\% success rates, seemingly suggesting that the models are ready for deployment in real world. However, near perfect performance on existing benchmarks can be misleading: success under ideal conditions does not imply real world robustness. Existing benchmarks primarily evaluate task completion from predefined initial states, while real world interactions inevitably involve failures such as failed grasps, collisions, and unintended object movements. A robot must therefore not only execute tasks successfully, but also recognize and recover from failures to continue the task. Yet this capability remains largely unmeasured, revealing a critical gap between benchmark performance and real world reliability. To address this gap, we introduce LIBERO-Recover Benchmark, a large scale benchmark for failure recovery in robotic manipulation. Built upon LIBERO, we collect real execution failures from SOTA embodied models and construct 1,000+ scenarios across four recovery levels: (1) Action Retry, (2) Action Adaptation, (3) Object State Recovery, and (4) Environmental Recovery. We evaluate four core capabilities: spatial understanding, object structure reasoning, interaction understanding, and topological reasoning. As the first large-scale benchmark for embodied failure recovery, LIBERO-Recover shifts evaluation from \\emph{Can the robot succeed?''} to \\emph{Can the robot recover after failure?''}, promoting robust and generalizable embodied agents. The project will be avaible in \\textcolor{blue}{https://liulin815.github.io/LIBERO-Recovery/}.",
+      "authors": [
+        "Lin Liu",
+        "Zhicheng Bao",
+        "Lu Zhang",
+        "Ziying Song",
+        "Wu Yang",
+        "Shuai Tao",
+        "Wulong Liu",
+        "Huchuan Lu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-04T14:15:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.05178v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Focuses on failure recognition and recovery in manipulation models, aligning with safe deployment and recovery mechanisms for skill policies.",
+      "llm_evidence_cn": "专注操作模型的失败识别与恢复，与技能策略的安全部署和恢复机制相契合。",
+      "llm_evidence": "专注操作模型的失败识别与恢复，与技能策略的安全部署和恢复机制相契合。",
+      "canonical_evidence": "专注操作模型的失败识别与恢复，与技能策略的安全部署和恢复机制相契合。",
+      "llm_tldr_en": "LIBERO-RECOVER challenges near-perfect success benchmarks by focusing on realistic failures such as failed grasps and collisions, enabling recognition and recovery for more robust manipulation models.",
+      "llm_tldr_cn": "现有基准在理想条件下接近满分，却无法反映真实世界的抓取失败、碰撞等问题。LIBERO-RECOVER指出模型不仅要完成任务，还要能识别失败并从中恢复，构建或设计机制来评估失败恢复能力。该工作推动操作研究从任务成功率走向真实部署中的鲁棒性，为技能策略与恢复模块的集成提供依据。",
+      "llm_tldr": "现有基准在理想条件下接近满分，却无法反映真实世界的抓取失败、碰撞等问题。LIBERO-RECOVER指出模型不仅要完成任务，还要能识别失败并从中恢复，构建或设计机制来评估失败恢复能力。该工作推动操作研究从任务成功率走向真实部署中的鲁棒性，为技能策略与恢复模块的集成提供依据。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.05331v1",
+      "source": "arxiv",
+      "title": "Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement",
+      "abstract": "Robotic systems increasingly operate in dynamic, uncertain, and open-ended environments, where design-time assumptions may no longer hold, and adaptation becomes necessary to maintain effective and safe operation. Behavior Trees (BTs) are widely used in robotic control architectures due to their modularity, readability, and reactivity. This raises a central question: are BTs sufficient to meet the adaptation needs of modern robotic systems?   This paper investigates this question through a literature-driven study complemented by empirical validation. First, we derive a classification of robotic adaptation needs from the literature, organizing them into six categories: Knowledge, Perception, Actuation, System, Mission, and Environment. Then, we analyze the capabilities and limitations of classical BTs with respect to these needs. Then, we characterize BT-based approaches for adaptation from the existing literature and organize them into four primary families, i.e., generation, extension, evolution, and refinement, including approaches that combine multiple families.   Our analysis shows that the modularity, flexibility, and reactivity of classical BTs are insufficient for adaptation needs involving runtime restructuring, reasoning under uncertainty, mission reinterpretation, learning, or integration with external knowledge and planning mechanisms. Enhanced BT approaches address several of these limitations, but to different extents and often with limitations of their own. Our findings relate adaptation needs to both the capabilities and limitations of classical and enhanced BTs, providing guidance on when classical BTs are sufficient, when enhanced mechanisms are needed, and which challenges remain or emerge for adaptive robotic control architectures.",
+      "authors": [
+        "Mehran Rostamnia",
+        "Gianluca Filippone",
+        "Ricardo Caldas",
+        "Patrizio Pelliccione"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.SE"
+      ],
+      "published": "2026-09-04T16:36:28+00:00",
+      "link": "https://arxiv.org/pdf/2609.05331v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Direct study of Behavior Trees in robotic control architectures, deriving robotic adaptation needs and empirically assessing whether BTs support safe, adaptive operation; relevant to orchestrating learned skills with BTs.",
+      "llm_evidence_cn": "直接评估行为树能否满足机器人系统适应需求并给出增强方向，为用行为树编排技能策略提供依据。",
+      "llm_evidence": "直接评估行为树能否满足机器人系统适应需求并给出增强方向，为用行为树编排技能策略提供依据。",
+      "canonical_evidence": "直接评估行为树能否满足机器人系统适应需求并给出增强方向，为用行为树编排技能策略提供依据。",
+      "llm_tldr_en": "Robotic systems require runtime adaptation yet design-time assumptions fail; the paper derives a six-category taxonomy of adaptation needs and empirically evaluates whether Behavior Trees suffice, guiding BT enhancement for safe operation.",
+      "llm_tldr_cn": "机器人系统在动态、不确定环境中运行时需要不断适应，而设计时假设可能失效。行为树因其模块化、可读和响应性被广泛使用，但其能力边界并不清楚。该文通过文献归纳得到知识、感知、执行、系统、任务与环境六类适应需求，并结合经验验证评估行为树的充分性，随后讨论如何增强行为树。其结论对如何用行为树承载学习技能和保障安全执行具有指引意义。",
+      "llm_tldr": "机器人系统在动态、不确定环境中运行时需要不断适应，而设计时假设可能失效。行为树因其模块化、可读和响应性被广泛使用，但其能力边界并不清楚。该文通过文献归纳得到知识、感知、执行、系统、任务与环境六类适应需求，并结合经验验证评估行为树的充分性，随后讨论如何增强行为树。其结论对如何用行为树承载学习技能和保障安全执行具有指引意义。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

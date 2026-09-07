@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-06</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-07</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-06 22:05:12 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-07 23:14:09 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共精读1篇、速读1篇，聚焦机器人学习与策略泛化。</p>
-<p>最值得关注的是精读论文《REFACTOR-VLA》（9.0分），它提出无监督库学习“类型化电机程序”，或可提升技能复用性；速读论文《EMERGE-Policy》（6.0分）则探讨超越单一策略的机器人思维架构。</p>
-<p>建议优先通读《REFACTOR-VLA》的方法与实验，把握其无监督学习思路；有余力再浏览速读论文作对比。</p>
+<p>今日精读与速读聚焦视觉运动策略与机器人操作，共4篇论文；最值得关注的是《What Matters, When?》对条件视觉接地问题的诊断，以及神经符号程序推理在处理长时程操作任务中的潜力；普通读者可从视觉接地与程序化推理两个方向入手，后续再关注失败恢复与行为树增强研究。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -76,7 +74,7 @@
     <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs">REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies">What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy">EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation">Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models">LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement">Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
 </section>
 </div>
 

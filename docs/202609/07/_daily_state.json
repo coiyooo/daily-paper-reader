@@ -1,0 +1,73 @@
+{
+  "date": "20260907",
+  "date_label": "",
+  "generated_at": "2026-09-07 23:14:09 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.05376v1",
+      "route": "202609/07/2609.05376v1-what-matters-when-diagnosing-and-improving-conditional-visual-grounding-in-visuomotor-imitation-policies",
+      "title": "What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "研究基于Transformer动作分块(ACT)的视觉运动操作策略，按操作阶段诊断条件性视觉定位失败",
+      "first_seen_at": "2026-09-07 23:14:09 UTC",
+      "updated_at": "2026-09-07 23:14:09 UTC"
+    },
+    {
+      "paper_id": "2609.05369v1",
+      "route": "202609/07/2609.05369v1-towards-neuro-symbolic-procedural-reasoning-for-long-horizon-vision-language-action-manipulation",
+      "title": "Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "将VLA策略与显式任务图及程序记忆结合，处理子目标派发、分支与状态验证，可类比于把学习技能嵌入状态机式结构。",
+      "first_seen_at": "2026-09-07 23:14:09 UTC",
+      "updated_at": "2026-09-07 23:14:09 UTC"
+    },
+    {
+      "paper_id": "2609.05178v1",
+      "route": "202609/07/2609.05178v1-libero-recover-beyond-task-success-towards-failure-recovery-in-robotic-manipulation-models",
+      "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "专注操作模型的失败识别与恢复，与技能策略的安全部署和恢复机制相契合。",
+      "first_seen_at": "2026-09-07 23:14:09 UTC",
+      "updated_at": "2026-09-07 23:14:09 UTC"
+    },
+    {
+      "paper_id": "2609.05331v1",
+      "route": "202609/07/2609.05331v1-adaptation-needs-in-robotic-systems-assessing-behavior-trees-and-their-enhancement",
+      "title": "Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "直接评估行为树能否满足机器人系统适应需求并给出增强方向，为用行为树编排技能策略提供依据。",
+      "first_seen_at": "2026-09-07 23:14:09 UTC",
+      "updated_at": "2026-09-07 23:14:09 UTC"
+    }
+  ]
+}
