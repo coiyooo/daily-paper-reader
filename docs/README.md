@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-07</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-08</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-07 23:14:09 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-08 21:54:45 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读与速读聚焦视觉运动策略与机器人操作，共4篇论文；最值得关注的是《What Matters, When?》对条件视觉接地问题的诊断，以及神经符号程序推理在处理长时程操作任务中的潜力；普通读者可从视觉接地与程序化推理两个方向入手，后续再关注失败恢复与行为树增强研究。</p>
+<p>今日聚焦3篇具身智能/机器人学习论文，其中1篇精读、2篇速读。最值得关注的是《TacPAC》（8.0分），利用触觉预测与世界-动作模型实现实时动作修正，面向接触丰富的操作场景；另两篇分别涉及子目标引导的演员-评论家方法和VLA模型的时序级故障检测。建议后续优先深入触觉与动作生成结合的思路，并留意故障检测方法对提升模型可靠性的潜力。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -74,7 +74,7 @@
     <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies">What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation">TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation">Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models">LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement">Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic">Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic</span></li><li><span class="dpr-home-dashboard-paper-title" title="FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models">FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
 </section>
 </div>
 

@@ -1,0 +1,131 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-08T21:52:01.563292+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2609.05266v1",
+      "source": "arxiv",
+      "title": "TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation",
+      "abstract": "World-action models guide action generation with predicted future observations, but vision-centric predictions miss the local contact cues that decide contact-rich manipulation. However, naively predicting future tactile observations as additional views recovers only a third of the achievable gain in our experiments. This gap reflects a timing mismatch: predictions precede execution, while tactile feedback arrives during it. We introduce TacPAC, which turns tactile prediction into real-time action correction. Once the base model has planned an action chunk, TacPAC caches the predicted contact that plan was conditioned on together with the plan's own representation, and a tactile expert reads each newly observed tactile image against that cache to correct the actions not yet executed. Feedback is thus interpreted against what the plan anticipated rather than in isolation, and one correction is a single pass over that cache, $20.7\\times$ cheaper than regenerating the chunk. On five real-robot tasks spanning precision insertion, fragile-object handling, object reorientation, and long-horizon manipulation, TacPAC leads every task and raises the average from 22% for its vision-only base model to 64%. Code is available at https://github.com/LogosRoboticsGroup/TacPAC.",
+      "authors": [
+        "Zipei Ma",
+        "Xiaofei Wei",
+        "Junzhe Jiang",
+        "Shunlin Lu",
+        "Li Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-04T15:24:58+00:00",
+      "link": "https://arxiv.org/pdf/2609.05266v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Directly builds on an action chunk planned by a world-action model and adds a tactile expert for online correction in contact-rich manipulation.",
+      "llm_evidence_cn": "直接在世界动作模型规划的动作块基础上增加触觉专家进行在线修正，面向接触丰富操作。",
+      "llm_evidence": "直接在世界动作模型规划的动作块基础上增加触觉专家进行在线修正，面向接触丰富操作。",
+      "canonical_evidence": "直接在世界动作模型规划的动作块基础上增加触觉专家进行在线修正，面向接触丰富操作。",
+      "llm_tldr_en": "Proposes TacPAC to turn tactile prediction into real-time action correction by caching the predicted contact and plan representation of an action chunk, letting a tactile expert correct newly observed contacts.",
+      "llm_tldr_cn": "针对视觉中心的世界动作模型在接触丰富操作中缺乏局部接触线索、且触觉预测早于执行导致时机不匹配的问题，提出TacPAC方法。它将基于模型的触觉预测转化为实时动作修正，缓存动作块所依赖的预测接触与该计划的表示，再由触觉专家依据新到达的接触观测逐次纠正动作。实验表明，简单把未来触觉预测作为附加视图只能恢复约三分之一的可达增益，而TacPAC的实时纠正机制能有效弥补这一差距。该方法为接触密集操作中的动作块执行提供了可落地的触觉反馈融合策略。",
+      "llm_tldr": "针对视觉中心的世界动作模型在接触丰富操作中缺乏局部接触线索、且触觉预测早于执行导致时机不匹配的问题，提出TacPAC方法。它将基于模型的触觉预测转化为实时动作修正，缓存动作块所依赖的预测接触与该计划的表示，再由触觉专家依据新到达的接触观测逐次纠正动作。实验表明，简单把未来触觉预测作为附加视图只能恢复约三分之一的可达增益，而TacPAC的实时纠正机制能有效弥补这一差距。该方法为接触密集操作中的动作块执行提供了可落地的触觉反馈融合策略。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.30406v1",
+      "source": "arxiv",
+      "title": "Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic",
+      "abstract": "Goal-conditioned reinforcement learning struggles with long horizons when rewards are sparse. While a planner can provide subgoals to guide a low-level policy, its use at test time may introduce practical subgoal management difficulties. An alternative paradigm utilizes a high-level planner to assist learning, while the policy remains conditioned only on the final goal, enabling planner-free deployment. Among these methods, Reinforcement Learning with Imagined Subgoals (RIS) introduces a regularization term that encourages the policy to take the same actions for the final goal as it does for an intermediate goal. This regularization, however, may lead to goal-chaining issues when intermediate goals are low-dimensional. Potential-based reward shaping (PBRS) translates plans into an additional reward while ensuring that the optimal policy remains unchanged. Yet, it can generate deceptive rewards in terminal states. We study these failure cases and first propose an alternative reward shaping method (RS) that removes these deceptive rewards at the expense of theoretical guarantees of PBRS. Similar to this RS variant, we then propose another method named Locally-Guided Actor Critic (LG-AC) that rewards the agent for reaching intermediate goals. Unlike RS, where intermediate rewards are implicit in the shaping signal, we explicitly condition a value estimator on the full sequence of intermediate goals but represent the value function as a sum of subgoal-conditioned value functions, enabling dense hindsight relabeling. We evaluate all these methods in tasks with challenging goal-chaining requirements and empirically highlight specific cases in which either action regularization or reward shaping yield low performance, while LG-AC achieves the best overall performance across tasks.",
+      "authors": [
+        "Olivier Serris",
+        "Stéphane Doncieux",
+        "Olivier Sigaud"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-31T08:00:40+00:00",
+      "link": "https://arxiv.org/pdf/2608.30406v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Uses high-level planner imagined subgoals to guide a goal-conditioned actor and subgoal-aware critic for sparse-reward long-horizon control",
+      "llm_evidence_cn": "提出子目标感知Critic与目标条件Actor，通过高层面规划器产生想象子目标缓解长程稀疏奖励问题，可用于层级技能学习",
+      "llm_evidence": "提出子目标感知Critic与目标条件Actor，通过高层面规划器产生想象子目标缓解长程稀疏奖励问题，可用于层级技能学习",
+      "canonical_evidence": "提出子目标感知Critic与目标条件Actor，通过高层面规划器产生想象子目标缓解长程稀疏奖励问题，可用于层级技能学习",
+      "llm_tldr_en": "Tackles sparse-reward long-horizon goal-conditioned RL by regularizing an actor with imagined subgoals and introducing a potential-based subgoal-aware critic to avoid goal-chaining failures while keeping planner-free deployment.",
+      "llm_tldr_cn": "针对长周期任务中奖励稀疏、子目标引导容易导致目标链式失效的问题，本文提出局部引导的Actor-Critic方法。其核心是在学习阶段用高层面规划器产生的中间子目标对策略进行正则化，让策略只在最终目标条件下训练，同时用一个子目标感知的评价器结合势函数消除低维子目标带来的链式问题，从而实现无规划器的稳定部署。该思路可用于长程操控任务中高层技能规划与低层策略学习的衔接。",
+      "llm_tldr": "针对长周期任务中奖励稀疏、子目标引导容易导致目标链式失效的问题，本文提出局部引导的Actor-Critic方法。其核心是在学习阶段用高层面规划器产生的中间子目标对策略进行正则化，让策略只在最终目标条件下训练，同时用一个子目标感知的评价器结合势函数消除低维子目标带来的链式问题，从而实现无规划器的稳定部署。该思路可用于长程操控任务中高层技能规划与低层策略学习的衔接。",
+      "llm_tags": [
+        "query:param-skills:composite"
+      ],
+      "matched_query_tag": "query:param-skills:composite",
+      "matched_query_text": "Papers central to 面向真实机器人操作的参数化技能原语、技能条件化模仿学习与组合泛化检索, especially work that connects or combines: parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation; imitation learning conditioned on skill identifiers and local phase identifiers for robot control; action chunking transformer for predicting low-level continuous action sequences in robot manipulation; hierarchical imitation learning for long-horizon tasks with reusable skill libraries; compositional generalization of learned skills to unseen task sequences and object configurations; reusable robot skill library for task and motion planning in contact-rich manipulation; How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?; Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks; Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments; Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation.",
+      "matched_requirement_id": "req-composite-param-skills",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.04277v1",
+      "source": "arxiv",
+      "title": "FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) policies have shown strong potential for general-purpose robotic manipulation, but they can still fail unpredictably during long-horizon execution, making reliable failure detection essential for safe deployment. Existing methods either rely on visual models that typically detect failures only after erroneous actions have occurred, or use lightweight proactive detectors trained on VLA internal representations. However, these proactive methods are often supervised with trajectory-level labels, causing normal pre-failure behavior in unsuccessful trajectories to be incorrectly labeled as failure. This supervision mismatch introduces label noise and limits both trajectory-level detection accuracy and precise timestamp-level failure localization. In this work, we study fine-grained timestamp-level VLA failure detection while addressing the cost of dense annotation. We propose a data-efficient framework that first leverages unlabeled VLA action chunks to construct action-derived weak supervision signals, capturing abnormal patterns such as inconsistent consecutive chunks, frozen or idle actions, and aggressive random motions. We then use active learning to select only the most uncertain trajectories for timestamp-level annotation and fine-tune the detector with these informative labels. Experiments across multiple VLA policies show that our method improves both timestamp-level and trajectory-level failure detection performance.",
+      "authors": [
+        "Jie Ma",
+        "Zongxi Liu",
+        "Yi Zhu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-09-03T00:04:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.04277v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "label-efficient timestamp-level failure detection for VLA policies, enabling safe long-horizon execution and recovery feedback",
+      "llm_evidence_cn": "为VLA策略提供标签高效的时间戳级故障检测，可用于安全长时程执行与恢复反馈",
+      "llm_evidence": "为VLA策略提供标签高效的时间戳级故障检测，可用于安全长时程执行与恢复反馈",
+      "canonical_evidence": "为VLA策略提供标签高效的时间戳级故障检测，可用于安全长时程执行与恢复反馈",
+      "llm_tldr_en": "FailureSpot proposes label-efficient timestamp-level failure detection for vision-language-action policies, correcting trajectory-level label noise and improving failure detection for safer long-horizon manipulation deployment.",
+      "llm_tldr_cn": "该论文针对VLA策略在长时程机器人操作中仍会不可预测地失败、且现有proactive检测器使用轨迹级标签导致误标的问题，提出标签高效的时间戳级故障检测方法FailureSpot。方法利用VLA内部表示并改进监督标签粒度，区分正常失败前行为与真实故障。实验表明FailureSpot显著提升轨迹级和时间戳级检测准确率，同时降低标注成本。它为技能策略的安全部署和故障恢复提供了关键的监控基础。",
+      "llm_tldr": "该论文针对VLA策略在长时程机器人操作中仍会不可预测地失败、且现有proactive检测器使用轨迹级标签导致误标的问题，提出标签高效的时间戳级故障检测方法FailureSpot。方法利用VLA内部表示并改进监督标签粒度，区分正常失败前行为与真实故障。实验表明FailureSpot显著提升轨迹级和时间戳级检测准确率，同时降低标注成本。它为技能策略的安全部署和故障恢复提供了关键的监控基础。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

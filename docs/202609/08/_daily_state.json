@@ -1,0 +1,57 @@
+{
+  "date": "20260908",
+  "date_label": "",
+  "generated_at": "2026-09-08 21:54:45 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.05266v1",
+      "route": "202609/08/2609.05266v1-tacpac-tactile-prediction-and-real-time-action-correction-in-world-action-models-for-contact-rich-manipulation",
+      "title": "TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "直接在世界动作模型规划的动作块基础上增加触觉专家进行在线修正，面向接触丰富操作。",
+      "first_seen_at": "2026-09-08 21:54:45 UTC",
+      "updated_at": "2026-09-08 21:54:45 UTC"
+    },
+    {
+      "paper_id": "2608.30406v1",
+      "route": "202609/08/2608.30406v1-locally-guided-actor-critic-training-a-goal-conditioned-actor-with-a-subgoal-aware-critic",
+      "title": "Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "提出子目标感知Critic与目标条件Actor，通过高层面规划器产生想象子目标缓解长程稀疏奖励问题，可用于层级技能学习",
+      "first_seen_at": "2026-09-08 21:54:45 UTC",
+      "updated_at": "2026-09-08 21:54:45 UTC"
+    },
+    {
+      "paper_id": "2609.04277v1",
+      "route": "202609/08/2609.04277v1-failurespot-label-efficient-timestamp-level-failure-detection-for-vision-language-action-models",
+      "title": "FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "为VLA策略提供标签高效的时间戳级故障检测，可用于安全长时程执行与恢复反馈",
+      "first_seen_at": "2026-09-08 21:54:45 UTC",
+      "updated_at": "2026-09-08 21:54:45 UTC"
+    }
+  ]
+}

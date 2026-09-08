@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-08",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T21:54:47",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/08/2609.05266v1-tacpac-tactile-prediction-and-real-time-action-correction-in-world-action-models-for-contact-rich-manipulation",
+      "section": "deep",
+      "title_en": "TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation",
+      "authors": "Zipei Ma, Xiaofei Wei, Junzhe Jiang, Shunlin Lu, Li Zhang",
+      "date": "2026-09-04",
+      "pdf": "https://arxiv.org/pdf/2609.05266v1",
+      "score": "8.0",
+      "evidence": "直接在世界动作模型规划的动作块基础上增加触觉专家进行在线修正，面向接触丰富操作。",
+      "tldr": "世界-动作模型用未来观测预测引导动作，但视觉预测缺少接触线索，直接加触觉预测仅恢复可实现增益的三分之一，根源是预测早于执行而触觉反馈在执行中。TacPAC将触觉预测转为实时动作校正：缓存预测接触与动作计划的表示，触觉专家将每个新观测图像与该缓存比对，修正未执行的动作。单次校正的成本比重新生成动作块低20.7倍，在五类真实接触操作任务上平均成功率从22%提升至64%。",
+      "tags": "query:param-skills",
+      "abstract_en": "World-action models guide action generation with predicted future observations, but vision-centric predictions miss the local contact cues that decide contact-rich manipulation. However, naively predicting future tactile observations as additional views recovers only a third of the achievable gain in our experiments. This gap reflects a timing mismatch: predictions precede execution, while tactile feedback arrives during it. We introduce TacPAC, which turns tactile prediction into real-time action correction. Once the base model has planned an action chunk, TacPAC caches the predicted contact that plan was conditioned on together with the plan's own representation, and a tactile expert reads each newly observed tactile image against that cache to correct the actions not yet executed. Feedback is thus interpreted against what the plan anticipated rather than in isolation, and one correction is a single pass over that cache, $20.7\\times$ cheaper than regenerating the chunk. On five real-robot tasks spanning precision insertion, fragile-object handling, object reorientation, and long-horizon manipulation, TacPAC leads every task and raises the average from 22% for its vision-only base model to 64%. Code is available at https://github.com/LogosRoboticsGroup/TacPAC.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/08/2608.30406v1-locally-guided-actor-critic-training-a-goal-conditioned-actor-with-a-subgoal-aware-critic",
+      "section": "quick",
+      "title_en": "Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic",
+      "authors": "Olivier Serris, Stéphane Doncieux, Olivier Sigaud",
+      "date": "2026-08-31",
+      "pdf": "https://arxiv.org/pdf/2608.30406v1",
+      "score": "6.0",
+      "evidence": "提出子目标感知Critic与目标条件Actor，通过高层面规划器产生想象子目标缓解长程稀疏奖励问题，可用于层级技能学习",
+      "tldr": "在稀疏奖励的长时程目标条件强化学习任务中，智能体难以学习有效策略。现有利用子目标辅助学习的方法存在局限：动作正则化可能因低维子目标产生目标链问题，奖励塑形则会在终止状态产生欺骗性奖励。本文提出LG-AC方法，通过子目标感知的评论家将值函数表示为子目标条件值函数之和，实现密集后见重标记，且测试时不需规划器。实验表明，在需要目标链的任务中LG-AC综合表现最佳，优于动作正则化和奖励塑形基准。",
+      "tags": "query:param-skills",
+      "abstract_en": "Goal-conditioned reinforcement learning struggles with long horizons when rewards are sparse. While a planner can provide subgoals to guide a low-level policy, its use at test time may introduce practical subgoal management difficulties. An alternative paradigm utilizes a high-level planner to assist learning, while the policy remains conditioned only on the final goal, enabling planner-free deployment. Among these methods, Reinforcement Learning with Imagined Subgoals (RIS) introduces a regularization term that encourages the policy to take the same actions for the final goal as it does for an intermediate goal. This regularization, however, may lead to goal-chaining issues when intermediate goals are low-dimensional. Potential-based reward shaping (PBRS) translates plans into an additional reward while ensuring that the optimal policy remains unchanged. Yet, it can generate deceptive rewards in terminal states. We study these failure cases and first propose an alternative reward shaping method (RS) that removes these deceptive rewards at the expense of theoretical guarantees of PBRS. Similar to this RS variant, we then propose another method named Locally-Guided Actor Critic (LG-AC) that rewards the agent for reaching intermediate goals. Unlike RS, where intermediate rewards are implicit in the shaping signal, we explicitly condition a value estimator on the full sequence of intermediate goals but represent the value function as a sum of subgoal-conditioned value functions, enabling dense hindsight relabeling. We evaluate all these methods in tasks with challenging goal-chaining requirements and empirically highlight specific cases in which either action regularization or reward shaping yield low performance, while LG-AC achieves the best overall performance across tasks.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/08/2609.04277v1-failurespot-label-efficient-timestamp-level-failure-detection-for-vision-language-action-models",
+      "section": "quick",
+      "title_en": "FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models",
+      "authors": "Jie Ma, Zongxi Liu, Yi Zhu",
+      "date": "2026-09-03",
+      "pdf": "https://arxiv.org/pdf/2609.04277v1",
+      "score": "6.0",
+      "evidence": "为VLA策略提供标签高效的时间戳级故障检测，可用于安全长时程执行与恢复反馈",
+      "tldr": "视觉-语言-动作(VLA)策略在长时程操作中仍会不可预测地失败，现有检测方法受轨迹级标签噪声限制，难以定位到时间戳。本文先利用未标注动作块构造弱监督信号，捕捉不一致、停滞和异常随机动作等失败前兆；再通过主动学习选择最不确定的轨迹进行时间戳级标注，微调检测器。在多个VLA策略上，所提方法同时提升了时间戳级和轨迹级检测精度，实现了数据高效的失败定位，有助于VLA模型安全部署。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-language-action (VLA) policies have shown strong potential for general-purpose robotic manipulation, but they can still fail unpredictably during long-horizon execution, making reliable failure detection essential for safe deployment. Existing methods either rely on visual models that typically detect failures only after erroneous actions have occurred, or use lightweight proactive detectors trained on VLA internal representations. However, these proactive methods are often supervised with trajectory-level labels, causing normal pre-failure behavior in unsuccessful trajectories to be incorrectly labeled as failure. This supervision mismatch introduces label noise and limits both trajectory-level detection accuracy and precise timestamp-level failure localization. In this work, we study fine-grained timestamp-level VLA failure detection while addressing the cost of dense annotation. We propose a data-efficient framework that first leverages unlabeled VLA action chunks to construct action-derived weak supervision signals, capturing abnormal patterns such as inconsistent consecutive chunks, frozen or idle actions, and aggressive random motions. We then use active learning to select only the most uncertain trajectories for timestamp-level annotation and fine-tune the detector with these informative labels. Experiments across multiple VLA policies show that our method improves both timestamp-level and trajectory-level failure detection performance.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
