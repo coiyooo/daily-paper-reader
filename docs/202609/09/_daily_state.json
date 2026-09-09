@@ -1,0 +1,153 @@
+{
+  "date": "20260909",
+  "date_label": "",
+  "generated_at": "2026-09-09 22:20:11 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.08638v1",
+      "route": "202609/09/2609.08638v1-casd-chunk-aligned-semantic-distillation-for-multi-stagerobot-manipulation",
+      "title": "CASD: Chunk-Aligned Semantic Distillation for Multi-StageRobot Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为完整动作块提供阶段级语义监督并以其条件化策略，可对应阶段/技能条件化模仿学习",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.05832v1",
+      "route": "202609/09/2609.05832v1-cr-vla-force-learning-control-aware-compliance-vla-model-for-robust-contact-rich-robotic-manipulation",
+      "title": "CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向接触丰富操作中动作块执行导致的力跟踪不足与交互力过大问题，提出控制感知顺应性VLA，直接关联动作块式连续机器人控制",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.06591v1",
+      "route": "202609/09/2609.06591v1-unifying-physics-based-humanoid-interaction-with-a-context-conditioned-interaction-prior",
+      "title": "Unifying Physics-Based Humanoid Interaction with a Context-Conditioned Interaction Prior",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "在共享离散空间内学习可重用类人交互技能并用上下文条件先验对低层模仿策略进行条件化",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.06852v1",
+      "route": "202609/09/2609.06852v1-contextflow-in-context-flow-matching-for-robot-manipulation",
+      "title": "ContextFlow: In-Context Flow Matching for Robot Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "条件流匹配进行上下文模仿，预测连续机器人动作，专门针对未见任务配置的泛化并缓解误差累积",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.08743v1",
+      "route": "202609/09/2609.08743v1-foci-policy-focus-on-object-centric-interactions-for-relational-manipulation-policies",
+      "title": "FOCI Policy: Focus on Object-Centric Interactions for Relational Manipulation Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "从示范中提取紧凑交互阶段并将它们表示为可重用技能，用于关系操作",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.05985v1",
+      "route": "202609/09/2609.05985v1-a-brain-inspired-hierarchical-framework-for-zero-shot-robot-task-reasoning-and-execution",
+      "title": "A Brain-inspired Hierarchical Framework for Zero-Shot Robot Task Reasoning and Execution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "共享原子动作库、高层长时任务分解与代价选计划的层级框架，接近可复用技能库与层级执行思想，但不含模仿学习/技能ID",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.06508v1",
+      "route": "202609/09/2609.06508v1-vla-corrector-stage-aware-observable-state-understanding-for-prompt-based-closed-loop-recovery-of-vision-language-action-policies",
+      "title": "VLA-Corrector: Stage-Aware Observable State Understanding for Prompt-Based Closed-Loop Recovery of Vision-Language-Action Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "阶段感知学习验证器与提示式闭环恢复，用于长时程操作中固定VLA策略的纠错",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.07581v1",
+      "route": "202609/09/2609.07581v1-ici-vla-in-context-imitation-with-spatiotemporally-aligned-demonstrations-for-vision-language-action-models",
+      "title": "ICI-VLA: In-Context Imitation with Spatiotemporally Aligned Demonstrations for Vision-Language-Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "将长轨迹切分为短语义片段并利用检索微示范来条件模仿,与长期任务中可复用技能的思路一致",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    },
+    {
+      "paper_id": "2609.07165v1",
+      "route": "202609/09/2609.07165v1-state-of-the-art-in-learning-by-demonstration-with-passive-observation-for-industrial-assembly-automation",
+      "title": "State-of-the-Art in Learning-by-Demonstration with Passive Observation for Industrial Assembly Automation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "装配示教学习综述强调物体中心感知带来的原语迁移,直接关联参数化技能原语与组合泛化",
+      "first_seen_at": "2026-09-09 22:20:11 UTC",
+      "updated_at": "2026-09-09 22:20:11 UTC"
+    }
+  ]
+}

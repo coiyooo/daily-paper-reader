@@ -1,0 +1,369 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-09T22:12:38.722133+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.08638v1",
+      "source": "arxiv",
+      "title": "CASD: Chunk-Aligned Semantic Distillation for Multi-StageRobot Manipulation",
+      "abstract": "An action chunk can span several stages of a manipulation task, yet a label for its first step describes only the current stage. We introduce Chunk-Aligned Semantic Distillation (CASD), which derives semantic targets for entire action chunks. An offline vision--language model segments demonstrations into described stages. Their occupancy within each action chunk determines a weighted semantic target, including transitions between stages. A CASD generator learns to predict this target from the current observation, robot state, and task instruction. We then freeze the generator and train a policy conditioned on its predictions. The semantic branch runs once per policy query, without online VLM calls or reasoning-trace decoding. Teacher matching on annotated LIBERO training episodes is above chance for both single-stage and boundary-crossing chunks. We evaluate three Fast-WAM variants and a DreamZero integration across four benchmarks, including distribution shifts on LIBERO-Plus. Compared with published references, IDM+CASD reaches 98.9\\% versus 98.0\\% average success on LIBERO, while Uncond falls below its reference. Joint+CASD reaches 93.0\\% versus 90.6\\% on RoboTwin 2.0, and DreamZero+CASD reaches a 47.9\\% four-category MolmoSpaces manipulation average versus 40.7\\%. Performance varies across backbone integrations.",
+      "authors": [
+        "Tinghe Ding",
+        "Jiahao Li",
+        "He Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-08T12:07:52+00:00",
+      "link": "https://arxiv.org/pdf/2609.08638v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Provides semantic phase-level supervision for whole action chunks and conditions the policy on predicted stage targets, matching phase/skill-conditioned imitation learning",
+      "llm_evidence_cn": "为完整动作块提供阶段级语义监督并以其条件化策略，可对应阶段/技能条件化模仿学习",
+      "llm_evidence": "为完整动作块提供阶段级语义监督并以其条件化策略，可对应阶段/技能条件化模仿学习",
+      "canonical_evidence": "为完整动作块提供阶段级语义监督并以其条件化策略，可对应阶段/技能条件化模仿学习",
+      "llm_tldr_en": "CASD segments demonstrations into stages with an offline VLM, weights semantic targets for entire action chunks, then trains a policy conditioned on the predicted target for multi-stage manipulation.",
+      "llm_tldr_cn": "针对动作块可能跨越多个操作阶段而标签只描述当前阶段的问题，CASD 用离线视觉语言模型将演示分割为描述阶段，并按阶段在动作块中的占比构造加权语义目标（包含阶段切换信息）。随后训练一个生成器从当前观测与任务指令预测该语义目标，并冻结生成器训练被其预测条件化的底层策略。该方法无需在线视觉语言模型调用即可为多阶段操作引入分块级语义条件，是阶段/技能条件化模仿学习的一种关键实现。",
+      "llm_tldr": "针对动作块可能跨越多个操作阶段而标签只描述当前阶段的问题，CASD 用离线视觉语言模型将演示分割为描述阶段，并按阶段在动作块中的占比构造加权语义目标（包含阶段切换信息）。随后训练一个生成器从当前观测与任务指令预测该语义目标，并冻结生成器训练被其预测条件化的底层策略。该方法无需在线视觉语言模型调用即可为多阶段操作引入分块级语义条件，是阶段/技能条件化模仿学习的一种关键实现。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.05832v1",
+      "source": "arxiv",
+      "title": "CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation",
+      "abstract": "Integrating visuomotor policies or Vision-Language-Action (VLA) models with force/torque (F/T) perception has demonstrated significant progress in imitation learning for robotic manipulation. However, existing force-aware VLA models frequently exhibit limited capability in precise force tracking and rapid successive adjustments. This deficiency stems from the limitations of action-chunk execution strategies and the substantial latency between perception and real-time control. Such limitations can lead to task failures and safety risks, particularly when the execution of an action chunk exerts excessive interaction forces without timely adjustment. To overcome this challenge, we propose the Control-aware Compliance VLA (CC-VLA) framework for reactive control. The CC-VLA model employs a multimodal mixture-of-experts (MoE) to encode force signal sequences and vision-language fused feature. Furthermore, it utilizes a multi-stage training strategy to ensure robust perception within the visual-semantic space and effective force perception under sparse sampling conditions. Additionally, a VLA-guided adaptive compliance controller is designed to facilitate precise position tracking during contact-free motion and optimal force-position tracking for contact-rich tasks. To facilitate high-precision F/T data acquisition, we also implement an adversaria shared teleoperation strategy for contact-rich demonstrations that bolsters system safety and interactivity. Extensive real-world experiments demonstrate that CC-VLA significantly improves success rates in challenging force-perception tasks and enhances force-control precision, while providing multi-level safety and robustness under the tested partial-OOD pose-shift settings.",
+      "authors": [
+        "Zhaohong Mai",
+        "Chao Wang",
+        "Chao Zeng",
+        "Sitong Mao",
+        "Heng Zhang",
+        "Shunbo Zhou",
+        "Chenguang Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-05T02:54:51+00:00",
+      "link": "https://arxiv.org/pdf/2609.05832v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "improving imitation/VLA models in contact-rich manipulation when action chunks cause excessive force and slow tracking; directly aligned with action-chunking continuous robot control",
+      "llm_evidence_cn": "面向接触丰富操作中动作块执行导致的力跟踪不足与交互力过大问题，提出控制感知顺应性VLA，直接关联动作块式连续机器人控制",
+      "llm_evidence": "面向接触丰富操作中动作块执行导致的力跟踪不足与交互力过大问题，提出控制感知顺应性VLA，直接关联动作块式连续机器人控制",
+      "canonical_evidence": "面向接触丰富操作中动作块执行导致的力跟踪不足与交互力过大问题，提出控制感知顺应性VLA，直接关联动作块式连续机器人控制",
+      "llm_tldr_en": "Force-aware VLA policies in contact-rich manipulation are limited by action-chunk execution strategies and perception-to-control latency. CR-VLA-Force proposes a Control-aware Compliance VLA model that enables timely force tracking and rapid successive adjustment using force/torque perception. It targets the failure modes of imitation learning with action chunks, but explicit skill conditioning is not described.",
+      "llm_tldr_cn": "力/力矩感知与VLA结合已推进接触丰富操作的模仿学习，但动作块执行策略和感知到控制的延迟限制了精确力跟踪与快速连续调整，过大交互力会带来安全风险。CR-VLA-Force提出控制感知顺应性VLA模型，把顺应性机制融入力/力矩感知的动作生成中，使接触阶段的执行能够及时调整用力。该方法针对动作块执行缺陷进行优化，适用于接触丰富操作中的连续机器人控制。对参数化技能下的接触丰富行为部署与安全约束有直接参考。",
+      "llm_tldr": "力/力矩感知与VLA结合已推进接触丰富操作的模仿学习，但动作块执行策略和感知到控制的延迟限制了精确力跟踪与快速连续调整，过大交互力会带来安全风险。CR-VLA-Force提出控制感知顺应性VLA模型，把顺应性机制融入力/力矩感知的动作生成中，使接触阶段的执行能够及时调整用力。该方法针对动作块执行缺陷进行优化，适用于接触丰富操作中的连续机器人控制。对参数化技能下的接触丰富行为部署与安全约束有直接参考。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.06591v1",
+      "source": "arxiv",
+      "title": "Unifying Physics-Based Humanoid Interaction with a Context-Conditioned Interaction Prior",
+      "abstract": "Developing unified physics-based humanoid controllers that can navigate complex 3D scenes and manipulate objects remains a longstanding challenge. Existing approaches are often specialized for either locomotion or object-centric manipulation, or rely on task-specific reward engineering that does not scale well across diverse behaviors. We present CHIP, a unified, physics-grounded framework for learning reusable humanoid interaction skills from heterogeneous motion data. Central to our approach is a conditional interaction prior that models a context-dependent distribution over these skills within a shared discrete space. Our method is trained in three stages. We first learn physics-based motion-imitation policies that acquire grounded teacher behaviors from heterogeneous interaction data. We then distill these behaviors into a context-conditioned interaction prior that captures reusable motion structure across locomotion and manipulation. Finally, we initialize downstream task policies from the pretrained prior and adapt them through prior-regularized online RL post-training. Experiments on a diverse suite of humanoid interaction tasks show that our approach supports scene-aware locomotion, contact-rich object manipulation, and compositional behaviors such as environment-aware object transport and long-horizon skill sequencing, while producing smooth transitions and physically plausible motion.",
+      "authors": [
+        "Jianan Li",
+        "Xiao Chen",
+        "Tien-Tsin Wong"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.GR"
+      ],
+      "published": "2026-09-06T13:16:48+00:00",
+      "link": "https://arxiv.org/pdf/2609.06591v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Unified framework learning reusable humanoid interaction skills and a context-conditioned skill prior in a shared discrete space, conditioning low-level imitation policies.",
+      "llm_evidence_cn": "在共享离散空间内学习可重用类人交互技能并用上下文条件先验对低层模仿策略进行条件化",
+      "llm_evidence": "在共享离散空间内学习可重用类人交互技能并用上下文条件先验对低层模仿策略进行条件化",
+      "canonical_evidence": "在共享离散空间内学习可重用类人交互技能并用上下文条件先验对低层模仿策略进行条件化",
+      "llm_tldr_en": "CHIP learns reusable physics-based humanoid interaction skills from heterogeneous motion data with a context-conditioned prior over shared discrete skills, trained through physics-based motion imitation in three stages.",
+      "llm_tldr_cn": "现有物理仿真类人控制器往往针对运动或操作单独设计，依赖任务特定奖励工程。CHIP提出统一物理基础框架，使用上下文条件交互先验在共享离散技能空间中建模多样化行为，并通过三阶段训练学习物理运动模仿策略。该方法能从异构动作数据中获取可重用的交互技能，为长时程操作中技能条件化低层控制提供类似技能ID与局部结构化的条件方式。",
+      "llm_tldr": "现有物理仿真类人控制器往往针对运动或操作单独设计，依赖任务特定奖励工程。CHIP提出统一物理基础框架，使用上下文条件交互先验在共享离散技能空间中建模多样化行为，并通过三阶段训练学习物理运动模仿策略。该方法能从异构动作数据中获取可重用的交互技能，为长时程操作中技能条件化低层控制提供类似技能ID与局部结构化的条件方式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.06852v1",
+      "source": "arxiv",
+      "title": "ContextFlow: In-Context Flow Matching for Robot Manipulation",
+      "abstract": "Although highly effective in vision and language domains, applying in-context learning to robotics remains challenging. Existing autoregressive in-context imitation methods discretize continuous actions and exacerbate the accumulation of early prediction errors through next-token prediction, limiting their generalization on unseen task configurations. Meanwhile, flow-matching policies have been explored for continuous robot control and can help mitigate compounding errors; however, in-context imitation learning within a flow-matching framework remains underexplored. To address these limitations, we introduce ContextFlow, a conditional flow-matching model that learns continuous action distributions for in-context imitation learning. ContextFlow conditions flow-based action prediction on demonstrations and observations, enabling robust generation from noisy action distributions. To better encode multimodal in-context demonstrations, we adapt perceiver-style multimodal context compressors that distill visual, proprioceptive, and action sequences into compact, task-relevant latent representations. On LIBERO, ContextFlow outperforms ICRT by 35 percentage points in average success rate on unseen task configurations, while matching the performance of the task-specific fine-tuned VLA model $π_0$ without any fine-tuning on unseen tasks. On real robots, it generalizes to unseen configurations of both single-arm and bimanual tasks, achieving 40% success on a new pen-uncapping configuration. Project Page: https://dingjiansw101.github.io/contextflow-page/.",
+      "authors": [
+        "Jian Ding",
+        "Xianjie Dai",
+        "Roei Herzig",
+        "Nussair Hroub",
+        "Jinjie Mai",
+        "Dengxin Dai",
+        "Bernard Ghanem",
+        "Mohamed Elhoseiny"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-06T21:53:58+00:00",
+      "link": "https://arxiv.org/pdf/2609.06852v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "conditional flow matching for in-context imitation predicts continuous robot actions and specifically targets generalization to unseen task configurations, mitigating compounding errors",
+      "llm_evidence_cn": "条件流匹配进行上下文模仿，预测连续机器人动作，专门针对未见任务配置的泛化并缓解误差累积",
+      "llm_evidence": "条件流匹配进行上下文模仿，预测连续机器人动作，专门针对未见任务配置的泛化并缓解误差累积",
+      "canonical_evidence": "条件流匹配进行上下文模仿，预测连续机器人动作，专门针对未见任务配置的泛化并缓解误差累积",
+      "llm_tldr_en": "ContextFlow learns continuous action distributions via flow matching for in-context imitation in robot manipulation, avoiding discretization and compounding errors while improving generalization to unseen task configurations compared with autoregressive in-context policies.",
+      "llm_tldr_cn": "现有自回归上下文模仿方法把连续动作离散化，易因逐token预测累积误差，限制了对未见任务配置的泛化。ContextFlow提出条件流匹配策略，直接在连续动作分布上进行上下文模仿学习。该方法缓解了误差累积，并在多项机器人操作泛化评测中表现优于自回归式上下文策略。相关工作为连续动作空间中的上下文模仿与组合性泛化提供了新的建模思路。",
+      "llm_tldr": "现有自回归上下文模仿方法把连续动作离散化，易因逐token预测累积误差，限制了对未见任务配置的泛化。ContextFlow提出条件流匹配策略，直接在连续动作分布上进行上下文模仿学习。该方法缓解了误差累积，并在多项机器人操作泛化评测中表现优于自回归式上下文策略。相关工作为连续动作空间中的上下文模仿与组合性泛化提供了新的建模思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.08743v1",
+      "source": "arxiv",
+      "title": "FOCI Policy: Focus on Object-Centric Interactions for Relational Manipulation Policies",
+      "abstract": "Object-centric manipulation policies improve generalization by modeling object motion instead of directly predicting robot actions. However, existing methods are often limited by representations which are either too simplistic to capture interaction dynamics or too dense to learn efficiently. We observe that many rigid relational manipulation tasks are governed by short interaction phases where the relative motion between task-relevant objects is tightly constrained. Based on this observation, we propose \\textsc{Foci Policy}, an interaction-centric framework that achieves a two-fold abstraction: (1) temporally, by automatically extracting compact interaction segments from demonstrations;(2) spatially, by representing skills as relative $SE(3)$ motion between task-relevant objects, yielding invariance to scene configurations and robot embodiment. Experiments on RLBench, COLOSSEUM, and real-world tasks show that \\textsc{Foci Policy} achieves strong performance with substantially less training data than prior object-centric and action-centric policies. These results suggest that modeling object-object interactions provides a simple and efficient inductive bias for rigid relational manipulation. Project page: \\href{https://fitz0401.github.io/foci-page/}{fitz0401.github.io/foci-page/}.",
+      "authors": [
+        "Ze Fu",
+        "Pinhao Song",
+        "Yutong Hu",
+        "Renaud Detry"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-08T13:35:56+00:00",
+      "link": "https://arxiv.org/pdf/2609.08743v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Extracts compact interaction phases from demonstrations and represents them as reusable skills for relational manipulation.",
+      "llm_evidence_cn": "从示范中提取紧凑交互阶段并将它们表示为可重用技能，用于关系操作",
+      "llm_evidence": "从示范中提取紧凑交互阶段并将它们表示为可重用技能，用于关系操作",
+      "canonical_evidence": "从示范中提取紧凑交互阶段并将它们表示为可重用技能，用于关系操作",
+      "llm_tldr_en": "Relational manipulation is decomposed into short interaction phases by extracting compact interaction segments from demonstrations; the interaction-centric policy represents skills as relative motions to improve generalization and learning efficiency.",
+      "llm_tldr_cn": "现有对象中心操作策略受限于过于简单或过密的交互表示。FOCI提出交互中心策略，从示范中自动提取紧凑交互片段，并在空间上将技能表示为任务相关对象的相对运动。该方法在关系操作任务上提升了泛化与学习效率。其意义在于用阶段化技能抽象实现关系操作的可复用建模。",
+      "llm_tldr": "现有对象中心操作策略受限于过于简单或过密的交互表示。FOCI提出交互中心策略，从示范中自动提取紧凑交互片段，并在空间上将技能表示为任务相关对象的相对运动。该方法在关系操作任务上提升了泛化与学习效率。其意义在于用阶段化技能抽象实现关系操作的可复用建模。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.05985v1",
+      "source": "arxiv",
+      "title": "A Brain-inspired Hierarchical Framework for Zero-Shot Robot Task Reasoning and Execution",
+      "abstract": "Robots that follow open-ended language instructions need to connect semantic intent to visual scene understanding, geometric feasibility, object states, and physical interaction conditions. End-to-end Vision-Language-Action policies have improved cross-task generalization, but they typically map visual and language inputs directly to robot actions, leaving limited explicit structure for long-horizon decomposition, physical verification, and recovery. We present \\method, a zero-shot hierarchical framework functionally inspired by the division of roles in the human brain, comprising visual perception and state inference, language grounding and action-sequence generation from a shared atomic action library, cost-based plan selection, and real-robot execution and verification. The framework grounds commands in explicit object states, composes reusable atomic actions into task-conditioned sequences, ranks alternative sequences by execution cost, and verifies intermediate physical outcomes from refreshed observations. In the evaluation, \\method{} completes 10/10 clean board trials, 10/10 pick-and-place trials, and 4/5 pyramid stacking trials for both the flat and irregular initial-layout conditions; the corresponding mean task progress is $99.03\\%$, $100.00\\%$, and $96.67\\%$ respectively. Across all evaluated conditions, \\method{} achieves higher success rates than ReKep, Dream2Flow, and $π_{0.5}$ benchmarks, demonstrating the effectiveness of combining explicit object-state reasoning, compositional atomic actions, cost-based plan selection, and closed-loop execution verification.",
+      "authors": [
+        "Guangming Wang",
+        "Pengfei Ye",
+        "Qizhen Ying",
+        "Yixiong Jing",
+        "Yuxiang Ma",
+        "Haonan Chen",
+        "Haibing Wu",
+        "Olaf Wysocki",
+        "Molong Duan",
+        "Brian Sheil"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-05T08:59:04+00:00",
+      "link": "https://arxiv.org/pdf/2609.05985v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical zero-shot framework with shared atomic action library, long-horizon decomposition and recovery; relevant to reusable skill/hierarchical task representation although not imitation learning",
+      "llm_evidence_cn": "共享原子动作库、高层长时任务分解与代价选计划的层级框架，接近可复用技能库与层级执行思想，但不含模仿学习/技能ID",
+      "llm_evidence": "共享原子动作库、高层长时任务分解与代价选计划的层级框架，接近可复用技能库与层级执行思想，但不含模仿学习/技能ID",
+      "canonical_evidence": "共享原子动作库、高层长时任务分解与代价选计划的层级框架，接近可复用技能库与层级执行思想，但不含模仿学习/技能ID",
+      "llm_tldr_en": "End-to-end Vision-Language-Action policies improve cross-task generalization but lack explicit structure for long-horizon decomposition, physical verification, and recovery. This brain-inspired hierarchical zero-shot framework performs visual/state inference, language-grounded action-sequence generation from a shared atomic action library, cost-based plan selection, and recovery. It offers a reusable atomic action library hierarchy, which is useful for skill-library long-horizon control.",
+      "llm_tldr_cn": "端到端VLA虽然提升跨任务泛化，但在长时任务分解、物理验证和失败恢复上缺少显式结构。论文提出受大脑功能分工启发的零样本分层框架，集成视觉感知、状态推理、基于共享原子动作库的语言动作序列生成、成本选计划与恢复机制。它把长时开放指令转换为显式的层级执行结构，从而改善语义、几何与物理条件的衔接。该框架与可复用技能库、长时任务层级表达直接相关，可为参数化技能库设计提供参考。",
+      "llm_tldr": "端到端VLA虽然提升跨任务泛化，但在长时任务分解、物理验证和失败恢复上缺少显式结构。论文提出受大脑功能分工启发的零样本分层框架，集成视觉感知、状态推理、基于共享原子动作库的语言动作序列生成、成本选计划与恢复机制。它把长时开放指令转换为显式的层级执行结构，从而改善语义、几何与物理条件的衔接。该框架与可复用技能库、长时任务层级表达直接相关，可为参数化技能库设计提供参考。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.07165v1",
+      "source": "arxiv",
+      "title": "State-of-the-Art in Learning-by-Demonstration with Passive Observation for Industrial Assembly Automation",
+      "abstract": "Learning-by-Demonstration (LbD) enables intuitive robot programming by capturing expert skills, which is crucial for agility in high-mix, low- volume manufacturing. This systematic literature review analyzes passive LbD for industrial assembly processes, focusing on the perception architecture and the generalization of the perceived demonstration. We specifically investigate one-shot approaches where only a single demonstration is required. The review evaluates how systems adapt to new assemblies using this limited data. We identify a shift towards object-centric perception, allowing learned primitives to be transferred to new product variants with minimal training.",
+      "authors": [
+        "David Koetter",
+        "Oliver Petrovic",
+        "Christian Brecher"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-07T07:58:44+00:00",
+      "link": "https://arxiv.org/pdf/2609.07165v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Systematic review of LbD for assembly where learned primitives are transferred to new product variants via object-centric perception, relevant to parameterized skill primitives",
+      "llm_evidence_cn": "装配示教学习综述强调物体中心感知带来的原语迁移,直接关联参数化技能原语与组合泛化",
+      "llm_evidence": "装配示教学习综述强调物体中心感知带来的原语迁移,直接关联参数化技能原语与组合泛化",
+      "canonical_evidence": "装配示教学习综述强调物体中心感知带来的原语迁移,直接关联参数化技能原语与组合泛化",
+      "llm_tldr_en": "This literature review analyzes passive observation learning-by-demonstration for assembly automation, focusing on one-shot approaches and object-centric perception, and finds that learned primitives are increasingly transferred to new product variants with minimal training.",
+      "llm_tldr_cn": "学习式演示(LbD)通过捕获专家技能实现机器人快速编程,对高混合低批量装配自动化至关重要。该综述聚焦工业装配中的被动观察式LbD,特别考察只需单条演示的方法及系统如何适应新型装配。分析发现感知架构正转向物体中心感知,使得学得的操作原语能以最少训练被迁移到新产品的变体。这一趋势直接支持可复用、可参数化的装配技能库构建,对装配任务的组合泛化研究有重要参考价值。",
+      "llm_tldr": "学习式演示(LbD)通过捕获专家技能实现机器人快速编程,对高混合低批量装配自动化至关重要。该综述聚焦工业装配中的被动观察式LbD,特别考察只需单条演示的方法及系统如何适应新型装配。分析发现感知架构正转向物体中心感知,使得学得的操作原语能以最少训练被迁移到新产品的变体。这一趋势直接支持可复用、可参数化的装配技能库构建,对装配任务的组合泛化研究有重要参考价值。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.06508v1",
+      "source": "arxiv",
+      "title": "VLA-Corrector: Stage-Aware Observable State Understanding for Prompt-Based Closed-Loop Recovery of Vision-Language-Action Policies",
+      "abstract": "Long-horizon robot manipulation with Vision-Language-Action (VLA) policies remains vulnerable to execution-time deviations, as final task success provides little information for diagnosing and correcting failures caused by action noise, object displacement, or goal misalignment. We introduce a stage-aware failure verification and Prompt Recovery framework that enables closed-loop correction of a fixed VLA policy without parameter updates or privileged simulator states. The framework introduces an observable-history-based Learned Verifier that jointly estimates manipulation progress and execution risk by temporally modeling multi-view visual observations, proprioceptive states, and executed actions. To provide interpretable task understanding, we represent manipulation execution through semantic progress stages, including approach, alignment, grasp, transport, and placement, and identify stage-specific failure patterns. Upon detecting abnormal execution, the framework preserves the original instruction and generates a stage-conditioned recovery prompt, allowing the same frozen VLA policy to produce corrective actions. Extensive multi-round evaluations on LIBERO and LIBERO Plus demonstrate that the proposed approach substantially improves closed-loop reliability under diverse perturbations. Without access to privileged object or goal coordinates, the Learned Verifier achieves recovery performance close to that of the privileged rule-based verifier in the evaluated settings. These results show that observable visual-proprioceptive-action history is sufficient to infer latent task states and enable practical failure recovery for existing VLA policies.",
+      "authors": [
+        "Chang Song",
+        "Bin Qian",
+        "Yan Feng",
+        "Zhijie Song"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-06T09:50:30+00:00",
+      "link": "https://arxiv.org/pdf/2609.06508v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Stage-aware learned verifier and prompt-based closed-loop recovery for fixed VLA policies during long-horizon manipulation.",
+      "llm_evidence_cn": "阶段感知学习验证器与提示式闭环恢复，用于长时程操作中固定VLA策略的纠错",
+      "llm_evidence": "阶段感知学习验证器与提示式闭环恢复，用于长时程操作中固定VLA策略的纠错",
+      "canonical_evidence": "阶段感知学习验证器与提示式闭环恢复，用于长时程操作中固定VLA策略的纠错",
+      "llm_tldr_en": "Long-horizon VLA policies suffer execution deviations; VLA-Corrector uses an observable-history learned verifier to estimate progress and execution risk and issues recovery prompts for closed-loop recovery without parameter updates or privileged states.",
+      "llm_tldr_cn": "长时程VLA策略在真实执行中容易因动作噪声、物体位移或目标错位发生隐蔽故障。VLA-Corrector提出阶段感知的故障验证与提示恢复框架，利用可观测历史学习验证器联合估计操作进度与执行风险。无需更新参数或使用特权状态即可对固定VLA策略进行闭环纠正，提升长时程操作的可靠性与可恢复性。",
+      "llm_tldr": "长时程VLA策略在真实执行中容易因动作噪声、物体位移或目标错位发生隐蔽故障。VLA-Corrector提出阶段感知的故障验证与提示恢复框架，利用可观测历史学习验证器联合估计操作进度与执行风险。无需更新参数或使用特权状态即可对固定VLA策略进行闭环纠正，提升长时程操作的可靠性与可恢复性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.07581v1",
+      "source": "arxiv",
+      "title": "ICI-VLA: In-Context Imitation with Spatiotemporally Aligned Demonstrations for Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) policies are commonly adapted to new manipulation settings through additional gradient updates, which limits rapid deployment when task-specific data or compute is scarce. We present ICI-VLA, a training and retrieval framework that equips a text-action VLM with few-shot test-time adaptation through in-context demonstrations. Unlike mainstream VLA designs based on action-specific multimodal fusion, ICI-VLA retains the native text-generation interface. ICI-VLA updates its parameters only during offline training; at inference, the policy remains fixed and conditions action generation on retrieved micro-demonstrations. The framework decomposes long trajectories into short, semantically labeled examples and trains an RD-Encoder with positives mined by Dynamic Time Warping (DTW), aligning the retrieved context with the phase and geometry of the current subtask. We further introduce Target Action Masking, a context-corruption objective designed to reduce direct action copying and increase reliance on the current observation. ICI-VLA reaches average success rates of 97.7% on LIBERO and 60.4% on RoboTwin 2.0, exceeding the highest reported baseline average on RoboTwin 2.0 by 19.3 percentage points. It also achieves 83.2% across four physical tasks. These results indicate that a fixed VLA policy can benefit from conditioning on spatiotemporally aligned demonstrations at test time.",
+      "authors": [
+        "Songhua Yang",
+        "Ziyu Liu",
+        "Xuetao Li",
+        "Ruqi Xiao",
+        "Kangxin Zhu",
+        "Miao Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-07T14:55:35+00:00",
+      "link": "https://arxiv.org/pdf/2609.07581v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Decomposes long trajectories into short semantic segments and uses retrieved micro-demonstrations to condition imitation, analogous to reusable skills in long-horizon learning",
+      "llm_evidence_cn": "将长轨迹切分为短语义片段并利用检索微示范来条件模仿,与长期任务中可复用技能的思路一致",
+      "llm_evidence": "将长轨迹切分为短语义片段并利用检索微示范来条件模仿,与长期任务中可复用技能的思路一致",
+      "canonical_evidence": "将长轨迹切分为短语义片段并利用检索微示范来条件模仿,与长期任务中可复用技能的思路一致",
+      "llm_tldr_en": "ICI-VLA provides few-shot in-context imitation for VLA policies without test-time gradient updates. It decomposes long trajectories into semantically labeled segments and retrieves aligned micro-demonstrations to condition the fixed policy at inference.",
+      "llm_tldr_cn": "现有多数视觉-语言-动作(VLA)模型需要用梯度更新来适配新操纵场景,当任务数据或算力不足时难以快速部署。本文提出ICI-VLA,一个训练与检索框架,通过离线训练后保持策略固定,只在推理时检索时空对齐的微示范进行上下文模仿。框架将长轨迹分解成简短、带语义标签的片段,使不改变参数即可适配多种操作设置。该方法展示了语义化示范切分与检索可作为长期任务技能复用和快速迁移的有效途径。",
+      "llm_tldr": "现有多数视觉-语言-动作(VLA)模型需要用梯度更新来适配新操纵场景,当任务数据或算力不足时难以快速部署。本文提出ICI-VLA,一个训练与检索框架,通过离线训练后保持策略固定,只在推理时检索时空对齐的微示范进行上下文模仿。框架将长轨迹分解成简短、带语义标签的片段,使不改变参数即可适配多种操作设置。该方法展示了语义化示范切分与检索可作为长期任务技能复用和快速迁移的有效途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

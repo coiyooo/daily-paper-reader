@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-08</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-09</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 9 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-08 21:54:45 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-09 22:20:11 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦3篇具身智能/机器人学习论文，其中1篇精读、2篇速读。最值得关注的是《TacPAC》（8.0分），利用触觉预测与世界-动作模型实现实时动作修正，面向接触丰富的操作场景；另两篇分别涉及子目标引导的演员-评论家方法和VLA模型的时序级故障检测。建议后续优先深入触觉与动作生成结合的思路，并留意故障检测方法对提升模型可靠性的潜力。</p>
+<p>今日聚焦具身智能与视觉-语言-行动模型（VLA），围绕机器人多阶段操作、接触力鲁棒控制与零样本推理展开。</p>
+<p>最值得精读的是《CASD》与《CR-VLA-Force》：前者用分块对齐语义蒸馏提升多阶段任务成功率，后者引入力觉感知让VLA在密集接触操作中更稳健。</p>
+<p>若想快速入门，可先看总分87分左右的速读论文，关注“层级化范式和场景级状态纠正”两个设计思路。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation">TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CASD: Chunk-Aligned Semantic Distillation for Multi-StageRobot Manipulation">CASD: Chunk-Aligned Semantic Distillation for Multi-StageRobot Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation">CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Unifying Physics-Based Humanoid Interaction with a Context-Conditioned Interaction Prior">Unifying Physics-Based Humanoid Interaction with a Context-Conditioned Interaction Prior</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic">Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic</span></li><li><span class="dpr-home-dashboard-paper-title" title="FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models">FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A Brain-inspired Hierarchical Framework for Zero-Shot Robot Task Reasoning and Execution">A Brain-inspired Hierarchical Framework for Zero-Shot Robot Task Reasoning and Execution</span></li><li><span class="dpr-home-dashboard-paper-title" title="VLA-Corrector: Stage-Aware Observable State Understanding for Prompt-Based Closed-Loop Recovery of Vision-Language-Action Policies">VLA-Corrector: Stage-Aware Observable State Understanding for Prompt-Based Closed-Loop Recovery of Vision-Language-Action Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="ICI-VLA: In-Context Imitation with Spatiotemporally Aligned Demonstrations for Vision-Language-Action Models">ICI-VLA: In-Context Imitation with Spatiotemporally Aligned Demonstrations for Vision-Language-Action Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>4</strong></span></div>
 </section>
 </div>
 
