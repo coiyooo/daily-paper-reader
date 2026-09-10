@@ -1,0 +1,259 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-10T21:32:46.840917+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.09808v1",
+      "source": "arxiv",
+      "title": "GTA-2: A Multi-VLM Framework for Synthesizing Robot Manipulation Skills via Grounded Task Axes",
+      "abstract": "Robotic manipulation tasks are often decomposed into behaviors or skills. However, one often needs to predefine these behaviors for specific tasks or try to cover a wide range of tasks using generic skills. As a result, these behaviors can remain too coarse to expose the geometric, control, and scene-dependent decisions required for execution. We introduce Grounded Task Axes v2 (GTA-2), a modular multi-VLM framework that constructs executable, task-bespoke manipulation skills from reusable object-centric task-axis components. Rather than predicting actions end-to-end or composing fixed task-level primitives, GTA-2 represents each skill as semantic subtasks comprising task-relevant keypoints and axes, controller compositions, and scene-dependent parameters. Four specialized VLM agents separately decompose the task, construct an abstract task-axis skill, assign controller parameters, and ground the required visual features from RGB-D observations. This abstraction-to-grounding factorization enables zero-shot skill generation without task-specific robot demonstrations, policy training, or fine-tuning. It also keeps intermediate decisions explicit, allowing targeted human feedback to refine an incorrect stage while preserving correct components. We evaluate GTA-2 on 14 real-robot manipulation tasks against a VLA policy pi_{0.5} and two Code-as-Policies baselines using task-axis controllers or conventional robot primitives. GTA-2 achieves an average zero-shot success rate of 73.9%, exceeding the strongest baseline by 31.4 percentage points, while targeted refinement raises GTA-2's average success rate to 90.7%. Project page: https://gta2-project.github.io/",
+      "authors": [
+        "M. Yunus Seker",
+        "Shobhit Aggarwal",
+        "Ruwan Wickramarachchi",
+        "Jonathan Francis",
+        "Oliver Kroemer"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-09T07:04:35+00:00",
+      "link": "https://arxiv.org/pdf/2609.09808v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reusable object-centric task-axis components composing executable skills",
+      "llm_evidence_cn": "可复用物体中心任务轴组件组合可执行技能",
+      "llm_evidence": "可复用物体中心任务轴组件组合可执行技能",
+      "canonical_evidence": "可复用物体中心任务轴组件组合可执行技能",
+      "llm_tldr_en": "GTA-2 builds executable task-bespoke manipulation skills from reusable object-centric task-axis components, representing skills as semantic subtasks with keypoints, axes, and controllers.",
+      "llm_tldr_cn": "针对机器人操作技能常需按任务预定义、或使用过粗通用技能而难以暴露几何与控制细节的问题，本文提出GTA-2多VLM框架，从可复用的物体中心任务轴组件构建可执行的任务定制技能。它把技能表示为含关键点、任务轴与控制器组合的语义子任务，而非端到端预测或固定原语组合。该框架为可复用参数化操作技能的合成提供了新途径。",
+      "llm_tldr": "针对机器人操作技能常需按任务预定义、或使用过粗通用技能而难以暴露几何与控制细节的问题，本文提出GTA-2多VLM框架，从可复用的物体中心任务轴组件构建可执行的任务定制技能。它把技能表示为含关键点、任务轴与控制器组合的语义子任务，而非端到端预测或固定原语组合。该框架为可复用参数化操作技能的合成提供了新途径。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.06256v1",
+      "source": "arxiv",
+      "title": "GloVLA: Let Geometry Move and Local VLA Interact for Robust Object-Centric Manipulation in Unstructured Environments",
+      "abstract": "Vision-language-action (VLA) models have shown promising generalization for language-conditioned robot manipulation, but deploying them in unstructured environments remains challenging. A single end-to-end VLA policy must simultaneously solve long-range transport of the end effector to task-relevant regions and short-horizon, contact-rich interaction upon arrival. This formulation is inefficient and brittle: small visual shifts, distractors, clutter, occlusions, or unfavorable initial gripper poses can push the policy outside the local state distribution in which it was trained, leading to task failure. We introduce GloVLA, a hybrid framework that explicitly separates object-centric manipulation into two complementary regimes: a geometric transport controller moves the end-effector into interaction-centric handoff regions, and local VLA policies handle only the short-horizon interaction phases. GloVLA is model-agnostic and can be integrated with different VLA backbones with no additional demonstrations and no changes to the action space or success predicate. Experiments on standard LIBERO and LIBERO-Plus Object tasks together with a newly introduced LIBERO-Challenge benchmark ettings with clutter, distractors,illumination changes, visual shifts, and obstruction show that GloVLA improves task success and substantially lowers VLA inference cost compared with full end-to-Challenge, full-trajectory GR00T N1.6execution degrades to 20.9% average success while GloVLA retains 88.5%; on a physical UR10e, overall success improves from 35.6% to 90.0% while mean inference time is more than halved. Videos and additional results are available at https://glovla-project.github.io/",
+      "authors": [
+        "Truong Thanh Nguyen",
+        "Huy Hoang Nguyen",
+        "Ha Anh Nguyen",
+        "Binh Khanh Dinh",
+        "Ngo Anh Vien",
+        "Duy Nguyen Ho Minh",
+        "Minh Nhat Vu",
+        "Ngan Le"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-05T20:48:14+00:00",
+      "link": "https://arxiv.org/pdf/2609.06256v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "separates long-range transport and contact-rich interaction",
+      "llm_evidence_cn": "分离长距离移动与接触丰富交互",
+      "llm_evidence": "分离长距离移动与接触丰富交互",
+      "canonical_evidence": "分离长距离移动与接触丰富交互",
+      "llm_tldr_en": "GloVLA separates object-centric manipulation into global geometric movement and local VLA interaction, improving robustness of contact-rich manipulation in cluttered, unstructured environments.",
+      "llm_tldr_cn": "端到端视觉语言动作模型需同时处理末端执行器长距离移动与到达后的接触丰富交互，在非结构化环境中易因视觉扰动或杂乱而失败。论文提出 GloVLA，将物体中心操作显式分解为全局几何移动与局部 VLA 交互两部分。该混合框架提升了在杂乱、遮挡等非结构化场景下的鲁棒性与操作成功率。",
+      "llm_tldr": "端到端视觉语言动作模型需同时处理末端执行器长距离移动与到达后的接触丰富交互，在非结构化环境中易因视觉扰动或杂乱而失败。论文提出 GloVLA，将物体中心操作显式分解为全局几何移动与局部 VLA 交互两部分。该混合框架提升了在杂乱、遮挡等非结构化场景下的鲁棒性与操作成功率。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.06522v1",
+      "source": "arxiv",
+      "title": "Knowledge-Guided Hierarchical Policy Learning for High-Precision Cylindrical Assembly under Tight Tolerances",
+      "abstract": "A hybrid hierarchical learning framework is proposed to achieve high-precision assembly of 170mm cylindrical components with tolerance of 0.1mm. The lower-level network integrates expert experience through Behavior Cloning (BC), giving the robot human-like intuition, and incorporates the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm to enhance training stability and robustness. The upper-level network dynamically adjusts the lower-level decisions based on heuristic rules, ensuring flexibility in operations. A simulated model is constructed to learn before transferring to real world. An efficient and safe training is allowed. Comparisons show that the reward curve converges within 500 episodes, indicating high learning efficiency. It also demonstrates better adaptability to initial conditions and pose errors, achieving satisfactory success rates even under extreme conditions. Moreover, the method exhibits good stability under Gaussian noise interference. In the real world, the assembly trajectory of the cylindrical segment shows smoother motion and less fluctuation.",
+      "authors": [
+        "Binbin Lian",
+        "Xinyu Liu",
+        "Tao Sun"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-06T10:44:28+00:00",
+      "link": "https://arxiv.org/pdf/2609.06522v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical policy learning for contact-rich high-precision assembly",
+      "llm_evidence_cn": "面向接触密集高精度装配的分层策略学习",
+      "llm_evidence": "面向接触密集高精度装配的分层策略学习",
+      "canonical_evidence": "面向接触密集高精度装配的分层策略学习",
+      "llm_tldr_en": "This paper proposes a hybrid hierarchical learning framework for high-precision cylindrical assembly under tight tolerances, combining behavior cloning with TD3 in a lower-level network and heuristic-rule upper-level adjustment, trained in simulation then transferred to the real robot.",
+      "llm_tldr_cn": "针对170毫米圆柱件0.1毫米公差高精度装配难以兼顾精度与柔顺性的问题,本文提出混合分层学习框架。下层网络通过行为克隆融入专家经验并引入TD3提升训练稳定性,上层网络基于启发式规则动态调整下层决策,并在仿真中预训练后迁移到真实机器人以保证训练安全高效。结果显示奖励曲线在500回合内收敛。其贡献在于接触密集装配的分层策略学习,与可复用技能及接触丰富操作主题相关。",
+      "llm_tldr": "针对170毫米圆柱件0.1毫米公差高精度装配难以兼顾精度与柔顺性的问题,本文提出混合分层学习框架。下层网络通过行为克隆融入专家经验并引入TD3提升训练稳定性,上层网络基于启发式规则动态调整下层决策,并在仿真中预训练后迁移到真实机器人以保证训练安全高效。结果显示奖励曲线在500回合内收敛。其贡献在于接触密集装配的分层策略学习,与可复用技能及接触丰富操作主题相关。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.07211v1",
+      "source": "arxiv",
+      "title": "Phase-and-First-Arrival VLM Feedback for Sparse-Reward Reinforcement Learning in Surgical Manipulation",
+      "abstract": "Sparse outcome feedback limits what robots can learn from unsuccessful attempts at complex manipulation. Failed multi-stage surgical attempts can contain grasps, lifts, or transfers worth reusing. In sparse-reward reinforcement learning, terminal rewards collapse such attempts to the same outcome, while scalar vision-language model (VLM) ratings reveal neither what progress merits credit nor when it occurred. We introduce phase-and-first-arrival feedback: one VLM query per recorded episode identifies the furthest visually verified task phase and when that phase is first reached, allowing the learner to reuse partial behavior and localize credit. We instantiate it in SurgPhaseBench, a phase-structured suite spanning rigid and deformable tasks, and evaluate it in simulation and hardware. Across five simulated tasks, our method reaches 75.2% mean success, compared with 52.1% for a reward based on Contrastive Language-Image Pre-training (CLIP) using the same visual input; the advantage persists when only the feedback representation changes. On hardware, the same record supports autonomous block picking and slip recovery. Together, these results show that trajectory-level visual supervision can preserve partial progress while providing the temporal credit needed for sparse-reward control.",
+      "authors": [
+        "Wanli Liuchen",
+        "Fangyuan Wang",
+        "Bin Li",
+        "Anqing Duan",
+        "Yunhui Liu",
+        "Peng Zhou",
+        "David Navarro-Alarcon"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-07T08:29:59+00:00",
+      "link": "https://arxiv.org/pdf/2609.07211v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "phase-structured feedback reusing partial behavior",
+      "llm_evidence_cn": "阶段化反馈复用部分行为",
+      "llm_evidence": "阶段化反馈复用部分行为",
+      "canonical_evidence": "阶段化反馈复用部分行为",
+      "llm_tldr_en": "Phase-and-first-arrival feedback queries a VLM once per episode to identify the furthest verified task phase and its first arrival time, enabling credit assignment and partial-behavior reuse in sparse-reward surgical manipulation.",
+      "llm_tldr_cn": "稀疏结果奖励使机器人难以从复杂多阶段操作失败中学习，终端奖励与标量评分都无法给出进度与时间信用。论文提出阶段与首次到达反馈，用一次视觉语言模型查询识别每段轨迹中已验证的最远阶段及其首次到达时刻。该方法让学习器复用部分行为并定位信用，在手术操作多阶段基准上提升稀疏奖励强化学习效果。",
+      "llm_tldr": "稀疏结果奖励使机器人难以从复杂多阶段操作失败中学习，终端奖励与标量评分都无法给出进度与时间信用。论文提出阶段与首次到达反馈，用一次视觉语言模型查询识别每段轨迹中已验证的最远阶段及其首次到达时刻。该方法让学习器复用部分行为并定位信用，在手术操作多阶段基准上提升稀疏奖励强化学习效果。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.09630v1",
+      "source": "arxiv",
+      "title": "JEPA Policy: Diffusion-Free Imitation Learning via Paired Action and Future Representation Prediction",
+      "abstract": "Standard behavior cloning supervises actions without explicitly constraining the future representation paired with each demonstrated action chunk. We introduce JEPA Policy, a diffusion-free framework that uses the action chunk and its observed future representation as paired training targets. Action and future-representation tokens interact in a shared Transformer and are refined through two forward passes. Future prediction can therefore shape the representation used to generate actions. Dual-branch and gradient-routing controls attribute the gain to this shared topology rather than to an auxiliary prediction head alone. Across nine simulated tasks, JEPA Policy improves mean success over the action-only MIP baseline and outperforms Diffusion Policy under the evaluated configurations, while adding 0.29 ms to MIP's model latency. A five-task, 630-episode physical-robot study produces the same pooled ranking. Further audits find no complete representation collapse under action supervision and identify a task-conditioned failure-ranking signal in future-prediction error. These results support paired future-representation supervision as a practical approach to low-latency visuomotor imitation without iterative generative sampling.",
+      "authors": [
+        "Jie Xu",
+        "Kangjin Yu",
+        "Ziyi Jin",
+        "Junjie Gao",
+        "Liqing Chen",
+        "Yixian Li",
+        "Shuai Tian",
+        "Zhongpu Xia"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-09T02:42:20+00:00",
+      "link": "https://arxiv.org/pdf/2609.09630v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "diffusion-free imitation learning with action chunk and shared Transformer",
+      "llm_evidence_cn": "结合动作块与共享Transformer的无扩散模仿学习",
+      "llm_evidence": "结合动作块与共享Transformer的无扩散模仿学习",
+      "canonical_evidence": "结合动作块与共享Transformer的无扩散模仿学习",
+      "llm_tldr_en": "JEPA Policy is a diffusion-free imitation learning framework pairing action chunks with future representation prediction in a shared Transformer.",
+      "llm_tldr_cn": "标准行为克隆仅监督动作，未显式约束与动作块配对的未来表征。本文提出JEPA Policy，一种无扩散模仿学习框架，将动作块与其观测到的未来表征作为配对训练目标，在共享Transformer中交互并经过两次前向精修，使未来预测能塑造生成动作所用的表征。在九个仿真任务上，其平均成功率优于仅动作基线，并通过双分支与梯度路由控制归因增益。该工作与动作分块Transformer及模仿学习直接相关。",
+      "llm_tldr": "标准行为克隆仅监督动作，未显式约束与动作块配对的未来表征。本文提出JEPA Policy，一种无扩散模仿学习框架，将动作块与其观测到的未来表征作为配对训练目标，在共享Transformer中交互并经过两次前向精修，使未来预测能塑造生成动作所用的表征。在九个仿真任务上，其平均成功率优于仅动作基线，并通过双分支与梯度路由控制归因增益。该工作与动作分块Transformer及模仿学习直接相关。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.09925v1",
+      "source": "arxiv",
+      "title": "Time-Frequency Geometric Cross-Attention for Chunked Vision-Language-Action Models",
+      "abstract": "Modern vision-language-action (VLA) policies predict a whole chunk of actions: one to two seconds of coordinated motion emitted in a single forward pass. Yet an action chunk is essentially a short multivariate trajectory, but inside these models it is a sequence of generic per-timestep hidden tokens decoded by a linear head. This under-serves two motion structures. First, frequency: a chunk superimposes a smooth global trend and fine corrective motion across time scales, and a single token entangles them. Second, cross-phase geometry: motions of different phases (reach, contact, grasp adjustment, settling) unfold along very different, near-orthogonal directions in representation space, yet are tightly related for the task and arise across the time axis. Dot-product attention scores alignment by an inner product, so it favors aligned tokens and is least sensitive near orthogonality, leaving such relationships for the network to recover through a detour.   We introduce Time-Frequency Geometric Cross-Attention (TFGCA), a drop-in module repairing both blind spots. TFGCA uses a per-dimension learnable stationary wavelet transform to decompose the action chunk into time-frequency tokens, and each time token retrieves information from them via a cross-attention that fuses the dot product (similarity) with the wedge-product magnitude (sensitive to near-orthogonality) through a learnable weight. A zero-initialized residual reproduces the base behavior at initialization, so it can be dropped onto a pretrained VLA and fine-tuned jointly. Relative to the same-source base, TFGCA improves in-distribution LIBERO by +1.5 on average, the OOD LIBERO-Plus by +6.3, the randomized average under RoboTwin domain randomization by +28.5, and the overall success rate on three real-robot AgiBot A2 tasks by +11.67 points, with larger gains out of distribution.",
+      "authors": [
+        "Shengye Dong",
+        "Haochen Niu",
+        "Hao Liu",
+        "Peiwen Lin",
+        "Chuang Wang",
+        "Shanmin Pang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-09T09:16:49+00:00",
+      "link": "https://arxiv.org/pdf/2609.09925v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "chunked VLA, action chunk, motion phases reach contact grasp",
+      "llm_evidence_cn": "分块VLA、动作块与接触抓取等运动相位",
+      "llm_evidence": "分块VLA、动作块与接触抓取等运动相位",
+      "canonical_evidence": "分块VLA、动作块与接触抓取等运动相位",
+      "llm_tldr_en": "The paper proposes time-frequency geometric cross-attention for chunked VLA models, modeling action chunks as trajectories with frequency structure and phase geometry.",
+      "llm_tldr_cn": "现代VLA策略一次前向即输出整段动作块，但动作块被当作通用逐时刻隐令牌解码，忽视了其频率结构（平滑趋势与细微修正叠加）和跨相位几何（接近、接触、抓取调整、稳定等相位方向近乎正交）。本文提出时频几何交叉注意力，将动作块显式建模为多变量轨迹并刻画相位间几何关系。实验表明该机制更好捕捉运动结构，提升操作任务表现。该工作与动作分块Transformer及局部相位条件化控制高度相关。",
+      "llm_tldr": "现代VLA策略一次前向即输出整段动作块，但动作块被当作通用逐时刻隐令牌解码，忽视了其频率结构（平滑趋势与细微修正叠加）和跨相位几何（接近、接触、抓取调整、稳定等相位方向近乎正交）。本文提出时频几何交叉注意力，将动作块显式建模为多变量轨迹并刻画相位间几何关系。实验表明该机制更好捕捉运动结构，提升操作任务表现。该工作与动作分块Transformer及局部相位条件化控制高度相关。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

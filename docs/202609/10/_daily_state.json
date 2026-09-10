@@ -1,0 +1,105 @@
+{
+  "date": "20260910",
+  "date_label": "",
+  "generated_at": "2026-09-10 21:35:37 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.09808v1",
+      "route": "202609/10/2609.09808v1-gta-2-a-multi-vlm-framework-for-synthesizing-robot-manipulation-skills-via-grounded-task-axes",
+      "title": "GTA-2: A Multi-VLM Framework for Synthesizing Robot Manipulation Skills via Grounded Task Axes",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "可复用物体中心任务轴组件组合可执行技能",
+      "first_seen_at": "2026-09-10 21:35:37 UTC",
+      "updated_at": "2026-09-10 21:35:37 UTC"
+    },
+    {
+      "paper_id": "2609.06256v1",
+      "route": "202609/10/2609.06256v1-glovla-let-geometry-move-and-local-vla-interact-for-robust-object-centric-manipulation-in-unstructured-environments",
+      "title": "GloVLA: Let Geometry Move and Local VLA Interact for Robust Object-Centric Manipulation in Unstructured Environments",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "分离长距离移动与接触丰富交互",
+      "first_seen_at": "2026-09-10 21:35:37 UTC",
+      "updated_at": "2026-09-10 21:35:37 UTC"
+    },
+    {
+      "paper_id": "2609.06522v1",
+      "route": "202609/10/2609.06522v1-knowledge-guided-hierarchical-policy-learning-for-high-precision-cylindrical-assembly-under-tight-tolerances",
+      "title": "Knowledge-Guided Hierarchical Policy Learning for High-Precision Cylindrical Assembly under Tight Tolerances",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向接触密集高精度装配的分层策略学习",
+      "first_seen_at": "2026-09-10 21:35:37 UTC",
+      "updated_at": "2026-09-10 21:35:37 UTC"
+    },
+    {
+      "paper_id": "2609.07211v1",
+      "route": "202609/10/2609.07211v1-phase-and-first-arrival-vlm-feedback-for-sparse-reward-reinforcement-learning-in-surgical-manipulation",
+      "title": "Phase-and-First-Arrival VLM Feedback for Sparse-Reward Reinforcement Learning in Surgical Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "阶段化反馈复用部分行为",
+      "first_seen_at": "2026-09-10 21:35:37 UTC",
+      "updated_at": "2026-09-10 21:35:37 UTC"
+    },
+    {
+      "paper_id": "2609.09630v1",
+      "route": "202609/10/2609.09630v1-jepa-policy-diffusion-free-imitation-learning-via-paired-action-and-future-representation-prediction",
+      "title": "JEPA Policy: Diffusion-Free Imitation Learning via Paired Action and Future Representation Prediction",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "结合动作块与共享Transformer的无扩散模仿学习",
+      "first_seen_at": "2026-09-10 21:35:37 UTC",
+      "updated_at": "2026-09-10 21:35:37 UTC"
+    },
+    {
+      "paper_id": "2609.09925v1",
+      "route": "202609/10/2609.09925v1-time-frequency-geometric-cross-attention-for-chunked-vision-language-action-models",
+      "title": "Time-Frequency Geometric Cross-Attention for Chunked Vision-Language-Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "分块VLA、动作块与接触抓取等运动相位",
+      "first_seen_at": "2026-09-10 21:35:37 UTC",
+      "updated_at": "2026-09-10 21:35:37 UTC"
+    }
+  ]
+}
