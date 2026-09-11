@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-11",
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T21:44:32",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/11/2609.06718v1-skillx-unified-multi-skill-policy-learning-for-humanoid-soccer",
+      "section": "quick",
+      "title_en": "SkillX: Unified Multi-Skill Policy Learning for Humanoid Soccer",
+      "authors": "Zhangchen Ye, Enxuan Ruan, Yifei Bao, Runhan Huang, Jiankun Yang, Jiakang Jin, Yixiao Huo, Pengyuan Wang, Yinan Han, Huaxing Huang, Wenhao Cui, Yiming Li, Xiaoyu Tian",
+      "date": "2026-09-06",
+      "pdf": "https://arxiv.org/pdf/2609.06718v1",
+      "score": "6.0",
+      "evidence": "命令条件化统一多技能策略，长时程组合原子技能",
+      "tldr": "人形机器人足球需动态全身控制，在长时程中协调平衡、行走、物体交互与技能切换，但现有方法多依赖任务专用多阶段流程，难以在单一可部署策略中联合学习与组合多种技能。SkillX 提出统一强化学习框架，用单一命令条件策略学习并组合多种原子足球技能，核心包括技能特定对抗运动先验、技能特定评论器和物体感知时序编码器。仿真与真实 Noetix E1 实验验证了多技能执行、长时程组合与 sim-to-real 部署，为统一人形足球策略提供可行方案。",
+      "tags": "query:param-skills",
+      "abstract_en": "Humanoid soccer is a challenging testbed for dynamic whole-body control, requiring robots to coordinate balance, locomotion, object interaction, and skill switching over long horizons. Existing humanoid sports methods often rely on task-specific multi-stage pipelines, making it difficult to jointly learn and compose multiple object-interactive skills within a single deployable policy. To address this, we present SkillX, a unified reinforcement learning framework that learns and composes multiple atomic soccer skills through a single command-conditioned policy. SkillX integrates three core designs: skill-specific adversarial motion priors, skill-specific critics, and an object-aware temporal encoder, enabling the robot to execute atomic skills and transition among them such as dribbling, trapping, and shooting. Experiments in simulation and on a real Noetix E1 humanoid demonstrate robust multi-skill execution, long-horizon skill composition, and successful sim-to-real deployment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/11/2609.11433v1-safety-aware-skill-adaptation-for-reinforcement-learning-in-dynamic-environments",
+      "section": "quick",
+      "title_en": "Safety-aware Skill Adaptation for Reinforcement Learning in Dynamic Environments",
+      "authors": "A K M Nadimul Haque, Sheila Sutjipto, Marc G. Carmichael, Teresa Vidal-Calleja",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11433v1",
+      "score": "6.0",
+      "evidence": "高斯过程技能参数化与安全引导自适应",
+      "tldr": "在杂乱动态环境中，强化学习技能适配若不加约束探索，易引发碰撞与不稳定学习。为此，作者提出 Dist-GPRL：基于高斯过程参数化技能，顺序调整稀疏轨迹途经点的局部窗口，并用 HAP 安全子空间先验、动态距离场清障奖励与轨迹运动学相似正则引导安全适配。仿真与真机实验显示，该方法任务成功率更高、碰撞更少、学习更稳定，同时保留示教技能的速度与加速度特性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Skill adaptation frameworks based on reinforcement learning often require restrictive assumptions to maintain stability, such as fixed observations or tightly controlled exploration schedules. In cluttered and dynamic environments, however, unrestricted exploration can lead to unsafe behaviour and unstable learning, particularly when task-relevant observations lie near obstacles or involve moving objects. In this work, we present Dist-GPRL, a distance-aware and safety-guided reinforcement learning framework for structured robot skill adaptation. Building upon Gaussian Process (GP)-based skill parameterisation, our framework sequentially adapts overlapping local windows of sparse trajectory via-points rather than modifying the complete skill at every policy step. Raw policy outputs are correlated through the GP covariance structure, producing temporally coherent trajectory updates while reducing the action-space and credit-assignment difficulties associated with global trajectory adaptation. Safety is incorporated through two complementary forms of guidance. A safe-subspace prior derived from the Hausdorff Approximation Planner (HAP) biases policy exploration toward feasible regions, while dynamically updated distance field clearance and gradient rewards provide local obstacle awareness. A trajectory-kinematics similarity regulariser further preserves the demonstrated velocity and acceleration characteristics during adaptation. We evaluate the framework on two dynamic object-manipulation tasks in simulation and transfer the learned policy to real-world robot execution. Experimental results demonstrate higher task success, lower collision frequency, and more stable learning than the baselines, while preserving the kinematic characteristics of the demonstrated skill.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/11/2609.11561v1-memory-as-plans-world-action-modeling-with-memory-grounded-planning",
+      "section": "quick",
+      "title_en": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+      "authors": "Sizhe Zhao, Haozhe Xie, Weiyu Zhao, Chenchu Zhang, Huan Wang, Chenyang Wang, Qinglin Liu, Shengping Zhang",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11561v1",
+      "score": "6.0",
+      "evidence": "将记忆建模分解为规划与计划条件执行",
+      "tldr": "许多真实机器人操作任务是非马尔可夫的，需要长时记忆，但现有语言摘要或增长视觉窗口会丢失细粒度证据，或在历史覆盖与效率间权衡。MaP-WAM 将记忆建模为计划，把长期多模态情景上下文转为段级语言计划与稀疏视觉引导，由 WAP 模型在执行时联合预测动作块与进度，并用计划-观测对齐校准切换。它在 RMBench 达 83.3%，真机达 78.0%，且执行延迟随历史增长近似恒定。",
+      "tags": "query:param-skills",
+      "abstract_en": "Mainstream robotic policies often adopt a Markovian formulation, but many complex real-world manipulation tasks are inherently non-Markovian, requiring long-horizon memory beyond the current observation. Existing memory mechanisms often rely on language summaries, growing visual windows, or their combinations, and may therefore lose fine-grained visual evidence or face a trade-off between history coverage and execution efficiency. We introduce MaP-WAM, a Memory-as-Plans framework that decomposes memory-dependent world-action modeling into memory-grounded planning and plan-conditioned execution, and uses long-term multimodal episodic context as planning-time evidence rather than repeatedly conditioning the executor on the full history. MaP-WAM represents memory as completed segment records containing language instructions and sparse visual context, and converts this episodic memory into compact plans comprising the next segment-level language plan and corresponding visual guidance. A World-Action-Progress (WAP) model executes each plan over an unknown duration by jointly predicting action chunks and corresponding execution progress at inference time, calibrating predicted progress through plan-observation alignment for adaptive segment transitions and closed-loop context updates. MaP-WAM keeps the executor context length fixed, while structured attention further enables key-value caching in both planning and execution. MaP-WAM achieves state-of-the-art performance on RMBench with an 83.3% success rate and attains 78.0% success on real-robot tasks, while maintaining approximately constant executor inference latency as task history grows.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

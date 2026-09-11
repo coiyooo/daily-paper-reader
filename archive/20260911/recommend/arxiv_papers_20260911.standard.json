@@ -1,0 +1,144 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-11T21:43:17.480286+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.06718v1",
+      "source": "arxiv",
+      "title": "SkillX: Unified Multi-Skill Policy Learning for Humanoid Soccer",
+      "abstract": "Humanoid soccer is a challenging testbed for dynamic whole-body control, requiring robots to coordinate balance, locomotion, object interaction, and skill switching over long horizons. Existing humanoid sports methods often rely on task-specific multi-stage pipelines, making it difficult to jointly learn and compose multiple object-interactive skills within a single deployable policy. To address this, we present SkillX, a unified reinforcement learning framework that learns and composes multiple atomic soccer skills through a single command-conditioned policy. SkillX integrates three core designs: skill-specific adversarial motion priors, skill-specific critics, and an object-aware temporal encoder, enabling the robot to execute atomic skills and transition among them such as dribbling, trapping, and shooting. Experiments in simulation and on a real Noetix E1 humanoid demonstrate robust multi-skill execution, long-horizon skill composition, and successful sim-to-real deployment.",
+      "authors": [
+        "Zhangchen Ye",
+        "Enxuan Ruan",
+        "Yifei Bao",
+        "Runhan Huang",
+        "Jiankun Yang",
+        "Jiakang Jin",
+        "Yixiao Huo",
+        "Pengyuan Wang",
+        "Yinan Han",
+        "Huaxing Huang",
+        "Wenhao Cui",
+        "Yiming Li",
+        "Xiaoyu Tian"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-06T16:41:29+00:00",
+      "link": "https://arxiv.org/pdf/2609.06718v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "unified multi-skill command-conditioned policy composing atomic skills over long horizons",
+      "llm_evidence_cn": "命令条件化统一多技能策略，长时程组合原子技能",
+      "llm_evidence": "命令条件化统一多技能策略，长时程组合原子技能",
+      "canonical_evidence": "命令条件化统一多技能策略，长时程组合原子技能",
+      "llm_tldr_en": "SkillX learns and composes multiple atomic soccer skills within a single command-conditioned RL policy using skill-specific motion priors and critics, enabling long-horizon skill switching on a humanoid.",
+      "llm_tldr_cn": "针对人形机器人足球中现有方法依赖任务专用多阶段流程、难以在单一策略内联合学习与组合多种物体交互技能的问题，作者提出SkillX统一强化学习框架。该方法用命令条件化策略整合技能专属对抗运动先验、技能专属评论家与物体感知时序编码器，使机器人能执行原子技能并平滑切换。实验表明单一可部署策略即可完成多种足球技能组合。该工作为长时程多技能组合控制提供了统一学习范式，其技能条件化组合思想可迁移。",
+      "llm_tldr": "针对人形机器人足球中现有方法依赖任务专用多阶段流程、难以在单一策略内联合学习与组合多种物体交互技能的问题，作者提出SkillX统一强化学习框架。该方法用命令条件化策略整合技能专属对抗运动先验、技能专属评论家与物体感知时序编码器，使机器人能执行原子技能并平滑切换。实验表明单一可部署策略即可完成多种足球技能组合。该工作为长时程多技能组合控制提供了统一学习范式，其技能条件化组合思想可迁移。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.11433v1",
+      "source": "arxiv",
+      "title": "Safety-aware Skill Adaptation for Reinforcement Learning in Dynamic Environments",
+      "abstract": "Skill adaptation frameworks based on reinforcement learning often require restrictive assumptions to maintain stability, such as fixed observations or tightly controlled exploration schedules. In cluttered and dynamic environments, however, unrestricted exploration can lead to unsafe behaviour and unstable learning, particularly when task-relevant observations lie near obstacles or involve moving objects. In this work, we present Dist-GPRL, a distance-aware and safety-guided reinforcement learning framework for structured robot skill adaptation. Building upon Gaussian Process (GP)-based skill parameterisation, our framework sequentially adapts overlapping local windows of sparse trajectory via-points rather than modifying the complete skill at every policy step. Raw policy outputs are correlated through the GP covariance structure, producing temporally coherent trajectory updates while reducing the action-space and credit-assignment difficulties associated with global trajectory adaptation. Safety is incorporated through two complementary forms of guidance. A safe-subspace prior derived from the Hausdorff Approximation Planner (HAP) biases policy exploration toward feasible regions, while dynamically updated distance field clearance and gradient rewards provide local obstacle awareness. A trajectory-kinematics similarity regulariser further preserves the demonstrated velocity and acceleration characteristics during adaptation. We evaluate the framework on two dynamic object-manipulation tasks in simulation and transfer the learned policy to real-world robot execution. Experimental results demonstrate higher task success, lower collision frequency, and more stable learning than the baselines, while preserving the kinematic characteristics of the demonstrated skill.",
+      "authors": [
+        "A K M Nadimul Haque",
+        "Sheila Sutjipto",
+        "Marc G. Carmichael",
+        "Teresa Vidal-Calleja"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-10T12:05:54+00:00",
+      "link": "https://arxiv.org/pdf/2609.11433v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Gaussian-process skill parameterisation with safety-guided adaptation",
+      "llm_evidence_cn": "高斯过程技能参数化与安全引导自适应",
+      "llm_evidence": "高斯过程技能参数化与安全引导自适应",
+      "canonical_evidence": "高斯过程技能参数化与安全引导自适应",
+      "llm_tldr_en": "Introduces Dist-GPRL, a distance-aware safety-guided RL framework that adapts GP-parameterized robot skills via overlapping local windows of sparse trajectory via-points in dynamic cluttered environments.",
+      "llm_tldr_cn": "基于强化学习的技能自适应常依赖固定观测或严格探索调度等强假设，在动态杂乱环境中易引发不安全行为与不稳定学习。作者提出Dist-GPRL，基于高斯过程技能参数化，顺序自适应稀疏轨迹途径点的重叠局部窗口而非整体技能。该框架实现安全引导的技能适应，提升学习稳定性并减少不安全探索。结果表明距离感知与安全约束可支持结构化技能参数化的稳健适应。",
+      "llm_tldr": "基于强化学习的技能自适应常依赖固定观测或严格探索调度等强假设，在动态杂乱环境中易引发不安全行为与不稳定学习。作者提出Dist-GPRL，基于高斯过程技能参数化，顺序自适应稀疏轨迹途径点的重叠局部窗口而非整体技能。该框架实现安全引导的技能适应，提升学习稳定性并减少不安全探索。结果表明距离感知与安全约束可支持结构化技能参数化的稳健适应。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.11561v1",
+      "source": "arxiv",
+      "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+      "abstract": "Mainstream robotic policies often adopt a Markovian formulation, but many complex real-world manipulation tasks are inherently non-Markovian, requiring long-horizon memory beyond the current observation. Existing memory mechanisms often rely on language summaries, growing visual windows, or their combinations, and may therefore lose fine-grained visual evidence or face a trade-off between history coverage and execution efficiency. We introduce MaP-WAM, a Memory-as-Plans framework that decomposes memory-dependent world-action modeling into memory-grounded planning and plan-conditioned execution, and uses long-term multimodal episodic context as planning-time evidence rather than repeatedly conditioning the executor on the full history. MaP-WAM represents memory as completed segment records containing language instructions and sparse visual context, and converts this episodic memory into compact plans comprising the next segment-level language plan and corresponding visual guidance. A World-Action-Progress (WAP) model executes each plan over an unknown duration by jointly predicting action chunks and corresponding execution progress at inference time, calibrating predicted progress through plan-observation alignment for adaptive segment transitions and closed-loop context updates. MaP-WAM keeps the executor context length fixed, while structured attention further enables key-value caching in both planning and execution. MaP-WAM achieves state-of-the-art performance on RMBench with an 83.3% success rate and attains 78.0% success on real-robot tasks, while maintaining approximately constant executor inference latency as task history grows.",
+      "authors": [
+        "Sizhe Zhao",
+        "Haozhe Xie",
+        "Weiyu Zhao",
+        "Chenchu Zhang",
+        "Huan Wang",
+        "Chenyang Wang",
+        "Qinglin Liu",
+        "Shengping Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-10T13:52:51+00:00",
+      "link": "https://arxiv.org/pdf/2609.11561v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "decomposes memory-dependent modeling into planning and plan-conditioned execution",
+      "llm_evidence_cn": "将记忆建模分解为规划与计划条件执行",
+      "llm_evidence": "将记忆建模分解为规划与计划条件执行",
+      "canonical_evidence": "将记忆建模分解为规划与计划条件执行",
+      "llm_tldr_en": "MaP-WAM decomposes memory-dependent world-action modeling into memory-grounded planning and plan-conditioned execution, using long-term multimodal episodic context for non-Markovian long-horizon manipulation.",
+      "llm_tldr_cn": "主流机器人策略采用马尔可夫假设，但许多真实操作任务本质非马尔可夫，需要超越当前观测的长程记忆。作者提出MaP-WAM框架，将记忆相关世界动作建模分解为记忆驱动规划与计划条件执行，以多模态情景上下文作为规划证据而非反复条件化执行器。该方法在保持细粒度视觉证据的同时兼顾历史覆盖与执行效率，提升长程操作表现。结果说明以计划为载体的记忆机制可有效支撑长程非马尔可夫操作。",
+      "llm_tldr": "主流机器人策略采用马尔可夫假设，但许多真实操作任务本质非马尔可夫，需要超越当前观测的长程记忆。作者提出MaP-WAM框架，将记忆相关世界动作建模分解为记忆驱动规划与计划条件执行，以多模态情景上下文作为规划证据而非反复条件化执行器。该方法在保持细粒度视觉证据的同时兼顾历史覆盖与执行效率，提升长程操作表现。结果说明以计划为载体的记忆机制可有效支撑长程非马尔可夫操作。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
