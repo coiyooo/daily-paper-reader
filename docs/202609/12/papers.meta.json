@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-12",
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T21:36:11",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/12/2609.11697v1-actsafeguard-differentiable-and-training-aligned-constraint-enforcement-for-flow-matching-policies",
+      "section": "quick",
+      "title_en": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+      "authors": "Jianming Ma, Rongjun Jin, Xiaxi Si, Yang Zhang, Yiheng Li, Yue Gao",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11697v1",
+      "score": "6.0",
+      "evidence": "面向操作策略的与训练对齐的安全约束执行",
+      "tldr": "视觉-语言-动作模型与世界-动作模型在通用机器人操作上表现强劲，但其生成的动作可能违反硬性物理约束，导致部署不安全或不可行。现有方法要么只优化统计安全目标、缺乏逐步确定性保证，要么仅在推理阶段修正动作，造成训练与执行不匹配。本文提出 ActSafeGuard，一种可微分且与训练对齐的安全防护层，通过解析式射线缩放算子将硬动作可行性融入策略学习。实验显示其在 π_{0.5} 与 Fast-WAM 上实现 100% 步级安全率，同时保持甚至提升任务成功率。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-Language-Action (VLA) and World-Action Models (WAMs) have demonstrated strong capabilities in general-purpose robotic manipulation, yet their generated actions may violate hard physical constraints and therefore be unsafe or infeasible for deployment. Existing safety approaches either optimize statistical safety objectives without deterministic per-step guarantees or correct unsafe actions only during inference, creating a mismatch between policy training and execution. We introduce ActSafeGuard, a differentiable and training-aligned safeguard layer for flow-matching based policies. ActSafeGuard integrates hard action feasibility into policy learning, not merely treating safety as an inference-time external component. Through an analytical ray-scaling operator design, ActSafeGuard enables boundary-aware gradients to guide the model to naturally learn constrained manifolds. Extensive experiments on multiple standard foundation backbones ($π_{0.5}$ and Fast-WAM) across various tasks demonstrate that ActSafeGuard consistently achieves a $100\\%$ step safety rate while fully preserving or even boosting task success rates, providing a scalable and minimally invasive solution for safe embodied AI deployment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/12/2609.11875v1-unimpa-a-unified-memory-prediction-action-model-via-action-grounded-transition-modeling",
+      "section": "quick",
+      "title_en": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+      "authors": "Wei Li, Rui Shao, Jie He, Lingsen Zhang, Ziwei Liu, Liqiang Nie",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11875v1",
+      "score": "6.0",
+      "evidence": "相似观测对应不同操作阶段，需要阶段感知的动作生成",
+      "tldr": "现有VLA模型受过渡可实现性鸿沟制约，存在过渡歧义、预测-执行不匹配和经验-现实不匹配三个耦合问题。UniMPA提出统一记忆-预测-动作框架，通过动作锚定过渡接口共享表示，并设计持续-选择性未来预测、时序视觉-动作记忆库与动作-视觉记忆库。前者跟踪任务进度并选择性建模交互变化，后两者检索可执行经验与动作原型，经原型偏置流实现场景自适应细化。摘要未报告量化实验，但为观察到动作学习提供了记忆增强的过渡建模思路。",
+      "tags": "query:param-skills",
+      "abstract_en": "Recent advances in Vision-Language-Action (VLA) models have improved robotic manipulation, yet observation-to-action learning remains limited by a fundamental transition realizability gap, manifested in three tightly coupled problems: (i) Transition ambiguity. Visually similar current observations may correspond to different manipulation phases and imply different subsequent transitions. (ii) Prediction--execution mismatch. A visually plausible predicted future observation does not necessarily correspond to a physically realizable transition. (iii) Experience--realization mismatch. A historically executable action pattern may not necessarily realize the intended transition in the current scene and therefore requires context-aware adaptation. Accordingly, we propose UniMPA, a Unified Memory-Prediction-Action model that addresses these problems through a shared action-grounded transition interface. (i) UniMPA introduces Persistent-Selective Future Prediction to resolve transition ambiguity by modeling the intended future state evolution. A persistent latent stream continuously tracks task-level progress, while a transition-critical pixel stream selectively resolves fine-grained interaction changes through memory-grounded prediction. (ii) To assess the physical executability of the anticipated transition, the predicted transition queries a temporal Visual-Action Memory Bank. The bank retrieves historically realized visual-action experience, grounding future prediction in executable evidence. (iii) To adapt executable experience to the current scene, an Action-Visual Memory Bank retrieves visually grounded action prototypes from historical action evolution. Prototype-Biased Flow then shifts the flow source toward a historically supported action manifold for context-aware refinement.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-12T21:35:03.758428+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.11697v1",
+      "source": "arxiv",
+      "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+      "abstract": "Vision-Language-Action (VLA) and World-Action Models (WAMs) have demonstrated strong capabilities in general-purpose robotic manipulation, yet their generated actions may violate hard physical constraints and therefore be unsafe or infeasible for deployment. Existing safety approaches either optimize statistical safety objectives without deterministic per-step guarantees or correct unsafe actions only during inference, creating a mismatch between policy training and execution. We introduce ActSafeGuard, a differentiable and training-aligned safeguard layer for flow-matching based policies. ActSafeGuard integrates hard action feasibility into policy learning, not merely treating safety as an inference-time external component. Through an analytical ray-scaling operator design, ActSafeGuard enables boundary-aware gradients to guide the model to naturally learn constrained manifolds. Extensive experiments on multiple standard foundation backbones ($π_{0.5}$ and Fast-WAM) across various tasks demonstrate that ActSafeGuard consistently achieves a $100\\%$ step safety rate while fully preserving or even boosting task success rates, providing a scalable and minimally invasive solution for safe embodied AI deployment.",
+      "authors": [
+        "Jianming Ma",
+        "Rongjun Jin",
+        "Xiaxi Si",
+        "Yang Zhang",
+        "Yiheng Li",
+        "Yue Gao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-10T15:21:47+00:00",
+      "link": "https://arxiv.org/pdf/2609.11697v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "training-aligned safety constraint enforcement for manipulation policies",
+      "llm_evidence_cn": "面向操作策略的与训练对齐的安全约束执行",
+      "llm_evidence": "面向操作策略的与训练对齐的安全约束执行",
+      "canonical_evidence": "面向操作策略的与训练对齐的安全约束执行",
+      "llm_tldr_en": "VLA and world-action models may generate actions violating hard physical constraints. ActSafeGuard adds a differentiable, training-aligned safeguard layer embedding hard action feasibility into flow-matching policy learning instead of correcting actions at inference.",
+      "llm_tldr_cn": "视觉-语言-动作模型与世界-动作模型虽具备通用操作能力，但其生成的动作可能违反硬物理约束，导致部署中不安全或不可行。现有安全方法或只优化统计意义上的安全目标而缺乏逐步确定性保证，或仅在推理阶段纠正不安全动作，造成训练与执行不一致。论文提出ActSafeGuard，一个可微且与训练对齐的安全防护层，把硬动作可行性融入流匹配策略的学习过程，而非将安全作为推理时的外部组件，从而在操作任务中实现更可靠的安全约束。",
+      "llm_tldr": "视觉-语言-动作模型与世界-动作模型虽具备通用操作能力，但其生成的动作可能违反硬物理约束，导致部署中不安全或不可行。现有安全方法或只优化统计意义上的安全目标而缺乏逐步确定性保证，或仅在推理阶段纠正不安全动作，造成训练与执行不一致。论文提出ActSafeGuard，一个可微且与训练对齐的安全防护层，把硬动作可行性融入流匹配策略的学习过程，而非将安全作为推理时的外部组件，从而在操作任务中实现更可靠的安全约束。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.11875v1",
+      "source": "arxiv",
+      "title": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+      "abstract": "Recent advances in Vision-Language-Action (VLA) models have improved robotic manipulation, yet observation-to-action learning remains limited by a fundamental transition realizability gap, manifested in three tightly coupled problems: (i) Transition ambiguity. Visually similar current observations may correspond to different manipulation phases and imply different subsequent transitions. (ii) Prediction--execution mismatch. A visually plausible predicted future observation does not necessarily correspond to a physically realizable transition. (iii) Experience--realization mismatch. A historically executable action pattern may not necessarily realize the intended transition in the current scene and therefore requires context-aware adaptation. Accordingly, we propose UniMPA, a Unified Memory-Prediction-Action model that addresses these problems through a shared action-grounded transition interface. (i) UniMPA introduces Persistent-Selective Future Prediction to resolve transition ambiguity by modeling the intended future state evolution. A persistent latent stream continuously tracks task-level progress, while a transition-critical pixel stream selectively resolves fine-grained interaction changes through memory-grounded prediction. (ii) To assess the physical executability of the anticipated transition, the predicted transition queries a temporal Visual-Action Memory Bank. The bank retrieves historically realized visual-action experience, grounding future prediction in executable evidence. (iii) To adapt executable experience to the current scene, an Action-Visual Memory Bank retrieves visually grounded action prototypes from historical action evolution. Prototype-Biased Flow then shifts the flow source toward a historically supported action manifold for context-aware refinement.",
+      "authors": [
+        "Wei Li",
+        "Rui Shao",
+        "Jie He",
+        "Lingsen Zhang",
+        "Ziwei Liu",
+        "Liqiang Nie"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-10T17:45:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.11875v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "visually similar observations imply different manipulation phases, requiring phase-aware action generation",
+      "llm_evidence_cn": "相似观测对应不同操作阶段，需要阶段感知的动作生成",
+      "llm_evidence": "相似观测对应不同操作阶段，需要阶段感知的动作生成",
+      "canonical_evidence": "相似观测对应不同操作阶段，需要阶段感知的动作生成",
+      "llm_tldr_en": "UniMPA targets the transition realizability gap in VLA manipulation, where similar observations map to different phases and predicted futures may be unrealizable, via a unified memory-prediction-action model grounded in action transitions.",
+      "llm_tldr_cn": "视觉-语言-动作模型虽提升了机器人操作，但从观测到动作的学习仍受转移可实现性鸿沟限制：相似观测可能对应不同操作阶段，视觉上合理的预测未来未必物理可执行。本文提出统一记忆-预测-动作模型UniMPA，以动作锚定的转移建模缓解阶段歧义与预测执行不匹配。该方法改善了阶段区分与动作生成的上下文自适应能力，为阶段感知的转移建模与VLA动作生成提供了统一框架。",
+      "llm_tldr": "视觉-语言-动作模型虽提升了机器人操作，但从观测到动作的学习仍受转移可实现性鸿沟限制：相似观测可能对应不同操作阶段，视觉上合理的预测未来未必物理可执行。本文提出统一记忆-预测-动作模型UniMPA，以动作锚定的转移建模缓解阶段歧义与预测执行不匹配。该方法改善了阶段区分与动作生成的上下文自适应能力，为阶段感知的转移建模与VLA动作生成提供了统一框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

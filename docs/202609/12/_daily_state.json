@@ -1,0 +1,41 @@
+{
+  "date": "20260912",
+  "date_label": "",
+  "generated_at": "2026-09-12 21:36:09 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.11697v1",
+      "route": "202609/12/2609.11697v1-actsafeguard-differentiable-and-training-aligned-constraint-enforcement-for-flow-matching-policies",
+      "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向操作策略的与训练对齐的安全约束执行",
+      "first_seen_at": "2026-09-12 21:36:09 UTC",
+      "updated_at": "2026-09-12 21:36:09 UTC"
+    },
+    {
+      "paper_id": "2609.11875v1",
+      "route": "202609/12/2609.11875v1-unimpa-a-unified-memory-prediction-action-model-via-action-grounded-transition-modeling",
+      "title": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "相似观测对应不同操作阶段，需要阶段感知的动作生成",
+      "first_seen_at": "2026-09-12 21:36:09 UTC",
+      "updated_at": "2026-09-12 21:36:09 UTC"
+    }
+  ]
+}
