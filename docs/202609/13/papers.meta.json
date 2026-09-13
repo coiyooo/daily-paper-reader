@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-13",
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T21:57:00",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/13/2609.06578v1-learning-to-use-imagination-progress-conditioned-future-utilization-for-world-action-models",
+      "section": "quick",
+      "title_en": "Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models",
+      "authors": "Yijie Zhu, Zitong Yu, Wei Li, Hui Ma, Wen Li, Rui Shao, Liqiang Nie",
+      "date": "2026-09-06",
+      "pdf": "https://arxiv.org/pdf/2609.06578v1",
+      "score": "6.0",
+      "evidence": "按执行进度条件化利用",
+      "tldr": "World Action Models 虽引入未来视觉动态辅助动作生成，但对想象未来的利用缺乏随执行进度自适应，带来干扰与不可靠线索。本文提出 ProWAM，以执行进度为显式中间表示，用自监督双时序进度编码器 SS-DTPE 刻画进度，并用分层进度条件想象调制 HPIM 在进度间与进度内两个层面调节未来利用。实验在强 VLA 与 WAM 基线上取得一致提升，表明按进度自适应使用想象能显著增强世界动作模型。",
+      "tags": "query:param-skills",
+      "abstract_en": "World Action Models (WAMs) extend Vision-Language-Action (VLA) models by incorporating future visual dynamics into action generation. However, existing WAMs often utilize imagined futures with limited adaptation to evolving execution progress, potentially introducing distracting or unreliable predictive cues. This limitation arises from two empirically identified forms of non-uniformity in future utility: (i) at the inter-progress level, the utility of imagined futures varies across execution stages as control demands change; and (ii) at the intra-progress level, individual future latents exhibit heterogeneous relevance within the same progress state. To address these limitations, we propose ProWAM, a Progress-Conditioned World Action Model that introduces execution progress as an explicit intermediate representation for adaptive imagination utilization. ProWAM comprises two tightly coupled components: (1) To obtain a reliable representation of execution progress, we propose the Self-Supervised Dual-Temporal Progress Encoder (SS-DTPE). SS-DTPE couples short-term action-observation interaction modeling with long-term recurrent progress aggregation to capture recent execution feedback and accumulated task history. (2) Conditioned on the progress representation from SS-DTPE, we propose the Hierarchical Progress-Conditioned Imagination Modulation (HPIM) to adapt imagination utilization to execution progress. HPIM operates at two complementary levels: an inter-progress global modulation mechanism adapts future utilization across execution stages, while an intra-progress relevance mechanism differentiates individual future latents within each progress state. Extensive experiments demonstrate consistent gains over strong VLA and WAM baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

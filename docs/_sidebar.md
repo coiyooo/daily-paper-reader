@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-13 <!--dpr-date:20260913-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/13/2609.06578v1-learning-to-use-imagination-progress-conditioned-future-utilization-for-world-action-models" data-sidebar-item="{&quot;title&quot;: &quot;Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.06578v1-learning-to-use-imagination-progress-conditioned-future-utilization-for-world-action-models&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;param-skills&quot;}], &quot;evidence&quot;: &quot;按执行进度条件化利用&quot;}">Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models</a>
   * 2026-09-12 <!--dpr-date:20260912-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/12/2609.11697v1-actsafeguard-differentiable-and-training-aligned-constraint-enforcement-for-flow-matching-policies" data-sidebar-item="{&quot;title&quot;: &quot;ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.11697v1-actsafeguard-differentiable-and-training-aligned-constraint-enforcement-for-flow-matching-policies&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;param-skills&quot;}], &quot;evidence&quot;: &quot;面向操作策略的与训练对齐的安全约束执行&quot;}">ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies</a>

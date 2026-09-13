@@ -1,0 +1,25 @@
+{
+  "date": "20260913",
+  "date_label": "",
+  "generated_at": "2026-09-13 21:56:59 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.06578v1",
+      "route": "202609/13/2609.06578v1-learning-to-use-imagination-progress-conditioned-future-utilization-for-world-action-models",
+      "title": "Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "按执行进度条件化利用",
+      "first_seen_at": "2026-09-13 21:56:59 UTC",
+      "updated_at": "2026-09-13 21:56:59 UTC"
+    }
+  ]
+}

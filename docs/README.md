@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-12</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-13</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 1 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>1</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-12 21:36:09 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-13 21:56:59 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>2026-09-12 日报：今日精读挂零，速读 2 篇，均聚焦机器人策略模型。值得看的是 ActSafeGuard 用可微分约束为流匹配策略做安全对齐，以及 UniMPA 以动作锚定的转移建模统一记忆—预测—动作。普通读者可优先了解这两类&quot;安全约束&quot;与&quot;统一建模&quot;思路，再决定是否深入原文。</p>
+<p>今日速读 1 篇：世界动作模型如何学会&quot;按进度&quot;利用想象，精读挂零。值得关注的是它把未来想象与当前进展条件绑定，让模型用想象力服务动作决策。普通读者可先看这篇速读，重点理解&quot;进度条件&quot;如何影响想象的使用时机。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies">ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling">UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models">Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 </div>
 
