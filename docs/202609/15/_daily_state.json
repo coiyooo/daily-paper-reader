@@ -1,0 +1,89 @@
+{
+  "date": "20260915",
+  "date_label": "",
+  "generated_at": "2026-09-15 21:59:35 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.14310v1",
+      "route": "202609/15/2609.14310v1-vlbiman-expanding-the-generalization-boundary-of-vision-language-anchored-one-shot-bimanual-manipulation",
+      "title": "VLBiMan++: Expanding the Generalization Boundary of Vision-Language Anchored One-Shot Bimanual Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "任务感知分解为可复用技能组件，无需重训练迁移到新配置",
+      "first_seen_at": "2026-09-15 21:59:35 UTC",
+      "updated_at": "2026-09-15 21:59:35 UTC"
+    },
+    {
+      "paper_id": "2609.15162v1",
+      "route": "202609/15/2609.15162v1-liespline-dp-lie-group-b-spline-diffusion-policy-for-smooth-robot-manipulation",
+      "title": "LieSpline-DP: Lie-Group B-Spline Diffusion Policy for Smooth Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "在扩散策略中用B样条动作块生成平滑机器人操作轨迹",
+      "first_seen_at": "2026-09-15 21:59:35 UTC",
+      "updated_at": "2026-09-15 21:59:35 UTC"
+    },
+    {
+      "paper_id": "2609.15840v1",
+      "route": "202609/15/2609.15840v1-uncertainty-guided-sparse-refinement-for-action-chunking-transformer-policies",
+      "title": "Uncertainty-Guided Sparse Refinement for Action Chunking Transformer Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向动作分块Transformer策略的稀疏细化，预测时序扩展动作序列",
+      "first_seen_at": "2026-09-15 21:59:35 UTC",
+      "updated_at": "2026-09-15 21:59:35 UTC"
+    },
+    {
+      "paper_id": "2609.12634v1",
+      "route": "202609/15/2609.12634v1-online-material-estimation-for-conditioned-diffusion-policy-in-shaping-deformable-linear-objects",
+      "title": "Online Material Estimation for Conditioned Diffusion Policy in Shaping Deformable Linear Objects",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "以在线估计的材料标签为条件的扩散策略模仿学习",
+      "first_seen_at": "2026-09-15 21:59:35 UTC",
+      "updated_at": "2026-09-15 21:59:35 UTC"
+    },
+    {
+      "paper_id": "2609.14868v1",
+      "route": "202609/15/2609.14868v1-primitive-informed-sampling-based-mpc-for-multi-fingered-dexterous-manipulation",
+      "title": "Primitive-Informed Sampling-Based MPC for Multi-Fingered Dexterous Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用低维操作原语偏置采样并优化关节级残差，面向接触丰富的灵巧操作",
+      "first_seen_at": "2026-09-15 21:59:35 UTC",
+      "updated_at": "2026-09-15 21:59:35 UTC"
+    }
+  ]
+}
