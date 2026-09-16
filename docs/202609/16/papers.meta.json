@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-16",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T22:35:22",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/16/2609.08228v1-se-gos-self-evolving-graph-of-skills-for-skill-library-at-scale",
+      "section": "quick",
+      "title_en": "SE-GoS: Self-Evolving Graph-of-Skills for Skill Library at Scale",
+      "authors": "Dawei Fu, Cheng Jiang, Sitian Qian, Huainan Wang, Zhongkai Hao",
+      "date": "2026-09-08",
+      "pdf": "https://arxiv.org/pdf/2609.08228v1",
+      "score": "6.0",
+      "evidence": "可复用技能库，技能图泛化到未见任务",
+      "tldr": "LLM智能体依赖可复用技能，技能库扩展到数千条目后检索成为瓶颈；GoS用依赖图缓解该问题，但历史执行轨迹能否被系统蒸馏为更优检索图仍待解答。SE-GoS是免训练框架，保留原检索流程，从执行轨迹做拓扑、边权与描述三类互补演化。在SkillsBench上跨三个LLM，一轮演化把奖励从52.4%提升到59.4%，输入token减少约三分之一，迁移到不相交留出集比静态GoS基线高5.4个点。它把静态检索图变成可自演化的检索基础设施，无需模型训练或改动检索算法与技能内容。",
+      "tags": "query:param-skills",
+      "abstract_en": "Modern LLM agents increasingly rely on reusable skills, yet as skill libraries scale to thousands of entries, effective retrieval becomes a bottleneck. Graph-of-Skills (GoS) addresses this challenge by exploiting dependency-aware graph structure for scalable skill retrieval, while SkillDAG further demonstrates that skill graphs can accumulate execution-backed structure online. However, these approaches leave open whether historical execution traces can be systematically distilled into a better retrieval graph that generalizes to unseen tasks. We present Self-Evolving Graph-of-Skills (SE-GoS), a training-free framework that evolves an existing GoS graph from execution traces while preserving the original retrieval pipeline. SE-GoS performs three complementary updates: topology evolution that discovers and prunes skill relationships from execution evidence, edge-weight evolution that reinforces retrieval-relevant relationships based on historical effectiveness, and description evolution that optimizes retrieval-facing skill descriptions using execution feedback. Across three LLMs on SkillsBench, SE-GoS consistently improves task reward while reducing input tokens relative to full skill loading, with gains varying across model families. In a representative setting, one evolution round improves reward from 52.4\\% to 59.4\\% while reducing input tokens by approximately one-third relative to full skill loading, and the resulting graph transfers to a disjoint held-out split with a 5.4-point improvement over the static GoS baseline. These results show that skill graphs can be improved from execution experience without model training, changes to the retrieval algorithm, or modifications to skill content, turning a static retrieval graph into an evolving retrieval infrastructure.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/16/2609.11043v1-ltldiff-finite-linear-temporal-logic-guided-data-generation-and-diffusion-policies-for-multi-agent-robotic-manipulation",
+      "section": "quick",
+      "title_en": "LTLDiff: Finite Linear Temporal Logic-Guided Data Generation and Diffusion Policies for Multi-agent Robotic Manipulation",
+      "authors": "Chuhan Meng, Haiyan Yin",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11043v1",
+      "score": "6.0",
+      "evidence": "用线性时序逻辑编码任务级时序与安全约束并指导操作策略学习",
+      "tldr": "多智能体机器人操作需满足时序、逻辑与安全约束，但现有扩散策略易出现不同步、动作顺序错误与协调失败。LTLDiff 将有限线性时序逻辑（LTLf）规范学习引入演示生成与扩散策略训练：用大语言模型从自然语言指令学习任务 LTLf 公式，并以抽象语法树（AST）编码为固定维向量。该逻辑嵌入既指导数据采集，也作为扩散策略条件，促使轨迹满足顺序与协调要求。多智能体任务实验显示成功率优于基线，验证了逻辑引导协调操作的有效性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Multi-agent robotic manipulation tasks require coordination among agents to satisfy task-level temporal, logical, and safety constraints. Recently, diffusion policies have been used to perform the task. However, they still suffer from desynchronization, incorrect action ordering, and coordination failures in tasks that require simultaneous or sequential multi-agent interaction. Therefore, LTLDiff is proposed as a framework that combines Finite Linear Temporal Logic (LTLf) specification learning for both the generation of demonstrations and learning via diffusion policies. Each task has a specific LTLf formula that is learned from a set of natural language instructions using a large-scale language model. To enable a fixed-dimensional vector embedding of the learned specification from the language model, LTLf uses an abstract syntax tree representation scheme. This embedding of logic serves as a condition for (i) logic-guided data collection and (ii) diffusion-based policy training, encouraging trajectories that are consistent with the desired ordering and coordination requirements. Experiments on multi-agent LTLDiff manipulation tasks demonstrate improved task success rates compared to the baseline. Together, these contributions demonstrate the effectiveness of LTLDiff for coordinated multi-agent manipulation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/16/2609.15012v1-atomic-motion-coordinate-for-language-steerable-and-force-responsive-manipulation",
+      "section": "quick",
+      "title_en": "Atomic Motion Coordinate for Language-Steerable and Force-Responsive Manipulation",
+      "authors": "Jiaqi Zhai, Jingkai Zhao, Chen Yang, Siyuan Ma, Yutian Zhang, Liwen Yang, Qinglian Wu, Weiqi Fan, Yifei Wang, Yi Zheng, Chenxi Gu, Dong Wei, Wei Zhang",
+      "date": "2026-09-14",
+      "pdf": "https://arxiv.org/pdf/2609.15012v1",
+      "score": "6.0",
+      "evidence": "十三个带符号平移旋转保持原子注入动作专家模块",
+      "tldr": "针对VLA策略中语言指令能否真正改变末端执行器、还是被视觉运动先验主导的问题，提出几何接地的原子运动坐标AMC。每只机械臂含13个带符号的平移、旋转与保持原子，由文本与前向运动学接地并屏蔽视觉，再通过加权码本对齐注入每个动作专家模块。接触历史以有界球面残差调制同一坐标，从固定标称隐变量重算仅未执行的动作后缀。在7520次离线干预中，相反原子分离度达92.5/83.1%，远超LA4VLA的39.1/24.0%；真实机器人任务中OOD水果进度从60.5%提升至87.8%，力适应使Plug/Vase从59.0/71.5%升至78.5/75.2%。",
+      "tags": "query:param-skills",
+      "abstract_en": "Can changing only the language instruction redirect a VLA policy's end effector, or does the visually driven motion prior dominate? We present Atomic Motion Coordinate, a geometry-grounded coordinate for steerable and force-responsive manipulation. Each arm owns thirteen signed translation, rotation, and hold atoms grounded from text and forward kinematics with vision withheld, and the coordinate is injected into every action-expert block via weighted codebook alignment. Contact history modulates the same coordinate through a bounded spherical residual that is recomputed from a fixed nominal latent to regenerate only the unexecuted horizon suffix. Across 7,520 offline horizon interventions, opposite-atom separation reaches 92.5/83.1% (single/dual) versus 39.1/24.0% for LA4VLA-style. Across 50 real-robot trials per task, AMC raises OOD fruit progress from 60.5% to 87.8%; force adaptation raises Plug/Vase from 59.0/71.5% to 78.5/75.2%.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

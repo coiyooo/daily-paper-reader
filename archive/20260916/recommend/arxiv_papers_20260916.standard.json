@@ -1,0 +1,140 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-16T22:34:04.814393+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.08228v1",
+      "source": "arxiv",
+      "title": "SE-GoS: Self-Evolving Graph-of-Skills for Skill Library at Scale",
+      "abstract": "Modern LLM agents increasingly rely on reusable skills, yet as skill libraries scale to thousands of entries, effective retrieval becomes a bottleneck. Graph-of-Skills (GoS) addresses this challenge by exploiting dependency-aware graph structure for scalable skill retrieval, while SkillDAG further demonstrates that skill graphs can accumulate execution-backed structure online. However, these approaches leave open whether historical execution traces can be systematically distilled into a better retrieval graph that generalizes to unseen tasks. We present Self-Evolving Graph-of-Skills (SE-GoS), a training-free framework that evolves an existing GoS graph from execution traces while preserving the original retrieval pipeline. SE-GoS performs three complementary updates: topology evolution that discovers and prunes skill relationships from execution evidence, edge-weight evolution that reinforces retrieval-relevant relationships based on historical effectiveness, and description evolution that optimizes retrieval-facing skill descriptions using execution feedback. Across three LLMs on SkillsBench, SE-GoS consistently improves task reward while reducing input tokens relative to full skill loading, with gains varying across model families. In a representative setting, one evolution round improves reward from 52.4\\% to 59.4\\% while reducing input tokens by approximately one-third relative to full skill loading, and the resulting graph transfers to a disjoint held-out split with a 5.4-point improvement over the static GoS baseline. These results show that skill graphs can be improved from execution experience without model training, changes to the retrieval algorithm, or modifications to skill content, turning a static retrieval graph into an evolving retrieval infrastructure.",
+      "authors": [
+        "Dawei Fu",
+        "Cheng Jiang",
+        "Sitian Qian",
+        "Huainan Wang",
+        "Zhongkai Hao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-09-08T04:20:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.08228v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reusable skill library, skill graph generalizing to unseen tasks",
+      "llm_evidence_cn": "可复用技能库，技能图泛化到未见任务",
+      "llm_evidence": "可复用技能库，技能图泛化到未见任务",
+      "canonical_evidence": "可复用技能库，技能图泛化到未见任务",
+      "llm_tldr_en": "LLM agents rely on reusable skills, but as libraries scale to thousands of entries, effective retrieval becomes a bottleneck. The authors present SE-GoS, a training-free framework that evolves an existing Graph-of-Skills graph from execution traces while preserving the original retrieval pipeline, improving generalization to unseen tasks.",
+      "llm_tldr_cn": "现代LLM智能体日益依赖可复用技能，但当技能库扩展到数千条目时，有效检索成为瓶颈。Graph-of-Skills利用依赖感知图结构实现可扩展技能检索，但仍未解决如何将历史执行轨迹系统蒸馏为更优且能泛化到未见任务的检索图。作者提出SE-GoS，一个免训练框架，从执行轨迹演化既有GoS图并保持原检索流程。该工作提升了大规模技能库对未见任务的泛化检索能力。",
+      "llm_tldr": "现代LLM智能体日益依赖可复用技能，但当技能库扩展到数千条目时，有效检索成为瓶颈。Graph-of-Skills利用依赖感知图结构实现可扩展技能检索，但仍未解决如何将历史执行轨迹系统蒸馏为更优且能泛化到未见任务的检索图。作者提出SE-GoS，一个免训练框架，从执行轨迹演化既有GoS图并保持原检索流程。该工作提升了大规模技能库对未见任务的泛化检索能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.11043v1",
+      "source": "arxiv",
+      "title": "LTLDiff: Finite Linear Temporal Logic-Guided Data Generation and Diffusion Policies for Multi-agent Robotic Manipulation",
+      "abstract": "Multi-agent robotic manipulation tasks require coordination among agents to satisfy task-level temporal, logical, and safety constraints. Recently, diffusion policies have been used to perform the task. However, they still suffer from desynchronization, incorrect action ordering, and coordination failures in tasks that require simultaneous or sequential multi-agent interaction. Therefore, LTLDiff is proposed as a framework that combines Finite Linear Temporal Logic (LTLf) specification learning for both the generation of demonstrations and learning via diffusion policies. Each task has a specific LTLf formula that is learned from a set of natural language instructions using a large-scale language model. To enable a fixed-dimensional vector embedding of the learned specification from the language model, LTLf uses an abstract syntax tree representation scheme. This embedding of logic serves as a condition for (i) logic-guided data collection and (ii) diffusion-based policy training, encouraging trajectories that are consistent with the desired ordering and coordination requirements. Experiments on multi-agent LTLDiff manipulation tasks demonstrate improved task success rates compared to the baseline. Together, these contributions demonstrate the effectiveness of LTLDiff for coordinated multi-agent manipulation.",
+      "authors": [
+        "Chuhan Meng",
+        "Haiyan Yin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-10T03:42:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.11043v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LTLf specs encode task-level temporal, logical and safety constraints guiding manipulation policies",
+      "llm_evidence_cn": "用线性时序逻辑编码任务级时序与安全约束并指导操作策略学习",
+      "llm_evidence": "用线性时序逻辑编码任务级时序与安全约束并指导操作策略学习",
+      "canonical_evidence": "用线性时序逻辑编码任务级时序与安全约束并指导操作策略学习",
+      "llm_tldr_en": "Multi-agent manipulation policies suffer desynchronization and wrong action ordering; LTLDiff learns LTLf formulas from language to generate demonstrations and train diffusion policies enforcing temporal and safety constraints.",
+      "llm_tldr_cn": "多机器人操作任务需要满足时序、逻辑与安全约束，现有扩散策略常出现不同步和动作顺序错误。该工作提出LTLDiff框架，用大模型从自然语言指令中学习有限线性时序逻辑公式，并据此生成示范数据、训练扩散策略。实验表明该方法能有效约束多智能体的顺序与并行交互，减少协调失败，为带约束的多机器人操作提供了一种形式化与学习结合的新思路。",
+      "llm_tldr": "多机器人操作任务需要满足时序、逻辑与安全约束，现有扩散策略常出现不同步和动作顺序错误。该工作提出LTLDiff框架，用大模型从自然语言指令中学习有限线性时序逻辑公式，并据此生成示范数据、训练扩散策略。实验表明该方法能有效约束多智能体的顺序与并行交互，减少协调失败，为带约束的多机器人操作提供了一种形式化与学习结合的新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.15012v1",
+      "source": "arxiv",
+      "title": "Atomic Motion Coordinate for Language-Steerable and Force-Responsive Manipulation",
+      "abstract": "Can changing only the language instruction redirect a VLA policy's end effector, or does the visually driven motion prior dominate? We present Atomic Motion Coordinate, a geometry-grounded coordinate for steerable and force-responsive manipulation. Each arm owns thirteen signed translation, rotation, and hold atoms grounded from text and forward kinematics with vision withheld, and the coordinate is injected into every action-expert block via weighted codebook alignment. Contact history modulates the same coordinate through a bounded spherical residual that is recomputed from a fixed nominal latent to regenerate only the unexecuted horizon suffix. Across 7,520 offline horizon interventions, opposite-atom separation reaches 92.5/83.1% (single/dual) versus 39.1/24.0% for LA4VLA-style. Across 50 real-robot trials per task, AMC raises OOD fruit progress from 60.5% to 87.8%; force adaptation raises Plug/Vase from 59.0/71.5% to 78.5/75.2%.",
+      "authors": [
+        "Jiaqi Zhai",
+        "Jingkai Zhao",
+        "Chen Yang",
+        "Siyuan Ma",
+        "Yutian Zhang",
+        "Liwen Yang",
+        "Qinglian Wu",
+        "Weiqi Fan",
+        "Yifei Wang",
+        "Yi Zheng",
+        "Chenxi Gu",
+        "Dong Wei",
+        "Wei Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-14T04:19:59+00:00",
+      "link": "https://arxiv.org/pdf/2609.15012v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "thirteen signed translation, rotation, and hold atoms injected into action-expert blocks",
+      "llm_evidence_cn": "十三个带符号平移旋转保持原子注入动作专家模块",
+      "llm_evidence": "十三个带符号平移旋转保持原子注入动作专家模块",
+      "canonical_evidence": "十三个带符号平移旋转保持原子注入动作专家模块",
+      "llm_tldr_en": "Atomic Motion Coordinate grounds steerable manipulation in thirteen signed translation, rotation and hold atoms injected into action experts, and contact history modulates the same coordinate to regenerate only the unexecuted horizon suffix.",
+      "llm_tldr_cn": "论文针对VLA策略动作受视觉先验主导、难以被语言精确引导的问题，提出原子运动坐标。该方法为每条手臂定义十三个带符号的平移、旋转与保持原子，通过加权码本对齐注入每个动作专家模块，并由接触历史调制生成未执行的动作片段。在7520次离线时序干预中，对立原子分离度达到92.5%/83.1%。这表明几何接地的参数化原子可实现语言可操控与力响应操作。",
+      "llm_tldr": "论文针对VLA策略动作受视觉先验主导、难以被语言精确引导的问题，提出原子运动坐标。该方法为每条手臂定义十三个带符号的平移、旋转与保持原子，通过加权码本对齐注入每个动作专家模块，并由接触历史调制生成未执行的动作片段。在7520次离线时序干预中，对立原子分离度达到92.5%/83.1%。这表明几何接地的参数化原子可实现语言可操控与力响应操作。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

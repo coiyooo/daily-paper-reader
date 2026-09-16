@@ -1,0 +1,57 @@
+{
+  "date": "20260916",
+  "date_label": "",
+  "generated_at": "2026-09-16 22:35:21 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.08228v1",
+      "route": "202609/16/2609.08228v1-se-gos-self-evolving-graph-of-skills-for-skill-library-at-scale",
+      "title": "SE-GoS: Self-Evolving Graph-of-Skills for Skill Library at Scale",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "可复用技能库，技能图泛化到未见任务",
+      "first_seen_at": "2026-09-16 22:35:21 UTC",
+      "updated_at": "2026-09-16 22:35:21 UTC"
+    },
+    {
+      "paper_id": "2609.11043v1",
+      "route": "202609/16/2609.11043v1-ltldiff-finite-linear-temporal-logic-guided-data-generation-and-diffusion-policies-for-multi-agent-robotic-manipulation",
+      "title": "LTLDiff: Finite Linear Temporal Logic-Guided Data Generation and Diffusion Policies for Multi-agent Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用线性时序逻辑编码任务级时序与安全约束并指导操作策略学习",
+      "first_seen_at": "2026-09-16 22:35:21 UTC",
+      "updated_at": "2026-09-16 22:35:21 UTC"
+    },
+    {
+      "paper_id": "2609.15012v1",
+      "route": "202609/16/2609.15012v1-atomic-motion-coordinate-for-language-steerable-and-force-responsive-manipulation",
+      "title": "Atomic Motion Coordinate for Language-Steerable and Force-Responsive Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "十三个带符号平移旋转保持原子注入动作专家模块",
+      "first_seen_at": "2026-09-16 22:35:21 UTC",
+      "updated_at": "2026-09-16 22:35:21 UTC"
+    }
+  ]
+}
