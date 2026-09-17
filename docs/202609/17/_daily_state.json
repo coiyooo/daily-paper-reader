@@ -1,0 +1,185 @@
+{
+  "date": "20260917",
+  "date_label": "",
+  "generated_at": "2026-09-17 22:37:19 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.16040v1",
+      "route": "202609/17/2609.16040v1-bi-mode-bilateral-control-based-imitation-learning-via-modifier-conditioned-decoding-for-modulation-of-execution-speed-and-contact-intensity",
+      "title": "Bi-MoDe: Bilateral Control-based Imitation Learning via Modifier-Conditioned Decoding for Modulation of Execution Speed and Contact Intensity",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "接触丰富模仿的修改器条件化Transformer动作块解码",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.17714v1",
+      "route": "202609/17/2609.17714v1-vision-language-grounded-task-context-aware-imitation-learning-for-robotic-disassembly",
+      "title": "Vision-Language Grounded Task-Context-Aware Imitation Learning for Robotic Disassembly",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向长时程拆解的分层模仿学习与语言引导技能选择",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.18358v1",
+      "route": "202609/17/2609.18358v1-graphpoint-semantic-entity-graphs-and-point-trajectories-for-compositional-robot-manipulation",
+      "title": "GraphPoint: Semantic Entity Graphs and Point Trajectories for Compositional Robot Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "在未见长时程任务中组合复用子任务",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.16056v1",
+      "route": "202609/17/2609.16056v1-managing-action-preconditions-in-neuro-symbolic-rl-three-placement-strategies-for-embodied-agents",
+      "title": "Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "结构动作上的前置条件贝叶斯网络",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.16331v1",
+      "route": "202609/17/2609.16331v1-maniskillformer-demonstration-free-compositional-manipulation-via-task-conditioned-geometric-contracts",
+      "title": "ManiSkillFormer: Demonstration-Free Compositional Manipulation via Task-Conditioned Geometric Contracts",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "组合式操作，技能声明几何原语并由任务条件化契约驱动",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.16745v2",
+      "route": "202609/17/2609.16745v2-the-latent-that-never-was-a-forensic-re-run-of-the-cvae-ablation-in-action-chunking-transformers",
+      "title": "The Latent That Never Was: A Forensic Re-run of the CVAE Ablation in Action Chunking Transformers",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "对动作分块Transformer中CVAE消融的取证式复现",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.11308v1",
+      "route": "202609/17/2609.11308v1-2am-grounding-agent-side-memory-as-guidance-for-steerable-action-models-in-long-horizon-manipulation",
+      "title": "2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "长时程操作，由智能体持有任务记忆，动作模型无状态执行",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.16504v1",
+      "route": "202609/17/2609.16504v1-unidex-vitac-learning-unified-visuo-tactile-dexterous-manipulation-policy-from-human-video-data",
+      "title": "UniDex-ViTac: Learning Unified Visuo-Tactile Dexterous Manipulation Policy from Human Video Data",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于动作分块Transformer的操作通用策略",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.17042v1",
+      "route": "202609/17/2609.17042v1-learning-options-for-compositional-motor-control-with-adapter-banks",
+      "title": "Learning Options for Compositional Motor Control with Adapter Banks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "以离散隐码选择的学习型运动原语与组合控制",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.17682v1",
+      "route": "202609/17/2609.17682v1-dsd-learning-diverse-and-reusable-motor-skills-via-diffusion-skill-discovery",
+      "title": "DSD: Learning Diverse and Reusable Motor Skills via Diffusion Skill Discovery",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过扩散技能发现与技能潜变量学习多样可复用技能库",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    },
+    {
+      "paper_id": "2609.18869v1",
+      "route": "202609/17/2609.18869v1-kino-a-keyframe-interface-for-vlm-planning-and-whole-body-control-in-humanoid-loco-manipulation",
+      "title": "KINO: A Keyframe Interface for VLM Planning and Whole-Body Control in Humanoid Loco-Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "分层键帧库选择并条件化全身策略",
+      "first_seen_at": "2026-09-17 22:37:19 UTC",
+      "updated_at": "2026-09-17 22:37:19 UTC"
+    }
+  ]
+}

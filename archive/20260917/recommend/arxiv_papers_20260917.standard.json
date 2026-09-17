@@ -1,0 +1,432 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-17T22:31:32.142386+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2609.16040v1",
+      "source": "arxiv",
+      "title": "Bi-MoDe: Bilateral Control-based Imitation Learning via Modifier-Conditioned Decoding for Modulation of Execution Speed and Contact Intensity",
+      "abstract": "Bilateral control-based imitation learning captures both position and force information, making it well suited to contact-rich manipulation. However, existing approaches provide limited means for an operator to specify how a learned task should be executed at inference time, such as slowly or quickly, gently or firmly. We propose Bi-MoDe, a modifier-conditioned decoding framework that injects a constrained latent into every layer of the Transformer action decoder via adaLN-Zero, allowing behavioral directives to directly influence action-chunk generation. We evaluate the method on a real-world whiteboard wiping task with combinations of temporal and physical modifiers. Bi-MoDe improves physical directive following over the action-chunking baseline while maintaining comparable temporal control. An ablation further shows that decoder conditioning and latent-space composition interact, and that their combination is important for accurate physical directive following. Additional material is available at the https://mertcookimg.github.io/bi-mode/",
+      "authors": [
+        "Takumi Kobayashi",
+        "Masato Kobayashi",
+        "Yuki Uranishi"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-11T22:56:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.16040v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "modifier-conditioned Transformer action-chunk decoding for contact-rich imitation",
+      "llm_evidence_cn": "接触丰富模仿的修改器条件化Transformer动作块解码",
+      "llm_evidence": "接触丰富模仿的修改器条件化Transformer动作块解码",
+      "canonical_evidence": "接触丰富模仿的修改器条件化Transformer动作块解码",
+      "llm_tldr_en": "Bi-MoDe injects a constrained latent into every Transformer action-decoder layer via adaLN-Zero, letting operators specify execution speed and contact intensity for bilateral control imitation learning in contact-rich manipulation tasks.",
+      "llm_tldr_cn": "针对双边控制模仿学习在推理时难以让操作者指定执行快慢与接触力度的问题，本文提出Bi-MoDe修改器条件化解码框架。它通过adaLN-Zero将约束潜变量注入Transformer动作解码器的每一层，使行为指令直接影响动作块生成。在真实白板擦拭任务上的实验表明，该方法能灵活调制执行速度与接触强度，为接触丰富操作提供了可调节的技能条件化控制。",
+      "llm_tldr": "针对双边控制模仿学习在推理时难以让操作者指定执行快慢与接触力度的问题，本文提出Bi-MoDe修改器条件化解码框架。它通过adaLN-Zero将约束潜变量注入Transformer动作解码器的每一层，使行为指令直接影响动作块生成。在真实白板擦拭任务上的实验表明，该方法能灵活调制执行速度与接触强度，为接触丰富操作提供了可调节的技能条件化控制。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.17714v1",
+      "source": "arxiv",
+      "title": "Vision-Language Grounded Task-Context-Aware Imitation Learning for Robotic Disassembly",
+      "abstract": "Real-world robotic disassembly requires long-horizon execution, where robots must perform ordered sequences of manipulation tasks across multiple parts within a single scene. Multiple valid task goals and diverse assembly configurations make it difficult for imitation policies to infer the intended skill from raw observations alone, particularly when training data cannot cover the combinatorial diversity of real-world configurations and part geometries. We show that incorporating task context through language alleviates these challenges by providing explicit structure for skill selection and associating language-specified tasks with their corresponding manipulation targets in the visual scene. The proposed framework combines hierarchical task selection with task-context-aware imitation learning to ground language instructions in spatial visual representations for robotic disassembly. The resulting framework generalizes across diverse connector geometries and assembly configurations without requiring explicit object annotations. Our method improves end-to-end task success by 35 percentage points over the baseline diffusion policy and by 75 percentage points over the previous task-context-aware baseline.",
+      "authors": [
+        "Jeon Ho Kang",
+        "Igal Tamarkin",
+        "Ethan Niu",
+        "Ian Novales",
+        "Satyandra K. Gupta"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-15T18:23:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.17714v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "hierarchical imitation learning for long-horizon disassembly with language-guided skill selection",
+      "llm_evidence_cn": "面向长时程拆解的分层模仿学习与语言引导技能选择",
+      "llm_evidence": "面向长时程拆解的分层模仿学习与语言引导技能选择",
+      "canonical_evidence": "面向长时程拆解的分层模仿学习与语言引导技能选择",
+      "llm_tldr_en": "Robotic disassembly requires ordered long-horizon skill sequences, yet imitation policies struggle to infer intended skills when data cannot cover combinatorial configurations. The paper adds language task context to structure skill selection in a hierarchical imitation framework.",
+      "llm_tldr_cn": "真实机器人拆解需要在单一场景中对多个零件执行有序的长时程操作序列，而多目标与多样装配配置使模仿策略难以仅凭原始观测推断意图技能，尤其当训练数据无法覆盖组合多样性时。本文提出以视觉语言接地的任务上下文感知模仿学习框架，通过语言提供技能选择的显式结构，并把语言指定的任务与其视觉操作目标关联起来。框架结合分层策略，在真实拆解任务中提升了长时程执行与技能选择能力。该工作表明任务上下文语言可有效缓解组合泛化难题。",
+      "llm_tldr": "真实机器人拆解需要在单一场景中对多个零件执行有序的长时程操作序列，而多目标与多样装配配置使模仿策略难以仅凭原始观测推断意图技能，尤其当训练数据无法覆盖组合多样性时。本文提出以视觉语言接地的任务上下文感知模仿学习框架，通过语言提供技能选择的显式结构，并把语言指定的任务与其视觉操作目标关联起来。框架结合分层策略，在真实拆解任务中提升了长时程执行与技能选择能力。该工作表明任务上下文语言可有效缓解组合泛化难题。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.18358v1",
+      "source": "arxiv",
+      "title": "GraphPoint: Semantic Entity Graphs and Point Trajectories for Compositional Robot Manipulation",
+      "abstract": "Robot manipulation policies often struggle to generalize beyond their demonstrations, even when new instructions involve familiar objects and behaviors. When language and scenes are strongly correlated during training, a policy can learn a fixed visual-action mapping rather than respond to the requested behavior. We investigate compositional reuse at two levels: within a subtask, combining familiar entities, action types, and action modifiers; and across subtasks, reusing learned subtasks in unseen long-horizon tasks. We introduce CoMani, a benchmark with controlled splits for evaluating both capabilities. Matched initial scenes and controlled changes to a single semantic factor encourage reliance on language rather than visual shortcuts. We further propose GraphPoint, which connects semantic entity graphs to geometric control by predicting future gripper point trajectories and converting them into actions using robot geometry. The framework organizes the gripper and objects by semantic roles and conditions their interactions on action types and modifiers, while predicted progress guides transitions during execution. Experiments and ablations on CoMani validate the effectiveness of our method for instruction-dependent generalization at both levels. Code will be released at GraphPoint.",
+      "authors": [
+        "Kang Luo",
+        "Hesheng Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T09:17:32+00:00",
+      "link": "https://arxiv.org/pdf/2609.18358v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "compositional reuse of subtasks in unseen long-horizon tasks",
+      "llm_evidence_cn": "在未见长时程任务中组合复用子任务",
+      "llm_evidence": "在未见长时程任务中组合复用子任务",
+      "canonical_evidence": "在未见长时程任务中组合复用子任务",
+      "llm_tldr_en": "This paper addresses manipulation policies that overfit to correlated language-scene mappings and fail to generalize compositionally. It proposes semantic entity graphs and point trajectories and introduces the CoMani benchmark with controlled splits. It studies compositional reuse within subtasks and across subtasks in unseen long-horizon tasks, advancing compositional generalization.",
+      "llm_tldr_cn": "机器人操作策略常难以超越演示泛化，当训练中语言与场景强相关时，策略易学到固定的视觉到动作映射而非响应指令行为。本文研究两个层面的组合复用：子任务内组合熟悉实体、动作类型与修饰语，以及跨子任务在未见长时程任务中复用已学子任务。作者提出语义实体图与点轨迹方法，并构建带受控划分的CoMani基准，通过匹配初始场景与单因素变化促使策略依赖语言，从而系统评估组合泛化能力。",
+      "llm_tldr": "机器人操作策略常难以超越演示泛化，当训练中语言与场景强相关时，策略易学到固定的视觉到动作映射而非响应指令行为。本文研究两个层面的组合复用：子任务内组合熟悉实体、动作类型与修饰语，以及跨子任务在未见长时程任务中复用已学子任务。作者提出语义实体图与点轨迹方法，并构建带受控划分的CoMani基准，通过匹配初始场景与单因素变化促使策略依赖语言，从而系统评估组合泛化能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.16056v1",
+      "source": "arxiv",
+      "title": "Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents",
+      "abstract": "Humans carry behaviour knowledge of how to act in familiar situations into every new task rather than relearning it from scratch. There is no reason a Reinforcement Learning (RL) agent shouldn't do the same: known behaviour patterns need not be learned, only applied. Neuro-symbolic RL bridges prior knowledge and RL by injecting symbolic knowledge alongside a learned policy. The point at which this knowledge is integrated is critical: a poor choice can produce, for instance, hallucinated preconditions, which surface as safety and reliability problems in agents acting in changing environments. We formalise this behavioural knowledge as a precondition Bayesian network (BN) over the agent's \\emph{structural actions} - the actions whose legality depends on preconditions, such as picking up a key, grasping a block, toggling a door, or dropping an object. The BN restricts when these actions may fire, and we inject it into the RL loop at three placements: (1) a \\emph{symbolic verifier}, consulted only at inference, that fires a structural action once its preconditions hold; (2) a \\emph{symbolic enforcer}, active during both training and inference, that governs structural-action use throughout learning; and (3) a \\emph{symbolic learner}, which folds the knowledge into the network and learns the restriction and use of structural actions itself. To test the three variants we run experiments on two benchmarks with opposite regimes: one built on long, ordered planning chains, the other on continuous manipulation. We compare against strong baselines on solution quality, sample efficiency, and traceability. The payoff is substantial. On MiniGrid, all three placements improve the \\emph{solution quality} over the PPO+RND baseline, the symbolic enforcer leading at $98.2\\%$ against the baseline's $88.8\\%$. On Fetch, $\\dots$",
+      "authors": [
+        "Norbert Oswald",
+        "Fabian Deuser",
+        "Thomas Bräunl"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-13T06:05:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.16056v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "precondition Bayesian network over structural actions",
+      "llm_evidence_cn": "结构动作上的前置条件贝叶斯网络",
+      "llm_evidence": "结构动作上的前置条件贝叶斯网络",
+      "canonical_evidence": "结构动作上的前置条件贝叶斯网络",
+      "llm_tldr_en": "This work formalises behavioural knowledge as a precondition Bayesian network over structural actions and studies three placement strategies for injecting symbolic preconditions into neuro-symbolic RL policies.",
+      "llm_tldr_cn": "针对强化学习智能体应像人一样复用已知行为模式、但神经符号知识注入位置选择不当会引发幻觉前置条件等安全可靠性问题，本文提出系统化方法。工作将行为知识形式化为结构动作上的前置条件贝叶斯网络，并比较三种将符号前置条件注入学习策略的放置策略。实验表明不同放置策略显著影响前置条件的正确性与智能体在变化环境中的安全可靠性，为前置条件与学习策略的整合提供了指导。",
+      "llm_tldr": "针对强化学习智能体应像人一样复用已知行为模式、但神经符号知识注入位置选择不当会引发幻觉前置条件等安全可靠性问题，本文提出系统化方法。工作将行为知识形式化为结构动作上的前置条件贝叶斯网络，并比较三种将符号前置条件注入学习策略的放置策略。实验表明不同放置策略显著影响前置条件的正确性与智能体在变化环境中的安全可靠性，为前置条件与学习策略的整合提供了指导。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.11308v1",
+      "source": "arxiv",
+      "title": "2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation",
+      "abstract": "Long-horizon robot manipulation requires memory, but not necessarily inside the action policy. To address such tasks, current agentic systems often combine VLAs with planners and geometric tools, sometimes using additional depth or calibrated geometry. These systems confound attribution: gains may come from richer observations or alternative motor tools, while failures may stem from either the policy or an under-specified language interface. We isolate this question through a deliberately constrained design: less tool breadth, but greater interface bandwidth. 2AM makes a multimodal Agent the sole holder of task memory and a single RGB-based, episodically stateless Action Model the sole executor of task-relevant motion. The Agent compiles interaction history into subtask language and optional 2D grasp, place, and move hints that bind its physical intention at different time scales. To teach this steerability to the VLA, we augment demonstrations with structured hint labels and train under condition dropout, spatial noise, and temporal jitter to tolerate imperfect Agent outputs. On LIBERO-Mem, without depth, online geometry, or planner-based object motion, 2AM reaches 76.3% average completion, a 61.5-point improvement over the strongest reported baseline of 14.8%, together with 63.0% relaxed and 11.8% strict success. These results show that task memory can remain Agent-side. They further show that Action Model capability depends not only on what the policy has learned, but on how precisely the Agent can steer it.",
+      "authors": [
+        "Yutong Hu",
+        "Fengjiao Chen",
+        "Xuezhi Cao",
+        "Renaud Detry"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-10T09:35:56+00:00",
+      "link": "https://arxiv.org/pdf/2609.11308v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "long-horizon manipulation with agent-held task memory and stateless action model",
+      "llm_evidence_cn": "长时程操作，由智能体持有任务记忆，动作模型无状态执行",
+      "llm_evidence": "长时程操作，由智能体持有任务记忆，动作模型无状态执行",
+      "canonical_evidence": "长时程操作，由智能体持有任务记忆，动作模型无状态执行",
+      "llm_tldr_en": "2AM studies long-horizon manipulation by placing task memory in a multimodal agent while a single RGB-based, episodically stateless action model executes motion, isolating whether gains come from memory or richer tools.",
+      "llm_tldr_cn": "针对长时程机器人操作中记忆归属不清的问题，本文提出2AM框架。该方法让多模态智能体成为任务记忆的唯一持有者，而由单一基于RGB、情节内无状态的动作模型负责执行与任务相关的运动，从而刻意收窄工具范围、增强接口带宽。这种设计将增益来源与更丰富的观测或替代运动工具解耦，有助于厘清策略与语言接口各自的贡献。该工作为长时程操作中记忆与执行的职责划分提供了可归因的实验框架，与分层技能库思想相关但未涉及参数化技能原语。",
+      "llm_tldr": "针对长时程机器人操作中记忆归属不清的问题，本文提出2AM框架。该方法让多模态智能体成为任务记忆的唯一持有者，而由单一基于RGB、情节内无状态的动作模型负责执行与任务相关的运动，从而刻意收窄工具范围、增强接口带宽。这种设计将增益来源与更丰富的观测或替代运动工具解耦，有助于厘清策略与语言接口各自的贡献。该工作为长时程操作中记忆与执行的职责划分提供了可归因的实验框架，与分层技能库思想相关但未涉及参数化技能原语。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.16331v1",
+      "source": "arxiv",
+      "title": "ManiSkillFormer: Demonstration-Free Compositional Manipulation via Task-Conditioned Geometric Contracts",
+      "abstract": "We present ManiSkillFormer, a neuro-symbolic framework for demonstration-free and compositional robotic manipulation. Instead of learning end-to-end visuomotor policies, ManiSkillFormer introduces task-conditioned geometric contracts that explicitly structure the interface between perception and action. Each manipulation skill declares the semantic geometric primitives required for execution, such as object keypoints and surface normals. Building on human-defined skill structures, LLM agents generate these contracts and corresponding motion templates for different objects and task contexts. These contracts guide the perception module to ground task-relevant 3D primitives from observations, which are then used to instantiate reusable motion templates stored in a skill library. We evaluate ManiSkillFormer on Galaxea R1-Lite dual-arm robot across three settings: zero-shot pick-and-place over 8 object categories with 30 different instances, functional manipulation tasks including unscrewing, pouring, pressing, and folding, and 3 long-horizon tasks. ManiSkillFormer achieves higher average success rates than the evaluated baselines and two ablated pipelines: 88.24% for demonstration-free pick-and-place, 75.00% average success on functional manipulation and 50--80% completion rates across the long-horizon tasks. These results show that our design enables composable and reusable manipulation across objects and tasks without per-object policy fine-tuning or additional robot demonstrations.",
+      "authors": [
+        "Peiqi Yu",
+        "Mosam Dabhi",
+        "Shangtao Li",
+        "Bowei Li",
+        "Laszlo Jeni",
+        "Changliu Liu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-14T20:45:53+00:00",
+      "link": "https://arxiv.org/pdf/2609.16331v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "compositional manipulation with skills declaring geometric primitives and task-conditioned contracts",
+      "llm_evidence_cn": "组合式操作，技能声明几何原语并由任务条件化契约驱动",
+      "llm_evidence": "组合式操作，技能声明几何原语并由任务条件化契约驱动",
+      "canonical_evidence": "组合式操作，技能声明几何原语并由任务条件化契约驱动",
+      "llm_tldr_en": "ManiSkillFormer is a neuro-symbolic framework for demonstration-free compositional manipulation, where each skill declares geometric primitives and LLM-generated task-conditioned contracts structure perception and action.",
+      "llm_tldr_cn": "针对端到端视觉运动策略难以组合复用的问题，本文提出神经符号框架ManiSkillFormer，实现免演示的组合式机器人操作。每个操作技能显式声明执行所需的语义几何原语（如物体关键点与表面法线），由LLM智能体基于人工定义的技能结构生成任务条件化的几何契约与运动模板，引导感知模块从观测中接地任务相关三维原语，进而实例化操作。该工作将技能原语、参数化契约与组合泛化结合，为可复用的操作技能表示提供了新路径，与参数化技能原语和组合泛化主题高度契合。",
+      "llm_tldr": "针对端到端视觉运动策略难以组合复用的问题，本文提出神经符号框架ManiSkillFormer，实现免演示的组合式机器人操作。每个操作技能显式声明执行所需的语义几何原语（如物体关键点与表面法线），由LLM智能体基于人工定义的技能结构生成任务条件化的几何契约与运动模板，引导感知模块从观测中接地任务相关三维原语，进而实例化操作。该工作将技能原语、参数化契约与组合泛化结合，为可复用的操作技能表示提供了新路径，与参数化技能原语和组合泛化主题高度契合。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.16504v1",
+      "source": "arxiv",
+      "title": "UniDex-ViTac: Learning Unified Visuo-Tactile Dexterous Manipulation Policy from Human Video Data",
+      "abstract": "Human videos provide demonstrations of dexterous manipulation but lack robot-executable actions and tactile measurements. We present UniDex-ViTac, a framework that uses human-video-guided simulation to generate robot demonstrations paired with fingertip contact observations for training a deployable visuo-tactile policy. Object-specific residual reinforcement learning specialists adapt annotated human-object interaction references to a robotic arm-hand system. Their successful rollouts pair final robot action targets with robot-side fingertip contact observations. From 50 human demonstrations across ten objects, we collect 10,000 simulated trajectories to train a single Action Chunking with Transformers (ACT) based generalist. The policy combines point clouds, proprioception, and four binary contact signals encoded through fingertip labels and a separate token, without requiring human references or privileged object identity and pose at deployment. The contact-augmented configuration achieves 68.3% macro-average success in simulation, compared with 55.5% for the point-cloud-only baseline. Without real-robot demonstrations or policy fine-tuning, it succeeds in 73/110 physical trials (66.4%) across six seen and five unseen objects, compared with 60/110 (54.5%) for the baseline, an increase of 11.8 percentage points. These results support the feasibility of learning a unified visuo-tactile dexterous manipulation policy from video-guided simulated interactions. Project page: https://unidex-vitac.github.io/",
+      "authors": [
+        "Hyesung Lee",
+        "Si-Hwan Heo",
+        "Sungwook Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-15T01:52:33+00:00",
+      "link": "https://arxiv.org/pdf/2609.16504v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Action Chunking with Transformers generalist policy for manipulation",
+      "llm_evidence_cn": "基于动作分块Transformer的操作通用策略",
+      "llm_evidence": "基于动作分块Transformer的操作通用策略",
+      "canonical_evidence": "基于动作分块Transformer的操作通用策略",
+      "llm_tldr_en": "UniDex-ViTac uses human-video-guided simulation to generate robot demos with fingertip contact, training an Action Chunking with Transformers generalist visuo-tactile policy deployed on real hardware.",
+      "llm_tldr_cn": "人类视频提供灵巧操作示范，却缺少机器人可执行动作与触觉测量。该文提出UniDex-ViTac，利用人类视频引导仿真生成带指尖接触观测的机器人示范，先用物体特定的残差强化学习专家适配人-物交互参考。基于50段人类示范与一万条仿真轨迹，训练出基于动作分块Transformer（ACT）的通用视触觉策略并部署到真实机器人，实现了跨物体的统一操作。",
+      "llm_tldr": "人类视频提供灵巧操作示范，却缺少机器人可执行动作与触觉测量。该文提出UniDex-ViTac，利用人类视频引导仿真生成带指尖接触观测的机器人示范，先用物体特定的残差强化学习专家适配人-物交互参考。基于50段人类示范与一万条仿真轨迹，训练出基于动作分块Transformer（ACT）的通用视触觉策略并部署到真实机器人，实现了跨物体的统一操作。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.16745v2",
+      "source": "arxiv",
+      "title": "The Latent That Never Was: A Forensic Re-run of the CVAE Ablation in Action Chunking Transformers",
+      "abstract": "Action Chunking Transformers (ACT) are widely used to learn robot manipulation from demonstrations. Their conditional variational autoencoder includes an encoder meant to capture differences between demonstrations during training. The original ACT paper reported that encoder removal dropped the mean success rate from 35% to 2% on two simulated tasks with human demonstrations. We re-ran this ablation in the original code and checked whether the findings depend on the implementation or training data. The published drop does not reappear in our tests, although smaller gains or losses in success rate remain uncertain. To investigate the discrepancy, we varied training length and how checkpoints are selected for evaluation. Both can reverse which policy scores higher, but the published drop's cause remains unknown. Success rates alone leave open whether the encoder provides information that helps the policy reconstruct demonstrated actions. On the tested ACT benchmark, the sampled latent provides little reconstruction benefit at every tested nonzero weight of the penalty on latent information. At inference, ACT leaves this latent unused and sets it to zero. Skipping the encoder increases training throughput in both implementations we timed. We release code, evaluation tools and results so others can repeat the comparisons and test the encoder on other tasks.",
+      "authors": [
+        "Bo Kang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-09-15T07:18:26+00:00",
+      "link": "https://arxiv.org/pdf/2609.16745v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "forensic re-run of CVAE ablation in action chunking transformers for robot manipulation",
+      "llm_evidence_cn": "对动作分块Transformer中CVAE消融的取证式复现",
+      "llm_evidence": "对动作分块Transformer中CVAE消融的取证式复现",
+      "canonical_evidence": "对动作分块Transformer中CVAE消融的取证式复现",
+      "llm_tldr_en": "This forensic re-run of the CVAE ablation in Action Chunking Transformers fails to reproduce the original dramatic success-rate drop, questioning the robustness of ACT conclusions.",
+      "llm_tldr_cn": "动作分块Transformer广泛用于机器人示教学习，但其条件变分自编码器编码器是否必要缺乏可靠验证。本文在原始代码上重跑CVAE消融实验，并改变训练时长与检查点选择方式检验结论稳健性。结果显示原论文报告的从35%到2%的成功率骤降未能复现，仅存在不确定的小幅增减。该工作提示ACT的关键结论可能依赖实现与评估细节，需谨慎对待其消融证据。",
+      "llm_tldr": "动作分块Transformer广泛用于机器人示教学习，但其条件变分自编码器编码器是否必要缺乏可靠验证。本文在原始代码上重跑CVAE消融实验，并改变训练时长与检查点选择方式检验结论稳健性。结果显示原论文报告的从35%到2%的成功率骤降未能复现，仅存在不确定的小幅增减。该工作提示ACT的关键结论可能依赖实现与评估细节，需谨慎对待其消融证据。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.17042v1",
+      "source": "arxiv",
+      "title": "Learning Options for Compositional Motor Control with Adapter Banks",
+      "abstract": "Learning flexible motor primitives is a hallmark of skilled motor control. Recent neuroscience theory proposes that motor primitives may be implemented as low-rank perturbations of a shared recurrent network, but leaves open how such a system is learned. We translate this principle into a novel architecture for learning motor skills end-to-end: a shared recurrent core modulated by a bank of residual adapters, each selected by a discrete latent code. Trained on closed-loop biomechanical control, the adapters develop emergent low-rank perturbations of the recurrent dynamics despite no architectural rank constraint, placing task representations in disparate subspaces of the shared core network. A simple high-level policy over the learned options, optimized while the whole network is frozen, sequences the low-rank adapters to produce novel out-of-distribution movements. We demonstrate the ability to generalize to novel motor sequences within the closed-loop control setting, improving on the generalization error of a task-input-conditioned multitask baseline by upto order of magnitude.",
+      "authors": [
+        "Sreejan Kumar",
+        "Marcelo Mattar",
+        "Lea Duncker"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO",
+        "q-bio.NC"
+      ],
+      "published": "2026-09-15T11:49:30+00:00",
+      "link": "https://arxiv.org/pdf/2609.17042v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learned motor primitives as options selected by discrete latent code, compositional control",
+      "llm_evidence_cn": "以离散隐码选择的学习型运动原语与组合控制",
+      "llm_evidence": "以离散隐码选择的学习型运动原语与组合控制",
+      "canonical_evidence": "以离散隐码选择的学习型运动原语与组合控制",
+      "llm_tldr_en": "Motor primitives as low-rank perturbations of a shared recurrent network lack a learning method. The paper learns a shared recurrent core modulated by a bank of residual adapters selected by discrete latent codes, with a high-level policy over learned options.",
+      "llm_tldr_cn": "神经科学理论认为运动原语可由共享循环网络的低秩扰动实现，但如何学习这一结构尚不明确。本文提出一种端到端架构：共享循环核心由一组残差适配器调制，每个适配器由离散隐码选择，并训练高层策略在学到的选项上进行组合控制。在闭环生物力学控制任务中，适配器自发形成低秩扰动，将不同任务表征置于共享网络的不同子空间。该工作为可复用、可组合的运动原语学习提供了新框架。",
+      "llm_tldr": "神经科学理论认为运动原语可由共享循环网络的低秩扰动实现，但如何学习这一结构尚不明确。本文提出一种端到端架构：共享循环核心由一组残差适配器调制，每个适配器由离散隐码选择，并训练高层策略在学到的选项上进行组合控制。在闭环生物力学控制任务中，适配器自发形成低秩扰动，将不同任务表征置于共享网络的不同子空间。该工作为可复用、可组合的运动原语学习提供了新框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.17682v1",
+      "source": "arxiv",
+      "title": "DSD: Learning Diverse and Reusable Motor Skills via Diffusion Skill Discovery",
+      "abstract": "Humans efficiently learn new tasks by reusing a rich repertoire of motor skills across different goals and contexts. A similar strategy can also be used to enable simulated characters to efficiently perform new tasks by leveraging reusable motor skills. To support a wide range of downstream tasks, the learned repertoire should be diverse, consisting of distinct behaviors as well as spatial and temporal variation within each behavior. A commonly used method for learning diverse skills is by maximizing the mutual information between skill latents and the states produced by a policy. The marginal state entropy promotes broad behavioral coverage, while the conditional entropy encourages consistent behaviors from each latent. However, directly estimating the marginal state entropy is intractable in high-dimensional control problems. Prior methods therefore rely on indirect latent-space approximations or coarse estimators of the state distribution. These approximations may not effectively promote broad coverage of the state space, resulting in skills with limited behavioral diversity and reduced utility for downstream tasks. In this work, we propose Diffusion Skill Discovery (DSD), a skill discovery method that uses a diffusion model to approximate the entropy gradient of the policy-induced state distribution through score matching. The resulting objective encourages the discovery of skills that produce a broader range of behaviors for high-dimensional humanoid control. The learned skills are reused in two downstream control settings: hierarchical control with a task-specific high-level policy and zero-shot control through latent selection from offline trajectories. Our experiments show that DSD discovers a broader repertoire of reusable motor skills than prior skill discovery methods, leading to the emergence of complex and agile behaviors that can be reused across downstream tasks.",
+      "authors": [
+        "Sun Woo Kim",
+        "Xue Bin Peng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.GR"
+      ],
+      "published": "2026-09-15T18:01:48+00:00",
+      "link": "https://arxiv.org/pdf/2609.17682v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learning diverse reusable motor skill repertoire via diffusion skill discovery and skill latents",
+      "llm_evidence_cn": "通过扩散技能发现与技能潜变量学习多样可复用技能库",
+      "llm_evidence": "通过扩散技能发现与技能潜变量学习多样可复用技能库",
+      "canonical_evidence": "通过扩散技能发现与技能潜变量学习多样可复用技能库",
+      "llm_tldr_en": "DSD learns a diverse and reusable motor skill repertoire via diffusion skill discovery, balancing behavioral coverage and consistency with skill latents.",
+      "llm_tldr_cn": "人类通过复用丰富的运动技能库高效学习新任务，类似策略可让模拟角色利用可复用技能完成新目标。DSD提出基于扩散的技能发现方法，通过最大化技能潜变量与状态间的互信息来学习多样技能，其中边际状态熵促进行为覆盖，条件熵鼓励每个潜变量对应一致行为。该方法在模拟角色上得到兼具行为多样性与时空变化的可复用技能库，支持广泛下游任务，为可复用技能库的构建提供新思路。",
+      "llm_tldr": "人类通过复用丰富的运动技能库高效学习新任务，类似策略可让模拟角色利用可复用技能完成新目标。DSD提出基于扩散的技能发现方法，通过最大化技能潜变量与状态间的互信息来学习多样技能，其中边际状态熵促进行为覆盖，条件熵鼓励每个潜变量对应一致行为。该方法在模拟角色上得到兼具行为多样性与时空变化的可复用技能库，支持广泛下游任务，为可复用技能库的构建提供新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.18869v1",
+      "source": "arxiv",
+      "title": "KINO: A Keyframe Interface for VLM Planning and Whole-Body Control in Humanoid Loco-Manipulation",
+      "abstract": "Humanoid loco-manipulation requires robots to interpret task instructions and scene semantics while executing coordinated whole-body motions. We propose a hierarchical framework that uses motion keyframes as an intermediate representation between Vision-Language Model (VLM) planning and Reinforcement Learning (RL) control. Each keyframe specifies a target whole-body robot pose and, when applicable, an object pose. Given a language instruction, scene observations, and execution feedback, the VLM selects successive task-relevant keyframes from a predefined library. The selected keyframes are retargeted to the current scene to account for object poses and dimensions. A keyframe-conditioned whole-body policy then generates joint-level actions to reach these goals. We introduce a saliency-based keyframe sampling strategy for low-level policy training that improves end-to-end task success rate from 44% to 92% when using sparse VLM keyframes. We evaluate our framework on object pickup, transport, and placement tasks in simulation and on a Unitree G1 humanoid. The system successfully performs both one- and two-handed manipulation and generalises to placement locations beyond the training reference data.",
+      "authors": [
+        "Sitong Chen",
+        "Fatemeh Zargarbashi",
+        "Jin Cheng",
+        "Tianxu An",
+        "Stelian Coros"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T16:07:33+00:00",
+      "link": "https://arxiv.org/pdf/2609.18869v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical keyframe library selection conditions a whole-body policy",
+      "llm_evidence_cn": "分层键帧库选择并条件化全身策略",
+      "llm_evidence": "分层键帧库选择并条件化全身策略",
+      "canonical_evidence": "分层键帧库选择并条件化全身策略",
+      "llm_tldr_en": "KINO uses motion keyframes as an intermediate representation between VLM planning and RL whole-body control; the VLM selects keyframes from a library that are retargeted and fed to a keyframe-conditioned policy for humanoid loco-manipulation.",
+      "llm_tldr_cn": "针对人形机器人移动操作中语言指令与全身协调运动难以衔接的问题，本文提出以运动键帧作为视觉语言模型规划与强化学习控制之间的中间表示。每个键帧指定目标全身姿态及可选的物体位姿，VLM根据指令与执行反馈从预定义库中选择键帧，经场景重定向后由键帧条件化的全身策略生成关节动作。该分层框架降低了规划与控制间的语义鸿沟，提升了复杂移动操作任务的执行可靠性。",
+      "llm_tldr": "针对人形机器人移动操作中语言指令与全身协调运动难以衔接的问题，本文提出以运动键帧作为视觉语言模型规划与强化学习控制之间的中间表示。每个键帧指定目标全身姿态及可选的物体位姿，VLM根据指令与执行反馈从预定义库中选择键帧，经场景重定向后由键帧条件化的全身策略生成关节动作。该分层框架降低了规划与控制间的语义鸿沟，提升了复杂移动操作任务的执行可靠性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
