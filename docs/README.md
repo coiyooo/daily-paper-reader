@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-17</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-18</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 11 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-17 22:37:19 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-18 21:48:40 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共生成 11 篇推荐（精读 3 篇，速读 8 篇）</p>
-<p>精读：《Bi-MoDe: Bilateral Control-based Imitation Learning via Modifier-Conditioned Decoding for Modulation of Execution Speed and Contact Intensity》（8.0/10）, 《Vision-Language Grounded Task-Context-Aware Imitation Learning for Robotic Disassembly》（8.0/10）</p>
-<p>速读：《Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents》（7.0/10）, 《ManiSkillFormer: Demonstration-Free Compositional Manipulation via Task-Conditioned Geometric Contracts》（7.0/10）, 《The Latent That Never Was: A Forensic Re-run of the CVAE Ablation in Action Chunking Transformers》（7.0/10）</p>
+<p>今日共生成 6 篇推荐（精读 1 篇，速读 5 篇）</p>
+<p>精读：《V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos》（8.0/10）</p>
+<p>速读：《Missing Bridges: Composition-Aware Active Imitation Learning》（7.0/10）, 《MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution》（7.0/10）, 《From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation》（6.0/10）</p>
 <p>这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。</p>
   </div>
 </section>
@@ -74,12 +74,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Bi-MoDe: Bilateral Control-based Imitation Learning via Modifier-Conditioned Decoding for Modulation of Execution Speed and Contact Intensity">Bi-MoDe: Bilateral Control-based Imitation Learning via Modifier-Conditioned Decoding for Modulation of Execution Speed and Contact Intensity</span></li><li><span class="dpr-home-dashboard-paper-title" title="Vision-Language Grounded Task-Context-Aware Imitation Learning for Robotic Disassembly">Vision-Language Grounded Task-Context-Aware Imitation Learning for Robotic Disassembly</span></li><li><span class="dpr-home-dashboard-paper-title" title="GraphPoint: Semantic Entity Graphs and Point Trajectories for Compositional Robot Manipulation">GraphPoint: Semantic Entity Graphs and Point Trajectories for Compositional Robot Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos">V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -87,12 +87,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">8 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents">Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="ManiSkillFormer: Demonstration-Free Compositional Manipulation via Task-Conditioned Geometric Contracts">ManiSkillFormer: Demonstration-Free Compositional Manipulation via Task-Conditioned Geometric Contracts</span></li><li><span class="dpr-home-dashboard-paper-title" title="The Latent That Never Was: A Forensic Re-run of the CVAE Ablation in Action Chunking Transformers">The Latent That Never Was: A Forensic Re-run of the CVAE Ablation in Action Chunking Transformers</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Missing Bridges: Composition-Aware Active Imitation Learning">Missing Bridges: Composition-Aware Active Imitation Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution">MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution</span></li><li><span class="dpr-home-dashboard-paper-title" title="From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation">From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>8</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>5</strong></span></div>
 </section>
 </div>
 

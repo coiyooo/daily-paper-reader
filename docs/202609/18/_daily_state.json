@@ -1,0 +1,105 @@
+{
+  "date": "20260918",
+  "date_label": "",
+  "generated_at": "2026-09-18 21:48:40 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.20582v1",
+      "route": "202609/18/2609.20582v1-v2-strep-vlm-grounded-structured-task-representations-for-reusable-robot-skills-acquired-from-generated-videos",
+      "title": "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "指定运动相位与约束的可复用机器人技能结构化任务表征",
+      "first_seen_at": "2026-09-18 21:48:40 UTC",
+      "updated_at": "2026-09-18 21:48:40 UTC"
+    },
+    {
+      "paper_id": "2609.18004v1",
+      "route": "202609/18/2609.18004v1-missing-bridges-composition-aware-active-imitation-learning",
+      "title": "Missing Bridges: Composition-Aware Active Imitation Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向结构化多任务的可组合可复用行为",
+      "first_seen_at": "2026-09-18 21:48:40 UTC",
+      "updated_at": "2026-09-18 21:48:40 UTC"
+    },
+    {
+      "paper_id": "2609.20056v1",
+      "route": "202609/18/2609.20056v1-magma-gen-validated-recovery-supervision-from-ambiguous-failures-via-counterfactual-re-execution",
+      "title": "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "为分层长时域操作编排随机低层技能生成恢复监督",
+      "first_seen_at": "2026-09-18 21:48:40 UTC",
+      "updated_at": "2026-09-18 21:48:40 UTC"
+    },
+    {
+      "paper_id": "2609.19413v1",
+      "route": "202609/18/2609.19413v1-from-rollout-to-reset-a-graph-based-harness-for-autonomous-long-horizon-manipulation-evaluation",
+      "title": "From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在可学习原子重置技能库上规划以支持长时程操作",
+      "first_seen_at": "2026-09-18 21:48:40 UTC",
+      "updated_at": "2026-09-18 21:48:40 UTC"
+    },
+    {
+      "paper_id": "2609.19613v1",
+      "route": "202609/18/2609.19613v1-tacsushi-tactile-grounded-world-action-modeling-for-dexterous-sushi-manipulation",
+      "title": "TacSushi: Tactile-Grounded World-Action Modeling for Dexterous Sushi Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "动作块条件化的接触丰富操作",
+      "first_seen_at": "2026-09-18 21:48:40 UTC",
+      "updated_at": "2026-09-18 21:48:40 UTC"
+    },
+    {
+      "paper_id": "2609.20791v1",
+      "route": "202609/18/2609.20791v1-stageguard-learning-stage-transitions-for-long-horizon-robot-tasks-via-agentic-distillation",
+      "title": "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程任务的可复用技能阶段转换学习",
+      "first_seen_at": "2026-09-18 21:48:40 UTC",
+      "updated_at": "2026-09-18 21:48:40 UTC"
+    }
+  ]
+}

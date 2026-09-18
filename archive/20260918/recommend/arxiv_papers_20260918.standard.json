@@ -1,0 +1,252 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-18T21:44:48.589337+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2609.20582v1",
+      "source": "arxiv",
+      "title": "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+      "abstract": "Human manipulation videos provide rich motion and interaction cues for acquiring robot skills without robot demonstrations. Video generation models synthesize such demonstrations from an initial scene image and task instruction, avoiding the need to record demonstrations for each task. However, the recovered motion captures only one scene-specific realization, leaving task structure, geometric relations, and constraints implicit. We present V2-STRep, a zero-shot framework that converts generated video motion into reusable robot skills through VLM-grounded structured task representations. The representation specifies motion phases, references, and task-relevant constraints, with targets described by minimal geometric structures: points, point-normals, axes, planes, and full 6D poses. VLM-provided 2D image-space cues are lifted into 3D using RGB-D observations to reconstruct task geometry and candidate grasp poses. Geometry-specific rules transfer motion to new scenes, while task-constrained trajectory optimization couples grasp selection with complete robot motion planning. It preserves task requirements while using remaining rotational freedom to accommodate joint limits. Updating deployment grounding and constraints enables reuse under new compatible instructions without generating another video. Experiments on six real-world manipulation tasks demonstrate improved execution success over baselines, reliable cross-scene transfer of successfully acquired skills, and adaptation to changed deployment instructions.",
+      "authors": [
+        "Yexin Hu",
+        "Dongheui Lee"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-17T15:37:34+00:00",
+      "link": "https://arxiv.org/pdf/2609.20582v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "structured task representations specifying motion phases and constraints for reusable robot skills",
+      "llm_evidence_cn": "指定运动相位与约束的可复用机器人技能结构化任务表征",
+      "llm_evidence": "指定运动相位与约束的可复用机器人技能结构化任务表征",
+      "canonical_evidence": "指定运动相位与约束的可复用机器人技能结构化任务表征",
+      "llm_tldr_en": "A zero-shot framework converting generated human video motion into reusable robot skills via VLM-grounded structured task representations with motion phases, references, and constraints.",
+      "llm_tldr_cn": "人类操作视频蕴含丰富动作线索，可从生成视频中获取机器人技能而无需机器人示范，但生成运动仅是一次场景特定的实现，任务结构、几何关系与约束仍然隐含。作者提出V2-STRep，用VLM将生成视频运动转化为结构化任务表征，明确运动相位、参考物与任务约束。该零样本框架使技能可复用于新场景。其贡献在于把隐式视频运动提炼为可迁移、可复用的参数化技能表示。",
+      "llm_tldr": "人类操作视频蕴含丰富动作线索，可从生成视频中获取机器人技能而无需机器人示范，但生成运动仅是一次场景特定的实现，任务结构、几何关系与约束仍然隐含。作者提出V2-STRep，用VLM将生成视频运动转化为结构化任务表征，明确运动相位、参考物与任务约束。该零样本框架使技能可复用于新场景。其贡献在于把隐式视频运动提炼为可迁移、可复用的参数化技能表示。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.18004v1",
+      "source": "arxiv",
+      "title": "Missing Bridges: Composition-Aware Active Imitation Learning",
+      "abstract": "Active imitation learning reduces expert effort by allowing a learner to request the demonstrations it needs. Existing methods typically select these requests for their expected information gain about the expert policy. In structured multi-task domains, however, the number of start-goal tasks may grow combinatorially despite their solutions sharing reusable behavior. This makes composable behaviors especially valuable, since a single demonstration may help solve many tasks at once. Prior methods do not explicitly account for this value when selecting which demonstration to request. We introduce Adaptive Agents via Latent Topologies (AALT), which requests demonstrations that maximize expected gains in start-goal connectivity. We further show that this objective is formally tied to information gain about task reachability. AALT organizes existing demonstrations into a topology of latent hub states connected by learned behaviors, identifies high-value bridge demonstrations that are likely to enable many tasks at once, and grounds each to an expert query. At inference, it plans through the resulting topology and conditions a diffusion policy on each successive hub transition. In a simulated UR5e robot ordered-retrieval domain with 72 tasks, AALT improved from 42/72 to 72/72 (100%) successful tasks consistently using only 3 demonstrations totaling 5 transitions beyond the initial dataset. After 20 demonstrations, the strongest baseline averaged 88.6% success using 98 transitions.",
+      "authors": [
+        "Maxwell J. Jacobson",
+        "Ahmed H Qureshi",
+        "Yexiang Xue"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-16T01:48:13+00:00",
+      "link": "https://arxiv.org/pdf/2609.18004v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "composable reusable behaviors for solving many structured multi-task problems",
+      "llm_evidence_cn": "面向结构化多任务的可组合可复用行为",
+      "llm_evidence": "面向结构化多任务的可组合可复用行为",
+      "canonical_evidence": "面向结构化多任务的可组合可复用行为",
+      "llm_tldr_en": "Active imitation learning selects demonstrations by information gain, ignoring the value of composable reusable behavior in structured multi-task domains; AALT requests demonstrations maximizing expected gains in start-goal connectivity.",
+      "llm_tldr_cn": "主动模仿学习通过让学习者主动请求演示来降低专家成本，但现有方法仅按专家策略信息增益选择请求，忽略了结构化多任务中可组合复用行为的价值。论文提出AALT，选择能最大化起点-终点连通性期望增益的演示请求，使一次演示可帮助解决多个任务。分析表明该目标能促进组合行为的学习。该工作凸显了主动模仿学习中组合感知选择的重要性。",
+      "llm_tldr": "主动模仿学习通过让学习者主动请求演示来降低专家成本，但现有方法仅按专家策略信息增益选择请求，忽略了结构化多任务中可组合复用行为的价值。论文提出AALT，选择能最大化起点-终点连通性期望增益的演示请求，使一次演示可帮助解决多个任务。分析表明该目标能促进组合行为的学习。该工作凸显了主动模仿学习中组合感知选择的重要性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.19413v1",
+      "source": "arxiv",
+      "title": "From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation",
+      "abstract": "Robot manipulation policies are improving quickly, and real-robot evaluation remains the standard evidence for that progress. It still relies on a human to reset the scene between rollouts, which consumes operator time and leaves the initial state distribution unspecified, so results reproduce poorly. A recent system, AutoEval, automates both reset and scoring, but only for single-step tasks, because a long-horizon rollout can terminate in combinatorially many configurations that no single learned reset policy covers. We present HALTER, a Harness for Autonomous Long-horizon Task Evaluation and Reset, which restores the scene by planning over a library of learned atomic reset skills, so demonstration cost scales with the size of that library rather than with the number of terminal states. HALTER builds a spatial scene graph online from point clouds and vision foundation models, and an LLM reasons over this graph to score the rollout, plan the reset, and verify that the reset succeeded, without collecting labeled success images for any task. On four long-horizon tasks on a Franka arm, HALTER restores the scene in 76% of episodes, against 52% for AutoEval and 65% for a motion-planning reset, and it estimates the completed-skill fraction correctly in 90% of episodes, against 76%. Its reset-verification verdict is correct in 91% of episodes, compared with 78% for AutoEval. It also cuts the operator time of an evaluation campaign by 72% relative to manual reset. We further measure compositional generalization on three held-out tasks, where HALTER resets 74.7% of episodes against 1.3% for a per-task reset policy, and we ablate the scene representation and the graph update rate.",
+      "authors": [
+        "Jing Jiang",
+        "Yue Yang",
+        "Xinkai Jiang",
+        "Gedas Bertasius",
+        "Daniel J. Szafir",
+        "Rudolf Lioutikov"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-16T20:52:17+00:00",
+      "link": "https://arxiv.org/pdf/2609.19413v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "planning over a library of learned atomic reset skills for long-horizon manipulation",
+      "llm_evidence_cn": "在可学习原子重置技能库上规划以支持长时程操作",
+      "llm_evidence": "在可学习原子重置技能库上规划以支持长时程操作",
+      "canonical_evidence": "在可学习原子重置技能库上规划以支持长时程操作",
+      "llm_tldr_en": "HALTER autonomously resets long-horizon manipulation scenes by planning over a library of learned atomic skills, removing human resets and improving reproducibility of real-robot evaluation.",
+      "llm_tldr_cn": "真实机器人操作评估仍依赖人工重置场景，既耗时又使初始状态分布不明确，结果难以复现。已有自动重置系统仅支持单步任务，长时程任务终止状态组合爆炸。作者提出HALTER，通过在可学习原子重置技能库上规划来恢复场景，使示范成本随技能库规模而非任务组合数增长。该工作提升了长时程操作评估的可复现性与自动化程度。",
+      "llm_tldr": "真实机器人操作评估仍依赖人工重置场景，既耗时又使初始状态分布不明确，结果难以复现。已有自动重置系统仅支持单步任务，长时程任务终止状态组合爆炸。作者提出HALTER，通过在可学习原子重置技能库上规划来恢复场景，使示范成本随技能库规模而非任务组合数增长。该工作提升了长时程操作评估的可复现性与自动化程度。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.20056v1",
+      "source": "arxiv",
+      "title": "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution",
+      "abstract": "Hierarchical robotic systems executing long-horizon manipulation tasks must make high-level semantic decisions that orchestrate stochastic low-level skills. In this setting, failed rollouts are ambiguous: a poor downstream state may reflect an invalid high-level decision, partial observation, or a valid decision whose physical execution failed. Traditional supervised learning lacks data for such recovery states, while reinforcement learning struggles with sparse rewards and non-local credit assignment. We propose MAGMA-GEN, an on-policy data-generation pipeline that converts ambiguous failed rollouts into validated recovery supervision. MAGMA-GEN first uses a privileged coach to hypothesize an early decision-level error and propose localized correction or recovery actions. Because this diagnosis is fallible, candidates are retained only if re-execution from the same state under matched conditions improves downstream progress. This produces supervised examples from the agent's own failure distribution without per-step human demonstrations. Evaluated on interactive long-horizon manipulation tasks, MAGMA-GEN improves task success and recovery capabilities, against distillation and trajectory-repair baselines under evolving task constraints in both simulation and real-robot execution.",
+      "authors": [
+        "Loan Bernat",
+        "Matthieu Grard",
+        "Ariane Herbulot",
+        "Florent Lamiraux"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-17T11:07:47+00:00",
+      "link": "https://arxiv.org/pdf/2609.20056v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "recovery supervision for hierarchical long-horizon manipulation orchestrating stochastic low-level skills",
+      "llm_evidence_cn": "为分层长时域操作编排随机低层技能生成恢复监督",
+      "llm_evidence": "为分层长时域操作编排随机低层技能生成恢复监督",
+      "canonical_evidence": "为分层长时域操作编排随机低层技能生成恢复监督",
+      "llm_tldr_en": "MAGMA-GEN addresses ambiguous failures in hierarchical long-horizon manipulation, where it is unclear whether a bad state stems from a high-level decision or low-level execution. It generates validated recovery supervision by hypothesizing decision-level errors and re-executing counterfactually.",
+      "llm_tldr_cn": "长时域分层操作中，失败轨迹语义模糊，难以区分高层决策错误、部分观测还是低层执行失败，且缺乏恢复监督数据。本文提出在线数据生成流程MAGMA-GEN，先用特权教练假设早期决策级错误，再通过反事实重执行验证并生成恢复监督。实验表明该方法能把模糊失败轨迹转化为经验证的恢复监督，改善分层系统在长时域任务中的恢复能力。其贡献在于为分层操作系统的失败恢复提供可扩展的监督生成方法。",
+      "llm_tldr": "长时域分层操作中，失败轨迹语义模糊，难以区分高层决策错误、部分观测还是低层执行失败，且缺乏恢复监督数据。本文提出在线数据生成流程MAGMA-GEN，先用特权教练假设早期决策级错误，再通过反事实重执行验证并生成恢复监督。实验表明该方法能把模糊失败轨迹转化为经验证的恢复监督，改善分层系统在长时域任务中的恢复能力。其贡献在于为分层操作系统的失败恢复提供可扩展的监督生成方法。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.19613v1",
+      "source": "arxiv",
+      "title": "TacSushi: Tactile-Grounded World-Action Modeling for Dexterous Sushi Manipulation",
+      "abstract": "Dexterous food manipulation requires control under deformation, occlusion, and uncertain contact. We present TacSushi, a tactile-grounded, Cosmos3-based world-action policy that learns from recorded future consequences while acting on current observations. The backbone encodes current RGB, language, and hand state, and feature-wise gated fusion incorporates fingertip tactile features into the action representation. During training, a decoder conditioned on demonstrated action chunks predicts logged future visual observations, task progress, relative contact risk, and tactile summaries; this decoder is removed at deployment. Failed trials provide consequence supervision, but their actions are excluded from imitation. We train TacSushi on 340 successful and 50 failed real-robot trials and compare six methods in 600 separate rollouts across three in-distribution tasks and two out-of-distribution ingredient variants. To assess food quality beyond a single geometric threshold, we score terminal outcomes using an anchored visual-quality protocol that equally weights five human ratings and three vision-language-model ratings per rollout. Full TacSushi achieves 68.3% average in-distribution success and 37.5% out-of-distribution success, compared with 36.7%/10.0% without future-consequence supervision and 25.0%/17.5% with direct tactile concatenation in place of gated fusion. These comparisons support complementary benefits of feature-wise gated tactile fusion and training-only predictive supervision.",
+      "authors": [
+        "Haodi Hu",
+        "Kaen Kogashi",
+        "Toshiaki Koike-Akino"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-17T03:01:35+00:00",
+      "link": "https://arxiv.org/pdf/2609.19613v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "action chunk conditioned policy for contact-rich manipulation",
+      "llm_evidence_cn": "动作块条件化的接触丰富操作",
+      "llm_evidence": "动作块条件化的接触丰富操作",
+      "canonical_evidence": "动作块条件化的接触丰富操作",
+      "llm_tldr_en": "TacSushi is a tactile-grounded world-action policy using action-chunk decoders to predict future observations and contact risk for dexterous sushi manipulation.",
+      "llm_tldr_cn": "该文针对灵巧食物操作中形变、遮挡与接触不确定性带来的控制难题，提出TacSushi这一触觉接地的世界-动作策略。方法以Cosmos3为骨干编码RGB、语言与手部状态，并通过门控融合引入指尖触觉，训练时用动作块解码器预测未来观测、任务进度与接触风险。实验表明该方法能利用失败轨迹的后果监督提升灵巧操作表现。其贡献在于将触觉与世界模型结合，改善接触丰富场景下的操作鲁棒性。",
+      "llm_tldr": "该文针对灵巧食物操作中形变、遮挡与接触不确定性带来的控制难题，提出TacSushi这一触觉接地的世界-动作策略。方法以Cosmos3为骨干编码RGB、语言与手部状态，并通过门控融合引入指尖触觉，训练时用动作块解码器预测未来观测、任务进度与接触风险。实验表明该方法能利用失败轨迹的后果监督提升灵巧操作表现。其贡献在于将触觉与世界模型结合，改善接触丰富场景下的操作鲁棒性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.20791v1",
+      "source": "arxiv",
+      "title": "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+      "abstract": "Hierarchical planning frameworks combine skills from multiple robot control policies for long-horizon task execution, where determining when to terminate the current skill and advance to the next subtask is essential. Existing approaches often rely on pre-designed completion signal checkers that are hard to obtain in real-world execution. Large-scale vision-language models (VLMs) offer strong reasoning capabilities, but their decision boundaries are not inherently aligned with task completion criteria, while cloud deployment and lengthy reasoning introduce substantial latency, limiting real-time monitoring. We propose StageGuard, an agentic distillation framework for accurate and efficient stage-transition decisions. StageGuard combines teacher-model reasoning with demonstration trajectories to generate structured explanations of subtask completion and policy switching. A lightweight student VLM uses these explanations to generate compact self-explanations, which are used for supervised fine-tuning. We evaluate stage-transition prediction on trajectories from two benchmarks and assess closed-loop task success through integration into hierarchical robot control on BEHAVIOR-1K, with further validation on real robots. Results show substantial improvements in stage-transition prediction while supporting efficient online monitoring.",
+      "authors": [
+        "Jinbang Huang",
+        "Yuanzhao Hu",
+        "Zhiyuan Li",
+        "Ran Qi",
+        "Yixin Xiao",
+        "Yangzheng Wu",
+        "Tengyue Ba",
+        "Zhanguang Zhang",
+        "Yingxue Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-17T17:53:48+00:00",
+      "link": "https://arxiv.org/pdf/2609.20791v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learning stage transitions across reusable skills for long-horizon tasks",
+      "llm_evidence_cn": "面向长时程任务的可复用技能阶段转换学习",
+      "llm_evidence": "面向长时程任务的可复用技能阶段转换学习",
+      "canonical_evidence": "面向长时程任务的可复用技能阶段转换学习",
+      "llm_tldr_en": "StageGuard learns accurate stage-transition decisions for hierarchical long-horizon tasks via agentic distillation, replacing hard-to-obtain completion signal checkers.",
+      "llm_tldr_cn": "分层规划框架组合多个机器人控制策略完成长时程任务，关键在于判断何时终止当前技能并推进到下一子任务，但现有方法依赖难以在真实执行中获得的预设计完成信号检查器。本文提出StageGuard，一种智能体蒸馏框架，通过将视觉语言模型的推理能力蒸馏为高效准确的阶段转换决策器，兼顾准确性与实时性。该工作直接服务于长时程任务中的技能切换与分层技能编排，对可复用技能库与技能条件化执行具有较强方法相关性，可支撑失败监控与阶段推进。",
+      "llm_tldr": "分层规划框架组合多个机器人控制策略完成长时程任务，关键在于判断何时终止当前技能并推进到下一子任务，但现有方法依赖难以在真实执行中获得的预设计完成信号检查器。本文提出StageGuard，一种智能体蒸馏框架，通过将视觉语言模型的推理能力蒸馏为高效准确的阶段转换决策器，兼顾准确性与实时性。该工作直接服务于长时程任务中的技能切换与分层技能编排，对可复用技能库与技能条件化执行具有较强方法相关性，可支撑失败监控与阶段推进。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
