@@ -1,0 +1,41 @@
+{
+  "date": "20260919",
+  "date_label": "",
+  "generated_at": "2026-09-19 21:55:13 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.19974v1",
+      "route": "202609/19/2609.19974v1-maskharness-wam-instance-grounded-harnessing-for-long-horizon-robot-manipulation",
+      "title": "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用目标掩码连接高层规划与低层操作策略的长时程框架",
+      "first_seen_at": "2026-09-19 21:55:13 UTC",
+      "updated_at": "2026-09-19 21:55:13 UTC"
+    },
+    {
+      "paper_id": "2609.20455v1",
+      "route": "202609/19/2609.20455v1-skillaa-attribution-guided-skill-graph-updating-with-targeted-validation-and-rollback",
+      "title": "SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "统一技能图表示技能适用性、执行与组合及修复验证",
+      "first_seen_at": "2026-09-19 21:55:13 UTC",
+      "updated_at": "2026-09-19 21:55:13 UTC"
+    }
+  ]
+}

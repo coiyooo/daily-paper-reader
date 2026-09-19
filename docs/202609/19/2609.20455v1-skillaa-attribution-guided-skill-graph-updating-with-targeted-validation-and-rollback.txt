@@ -1,0 +1,765 @@
+Title: SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback
+
+URL Source: https://arxiv.org/pdf/2609.20455v1
+
+Published Time: Fri, 18 Sep 2026 01:45:48 GMT
+
+Number of Pages: 32
+
+Markdown Content:
+Published as a conference paper at ICLR 2027 
+
+# SKILL AA: A TTRIBUTION -G UIDED SKILL -G RAPH UP-
+
+# DATING WITH TARGETED VALIDATION AND ROLLBACK 
+
+Ziqiao Shang 1,2 , Lingyue Ge 1,2 , Lan-Zhe Guo 1,2 *
+
+> 1
+
+National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China 
+
+> 2
+
+School of Intelligence Science and Technology, Nanjing University, Suzhou, China 
+
+> *
+
+Corresponding author. 
+
+Code: https://github.com/Ziqiao-Shang/SkillAA 
+
+# ABSTRACT 
+
+External skills provide domain procedures without parameter updates, but exist-ing methods often edit skills directly from failed rollouts without structured rout-ing from an observed failure to an editable location; existing skill graphs also underuse semantic boundaries, object addresses, and topological dependencies for skill retrieval, targeted updating, and scoped validation. We introduce S KIL -
+
+> L
+
+AA ( Skill Abductive Attribution ), a structured skill-optimization framework for frozen language models. It represents skill applicability, execution, and compo-sition in a unified graph, allowing the same structure to support skill selection, attribution-guided repair, and update validation. SKILL AA contrasts successful and failed executions to route candidate repairs to specific graph objects, updates only the selected local structure, and uses Local and Big Gates to screen candidate changes before commitment. With gpt-5.6-sol, S KILL AA reaches 81.5%, 66.7%, and 91.2% on SearchQA, LiveMath, and DocVQA, respectively, and attains the highest observed mean in every main setting. These results support the utility of attribution-guided graph editing and graph-scoped validation. 
+
+Figure 1: From failed rollouts to targeted skill repair. Existing skill systems can organize and compose reusable procedures, but a failed rollout alone does not reveal whether the candidate repair should address a trigger, execution step, exclusion boundary, skill relation, or one-off execution lapse. S KILL AA contrasts successful and failed evidence to select a candidate graph object, edits only that location, and retests affected skills and cases. Rejected candidates are rolled back to the original plan, while validated repairs are retained for subsequent tasks. 
+
+# 1 INTRODUCTION 
+
+Frozen language models increasingly rely on external tools, documents, workflows, and skills to solve tasks (Schick et al., 2023; Patil et al., 2023; Qin et al., 2023). These skills are readable, 1arXiv:2609.20455v1 [cs.AI] 17 Sep 2026 Published as a conference paper at ICLR 2027 portable, and parameter-free, but reliable improvement requires knowing when they apply, how they interact, where failures arise, and whether an edit causes regressions. Skill research has moved from independent retrieval toward relation modeling. SkillRouter selects skills using query–skill similarity and skill-body signals (Zheng et al., 2026). Graph-of-Skills re-trieves prerequisite-aware bundles (Liu et al., 2026), while SkillDAG, HyperSkill, CaSKG, and SkillGraph learn relations from experience or encode higher-order, causal, and policy-coupled com-position (Bai et al., 2026; Xu et al., 2026; Li et al., 2026c;b). These methods show the value of structured relations, but use graphs mainly for selection and composition: node semantics do not specify edit targets, and topology does not determine retest scopes or rollback units. Skill-evolution methods distill experience, workflows, and skills from execution (Zhao et al., 2023; Wang et al., 2024; Ni et al., 2026); ProTeGi, TextGrad, and GEPA optimize linguistic artifacts from scores and trajectory feedback (Pryzant et al., 2023; Yuksekgonul et al., 2024; Agrawal et al., 2025); and SkillOpt optimizes a persistent skill document through bounded edits and Gates (Yang et al., 2026). However, they still lack structured object-level edit routing from failed executions. Flat text mixes activation conditions, procedures, exceptions, and relations, so the same failure may reflect missing knowledge, failed activation, a faulty procedure or relation, or a one-off execution lapse. We therefore ask how structured execution evidence can route candidate repairs to localized graph objects and validate them before commitment .To address this problem, SKILL AA uses one addressable skill graph throughout retrieval, attribution-guided updating, and rollback; Figure 1 illustrates this design through a targeted re-pair. Nodes separate applicability, execution, and exclusion boundaries, while typed edges explic-itly model skill relations, allowing the student to select and compose skills over the complete graph. The teacher then uses successful and failed executions to select a candidate field or relation and proposes only a local edit at that address. Dependent edits are validated as atomic groups by the Local Gate, and the Big Gate decides epoch-level commitment after merging, making graph objects the edit addresses, retest scopes, and rollback units. Across SearchQA, LiveMath, and DocVQA, Full S KILL AA attains the highest observed mean in every main setting; with gpt-5.6-sol it reaches 81.5%, 66.7%, and 91.2%. The ablations support the utility of structured representation, attribution-conditioned editing, and Local-Gate regression control, while the held-out effect of the Big Gate is model-dependent. More broadly, the pipeline is designed not merely to accumulate skill text but to improve the quality of representation, editing, and validation in a persistent external skill state. Our contributions are: 1. Graph-structured representation and relation modeling: separating applicability, exe-cution, and exclusion boundaries, and using typed, explained edges for skill selection and coordinated composition. 2. Attribution-guided edit routing: using successful and failed execution evidence to route candidate repairs to node fields, skill relations, or NO_PATCH .3. Scoped validation and reversible graph updates: using affected-case retesting for local patches and an epoch-level commit rule for merged candidates. 4. Evaluation across task types: multi-model experiments and ablations on question-answering, mathematics, and document-image benchmarks that validate the overall results and the roles of the three components. 
+
+# 2 RELATED WORK 
+
+Graph-structured skills. Graphs first organized document evidence, memory, and tool relations: ControlLLM models tool dependencies, CRAFT creates and retrieves specialized toolsets, Tool-Rerank uses hierarchical relations to rerank candidates, and GraphRAG and HippoRAG connect distributed knowledge through relational graphs and graph propagation (Liu et al., 2023; Yuan et al., 2023; Zheng et al., 2024; Edge et al., 2024; Gutierrez et al., 2024). This idea later entered skill libraries: SkillRouter uses signals in skill bodies for retrieval and reranking, Graph-of-Skills returns dependency-aware skill bundles, SkillGraph and SkillDAG evolve typed relations from policies or execution experience, and HyperSkill and CaSKG represent higher-order composition and directed procedural relations (Zheng et al., 2026; Liu et al., 2026; Li et al., 2026b; Bai et al., 2026; Xu et al., 2Published as a conference paper at ICLR 2027 
+
+Figure 2: How SkillAA learns from errors. 1⃝ Each skill node states when to use the skill, how to execute it, and when not to use it; edges show how multiple skills work together. 2⃝ The frozen model answers questions with the graph and records which skills and relations it actually used. 3⃝ When an answer is wrong, the teacher compares its execution with similar successful cases, identifies the smallest likely skill problem, and proposes a focused change—or no change when the graph is not at fault. 4 ⃝ The system first tests each change on cases likely to be affected (Local Gate), then tests all surviving changes together on the complete update set (Big Gate). A change is kept only when it produces a net improvement. Held-out test examples are used only for final evaluation and never for updating. 2026; Li et al., 2026c). These methods establish the importance of skill relations for compositional execution, but mainly target graph construction and retrieval rather than carrying structured objects through targeted attribution, updating, and rollback. 
+
+Skill evolution and controlled optimization. Optimization of linguistic artifacts has progressed from prompt search to trajectory-driven reflection. ProTeGi, OPRO, TextGrad, and GEPA evolve prompts or agent configurations through natural-language critiques, model-based optimizers, propa-gated textual feedback, or complete trajectories (Pryzant et al., 2023; Yang et al., 2023; Yuksekgonul et al., 2024; Agrawal et al., 2025). Skill evolution similarly moves from experience accumulation toward persistent optimization: Voyager and ExpeL accumulate skills and cross-task experience, while Agent Workflow Memory, SkillWeaver, ReasoningBank, and Trace2Skill convert execution trajectories into workflows, skills, or reasoning memories (Wang et al., 2023; Zhao et al., 2023; Wang et al., 2024; Zheng et al., 2025; Ouyang et al., 2025; Ni et al., 2026). SkillsBench and related surveys characterize skills as reusable procedural knowledge with applicability conditions (Li et al., 2026a; Xu & Yan, 2026), and SkillOpt treats a persistent skill document as an optimizable exter-nal parameter of a frozen agent, trained through bounded edits and multilevel controls (Yang et al., 2026). These approaches improve the controllability of skill evolution, but flat text and candidate-level acceptance still lack field-level edit routing and cannot independently update or roll back skill relations. 3Published as a conference paper at ICLR 2027 
+
+# 3 METHOD 
+
+3.1 PROBLEM DEFINITION , S ETTING , AND FRAMEWORK OVERVIEW 
+
+SKILL AA optimizes an external skill graph without updating model parameters. A frozen student 
+
+Mstudent executes tasks, and a frozen teacher Mteacher attributes failures and proposes edits. The update pool is 
+
+Dupdate = {(xi, y i)}Ni=1 ,
+
+where i indexes examples and N is the pool size; the final-evaluation set Dtest is disjoint. The initial skill is deterministically converted into G(0) , and the committed graph at epoch t is G(t). Only the graph changes during optimization; both models, each original input xi—including images—and the output format remain fixed. A deterministic renderer serializes the current graph with the fixed task protocol and output contract into a student-readable prompt: 
+
+P (t) = Render 
+
+
+
+TaskProtocol , G (t), OutputContract 
+
+
+
+.
+
+Here, TaskProtocol specifies task requirements, OutputContract specifies the answer format, and only G(t) changes across epochs. R ENDER follows fixed serialization rules; it neither learns param-eters nor edits or retrieves skills. On the original input, the student returns 
+
+(prediction (t) 
+
+> i
+
+, trace (t) 
+
+> i
+
+, usage (t) 
+
+> i
+
+) = Mstudent (xi; P (t)),
+
+correct (t) 
+
+> i
+
+= Verify(prediction (t) 
+
+> i
+
+, y i).
+
+prediction is the final answer submitted to the verifier. trace is a short semantic execution account, for example, Q3 determines relation direction, E2 invokes Q7, and Q7 normalizes the answer . usage records the same process with stable IDs, for example, used_nodes=[Q3,Q7] 
+
+and used_edges=[E2] . Thus, trace explains how skills were used for teacher attribution, whereas usage identifies which graph objects were used for impact analysis. Both are auditable external records, not hidden reasoning, and must agree; Appendix C.2 defines validation. The verifier scores only prediction against yi, yielding hard correctness correct (t) 
+
+> i
+
+∈ { 0, 1}.Predictions, traces, usage records, and correctness values from a complete update-pool execution form the reference for same-example candidate comparisons. Figure 2 shows the full optimization loop, and Appendix C.1 gives the complete algorithm; Dtest never enters updating. 3.2 STRUCTURED SKILL GRAPH AND SEMANTIC ACTIVATION 
+
+SKILL AA represents the skill library as G = (Nodes , Edges) . A node 
+
+v =  id , title , when_to_use , how_to_use , avoid 
+
+denotes a conditional reusable procedure: when_to_use states its applicability, how_to_use 
+
+specifies its execution, and avoid identifies confusable but invalid cases. Applicability can be expressed intuitively as 
+
+Use( v, x ) ≈ Match( x, when_to_use (v)) ∧ ¬ Conflict( x, avoid (v)) .
+
+Here, ≈ denotes a conceptual judgment rather than exact equality, ∧ requires both conditions, and ¬
+
+excludes conflicts. M ATCH and C ONFLICT are in-context language judgments by the frozen student, not a separate classifier or keyword test. Separating positive activation, execution, and negative exclusion makes missed, misapplied, and incorrectly executed skills independently addressable. An edge 
+
+e =  source , target , type , strength , rationale 
+
+describes skill composition: source and target specify direction, PREREQ denotes a required de-pendency, ENHANCE an improving relation, and statistics-maintained CO -OCCUR joint use without order or causality; strength and rationale record priority and relational evidence. 4Published as a conference paper at ICLR 2027 Table 1: Attribution-to-update routing. Each diagnosed failure is mapped to the only graph surface that may be edited. 
+
+Root-cause code Failure condition Authorized update 
+
+> MISSING_ SKILL_FAMILY
+
+No node expresses the required independent, reusable procedure. Add a complete specialist node and atomically bind it to an enhance edge connecting it to the graph. 
+
+> MISSING_ ACTIVATION_CUE
+
+A correct, applicable skill exists but does not appear in the validated usage record. Extend only its when_to_use .
+
+> HARMFUL_ EXISTING_RULE
+
+The stored semantics of a used node or edge cause the error. Replace only the localized harmful field; for an edge defect, atomically delete the old edge and add the corrected one. 
+
+> MISSING_OR_ INCORRECT_ PROCEDURE
+
+The correct node is active, but a step, exclusion boundary, or composition relation is missing. Complete only how_to_use or the necessary avoid ; for a missing relation, add the corresponding prereq or 
+
+enhance edge.  
+
+> EXECUTION_LAPSE
+
+The graph is correct and active, but the student does not follow it. Return NO_PATCH (no graph edit), rather than persisting a one-off execution mistake. 
+
+> INSUFFICIENT_ EVIDENCE
+
+The observations cannot localize the failure to a field or edge. Return NO_PATCH and preserve the graph. 
+
+At inference, S KILL AA renders all active nodes and edges in stable order without an external embedding-based Top-K retriever that prunes skills beforehand (Appendix F.2). The student uses 
+
+when_to_use and avoid to judge applicability, executes how_to_use , and composes skills according to edge semantics. The same graph thus supports semantic activation and composition, while stable IDs provide common addresses for attribution-guided editing, impact analysis, and object-scoped rollback decisions. 3.3 ABDUCTIVE ATTRIBUTION AND TARGETED GRAPH UPDATES 
+
+To obtain comparable local evidence, S KILL AA partitions only the update pool before optimization into fixed, disjoint quadruples using task-type constraints and question-text similarity: 
+
+Group m = {update m, 1, update m, 2, update m, 3, update m, 4}.
+
+Here, m indexes update groups, each containing four update examples. These groups organize contrasts among training examples: successful members provide correct paths for attribution, and the update members of relevant groups enter the Local Gate. The held-out test set is disjoint and is not used for group construction, attribution, patch synthesis, or either Gate. For each failure, the teacher combines verifier feedback, trace , validated usage , and successful group members. It first finds the earliest observable decision after which the answer is unrecover-able, then follows this diagnostic chain: behavior covered? → relevant object activated? → stored semantics correct? 
+
+→ steps or relations complete? → rule followed? The resulting diagnosis follows one of the six routes in Table 1: the first four authorize only the corresponding field- or edge-level G RAPH PATCH , while an execution lapse or insufficient evidence returns NO_PATCH . A patch records its evidence, target, and before–after content; successful cases guard against regressions, and dependent operations form an atomic P ATCH GROUP Jk that is ac-cepted or rolled back as a unit. Here, abductive attribution means selecting the smallest graph-level cause whose corresponding object-level repair can be tested through paired executions. Algorithm 2, field constraints, and examples appear in Appendix C.4. 3.4 TWO -L EVEL GATES : L OCAL ROLLBACK AND EPOCH COMMIT 
+
+Local Gate: graph-scoped retesting. For the k-th atomic group Jk, S KILL AA reruns only update examples that may be affected: 
+
+Retest k = UpdateMembers  Qk 
+
+> src
+
+∪ Q k 
+
+> use
+
+∪ Q unk 
+
+ .
+
+5Published as a conference paper at ICLR 2027 Here, k indexes patch groups and ∪ denotes set union. Qk 
+
+> src
+
+contains source update groups; Qk
+
+> use
+
+contains update groups that used the edited node or, for an existing-edge edit, that edge or either endpoint; and Qunk contains update groups with missing or invalid usage . UpdateMembers( ·)
+
+selects the update examples in these groups. A new node has no prior users, so its retest scope starts primarily from source groups. Let nk
+
+> fixed
+
+, nk
+
+> broken
+
+, and nk 
+
+> unresolved
+
+count reference errors corrected, reference successes broken, and source failures left unresolved. The group is retained only if 
+
+nk 
+
+> fixed
+
+> n k 
+
+> broken
+
++ nk
+
+> unresolved
+
+.
+
+Otherwise, all of Jk is rolled back: node fields recover their old values, and new-node–edge pairs or edge replacements are jointly reversed. Thus, graph objects determine retest scope and structural dependencies determine rollback units. Appendix C.5 gives exact definitions. 
+
+Big Gate: epoch-level commit. All local survivors are merged into one candidate eG(t+1) , where the tilde marks an uncommitted graph. After a complete update-pool rollout, let n(t)corrected and 
+
+n(t)regressed count examples that become correct and incorrect relative to G(t). Then 
+
+G(t+1) =
+
+( eG(t+1) , n(t)corrected > n (t)regressed ,G(t), otherwise .
+
+A strictly positive net gain commits the candidate and its rollout as the next reference; otherwise, both graph and reference are restored. The Big Gate evaluates this single executable candidate rather than splicing outcomes from different local candidates. SKILL AA thus uses one graph structure to connect semantic activation, attribution-guided updating, and two-scope validation and rollback. 
+
+# 4 EXPERIMENTS 
+
+4.1 EXPERIMENTAL SETUP 
+
+Questions. We evaluate S KILL AA as a graph-space optimizer for frozen language models. The experiments ask whether optimized graphs improve over controlled skill-representation stages, how their results compare with source-protocol references, which components contribute to downstream utility, whether the approach extends to sequential interaction, and how the graph evolves across epochs. 
+
+Models. We evaluate OpenAI’s gpt-5.6-sol, gpt-5.5, and gpt-5.4-mini (OpenAI, 2026); Google’s gemini-3.5-flash (Google AI for Developers, 2026); and Alibaba’s qwen3.8-flash (Alibaba Cloud Model Studio, 2026) and qwen3.6-35b-a3b (Qwen Team, 2026). 
+
+Benchmarks. We use three main benchmarks spanning open-domain question answering, mathe-matical reasoning, and document understanding: 1. SearchQA (Dunn et al., 2017): open-domain question answering from retrieved evidence. 2. LiveMathematicianBench (He et al., 2026), abbreviated LiveMath: research-level multi-step mathematical reasoning. 3. DocVQA (Mathew et al., 2020): document-image question answering combining visual localization and text understanding. A separate ALFWorld experiment (Shridhar et al., 2020) evaluates sequential interaction. 
+
+Metrics and repeated evaluation. SearchQA and LiveMath use exact-match accuracy; DocVQA is correct only when ANLS = 1. Unless noted otherwise, we report the mean and half-range, (max − min) /2, over three runs. For graph-optimization settings, these are independent optimization-and-evaluation runs with seeds 42, 43, and 44; for frozen settings, the same seeds con-trol evaluation only. Models remain frozen and test results never update the graph. Full settings are in Appendix E. 6Published as a conference paper at ICLR 2027 
+
+Model Benchmark No skill Flat skill Structured skill G0 G0 + Trace/ Usage SkillAA 
+
+gpt-5.6-sol SearchQA 66.0 ±2.5 72.5 ±0.5 75.0 ±1.8 76.2 ±1.5 81.5 ±1.3
+
+LiveMath 28.2 ±1.7 42.2 ±3.0 44.2 ±2.6 51.3 ±3.4 66.7 ±2.1
+
+DocVQA 68.0 ±3.3 87.7 ±0.5 88.0 ±1.3 88.2 ±2.0 91.2 ±1.0
+
+gemini-3.5-flash SearchQA 75.0 ±0.5 77.5 ±0.5 77.5 ±0.5 77.5 ±1.0 79.0 ±0.3
+
+LiveMath 34.5 ±2.1 49.6 ±2.1 52.4 ±0.4 53.3 ±3.4 62.1 ±2.6
+
+DocVQA 92.8 ±0.5 94.0 ±1.0 93.8 ±0.5 93.5 ±0.3 95.0 ±0.3
+
+qwen3.8-flash SearchQA 70.7 ±1.3 74.2 ±1.8 74.5 ±1.5 72.2 ±0.8 76.5 ±0.8
+
+LiveMath 30.2 ±2.1 31.6 ±4.3 56.7 ±0.4 55.3 ±3.4 60.1 ±3.4
+
+DocVQA 93.5 ±0.5 92.8 ±0.5 94.2 ±0.8 93.3 ±0.3 95.0 ±0.8
+
+Table 2: Progressive skill-graph construction and optimization (%). 
+
+4.2 MAIN EFFICACY AND PROGRESSIVE ABLATION 
+
+Table 2 evaluates gpt-5.6-sol, gemini-3.5-flash, and qwen3.8-flash on the three main benchmarks; each model serves as both student and teacher while optimizing its own graph. Each benchmark uses a disjoint update/test split. The update pool is partitioned into fixed groups of four update examples using only update-question text and task-type metadata; held-out test questions are not used for grouping, graph initialization, updating, or selection. The conditions progress from No skill, Flat skill, deterministically converted Structured skill G0, and G0 + Trace/Usage to full S KILL AA with attribution, targeted updates, and both Gates. Exact split counts and grouping methods are in Appendix E. SkillAA achieves the highest observed mean for every model–benchmark combination, and the pro-gression clarifies where the gains arise. Flat skill generally improves over No skill, showing that the initial skills provide useful task procedures. From Flat skill to Structured skill G0, the structured rep-resentation separates applicability conditions, execution steps, and skill relations, making retrieval and activation conditions clearer while explicitly specifying how skills compose. G0 + Trace/Usage further requires the student to report its execution process and the graph objects used, thereby con-straining the model to organize its solution around the skills; variation across models also shows that observable records alone are insufficient for reliable improvement. Finally, SkillAA improves over G0 + Trace/Usage for every model and benchmark, demonstrating the end-to-end utility of adding attribution-guided updates and validation as a package. The gain is particularly pronounced on LiveMath, where multi-step and composed skills create more opportunities for localized editing and regression control; this progressive comparison does not by itself isolate the contribution of each mechanism. 4.3 COMPARISON WITH EXISTING METHODS 
+
+Table 3 compares S KILL AA with No skill, Trace2Skill (Ni et al., 2026), TextGrad (Yuksekgonul et al., 2024), GEPA (Agrawal et al., 2025), and SkillOpt (Yang et al., 2026) on gpt-5.5, gpt-5.4-mini (OpenAI, 2026), and qwen3.6-35b-a3b (Qwen Team, 2026). The comparison follows the direct-chat evaluation protocol used by SkillOpt Table 1, including its released instances, test IDs, original inputs, API route, inference budget, scorer, and approximately 2:1:7 train/validation/test split. S KILL AA excludes initialization examples overlapping the test set, updates only on train/-validation, and reserves test for final evaluation. The remaining columns provide source-protocol reference results; optimization supervision and total compute remain method-specific. Exact split counts and protocol details are in Appendix E. SkillAA has the highest reported point estimate in all nine model–benchmark combinations. Against the strongest alternative in each row, the observed differences are 1.3–2.7 pp on SearchQA, 3.5–
+
+20 .7 pp on LiveMath, and 0.5–1.3 pp on DocVQA. These are descriptive source-protocol compar-isons: the methods share the released evaluation IDs, original inputs, inference envelope, and scorer, while optimization supervision and compute remain method-specific. The differences therefore do not isolate the effect of graph representation, attribution-guided editing, or validation, and should not be interpreted as a compute-matched superiority claim. Controlled evidence for individual SkillAA components instead comes from the progressive stages and ablations. 7Published as a conference paper at ICLR 2027                                                              
+
+> Benchmark Model No skill Trace2Skill TextGrad GEPA SkillOpt SkillAA
+> SearchQA gpt-5.5 77.7 82.4 81.4 84.8 82.6 87.0 ±0.6
+> gpt-5.4-mini 75.9 78.6 77.5 79.4 81.3 82.6 ±1.0
+> qwen3.6-35b-a3b 72.7 75.4 76.4 75.8 80.7 83.4 ±0.5
+> LiveMath gpt-5.5 37.6 51.9 49.2 43.3 51.1 58.6 ±2.4
+> gpt-5.4-mini 14.8 32.8 27.2 27.2 32.8 36.3 ±2.0
+> qwen3.6-35b-a3b 31.2 29.6 7.3 31.2 28.0 51.9 ±1.2
+> DocVQA gpt-5.5 78.8 90.6 87.2 89.1 89.7 91.1 ±0.7
+> gpt-5.4-mini 71.4 88.5 84.0 83.7 82.2 89.0 ±3.2
+> qwen3.6-35b-a3b 87.6 90.4 84.5 88.0 91.4 92.7 ±1.1
+
+Table 3: Source-protocol comparison with skill-evolution and text-optimization methods (%). 
+
+Optimization supervision and compute are method-specific. 4.4 COMPONENT ABLATIONS AND MECHANISM ANALYSIS 
+
+Table 4 examines four factors on the Table-A benchmarks. Flat skill is the common baseline, and all parenthesized values show differences from Flat skill. The graph-structure rows compare the con-tribution of structured nodes and explicit relations. The retrieval rows are read-only interventions on the matching self-teacher terminal graph, testing activation boundaries, edge rationales, S–Q re-trieval, and Nearest-Q reuse. The update rows remove structured attribution, correct-case protection, the Local Gate, or the Big Gate under the self-teacher setting to test repair and rollback mechanisms. The final two rows are a separate Teacher-transfer test : they hold the student, data, and three-epoch schedule fixed while replacing only the teacher used for attribution and patch generation. Teacher effects should therefore be read by comparing the two teacher rows for the same fixed student, not from the parenthesized values. Appendix F gives the exact interventions and comparison rules. 
+
+Graph structure ablation. Under the self-teacher reference, removing all edges (Nodes only) lowers performance by 1.8 pp on average, with a larger loss for the gpt-5.6-sol student and mixed effects for gpt-5.4-mini. The optimized nodes nevertheless remain 7.6 pp above Flat skill on average without edges, showing that structured node fields carry much of the benefit. Edges therefore help coordinate already-relevant procedures, but the stronger and more consistent contribution comes from separating positive activation, execution, and exclusion boundaries in the nodes. 
+
+Retrieval mechanism ablation. These results strengthen the activation-boundary explanation. Relative to each student’s self-teacher Full graph, removing when_to_use and avoid causes the largest retrieval-side loss ( 9.4 pp on average), and fixed S–Q retrieval also trails Full ( 7.8 pp ). Nearest-Q reuse has a smaller average loss ( 1.9 pp ), while removing edge rationales is mixed and nearly neutral on average ( 0.6 pp loss). Thus, the most robust retrieval signal is not the edge prose alone, but the node-level contract that tells the student when a skill applies and when it should be rejected. 
+
+Update mechanism ablation. Under the same-student self-teacher reference, replacing structured attribution with a generic failure summary causes the largest update-side drop ( 8.3 pp on average), showing that attribution-conditioned object routing is the main source of repair utility among the tested update mechanisms; this result measures downstream editing utility rather than standalone attribution accuracy. Removing the Local Gate causes the next-largest average loss ( 4.9 pp ), sup-porting affected-scope regression testing, while removing correct-case protection costs 1.3 pp on average. The Big Gate has a mixed, model-dependent effect: it improves the gpt-5.6-sol results by 
+
+1.5/4.6/1.2 pp on SearchQA/LiveMath/DocVQA, whereas removing it improves the correspond-ing gpt-5.4-mini results by 1.1/2.0/0.9 pp . The Big Gate should therefore be interpreted as an epoch-level commit rule that enforces positive update-pool gain, not as a component that uniformly improves held-out accuracy. 
+
+Teacher-transfer test. The Teacher-transfer rows test cross-model patch transfer rather than com-ponent removal. Holding the student fixed, they replace only the teacher used for attribution and patch generation; the parenthesized values remain Flat-skill gains, so teacher effects are read by comparing the two teacher rows for the same student. The results show that a stronger teacher 8Published as a conference paper at ICLR 2027 
+
+(a) Student: gpt-5.6-sol Category Component SearchQA LiveMath DocVQA 
+
+Graph structure ablation Flat skill 72.5 ±0.5 44.2 ±2.6 85.5 ±1.3
+
+Nodes only 77.5 ±0.3 (+5.0) 62.1 ±2.1 (+17.9) 90.0 ±1.0 (+4.5) Retrieval mechanism ablation No when-to-use & avoid 70.5 ±1.8 (-2.0) 42.7 ±4.3 (-1.5) 84.3 ±1.0 (-1.2) No edge-rationale 78.5 ±0.8 (+6.0) 63.5 ±6.0 (+19.3) 89.0 ±0.5 (+3.5) S–Q retrieval 73.5 ±2.3 (+1.0) 42.5 ±1.7 (-1.7) 86.0 ±0.8 (+0.5) Nearest-Q reuse 77.7 ±1.3 (+5.2) 58.1 ±1.7 (+13.9) 88.5 ±1.0 (+3.0) Update mechanism ablation No structured attribution 73.2 ±1.5 (+0.7) 38.5 ±5.6 (-5.7) 86.7 ±4.3 (+1.2) No correct-case protection 80.5 ±0.5 (+8.0) 62.4 ±3.8 (+18.2) 89.2 ±0.5 (+3.7) No Local Gate 78.0 ±2.3 (+5.5) 49.0 ±5.6 (+4.8) 89.5 ±1.8 (+4.0) No Big Gate 80.0 ±1.3 (+7.5) 62.1 ±11 .1 (+17.9) 90.0 ±1.0 (+4.5) Teacher-transfer test GPT-5.4-mini teacher 78.2 ±0.5 (+5.7) 64.7 ±1.7 (+20.5) 90.0 ±1.3 (+4.5) GPT-5.6-sol teacher 81.5 ±1.3 (+9.0) 66.7 ±2.1 (+22.5) 91.2 ±1.0 (+5.7) (b) Student: gpt-5.4-mini Category Component SearchQA LiveMath DocVQA 
+
+Graph structure ablation Flat skill 74.2 ±1.0 24.8 ±2.1 67.5 ±15 .5
+
+Nodes only 77.0 ±0.8 (+2.8) 21.4 ±0.4 (-3.4) 86.5 ±1.8 (+19.0) Retrieval mechanism ablation No when-to-use & avoid 73.5 ±1.5 (-0.7) 19.9 ±0.4 (-4.9) 78.2 ±1.8 (+10.7) No edge-rationale 76.5 ±0.3 (+2.3) 26.5 ±0.9 (+1.7) 88.0 ±0.5 (+20.5) S–Q retrieval 72.5 ±1.0 (-1.7) 21.1 ±2.6 (-3.7) 82.8 ±0.5 (+15.3) Nearest-Q reuse 76.5 ±1.5 (+2.3) 25.4 ±3.4 (+0.6) 87.7 ±0.8 (+20.2) Update mechanism ablation No structured attribution 73.0 ±1.0 (-1.2) 18.5 ±1.7 (-6.3) 85.7 ±2.5 (+18.2) No correct-case protection 75.5 ±1.3 (+1.3) 22.5 ±0.4 (-2.3) 87.3 ±0.8 (+19.8) No Local Gate 74.7 ±2.3 (+0.5) 20.2 ±3.4 (-4.6) 84.5 ±2.8 (+17.0) No Big Gate 76.8 ±0.8 (+2.6) 25.9 ±1.3 (+1.1) 87.2 ±0.5 (+19.7) Teacher-transfer test GPT-5.4-mini teacher 75.7 ±0.5 (+1.5) 23.9 ±3.0 (-0.9) 86.3 ±1.3 (+18.8) GPT-5.6-sol teacher 78.2 ±0.8 (+4.0) 29.1 ±2.1 (+4.3) 89.0 ±1.0 (+21.5) 
+
+Table 4: Component ablations and mechanism analysis (%). Parentheses are differences from Flat skill; teacher effects are row differences between the two teacher settings for the same fixed student. is consistently better, while the weaker GPT-5.4-mini teacher still yields substantial gains for the stronger gpt-5.6-sol student. Appendix F.4 lists the four pairings, and Appendix F.5 reports the fixed-student deltas. 4.5 OTHER EXPERIMENTS 
+
+When not to update the graph. ALFWorld provides a counterexample to the assumption that further skill optimization always helps. All methods solve every task within 100 steps, while the initial skill performs best under the tighter 50-step budget (Appendix G.1). In this setting, additional graph edits do not improve interaction efficiency. When attribution finds no specific defect in the graph, S KILL AA should therefore return NO_PATCH rather than force an update. 
+
+When to improve the model instead. The epoch trajectories show that later graph patches are sometimes rejected because they provide no net improvement (Appendix G.2). This gives a practi-cal stopping signal for graph editing, not proof of a model-capacity ceiling. If the remaining fail-ures are attributed to reasoning, perception, or execution rather than graph content, further progress requires improving the model. Future systems could alternate the two: update the graph for graph-addressable failures and the model for capability-limited failures. 9Published as a conference paper at ICLR 2027 
+
+# 5 CONCLUSION 
+
+We introduced S KILL AA, a graph-space skill optimizer that uses one addressable graph to connect skill selection, execution, attribution-guided updating, and rollback for frozen language models. Stable IDs connect node fields and typed edges to semantic activation, edit addresses, affected-case retesting, and atomic restoration. The teacher proposes a localized candidate repair; the Local Gate tests its affected scope, and the Big Gate applies an epoch-level update-pool commit rule. Across three benchmarks and multiple model families, S KILL AA attains the highest observed mean in every main setting. Ablations support structured node semantics, explicit relations, attribution-conditioned editing, and Local-Gate regression control, while the held-out effect of the Big Gate is model-dependent. Current results remain limited by graph scale, task scope, and few repeated runs. Future work should internalize repeatedly validated prompts and skills into model parameters, then alternate model updates with skill-library evolution so that internal capability and external knowledge improve iteratively. 10 Published as a conference paper at ICLR 2027 
+
+# REFERENCES 
+
+Lakshya A Agrawal, Shangyin Tan, Dilara Soylu, Noah Ziems, Rishi Khare, Krista Opsahl-Ong, Arnav Singhvi, Herumb Shandilya, Michael J Ryan, Meng Jiang, Christopher Potts, Koushik Sen, Alexandros G. Dimakis, Ion Stoica, Dan Klein, Matei Zaharia, and Omar Khattab. Gepa: Reflective prompt evolution can outperform reinforcement learning, 2025. URL https:// arxiv.org/abs/2507.19457 .Alibaba Cloud Model Studio. Qwen3.8-flash model information. https://www. alibabacloud.com/help/en/model-studio/qwen3-8-flash , 2026. Official model documentation. Accessed: 2026-09-14. Tong Bai, Zhenglin Wan, Pengfei Zhou, Xingrui Yu, Yang You, and Ivor W. Tsang. Skilldag: Self-evolving typed skill graphs for llm skill selection at scale, 2026. URL https://arxiv.org/ abs/2606.03056 .Matthew Dunn, Levent Sagun, Mike Higgins, V. Ugur Guney, Volkan Cirik, and Kyunghyun Cho. Searchqa: A new q&a dataset augmented with context from a search engine, 2017. URL https: //arxiv.org/abs/1704.05179 .Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Tru-itt, Dasha Metropolitansky, Robert Osazuwa Ness, and Jonathan Larson. From local to global: A graph rag approach to query-focused summarization, 2024. URL https://arxiv.org/ abs/2404.16130 .Google AI for Developers. Gemini 3.5 flash model documentation. https://ai.google. dev/gemini-api/docs/models/gemini-3.5-flash , 2026. Accessed: 2026-05-25. Bernal Jimenez Gutierrez, Yiheng Shu, Yu Gu, Michihiro Yasunaga, and Yu Su. Hipporag: Neu-robiologically inspired long-term memory for large language models, 2024. URL https: //arxiv.org/abs/2405.14831 .Linyang He, Qiyao Yu, Hanze Dong, Baohao Liao, Xinxing Xu, Micah Goldblum, Jiang Bian, and Nima Mesgarani. Livemathematicianbench: A live benchmark for mathematician-level reasoning with proof sketches, 2026. URL https://arxiv.org/abs/2604.01754 .Zhiyuan Jiang, Fangrui Huang, Hanwen Xing, Xander Wu, Yipeng Gao, Rui Cao, Mengdi Wang, Shilong Liu, and Yijiang Li. Demystifying agent skills: Why they work-until they don’t, 2026. URL https://arxiv.org/abs/2608.14036 .Xiangyi Li, Yimin Liu, Wenbo Chen, Bingran You, Zonglin Di, Yifeng He, Shenghan Zheng, Ky-oung Whan Choe, Jiankai Sun, Shuyi Wang, Chujun Tao, Binxu Li, Xuandong Zhao, Hejia Geng, Xiaojun Wu, Junwei Zhou, Xiaokun Chen, Hanwen Xing, Yubo Li, Qunhong Zeng, Di Wang, Yuanli Wang, Roey Ben Chaim, Penghao Jiang, Haotian Shen, Luyang Kong, Xinyi Liu, Run-hui Wang, Xuanqing Liu, Jiachen Li, Xin Lan, Yueqian Lin, Wengao Ye, Junwei He, Songlin Li, Yue Zhang, Yipeng Gao, Yijiang Li, Ze Ma, Liqiang Jing, Tianyu Wang, Kaixin Li, Yiqi Xue, Haoran Lyu, Yizhuo He, Yuchen Tian, Shutong Wu, Bowei Wang, Yixuan Gao, Bo Chen, Litong Liu, Sikai Cheng, Jiajun Bao, Shuaicheng Tong, Shuwen Xu, Terry Yue Zhuo, Tinghan Ye, Qi Qi, Miao Li, Longtai Liao, Zelin Tan, Chang Shi, Xilin Tang, Srinath Tankasala, Bo-qin Yuan, Yaoyao Qian, Jianhong Tu, Chenguang Wang, Yizhou Sun, Wei Wang, Aaron Taylor, Ziyue Yang, Changkun Guan, Zhikang Dong, Xinyu Zhang, Steven Dillmann, Han chung Lee, and Dawn Song. Skillsbench: Benchmarking how well agent skills work across diverse tasks, 2026a. URL https://arxiv.org/abs/2602.12670 .Xiaoyuan Li, Moxin Li, Keqin Bao, Yubo Ma, Wenjie Wang, Dayiheng Liu, and Fuli Feng. Skill-graph: Skill-augmented reinforcement learning for agents via evolving skill graphs, 2026b. URL 
+
+https://arxiv.org/abs/2605.12039 .Zhiyuan Li, Linyuan Gao, Xuechun Ding, Hongwei Chen, Yuan Wu, and Yi Chang. Caskg: Counterfactual-causal skill graphs for scalable agent skill retrieval, 2026c. URL https: //arxiv.org/abs/2608.25500 .11 Published as a conference paper at ICLR 2027 Zihan Lin, Zhenyu Chen, Jiawen Wei, Xiaohan Wang, Jie Cao, Jiajun Chai, Wei Lin, Guojun Yin, and Ran He. When not to imitate: Boundary-aware skill memory for reliable tool-use llm agents, 2026. URL https://arxiv.org/abs/2608.22339 .Dawei Liu, Zongxia Li, Hongyang Du, Xiyang Wu, Shihang Gui, Yongbei Kuang, and Lichao Sun. Graph-of-skills: Dependency-aware structural retrieval for massive agent skills, 2026. URL 
+
+https://arxiv.org/abs/2604.05333 .Zhaoyang Liu, Zeqiang Lai, Zhangwei Gao, Erfei Cui, Ziheng Li, Xizhou Zhu, Lewei Lu, Qifeng Chen, Yu Qiao, Jifeng Dai, and Wenhai Wang. Controlllm: Augment language models with tools by searching on graphs, 2023. URL https://arxiv.org/abs/2310.17796 .Minesh Mathew, Dimosthenis Karatzas, and C. V. Jawahar. Docvqa: A dataset for vqa on document images, 2020. URL https://arxiv.org/abs/2007.00398 .Jingwei Ni, Yihao Liu, Xinpeng Liu, Yutao Sun, Mengyu Zhou, Pengyu Cheng, Dexin Wang, Er-chao Zhao, Xiaoxi Jiang, and Guanjun Jiang. Trace2skill: Distill trajectory-local lessons into transferable agent skills, 2026. URL https://arxiv.org/abs/2603.25158 .OpenAI. Models. https://platform.openai.com/docs/models , 2026. OpenAI API Documentation. Accessed: 2026-09-14. Siru Ouyang, Jun Yan, I-Hung Hsu, Yanfei Chen, Ke Jiang, Zifeng Wang, Rujun Han, Long T. Le, Samira Daruki, Xiangru Tang, Vishy Tirumalashetty, George Lee, Mahsan Rofouei, Hangfei Lin, Jiawei Han, Chen-Yu Lee, and Tomas Pfister. Reasoningbank: Scaling agent self-evolving with reasoning memory, 2025. URL https://arxiv.org/abs/2509.25140 .Siru Ouyang, Jun Yan, Yanfei Chen, Rujun Han, Zifeng Wang, Bhavana Dalvi Mishra, Rui Meng, Chun-Liang Li, Yizhu Jiao, Kaiwen Zha, Maohao Shen, Vishy Tirumalashetty, George Lee, Ji-awei Han, Tomas Pfister, and Chen-Yu Lee. Skillos: Learning skill curation for self-evolving agents, 2026. URL https://arxiv.org/abs/2605.06614 .Shishir G. Patil, Tianjun Zhang, Xin Wang, and Joseph E. Gonzalez. Gorilla: Large language model connected with massive apis, 2023. URL https://arxiv.org/abs/2305.15334 .Reid Pryzant, Dan Iter, Jerry Li, Yin Tat Lee, Chenguang Zhu, and Michael Zeng. Automatic prompt optimization with "gradient descent" and beam search, 2023. URL https://arxiv. org/abs/2305.03495 .Yujia Qin, Shihao Liang, Yining Ye, Kunlun Zhu, Lan Yan, Yaxi Lu, Yankai Lin, Xin Cong, Xiangru Tang, Bill Qian, Sihan Zhao, Lauren Hong, Runchu Tian, Ruobing Xie, Jie Zhou, Mark Gerstein, Dahai Li, Zhiyuan Liu, and Maosong Sun. Toolllm: Facilitating large language models to master 16000+ real-world apis, 2023. URL https://arxiv.org/abs/2307.16789 .Qwen Team. Qwen 3.6 repository and technical documentation. https://github.com/ QwenLM/Qwen3.6 , 2026. Official software repository. The original URL redirects to QwenLM/Qwen3.8, which retains Qwen3.6 documentation; no commit version is pinned. Ac-cessed: 2026-09-16. Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria Lomeli, Luke Zettlemoyer, Nicola Cancedda, and Thomas Scialom. Toolformer: Language models can teach themselves to use tools, 2023. URL https://arxiv.org/abs/2302.04761 .Mohit Shridhar, Xingdi Yuan, Marc-Alexandre Cote, Yonatan Bisk, Adam Trischler, and Matthew Hausknecht. Alfworld: Aligning text and embodied environments for interactive learning, 2020. URL https://arxiv.org/abs/2010.03768 .Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, and Anima Anandkumar. Voyager: An open-ended embodied agent with large language models, 2023. URL https://arxiv.org/abs/2305.16291 .Zora Zhiruo Wang, Jiayuan Mao, Daniel Fried, and Graham Neubig. Agent workflow memory, 2024. URL https://arxiv.org/abs/2409.07429 .12 Published as a conference paper at ICLR 2027 Peng Xia, Jianwen Chen, Hanyang Wang, Jiaqi Liu, Kaide Zeng, Yu Wang, Siwei Han, Yiyang Zhou, Xujiang Zhao, Haifeng Chen, Zeyu Zheng, Cihang Xie, and Huaxiu Yao. Skillrl: Evolving agents via recursive skill-augmented reinforcement learning, 2026. URL https://arxiv. org/abs/2602.08234 .Renjun Xu and Yang Yan. Agent skills for large language models: Architecture, acquisition, secu-rity, and the path forward, 2026. URL https://arxiv.org/abs/2602.12430 .Ruiyao Xu, Tiankai Yang, and Wei-Chieh Huang. Hyperskill: Self-evolving llm agents via hypergraph-structured skill memory, 2026. URL https://arxiv.org/abs/2608. 16114 .Chengrun Yang, Xuezhi Wang, Yifeng Lu, Hanxiao Liu, Quoc V. Le, Denny Zhou, and Xinyun Chen. Large language models as optimizers, 2023. URL https://arxiv.org/abs/2309. 03409 .Yifan Yang, Ziyang Gong, Weiquan Huang, Qihao Yang, Ziwei Zhou, Zisu Huang, Yan Li, Xuemei Gao, Qi Dai, Bei Liu, Kai Qiu, Yuqing Yang, Dongdong Chen, Xue Yang, and Chong Luo. Skillopt: Executive strategy for self-evolving agent skills, 2026. URL https://arxiv.org/ abs/2605.23904v2 . Version 2. Lifan Yuan, Yangyi Chen, Xingyao Wang, Yi R. Fung, Hao Peng, and Heng Ji. Craft: Customizing llms by creating and retrieving from specialized toolsets, 2023. URL https://arxiv.org/ abs/2309.17428 .Mert Yuksekgonul, Federico Bianchi, Joseph Boen, Sheng Liu, Zhi Huang, Carlos Guestrin, and James Zou. Textgrad: Automatic "differentiation" via text, 2024. URL https://arxiv. org/abs/2406.07496 .Hanrong Zhang, Shicheng Fan, Henry Peng Zou, Yankai Chen, Zhenting Wang, Jiayu Zhou, Chengze Li, Wei-Chieh Huang, Yifei Yao, Kening Zheng, Xue (Steve) Liu, Xiaoxiao Li, and Philip S. Yu. Coevoskills: Self-evolving agent skills via co-evolutionary verification, 2026a. URL https://arxiv.org/abs/2604.01687 .Haozhen Zhang, Quanyu Long, Jianzhu Bao, Tao Feng, Weizhi Zhang, Haodong Yue, and Wenya Wang. Memskill: Learning and evolving memory skills for self-evolving agents, 2026b. URL 
+
+https://arxiv.org/abs/2602.02474 .Andrew Zhao, Daniel Huang, Quentin Xu, Matthieu Lin, Yong-Jin Liu, and Gao Huang. Expel: Llm agents are experiential learners, 2023. URL https://arxiv.org/abs/2308.10144 .Boyuan Zheng, Michael Y. Fatemi, Xiaolong Jin, Zora Zhiruo Wang, Apurva Gandhi, Yueqi Song, Yu Gu, Jayanth Srinivasa, Gaowen Liu, Graham Neubig, and Yu Su. Skillweaver: Web agents can self-improve by discovering and honing skills, 2025. URL https://arxiv.org/abs/ 2504.07079 .YanZhao Zheng, ZhenTao Zhang, Chao Ma, YuanQiang Yu, JiHuai Zhu, Yong Wu, Tianze Xu, Baohua Dong, Hangcheng Zhu, Ruohui Huang, and Gang Yu. Skillrouter: Skill routing for llm agents at scale, 2026. URL https://arxiv.org/abs/2603.22455 .Yuanhang Zheng, Peng Li, Wei Liu, Yang Liu, Jian Luan, and Bin Wang. Toolrerank: Adap-tive and hierarchy-aware reranking for tool retrieval. In Proceedings of the 2024 Joint Interna-tional Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024) , pp. 16263–16273, 2024. URL https://aclanthology.org/2024. lrec-main.1413/ .13 Published as a conference paper at ICLR 2027 
+
+# TABLE OF CONTENTS IN APPENDIX 
+
+A Reproducibility Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 
+
+B AI Use Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 
+
+C Method Specification and Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 C.1. End-to-End SkillAA Pipeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 C.2. Epoch Execution and Usage Records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 C.3. Allowed Graph Edits and Atomic Groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 C.4. Attribution Routing and Worked Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 C.5. Gate Scope Expansion and Rollback Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17 C.6. What Attribution and Gates Validate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19 
+
+D Selected Prompt Templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20 D.1. Student Execution and Trace/Usage Contract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20 D.2. Abductive Attribution Meta Prompt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21 D.3. Epoch Meta-Auditor Prompt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22 D.4. Patch Synthesis and Gate-Audit Prompts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23 
+
+E Experimental Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23 E.1. Benchmark Splits and Group Construction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23 E.2. Models, Inference, and Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24 E.3. Evaluation Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24 E.4. Result Provenance and Comparability Ledger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25 
+
+F Ablation Protocols and Retrieval Definitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25 F.1. Shared Controls and Graph-Structure Ablation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25 F.2. Retrieval-Mechanism Ablations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26 F.3. Update-Mechanism Ablations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27 F.4. Teacher-Transfer Test . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27 F.5. How to Read Table C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27 
+
+G Supplementary Experiments and Diagnostics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28 G.1. Sequential Interaction under Step Budgets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28 G.2. Epoch-Level Commit Dynamics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .28 G.3. Residual Error Audit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28 
+
+H Discussion, Limitations, and Next Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30 H.1. What the Results Establish . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30 H.2. Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31 H.3. Next Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31 H.4. Broader Research Directions for Skill-Based Agents . . . . . . . . . . . . . . . . . . . . . . . . . 31 
+
+> 14
+
+Published as a conference paper at ICLR 2027 
+
+Algorithm 1 Complete SkillAA pipeline 
+
+Require: frozen Mstudent , frozen Mteacher , update pool Dupdate , fixed update groups Q, initial graph G(0) , epochs E
+
+Ensure: final committed graph G(E)
+
+1: R ← ROLLOUT (Mstudent , G (0) , Dupdate )
+
+2: for t = 0 , . . . , E − 1 do 
+
+3: F ← failed update examples in R
+
+4: D ← ATTRIBUTE (Mteacher , F, G (t), R, Q) ▷ Algorithm 2 
+
+5: P ← TARGETED PATCH (D, R, Q) ▷ apply success guards 
+
+6: {Jk}Kk=1 ← ATOMIC GROUPS (P )
+
+7: S ← ∅ 
+
+8: for each Jk do 
+
+9: if LOCAL GATE (G(t), J k, R ) passes then ▷ Appendix C.5 
+
+10: S ← S ∪ { Jk}
+
+11: end if 
+
+12: end for 
+
+13: eG ← APPLY ALL (G(t), S )
+
+14: eR ← ROLLOUT (Mstudent , eG, Dupdate )
+
+15: if NUM CORRECTED (R, eR) > NUM REGRESSED (R, eR) then 
+
+16: G(t+1) ← eG; R ← eR
+
+17: else 
+
+18: G(t+1) ← G(t) ▷ keep the current reference R
+
+19: end if 
+
+20: end for 
+
+21: return G(E)
+
+# A REPRODUCIBILITY STATEMENT 
+
+The supplementary material specifies the graph schema, allowed edits, attribution and Gate algo-rithms, data splits, model settings, and evaluation protocol. We will release the code, configurations, split IDs, final graphs, and per-example predictions needed to reproduce the reported results. 
+
+# B AI U SE STATEMENT 
+
+Generative AI tools assisted with language editing, code-level consistency checks, literature search, and LaTeX conversion. The authors designed the method and experiments, verified technical claims and numerical transcriptions against the authoritative experiment record, selected the cited literature, and take responsibility for the manuscript. 
+
+# C METHOD SPECIFICATION AND IMPLEMENTATION 
+
+This appendix makes Section 3 operational by fixing the optimization state, execution records, legal edit space, attribution routes, and Gate semantics. It supplies implementation-level contracts omitted from the main text rather than restating the framework motivation. C.1 END -TO -E ND SKILL AA P IPELINE 
+
+Algorithm 1 summarizes the complete optimization pipeline. Algorithm 2 gives the detailed attribu-tion order, and Appendix C.5 defines the Local-Gate scope; the overview only shows how the stages connect. Held-out test outcomes never enter attribution, patch generation, the Local Gate, or the Big Gate. 15 Published as a conference paper at ICLR 2027 C.2 EPOCH EXECUTION AND USAGE RECORDS 
+
+Each epoch runs the current graph on the full update pool: 800 examples for SearchQA and DocVQA, and 468 for LiveMath. Requests may run in parallel, but the graph does not change until all results are collected. The fixed groups are used only to supply related successful cases and to help define the Local-Gate retest scope. The complete G0 rollout is the initial reference. When a candidate passes the Big Gate, its full-pool rollout becomes the next reference; when it fails, both the graph and reference remain unchanged. Cached results are reused only when the graph, rendered prompt, case IDs, and completion status match. 
+
+usage validation. usage is defined as the exact deduplicated set of graph objects that change an intermediate state or otherwise affect the submitted answer, and every such object must also be explained in trace . Validation checks ID existence, edge endpoints, set equality between the two records, and whether each cited object is attached to an explicit input–operation–output transition. A semantic step without an ID, an ID without a state transition, or any transition that violates the execution contract invalidates the record and sends the example to the unknown-usage scope. Valid usage is therefore an executable object-level record rather than format agreement alone: it supplies the exact addresses used for impact analysis, retest expansion, and rollback. Invalid or incomplete records cannot narrow validation because their cases are conservatively included in the unknown-usage scope. C.3 ALLOWED GRAPH EDITS AND ATOMIC GROUPS 
+
+Allowed edits fall into three groups: 1. revise the relevant part of a node’s when_to_use , how_to_use , or avoid , including replacement of a localized harmful rule; 2. add a complete specialist node with a supporting edge, or add or correct a PRE -
+
+> REQ
+
+/ENHANCE edge, including its direction, type, or strength; and 3. delete a node or edge only when deletion is enabled and supported by evidence. Operations that depend on one another are atomic: for example, a new node and its connecting edge, or the removal and replacement of an edge, must be accepted or rolled back together. Existing titles and categories are normally left unchanged. Unsupported observations and execution lapses produce 
+
+NO_PATCH .
+
+Deterministic merge and structural validation. Proposals are processed in stable source order. Exact duplicates are removed, and edits sharing source evidence or touching the same node are joined before Local-Gate testing, so a later group cannot silently overwrite an earlier edit to the same field. Candidate materialization runs on a graph copy and rejects the complete atomic group if it creates a duplicate relation, conflicting PREREQ /ENHANCE types on one directed pair, a missing endpoint, a self-loop, or a PREREQ cycle. A conflict that appears only after locally accepted groups are combined invalidates the merged candidate before the Big Gate. 
+
+Statistics-maintained relations. Teachers may propose structural PREREQ and ENHANCE edges, but cannot create, delete, or relabel CO -OCCUR . Co-occurrence is recomputed from successful trajectories: for nodes a, b , its rate is nab / min( na, n b), with at least two joint successes and rate at least 0.25 . Edge strength is binary: medium is the default and is omitted from the compact rendering, whereas strong is shown as a salience cue. Strength neither overrides node applicability nor changes topological order; only PREREQ imposes ordering. C.4 ATTRIBUTION ROUTING AND WORKED EXAMPLES 
+
+This subsection expands the six routing rules in the main text to the field level. Each route is accompanied by a shortened update-case example that illustrates candidate construction before the Gates. Final persistence still requires both Local- and Big-Gate acceptance. 16 Published as a conference paper at ICLR 2027 
+
+Algorithm 2 Abductive attribution and edit routing                                                
+
+> Require: failure, current graph, verifier feedback, validated skill-use record, successful siblings
+> Ensure: root cause and an edit target or NO_PATCH
+> 1: Locate the earliest observable error and the smallest successful contrast 2: if neither can be localized then
+> 3: return INSUFFICIENT_EVIDENCE
+> 4: end if
+> 5: C←graph objects covering the required behavior 6: if C=∅then
+> 7: return MISSING_SKILL_FAMILY
+> 8: end if
+> 9: if Cis absent from validated usage then
+> 10: return MISSING_ACTIVATION_CUE
+> 11: end if
+> 12: if stored semantics of a used object are harmful then
+> 13: return HARMFUL_EXISTING_RULE
+> 14: end if
+> 15: if a step, boundary, or required relation is missing then
+> 16: return MISSING_OR_INCORRECT_PROCEDURE
+> 17: end if
+> 18: if the graph is correct but execution diverges then
+> 19: return EXECUTION_LAPSE
+> 20: end if
+> 21: return INSUFFICIENT_EVIDENCE
+
+Figure 3 consolidates the field-level routing contract into six mutually exclusive cases. The first four routes authorize only the localized candidate patch shown in the corresponding card; 
+
+EXECUTION_LAPSE and INSUFFICIENT_EVIDENCE authorize no graph edit. Routing and acceptance remain separate: even a correctly addressed candidate must pass the Gates before it can persist. The six routes are triggered only by verifier-confirmed failures. The benchmark label identifies that an answer is wrong, but it does not provide a unique gold edit route or graph object, and distinct local repairs can be behaviorally equivalent; accuracy against a single post-hoc route label is there-fore not a well-defined attribution metric. S KILL AA instead evaluates the authorized object-level intervention. A patch-bearing route may touch only its authorized field or relation, and the reference and candidate are executed on the same source and affected cases. The Local Gate tests whether the targeted change repairs its sources without excessive regressions, and the Big Gate tests the merged candidate on the complete update pool. A route is retained only when this paired object-level in-tervention passes both tests; otherwise the candidate is rolled back or NO_PATCH preserves the committed state. This evaluates the operational utility of graph-level credit assignment rather than agreement with an arbitrary verbal label. C.5 GATE SCOPE EXPANSION AND ROLLBACK DETAILS 
+
+The main text defines the Local- and Big-Gate decisions at the group level. This section supplies only the implementation details: how a group-level scope expands to example IDs, how new-node patches are handled, and which state is restored after rejection. For atomic group Jk, the Local-Gate scope in the main text expands into the following example-level sets, all drawn from the current update pool: • DirectSources k: failed examples cited as source evidence by an operation in the group; • PriorUsers k: reference examples whose valid skill-use record ( usage ) intersects an edited object—the node ID for a node-field edit, or the edge ID and both endpoint IDs for an existing-edge edit; • UnknownUsage k: reference examples with missing or invalid skill-use records; and • GroupSiblings k: other update examples in the same update group as any example in the preceding three sets. 17 Published as a conference paper at ICLR 2027 
+
+Figure 3: Six attribution routes with verified examples and field-level edits. Each card pairs a SearchQA failure with its original clue, prediction, gold answer, validated semantic path, and the relevant skill field before and after attribution. Candidate after denotes an attribution-authorized pro-posal before the Gates, not an automatically committed edit; only the touched field excerpt is shown, and omitted fields remain unchanged. EXECUTION_LAPSE and INSUFFICIENT_EVIDENCE 
+
+leave the graph unchanged. Case prefixes link the cards to the source attribution artifacts. The exact retest set is 
+
+Retest k = DirectSources k ∪ PriorUsers k ∪ GroupSiblings k ∪ UnknownUsage k.
+
+For a group containing only a newly added specialist and its connecting edge, touch is computed from the new node alone. Because that node has no reference users, PriorUsers k is empty and retesting starts from direct sources, their update siblings, and usage-unknown examples. All prior users of the parent remain covered by the complete-pool Big Gate. On this expanded set, the three counts in the main-text Local Gate are computed case by case against the current reference: nk 
+
+> fixed
+
+counts incorrect-to-correct examples, nk 
+
+> broken
+
+counts correct-to-incorrect examples, and nk 
+
+> unresolved
+
+counts direct source failures that remain incorrect. Thus, 
+
+nk 
+
+> fixed
+
+> n k 
+
+> broken
+
++ nk
+
+> unresolved
+
+.
+
+The decision applies to the complete Jk; no subset of operations from one atomic group may be committed. Ordinary local net gain compares fixes and regressions but assigns zero cost to a direct 18 Published as a conference paper at ICLR 2027 source that remains wrong. Here each unresolved source contributes one additional negative term, so a candidate that drifts from its motivating attribution must compensate with more genuine fixes. The rule does not require every source to be repaired, but it explicitly penalizes “fix elsewhere, miss the source” behavior. At the other extreme, zero regression would reject a candidate after one broken case even if it repairs substantially more errors and is therefore too rigid for graph evolution. Regressions and unresolved sources receive unit weight because all three terms count examples on the same hard-case scale; this coefficient is fixed before evaluation rather than tuned on held-out outcomes. The complete-pool Big Gate then checks aggregate net gain. In the reported runs, this deterministic count produces script_keep and is necessary but not sufficient: a teacher audit may veto an otherwise eligible group only when the supplied evidence shows a direct 1 → 0
+
+regression or an explicit contradiction with the fixed task protocol. It cannot rescue a script-ineligible group, and no resynthesis occurs inside the Gate. 
+
+Paired execution and decision stability. Reference and candidate rollouts use the same model route, reasoning effort, output limit, response policy, case order, and configured seed; only the rendered graph changes. Once outputs are stored, the Gate is deterministic. Its Local-Gate margin is mk = nk 
+
+> fixed
+
+− nk 
+
+> broken
+
+− nk
+
+> unresolved
+
+, and the Big-Gate margin is M = ncorrected − nregressed .Stability is measured by these margins rather than another free-form judgment: a repeated execution yields the same decision whenever stochastic changes are insufficient to cross zero. Strict inequality makes ties conservatively roll back. The manifest records both margins and every per-case transition, making the decision exactly replayable for a stored rollout and independent of an unconstrained teacher vote. 
+
+Big-Gate restoration details. The main text gives the commit criterion. Operationally, all retained groups are applied once and evaluated together on the complete update pool. Rejection restores the pre-epoch graph, rendered prompt, and reference as one state; outcomes from different local candi-dates are never spliced into a synthetic reference. The reported objective is pooled hard accuracy, so a strictly positive aggregate margin commits the candidate even if a small task type has a negative transition balance. This is deliberate: post-hoc subgroup vetoes on small cells would change the declared objective and make acceptance depend on an unstable partition. Applications with pre-specified safety-critical groups can add non-negative group margins or risk weights before the same atomic commit without changing the graph update mechanism. C.6 WHAT ATTRIBUTION AND GATES VALIDATE 
+
+SkillAA evaluates a graph-level repair hypothesis at several distinct levels. Table 5 states the evi-dence supplied at each level and the decision that evidence authorizes.         
+
+> Level Evidence checked Authorized conclusion
+> Record integrity IDs in trace and usage agree, exist in the current graph, and have valid endpoints. The record is safe for object-scoped impact analysis; otherwise the example enters the unknown-usage scope. Routing validity The earliest observable error, successful contrasts, graph coverage, activation, stored semantics, and execution are checked in order. Exactly one legal edit surface is opened, or NO_PATCH preserves the graph. Local behavioral validity The complete atomic group is rerun on direct sources, prior users, group siblings, and usage-unknown cases. The proposed repair improves its affected scope under the conservative Local-Gate rule. Global behavioral validity All retained groups are materialized together and rerun on the complete update pool. The executable candidate has positive aggregate hard-case net gain and can replace the committed state.
+
+Table 5: Evidence levels in attribution and Gate validation. Each level authorizes the next operational decision; no decision depends on an unobserved chain-of-thought state. The term abductive therefore denotes selection of the smallest reusable graph defect whose corre-sponding repair can be tested. Agreement between trace and usage establishes record integrity, while the two Gates test the downstream utility of the authorized intervention. A wrongly targeted 19 Published as a conference paper at ICLR 2027 diagnosis cannot persist when its patch fails to repair its sources or causes excessive regressions, because the committed graph remains unchanged. Reference and candidate executions are bound to the configured seed, graph hash, rendered-prompt hash, case-ID set, and completion manifest. The protocol collects one complete candidate rollout for each Gate decision and compares it case by case with the committed reference. Reusing the full committed reference, expanding uncertain usage into the retest scope, and requiring a second complete-pool test prevent a local teacher judgment from becoming a persistent update on its own. All six routes occur only after a failed execution, and the task datasets do not annotate a unique corrective object. Consequently, the relevant unit of evaluation is the route-specific intervention, not multiclass agreement with an unavailable gold route. The field-level routing audit verifies that each diagnosis opens exactly one legal surface, while the Local and Big Gates test whether changing that surface produces the required repair and preserves established behavior. 
+
+# D SELECTED PROMPT TEMPLATES 
+
+This appendix presents the prompt interfaces that implement the principal transitions in Fig-ure 2. The boxes are faithful excerpts from the released templates: repeated schema boilerplate, environment-specific examples, and injected runtime payloads are omitted for space. At runtime, the frozen graph, complete case records, successful sibling evidence, and Gate measurements are inserted into the indicated inputs without semantic compression. D.1 STUDENT EXECUTION AND TRACE /U SAGE CONTRACT 
+
+The student prompt makes semantic execution observable while separating the explanatory trace from the exact object-ID sidecar used for impact analysis.                                                   
+
+> Student execution contract
+> You are an expert question answering agent . Answer only from the supplied context . Before the final answer, write exactly one plain −text graph execution record inside < reasoning_trace >...</ reasoning_trace >. It must expose the semantic rule path , not merely summarize the task : − For every applied node, cite its exact graph ID, state the evidence or intermediate state entering that node, what the node did , and the new intermediate result . − For every followed edge, cite its exact edge ID, name its endpoints , explain why the dependency applied , and state what it enabled . − State the requested answer type , decisive evidence , relation or constraint , rejected endpoint when relevant , and final surface form. − Do not cite an object that was not actually applied . Output exactly these blocks in order : < reasoning_trace >...</ reasoning_trace > <graph_usage>{"used_nodes ":["..."]," used_edges ":["..."]}</ graph_usage> <answer >...</ answer> graph_usage must be the exact deduplicated set of IDs explicitly cited as applied in reasoning_trace . Use only IDs visible in the current graph. Only the graph may evolve; do not memorize case IDs or gold answers.
+
+20 Published as a conference paper at ICLR 2027 D.2 ABDUCTIVE ATTRIBUTION META PROMPT 
+
+The case analyzer receives one complete execution record and the frozen graph. Its central instruc-tion is to distinguish graph defects from activation misses, execution lapses, and insufficient evi-dence before selecting an edit surface. The output field retrieval_revision_proposals 
+
+is a legacy interface name: it may only propose a change to an existing node’s when_to_use ; it does not invoke or modify an external retriever. 
+
+Case analyzer: root cause and edit routing 
+
+You are the GraphOpt Case Analyzer. Read the frozen SkillGraph G_t and one complete case record , then perform semantic node− and edge−level attribution . Return exactly one parseable JSON object. Evidence: − Inspect the original task , response , evaluator outcome, semantic trace , graph_usage, and successful siblings together . − A validated student trace is an execution record bound to exact graph IDs and explicit input−−operation−−output transitions . − VERIFIED usage requires exact agreement between cited IDs, the sidecar , and valid graph endpoints . First locate the earliest observable decision after which the answer is unrecoverable . Then choose exactly one root−cause route : SUCCESS −> no edit. MISSING_ACTIVATION_CUE −> clarify only target.when_to_use. MISSING_OR_INCORRECT_PROCEDURE −> PATCH only target.how_to_use or add the necessary prereq /enhance relation . HARMFUL_EXISTING_RULE −> replace only the exact harmful span, or atomically replace the incorrect edge. MISSING_SKILL_FAMILY −> add one complete specialist node and an enhance edge from a trace −used correct parent in the same atomic group. EXECUTION_LAPSE −> record the divergence and emit no graph proposal. INSUFFICIENT_EVIDENCE −> emit no graph proposal. Every proposed edit must implement the smallest reusable contrast with successful cases . Never copy a gold answer, case ID, document name, or hindsight −only condition into a skill . A missed node does not by itself justify broadening its trigger . Required output fields : case_id , success , failure_type , badcase_summary, existing_graph_usage , node_revision_proposals , retrieval_revision_proposals , edge_correction_proposals , new_node_proposals, new_edge_proposals. 
+
+21 Published as a conference paper at ICLR 2027 D.3 EPOCH META -A UDITOR PROMPT 
+
+The epoch-level Meta channel summarizes only lessons supported by complete Gate evidence. It is advisory context for the next epoch and cannot directly modify the permanent graph or its statistics. 
+
+Epoch meta auditor 
+
+You are the GraphOpt Epoch Meta Auditor. Resolve every exact evidence reference through evidence_catalog verbatim before auditing . The input contains previous_meta, previous and current graph summaries, longitudinal improved/ regressed / persistent − fail / stable − success pairs , and complete Local− and Big−Gate records . Use only this input . Read the complete Gate measurements, edit attribution , original tasks , responses , trajectories , references , and before / after states together . Independently verify that each lesson is supported by the original evidence ; do not rely on a decision summary when complete evidence contradicts it . Preserve every non−contradicted , evidence−grounded lesson in previous_meta, then add or revise lessons supported by the current epoch. Cover effective edits , regressions , likely missing skills , and changes to avoid . The Permanent Protocol is frozen ; statistics remain in evolution_cache ; successful cases cannot propose edits ; this channel cannot propose co_occur. Return exactly : {"schema_version":"graphopt−meta−v1", " bullets ":[" specific evidence−grounded point ", "..."]} Return 5−−12 unique non−empty strings , each at most 500 characters . If evidence is sparse , state uncertainty and the conservative action instead of inventing a conclusion . 
+
+22 Published as a conference paper at ICLR 2027 D.4 PATCH SYNTHESIS AND GATE -A UDIT PROMPTS 
+
+The first template below is used only for additive updates to an existing node’s how_to_use ;the other legal edit routes use their field-specific templates. It preserves the old procedure and appends the smallest supported conditional step. The second template audits one atomic group after deterministic transition counting. 
+
+Targeted node-patch synthesizer 
+
+Synthesize the complete epoch evidence for one existing node into one precise conditional lesson . The program appends it to the Original Node; you are not allowed to rewrite the node. Return exactly {" addition ":"..."} or {" addition ": null }. − Inspect original_task , student_output , evaluation , training reference , reasoning evidence , graph_usage, proposed changes, and Successful Uses. − Treat failures and successes as a paired counterfactual set . Identify the smallest observable state separating them. − State observable condition −> next action / state update , with a narrow exception when needed. Preserve every byte of the old node. − Do not create unconditional always/never rules from failure −only patterns . Keep the addition under 80 words. − Return null if the proposal is already covered , targets another node, conflicts with a Successful Use, or lacks an observable condition . 
+
+Per-edit Local-Gate auditor 
+
+You receive exactly one atomic edit group and its complete affected −scope before / after evidence . Audit only that group. The deterministic environment statistics are primary. If script_keep is true , default to KEEP. ROLLBACK is legal only with HIGH confidence and: (1) DIRECT_CAUSAL_REGRESSION, where supplied evidence directly shows this edit caused a 1−>0 transition ; or (2) EXPLICIT_SEMANTIC_CONTRADICTION, where the edit contradicts the immutable task protocol or demonstrated task semantics . A script − ineligible edit must remain ROLLBACK; the teacher cannot rescue it . Uncertainty , stylistic preference , imperfect attribution , or missing usage alone are not veto grounds because unknown usage is already covered by whole−group scope expansion. Return exactly one JSON object containing atomic_group_id, decision , veto_basis , confidence , reason , and supporting_case_ids . 
+
+# E EXPERIMENTAL PROTOCOL 
+
+This appendix gives the data splits, inference settings, and evaluation rules for Tables 2–9 and Fig-ure 4. Details specific to ablations and supplementary experiments appear in Appendices F and G. E.1 BENCHMARK SPLITS AND GROUP CONSTRUCTION 
+
+Every main-protocol group contains four distinct update IDs. Update and test ID sets are disjoint within each benchmark, and test IDs are not used when constructing update groups. In the SkillOpt protocol, train and validation together form the update pool, while the listed test split remains held out. DocVQA additionally passes the original image and question unchanged to every condition; retrieval and skill rendering may not replace them with OCR summaries. 23 Published as a conference paper at ICLR 2027                      
+
+> Protocol / benchmark Train Validation Test
+> Main / SearchQA 800 0200 Main / LiveMath 468 0117 Main / DocVQA 800 0200 SkillOpt / SearchQA 400 200 1,400 SkillOpt / LiveMath 35 18 124 SkillOpt / DocVQA 107 53 374
+
+Table 6: All benchmark split counts. Main-protocol “Train” is the complete update pool. Type-Constrained Capacitated Semantic Clustering constructs the fixed update groups from update-pool question text and task-type metadata only. SearchQA forms BGE-cosine neighborhoods among update examples. DocVQA groups update examples by semantic similarity subject to question-type constraints. LiveMath first requires an exact fine-grained mathematical type, then uses greedy TF– IDF matching within the update pool. Test questions, answers, student outcomes, scores, and traces are excluded from group construction. The groups are used only to provide related successful update cases for attribution and to expand Local-Gate retest scopes; final evaluation uses the independent held-out test split. E.2 MODELS , I NFERENCE , AND OPTIMIZATION 
+
+Models. The main experiments use gpt-5.6-sol, gemini-3.5-flash, and qwen3.8-flash; within each run, the student and teacher are the same model. The SkillOpt-protocol comparison uses gpt-5.5, gpt-5.4-mini, and qwen3.6-35b-a3b; each SkillAA student also serves as its own teacher, and final held-out evaluation is student-only. The dedicated Table-C teacher intervention is the only excep-tion: it substitutes GPT-5.4-mini or GPT-5.6-sol while holding the student fixed. Exact API model identifiers will be included in the released configurations. 
+
+Inference. All models are accessed by API with medium reasoning effort and a maximum output of 16,384 tokens. Qwen thinking is enabled for SearchQA and DocVQA and disabled for the Live-Math fast protocol. Run artifacts record the deployed model string, route, endpoint class, decoding settings, timestamps, graph and prompt hashes, case IDs, and raw outputs. Provider aliases are not guaranteed immutable date snapshots; these records preserve the executed inputs and outputs but cannot recreate an unannounced server-side model change. 
+
+Optimization. Graph optimization uses seeds 42, 43, and 44 for the three reported runs. All training-based runs in Tables A–C, including component interventions and teacher-transfer tests, use three epochs over the complete update pool; inference-only retrieval interventions do not optimize a graph. Gate scopes and acceptance rules follow the main text and Appendix C.5. Final evaluation settings and reporting are given next. 
+
+Terminal graph size and system accounting. The released gpt-5.6-sol terminal graphs contain 30/8 nodes/edges for SearchQA, 37/40 for LiveMath, and 20/19 for DocVQA. Their rendered prompts contain 5,532, 7,549, and 3,866 tokens, respectively, using o200k_base as a uniform offline estimate rather than a provider billing count. Per-epoch calls are exactly reconstructible from the manifest. After reusing the current full reference, the number of new student executions is P 
+
+> k
+
+|Retest k| + N : the first term is Local-Gate retesting and the final N is the merged Big-Gate rollout. Teacher calls are recorded separately for failure attribution, patch synthesis, Local-Gate audit, and epoch audit. Figure 4 reports committed edits, while the release manifest retains every candidate, retest ID, call, and token record. Latency and monetary cost vary with concurrency and provider pricing, so they are audited as run properties rather than used as efficacy metrics. E.3 EVALUATION PROTOCOL 
+
+SearchQA and LiveMath use exact-match accuracy. DocVQA is binarized as correct exactly when ANLS = 1 : SkillAA’s Gates compare discrete 0 → 1 and 1 → 0 transitions, so continuous partial-credit ANLS would define a different optimization objective and would not be comparable to the hard-accuracy columns. Table 3 uses the hard-score protocol of the SkillOpt direct-chat setting; continuous ANLS is not mixed into its DocVQA columns. For graph-optimization settings, each 24 Published as a conference paper at ICLR 2027 reported run uses a different optimization seed (42, 43, or 44), produces its own committed graph, and then evaluates that graph on the held-out test split with the same scorer, API route, reasoning effort, and output budget. For frozen settings, the same seeds control evaluation only. We report the mean and half-range, (max − min) /2, across these three runs. Thus, for optimized cells the disper-sion includes optimization-seed variation as well as final evaluation variation. Held-out examples are not executed during optimization, are not used for update-group construction, and their labels, predictions, scores, and traces never trigger teacher calls, graph updates, or Gate decisions. 
+
+Comparison provenance. Table 3 is a source-protocol comparison under the SkillOpt direct-chat setting. Within each model–benchmark row, the compared methods use the same released test IDs, original task inputs, inference budget, and hard scorer specified by that protocol; method-specific optimization procedures remain those of the corresponding method. The table is intended as a held-out accuracy comparison under a shared protocol, not as a claim of equal training compute or identical implementation internals. E.4 RESULT PROVENANCE AND COMPARABILITY LEDGER 
+
+Table 7 makes explicit which quantity is held fixed in each experimental block. This prevents the progressive ladder, source-protocol comparison, training ablations, and inference-only interventions from being interpreted as the same estimator. 
+
+Table-B protocol identity. Table 3 follows the direct-chat setting in Table 1 of SkillOpt (Yang et al., 2026), including the benchmark configurations, official split manifests, original task payloads, model roles, inference budget, and benchmark scorer. S KILL AA is trained on the corresponding train ∪ validation split and evaluated on the held-out test split. The remaining columns are used as comparison results under the same source protocol, so Table 3 should be read as a protocol-level accuracy comparison. For cells displayed with a half-range, the three reported repetitions use seeds 42, 43, and 44. For graph-optimization settings, these are independent optimization-and-evaluation runs and may pro-duce different committed graphs; for frozen settings, they are evaluation-only repetitions. The half-range is therefore an observed three-run dispersion summary, not a confidence interval. Table 3 keeps the point-estimate reporting style of the source comparison for baseline columns, while S KIL -
+
+> L
+
+AA additionally reports the half-range of its three held-out evaluations. For DocVQA, the archived protocol uses a native hard score, implemented as correct exactly when ANLS = 1 . Continuous ANLS is not mixed into any cell. SearchQA and LiveMath likewise use exact-match scorers, so each benchmark uses one answer-correctness construct. The main protocol uses an independent held-out test split: test questions and answers are excluded from update-group construction, attribution, Gate decisions, and graph selection. The fixed update groups are released with the split IDs so the relation between update evidence and held-out evalua-tion remains auditable without using test-question metadata. 
+
+# F ABLATION PROTOCOLS AND RETRIEVAL DEFINITIONS 
+
+This appendix defines the interventions in Table 4. Each variant changes one named representation, retrieval, update, or teacher interface while retaining the matching benchmark cases, original task inputs, scorer, and student inference settings. The definitions below clarify what is removed and what remains fixed; interpretation is left to the main text. F.1 SHARED CONTROLS AND GRAPH -S TRUCTURE ABLATION 
+
+Baseline. Flat skill directly renders the original SkillOpt prompt without graph conversion or graph optimization. It is the common Table-C reference and is distinct from Structured skill G0 in Table 2. The Table-C cells are independent API executions rather than values copied from Table A; they retain the same split, task input, scorer, inference envelope, and three-run reporting rule, but need not be numerically identical to either Table-A row. 25 Published as a conference paper at ICLR 2027 
+
+Block Optimized state Teacher assignment Valid comparison 
+
+Table A, frozen stages None; the flat skill or G0 is fixed No teacher call Local effect of changing representation or the execution-record contract under matched test inputs. Table A, SkillAA Three-epoch graph optimization Student is its own teacher End-to-end gain of the complete method; seeds 42/43/44 produce three committed graphs evaluated on held-out test. Table B, comparison baselines Method-specific states for No skill, Trace2Skill, TextGrad, GEPA, and SkillOpt Source-protocol method settings; no teacher call during final evaluation Protocol-level held-out accuracy comparison under the SkillOpt direct-chat setting. Table B, SkillAA Three-epoch graph optimization on train 
+
+∪ validation Student is its own teacher SkillAA evaluation on the held-out source-protocol test IDs under the SkillOpt direct-chat setting. Table C, training interventions Three-epoch graph optimization Self-teacher unless the row names a teacher Component effects are read against the same-student, same-teacher Full configuration; the named teacher rows form a separate teacher-transfer comparison. Table C, retrieval interventions Terminal graph from three-epoch self-teacher optimization; intervention only at evaluation Student is its own teacher during optimization; no teacher call at evaluation Inference-time effect of hiding fields or replacing semantic activation while the three-epoch graph is fixed. Table C, teacher intervention Three-epoch graph optimization GPT-5.4-mini or GPT-5.6-sol as named Teacher effect with student, data, edit contract, and schedule held fixed. 
+
+Table 7: Configuration and comparison ledger for the reported experimental blocks. 
+
+Nodes only. This intervention starts from the matching optimized graph and deletes every edge without regenerating any node field. Its comparison with the complete graph isolates the contribu-tion of explicit relations; its difference from Flat skill additionally contains both representation and optimized-node effects. F.2 RETRIEVAL -M ECHANISM ABLATIONS 
+
+All four retrieval interventions are applied only at inference, but their source graphs undergo the same three-epoch optimization. Each starts from the listed student’s matching three-epoch self-teacher terminal graph and makes no attribution, synthesis, Gate, or teacher call during evaluation: the gpt-5.6-sol student uses its gpt-5.6-sol-teacher graph, and the gpt-5.4-mini student uses its gpt-5.4-mini-teacher graph. Graph identity, test IDs, generation settings, and original inputs remain fixed; DocVQA always receives the complete image and question. 
+
+No activation boundaries. The renderer omits only when_to_use and avoid . Node IDs, titles, how_to_use , and all edge fields remain unchanged and in the same order. 
+
+No edge rationale. The renderer omits only each edge’s rationale . Endpoints, type, direction, strength, order, and all node fields remain unchanged. 
+
+S–Q retrieval. This variant follows the embedding-retrieval core of SkillRL (Xia et al., 2026). The fixed encoder Qwen/Qwen3-Embedding-0.6B embeds the current question q and node text 
+
+sj , formed by concatenating title, how_to_use , and when_to_use . Normalized inner product ranks nodes: 
+
+rj (q) = f (q)⊤f (sj ), RSQ (q) = TopK j rj (q), K = 6 .
+
+26 Published as a conference paper at ICLR 2027 The avoid field does not affect ranking but is rendered for selected nodes. Nodes outside the top six are omitted, and an edge is retained only when both endpoints are selected. 
+
+Nearest-Q reuse. For an update query q(u) 
+
+> m,j
+
+in a fixed update quadruple Group m =
+
+{q(u)
+
+> m, 1
+
+, . . . , q (u)
+
+> m, 4
+
+}, the variant selects the most similar one from the other three update questions: 
+
+i∗ = arg max  
+
+> i∈{ 1,2,3,4}\{ j}
+
+sim d(q(u) 
+
+> m,j
+
+, q (u)
+
+> m,i
+
+).
+
+It then renders the active terminal nodes whose accepted-patch provenance cites that neighboring update question: 
+
+RNQ (q(u) 
+
+> m,j
+
+) = A(q(u) 
+
+> m,i ∗
+
+; G∗).
+
+It neither computes question-to-skill similarity nor adds initial nodes or nodes from outside the quadruple. The selected set can therefore be empty or contain multiple nodes. This intervention measures within-quadruple case-to-skill reuse among update examples rather than graph semantic activation. 
+
+Retrieval audit. The read-only manifest records the graph hash, selected node IDs, similarity values, accepted-patch provenance, prompt-token count, and test order. A result is invalid if selection changes after observing a prediction, provenance is untraceable, graph identity or generation settings change, or the original multimodal input is replaced. F.3 UPDATE -M ECHANISM ABLATIONS 
+
+All four training interventions retain the same data, student, self-teacher assignment, and three-epoch optimization schedule. No structured attribution replaces earliest-error localization, defect typing, existing-rule coverage, and transferable-increment checks with the instruction “Please sum-marize the failure cause.” No correct-case protection removes successful-example constraints from attribution and patch synthesis. No Local Gate applies the same proposal stream without affected-scope regression testing. No Big Gate commits the Local-Gate survivors without complete-pool acceptance. They are compute-matched to the three-epoch full configuration in epoch count and update-pool exposure, although they are not a full factorial analysis. F.4 TEACHER -T RANSFER TEST 
+
+The GPT-5.4-mini- and GPT-5.6-sol-teacher configurations use the same students, data, edit con-tract, three-epoch schedule, and evaluation procedure; only the teacher changes. Both terminal graphs are evaluated three times. This dedicated intervention is the sole departure from the de-fault self-teacher protocol and tests whether graph updates generated under one teacher can help a fixed student. It explicitly answers four pairings: (i) gpt-5.6-sol student with gpt-5.6-sol teacher, the strong-student self-teacher setting; (ii) gpt-5.6-sol student with GPT-5.4-mini teacher, testing whether a weaker teacher can still guide a stronger student; (iii) gpt-5.4-mini student with GPT-5.4-mini teacher, the smaller self-teacher setting; and (iv) gpt-5.4-mini student with GPT-5.6-sol teacher, testing whether a stronger teacher transfers useful graph repairs to a smaller student. F.5 HOW TO READ TABLE CTable C contains self-teacher mechanism interventions and a separate cross-teacher comparison. The mapping in Table 8 fixes the appropriate reference for each row and keeps component effects separate from teacher-transfer effects. Parenthesized values in Table C are differences from Flat skill and quantify total gain over the com-mon non-graph baseline; they are not component-removal deltas and are not teacher-effect deltas. Component effects are obtained from absolute scores against the self-teacher Full row for the same student, while teacher effects are obtained by comparing the two Full rows for a fixed student. Numerically, the teacher effects are +3.3/+2.0/+1.2 for the gpt-5.6-sol student and +2.5/+5.2/+2.7 for the gpt-5.4-mini student on SearchQA/LiveMath/DocVQA. Because every training intervention and both teacher configurations run for three epochs, neither epoch count nor update-pool exposure explains these contrasts. 27 Published as a conference paper at ICLR 2027 
+
+Rows interpreted Student Teacher Matched reference 
+
+Graph, retrieval, and update variants Either listed student Self-teacher The self-teacher Full row for the same student; retrieval variants are read against the same frozen source graph before the intervention. Teacher-transfer test Either listed student GPT-5.4-mini vs. GPT-5.6-sol The two Full rows for that fixed student; every non-teacher setting is identical. 
+
+Table 8: References for interpreting Table C. 
+
+Setting S@50 S@100 ∆S Steps@50 TO@50 
+
+No skill 94.8 ±0.4 100.0 ±0.0 +5.2 9.7 ±0.5 5.2 ±0.4
+
+Initial skill 95.5 ±0.4 100.0 ±0.0 +4.5 9.5 ±0.2 4.5 ±0.4
+
+SkillOpt Markdown 89.6 ±1.1 100.0 ±0.0 +10.4 9.7 ±0.1 10.4 ±1.1
+
+SkillAA 92.5 ±3.4 100.0 ±0.0 +7.5 10.0 ±0.8 7.5 ±3.4
+
+Table 9: ALFWorld step-budget evaluation. S@50/S@100: success within 50/100 steps; ∆S: absolute percentage-point gain; Steps@50: steps among successful runs; TO@50: timeout rate. 
+
+# G SUPPLEMENTARY EXPERIMENTS AND DIAGNOSTICS 
+
+This appendix reports evidence that complements, but does not extend, the main efficacy claims: a sequential-interaction stress test and the commit history of the main gpt-5.6-sol runs. G.1 SEQUENTIAL INTERACTION UNDER STEP BUDGETS 
+
+Table 9 uses the SkillOpt ALFWorld benchmark and evaluation protocol; it is independent of the three main benchmarks. All methods reach 100% success at 100 steps. At 50 steps, the initial skill has the best success rate, successful-path length, and timeout rate; SkillAA does not dominate. This result illustrates that some failures are not graph-addressable skill defects, so forcing an update can be ineffective or harmful. G.2 EPOCH -L EVEL COMMIT DYNAMICS 
+
+Figure 4 unfolds the same gpt-5.6-sol SkillAA runs summarized in Table 2; it visualizes their graph-commit history rather than introducing a separate experiment. SearchQA and LiveMath accept their best graphs at epoch 2 and reject the epoch-3 candidates; DocVQA rejects epoch 2 and accepts a different repair set at epoch 3. The figure simply exposes the commit history: rejected proposals do not change executable state, and held-out scores do not govern Gate decisions. G.3 RESIDUAL ERROR AUDIT 
+
+To avoid treating every incorrect score as a skill defect, we examine six errors from frozen held-out rollouts, two per benchmark. They were selected to separate failure mechanisms, not to estimate their frequency. Each diagnosis below jointly examines the question, prediction, reference, and validated execution record. 28 Published as a conference paper at ICLR 2027 
+
+Figure 4: gpt-5.6-sol SkillAA epoch trajectories (%). Solid blue lines show hard accuracy on the complete update pool; dashed red lines show held-out test means, with error bars denoting half-ranges over three runs. Gold stars mark the best committed graph, red crosses mark Big-Gate rollback, and the lower strip reports committed node edits. No test is rerun when rollback leaves the graph unchanged; node counts exclude edge edits. 
+
+SearchQA: scoring mismatch versus missing ordinal evidence 
+
+Correct entity, rejected surface form ( 7326e94d... ). For the clue about the leader convicted by Panamanian courts in 1993, the model answers Manuel Noriega , while the reference is Noriega . The trace selects the correct person and relation; strict exact match nevertheless scores the fuller name as wrong. This is a scoring failure, not a reasoning or graph failure. Editing the skill would fit the scorer rather than improve reasoning; alias-aware normalization or a separate semantic score is the appropriate remedy. 
+
+Missing ordinal evidence leads to the wrong person ( b35e5d99... ). Asked for the first U.S. Sec-retary of State, the model answers James Madison rather than Thomas Jefferson . The retrieved passages say that Madison served as Secretary of State under Jefferson but never state who was first; Jefferson ap-pears only as the president associated with Madison. The trace therefore follows the strongest visible role statement and chooses the wrong endpoint. This is primarily an evidence-coverage problem: retrieval or an answerability check must supply the missing ordinal fact, whereas a graph patch should not memorize Jefferson from the label. 
+
+LiveMath: theorem identification versus realizability 
+
+Related theorem mistaken for the requested equivalence ( 202604:7 ). The model chooses a co-
+
+t-structure characterization (E) instead of restriction of the induced t-structure to T − 
+
+> c
+
+(B). The trace performs hypothesis and option checks but treats a related consequence as the equivalence itself. The procedure is followed; the mathematical premise used by the procedure is wrong. This case calls for source-grounded theorem lookup, not another generic comparison rule. 
+
+Necessary conditions mistaken for realizability ( 202601:10 ). The model selects C, which includes polygon type {6, 10 }; the reference A permits only {4, 12 } and {8, 8}. The trace correctly derives that both side counts are even, sum to 16, and cannot equal 2, but then assumes every remaining partition is realizable. The missing step is a topological construction or obstruction, not another pass over the option wording. A source-backed classification or explicit realizability check is therefore more appropriate than adding a generic comparison rule. 
+
+DocVQA: character recognition versus role selection 
+
+Correct region, wrong handwritten date ( 50861 ). The model locates the memo date and reads 
+
+7/18/82 ; the reference is 11/18/82 . All later extraction and formatting steps preserve the initial read-ing, so the trace is consistent but cannot detect that the first visual observation was wrong. The appropriate response is a crop-level reread or OCR cross-check, not a graph patch. 
+
+Correct signature block, wrong endpoint ( 31025 ). For “Who need to sign at bottom of page?”, the model returns the handwritten name Lillian B Dalton ; the reference expects the role Chief, Employment Branch . The trace sees both strings but interprets the question as asking who signed rather than which office must sign. Unlike the date error, this is a candidate graph defect in role selection—but the wording is ambiguous, so one example is not enough to justify a persistent edit. A patch is warranted only if the same name-versus-role confusion recurs on clearer cases. 
+
+These cases show why an incorrect label is not, by itself, an update signal. The six errors require four different responses: fix the scorer, retrieve missing evidence, invoke a domain or perception 29 Published as a conference paper at ICLR 2027 checker, or edit the graph when a repeated semantic boundary is wrong. SkillAA currently makes the last decision explicit through NO_PATCH and the Gates; a broader system should also record the non-graph destination of each rejected edit. 
+
+# H DISCUSSION , L IMITATIONS , AND NEXT STEPS 
+
+H.1 WHAT THE RESULTS ESTABLISH 
+
+The evidence supports a narrower claim than “graphs make agents better.” The graph is useful because it turns skill text into an editable address space. Node fields carry most of the applicability and procedure information; edges help when several already-relevant procedures must be ordered or combined. The ablations are consistent with this division: optimized nodes remain useful without edges, while removing activation boundaries or replacing semantic activation with a fixed retrieval rule loses more. Attribution-guided routing and the Gates form a testable repair pipeline. Routing selects a can-didate graph object, the Local Gate tests that object-level intervention on affected cases, and the Big Gate tests interactions after surviving repairs are merged. Because the six routes occur only on failures and the benchmark supplies no unique gold repair object, the reported evidence con-cerns the operational utility of these paired interventions rather than route-classification accuracy. The residual-error audit illustrates the distinction between graph-addressable defects and theorem, perception, or scorer failures. The negative ALFWorld result gives the practical boundary. When the initial skill already supports the task and the remaining failures come from exploration or execution, graph editing need not help and can make short-budget behavior worse. The method’s value therefore depends as much on declining unsupported edits as on proposing useful ones. 
+
+Claim–evidence alignment. Table 10 separates end-to-end efficacy from mechanism evidence and states the scope supported by each experiment.      
+
+> Claim Direct evidence Supported scope
+> End-to-end efficacy Tables A and B across models and tasks Highest observed mean under each reported protocol; an empirical comparison rather than a significance claim. Structured node semantics Flat-to-G0 progression, Nodes only, and activation-boundary intervention Applicability, procedure, and exclusion fields jointly provide an effective interface; serialization is part of that interface. Explicit relations Full graph versus Nodes only, plus edge-rationale intervention Typed edges add value when already-relevant procedures must be coordinated in the evaluated moderate-size graphs. Attribution-guided routing Generic failure-summary intervention, field-level routing audit, and paired Gate outcomes Object-level routing improves repair utility; these results do not constitute standalone route-accuracy evidence. Scoped validation Local-/Big-Gate interventions and epoch commit trajectories The Local Gate provides the stronger regression-control benefit; the Big Gate enforces the update-pool commit rule, with mixed held-out effects. Semantic activation Frozen-graph S–Q, Nearest-Q, field-hiding, and rationale-hiding interventions Full-graph semantic activation is effective at the reported graph sizes; massive-library retrieval remains a separate scaling problem.
+
+Table 10: Claim–evidence map for the principal conclusions. 30 Published as a conference paper at ICLR 2027 H.2 LIMITATIONS 
+
+Statistical interpretation and evaluation distribution have explicit boundaries. Table 3 is a source-protocol comparison under fixed released test IDs, inputs, inference budget, and scorer rather than a compute-matched unified reimplementation of every baseline. The main protocol uses inde-pendent held-out test questions that are not used in update-group construction, but the reported magnitudes remain tied to the selected benchmark splits and hard scorers. Graph optimization is re-peated for only three seeds (42, 43, and 44), so the half-range is a small-sample dispersion summary rather than a confidence interval or full stability characterization. Strict exact match and ANLS = 1 
+
+can also count aliases, formatting differences, and partial matches as failures. 
+
+Large libraries and long-horizon tasks remain to be tested. The evaluated graphs are moder-ate in size, are rendered largely in full, and are used mainly for single-turn tasks. Appendix E.2 reports graph size, prompt tokens, and a reconstructible call accounting, but these results do not di-rectly establish behavior with thousands of skills, tight context budgets, or delayed credit. The Big Gate follows the prespecified pooled hard-accuracy objective rather than adding post-hoc subgroup vetoes; safety-critical deployments can prespecify groupwise non-negative margins or risk weights. H.3 NEXT STEPS 
+
+The first priority is to extend the robustness audit with larger IID and distribution-shift splits, multi-optimization-seed factorial ablations, and alias-aware semantic scoring alongside strict scores. Ac-curacy should also be reported with provider-normalized token use, concurrency, and latency so that full-graph rendering and repeated Gates can be compared as systems. The second is finer attribution granularity. The current candidate–reference comparison already validates node fields and edges through object-level intervention; future systems can extend the same contract to exact text spans, theorem statements, table cells, or image crops, enabling equally targeted repair and rollback at finer addresses. Finally, failures should be routed to the component that can actually repair them. Repeated activation or role-selection errors belong in the skill graph; missing facts belong in retrieval; ambiguous digits belong in perception tools; persistent execution failures may require model updates; scorer-only mismatches require no model change. Evaluating this repair routing, including how often the system correctly chooses NO_PATCH , is more important than simply growing the graph. H.4 BROADER RESEARCH DIRECTIONS FOR SKILL -B ASED AGENTS 
+
+The broader field is moving from demonstrating that skills can help toward understanding how a skill system should operate over time. Four research problems stand out. 
+
+Scalable selection with semantic guarantees. Large libraries cannot be rendered in full, but similarity-only Top-K retrieval can omit prerequisites or retrieve a procedure outside its valid boundary. Graph-of-Skills, SkillDAG, HyperSkill, and CaSKG point toward dependency-aware and higher-order retrieval (Liu et al., 2026; Bai et al., 2026; Xu et al., 2026; Li et al., 2026c). The next step is to optimize selection, dependency completion, and context cost jointly, while measuring whether the retrieved subgraph contains every required step and excludes conflicting skills. 
+
+Interventional credit assignment. Most skill updates are still justified by correlations between a trajectory and its outcome. Counterfactual removal, substitution, and reordering of skills or edges can test whether an object actually changed the result and can separate its individual effect from interactions with other skills (Li et al., 2026c; Jiang et al., 2026). Extending such interventions to long-horizon tasks would make delayed credit, failure attribution, and rollback robust to longer and more interacting execution paths. 
+
+Lifecycle management rather than unchecked accumulation. As experience streams grow, the central problem is no longer only how to add a skill, but when to merge, split, specialize, retire, or restore one. SkillOS studies learned curation, SkillsBench shows that self-generated skills are not reliably beneficial, and boundary-aware memory emphasizes explicit applicability and avoidance 31 Published as a conference paper at ICLR 2027 conditions (Ouyang et al., 2026; Li et al., 2026a; Lin et al., 2026). A mature skill repository therefore needs versioned evidence, conflict tests, usage-aware pruning, and trust policies for imported skills rather than monotonic growth (Xu & Yan, 2026). 
+
+Joint learning of models and external skills. External skills are easy to inspect and update, whereas model parameters offer compact execution and broad generalization. Work on trajectory distillation, reasoning memory, evolving memory skills, and co-evolution suggests treating them as two coupled learning channels rather than alternatives (Ni et al., 2026; Ouyang et al., 2025; Zhang et al., 2026b;a). A useful research target is a closed loop that keeps uncertain or fast-changing pro-cedures external, internalizes repeatedly validated behavior, and then uses the improved model to generate and test the next generation of skills without amplifying its own errors. 32

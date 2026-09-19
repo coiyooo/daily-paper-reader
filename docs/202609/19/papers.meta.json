@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-19",
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T21:55:14",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/19/2609.19974v1-maskharness-wam-instance-grounded-harnessing-for-long-horizon-robot-manipulation",
+      "section": "quick",
+      "title_en": "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation",
+      "authors": "Zitai Huang, Taiyi Su, Jian Zhu, Jianjun Zhang, Chong Ma, Tianbin Liu, Weiyi Lu, Yi Xu, Hanli Wang",
+      "date": "2026-09-17",
+      "pdf": "https://arxiv.org/pdf/2609.19974v1",
+      "score": "6.0",
+      "evidence": "用目标掩码连接高层规划与低层操作策略的长时程框架",
+      "tldr": "长时程机器人操作需持续跟踪目标并判断任务进度，尤其多物体外观相同且须按序操作时，有限时程策略难以确定当前应操作哪个实例及何时切换。MaskHarness-WAM 通过目标掩码连接高层任务规划与底层操作策略，并在子任务边界重观测环境、生成并验证新目标掩码，以视觉反馈调度子任务与推进执行。真实机器人实验表明，该方法在顺序多物体操作中显著优于有限时程策略，可可靠扩展局部技能至长时程执行。",
+      "tags": "query:param-skills",
+      "abstract_en": "Long-horizon robot manipulation requires not only stable local visuomotor control, but also continuous target tracking and reliable task progress assessment throughout execution. This challenge becomes particularly critical when multiple objects share identical appearances and must be manipulated in a prescribed order. In such scenarios, relying solely on a limited-horizon manipulation policy is often insufficient to determine which instance should be operated on and when the task should transition to the next stage. To address this challenge, we propose MaskHarness-WAM, an instance-grounded harness for long-horizon manipulation. The proposed system connects high-level task planning with low-level manipulation policies through target masks, while leveraging visual feedback for subtask scheduling and continuous execution. Since each subtask corresponds to a different target instance, the low-level policy requires a newly established initial target mask under the updated scene at each subtask transition. The harness continuously re-observes the environment, generates, and verifies the target mask at subtask boundaries, thereby updating the instance-level spatial condition provided to the low-level policy. Furthermore, the system advances the manipulation process by switching target instances according to the verified completion status of each subtask. Experiments on a real robot platform demonstrate that MaskHarness-WAM substantially outperforms limited-horizon policies on sequential multi-object manipulation, showing its effectiveness in extending local manipulation skills to reliable long-horizon execution.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/19/2609.20455v1-skillaa-attribution-guided-skill-graph-updating-with-targeted-validation-and-rollback",
+      "section": "quick",
+      "title_en": "SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback",
+      "authors": "Ziqiao Shang, Ling-Yue Ge, Lan-Zhe Guo",
+      "date": "2026-09-17",
+      "pdf": "https://arxiv.org/pdf/2609.20455v1",
+      "score": "6.0",
+      "evidence": "统一技能图表示技能适用性、执行与组合及修复验证",
+      "tldr": "外部技能为冻结语言模型提供领域流程，但现有方法直接从失败轨迹编辑技能，缺少从失败到可编辑位置的结构化路由，技能图对语义边界与拓扑依赖的利用也不足。SkillAA 将技能适用性、执行与组合统一为技能图，对比成败执行，把候选修复定位到具体图对象并只更新局部结构，再用 Local 与 Big Gates 筛选改动。在 gpt-5.6-sol 上，SearchQA、LiveMath、DocVQA 分别达 81.5%、66.7%、91.2%，均为各主要设置最高均值。",
+      "tags": "query:param-skills",
+      "abstract_en": "External skills provide domain procedures without parameter updates, but existing methods often edit skills directly from failed rollouts without structured routing from an observed failure to an editable location; existing skill graphs also underuse semantic boundaries, object addresses, and topological dependencies for skill retrieval, targeted updating, and scoped validation. We introduce SkillAA (Skill Abductive Attribution), a structured skill-optimization framework for frozen language models. It represents skill applicability, execution, and composition in a unified graph, allowing the same structure to support skill selection, attribution-guided repair, and update validation. SkillAA contrasts successful and failed executions to route candidate repairs to specific graph objects, updates only the selected local structure, and uses Local and Big Gates to screen candidate changes before commitment. With gpt-5.6-sol, SkillAA reaches 81.5%, 66.7%, and 91.2% on SearchQA, LiveMath, and DocVQA, respectively, and attains the highest observed mean in every main setting. These results support the utility of attribution-guided graph editing and graph-scoped validation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
