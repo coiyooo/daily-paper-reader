@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-20 <!--dpr-date:20260920-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/20/2609.14633v2-revolve-an-automated-closed-loop-framework-for-evolving-robot-manipulation-with-minimal-human-intervention" data-sidebar-item="{&quot;title&quot;: &quot;REVOLVE: An Automated Closed-Loop Framework for Evolving Robot Manipulation with Minimal Human Intervention&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.14633v2-revolve-an-automated-closed-loop-framework-for-evolving-robot-manipulation-with-minimal-human-intervention&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;param-skills&quot;}], &quot;evidence&quot;: &quot;集成失败恢复与持续学习的操作闭环框架&quot;}">REVOLVE: An Automated Closed-Loop Framework for Evolving Robot Manipulation with Minimal Human Intervention</a>
   * 2026-09-19 <!--dpr-date:20260919-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/19/2609.19974v1-maskharness-wam-instance-grounded-harnessing-for-long-horizon-robot-manipulation" data-sidebar-item="{&quot;title&quot;: &quot;MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.19974v1-maskharness-wam-instance-grounded-harnessing-for-long-horizon-robot-manipulation&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;param-skills&quot;}], &quot;evidence&quot;: &quot;用目标掩码连接高层规划与低层操作策略的长时程框架&quot;}">MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation</a>

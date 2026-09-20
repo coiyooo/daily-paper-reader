@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-20",
+  "date": "2026-09-20",
+  "generated_at": "2026-09-20T21:11:00",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/20/2609.14633v2-revolve-an-automated-closed-loop-framework-for-evolving-robot-manipulation-with-minimal-human-intervention",
+      "section": "quick",
+      "title_en": "REVOLVE: An Automated Closed-Loop Framework for Evolving Robot Manipulation with Minimal Human Intervention",
+      "authors": "Hanyu Liu, Qian Li, Yizhu Ding, Jiayi Wen, Keqiang Ren, Yunsheng Ma, Tao Jian, Zhihua Wang, Zhuofan Yu, Xinran Li, Zhigong Song",
+      "date": "2026-09-13",
+      "pdf": "https://arxiv.org/pdf/2609.14633v2",
+      "score": "6.0",
+      "evidence": "集成失败恢复与持续学习的操作闭环框架",
+      "tldr": "数据驱动机器人操作策略虽提升明显，但真机部署仍依赖人工评估失败、纠正与环境重置，且难以从失败经验中持续学习。REVOLVE 将数据采集、策略训练与部署、失败恢复、持续学习整合为统一闭环，用自动重置与纠正（ARC）自动复位并干预失败，用双环进化（DLE）结合失配记忆持续改进策略与智能体判断。在四类真机任务上经五次迭代，策略平均成功率提升18.5%，智能体判断准确率提升8.5%，人工投入分别减少94.4%和95.1%。",
+      "tags": "query:param-skills",
+      "abstract_en": "Recent advances in data-driven robot manipulation policies have substantially improved task execution and generalization. However, real-world deployment still relies heavily on humans for failure assessment, correction, and environment reset, while models often fail to continually learn from failures and corrective experience. We present REVOLVE (Robot Evolving via Orchestrated Loops, Verification, and Experience), an automated closed-loop framework for evolving robot manipulation with minimal human intervention. Built on a unified software platform, REVOLVE integrates data collection, policy training and deployment, failure recovery, and continual learning into a single closed-loop workflow. Its Automated Reset and Correction (ARC) architecture automatically resets the environment and intervenes to correct policy failures. Dual-Loop Evolution (DLE) continually improves the manipulation policy and agent by feeding real-world interaction and failure--correction data back into policy learning and using an external mismatch memory to refine agent judgments. Experiments across four real-world manipulation tasks show that, after five iterations, REVOLVE improves average policy success rate by 18.5% and agent judgment accuracy by 8.5%, while reducing human effort in data collection and deployment testing by 94.4% and 95.1%, respectively. These results demonstrate that REVOLVE transforms real-world deployment into a closed-loop learning process that continually accumulates and uses execution experience, enabling continual evolution of both the policy and supervisory model with substantially less human intervention.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

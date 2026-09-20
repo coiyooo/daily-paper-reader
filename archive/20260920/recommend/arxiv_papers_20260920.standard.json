@@ -1,0 +1,62 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-20T21:10:21.939601+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.14633v2",
+      "source": "arxiv",
+      "title": "REVOLVE: An Automated Closed-Loop Framework for Evolving Robot Manipulation with Minimal Human Intervention",
+      "abstract": "Recent advances in data-driven robot manipulation policies have substantially improved task execution and generalization. However, real-world deployment still relies heavily on humans for failure assessment, correction, and environment reset, while models often fail to continually learn from failures and corrective experience. We present REVOLVE (Robot Evolving via Orchestrated Loops, Verification, and Experience), an automated closed-loop framework for evolving robot manipulation with minimal human intervention. Built on a unified software platform, REVOLVE integrates data collection, policy training and deployment, failure recovery, and continual learning into a single closed-loop workflow. Its Automated Reset and Correction (ARC) architecture automatically resets the environment and intervenes to correct policy failures. Dual-Loop Evolution (DLE) continually improves the manipulation policy and agent by feeding real-world interaction and failure--correction data back into policy learning and using an external mismatch memory to refine agent judgments. Experiments across four real-world manipulation tasks show that, after five iterations, REVOLVE improves average policy success rate by 18.5% and agent judgment accuracy by 8.5%, while reducing human effort in data collection and deployment testing by 94.4% and 95.1%, respectively. These results demonstrate that REVOLVE transforms real-world deployment into a closed-loop learning process that continually accumulates and uses execution experience, enabling continual evolution of both the policy and supervisory model with substantially less human intervention.",
+      "authors": [
+        "Hanyu Liu",
+        "Qian Li",
+        "Yizhu Ding",
+        "Jiayi Wen",
+        "Keqiang Ren",
+        "Yunsheng Ma",
+        "Tao Jian",
+        "Zhihua Wang",
+        "Zhuofan Yu",
+        "Xinran Li",
+        "Zhigong Song"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-13T16:08:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.14633v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "closed-loop framework integrating failure recovery and continual learning for manipulation",
+      "llm_evidence_cn": "集成失败恢复与持续学习的操作闭环框架",
+      "llm_evidence": "集成失败恢复与持续学习的操作闭环框架",
+      "canonical_evidence": "集成失败恢复与持续学习的操作闭环框架",
+      "llm_tldr_en": "REVOLVE is an automated closed-loop framework that unifies data collection, policy training and deployment, failure recovery, and continual learning to evolve robot manipulation with minimal human intervention.",
+      "llm_tldr_cn": "真实机器人操作部署仍高度依赖人工进行失败评估、纠正与环境重置，且模型难以从失败与纠正经验中持续学习。REVOLVE 提出自动化闭环框架，将数据采集、策略训练与部署、失败恢复与持续学习整合进单一工作流，并引入自动重置与验证环节。系统以极少人工干预不断进化操作策略。该框架为机器人操作的自监督持续改进与失败恢复提供了端到端方案。",
+      "llm_tldr": "真实机器人操作部署仍高度依赖人工进行失败评估、纠正与环境重置，且模型难以从失败与纠正经验中持续学习。REVOLVE 提出自动化闭环框架，将数据采集、策略训练与部署、失败恢复与持续学习整合进单一工作流，并引入自动重置与验证环节。系统以极少人工干预不断进化操作策略。该框架为机器人操作的自监督持续改进与失败恢复提供了端到端方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
