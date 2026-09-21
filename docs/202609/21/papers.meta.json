@@ -1,0 +1,69 @@
+{
+  "label": "2026-09-21",
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T22:26:07",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202609/21/2609.18119v1-fetch-my-beer-synthetic-to-real-hierarchical-policy-for-smooth-pick-and-place",
+      "section": "quick",
+      "title_en": "Fetch My Beer: Synthetic-to-real Hierarchical Policy for Smooth Pick-and-place",
+      "authors": "Yingyue Li, Chenyangguang Zhang, Ruida Zhang, Bowen Fu, Guangyao Zhai, Xiangyang Ji",
+      "date": "2026-09-16",
+      "pdf": "https://arxiv.org/pdf/2609.18119v1",
+      "score": "6.0",
+      "evidence": "面向长时程动态敏感抓放的合成到真实分层策略",
+      "tldr": "针对液体容器稳定搬运中易晃动、易洒出的难题，现有流体仿真昂贵、遥操作引入抖动、策略只重完成任务而忽视动态稳定性。该工作提出合成到真实的分层扩散策略框架，结合可扩展数据生成与物理验证，先用视觉语言模型筛选稳定位姿，再以流体仿真验证轨迹。高层将语言与视觉观测转为 SE(3) 控制目标，低层 latent diffusion 在紧凑隐空间规划并解码稠密动作块，实现高频平滑控制。实验表明其在搬运平滑度与动态稳定性上优于现有先进操作策略。",
+      "tags": "query:param-skills",
+      "abstract_en": "Many real-world robotic applications require dynamically sensitive manipulation, where success depends not only on reaching a target state but on maintaining stable object dynamics throughout execution. We study the stable transport of liquid-filled containers, where a robot must move objects to target locations while suppressing sloshing and preventing spillage. Unlike conventional pick-and-place, this task imposes stringent requirements on motion smoothness and trajectory-level stability, exposing clear limitations in existing systems. Specifically, fluid simulation remains too costly for online reinforcement learning; human teleoperation introduces unintended accelerations that induce sloshing during imitation learning; and current policy pipelines optimize for task completion rather than dynamic stability. We propose a synthetic-to-real framework coupling physically validated data generation with a hierarchical, diffusion-based controller. The scalable data pipeline synthesizes grasps, filters unstable poses via a vision-language model, and validates transport trajectories through fluid simulation. The policy is organized with a high-level module that translates language and visual observations into SE(3) control targets, and a latent diffusion controller that first plans efficiently in a compact latent space and then decodes dense action chunks, enabling the high control frequency needed for smooth and stable motion. Extensive experiments show our system outperforms state-of-the-art manipulation policies in transport smoothness and dynamic stability. Our project page: https://fetch-my-beer.github.io/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/21/2609.21228v1-focal-vla-subtask-guided-geometry-distillation-and-implicit-world-modeling-for-vision-language-action-models",
+      "section": "quick",
+      "title_en": "FOCAL-VLA: Subtask-Guided Geometry Distillation and Implicit World Modeling for Vision-Language-Action Models",
+      "authors": "Zhiyuan Gao, Di Wen, Yanxiang Zhan, Mohammad Khoshnazar, Jeroen Schäfer, Kunyu Peng, Michael Beetz",
+      "date": "2026-09-18",
+      "pdf": "https://arxiv.org/pdf/2609.21228v1",
+      "score": "6.0",
+      "evidence": "面向长时程操作的子任务引导几何蒸馏",
+      "tldr": "现有VLA模型直接将当前2D观测映射为动作，空间与时间理解不足，难以完成精细和长时程操作；全场景几何监督与未来预测又引入冗余信息。FOCAL-VLA通过子任务引导的几何蒸馏，将VGGT几何知识对齐到子任务相关图像区域，并用Track4World特征进行隐式世界建模，捕获当前交互的未来3D演化。两者共同指导动作生成，且推理时无需运行VGGT或Track4World。在仿真与真实操作任务上均优于基线，为聚焦式空间-动态表征学习提供了新思路。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-language-action (VLA) models built on pretrained vision-language models have demonstrated strong performance across diverse robotic manipulation tasks. However, VLA models that directly map current 2D observations to actions often lack sufficient spatial and temporal understanding, limiting their performance in precise and long-horizon manipulation. Recent methods enhance VLA models through geometric supervision and future-state prediction across the entire scene. However, these methods can suffer from redundant scene information, distracting the model from learning the geometry and dynamics relevant to the current interaction. To address this issue, we propose FOCAL-VLA, a framework that combines subtask-guided geometry distillation with implicit world modeling to learn representations of current spatial structure and future interaction dynamics. To focus geometric learning on the current subtask, we transfer geometric knowledge from VGGT to the VLA model by aligning geometry latents with features from subtask-relevant image regions. To capture the future 3D evolution of the current interaction, we incorporate implicit world modeling using Track4World features from current and future demonstration frames. The two complementary representations jointly guide action generation without running VGGT or Track4World at inference time. Experiments show that FOCAL-VLA outperforms baselines on both simulation benchmarks and real-world manipulation tasks. Project website: https://zhiyuan-gao.github.io/FOCAL-VLA/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/21/2609.21609v1-potential-field-action-representation-for-reinforcement-learning-in-contact-rich-manipulation",
+      "section": "quick",
+      "title_en": "Potential-Field Action Representation for Reinforcement Learning in Contact-Rich Manipulation",
+      "authors": "Xinyu Liu, Gökhan Solak, Arash Ajoudani",
+      "date": "2026-09-18",
+      "pdf": "https://arxiv.org/pdf/2609.21609v1",
+      "score": "6.0",
+      "evidence": "以人工势场作为参数化动作表示解耦任务策略与低层运动",
+      "tldr": "接触丰富操作中，无模型强化学习需同时学习任务策略与底层运动生成，直接笛卡尔指令接口会加重学习负担。PA-RL 以人工势场作为动作表示，策略仅调整势场参数，经笛卡尔阻抗控制器生成状态相关引导方向。在轴孔装配仿真中，PA-RL 是唯一在限定训练时间内达到 100% 成功率的方法，最优基线为 92.6%；相比最优基线，关节力矩波动降低 55.4%，笛卡尔加速度波动降低 70.8%。仿真训练策略无需微调即完成 9/9 真机插入，验证了势场动作接口的部署可行性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Model-free reinforcement learning can acquire contact-rich robotic manipulation skills through trial-and-error interaction, but it often requires the policy to learn both task strategy and low-level motion generation. In this setting, the action representation is critical because it determines how policy outputs are converted into robot motion, shaping both exploration and physical execution. Direct Cartesian command interfaces require the policy to generate motion at every decision step, coupling task-level adaptation with continuous low-level control and increasing the learning burden. We propose PA-RL, a reinforcement-learning framework that uses artificial potential fields as the action representation. Instead of commanding motion directly, the policy adapts the parameters of an energy-like potential field, which generates a state-dependent guidance direction executed through a Cartesian impedance controller. We evaluate PA-RL on peg-in-hole insertion, a representative contact-rich task with nonlinear dynamics and discontinuous contact transitions. In simulation, PA-RL is compared with Cartesian velocity, Cartesian pose, and variable-impedance action spaces using the same RL algorithm. PA-RL is the only method to reach a 100% evaluation success rate within the allotted training time, while the best baseline reaches 92.6%. It also reduces joint-torque variation by 55.4% and Cartesian acceleration variation by 70.8% relative to the best baseline, without explicit motion-quality penalties in the reward. The simulation-trained policy further completes 9/9 real-robot insertions without fine-tuning, demonstrating the deployment feasibility of the learned potential-field interface.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/21/2609.21788v1-from-pretraining-to-proficiency-real-world-subtask-rl-for-long-horizon-manipulation-with-minimal-human-intervention",
+      "section": "quick",
+      "title_en": "From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention",
+      "authors": "Sichang Su, Benjamin Yang, Zhiyun Deng, Boyuan Liang, Yip Fun Yeung, Zelin Wang, Lingfeng Sun",
+      "date": "2026-09-18",
+      "pdf": "https://arxiv.org/pdf/2609.21788v1",
+      "score": "6.0",
+      "evidence": "面向长时程操作的子任务级强化学习以突破瓶颈子任务",
+      "tldr": "预训练机器人基础策略常能完成长程任务大部分步骤，却在少数关键子任务反复失败，补采全任务示范成本高。PARTS把真实世界RL聚焦到瓶颈子任务：冻结预训练策略输出标称动作，用智能体生成的选择器与成功验证器触发残差修正并给出局部结果奖励。它结合在线RL与成功重加权再训练，反复部署残差策略收集经验，人仅需识别瓶颈并物理重置。在双臂YAM和单臂Franka上，成功率分别从32%升至61%、50%升至95%，平均仅数十分钟真实rollout，同预算下较现有方法提升超25%。",
+      "tags": "query:param-skills",
+      "abstract_en": "A pretrained robot foundation policy may execute most of a long-horizon task yet repeatedly fail at a few critical subtasks. Collecting additional full-task demonstrations for supervised fine-tuning (SFT) requires operators to repeat behaviors the policy already performs well. Reinforcement learning (RL) fine-tuning offers a promising path to bridge this gap, but existing approaches struggle to solve long-horizon tasks using only sparse rewards. We present PARTS (Policy Adaptation with RL on Targeted Subtasks), a real-world subtask RL framework that concentrates practice at these bottlenecks while allowing training rollouts to proceed with minimal human intervention. The frozen pretrained policy supplies nominal actions throughout execution, while agent-generated selectors and success verifiers activate residual corrections and provide local outcome rewards. These rewards support learning from successful subtasks even when complete-task successes are scarce. Training combines online RL with success-reweighted retraining, and each retrained residual policy is redeployed to collect further experience. Humans identify bottlenecks during setup and perform physical resets when needed. On bimanual YAM and single-arm Franka tasks, PARTS improves complete-task success from 32% to 61% and from 50% to 95%, respectively, using tens of minutes of real-world RL rollouts per task on average. Compared with existing real-world RL fine-tuning methods, PARTS raises full-task success by more than 25% under the same robot-rollout budget while requiring less human involvement.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

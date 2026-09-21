@@ -1,0 +1,180 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-21T22:24:56.080243+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.18119v1",
+      "source": "arxiv",
+      "title": "Fetch My Beer: Synthetic-to-real Hierarchical Policy for Smooth Pick-and-place",
+      "abstract": "Many real-world robotic applications require dynamically sensitive manipulation, where success depends not only on reaching a target state but on maintaining stable object dynamics throughout execution. We study the stable transport of liquid-filled containers, where a robot must move objects to target locations while suppressing sloshing and preventing spillage. Unlike conventional pick-and-place, this task imposes stringent requirements on motion smoothness and trajectory-level stability, exposing clear limitations in existing systems. Specifically, fluid simulation remains too costly for online reinforcement learning; human teleoperation introduces unintended accelerations that induce sloshing during imitation learning; and current policy pipelines optimize for task completion rather than dynamic stability. We propose a synthetic-to-real framework coupling physically validated data generation with a hierarchical, diffusion-based controller. The scalable data pipeline synthesizes grasps, filters unstable poses via a vision-language model, and validates transport trajectories through fluid simulation. The policy is organized with a high-level module that translates language and visual observations into SE(3) control targets, and a latent diffusion controller that first plans efficiently in a compact latent space and then decodes dense action chunks, enabling the high control frequency needed for smooth and stable motion. Extensive experiments show our system outperforms state-of-the-art manipulation policies in transport smoothness and dynamic stability. Our project page: https://fetch-my-beer.github.io/",
+      "authors": [
+        "Yingyue Li",
+        "Chenyangguang Zhang",
+        "Ruida Zhang",
+        "Bowen Fu",
+        "Guangyao Zhai",
+        "Xiangyang Ji"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T04:55:12+00:00",
+      "link": "https://arxiv.org/pdf/2609.18119v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "synthetic-to-real hierarchical policy for long-horizon dynamically sensitive pick-and-place",
+      "llm_evidence_cn": "面向长时程动态敏感抓放的合成到真实分层策略",
+      "llm_evidence": "面向长时程动态敏感抓放的合成到真实分层策略",
+      "canonical_evidence": "面向长时程动态敏感抓放的合成到真实分层策略",
+      "llm_tldr_en": "Stable transport of liquid-filled containers demands smooth motion and trajectory-level stability; this work proposes a synthetic-to-real hierarchical policy that suppresses sloshing and prevents spillage, outperforming existing pick-and-place systems.",
+      "llm_tldr_cn": "许多真实机器人应用需要动态敏感操作，成功不仅取决于到达目标，还取决于全程维持稳定的物体动力学，例如搬运液体容器时必须抑制晃动防止洒出。现有系统在运动平滑与轨迹级稳定性上存在明显不足：流体仿真太贵无法在线强化学习，人类遥操作又会引入导致晃动的加速度。本文提出合成到真实的层级策略，兼顾平滑性与稳定性，为这类动态敏感操作提供了分层解决方案。",
+      "llm_tldr": "许多真实机器人应用需要动态敏感操作，成功不仅取决于到达目标，还取决于全程维持稳定的物体动力学，例如搬运液体容器时必须抑制晃动防止洒出。现有系统在运动平滑与轨迹级稳定性上存在明显不足：流体仿真太贵无法在线强化学习，人类遥操作又会引入导致晃动的加速度。本文提出合成到真实的层级策略，兼顾平滑性与稳定性，为这类动态敏感操作提供了分层解决方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.21228v1",
+      "source": "arxiv",
+      "title": "FOCAL-VLA: Subtask-Guided Geometry Distillation and Implicit World Modeling for Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) models built on pretrained vision-language models have demonstrated strong performance across diverse robotic manipulation tasks. However, VLA models that directly map current 2D observations to actions often lack sufficient spatial and temporal understanding, limiting their performance in precise and long-horizon manipulation. Recent methods enhance VLA models through geometric supervision and future-state prediction across the entire scene. However, these methods can suffer from redundant scene information, distracting the model from learning the geometry and dynamics relevant to the current interaction. To address this issue, we propose FOCAL-VLA, a framework that combines subtask-guided geometry distillation with implicit world modeling to learn representations of current spatial structure and future interaction dynamics. To focus geometric learning on the current subtask, we transfer geometric knowledge from VGGT to the VLA model by aligning geometry latents with features from subtask-relevant image regions. To capture the future 3D evolution of the current interaction, we incorporate implicit world modeling using Track4World features from current and future demonstration frames. The two complementary representations jointly guide action generation without running VGGT or Track4World at inference time. Experiments show that FOCAL-VLA outperforms baselines on both simulation benchmarks and real-world manipulation tasks. Project website: https://zhiyuan-gao.github.io/FOCAL-VLA/.",
+      "authors": [
+        "Zhiyuan Gao",
+        "Di Wen",
+        "Yanxiang Zhan",
+        "Mohammad Khoshnazar",
+        "Jeroen Schäfer",
+        "Kunyu Peng",
+        "Michael Beetz"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-09-18T02:18:34+00:00",
+      "link": "https://arxiv.org/pdf/2609.21228v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "subtask-guided geometry distillation for long-horizon manipulation",
+      "llm_evidence_cn": "面向长时程操作的子任务引导几何蒸馏",
+      "llm_evidence": "面向长时程操作的子任务引导几何蒸馏",
+      "canonical_evidence": "面向长时程操作的子任务引导几何蒸馏",
+      "llm_tldr_en": "VLA models mapping 2D observations to actions lack spatial-temporal understanding for long-horizon manipulation. FOCAL-VLA combines subtask-guided geometry distillation with implicit world modeling to focus on interaction-relevant geometry and dynamics.",
+      "llm_tldr_cn": "直接由当前2D观测映射到动作的视觉-语言-动作模型缺乏足够时空理解，在精细与长时程操作中表现受限，而现有几何监督方法又易受冗余场景信息干扰。FOCAL-VLA提出子任务引导的几何蒸馏与隐式世界建模框架，聚焦与当前交互相关的几何与动力学。该设计减少了无关场景信息对模型的干扰，提升长时程操作表现。其贡献在于以子任务引导增强VLA模型的时空理解能力。",
+      "llm_tldr": "直接由当前2D观测映射到动作的视觉-语言-动作模型缺乏足够时空理解，在精细与长时程操作中表现受限，而现有几何监督方法又易受冗余场景信息干扰。FOCAL-VLA提出子任务引导的几何蒸馏与隐式世界建模框架，聚焦与当前交互相关的几何与动力学。该设计减少了无关场景信息对模型的干扰，提升长时程操作表现。其贡献在于以子任务引导增强VLA模型的时空理解能力。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.21609v1",
+      "source": "arxiv",
+      "title": "Potential-Field Action Representation for Reinforcement Learning in Contact-Rich Manipulation",
+      "abstract": "Model-free reinforcement learning can acquire contact-rich robotic manipulation skills through trial-and-error interaction, but it often requires the policy to learn both task strategy and low-level motion generation. In this setting, the action representation is critical because it determines how policy outputs are converted into robot motion, shaping both exploration and physical execution. Direct Cartesian command interfaces require the policy to generate motion at every decision step, coupling task-level adaptation with continuous low-level control and increasing the learning burden. We propose PA-RL, a reinforcement-learning framework that uses artificial potential fields as the action representation. Instead of commanding motion directly, the policy adapts the parameters of an energy-like potential field, which generates a state-dependent guidance direction executed through a Cartesian impedance controller. We evaluate PA-RL on peg-in-hole insertion, a representative contact-rich task with nonlinear dynamics and discontinuous contact transitions. In simulation, PA-RL is compared with Cartesian velocity, Cartesian pose, and variable-impedance action spaces using the same RL algorithm. PA-RL is the only method to reach a 100% evaluation success rate within the allotted training time, while the best baseline reaches 92.6%. It also reduces joint-torque variation by 55.4% and Cartesian acceleration variation by 70.8% relative to the best baseline, without explicit motion-quality penalties in the reward. The simulation-trained policy further completes 9/9 real-robot insertions without fine-tuning, demonstrating the deployment feasibility of the learned potential-field interface.",
+      "authors": [
+        "Xinyu Liu",
+        "Gökhan Solak",
+        "Arash Ajoudani"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-18T10:46:55+00:00",
+      "link": "https://arxiv.org/pdf/2609.21609v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "artificial potential fields as parameterized action representation decoupling task strategy from low-level motion",
+      "llm_evidence_cn": "以人工势场作为参数化动作表示解耦任务策略与低层运动",
+      "llm_evidence": "以人工势场作为参数化动作表示解耦任务策略与低层运动",
+      "canonical_evidence": "以人工势场作为参数化动作表示解耦任务策略与低层运动",
+      "llm_tldr_en": "PA-RL replaces direct Cartesian command interfaces with artificial potential fields as the action representation, decoupling task-level adaptation from low-level motion generation and easing exploration in contact-rich manipulation RL.",
+      "llm_tldr_cn": "无模型强化学习可习得接触丰富的操作技能，但直接笛卡尔命令接口要求策略在每个决策步生成运动，将任务策略与低层运动生成耦合，加重学习负担。本文提出PA-RL，用人工势场作为动作表示：策略不再逐步输出运动，而是给出势场参数，由势场驱动连续低层运动。这种参数化动作表示解耦了任务级适应与低层控制，改善了探索与物理执行，为接触丰富操作提供了更高效的强化学习框架。",
+      "llm_tldr": "无模型强化学习可习得接触丰富的操作技能，但直接笛卡尔命令接口要求策略在每个决策步生成运动，将任务策略与低层运动生成耦合，加重学习负担。本文提出PA-RL，用人工势场作为动作表示：策略不再逐步输出运动，而是给出势场参数，由势场驱动连续低层运动。这种参数化动作表示解耦了任务级适应与低层控制，改善了探索与物理执行，为接触丰富操作提供了更高效的强化学习框架。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.21788v1",
+      "source": "arxiv",
+      "title": "From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention",
+      "abstract": "A pretrained robot foundation policy may execute most of a long-horizon task yet repeatedly fail at a few critical subtasks. Collecting additional full-task demonstrations for supervised fine-tuning (SFT) requires operators to repeat behaviors the policy already performs well. Reinforcement learning (RL) fine-tuning offers a promising path to bridge this gap, but existing approaches struggle to solve long-horizon tasks using only sparse rewards. We present PARTS (Policy Adaptation with RL on Targeted Subtasks), a real-world subtask RL framework that concentrates practice at these bottlenecks while allowing training rollouts to proceed with minimal human intervention. The frozen pretrained policy supplies nominal actions throughout execution, while agent-generated selectors and success verifiers activate residual corrections and provide local outcome rewards. These rewards support learning from successful subtasks even when complete-task successes are scarce. Training combines online RL with success-reweighted retraining, and each retrained residual policy is redeployed to collect further experience. Humans identify bottlenecks during setup and perform physical resets when needed. On bimanual YAM and single-arm Franka tasks, PARTS improves complete-task success from 32% to 61% and from 50% to 95%, respectively, using tens of minutes of real-world RL rollouts per task on average. Compared with existing real-world RL fine-tuning methods, PARTS raises full-task success by more than 25% under the same robot-rollout budget while requiring less human involvement.",
+      "authors": [
+        "Sichang Su",
+        "Benjamin Yang",
+        "Zhiyun Deng",
+        "Boyuan Liang",
+        "Yip Fun Yeung",
+        "Zelin Wang",
+        "Lingfeng Sun"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-09-18T14:03:49+00:00",
+      "link": "https://arxiv.org/pdf/2609.21788v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "subtask-level RL to fix bottleneck subtasks of a frozen pretrained policy on long-horizon manipulation",
+      "llm_evidence_cn": "面向长时程操作的子任务级强化学习以突破瓶颈子任务",
+      "llm_evidence": "面向长时程操作的子任务级强化学习以突破瓶颈子任务",
+      "canonical_evidence": "面向长时程操作的子任务级强化学习以突破瓶颈子任务",
+      "llm_tldr_en": "PARTS addresses long-horizon manipulation by using real-world subtask-level reinforcement learning to fix bottleneck subtasks of a frozen pretrained policy, minimizing human intervention and avoiding full-task demonstration recollecting.",
+      "llm_tldr_cn": "预训练机器人基础策略往往能完成长时程任务的大部分步骤，却在少数关键子任务上反复失败，而为监督微调重新采集全任务示教代价高昂。本文提出PARTS，一种面向真实机器人的子任务级强化学习框架，将训练集中在这些瓶颈子任务上，冻结预训练策略并允许训练 rollout 在最少人工干预下进行。该框架利用稀疏奖励在子任务层面提升策略能力，从而以更低人力成本弥补长时程操作的薄弱环节，为真实机器人长时程操作提供可扩展的改进范式。",
+      "llm_tldr": "预训练机器人基础策略往往能完成长时程任务的大部分步骤，却在少数关键子任务上反复失败，而为监督微调重新采集全任务示教代价高昂。本文提出PARTS，一种面向真实机器人的子任务级强化学习框架，将训练集中在这些瓶颈子任务上，冻结预训练策略并允许训练 rollout 在最少人工干预下进行。该框架利用稀疏奖励在子任务层面提升策略能力，从而以更低人力成本弥补长时程操作的薄弱环节，为真实机器人长时程操作提供可扩展的改进范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
