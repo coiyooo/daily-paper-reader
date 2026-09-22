@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-22",
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T22:18:27",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/22/2609.22840v1-forcerft-refining-vla-actions-through-force-guided-residual-reinforcement-learning",
+      "section": "quick",
+      "title_en": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+      "authors": "Yichen Wang, Chaoyang Zhang, Xuqi Su, Jun Ma, Haiyue Zhu, Xiaocong Li",
+      "date": "2026-09-19",
+      "pdf": "https://arxiv.org/pdf/2609.22840v1",
+      "score": "6.0",
+      "evidence": "生成动作块并在接触丰富任务中细化的力条件VLA",
+      "tldr": "仅靠演示训练的力条件 VLA 策略虽能响应接触，但恢复行为受演示覆盖限制且无法从部署结果中学习。ForceRFT 提出力引导残差强化学习：冻结 SmolVLA 先验生成动作块，轻量残差 actor 利用执行中腕部力反馈精修末端位姿，并结合人类纠正与自主回报训练。在插头插入、圆环套柱和白板擦拭真机任务上，其自主成功率高于演示训练与残差模仿基线。该工作表明执行时力反馈与价值引导残差优化可提升接触丰富任务的鲁棒性。",
+      "tags": "query:param-skills",
+      "abstract_en": "Force-conditioned vision-language-action (VLA) policies can respond to contact, but when trained solely on demonstrations, their recovery behavior may be limited by demonstration coverage, and they do not learn from deployment outcomes. Human corrective imitation provides additional recovery examples, but its objective matches local action targets without explicitly optimizing task return. We present ForceRFT, a force-guided residual reinforcement learning framework that learns contact-dependent corrections from human supervision and autonomous task outcomes. A frozen, demonstration-trained SmolVLA-based prior generates force-conditioned action chunks, while a lightweight residual actor refines individual end-effector pose commands using wrist feedback acquired during chunk execution. The decision-time wrist wrench, its temporal change, and the selected base motion condition both residual correction and value estimation. Human corrections supervise the residual actor, while verified autonomous transitions train the twin critics and support value-guided updates to the same actor. Bootstrapping is restricted to autonomous segments, preventing TD credit from crossing human-intervention boundaries. Real-robot experiments on plug insertion, ring-on-peg assembly, and whiteboard wiping show higher autonomous success rates than the evaluated demonstration-trained and residual-imitation baselines. Comparisons with residual imitation support value-guided residual optimization, while plug-insertion ablations indicate the benefit of direct execution-time wrist feedback.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/22/2609.23580v1-taskanchor-grounding-task-state-in-reactive-vlas-for-long-horizon-manipulation",
+      "section": "quick",
+      "title_en": "TaskAnchor: Grounding Task State in Reactive VLAs for Long-Horizon Manipulation",
+      "authors": "Hengyan Liu, Wenlve Zhou, Bo Yue, Yongyi Su, Ruixiang Wang, Zhanqi Zhang, Dekun Lu, Wei Gao, Xiaofen Xing, Kui Jia",
+      "date": "2026-09-20",
+      "pdf": "https://arxiv.org/pdf/2609.23580v1",
+      "score": "6.0",
+      "evidence": "里程碑监督的任务状态坐标表示执行语义阶段",
+      "tldr": "反应式VLA在长时程操作中面临任务状态混叠：视觉相似的观察可能因任务阶段或交互历史不同而对应不同动作。TaskAnchor是轻量适配器，通过历史条件视觉细化与里程碑监督的任务状态坐标（标量语义阶段），注入预训练VLA的视觉与语言接口，无需显式规划器或改动动作生成。在RMBench上成功率为π0.5和X-VLA基线的4.9-5.5倍，RoboMemArena与真机一致提升，每动作块仅增2.08ms延迟。为反应式VLA提供有效任务状态锚定。",
+      "tags": "query:param-skills",
+      "abstract_en": "Reactive vision--language--action (VLA) models struggle with long-horizon manipulation when visually similar observations can correspond to different actions depending on the task stage or interaction history. We refer to this ambiguity as task-state aliasing and introduce TaskAnchor, a lightweight adapter that grounds pretrained VLAs in execution history. TaskAnchor combines history-conditioned visual refinement with a milestone-supervised task-state coordinate, a scalar representing the semantic stage of execution. These signals are injected through the native visual and language interfaces, respectively, without introducing an explicit planner or modifying the action-generation mechanism. On RMBench, TaskAnchor achieves approximately 4.9--5.5$\\times$ the average success rates of the published $π_{0.5}$ and X-VLA baselines, with consistent gains on RoboMemArena and real robots. The added latency is only 2.08\\,ms per action chunk for $π_{0.5}$.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

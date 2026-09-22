@@ -1,0 +1,41 @@
+{
+  "date": "20260922",
+  "date_label": "",
+  "generated_at": "2026-09-22 22:18:26 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.22840v1",
+      "route": "202609/22/2609.22840v1-forcerft-refining-vla-actions-through-force-guided-residual-reinforcement-learning",
+      "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "生成动作块并在接触丰富任务中细化的力条件VLA",
+      "first_seen_at": "2026-09-22 22:18:26 UTC",
+      "updated_at": "2026-09-22 22:18:26 UTC"
+    },
+    {
+      "paper_id": "2609.23580v1",
+      "route": "202609/22/2609.23580v1-taskanchor-grounding-task-state-in-reactive-vlas-for-long-horizon-manipulation",
+      "title": "TaskAnchor: Grounding Task State in Reactive VLAs for Long-Horizon Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "里程碑监督的任务状态坐标表示执行语义阶段",
+      "first_seen_at": "2026-09-22 22:18:26 UTC",
+      "updated_at": "2026-09-22 22:18:26 UTC"
+    }
+  ]
+}

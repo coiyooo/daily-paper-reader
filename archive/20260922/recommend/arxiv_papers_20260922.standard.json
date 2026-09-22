@@ -1,0 +1,101 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-22T22:17:16.876555+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.22840v1",
+      "source": "arxiv",
+      "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+      "abstract": "Force-conditioned vision-language-action (VLA) policies can respond to contact, but when trained solely on demonstrations, their recovery behavior may be limited by demonstration coverage, and they do not learn from deployment outcomes. Human corrective imitation provides additional recovery examples, but its objective matches local action targets without explicitly optimizing task return. We present ForceRFT, a force-guided residual reinforcement learning framework that learns contact-dependent corrections from human supervision and autonomous task outcomes. A frozen, demonstration-trained SmolVLA-based prior generates force-conditioned action chunks, while a lightweight residual actor refines individual end-effector pose commands using wrist feedback acquired during chunk execution. The decision-time wrist wrench, its temporal change, and the selected base motion condition both residual correction and value estimation. Human corrections supervise the residual actor, while verified autonomous transitions train the twin critics and support value-guided updates to the same actor. Bootstrapping is restricted to autonomous segments, preventing TD credit from crossing human-intervention boundaries. Real-robot experiments on plug insertion, ring-on-peg assembly, and whiteboard wiping show higher autonomous success rates than the evaluated demonstration-trained and residual-imitation baselines. Comparisons with residual imitation support value-guided residual optimization, while plug-insertion ablations indicate the benefit of direct execution-time wrist feedback.",
+      "authors": [
+        "Yichen Wang",
+        "Chaoyang Zhang",
+        "Xuqi Su",
+        "Jun Ma",
+        "Haiyue Zhu",
+        "Xiaocong Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-19T07:16:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.22840v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "force-conditioned VLA prior generating action chunks refined for contact-rich manipulation",
+      "llm_evidence_cn": "生成动作块并在接触丰富任务中细化的力条件VLA",
+      "llm_evidence": "生成动作块并在接触丰富任务中细化的力条件VLA",
+      "canonical_evidence": "生成动作块并在接触丰富任务中细化的力条件VLA",
+      "llm_tldr_en": "Force-conditioned VLA policies trained only on demonstrations have limited recovery. ForceRFT adds a residual RL actor that refines force-conditioned action chunks from human corrections and autonomous outcomes in contact-rich tasks.",
+      "llm_tldr_cn": "力条件视觉语言动作策略虽能响应接触，但仅靠演示训练时恢复行为受限于演示覆盖。本文提出ForceRFT，一个力引导残差强化学习框架，由冻结的演示训练先验生成力条件动作块，再用轻量残差动作器基于人类纠正与自主任务结果细化末端位姿命令。实验表明该方法在接触丰富任务中提升了恢复与适应能力。该工作把动作块式连续控制与残差强化学习结合用于接触操作。",
+      "llm_tldr": "力条件视觉语言动作策略虽能响应接触，但仅靠演示训练时恢复行为受限于演示覆盖。本文提出ForceRFT，一个力引导残差强化学习框架，由冻结的演示训练先验生成力条件动作块，再用轻量残差动作器基于人类纠正与自主任务结果细化末端位姿命令。实验表明该方法在接触丰富任务中提升了恢复与适应能力。该工作把动作块式连续控制与残差强化学习结合用于接触操作。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Imitation learning with action chunking and Transformer for skill conditioned continuous robot control in contact rich tasks",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.23580v1",
+      "source": "arxiv",
+      "title": "TaskAnchor: Grounding Task State in Reactive VLAs for Long-Horizon Manipulation",
+      "abstract": "Reactive vision--language--action (VLA) models struggle with long-horizon manipulation when visually similar observations can correspond to different actions depending on the task stage or interaction history. We refer to this ambiguity as task-state aliasing and introduce TaskAnchor, a lightweight adapter that grounds pretrained VLAs in execution history. TaskAnchor combines history-conditioned visual refinement with a milestone-supervised task-state coordinate, a scalar representing the semantic stage of execution. These signals are injected through the native visual and language interfaces, respectively, without introducing an explicit planner or modifying the action-generation mechanism. On RMBench, TaskAnchor achieves approximately 4.9--5.5$\\times$ the average success rates of the published $π_{0.5}$ and X-VLA baselines, with consistent gains on RoboMemArena and real robots. The added latency is only 2.08\\,ms per action chunk for $π_{0.5}$.",
+      "authors": [
+        "Hengyan Liu",
+        "Wenlve Zhou",
+        "Bo Yue",
+        "Yongyi Su",
+        "Ruixiang Wang",
+        "Zhanqi Zhang",
+        "Dekun Lu",
+        "Wei Gao",
+        "Xiaofen Xing",
+        "Kui Jia"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-20T11:57:10+00:00",
+      "link": "https://arxiv.org/pdf/2609.23580v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "milestone-supervised task-state coordinate representing the semantic stage of execution",
+      "llm_evidence_cn": "里程碑监督的任务状态坐标表示执行语义阶段",
+      "llm_evidence": "里程碑监督的任务状态坐标表示执行语义阶段",
+      "canonical_evidence": "里程碑监督的任务状态坐标表示执行语义阶段",
+      "llm_tldr_en": "TaskAnchor grounds pretrained reactive VLAs in execution history via a lightweight adapter combining history-conditioned visual refinement and a milestone-supervised task-state coordinate representing the semantic stage of execution.",
+      "llm_tldr_cn": "针对反应式视觉-语言-动作模型在长时程操作中因视觉相似观测对应不同任务阶段而产生的任务状态混叠问题，本文提出TaskAnchor，一个将预训练VLA锚定到执行历史的轻量适配器。方法结合历史条件视觉精化与里程碑监督的任务状态坐标，以标量表示执行的语义阶段，并通过原生视觉与语言接口注入，无需显式规划器。在RMBench上取得约4.9-5的成绩，为长时程操作中的局部阶段条件化提供了有效方案。",
+      "llm_tldr": "针对反应式视觉-语言-动作模型在长时程操作中因视觉相似观测对应不同任务阶段而产生的任务状态混叠问题，本文提出TaskAnchor，一个将预训练VLA锚定到执行历史的轻量适配器。方法结合历史条件视觉精化与里程碑监督的任务状态坐标，以标量表示执行的语义阶段，并通过原生视觉与语言接口注入，无需显式规划器。在RMBench上取得约4.9-5的成绩，为长时程操作中的局部阶段条件化提供了有效方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
