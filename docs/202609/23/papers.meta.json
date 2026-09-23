@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-23",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T22:05:17",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/23/2609.25887v1-what-is-the-better-curriculum-controller-shaped-grasping-behavior-for-contact-force-sensitive-manipulation",
+      "section": "quick",
+      "title_en": "What is the Better Curriculum: Controller-Shaped Grasping Behavior for Contact Force-Sensitive Manipulation",
+      "authors": "Ziyan Feng, Zizhao Yuan, Yulong Fu, Yuxin He, Zhiyuan Zhang, Zhengjie Zhang, Jinni Zhou, Renjing Xu, Qiang Nie",
+      "date": "2026-09-22",
+      "pdf": "https://arxiv.org/pdf/2609.25887v1",
+      "score": "7.0",
+      "evidence": "在动作分块Transformer(ACT)上训练策略",
+      "tldr": "在接触力敏感操作中，亚牛顿级力即可损坏脆弱物体，现有视触觉策略把触觉当输入，但数据采集阶段手动夹爪控制延迟且粗糙，难以稳定维持窄力区间。本文改用25 Hz确定性触觉反射控制器作为采集期教师，生成“控制器塑造”的抓取演示，用于无触觉策略学习。基于ACT的策略在塑料杯任务上稳定抓取率达95%，显著优于人工演示；π0.5的分布内稳定性也提升。结果表明触觉可作采集期教师塑造演示行为，但抗扰动仍依赖部署期反射仲裁器，划定了无触觉策略的边界。",
+      "tags": "query:param-skills",
+      "abstract_en": "How should a robot learn to manipulate objects so fragile that sub-Newton contact forces can cause irreversible damage? Existing visuo-tactile policy learning typically treats tactile sensing as an additional policy input. In direct-contact force-sensitive manipulation, however, the bottleneck can arise earlier, during data collection: manual gripper control is too delayed and coarse-grained to reliably maintain the narrow force range required for stable grasping. We therefore use a deterministic 25 Hz tactile reflex controller as a collection-time teacher, producing demonstrations with controller-shaped grasping behavior for tactile-free policy learning. On Action Chunking with Transformers (ACT), policies trained from reflex-shaped demonstrations recover the teacher's grasping profile and achieve 95% stable grasps on the nominal plastic-cup task, substantially outperforming visually screened manual demonstrations. The same intervention improves in-distribution stability on $π_{0.5}$ and shows a favorable exploratory trend on an unseen paper-cup variant. Under randomized external disturbance, however, the reflex-data $π_{0.5}$ policy still fails in 45% of policy-only trials, whereas a deployment-time reflex arbiter retains all grasps. These results reveal a new role for tactile feedback in force-sensitive manipulation: rather than integrating tactile into the policy, we use it as a collection-time teacher that shapes grasping behavior in demonstrations for policy learning, while disturbance rejection remains controller-dependent, revealing the boundary of tactile-free policy.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/23/2609.22591v1-reboot-from-failure-to-recovery---a-dataset-and-benchmark-for-precision-assembly",
+      "section": "quick",
+      "title_en": "REBOOT: From Failure to Recovery - A Dataset and Benchmark for Precision Assembly",
+      "authors": "Nana Yaw Owusu Ofori-Ampofo, Samira Ebrahimi Kahou, Joseph Thekinen",
+      "date": "2026-09-18",
+      "pdf": "https://arxiv.org/pdf/2609.22591v1",
+      "score": "6.0",
+      "evidence": "任务分解为五个共享阶段以支持阶段化恢复监督",
+      "tldr": "机器人学习策略在精密装配中常停滞、漂移或出现毫米级偏差，但现有数据集多为成功演示，基准也仅用二值成功评价，难以监督恢复并定位失败。为此提出 REBOOT，首个以失败为一等信号的机器人操作数据集与基准：涵盖 18 项精密装配任务、2,160 条演示，拆分为对齐、啮合、运输、对齐、啮合五阶段；失败轨迹配专家恢复轨迹，并标注阶段、失败模式、间隙精度和装配方向。数据含四视角同步 RGB-D 和自然语言条件描述，半数为专家演示，半数为模仿学习策略失败采样的恢复演示。基准测试 action-chunked transformer、diffusion 和 π0-FAST，用阶段完成率揭示二值评价掩盖的模型特定失败点。",
+      "tags": "query:param-skills",
+      "abstract_en": "Robot learning policies fail in characteristic ways: they stall in uncertain states, drift during contact-rich alignment, and miss targets by millimetres in precision tasks. Yet training datasets consist largely of successful demonstrations, while real-world benchmarks often reduce performance to binary success. This limits both supervision for recovery and analysis of where failures occur. We introduce REBOOT (Recovery Episode Benchmark for Off-nominal Trajectories), the first robot manipulation benchmark designed around failure as a first-class signal. REBOOT contains 2,160 demonstrations across 18 precision assembly tasks, each decomposed into five shared phases: Align(pick), Engage(pick), Transport, Align(place), and Engage(place), enabling phase-level evaluation beyond terminal success. Failures are introduced across phases and paired with expert recovery trajectories that return the system to a valid continuation state. Tasks are annotated with rotational symmetry, engagement-clearance precision tier, and assembly direction through matched install-remove pairs. Failure episodes are labeled by phase and categorical failure mode, enabling attribution to kinematic stage and tolerance violation. Data includes synchronized RGB-D observations from four viewpoints and grounded natural-language descriptions of phase-level success and failure conditions. Half the dataset contains expert demonstrations; the other half contains recovery demonstrations sampled to reflect failures observed in imitation-learned policy rollouts. We benchmark action-chunked transformer, diffusion, and $π_0$-FAST policies using phase-level completion rates, revealing model-specific failure points hidden by binary evaluation. Dataset and code: https://nanayawoa.github.io/REBOOT",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/23/2609.24996v1-learning-beyond-what-humans-can-demonstrate",
+      "section": "quick",
+      "title_en": "Learning Beyond What Humans Can Demonstrate",
+      "authors": "Yuchen Song, Aditya Mittal, Unnat Jain",
+      "date": "2026-09-21",
+      "pdf": "https://arxiv.org/pdf/2609.24996v1",
+      "score": "6.0",
+      "evidence": "护栏约束易失败动作以保障策略部署安全",
+      "tldr": "机器人行为克隆依赖专家演示，但动态稳定、精确接触和灵巧协调等任务中，人类难以甚至无法采集数据。GLIDE从任务描述与遥操作代码推断失败模式，生成可执行护栏，过滤遥操作与策略命令、约束易失败动作，并利用轨迹反馈迭代改进。在三项任务中，数据采集成功率从0-10%提升到70-90%，混合数据训练的策略执行成功率达60-70%。这表明直接演示不可行时，仍可通过护栏学习有效策略。",
+      "tags": "query:param-skills",
+      "abstract_en": "Behavior cloning for robot manipulation relies on expert demonstrations. However, for tasks that require dynamic stability, precise contact timing, or dexterous coordination, human operators may find it hard or even impossible to collect data. We study this infeasible-demonstration regime and propose GLIDE: Guardrails for Learning from Infeasible Demonstrations Efficiently, a framework that infers task-specific failure modes and converts them into executable guardrails for data collection and policy deployment. Given a task description and the conditioning teleoperation code, GLIDE writes guardrails that use system states to filter teleoperation and policy commands, constrain failure-prone actions, and iteratively improve from trajectory feedback. Across three tasks, GLIDE discovers emergent guardrails that go beyond domain-expert hardcoded ones, improving data collection over naive VR teleoperation and domain-expert hardcoded guardrails. After refinement, GLIDE raises data-collection success from 0-10 percent to 70-90 percent across the three tasks. During policy execution, mixed-data guarded policies reach 70 percent, 60 percent, and 60 percent success on Tomato plate transfer, Marker handover and stand, and Wine serving tasks. These results show that GLIDE can support policy learning when direct demonstrations are infeasible. Project website: http://guardrail-policy.github.io/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

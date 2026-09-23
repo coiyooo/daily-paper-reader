@@ -1,0 +1,57 @@
+{
+  "date": "20260923",
+  "date_label": "",
+  "generated_at": "2026-09-23 22:05:13 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.25887v1",
+      "route": "202609/23/2609.25887v1-what-is-the-better-curriculum-controller-shaped-grasping-behavior-for-contact-force-sensitive-manipulation",
+      "title": "What is the Better Curriculum: Controller-Shaped Grasping Behavior for Contact Force-Sensitive Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "在动作分块Transformer(ACT)上训练策略",
+      "first_seen_at": "2026-09-23 22:05:13 UTC",
+      "updated_at": "2026-09-23 22:05:13 UTC"
+    },
+    {
+      "paper_id": "2609.22591v1",
+      "route": "202609/23/2609.22591v1-reboot-from-failure-to-recovery---a-dataset-and-benchmark-for-precision-assembly",
+      "title": "REBOOT: From Failure to Recovery - A Dataset and Benchmark for Precision Assembly",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "任务分解为五个共享阶段以支持阶段化恢复监督",
+      "first_seen_at": "2026-09-23 22:05:13 UTC",
+      "updated_at": "2026-09-23 22:05:13 UTC"
+    },
+    {
+      "paper_id": "2609.24996v1",
+      "route": "202609/23/2609.24996v1-learning-beyond-what-humans-can-demonstrate",
+      "title": "Learning Beyond What Humans Can Demonstrate",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "护栏约束易失败动作以保障策略部署安全",
+      "first_seen_at": "2026-09-23 22:05:13 UTC",
+      "updated_at": "2026-09-23 22:05:13 UTC"
+    }
+  ]
+}
