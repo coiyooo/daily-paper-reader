@@ -1,0 +1,97 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-24T21:50:05.517631+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.20648v2",
+      "source": "arxiv",
+      "title": "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+      "abstract": "Vision-Language-Action (VLA) models are a class of generalist robot policies that map camera images and language instructions directly to robot actions. While promising, these models remain slow at test time, particularly for long-horizon tasks that require many queries to the policy. Recent efforts reduce VLA latency by distilling smaller models, overlapping asynchronous action chunks, or pairing the VLA with a fast low-level policy, but still run a learned policy for the entire task. In contrast to VLA, classical motion planners quickly find collision-free motions, but require an explicit goal and have no semantic understanding of the task. In this work, we present SkipVLA, a hybrid policy that combines a pretrained VLA with a classical motion planner, using the planner for free-space motion and querying the VLA only for contact-rich skills such as grasping and placing. SkipVLA reuses the frozen vision-language backbone of the VLA to predict a target pose for each planned motion, and learns this predictor without additional demonstrations introduced into the system by using what was already learnt by the large VLA. We evaluate SkipVLA with three VLAs on 13 LIBERO tasks in simulation and three pick-and-place tasks on a physical 6-DoF YAM arm, demonstrating up to 2.5x faster task completion and significantly lower energy consumption while achieving the same task success rate.",
+      "authors": [
+        "Kaivalya Agrawal",
+        "Md Ashiqur Rahman",
+        "Raymond A. Yeh",
+        "Zachary Kingston"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-17T16:28:31+00:00",
+      "link": "https://arxiv.org/pdf/2609.20648v2",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hybrid VLA with classical motion planning for long-horizon manipulation",
+      "llm_evidence_cn": "结合经典运动规划的混合VLA用于长时程操作",
+      "llm_evidence": "结合经典运动规划的混合VLA用于长时程操作",
+      "canonical_evidence": "结合经典运动规划的混合VLA用于长时程操作",
+      "llm_tldr_en": "VLA policies are slow at test time, especially on long-horizon tasks needing many queries, while classical motion planners are fast but lack task semantics. SkipVLA combines a pretrained VLA with a classical motion planner to skip unnecessary policy steps.",
+      "llm_tldr_cn": "视觉语言动作模型在推理时速度慢，尤其长时程任务需要大量策略查询，而经典运动规划虽快却缺乏任务语义。本文提出SkipVLA混合策略，将预训练VLA与经典运动规划器结合，在任务执行中跳过不必要的策略步骤。该设计在保持语义理解的同时利用规划器快速生成无碰撞运动，从而加速长时程操作。工作体现了学习策略与经典规划结合用于操作任务规划的价值。",
+      "llm_tldr": "视觉语言动作模型在推理时速度慢，尤其长时程任务需要大量策略查询，而经典运动规划虽快却缺乏任务语义。本文提出SkipVLA混合策略，将预训练VLA与经典运动规划器结合，在任务执行中跳过不必要的策略步骤。该设计在保持语义理解的同时利用规划器快速生成无碰撞运动，从而加速长时程操作。工作体现了学习策略与经典规划结合用于操作任务规划的价值。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.27513v1",
+      "source": "arxiv",
+      "title": "Behavior-Aligned Action Tokenization for Robot Policy Learning",
+      "abstract": "Autoregressive robot policies learn continuous control by predicting discrete action tokens from observations. Different tasks often share local motions, yet behavioral correspondence across demonstrations receives limited explicit supervision in existing tokenizers. Motions with different timing can therefore lack a shared representation despite following similar patterns. We propose Behavior-Aligned Action Tokenization (BAAT), which uses soft dynamic time warping (Soft-DTW) to select corresponding action chunks and aligns their quantized coordinates jointly with reconstruction. This objective encourages similar motions across tasks to occupy nearby quantized representations while retaining executable action detail. A history-conditioned diffusion decoder reconstructs continuous action chunks from these tokens, and a downstream autoregressive policy learns to predict them. We evaluate BAAT on selected tasks from three simulation benchmarks and two real robot tasks. BAAT achieves a mean simulation success rate of approximately 45.2%, exceeding OAT by approximately 7.2 percentage points. In the controlled LIBERO-All alignment ablation, policy success rises from 70.2% to 79.0% while trajectory replay success decreases. These results support behavioral correspondence as supervision for organizing shared motion structure in action tokenizers and improving downstream robot policy learning.",
+      "authors": [
+        "Junbo Dong",
+        "Ze Chen",
+        "Zhendong Xie",
+        "Junjie Li",
+        "Lixin Xu",
+        "Xuemin Chi",
+        "Yiming Song",
+        "Zhaoyuan Ma"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-23T08:12:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.27513v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "action chunk tokenization for robot policies",
+      "llm_evidence_cn": "机器人策略的动作分块分词",
+      "llm_evidence": "机器人策略的动作分块分词",
+      "canonical_evidence": "机器人策略的动作分块分词",
+      "llm_tldr_en": "BAAT uses soft dynamic time warping to select corresponding action chunks and jointly aligns their quantized coordinates with reconstruction, giving similar motions across tasks shared token representations for autoregressive robot policies.",
+      "llm_tldr_cn": "自回归机器人策略通过从观测预测离散动作令牌来学习连续控制，但不同任务常共享局部动作，现有分词器缺乏对跨示范行为对应关系的显式监督，导致时序不同的相似动作难以共享表示。本文提出行为对齐动作分词，利用软动态时间规整选择对应的动作分块，并在重建目标下联合对齐其量化坐标，使相似动作占据邻近的离散表示，同时配合历史条件扩散解码器恢复可执行动作细节。该工作提升了跨任务共享运动表示的效率，对动作分块与技能条件控制具有借鉴意义。",
+      "llm_tldr": "自回归机器人策略通过从观测预测离散动作令牌来学习连续控制，但不同任务常共享局部动作，现有分词器缺乏对跨示范行为对应关系的显式监督，导致时序不同的相似动作难以共享表示。本文提出行为对齐动作分词，利用软动态时间规整选择对应的动作分块，并在重建目标下联合对齐其量化坐标，使相似动作占据邻近的离散表示，同时配合历史条件扩散解码器恢复可执行动作细节。该工作提升了跨任务共享运动表示的效率，对动作分块与技能条件控制具有借鉴意义。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

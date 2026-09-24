@@ -1,0 +1,41 @@
+{
+  "date": "20260924",
+  "date_label": "",
+  "generated_at": "2026-09-24 21:51:06 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.20648v2",
+      "route": "202609/24/2609.20648v2-skipvla-skipping-vla-steps-with-classical-planning-for-fast-robot-manipulation",
+      "title": "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "结合经典运动规划的混合VLA用于长时程操作",
+      "first_seen_at": "2026-09-24 21:51:06 UTC",
+      "updated_at": "2026-09-24 21:51:06 UTC"
+    },
+    {
+      "paper_id": "2609.27513v1",
+      "route": "202609/24/2609.27513v1-behavior-aligned-action-tokenization-for-robot-policy-learning",
+      "title": "Behavior-Aligned Action Tokenization for Robot Policy Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "机器人策略的动作分块分词",
+      "first_seen_at": "2026-09-24 21:51:06 UTC",
+      "updated_at": "2026-09-24 21:51:06 UTC"
+    }
+  ]
+}

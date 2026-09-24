@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-24",
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T21:51:08",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/24/2609.20648v2-skipvla-skipping-vla-steps-with-classical-planning-for-fast-robot-manipulation",
+      "section": "quick",
+      "title_en": "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+      "authors": "Kaivalya Agrawal, Md Ashiqur Rahman, Raymond A. Yeh, Zachary Kingston",
+      "date": "2026-09-17",
+      "pdf": "https://arxiv.org/pdf/2609.20648v2",
+      "score": "6.0",
+      "evidence": "结合经典运动规划的混合VLA用于长时程操作",
+      "tldr": "视觉-语言-动作（VLA）模型能将图像和语言直接映射为机器人动作，但测试推理慢，长程任务需反复查询策略。SkipVLA 提出混合策略：经典运动规划器负责自由空间运动，仅在抓取、放置等接触丰富技能时调用 VLA。它复用冻结的 VLA 视觉语言主干预测规划运动的目标位姿，无需新增演示即可训练该预测器。在 13 个 LIBERO 仿真任务与物理 YAM 六自由度机械臂上，任务完成速度最高提升 2.5 倍，能耗显著降低且成功率持平。",
+      "tags": "query:param-skills",
+      "abstract_en": "Vision-Language-Action (VLA) models are a class of generalist robot policies that map camera images and language instructions directly to robot actions. While promising, these models remain slow at test time, particularly for long-horizon tasks that require many queries to the policy. Recent efforts reduce VLA latency by distilling smaller models, overlapping asynchronous action chunks, or pairing the VLA with a fast low-level policy, but still run a learned policy for the entire task. In contrast to VLA, classical motion planners quickly find collision-free motions, but require an explicit goal and have no semantic understanding of the task. In this work, we present SkipVLA, a hybrid policy that combines a pretrained VLA with a classical motion planner, using the planner for free-space motion and querying the VLA only for contact-rich skills such as grasping and placing. SkipVLA reuses the frozen vision-language backbone of the VLA to predict a target pose for each planned motion, and learns this predictor without additional demonstrations introduced into the system by using what was already learnt by the large VLA. We evaluate SkipVLA with three VLAs on 13 LIBERO tasks in simulation and three pick-and-place tasks on a physical 6-DoF YAM arm, demonstrating up to 2.5x faster task completion and significantly lower energy consumption while achieving the same task success rate.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/24/2609.27513v1-behavior-aligned-action-tokenization-for-robot-policy-learning",
+      "section": "quick",
+      "title_en": "Behavior-Aligned Action Tokenization for Robot Policy Learning",
+      "authors": "Junbo Dong, Ze Chen, Zhendong Xie, Junjie Li, Lixin Xu, Xuemin Chi, Yiming Song, Zhaoyuan Ma",
+      "date": "2026-09-23",
+      "pdf": "https://arxiv.org/pdf/2609.27513v1",
+      "score": "6.0",
+      "evidence": "机器人策略的动作分块分词",
+      "tldr": "自回归机器人策略以离散动作token预测连续控制，但现有tokenizer缺少跨演示行为对应监督，相似局部动作因时间错位难以共享表示。BAAT用Soft-DTW选取对应动作片段，联合对齐量化坐标与重构，并以历史条件扩散解码器和下游自回归策略执行。在三个仿真基准和两个真机任务上平均成功率约45.2%，比OAT高约7.2个百分点；LIBERO-All消融策略成功率由70.2%升至79.0%。行为对应监督可组织共享动作结构并提升策略学习。",
+      "tags": "query:param-skills",
+      "abstract_en": "Autoregressive robot policies learn continuous control by predicting discrete action tokens from observations. Different tasks often share local motions, yet behavioral correspondence across demonstrations receives limited explicit supervision in existing tokenizers. Motions with different timing can therefore lack a shared representation despite following similar patterns. We propose Behavior-Aligned Action Tokenization (BAAT), which uses soft dynamic time warping (Soft-DTW) to select corresponding action chunks and aligns their quantized coordinates jointly with reconstruction. This objective encourages similar motions across tasks to occupy nearby quantized representations while retaining executable action detail. A history-conditioned diffusion decoder reconstructs continuous action chunks from these tokens, and a downstream autoregressive policy learns to predict them. We evaluate BAAT on selected tasks from three simulation benchmarks and two real robot tasks. BAAT achieves a mean simulation success rate of approximately 45.2%, exceeding OAT by approximately 7.2 percentage points. In the controlled LIBERO-All alignment ablation, policy success rises from 70.2% to 79.0% while trajectory replay success decreases. These results support behavioral correspondence as supervision for organizing shared motion structure in action tokenizers and improving downstream robot policy learning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
