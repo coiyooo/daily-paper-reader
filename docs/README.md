@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-24</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-25</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-24 21:51:06 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-25 21:54:11 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读2篇机器人操作方向论文，聚焦VLA推理加速与动作token化对齐。两篇均获6.0分，可关注SkipVLA用经典规划跳步提速、以及行为对齐的动作token化改进策略学习。普通读者可从机器人如何更快更稳执行动作这一角度切入了解。</p>
+<p>今日速读3篇、精读0篇，机器人操作与持续学习成关注焦点。</p>
+<p>最值得看两篇7分工作：H-VLA用统一动作空间做关键动作推理与运动规划，以及从混合质量部署经验中学习机器人操作。</p>
+<p>普通读者可先读这两篇的摘要与图表，再留意6分世界模型持续学习基准，判断其评测设定是否</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation">SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Behavior-Aligned Action Tokenization for Robot Policy Learning">Behavior-Aligned Action Tokenization for Robot Policy Learning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space">H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space</span></li><li><span class="dpr-home-dashboard-paper-title" title="Learning from Mixed-Quality Deployment Experience for Robot Manipulation">Learning from Mixed-Quality Deployment Experience for Robot Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Benchmarking World Models for Continual Learning on Compositional Tasks">Benchmarking World Models for Continual Learning on Compositional Tasks</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">param-skills <strong>3</strong></span></div>
 </section>
 </div>
 

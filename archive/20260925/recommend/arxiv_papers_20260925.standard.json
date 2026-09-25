@@ -1,0 +1,146 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-25T21:52:30.025924+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.22895v1",
+      "source": "arxiv",
+      "title": "H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space",
+      "abstract": "Vision-Language-Action (VLA) models have shown strong potential for robotic manipulation, but many existing methods still rely on direct mappings from language and visual observations to dense actions. This formulation can weaken the semantic reasoning capability inherited from pre-trained Vision-Language Models (VLMs), which are mainly optimized for visual-linguistic understanding rather than low-level control, and becomes fragile under spatial variations, including changes in object positions, scene layouts, robot embodiments, and camera viewpoints. To address these limitations, we propose H-VLA, a hierarchical VLA framework that decouples high-level key-action reasoning from low-level motion generation. H-VLA combines a Key-Action Model for predicting a key-action as the next manipulation subgoal, a Motion Planning Model for generating dense future actions conditioned on the predicted key-action, and a Unified Camera-Centric Action Space for consistent representation across datasets, embodiments, and viewpoints. We further adopt a two-stage training strategy that emphasizes key-action reasoning during pre-training and dense motion generation during fine-tuning. Experiments show that H-VLA achieves strong performance on SimplerEnv, reaching 91% on Google Robot visual matching, 84% on Google Robot variant aggregation, and 81% on WidowX visual matching. On Agilex real-robot tasks, H-VLA improves over the strongest baseline by 10, 47, and 16 percentage points under in-distribution, out-of-distribution position, and out-of-distribution scene/object settings, respectively.",
+      "authors": [
+        "Xiongfeng Peng",
+        "Lu Xu",
+        "Yandong Wang",
+        "Jiaqian Yu",
+        "Zirui Zheng",
+        "Yamin Mao",
+        "Weiming Li",
+        "Inseop Chung",
+        "Hyun-woong Cho",
+        "Jaewook Yoo",
+        "Dongwook Lee",
+        "Daehyun Ji",
+        "Chao Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-19T09:01:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.22895v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical decoupling of key-action reasoning and low-level motion generation",
+      "llm_evidence_cn": "分层解耦关键动作推理与底层运动生成",
+      "llm_evidence": "分层解耦关键动作推理与底层运动生成",
+      "canonical_evidence": "分层解耦关键动作推理与底层运动生成",
+      "llm_tldr_en": "VLA models often map language and vision directly to dense actions, weakening semantic reasoning under spatial variation. H-VLA decouples high-level key-action reasoning from low-level motion generation in a unified action space, improving robustness across layouts and embodiments.",
+      "llm_tldr_cn": "现有视觉-语言-动作模型多依赖从语言与视觉观测到密集动作的直接映射，这削弱了预训练视觉语言模型的语义推理能力，并在物体位置、场景布局、本体与相机视角等空间变化下表现脆弱。本文提出分层框架H-VLA，将高层关键动作推理与底层运动生成解耦，并在统一动作空间中结合关键动作推理与运动规划。实验表明该框架提升了空间变化与长程操作下的鲁棒性。其贡献在于为分层技能式操作控制提供了新范式。",
+      "llm_tldr": "现有视觉-语言-动作模型多依赖从语言与视觉观测到密集动作的直接映射，这削弱了预训练视觉语言模型的语义推理能力，并在物体位置、场景布局、本体与相机视角等空间变化下表现脆弱。本文提出分层框架H-VLA，将高层关键动作推理与底层运动生成解耦，并在统一动作空间中结合关键动作推理与运动规划。实验表明该框架提升了空间变化与长程操作下的鲁棒性。其贡献在于为分层技能式操作控制提供了新范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.22055v1",
+      "source": "arxiv",
+      "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
+      "abstract": "A desirable property of a world model is the ability to learn continually across tasks, adapting to new environments without forgetting what the agent has already learnt. In particular, the ability to retain and reuse knowledge obtained from prior experiences underpins an agent's ability to efficiently adapt to novel environments, as the dynamics of the physical world can often be described in recurring mechanisms. However, the world model's measure of adaptation entangles two abilities: the speed and capacity to learn unseen tasks, and the reuse of knowledge already acquired, since incoming tasks carry novel content alongside what recurs. In order to isolate knowledge reuse from prior experiences, we propose a compositional continual learning benchmark for world models in robot manipulation. Specifically, we design each task curriculum with compositional tasks that combine aspects of the tasks seen in the sequence. We further factorise this composition along the axes of action and perception to better understand how different input modalities bottleneck knowledge reuse. We evaluate state-of-the-art world models under canonical continual learning methods, alongside a modular world model whose dynamics backbone contains explicitly reusable components. Results show that modularity balances reuse against forgetting better than conventional methods, but none solve the problem fully, leaving clear room for continual world models built to reuse without forgetting. More details are available on our project website: https://object814.github.io/Compositional-Continual-Learning/.",
+      "authors": [
+        "Haoyu Zhou",
+        "Joe Watson",
+        "Anson Lei",
+        "Ingmar Posner"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-09-18T17:46:28+00:00",
+      "link": "https://arxiv.org/pdf/2609.22055v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "compositional continual learning benchmark for knowledge reuse",
+      "llm_evidence_cn": "面向知识复用的组合持续学习基准",
+      "llm_evidence": "面向知识复用的组合持续学习基准",
+      "canonical_evidence": "面向知识复用的组合持续学习基准",
+      "llm_tldr_en": "This paper proposes a compositional continual learning benchmark for world models that disentangles learning of novel tasks from reuse of recurring mechanisms, isolating knowledge reuse in novel environments.",
+      "llm_tldr_cn": "世界模型需要在持续学习中适应新环境而不遗忘旧知识，而现有评测将适应能力中学习新任务的容量与复用已有知识混为一谈。本文提出组合式持续学习基准，把任务拆分为可复用的重复机制与新颖内容，从而将知识复用与学习能力解耦。该基准用于系统评测世界模型在组合任务上的持续学习表现。其意义在于提供更清晰的知识复用度量，为组合泛化与技能复用研究提供评估工具。",
+      "llm_tldr": "世界模型需要在持续学习中适应新环境而不遗忘旧知识，而现有评测将适应能力中学习新任务的容量与复用已有知识混为一谈。本文提出组合式持续学习基准，把任务拆分为可复用的重复机制与新颖内容，从而将知识复用与学习能力解耦。该基准用于系统评测世界模型在组合任务上的持续学习表现。其意义在于提供更清晰的知识复用度量，为组合泛化与技能复用研究提供评估工具。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.29000v1",
+      "source": "arxiv",
+      "title": "Learning from Mixed-Quality Deployment Experience for Robot Manipulation",
+      "abstract": "Robot policies deployed in real environments naturally accumulate mixed-quality experience, including successful executions, partial progress, and failures. Although these rollouts provide valuable information for further learning, directly incorporating them into imitation learning may reinforce undesirable behaviors, while offline reinforcement learning often suffers from unreliable value estimation under sparse rewards and limited data coverage. We consider a practical post-deployment setting where learning relies only on naturally accumulated autonomous rollouts, without additional human corrections or exploratory interaction. To effectively exploit such experience, we propose Predictive Action Chunk Learning (PACL). PACL first learns a predictive chunk-level critic that evaluates temporally extended action sequences and augments temporal difference learning with future latent prediction, providing richer supervision for long-horizon value estimation. The learned critic then converts chunk-level Q-values into discrete quality conditions, which guide a diffusion actor to learn jointly from these mixed-quality experiences without treating all behaviors as equivalent supervision. At inference, the actor generates multiple action chunks and the critic selects the highest valued candidate. Experiments across simulated and real-world robot manipulation tasks show that PACL consistently improves the pretrained policy and outperforms strong imitation learning and offline reinforcement learning baselines.",
+      "authors": [
+        "Yangang Ren",
+        "Yujie Yan",
+        "Zirui Li",
+        "Jiaming Guo",
+        "Di Zeng",
+        "Ji Tao",
+        "Lan Yu",
+        "Xuesong Tian",
+        "Chen Lv"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-24T04:08:59+00:00",
+      "link": "https://arxiv.org/pdf/2609.29000v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Predictive action chunk learning for robot manipulation",
+      "llm_evidence_cn": "面向机器人操作的预测性动作块学习",
+      "llm_evidence": "面向机器人操作的预测性动作块学习",
+      "canonical_evidence": "面向机器人操作的预测性动作块学习",
+      "llm_tldr_en": "Deployed policies accumulate mixed-quality rollouts, but naive imitation reinforces failures and offline RL gives unreliable values. PACL learns a predictive representation and then action chunks from autonomous rollouts, enabling effective post-deployment learning without human correction.",
+      "llm_tldr_cn": "机器人策略部署后会自然积累包含成功、部分进展与失败的混合质量经验，但直接用于模仿学习会强化不良行为，离线强化学习在稀疏奖励与数据覆盖有限时价值估计又不可靠。本文提出预测性动作块学习PACL，仅依赖自主rollout，先学习预测性表示再据此学习动作块策略。该方法在无人工纠正与额外探索的条件下有效利用了混合质量经验，提升了操作策略性能。其贡献在于为部署后的持续自主改进提供了实用范式。",
+      "llm_tldr": "机器人策略部署后会自然积累包含成功、部分进展与失败的混合质量经验，但直接用于模仿学习会强化不良行为，离线强化学习在稀疏奖励与数据覆盖有限时价值估计又不可靠。本文提出预测性动作块学习PACL，仅依赖自主rollout，先学习预测性表示再据此学习动作块策略。该方法在无人工纠正与额外探索的条件下有效利用了混合质量经验，提升了操作策略性能。其贡献在于为部署后的持续自主改进提供了实用范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

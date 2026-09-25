@@ -1,0 +1,57 @@
+{
+  "date": "20260925",
+  "date_label": "",
+  "generated_at": "2026-09-25 21:54:11 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.22895v1",
+      "route": "202609/25/2609.22895v1-h-vla-hierarchical-vision-language-action-model-with-key-action-reasoning-and-motion-planning-in-a-unified-action-space",
+      "title": "H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "分层解耦关键动作推理与底层运动生成",
+      "first_seen_at": "2026-09-25 21:54:11 UTC",
+      "updated_at": "2026-09-25 21:54:11 UTC"
+    },
+    {
+      "paper_id": "2609.29000v1",
+      "route": "202609/25/2609.29000v1-learning-from-mixed-quality-deployment-experience-for-robot-manipulation",
+      "title": "Learning from Mixed-Quality Deployment Experience for Robot Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向机器人操作的预测性动作块学习",
+      "first_seen_at": "2026-09-25 21:54:11 UTC",
+      "updated_at": "2026-09-25 21:54:11 UTC"
+    },
+    {
+      "paper_id": "2609.22055v1",
+      "route": "202609/25/2609.22055v1-benchmarking-world-models-for-continual-learning-on-compositional-tasks",
+      "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向知识复用的组合持续学习基准",
+      "first_seen_at": "2026-09-25 21:54:11 UTC",
+      "updated_at": "2026-09-25 21:54:11 UTC"
+    }
+  ]
+}
