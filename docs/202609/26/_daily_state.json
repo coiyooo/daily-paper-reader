@@ -1,0 +1,89 @@
+{
+  "date": "20260926",
+  "date_label": "",
+  "generated_at": "2026-09-26 21:58:51 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.22538v1",
+      "route": "202609/26/2609.22538v1-frames-failure-recovery-and-monitoring-of-embodied-skills-for-humanoid-loco-manipulation",
+      "title": "FRAMES: Failure Recovery And Monitoring of Embodied Skills for Humanoid Loco-Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "参数化中层技能与失败感知监控恢复",
+      "first_seen_at": "2026-09-26 21:58:51 UTC",
+      "updated_at": "2026-09-26 21:58:51 UTC"
+    },
+    {
+      "paper_id": "2609.22085v1",
+      "route": "202609/26/2609.22085v1-seeq-training-generalist-value-functions-for-long-horizon-robotic-manipulation",
+      "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程操作的子任务级Q函数",
+      "first_seen_at": "2026-09-26 21:58:51 UTC",
+      "updated_at": "2026-09-26 21:58:51 UTC"
+    },
+    {
+      "paper_id": "2609.23305v1",
+      "route": "202609/26/2609.23305v1-shared-execution-clock-drifting-policy-for-dynamic-precision-manipulation",
+      "title": "Shared Execution-Clock Drifting Policy for Dynamic Precision Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "单步策略联合预测进度索引动作曲线与共享执行时钟",
+      "first_seen_at": "2026-09-26 21:58:51 UTC",
+      "updated_at": "2026-09-26 21:58:51 UTC"
+    },
+    {
+      "paper_id": "2609.25187v1",
+      "route": "202609/26/2609.25187v1-x-planner-event-structured-task-planning-for-embodied-intelligence",
+      "title": "X-Planner: Event-Structured Task Planning for Embodied Intelligence",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时程操作的事件结构化任务规划",
+      "first_seen_at": "2026-09-26 21:58:51 UTC",
+      "updated_at": "2026-09-26 21:58:51 UTC"
+    },
+    {
+      "paper_id": "2609.26467v1",
+      "route": "202609/26/2609.26467v1-routerlt-learning-when-and-which-rl-specialist-should-control-a-vision-language-action-policy",
+      "title": "RouteRLT: Learning When and Which RL Specialist Should Control a Vision-Language-Action Policy",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "阶段选择器按精密阶段将控制路由给RL专家",
+      "first_seen_at": "2026-09-26 21:58:51 UTC",
+      "updated_at": "2026-09-26 21:58:51 UTC"
+    }
+  ]
+}

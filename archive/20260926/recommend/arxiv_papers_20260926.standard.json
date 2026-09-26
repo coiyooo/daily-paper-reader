@@ -1,0 +1,243 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-26T21:54:41.606323+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.22538v1",
+      "source": "arxiv",
+      "title": "FRAMES: Failure Recovery And Monitoring of Embodied Skills for Humanoid Loco-Manipulation",
+      "abstract": "Large language model (LLM) planners can decompose natural-language instructions and select reusable robot skills, but choosing the correct skill does not guarantee successful physical execution. This gap is especially important in humanoid loco-manipulation, where errors during approach, grasping, transport, or placement can invalidate the remainder of a long-horizon plan. We present FRAMES, a failure-aware supervisory framework for the Unitree G1 humanoid that operates above the CEER whole-body controller. A Planner Agent selects subtasks through parameterized mid-level skills, while a vision-language-model-based Monitor Agent evaluates each skill using temporal multi-view observations and structured robot and contact evidence. Detected failures stop the active skill and provide grounded feedback to a Recovery Agent. The framework further includes a Memory Module for reusing prior skill experience, and geometric grounding via depth and segmentation. We independently evaluate the monitoring module of the framework in MuJoCo using 100 trials comprising 50 failed and 50 successful executions across five tasks. The monitor detects 48 of 50 failures, correctly accepts 46 of 50 successful executions, and achieves 94.0% overall accuracy. These results provide initial evidence for the monitoring component, while end-to-end evaluation of the complete recovery loop remains ongoing.",
+      "authors": [
+        "Ajay Vikram Periasami",
+        "Xinyuan Luo",
+        "Haoyu Li",
+        "Xianyi Cheng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-18T19:53:21+00:00",
+      "link": "https://arxiv.org/pdf/2609.22538v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "parameterized mid-level skills with failure-aware monitoring and recovery",
+      "llm_evidence_cn": "参数化中层技能与失败感知监控恢复",
+      "llm_evidence": "参数化中层技能与失败感知监控恢复",
+      "canonical_evidence": "参数化中层技能与失败感知监控恢复",
+      "llm_tldr_en": "FRAMES is a failure-aware supervisory framework where a planner selects parameterized mid-level skills and a VLM monitor detects skill failures for recovery in humanoid loco-manipulation.",
+      "llm_tldr_cn": "该文针对LLM规划器虽能选择可复用技能却无法保证物理执行成功的问题，提出面向人形移动操作的失败感知监督框架FRAMES。方法在全身控制器之上，由规划智能体通过参数化中层技能选择子任务，并用基于视觉语言模型的监控智能体结合多视角时序观测与接触证据评估每个技能，检测失败并触发恢复。该框架把可复用参数化技能与失败监控、恢复结合，提升了长程移动操作计划的鲁棒性。",
+      "llm_tldr": "该文针对LLM规划器虽能选择可复用技能却无法保证物理执行成功的问题，提出面向人形移动操作的失败感知监督框架FRAMES。方法在全身控制器之上，由规划智能体通过参数化中层技能选择子任务，并用基于视觉语言模型的监控智能体结合多视角时序观测与接触证据评估每个技能，检测失败并触发恢复。该框架把可复用参数化技能与失败监控、恢复结合，提升了长程移动操作计划的鲁棒性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.22085v1",
+      "source": "arxiv",
+      "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
+      "abstract": "Despite rapid progress, generalist robot policies remain brittle on complex, long-horizon tasks that comprise multiple stages or require repeated attempts and deliberation on the same underlying stage before success. Q-value functions can improve these policies by ranking candidate actions or guiding policy improvement, but learning from sparse task-level rewards entails long credit-assignment horizons, difficult Bellman backups, and broad data-coverage requirements. We introduce SeeQ (Subtask-elicited Q-functions), which instead learns Q-values for the currently active subtask. This shortens the value-prediction horizon and enables effective learning with temporal-difference (TD) objectives. During training, subtask-level annotations present in offline robot data provide the decomposition and enable learning from broad, potentially suboptimal robot datasets. To eliminate the need for human annotations or modular subtask prediction systems at test time, our Q-function architecture is trained to autoregressively predict the active subtask in natural language before estimating its value. We instantiate SeeQ using a base vision-language backbone, pretrain it on diverse open-source robot manipulation data, and finetune it on downstream tasks. Across four real-world manipulation tasks on two bimanual robot platforms, the SeeQ value function substantially improves best-of-N policy steering.",
+      "authors": [
+        "Saksham Singh",
+        "Zheyuan Hu",
+        "Max Sobol Mark",
+        "Jeffrey Yu",
+        "Zackory Erickson",
+        "Aviral Kumar"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-18T17:59:47+00:00",
+      "link": "https://arxiv.org/pdf/2609.22085v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "subtask-elicited Q-functions for long-horizon manipulation",
+      "llm_evidence_cn": "面向长时程操作的子任务级Q函数",
+      "llm_evidence": "面向长时程操作的子任务级Q函数",
+      "canonical_evidence": "面向长时程操作的子任务级Q函数",
+      "llm_tldr_en": "Long-horizon manipulation suffers from sparse rewards and long credit assignment. SeeQ learns Q-values for the currently active subtask, shortening the value-prediction horizon and enabling TD learning, improving action ranking and policy improvement.",
+      "llm_tldr_cn": "长时程操作任务因稀疏奖励和长信用分配时程而难以学习通用价值函数。SeeQ改为对当前激活子任务学习Q值，缩短价值预测时程并支持时序差分训练。该方法利用子任务级标注改善动作排序与策略改进，缓解长时程信用分配难题。其贡献在于把价值学习结构化到子任务层面，提升长时程操作策略的鲁棒性。",
+      "llm_tldr": "长时程操作任务因稀疏奖励和长信用分配时程而难以学习通用价值函数。SeeQ改为对当前激活子任务学习Q值，缩短价值预测时程并支持时序差分训练。该方法利用子任务级标注改善动作排序与策略改进，缓解长时程信用分配难题。其贡献在于把价值学习结构化到子任务层面，提升长时程操作策略的鲁棒性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.23305v1",
+      "source": "arxiv",
+      "title": "Shared Execution-Clock Drifting Policy for Dynamic Precision Manipulation",
+      "abstract": "Manipulation under time constraints requires both accurate actions and an execution rhythm that matches the evolving scene. This becomes critical when a robot must intercept moving objects or complete a sequence of adjustments before a deadline. Although one-step policies reduce generation cost, their directly predicted action sequences leave temporal allocation implicit. We propose Shared Execution-Clock Drifting (SECD), which makes execution rhythm an explicit part of one-step action generation. Conditioned on an observation and a latent sample, the policy jointly predicts a progress-indexed action curve and a shared monotone clock that maps fixed control times to locations on the curve. Demonstration-derived alignment anchors this decomposition, which is trained jointly through drifting on the decoded actions. The resulting policy retains a fixed-rate control interface and requires one network evaluation. We evaluate SECD across four real-robot tasks with inference on NVIDIA Thor. Across 300 trials, it achieves 77.00% task-averaged success and outperforms the evaluated one-step baselines on every task, including 91% success in cup retrieval from a 16 m/min conveyor and 54% in restoring and folding a crumpled shirt within 90 s. A fixed-clock variant reaches 79% on the same conveyor protocol. Complementary state-based RoboMimic experiments, including cross-seed ablations on Transport and Square, further support the joint design of the temporal representation and demonstration alignment. Project page: https://secd-anonymous-ewn.pages.dev/",
+      "authors": [
+        "Zhenchen Dong",
+        "Qingran Wu",
+        "Jinna Fu",
+        "Jiaming Wu",
+        "Fulin Chen",
+        "Hongyu Yu",
+        "Yide Liu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-20T02:42:31+00:00",
+      "link": "https://arxiv.org/pdf/2609.23305v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "one-step policy jointly predicts progress-indexed action curve and shared execution clock",
+      "llm_evidence_cn": "单步策略联合预测进度索引动作曲线与共享执行时钟",
+      "llm_evidence": "单步策略联合预测进度索引动作曲线与共享执行时钟",
+      "canonical_evidence": "单步策略联合预测进度索引动作曲线与共享执行时钟",
+      "llm_tldr_en": "Time-constrained manipulation needs accurate actions and matching execution rhythm. SECD jointly predicts a progress-indexed action curve and a shared monotone clock, making execution rhythm explicit in one-step generation.",
+      "llm_tldr_cn": "时间约束下的操作既需精确动作，也需与场景演进匹配的执行节奏，例如拦截移动物体或在截止前完成调整序列。单步策略虽降低生成成本，但其直接预测的动作序列使时间分配隐含。本文提出共享执行时钟漂移策略SECD，条件于观测与隐变量，联合预测进度索引动作曲线与共享单调时钟，将固定控制时间映射到曲线上，示范导出的对齐支撑该分解。",
+      "llm_tldr": "时间约束下的操作既需精确动作，也需与场景演进匹配的执行节奏，例如拦截移动物体或在截止前完成调整序列。单步策略虽降低生成成本，但其直接预测的动作序列使时间分配隐含。本文提出共享执行时钟漂移策略SECD，条件于观测与隐变量，联合预测进度索引动作曲线与共享单调时钟，将固定控制时间映射到曲线上，示范导出的对齐支撑该分解。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.25187v1",
+      "source": "arxiv",
+      "title": "X-Planner: Event-Structured Task Planning for Embodied Intelligence",
+      "abstract": "Task planning bridges high-level instructions and executable behavior in long-horizon manipulation, yet modern Vision-Language-Action (VLA) systems often leave this intermediate structure implicit. Existing chain-of-thought (CoT) planners also tend to rely on coarse task-level annotations or serialize long reasoning traces token by token. We present X-Planner, a planning front-end that addresses both the supervision and representation of embodied reasoning. Our planning data combine Ego, UMI, and teleoperation under a hierarchy granularity with source-dependent annotation depth. Takeover-time annotations and human-designed failures supervise ongoing error recognition. On the model side, a shared VLM backbone exposes two event-structured plan forms: a discrete interface that emits interpretable event states and a latent interface that relays continuous CoT states across staggered Transformer depths through Staircase Decoding. A frozen latent-to-text reconstruction objective provides a semantic anchor for the latent representation. Offline two-step planning evaluation places X-Planner second among four evaluated models on both BERTScore-F1 and a judge-based Overall score. In real-robot experiments, respectively, outperforming the evaluated baselines. These results characterize planning-text quality and downstream execution.",
+      "authors": [
+        "Howard Lu",
+        "Shalfun Li",
+        "Porter Pan",
+        "Cris",
+        "Lumen",
+        "Cyril",
+        "Eric Hu",
+        "Lily Li",
+        "Maeve Zhang",
+        "Robert Wang",
+        "KZ Zheng",
+        "Viggo Chen",
+        "Tim Ding",
+        "Regsis Cheng",
+        "YJ Xiao",
+        "Kian",
+        "Hai Lin",
+        "Alan Song",
+        "Elise Ma",
+        "Gody Li",
+        "Victor Yao",
+        "Yohann Tang",
+        "Ingrid Yu",
+        "Jason He",
+        "James Wang",
+        "Ryan Yu",
+        "Ping Yang",
+        "Chris Pan",
+        "Vincent Chen",
+        "Roy Gan",
+        "Hao Wang",
+        "Qian Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-21T17:01:16+00:00",
+      "link": "https://arxiv.org/pdf/2609.25187v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "event-structured task planning for long-horizon manipulation",
+      "llm_evidence_cn": "面向长时程操作的事件结构化任务规划",
+      "llm_evidence": "面向长时程操作的事件结构化任务规划",
+      "canonical_evidence": "面向长时程操作的事件结构化任务规划",
+      "llm_tldr_en": "VLA systems leave task-planning structure implicit and CoT planners rely on coarse annotations. X-Planner is a planning front-end that combines Ego, UMI and teleoperation data with hierarchy-granularity labels, exposing event-structured plans from a shared VLM backbone.",
+      "llm_tldr_cn": "长时程操作中，VLA系统往往把任务规划的中间结构隐式化，链式思维规划又依赖粗粒度标注并逐token串行推理。X-Planner作为规划前端，融合Ego、UMI与遥操作数据构建层级粒度标注，并用共享VLM输出事件结构化的计划形式。它借助接管时刻标注与人工设计失败来监督错误识别。该工作为具身推理提供了更明确的监督与表示方式，弥补长时程操作中间结构的缺失。",
+      "llm_tldr": "长时程操作中，VLA系统往往把任务规划的中间结构隐式化，链式思维规划又依赖粗粒度标注并逐token串行推理。X-Planner作为规划前端，融合Ego、UMI与遥操作数据构建层级粒度标注，并用共享VLM输出事件结构化的计划形式。它借助接管时刻标注与人工设计失败来监督错误识别。该工作为具身推理提供了更明确的监督与表示方式，弥补长时程操作中间结构的缺失。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "How to represent long horizon manipulation tasks as reusable parameterized skill libraries and condition low level policies on skill IDs and local phases?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.26467v1",
+      "source": "arxiv",
+      "title": "RouteRLT: Learning When and Which RL Specialist Should Control a Vision-Language-Action Policy",
+      "abstract": "Vision-language-action (VLA) models provide broad manipulation competence, but often struggle during the precision-critical stages that dominate contact-rich industrial tasks such as connector insertion and cable management. A common remedy is to refine a pretrained VLA with reinforcement learning (RL), enabling task-specific improvement beyond behavior cloning. However, how to preserve its generalist behavior while deciding when RL refinement is needed and which specialized policy should act remains an open question. In this work, we present RouteRLT, a routing framework that learns when and which RL specialist, an RL policy trained for a single precision-critical phase, should take control from a generalist VLA. A phase selector identifies the active controller, a stabilizer suppresses transient switches, and an action-boundary manager handles transitions between chunked policy outputs. We evaluate RouteRLT on multi-object pick-and-place tasks in LIBERO, as well as on a real-world cable pickup and port-insertion task with multiple precision-critical stages. In simulation, the learned routing improves over the base VLA and matches routing with privileged phase boundaries, without accessing those boundaries at deployment. The real-robot evaluation validates automatic routing to both the pickup and insertion specialists under an operator-aligned handoff protocol. Altogether, these results show that learned routing applies RL specialist control where precise adaptation is most valuable while preserving generalist VLA behavior, including recovery from failed execution attempts.",
+      "authors": [
+        "Chongyu Zhu",
+        "Jaden Hinds",
+        "Hyegang Kim",
+        "Juan Sebastian Rojas",
+        "Ramy Elmallah",
+        "Chi-Guhn Lee"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-22T14:15:28+00:00",
+      "link": "https://arxiv.org/pdf/2609.26467v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "phase selector routes control to RL specialists conditioned on precision-critical phase",
+      "llm_evidence_cn": "阶段选择器按精密阶段将控制路由给RL专家",
+      "llm_evidence": "阶段选择器按精密阶段将控制路由给RL专家",
+      "canonical_evidence": "阶段选择器按精密阶段将控制路由给RL专家",
+      "llm_tldr_en": "Generalist VLAs struggle in precision-critical contact-rich stages. RouteRLT learns when and which RL specialist, trained per phase, should take control, preserving generalist behavior while improving precise phases.",
+      "llm_tldr_cn": "视觉-语言-动作模型具备广泛操作能力，但在连接器插拔、线缆整理等接触密集任务的精密阶段常表现不佳。本文提出RouteRLT路由框架，学习何时以及由哪个针对单一精密阶段训练的强化学习专家接管通用VLA。方法通过阶段选择器决定专家介入时机，在保留通用能力的同时提升精密阶段表现。该工作为技能与阶段条件化的策略组合提供实用方案。",
+      "llm_tldr": "视觉-语言-动作模型具备广泛操作能力，但在连接器插拔、线缆整理等接触密集任务的精密阶段常表现不佳。本文提出RouteRLT路由框架，学习何时以及由哪个针对单一精密阶段训练的强化学习专家接管通用VLA。方法通过阶段选择器决定专家介入时机，在保留通用能力的同时提升精密阶段表现。该工作为技能与阶段条件化的策略组合提供实用方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
