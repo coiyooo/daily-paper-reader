@@ -1,0 +1,377 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-27T22:22:26.475609+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2609.28281v1",
+      "source": "arxiv",
+      "title": "BrickCraft-Duo: Efficient Dual-Arm Skill Learning and Refinement for Compositional Long-Horizon Assembly",
+      "abstract": "Interlocking brick assembly provides a representative testbed for evaluating real-world robotic manipulation capabilities, where diverse structural designs, complex inter-step dependencies, intricate mechanical interactions and tight insertion tolerances pose substantial challenges. We present BrickCraft-Duo, a modular framework for long-horizon dual-arm collaborative assembly of interlocking bricks through data-efficient skill learning and composition. BrickCraft-Duo learns reusable single- and dual-arm assembly skills from diverse demonstrations, with bilateral symmetry alignment facilitating skill sharing across symmetric arms and assembly--support role assignments. Guided by stability-aware assembly reasoning, BrickCraft-Duo composes heterogeneous skills to achieve autonomous long-horizon execution, and further integrates human-in-the-loop correction for targeted skill refinement. The resulting system achieves long-horizon success rates of at least 60% and step-level completion rates of at least 95% across five real-world assembly tasks involving partially supported configurations, with horizons of up to nine steps. Project website: https://jichuan-yu.github.io/BrickCraft-Duo.",
+      "authors": [
+        "Jichuan Yu",
+        "Zhenyu Xiao",
+        "Ze Wang",
+        "Ruixuan Liu",
+        "Changliu Liu",
+        "Chuxiong Hu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-23T15:32:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.28281v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "learns reusable single- and dual-arm assembly skills and composes them for compositional long-horizon assembly",
+      "llm_evidence_cn": "学习可复用单臂与双臂装配技能并组合完成长时程装配",
+      "llm_evidence": "学习可复用单臂与双臂装配技能并组合完成长时程装配",
+      "canonical_evidence": "学习可复用单臂与双臂装配技能并组合完成长时程装配",
+      "llm_tldr_en": "BrickCraft-Duo learns reusable single- and dual-arm assembly skills from demonstrations and composes them for long-horizon brick assembly, using symmetry alignment for skill sharing and stability-aware reasoning to achieve data-efficient compositional assembly.",
+      "llm_tldr_cn": "长时程双臂积木装配面临结构多样、步骤依赖强与插入公差紧等挑战，单一策略难以完成。BrickCraft-Duo提出模块化框架，从多样示教中学习可复用的单臂与双臂装配技能，借助双臂对称对齐实现技能共享与装配-支撑角色分配，并由稳定性感知的装配推理指导技能组合。实验表明该框架能以较高数据效率完成组合式长时程装配，为真实机器人可复用技能库与技能组合提供了有效范式。",
+      "llm_tldr": "长时程双臂积木装配面临结构多样、步骤依赖强与插入公差紧等挑战，单一策略难以完成。BrickCraft-Duo提出模块化框架，从多样示教中学习可复用的单臂与双臂装配技能，借助双臂对称对齐实现技能共享与装配-支撑角色分配，并由稳定性感知的装配推理指导技能组合。实验表明该框架能以较高数据效率完成组合式长时程装配，为真实机器人可复用技能库与技能组合提供了有效范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.23151v1",
+      "source": "arxiv",
+      "title": "Task aware Dynamic Movement Primitives for failure detection and recovery in contact rich manipulation",
+      "abstract": "Assembly remains a challenging robotic manipulation task in presence of tight tolerances and complex contact interactions. While Learning from Demonstration (LfD) frameworks like Dynamic Movement Primitives (DMPs) can effectively encode trajectories from a single demonstration, they are highly sensitive to variations in initial grasp configurations and external contact forces. Such variations often lead to task failures during the contact rich phases. This paper presents a task aware failure detection and recovery framework that integrates DMP based trajectory generation with real time stage classification. Utilizing Quadratic Discriminant Analysis (QDA) trained on multimodal sensor data, the framework segments execution into approach, alignment, and insertion stages for a Peg in Hole (PiH) assembly operation. By using goal relative position data as features, this classification generalizes to unseen goal positions without requiring retraining, matching the inherent generalization capability of DMPs. Anomaly detection is performed online using a Mahalanobis distance metric computed over force features, isolating contact induced failures from nominal trajectory execution. Upon failure detection, a spiral search recovery policy is triggered to actively realign the peg under contact before resuming the learned DMP insertion. The proposed approach is evaluated on an experimental setup achieving 95% stage classification accuracy, and demonstrates reliable failure recovery under lateral misalignments of up to 3 mm using only a single demonstration.",
+      "authors": [
+        "Bhavnashri A",
+        "Sobia Shafi",
+        "Krishnapuram Himavarshini",
+        "Anuj Tiwari"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "published": "2026-09-19T17:37:15+00:00",
+      "link": "https://arxiv.org/pdf/2609.23151v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "DMP-based stage classification for failure detection and recovery in contact-rich assembly",
+      "llm_evidence_cn": "基于DMP的阶段分类实现接触丰富装配的失败检测与恢复",
+      "llm_evidence": "基于DMP的阶段分类实现接触丰富装配的失败检测与恢复",
+      "canonical_evidence": "基于DMP的阶段分类实现接触丰富装配的失败检测与恢复",
+      "llm_tldr_en": "This paper integrates DMP-based trajectory generation with real-time stage classification using multimodal sensors and QDA, forming a task-aware failure detection and recovery framework for contact-rich assembly.",
+      "llm_tldr_cn": "装配等接触丰富操作在紧公差与复杂接触下极易失败，动态运动基元等示教学习框架虽能从单次演示编码轨迹，却对初始抓取配置和外部接触力变化高度敏感。本文提出任务感知的失败检测与恢复框架，将DMP轨迹生成与基于多模态传感器和二次判别分析的实时阶段分类相结合，在执行过程中切分并识别阶段以触发恢复。该方法提升了接触丰富操作在扰动下的鲁棒性，为技能原语与阶段化恢复的结合提供了范例。",
+      "llm_tldr": "装配等接触丰富操作在紧公差与复杂接触下极易失败，动态运动基元等示教学习框架虽能从单次演示编码轨迹，却对初始抓取配置和外部接触力变化高度敏感。本文提出任务感知的失败检测与恢复框架，将DMP轨迹生成与基于多模态传感器和二次判别分析的实时阶段分类相结合，在执行过程中切分并识别阶段以触发恢复。该方法提升了接触丰富操作在扰动下的鲁棒性，为技能原语与阶段化恢复的结合提供了范例。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.23113v1",
+      "source": "arxiv",
+      "title": "Search, Ground, Plan: Functional Sufficiency for Task and Motion Planning under Incomplete Scene Knowledge",
+      "abstract": "Foundation models (FMs) have expanded task and motion planning (TAMP) to manipulation problems specified through language and visual observations. However, incomplete scene knowledge leaves a critical gap between understanding what the task requires and knowing whether the physical scene can actually realize it. We introduce GRAB-TAMP, an FM-based TAMP framework that searches for scene entities required for task completion, grounds functional roles to valid physical objects, and plans only after a complete joint assignment establishes functional sufficiency. We represent the task through functional roles, relations, and assignment constraints, and incrementally inspect the scene while requirements remain unresolved, verifying candidate objects through semantic, geometric, and relational checks. We evaluate GRAB-TAMP across 32 scene variants spanning Kitchen, Living Room, and Workshop domains. Across 200 feasible trials, our approach achieves 54.0% end-to-end success with 67.3% plan goal coverage. Compared with three FM-based TAMP frameworks under the same execution setting, GRAB-TAMP improves end-to-end success by 25.7 percentage points over the mean baseline. Implementation and evaluation code: https://github.com/Narendhiranv04/GRAB-TAMP",
+      "authors": [
+        "Narendhiran Vijayakumar",
+        "Nav Singhal",
+        "Girish Varma",
+        "Antony Thomas"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-19T16:29:48+00:00",
+      "link": "https://arxiv.org/pdf/2609.23113v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "FM-based task and motion planning for manipulation with functional roles and assignment constraints",
+      "llm_evidence_cn": "基于基础模型的操作任务与运动规划,含功能角色与约束",
+      "llm_evidence": "基于基础模型的操作任务与运动规划,含功能角色与约束",
+      "canonical_evidence": "基于基础模型的操作任务与运动规划,含功能角色与约束",
+      "llm_tldr_en": "GRAB-TAMP tackles incomplete scene knowledge in foundation-model task and motion planning by searching required scene entities, grounding functional roles to physical objects, and planning only after functional sufficiency is established.",
+      "llm_tldr_cn": "针对基础模型驱动的任务与运动规划在场景信息不完整时难以判断物理场景能否真正支持任务的问题,本文提出GRAB-TAMP框架。该方法通过功能角色、关系与分配约束表示任务,主动搜索所需场景实体并将功能角色落地到有效物理对象,待联合分配满足功能充分性后再规划。在操作任务中验证表明其能在信息缺失下仍完成可靠规划,为接触丰富操作的可复用技能与规划表示提供了结构化的前置条件建模思路。",
+      "llm_tldr": "针对基础模型驱动的任务与运动规划在场景信息不完整时难以判断物理场景能否真正支持任务的问题,本文提出GRAB-TAMP框架。该方法通过功能角色、关系与分配约束表示任务,主动搜索所需场景实体并将功能角色落地到有效物理对象,待联合分配满足功能充分性后再规划。在操作任务中验证表明其能在信息缺失下仍完成可靠规划,为接触丰富操作的可复用技能与规划表示提供了结构化的前置条件建模思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "reusable robot skill library for task and motion planning in contact-rich manipulation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.24059v1",
+      "source": "arxiv",
+      "title": "Automatic Labelling for Bimanual Mobile Manipulation",
+      "abstract": "Semantically meaningful subtask labels can provide useful contexts for long-horizon policies, but automatically identifying both reliable temporal boundaries and broad semantic descriptions for annotations remains difficult. We present an automatic labelling pipeline that assigns temporal localisation to deterministic trajectory analysis and semantic interpretation to vision-language (VL) reasoning. The pipeline segments synchronised kinematic signals into phases, performs phase-localised VL reasoning to describe the contents, and aggregates the outputs for the base, left arm, and right arm actions. We evaluate this pipeline primarily on 29 real Galaxea bimanual mobile-manipulation tasks. Repeating the VL reasoning three times first produces the same output value for 87.4% on selected tasks. A review by nine participants across all 29 tasks then judgements on the labelled phases and shows positive acceptance of temporal divisions (90.5%), body labels (90.7%), and arm labels (78.7%). The results indicate that the segmentation-VL design can produce structured annotations while preserving asynchronous bimanual behaviour, providing a basis for richer semantic subtask identification and state-based verification.",
+      "authors": [
+        "Yupu Lu",
+        "Jia Pan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-21T03:35:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.24059v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "segments kinematic signals into phases and produces semantic subtask labels for long-horizon policies",
+      "llm_evidence_cn": "将运动信号切分为相位并为长时程策略生成语义子任务标签",
+      "llm_evidence": "将运动信号切分为相位并为长时程策略生成语义子任务标签",
+      "canonical_evidence": "将运动信号切分为相位并为长时程策略生成语义子任务标签",
+      "llm_tldr_en": "Addresses automatic labelling of long-horizon manipulation subtasks by combining deterministic trajectory analysis for temporal segmentation with vision-language reasoning for semantic phase descriptions, evaluated on 29 real bimanual mobile manipulation tasks.",
+      "llm_tldr_cn": "针对长时程操作策略缺乏语义化子任务标签的问题，论文提出一种自动标注流水线，将时间定位交给确定性轨迹分析，把语义解释交给视觉语言推理，并聚合基座与左右臂动作输出。在29个真实Galaxea双臂移动操作任务上评测，重复三次视觉语言推理有87%结果一致。该工作为长时程操作策略提供了可扩展的分段与语义标签来源。",
+      "llm_tldr": "针对长时程操作策略缺乏语义化子任务标签的问题，论文提出一种自动标注流水线，将时间定位交给确定性轨迹分析，把语义解释交给视觉语言推理，并聚合基座与左右臂动作输出。在29个真实Galaxea双臂移动操作任务上评测，重复三次视觉语言推理有87%结果一致。该工作为长时程操作策略提供了可扩展的分段与语义标签来源。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "imitation learning conditioned on skill identifiers and local phase identifiers for robot control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.24118v1",
+      "source": "arxiv",
+      "title": "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies",
+      "abstract": "Vision-Language-Action (VLA) policies achieve strong performance in robotic manipulation but remain brittle once execution deviates from nominal trajectories. We propose CARE (Corrective Atomic Robotic Execution), a framework that improves recovery by learning from failures encountered during execution. Instead of generating corrective data from manually designed or random perturbations, CARE collects failed rollouts, models stage-conditioned post-failure deviations, and uses the resulting empirical distributions to synthesize representative failure states and corrective demonstrations. At inference time, CARE combines stage-wise planning with physically grounded 3D monitoring to trigger atomic adjustments or re-operations while preserving task progress. We further introduce the Failure State Recovery Benchmark (FSR-Bench), which evaluates recovery from intermediate failure states under local deviations and structural anomalies. Experiments across multiple VLA backbones, simulation benchmarks, and real-world dual-arm tasks show consistent improvements, with average task-success gains of 14.5 points in simulation and 15.9 points in the real world. Code, models, and data are available at https://github.com/xiaojunlan/care",
+      "authors": [
+        "Junlan Xiao",
+        "Junwei Jiang",
+        "Zaibin Zhang",
+        "Yifan Wang",
+        "Zhongbo Zhang",
+        "Huchuan Lu",
+        "Lijun Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-21T05:14:34+00:00",
+      "link": "https://arxiv.org/pdf/2609.24118v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "stage-conditioned failure modeling with atomic corrective re-execution",
+      "llm_evidence_cn": "阶段条件化失败建模与原子纠正重执行",
+      "llm_evidence": "阶段条件化失败建模与原子纠正重执行",
+      "canonical_evidence": "阶段条件化失败建模与原子纠正重执行",
+      "llm_tldr_en": "CARE models stage-conditioned post-failure deviations from collected failed rollouts to synthesize corrective demonstrations, and combines stage-wise planning with 3D monitoring to trigger atomic adjustments at inference.",
+      "llm_tldr_cn": "视觉-语言-动作策略在机器人操作中表现优异，但一旦执行偏离标称轨迹便十分脆弱。本文提出CARE框架，通过收集失败轨迹、建模阶段条件下的偏差分布，合成代表性失败状态与纠正演示，避免人工或随机扰动生成数据。推理时结合阶段化规划与物理三维监控，触发原子调整或重执行。该方法提升了策略的恢复能力，为失败驱动的阶段化纠错执行提供了新范式。",
+      "llm_tldr": "视觉-语言-动作策略在机器人操作中表现优异，但一旦执行偏离标称轨迹便十分脆弱。本文提出CARE框架，通过收集失败轨迹、建模阶段条件下的偏差分布，合成代表性失败状态与纠正演示，避免人工或随机扰动生成数据。推理时结合阶段化规划与物理三维监控，触发原子调整或重执行。该方法提升了策略的恢复能力，为失败驱动的阶段化纠错执行提供了新范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.24274v1",
+      "source": "arxiv",
+      "title": "vla.simd: Efficient CPU Inference for Language-Conditioned Manipulation",
+      "abstract": "Deploying language-conditioned manipulation without a dedicated GPU requires efficient inference and action chunks that cover the delay between policy queries. We present vla.simd, a CPU inference engine that combines shared SIMD micro-kernels, reusable computation, and target-specific optimization. We relate query latency and execution horizon to action availability under lagged and time-aligned execution, distinguishing action supply from feedback frequency. Across six policies and four CPUs, vla.simd achieves approximately $1.4\\times$ median speedup over compiled PyTorch references while preserving fp32 numerical fidelity. We also introduce IMPACT, an ACT-based policy with cached text representations and language-modulated visual features. IMPACT is the only language-conditioned policy in our evaluated set that supplies at least 30 actions/s on the Raspberry Pi 5: after a 90 s thermal soak, it supplies 33.5 actions/s in fp32 and 81.2 with int8. Separate GPU evaluations yield $76.4\\%$ mean success across four LIBERO suites without robot pretraining; instruction-shuffling tests demonstrate selection among familiar goals. Trials with IMPACT on an SO-101 arm and SmolVLA on a UR10e with a Robotiq gripper demonstrate CPU deployment on two robot embodiments.",
+      "authors": [
+        "Khanh D. Nguyen",
+        "Hoang M. Truong",
+        "An T. Le"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-09-21T08:39:07+00:00",
+      "link": "https://arxiv.org/pdf/2609.24274v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "action chunks and ACT-based policy for language-conditioned manipulation inference",
+      "llm_evidence_cn": "面向语言条件操作推理的动作分块与基于ACT的策略",
+      "llm_evidence": "面向语言条件操作推理的动作分块与基于ACT的策略",
+      "canonical_evidence": "面向语言条件操作推理的动作分块与基于ACT的策略",
+      "llm_tldr_en": "vla.simd is a CPU inference engine with action chunks covering policy-query delay, plus IMPACT, an ACT-based action-chunking policy with cached text and language-modulated visual features.",
+      "llm_tldr_cn": "在无专用GPU时部署语言条件操作策略，需要高效推理以及足以覆盖策略查询延迟的动作分块。本文提出vla.simd，一个结合共享SIMD微内核、可复用计算与目标特定优化的CPU推理引擎，并分析查询延迟与执行时域同动作可用性的关系。作者还提出IMPACT，一种基于ACT的策略，采用缓存文本表示与语言调制视觉特征。在六种策略与四款CPU上取得约1.4倍加速并保持fp32数值保真。其意义在于降低语言条件操作策略的部署门槛并明确动作分块的执行语义。",
+      "llm_tldr": "在无专用GPU时部署语言条件操作策略，需要高效推理以及足以覆盖策略查询延迟的动作分块。本文提出vla.simd，一个结合共享SIMD微内核、可复用计算与目标特定优化的CPU推理引擎，并分析查询延迟与执行时域同动作可用性的关系。作者还提出IMPACT，一种基于ACT的策略，采用缓存文本表示与语言调制视觉特征。在六种策略与四款CPU上取得约1.4倍加速并保持fp32数值保真。其意义在于降低语言条件操作策略的部署门槛并明确动作分块的执行语义。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.27612v1",
+      "source": "arxiv",
+      "title": "RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement",
+      "abstract": "Long-horizon robot execution requires a clear distinction between a model's proposal, a controller's termination, and verified task completion. We present RegenHarness, an evidence-gated robot-agent harness connecting task planning to heterogeneous robot skills. Its execution architecture couples a model loop for context-conditioned proposals with an agent loop for dispatch, observation, verification, commitment, and bounded recovery. Four role-isolated contexts separate planning, supervision, verification, and recovery inputs. Versioned memory distinguishes observed facts from accepted task progress, while an identity- and version-bound commit gate controls updates to trusted task state. The runtime combines duplicate-dispatch control, resource leases, and recovery budgets under explicit backend contracts, and checks the original user goal before reporting completion. To our knowledge, we are the first to introduce an evidence-gated recursive self-improvement (RSI) protocol for embodied robotic agents. Across missions, execution records motivate candidate changes to context rules, task templates, routing, and recovery policies; fixed regression checks and release authorization govern their acceptance; versioned rollout and rollback preserve configuration traceability. This RSI protocol revises the harness configuration without online model-weight updates or permission to weaken the commit gate. A real quadruped deployment documents voice-triggered warehouse navigation, panoramic inspection, visual analysis, message delivery, return, and spoken reporting through linked audio, images, trajectories, and receipts. A separate circuit demonstrates why completion depends on execution history rather than endpoint proximity alone. Together, the cases demonstrate integrated perception, physical execution, communication, and history-dependent completion in real-world robot tasks.",
+      "authors": [
+        "Kailin Wang",
+        "Haoxiang Jie",
+        "Yaoyuan Yan",
+        "Zhiyou Heng",
+        "Zhaosong Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-23T09:29:04+00:00",
+      "link": "https://arxiv.org/pdf/2609.27612v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "links task planning to heterogeneous robot skills with verification and recovery for long-horizon execution",
+      "llm_evidence_cn": "将任务规划与异构机器人技能连接，支持长时程执行的验证与恢复",
+      "llm_evidence": "将任务规划与异构机器人技能连接，支持长时程执行的验证与恢复",
+      "canonical_evidence": "将任务规划与异构机器人技能连接，支持长时程执行的验证与恢复",
+      "llm_tldr_en": "RegenHarness is an evidence-gated robot-agent harness linking task planning to heterogeneous skills, with role-isolated contexts, versioned memory, and a commit gate for reliable long-horizon execution and recovery.",
+      "llm_tldr_cn": "长时程机器人执行难以区分模型提议、控制器终止与已验证完成，易导致状态混乱。本文提出RegenHarness证据门控框架，将任务规划与异构机器人技能连接，用四类隔离上下文分离规划、监督、验证与恢复，并以版本化记忆和提交门控管理可信状态。该架构支持重复派发控制与有界恢复，提升了长时程技能调度执行的可靠性。",
+      "llm_tldr": "长时程机器人执行难以区分模型提议、控制器终止与已验证完成，易导致状态混乱。本文提出RegenHarness证据门控框架，将任务规划与异构机器人技能连接，用四类隔离上下文分离规划、监督、验证与恢复，并以版本化记忆和提交门控管理可信状态。该架构支持重复派发控制与有界恢复，提升了长时程技能调度执行的可靠性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.29017v1",
+      "source": "arxiv",
+      "title": "CALM: Current Aligned Link Manipulation for Single Arm Oversized Object Lifting",
+      "abstract": "Most robots manipulate objects solely with their end effectors, whereas humans flexibly leverage different body parts, such as the forearm and elbow, especially when handling oversized objects. Learning such whole-arm manipulation is chal-lenging due to long-horizon sparse rewards, limited contact sens-ing, and the sim-to-real gap in contact and actuator dynamics. To address these challenges, we propose Current-Aligned Link Manipulation, a framework for learning long-horizon contact-rich manipulation using motor current as joint load related feedback. Three stage-specific policies first learn repositioning, grasping, and lifting using privileged simulation information, and a stage router sequences them to generate complete task demonstrations. For sim-to-real transfer, a causal current mapper predicts physical motor current from simulated joint histories, aligning the actuator current observation between simulation and hardware. A unified student policy then learns from these demonstrations using only deployable sensor observations and is further refined with DAgger. The task policies are trained entirely in simulation, and the final student is deployed on hardware. Experiments demonstrate 76.2% (762/1000 trials) complete-task success in simulation and 73.3% success (22/30 trials) on the physical robot for sequential oversized-object lifting.",
+      "authors": [
+        "Jun Hu",
+        "Sihan Chen",
+        "Kosta Jovanovic",
+        "David Navarro-Alarcon",
+        "Xueqian Wang",
+        "Jia Pan",
+        "Peng Zhou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-24T04:32:24+00:00",
+      "link": "https://arxiv.org/pdf/2609.29017v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "three stage-specific policies sequenced by a stage router form complete long-horizon task demonstrations",
+      "llm_evidence_cn": "三个阶段专用策略由阶段路由器串联完成长时程任务演示",
+      "llm_evidence": "三个阶段专用策略由阶段路由器串联完成长时程任务演示",
+      "canonical_evidence": "三个阶段专用策略由阶段路由器串联完成长时程任务演示",
+      "llm_tldr_en": "Addresses whole-arm contact-rich manipulation of oversized objects with long-horizon sparse rewards. Proposes Current-Aligned Link Manipulation, where three stage-specific policies learn repositioning, grasping and lifting with privileged simulation info and a stage router sequences them into complete task demonstrations.",
+      "llm_tldr_cn": "针对机器人仅用末端执行器难以处理超大物体、而全臂操作面临长时程稀疏奖励与仿真到现实差距的问题，论文提出Current-Aligned Link Manipulation框架，利用电机电流作为关节负载反馈，让三个阶段专用策略分别学习重定位、抓取与抬升，并由阶段路由器将其串联为完整任务演示。该工作展示了可复用阶段技能组合用于接触丰富长时程操作。",
+      "llm_tldr": "针对机器人仅用末端执行器难以处理超大物体、而全臂操作面临长时程稀疏奖励与仿真到现实差距的问题，论文提出Current-Aligned Link Manipulation框架，利用电机电流作为关节负载反馈，让三个阶段专用策略分别学习重定位、抓取与抬升，并由阶段路由器将其串联为完整任务演示。该工作展示了可复用阶段技能组合用于接触丰富长时程操作。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "hierarchical imitation learning for long-horizon tasks with reusable skill libraries",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.29394v1",
+      "source": "arxiv",
+      "title": "RACaP: Agentic Reasoning, Acting, and Coding as Policies for Evolvable Robot Learning",
+      "abstract": "General-purpose robot agents must learn from experience, transfer to new tasks, and act efficiently. Code as Policies (CaP) methods generate and repair programs at runtime, incurring latency and entangling reusable mechanisms with task-specific decisions. We introduce RACaP, an agentic framework that moves coding to evolution and uses a Reasoning-and-Acting (ReAct) loop to call frozen, typed Policy APIs at deployment. A two-phase strategy combines capability curriculum learning with autonomous self-evolution to improve the APIs, the ReAct harness, and experience memory. The APIs encode reusable physical mechanisms while exposing arguments for runtime adaptation. ReAct combines task-specific working memory, long-term experience memory, and visual feedback to select actions, verify outcomes, and recover from failures without modifying source code. RACaP achieves 54.4% success on LIBERO-90, 45.0% on zero-shot LIBERO-PRO, and 46.0% on LIBERO-Long, compared with at most 4.0% for CaP baselines on long-horizon tasks. On LIBERO-PRO, it achieves 2.5 times the success rate of CaP baselines and a 1.9-fold speedup in median policy time. For efficient on-robot deployment, rejection-sampled fine-tuning distills GPT-5.6 ReAct decisions into Qwen3-VL-8B-Instruct, yielding a 13.2-fold per-decision inference speedup and reducing repeated physical calls from 16 to 4. These results show that separating reusable code from runtime decisions supports continued evolution, effective transfer, and efficient long-horizon control.",
+      "authors": [
+        "Zexi Li",
+        "Yehang Zhang",
+        "Haojian Huang",
+        "Bohan Zhou",
+        "Wenqian Li",
+        "Chenxu Wang",
+        "Yifan Chang",
+        "Yangkai Wei",
+        "Tianyi Zhang",
+        "Ying-Cong Chen",
+        "Kaiwen Zhou",
+        "Yinchuan Li",
+        "James Cheng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-24T11:22:45+00:00",
+      "link": "https://arxiv.org/pdf/2609.29394v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "frozen typed Policy APIs encode reusable physical mechanisms with runtime arguments",
+      "llm_evidence_cn": "冻结的带类型策略API以参数形式暴露可复用物理机制",
+      "llm_evidence": "冻结的带类型策略API以参数形式暴露可复用物理机制",
+      "canonical_evidence": "冻结的带类型策略API以参数形式暴露可复用物理机制",
+      "llm_tldr_en": "RACaP is an agentic framework that moves coding to evolution and calls frozen, typed Policy APIs at deployment via a ReAct loop, encoding reusable physical mechanisms with runtime arguments and improving APIs through curriculum learning and self-evolution.",
+      "llm_tldr_cn": "代码即策略方法需在运行时生成与修复程序，带来延迟且将可复用机制与任务特定决策纠缠在一起。RACaP提出智能体框架，将编码移至演化阶段，部署时通过推理-行动循环调用冻结的带类型策略API，这些API以参数形式暴露可复用物理机制。框架结合能力课程学习与自主自演化，持续改进API、推理框架与经验记忆，从而兼顾可复用性与运行时可适应性。",
+      "llm_tldr": "代码即策略方法需在运行时生成与修复程序，带来延迟且将可复用机制与任务特定决策纠缠在一起。RACaP提出智能体框架，将编码移至演化阶段，部署时通过推理-行动循环调用冻结的带类型策略API，这些API以参数形式暴露可复用物理机制。框架结合能力课程学习与自主自演化，持续改进API、推理框架与经验记忆，从而兼顾可复用性与运行时可适应性。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

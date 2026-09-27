@@ -1,0 +1,153 @@
+{
+  "date": "20260927",
+  "date_label": "",
+  "generated_at": "2026-09-27 22:30:53 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.28281v1",
+      "route": "202609/27/2609.28281v1-brickcraft-duo-efficient-dual-arm-skill-learning-and-refinement-for-compositional-long-horizon-assembly",
+      "title": "BrickCraft-Duo: Efficient Dual-Arm Skill Learning and Refinement for Compositional Long-Horizon Assembly",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "学习可复用单臂与双臂装配技能并组合完成长时程装配",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.23151v1",
+      "route": "202609/27/2609.23151v1-task-aware-dynamic-movement-primitives-for-failure-detection-and-recovery-in-contact-rich-manipulation",
+      "title": "Task aware Dynamic Movement Primitives for failure detection and recovery in contact rich manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "基于DMP的阶段分类实现接触丰富装配的失败检测与恢复",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.23113v1",
+      "route": "202609/27/2609.23113v1-search-ground-plan-functional-sufficiency-for-task-and-motion-planning-under-incomplete-scene-knowledge",
+      "title": "Search, Ground, Plan: Functional Sufficiency for Task and Motion Planning under Incomplete Scene Knowledge",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于基础模型的操作任务与运动规划,含功能角色与约束",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.24059v1",
+      "route": "202609/27/2609.24059v1-automatic-labelling-for-bimanual-mobile-manipulation",
+      "title": "Automatic Labelling for Bimanual Mobile Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "将运动信号切分为相位并为长时程策略生成语义子任务标签",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.24118v1",
+      "route": "202609/27/2609.24118v1-care-experience-guided-atomic-corrective-execution-for-vision-language-action-policies",
+      "title": "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "阶段条件化失败建模与原子纠正重执行",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.24274v1",
+      "route": "202609/27/2609.24274v1-vlasimd-efficient-cpu-inference-for-language-conditioned-manipulation",
+      "title": "vla.simd: Efficient CPU Inference for Language-Conditioned Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向语言条件操作推理的动作分块与基于ACT的策略",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.27612v1",
+      "route": "202609/27/2609.27612v1-regenharness-a-robot-agent-harness-with-evidence-gated-recursive-self-improvement",
+      "title": "RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "将任务规划与异构机器人技能连接，支持长时程执行的验证与恢复",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.29017v1",
+      "route": "202609/27/2609.29017v1-calm-current-aligned-link-manipulation-for-single-arm-oversized-object-lifting",
+      "title": "CALM: Current Aligned Link Manipulation for Single Arm Oversized Object Lifting",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "三个阶段专用策略由阶段路由器串联完成长时程任务演示",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    },
+    {
+      "paper_id": "2609.29394v1",
+      "route": "202609/27/2609.29394v1-racap-agentic-reasoning-acting-and-coding-as-policies-for-evolvable-robot-learning",
+      "title": "RACaP: Agentic Reasoning, Acting, and Coding as Policies for Evolvable Robot Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "冻结的带类型策略API以参数形式暴露可复用物理机制",
+      "first_seen_at": "2026-09-27 22:30:53 UTC",
+      "updated_at": "2026-09-27 22:30:53 UTC"
+    }
+  ]
+}
