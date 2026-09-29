@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-28",
+  "date": "2026-09-28",
+  "generated_at": "2026-09-29T00:02:06",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/28/2609.31225v1-imp-act-adaptive-impedance-control-and-action-chunking-with-transformers-to-learn-contact-rich-manipulation-from-demonstrations",
+      "section": "deep",
+      "title_en": "Imp-ACT: Adaptive Impedance Control and Action Chunking with Transformers to Learn Contact-Rich Manipulation from Demonstrations",
+      "authors": "Luca Zanetti, Doganay Sirintuna, Idil Ozdamar, Pietro Balatti, Heng Zhang, Arash Ajoudani",
+      "date": "2026-09-25",
+      "pdf": "https://arxiv.org/pdf/2609.31225v1",
+      "score": "8.0",
+      "evidence": "基于Transformer的动作分块用于接触丰富操作",
+      "tldr": "接触丰富操作需平衡运动跟踪与柔顺交互，但多数视觉动作策略将柔顺性固定在控制器层面。Imp-ACT在示教采集中直接引入方向相关笛卡尔刚度调制，无需手动选刚度或离线重建目标；遥操作时自整定阻抗控制器沿运动方向调刚度、正交方向保柔顺，并记录刚度与视觉运动命令，再用ACT Transformer预测位姿、夹爪和方向刚度。在擦拭和插拔中，相比固定低/高刚度基线，成功率相当或更高且交互力低：擦拭接触力振动降低约29倍和180倍，插拔正交力降低43%。表明沿任务方向保持足够刚度、其他方向柔顺可限制接触力并适应环境约束。",
+      "tags": "query:param-skills",
+      "abstract_en": "Contact-rich manipulation requires robots to balance accurate motion tracking with compliant interaction, yet most visual-action policies leave compliance fixed at the controller level. We present Imp-ACT, a methodologically grounded and practical approach to incorporating direction-dependent Cartesian stiffness modulation directly into demonstration collection, without manual stiffness selection or offline target reconstruction. During teleoperation, a self-tuning impedance controller adapts stiffness along the instantaneous direction of motion while maintaining compliance in orthogonal directions. The adapted stiffness is applied and recorded alongside visual observations and motion commands, capturing motion and compliance under the same dynamics. We implement this pipeline using Action Chunking with Transformer (ACT) to predict end-effector pose, gripper action, and motion-direction stiffness from visual, proprioceptive, and wrench observations. The performance of Imp-ACT is evaluated on wiping and plug insertion using both success rate and quantitative measures of contact behavior. Compared with fixed low- and high-stiffness baselines, Imp-ACT achieves comparable or higher success while maintaining low interaction forces. In wiping, it reduces contact-force vibration by approximately $29\\times$ relative to the compliant baseline and $180\\times$ relative to the stiff baseline. In plug insertion, it reduces forces orthogonal to the insertion direction by $43\\%$ relative to the better fixed-stiffness baseline. These results highlight the benefit of maintaining sufficient stiffness along the direction needed for task execution while preserving compliance in other directions to limit contact forces and accommodate environmental constraints.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/28/2609.30842v1-impedance-cloning-learning-equilibrium-point-parameters-for-contact-rich-manipulation",
+      "section": "quick",
+      "title_en": "Impedance Cloning: Learning Equilibrium Point Parameters for Contact-Rich Manipulation",
+      "authors": "Hayato Takahashi, Ryoga Oishi, Yuki Kasuga, Toshiaki Tsuji",
+      "date": "2026-09-25",
+      "pdf": "https://arxiv.org/pdf/2609.30842v1",
+      "score": "6.0",
+      "evidence": "学习可跨表面泛化的连续平衡点与刚度参数",
+      "tldr": "接触丰富操作中，轨迹型模仿学习在表面几何偏离训练条件时会失效。本文提出阻抗克隆，模仿生成运动的刚度与平衡点等生物力学先验，被动吸收接触不确定性，并用粒子滤波从双边遥操作示教中无传感器提取参数。在CRANE-X7双臂上，擦拭任务中轨迹基线在-6cm以下失去接触，本方法维持4-5N接触力；抓放任务中单次示教成功率84/100。该工作将模仿目标从结果转向意图，提升跨几何泛化。",
+      "tags": "query:param-skills",
+      "abstract_en": "Contact-rich manipulation requires robots to regulate force against surfaces whose geometry deviates unpredictably from training conditions. Trajectory-based imitation learning, which reproduces observable outputs, breaks down under such shifts. We propose Impedance Cloning, which instead imitates the biomechanical priors that generate motion -- the stiffness and equilibrium point -- and thereby passively absorbs contact uncertainty. Because these parameters encode intent rather than outcome, they generalize across surface geometries where trajectory reproduction does not. We extract them from bilateral teleoperation demonstrations via a particle filter without force/torque sensors and evaluate the framework on two CRANE-X7 manipulators. In a wiping task with joint-space actions, the trajectory-based baseline loses contact below -6 cm, whereas the proposed method maintains a consistent 4-5 N contact force above -6 cm, with a gradual decrease below; with Cartesian-space actions, its force-height slope over 0 to +8 cm is 0.13 +/- 0.03 N/cm, versus 0.34-0.83 N/cm for fixed-impedance baselines. In a pick-and-place task with 10 diverse cups (100 trials), the proposed method succeeds in 84 trials, outperforming the fixed-impedance baseline (74/100) and performing comparably to a variable impedance control baseline (82/100) with one demonstration instead of ten. In a grasping task, the representation reduces torque tracking error with both ILBiT and Mamba backbones, confirming its generality across architectures.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

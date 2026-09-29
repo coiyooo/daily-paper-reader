@@ -1,0 +1,95 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-28T23:59:04.357217+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2609.31225v1",
+      "source": "arxiv",
+      "title": "Imp-ACT: Adaptive Impedance Control and Action Chunking with Transformers to Learn Contact-Rich Manipulation from Demonstrations",
+      "abstract": "Contact-rich manipulation requires robots to balance accurate motion tracking with compliant interaction, yet most visual-action policies leave compliance fixed at the controller level. We present Imp-ACT, a methodologically grounded and practical approach to incorporating direction-dependent Cartesian stiffness modulation directly into demonstration collection, without manual stiffness selection or offline target reconstruction. During teleoperation, a self-tuning impedance controller adapts stiffness along the instantaneous direction of motion while maintaining compliance in orthogonal directions. The adapted stiffness is applied and recorded alongside visual observations and motion commands, capturing motion and compliance under the same dynamics. We implement this pipeline using Action Chunking with Transformer (ACT) to predict end-effector pose, gripper action, and motion-direction stiffness from visual, proprioceptive, and wrench observations. The performance of Imp-ACT is evaluated on wiping and plug insertion using both success rate and quantitative measures of contact behavior. Compared with fixed low- and high-stiffness baselines, Imp-ACT achieves comparable or higher success while maintaining low interaction forces. In wiping, it reduces contact-force vibration by approximately $29\\times$ relative to the compliant baseline and $180\\times$ relative to the stiff baseline. In plug insertion, it reduces forces orthogonal to the insertion direction by $43\\%$ relative to the better fixed-stiffness baseline. These results highlight the benefit of maintaining sufficient stiffness along the direction needed for task execution while preserving compliance in other directions to limit contact forces and accommodate environmental constraints.",
+      "authors": [
+        "Luca Zanetti",
+        "Doganay Sirintuna",
+        "Idil Ozdamar",
+        "Pietro Balatti",
+        "Heng Zhang",
+        "Arash Ajoudani"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-25T13:04:37+00:00",
+      "link": "https://arxiv.org/pdf/2609.31225v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "action chunking with Transformers for contact-rich manipulation",
+      "llm_evidence_cn": "基于Transformer的动作分块用于接触丰富操作",
+      "llm_evidence": "基于Transformer的动作分块用于接触丰富操作",
+      "canonical_evidence": "基于Transformer的动作分块用于接触丰富操作",
+      "llm_tldr_en": "Imp-ACT integrates direction-dependent Cartesian stiffness modulation into demonstration collection and uses action chunking with Transformers to learn contact-rich manipulation policies from demonstrations.",
+      "llm_tldr_cn": "接触丰富操作要求机器人在精确跟踪运动的同时保持柔顺交互，但多数视觉动作策略在控制器层面固定柔顺性。本文提出Imp-ACT，在遥操作采集示范时由自整定阻抗控制器沿瞬时运动方向自适应调节刚度，并在正交方向保持柔顺，把调好的刚度与视觉观测和运动命令一并记录。随后以Transformer动作分块学习接触丰富操作策略，无需人工选择刚度或离线重建目标。",
+      "llm_tldr": "接触丰富操作要求机器人在精确跟踪运动的同时保持柔顺交互，但多数视觉动作策略在控制器层面固定柔顺性。本文提出Imp-ACT，在遥操作采集示范时由自整定阻抗控制器沿瞬时运动方向自适应调节刚度，并在正交方向保持柔顺，把调好的刚度与视觉观测和运动命令一并记录。随后以Transformer动作分块学习接触丰富操作策略，无需人工选择刚度或离线重建目标。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "action chunking transformer for predicting low-level continuous action sequences in robot manipulation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.30842v1",
+      "source": "arxiv",
+      "title": "Impedance Cloning: Learning Equilibrium Point Parameters for Contact-Rich Manipulation",
+      "abstract": "Contact-rich manipulation requires robots to regulate force against surfaces whose geometry deviates unpredictably from training conditions. Trajectory-based imitation learning, which reproduces observable outputs, breaks down under such shifts. We propose Impedance Cloning, which instead imitates the biomechanical priors that generate motion -- the stiffness and equilibrium point -- and thereby passively absorbs contact uncertainty. Because these parameters encode intent rather than outcome, they generalize across surface geometries where trajectory reproduction does not. We extract them from bilateral teleoperation demonstrations via a particle filter without force/torque sensors and evaluate the framework on two CRANE-X7 manipulators. In a wiping task with joint-space actions, the trajectory-based baseline loses contact below -6 cm, whereas the proposed method maintains a consistent 4-5 N contact force above -6 cm, with a gradual decrease below; with Cartesian-space actions, its force-height slope over 0 to +8 cm is 0.13 +/- 0.03 N/cm, versus 0.34-0.83 N/cm for fixed-impedance baselines. In a pick-and-place task with 10 diverse cups (100 trials), the proposed method succeeds in 84 trials, outperforming the fixed-impedance baseline (74/100) and performing comparably to a variable impedance control baseline (82/100) with one demonstration instead of ten. In a grasping task, the representation reduces torque tracking error with both ILBiT and Mamba backbones, confirming its generality across architectures.",
+      "authors": [
+        "Hayato Takahashi",
+        "Ryoga Oishi",
+        "Yuki Kasuga",
+        "Toshiaki Tsuji"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-25T05:36:42+00:00",
+      "link": "https://arxiv.org/pdf/2609.30842v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learning continuous equilibrium-point and stiffness parameters that generalize across surfaces",
+      "llm_evidence_cn": "学习可跨表面泛化的连续平衡点与刚度参数",
+      "llm_evidence": "学习可跨表面泛化的连续平衡点与刚度参数",
+      "canonical_evidence": "学习可跨表面泛化的连续平衡点与刚度参数",
+      "llm_tldr_en": "Impedance Cloning replaces trajectory-based imitation learning by imitating stiffness and equilibrium-point parameters that encode intent, extracted from teleoperation via a particle filter and generalizing across unseen surface geometries on CRANE-X7 arms.",
+      "llm_tldr_cn": "接触丰富操作中，基于轨迹的模仿学习在表面几何偏移时失效。论文提出阻抗克隆，转而模仿生成运动的生物力学先验——刚度与平衡点，并通过粒子滤波从双边遥操作演示中提取这些参数而无需力传感器。在两个CRANE-X7机械臂上验证表明，参数编码的是意图而非结果，因而能跨表面几何泛化。该工作以参数化阻抗表征替代轨迹复现，为接触不确定性下的泛化提供了新范式。",
+      "llm_tldr": "接触丰富操作中，基于轨迹的模仿学习在表面几何偏移时失效。论文提出阻抗克隆，转而模仿生成运动的生物力学先验——刚度与平衡点，并通过粒子滤波从双边遥操作演示中提取这些参数而无需力传感器。在两个CRANE-X7机械臂上验证表明，参数编码的是意图而非结果，因而能跨表面几何泛化。该工作以参数化阻抗表征替代轨迹复现，为接触不确定性下的泛化提供了新范式。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "parameterized robot skill primitives with continuous parameters, preconditions, and effects for manipulation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
