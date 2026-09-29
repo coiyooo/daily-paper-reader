@@ -1,0 +1,57 @@
+{
+  "date": "20260929",
+  "date_label": "",
+  "generated_at": "2026-09-29 22:49:38 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.35690v1",
+      "route": "202609/29/2609.35690v1-agent-priors-guided-policy-learning",
+      "title": "Agent Priors-guided Policy Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过重组技能实现组合泛化",
+      "first_seen_at": "2026-09-29 22:49:38 UTC",
+      "updated_at": "2026-09-29 22:49:38 UTC"
+    },
+    {
+      "paper_id": "2609.33256v1",
+      "route": "202609/29/2609.33256v1-actionground-training-free-runtime-refinement-of-frozen-vla-policies",
+      "title": "ActionGround: Training-Free Runtime Refinement of Frozen VLA Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "符号化阶段感知状态机修正操作阶段",
+      "first_seen_at": "2026-09-29 22:49:38 UTC",
+      "updated_at": "2026-09-29 22:49:38 UTC"
+    },
+    {
+      "paper_id": "2609.28818v1",
+      "route": "202609/29/2609.28818v1-keygen-unsupervised-keypoint-based-object-centric-representations-for-category-level-policy-generalization",
+      "title": "KeyGen: Unsupervised Keypoint based Object-Centric Representations for Category-Level Policy Generalization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "param-skills"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过物体中心关键点实现类别级策略泛化到未见物体",
+      "first_seen_at": "2026-09-29 22:49:38 UTC",
+      "updated_at": "2026-09-29 22:49:38 UTC"
+    }
+  ]
+}

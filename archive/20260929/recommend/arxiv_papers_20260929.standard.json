@@ -1,0 +1,136 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-29T22:45:56.164783+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2609.35690v1",
+      "source": "arxiv",
+      "title": "Agent Priors-guided Policy Learning",
+      "abstract": "Robots that learn from a few demonstrations often require two forms of generalization. Compositional generalization recombines skills to solve new tasks, and skill generalization lets the learned policy behind each skill work in new situations. The two depend on each other, yet information is lost between composition and the skills it calls. Where a skill works is determined by the structure its policy is trained with, while composition sees the skill only through a separate description, such as a name, an instruction, or a symbolic operator, that omits this structure. Our key idea is to use each policy's structural prior as part of the interface between composition and the skill. A structural prior states what a behavior depends on, for example that a grasp depends only on the gripper's pose relative to the object. Built into training, it shapes where the policy generalizes; stated in language, it tells composition where the policy applies. We instantiate this idea in Agent Priors-guided Policy Learning (APPL). A construction agent segments complete demonstrations into reusable skills, proposes several structural priors for each skill, and trains and verifies one policy per prior. A runtime agent then selects among these prior-specific policies and composes them toward new task goals using their interfaces. Across MetaWorld and long-horizon ManiSkill tasks, APPL improves out-of-distribution skill generalization and enables previously unseen skill compositions; ablating the interface information substantially reduces performance. These results support the use of training-time structural assumptions as a bridge between skill learning and skill composition.",
+      "authors": [
+        "Puming Jiang",
+        "Tianrun Hu",
+        "Haozhe Du",
+        "Yibo Li",
+        "Zhiwei Xue",
+        "Xinhu Li",
+        "Harold Soh"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-28T17:37:00+00:00",
+      "link": "https://arxiv.org/pdf/2609.35690v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "compositional generalization by recombining skills",
+      "llm_evidence_cn": "通过重组技能实现组合泛化",
+      "llm_evidence": "通过重组技能实现组合泛化",
+      "canonical_evidence": "通过重组技能实现组合泛化",
+      "llm_tldr_en": "This work argues composition only sees skills through names that omit policy structure, and uses each policy's structural prior as the interface between composition and skill to jointly improve compositional and skill generalization.",
+      "llm_tldr_cn": "针对少样本机器人学习中组合泛化与技能泛化相互依赖、但组合层仅凭名称或符号描述调用技能而丢失策略结构信息的问题，本文提出智能体先验引导的策略学习。方法将每个策略的结构先验作为组合与技能之间的接口，显式声明行为所依赖的因素，使技能在组合与迁移时保持正确的适用范围。该框架统一了技能复用与泛化，为可复用技能库的组合泛化与技能条件化调用提供新思路。",
+      "llm_tldr": "针对少样本机器人学习中组合泛化与技能泛化相互依赖、但组合层仅凭名称或符号描述调用技能而丢失策略结构信息的问题，本文提出智能体先验引导的策略学习。方法将每个策略的结构先验作为组合与技能之间的接口，显式声明行为所依赖的因素，使技能在组合与迁移时保持正确的适用范围。该框架统一了技能复用与泛化，为可复用技能库的组合泛化与技能条件化调用提供新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "compositional generalization of learned skills to unseen task sequences and object configurations",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.33256v1",
+      "source": "arxiv",
+      "title": "ActionGround: Training-Free Runtime Refinement of Frozen VLA Policies",
+      "abstract": "Vision-Language-Action (VLA) models map visual observations and language instructions directly to robot actions, but they do not explicitly represent the phase structure of manipulation tasks or the rigid-body dynamics governing execution. We present ActionGround, a neuro-symbolic, training-free runtime layer that wraps a frozen VLA policy without retraining, fine-tuning, or weight access, adding less than 1 ms of overhead per control step. A symbolic phase-aware finite-state machine identifies the manipulation phase (approach, grasp, transport, or place) and applies a phase-specific rule-based correction. In parallel, an always-on, inertia-weighted Euler-Lagrange term incorporates the robot's equations of motion into each control step, while its dynamics residual is logged as a consistency diagnostic rather than used as a gate.   We evaluate ActionGround across OpenVLA, OpenVLA-OFT, Force-VLA, and Generalist-VLA on ten LIBERO-Spatial pick-and-place tasks using a 7-DoF Franka Panda. With fixed parameters across tasks and backbones, ActionGround improves success rate by up to 6 percentage points and stability by up to 19.3 percentage points, while improving trajectory efficiency by up to 15%. In a separate Robosuite noise sweep, ActionGround provides approximately a 10x improvement in trajectory-jerk robustness under injected action noise. In a matched-seed Robosuite simulation companion to a real Agilex Piper trial, simulated baseline success increases from 35% to 95%. The physical-hardware experiment is presented as a qualitative deployment demonstration; quantitative per-trial success on the real arm is left for future work. Our evaluation is limited to rigid-object pick-and-place manipulation.",
+      "authors": [
+        "Namai Chandra",
+        "Madhur Thareja",
+        "Shriram Damodaran",
+        "Addison Lin Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-27T05:59:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.33256v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "symbolic phase-aware finite-state machine correcting manipulation phases",
+      "llm_evidence_cn": "符号化阶段感知状态机修正操作阶段",
+      "llm_evidence": "符号化阶段感知状态机修正操作阶段",
+      "canonical_evidence": "符号化阶段感知状态机修正操作阶段",
+      "llm_tldr_en": "ActionGround wraps a frozen VLA policy with a neuro-symbolic, training-free runtime layer: a symbolic phase-aware finite-state machine identifies manipulation phases and applies phase-specific corrections plus dynamics terms, adding under 1 ms overhead.",
+      "llm_tldr_cn": "针对VLA模型不显式表示操作任务阶段结构与刚体动力学的问题，论文提出免训练的神经符号运行时层ActionGround。它以符号化阶段感知有限状态机识别接近、抓取、搬运、放置等阶段并施加阶段特定规则修正，同时用惯性加权欧拉-拉格朗日项把运动方程注入每步控制。实验表明无需重训或访问权重、每步开销低于1毫秒即可精修冻结策略执行，为把学习策略与状态机结合、注入阶段结构提供了新思路。",
+      "llm_tldr": "针对VLA模型不显式表示操作任务阶段结构与刚体动力学的问题，论文提出免训练的神经符号运行时层ActionGround。它以符号化阶段感知有限状态机识别接近、抓取、搬运、放置等阶段并施加阶段特定规则修正，同时用惯性加权欧拉-拉格朗日项把运动方程注入每步控制。实验表明无需重训或访问权重、每步开销低于1毫秒即可精修冻结策略执行，为把学习策略与状态机结合、注入阶段结构提供了新思路。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Integrating learned skill policies with state machines or behavior trees for failure recovery and safety constraints in manipulation",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.28818v1",
+      "source": "arxiv",
+      "title": "KeyGen: Unsupervised Keypoint based Object-Centric Representations for Category-Level Policy Generalization",
+      "abstract": "Generalization in robotic manipulation requires policies to perform tasks across diverse unseen object instances that vary in shape, size, and pose. However, conventional behavior cloning (BC) methods often overfit to instance-specific geometry and appearance, limiting transfer to novel objects. We introduce KeyGen, a framework that learns canonicalized semantic 3D keypoints from point clouds and uses them as structured object-centric representations for policy learning. A visuomotor diffusion policy conditions on these keypoints together with object-centric geometry to predict full manipulation trajectories, enabling consistent geometric correspondence across object instances. To evaluate category-level generalization, we construct a photorealistic simulation benchmark with three manipulation tasks and a planning-driven data generation pipeline that produces expert trajectories across diverse object instances. Experiments show that KeyGen significantly outperforms prior methods on both seen and unseen objects under pose variation, scales effectively with additional demonstrations per object, maintains robustness to object rescaling, and achieves strong performance in both simulation and real-world manipulation.",
+      "authors": [
+        "Shuxin Cao",
+        "Liquan Wang",
+        "Masoud Moghani",
+        "Benjamin Joffe",
+        "Animesh Garg"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-23T21:53:10+00:00",
+      "link": "https://arxiv.org/pdf/2609.28818v1",
+      "tags": [
+        "keyword:param-skills",
+        "query:param-skills"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "category-level policy generalization to unseen object instances via object-centric keypoints",
+      "llm_evidence_cn": "通过物体中心关键点实现类别级策略泛化到未见物体",
+      "llm_evidence": "通过物体中心关键点实现类别级策略泛化到未见物体",
+      "canonical_evidence": "通过物体中心关键点实现类别级策略泛化到未见物体",
+      "llm_tldr_en": "KeyGen learns canonicalized semantic 3D keypoints as object-centric representations, conditioning a diffusion policy to generalize category-level manipulation to unseen objects.",
+      "llm_tldr_cn": "机器人操作泛化要求策略跨形状、尺寸与位姿各异的未见物体执行任务，但常规行为克隆易过拟合到实例特定的几何与外观，难以迁移到新物体。KeyGen从点云学习规范化的语义3D关键点作为结构化物体中心表示，让视觉运动扩散策略以关键点与物体中心几何为条件预测完整操作轨迹，从而实现跨实例的一致几何对应。在类别级泛化评测中该方法提升了对新物体的迁移能力，为面向未见物体配置的组合泛化提供了物体中心表示方案。",
+      "llm_tldr": "机器人操作泛化要求策略跨形状、尺寸与位姿各异的未见物体执行任务，但常规行为克隆易过拟合到实例特定的几何与外观，难以迁移到新物体。KeyGen从点云学习规范化的语义3D关键点作为结构化物体中心表示，让视觉运动扩散策略以关键点与物体中心几何为条件预测完整操作轨迹，从而实现跨实例的一致几何对应。在类别级泛化评测中该方法提升了对新物体的迁移能力，为面向未见物体配置的组合泛化提供了物体中心表示方案。",
+      "llm_tags": [
+        "query:param-skills"
+      ],
+      "matched_query_tag": "query:param-skills",
+      "matched_query_text": "Compositional generalization of learned robot skills to novel sequences and object configurations with real robot experiments",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
