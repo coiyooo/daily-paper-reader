@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-30",
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T22:50:07",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/30/2609.30404v1-poil-point-based-one-shot-imitation-learning-with-stable-dynamical-systems",
+      "section": "quick",
+      "title_en": "POIL: Point-based One-Shot Imitation Learning with Stable Dynamical Systems",
+      "authors": "Sang Min Kim, Jinwoo Seo, Hyeongjun Heo, Junho Lee, Yonghyeon Lee, Young Min Kim",
+      "date": "2026-09-24",
+      "pdf": "https://arxiv.org/pdf/2609.30404v1",
+      "score": "6.0",
+      "evidence": "单样本模仿将演示轨迹迁移到新物体与配置",
+      "tldr": "单样本模仿虽可避免大量演示采集，但成功操作不仅要把演示轨迹迁移到新物体，还需在场景变化、抓取配置改变和外部扰动下稳健执行。本文提出 POIL，用物体功能部件上的三维点集作为共享表示，同时支持轨迹迁移与闭环执行，并借助多模态大模型接地功能部件。实验表明该方法在物体与抓取配置变化下实现稳健的单样本操作。该工作为单样本操作中的组合泛化提供了统一表示方案。",
+      "tags": "query:param-skills",
+      "abstract_en": "We present POIL, a point-based one-shot imitation learning framework with stable dynamical systems. While one-shot imitation avoids collecting extensive demonstrations, successful one-shot manipulation requires not only transferring a demonstrated trajectory to a novel object but also executing it robustly under changing scene conditions, grasp configurations, and external disturbances. POIL addresses both problems through a shared representation: a set of 3D points on the object's functional part, used jointly for trajectory transfer and closed-loop execution. The one-shot transfer from the demonstrated trajectory is enabled with point correspondences. POIL grounds the shared functional part with a multi-modal large language model, and transfers the trajectory across viewpoint, pose, and object category changes. During execution, multi-view tracking observes the same points online, and Point-set BCSDM drives them in closed loop by projecting per-point velocities onto a single rigid-body twist computed from the tracked points alone. This extends stable dynamical models from an SE(3) pose to a point set without requiring a known 3D model or pose estimator. We show that at the goal the controller becomes a gradient flow on the classical SO(3) potential, so its terminal phase inherits the almost-global convergence of that potential under a rigid-object assumption. Across simulation and real-robot experiments, POIL transfers a single demonstration across object category, grasp pose, and goal geometry, while recovering from external disturbances during execution. Project page: https://sangminkim-99.github.io/poil",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/30/2609.34911v2-dont-throw-away-the-tail-action-upcycling-for-policy-acceleration",
+      "section": "quick",
+      "title_en": "Don't Throw Away the Tail: Action Upcycling for Policy Acceleration",
+      "authors": "Taesung Kwon, Jangho Park, Sunwoo Park, Youngmin Kim, Seonghyun Jin, Youngjun Jun, Kyumin Choi, Jong Chul Ye",
+      "date": "2026-09-28",
+      "pdf": "https://arxiv.org/pdf/2609.34911v2",
+      "score": "6.0",
+      "evidence": "复用被丢弃的动作块尾部，面向预测动作块的机器人策略",
+      "tldr": "论文针对机器人策略预测动作块后仅执行前缀、丢弃其余动作的效率问题，指出执行视野长度在反应性与效率间存在权衡。提出免训练的动作再利用算法Action Upcycling，复用原本被丢弃的动作块尾部，无需访问模型内部或额外采样。实验表明该方法可在不损失反应性的前提下加速策略执行，为动作块预测与执行提供高效方案。",
+      "tags": "query:param-skills",
+      "abstract_en": "Modern robot policies predict a chunk of future actions from a single observation, execute only a prefix, and discard the rest before replanning. Choosing the length of this prefix, the execution horizon, poses a trade-off between reactivity and efficiency. A short horizon keeps the policy reactive to the environment, but requires frequent policy calls. Recent test-time methods adaptively select the horizon for each chunk, but they either read model internals, where the signal must be chosen for each architecture, or draw extra samples, which adds cost. We propose Action Upcycling, a training-free algorithm that reuses actions the policy would otherwise discard, without accessing model internals or drawing extra samples. We find that discarded actions stay close to their replanned versions as long as the action velocity remains smooth. Action Upcycling therefore extends the execution horizon up to the point where the velocity begins to fluctuate. Extensive experiments on simulated and real-world manipulation tasks show that Action Upcycling reduces policy calls by 1.2-1.7x with no loss in success rate, across multiple Vision-Language-Action Models (VLAs) and even a World Action Model (WAM). It applies to any chunked policy at negligible cost and is orthogonal to other policy acceleration methods such as few-step sampling and streaming action decoding, opening a new axis for policy acceleration.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
